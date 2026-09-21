@@ -7,2884 +7,2885 @@
 struct DigitalMonsterTechniqueAssignment
 {
     unsigned short speciesId;
-    unsigned short techniqueId;
+    unsigned short logicalTechniqueId;
+    unsigned short runtimeMoveId;
     unsigned char sourceOrder;
 };
 
 static const struct DigitalMonsterTechniqueAssignment gDigitalMonsterOfficialTechniqueAssignments[] =
 {
-    { DM_SPECIES_NOSFERAMON, DM_MOVE_0001, 1 }, /* ノスフェラモン: ランページバレット */
-    { DM_SPECIES_NOSFERAMON, DM_MOVE_0002, 2 }, /* ノスフェラモン: アネスシージアゲイズ */
-    { DM_SPECIES_ARTIOMON, DM_MOVE_0003, 1 }, /* アルティオモン: ドゥームバスター */
-    { DM_SPECIES_ARTIOMON, DM_MOVE_0004, 2 }, /* アルティオモン: ディキャピテイトクロウ */
-    { DM_SPECIES_HELIOSBOAMON, DM_MOVE_0005, 1 }, /* ヘリオスボアモン: ソウルパラヴライザー */
-    { DM_SPECIES_HELIOSBOAMON, DM_MOVE_0006, 2 }, /* ヘリオスボアモン: レストリクトアイ */
-    { DM_SPECIES_HABAKIRIMON, DM_MOVE_0007, 1 }, /* ハバキリモン: 羽々斬（はばきり） */
-    { DM_SPECIES_HABAKIRIMON, DM_MOVE_0008, 2 }, /* ハバキリモン: 麁正（あらまさ） */
-    { DM_SPECIES_BEARCATMON, DM_MOVE_0009, 1 }, /* ベアキャットモン: ペネトレイトブロウ */
-    { DM_SPECIES_BEARCATMON, DM_MOVE_0010, 2 }, /* ベアキャットモン: マーダライズラッシュ */
-    { DM_SPECIES_BEARCATMON, DM_MOVE_0011, 3 }, /* ベアキャットモン: ベアダウンスピニングキック */
-    { DM_SPECIES_TAOWUMON, DM_MOVE_0012, 1 }, /* タオウーモン: 氷骸礫(ひょうがいれき) */
-    { DM_SPECIES_TAOWUMON, DM_MOVE_0013, 2 }, /* タオウーモン: 轟蹄崩(ごうていほう) */
-    { DM_SPECIES_TAOWUMON, DM_MOVE_0014, 3 }, /* タオウーモン: 凍烈檮牙(とうれつとうが) */
-    { DM_SPECIES_SCOURGECHIROPMON, DM_MOVE_0015, 1 }, /* スカージキロプモン: トライアンギュレーションスキャン */
-    { DM_SPECIES_SCOURGECHIROPMON, DM_MOVE_0016, 2 }, /* スカージキロプモン: デスペアブラスト */
-    { DM_SPECIES_SCOURGECHIROPMON, DM_MOVE_0017, 3 }, /* スカージキロプモン: エリミネイトレイン */
-    { DM_SPECIES_SCOURGECHIROPMON, DM_MOVE_0018, 4 }, /* スカージキロプモン: サイレントスクリーム */
-    { DM_SPECIES_MONARCHLIZAMON, DM_MOVE_0019, 1 }, /* モナークリザモン: アナイアレイトエッジ */
-    { DM_SPECIES_MONARCHLIZAMON, DM_MOVE_0020, 2 }, /* モナークリザモン: モナークオーディナンス */
-    { DM_SPECIES_MONARCHLIZAMON, DM_MOVE_0021, 3 }, /* モナークリザモン: ファイナルジャッジメント */
-    { DM_SPECIES_APOLLOMON_WHISPERED, DM_MOVE_0022, 1 }, /* アポロモン：ウィスパード: アロー・オブ・ウィスパード */
-    { DM_SPECIES_APOLLOMON_WHISPERED, DM_MOVE_0023, 2 }, /* アポロモン：ウィスパード: サン・オブ・ソローズ */
-    { DM_SPECIES_KINGWHAMON, DM_MOVE_0024, 1 }, /* キングホエーモン: ウォジェット */
-    { DM_SPECIES_KINGWHAMON, DM_MOVE_0025, 2 }, /* キングホエーモン: ライドライト */
-    { DM_SPECIES_ARMAMON_BURSTMODE, DM_MOVE_0026, 1 }, /* アルマモン：バーストモード: ソード・オブ・メテオ */
-    { DM_SPECIES_ARMAMON_BURSTMODE, DM_MOVE_0027, 2 }, /* アルマモン：バーストモード: インフィニティソードレイン */
-    { DM_SPECIES_ARMAMON, DM_MOVE_0028, 1 }, /* アルマモン: マルクトクリスタル */
-    { DM_SPECIES_ARMAMON, DM_MOVE_0029, 2 }, /* アルマモン: レインボーハンド */
-    { DM_SPECIES_ARMAMON, DM_MOVE_0030, 3 }, /* アルマモン: ソードマスカレード */
-    { DM_SPECIES_SHOUTMONX5S, DM_MOVE_0031, 1 }, /* シャウトモンX5S: スペースチャクラム */
-    { DM_SPECIES_SHOUTMONX5S, DM_MOVE_0032, 2 }, /* シャウトモンX5S: ヘリオスラッシャー */
-    { DM_SPECIES_SHOUTMONX5S, DM_MOVE_0033, 3 }, /* シャウトモンX5S: コズモビクトリー */
-    { DM_SPECIES_VORTEXDRAMON, DM_MOVE_0034, 1 }, /* ヴォルテクスドラモン: フローズンガスト */
-    { DM_SPECIES_VORTEXDRAMON, DM_MOVE_0035, 2 }, /* ヴォルテクスドラモン: ブレイジングガスト */
-    { DM_SPECIES_VORTEXDRAMON, DM_MOVE_0036, 3 }, /* ヴォルテクスドラモン: レーヴァテイン */
-    { DM_SPECIES_SHOUTMONX4S, DM_MOVE_0037, 1 }, /* シャウトモンX4S: ブレイズファイアー */
-    { DM_SPECIES_SHOUTMONX4S, DM_MOVE_0038, 2 }, /* シャウトモンX4S: クロスレッド＆ブルー */
-    { DM_SPECIES_SHOUTMONX4S, DM_MOVE_0039, 3 }, /* シャウトモンX4S: ビクトリーブレイブ */
-    { DM_SPECIES_SHOUTMONX3SD, DM_MOVE_0040, 1 }, /* シャウトモンX3SD: アシッドタイフーン */
-    { DM_SPECIES_SHOUTMONX3SD, DM_MOVE_0041, 2 }, /* シャウトモンX3SD: ビリオンスタブ */
-    { DM_SPECIES_SHOUTMONX3GM, DM_MOVE_0042, 1 }, /* シャウトモンX3GM: ワイルドバーニング */
-    { DM_SPECIES_SHOUTMONX3GM, DM_MOVE_0043, 2 }, /* シャウトモンX3GM: ブリリアンスダガー */
-    { DM_SPECIES_SHOUTMONX3GM, DM_MOVE_0044, 3 }, /* シャウトモンX3GM: ブレス・オブ・ペルーン */
-    { DM_SPECIES_AZHDARMON, DM_MOVE_0045, 1 }, /* アズダルモン: トマホークストライク */
-    { DM_SPECIES_AZHDARMON, DM_MOVE_0046, 2 }, /* アズダルモン: トライカーヴレイン */
-    { DM_SPECIES_AZHDARMON, DM_MOVE_0047, 3 }, /* アズダルモン: トリニティライトニング */
-    { DM_SPECIES_TENGUMON, DM_MOVE_0048, 1 }, /* テングモン: 魔縁斬蹴撃（まえんざんしゅうげき） */
-    { DM_SPECIES_TENGUMON, DM_MOVE_0049, 2 }, /* テングモン: 尊天大烈風（そんてんだいれっぷう） */
-    { DM_SPECIES_AMATERASUMON, DM_MOVE_0050, 1 }, /* アマテラスモン: 厳之御魂（いづのみたま） */
-    { DM_SPECIES_AMATERASUMON, DM_MOVE_0051, 2 }, /* アマテラスモン: 六合照徹閃（りくごうしょうてつせん） */
-    { DM_SPECIES_ENMAMON, DM_MOVE_0052, 1 }, /* エンマモン: 浄玻璃鏡(じょうはりのかがみ) */
-    { DM_SPECIES_ENMAMON, DM_MOVE_0053, 2 }, /* エンマモン: 閻羅王降誕（えんらおうごうたん） */
-    { DM_SPECIES_SEITENGOKUWMON, DM_MOVE_0054, 1 }, /* セイテンゴクウモン: 火眼金睛（かがんきんせい） */
-    { DM_SPECIES_SEITENGOKUWMON, DM_MOVE_0055, 2 }, /* セイテンゴクウモン: 八戒炎天撃（はっかいえんてんげき） */
-    { DM_SPECIES_SEITENGOKUWMON, DM_MOVE_0056, 3 }, /* セイテンゴクウモン: 悟浄水天葬（ごじょうすいてんそう） */
-    { DM_SPECIES_SEITENGOKUWMON, DM_MOVE_0057, 4 }, /* セイテンゴクウモン: 超大聖雷天砲（ちょうたいせいらいてんほう） */
-    { DM_SPECIES_EXMAQUINAMON, DM_MOVE_0058, 1 }, /* エクスマキナモン: エスカトン */
-    { DM_SPECIES_DALPHOMON, DM_MOVE_0059, 1 }, /* ダルフォモン: プロフェットオブエリヤ */
-    { DM_SPECIES_DALPHOMON, DM_MOVE_0060, 2 }, /* ダルフォモン: ジェイルマオン */
-    { DM_SPECIES_DALPHOMON, DM_MOVE_0061, 3 }, /* ダルフォモン: ブルータルヘイロウ */
-    { DM_SPECIES_SHISHIMAMON, DM_MOVE_0062, 1 }, /* シシマモン: 光爪神楽（こうそうかぐら） */
-    { DM_SPECIES_SHISHIMAMON, DM_MOVE_0063, 2 }, /* シシマモン: 魔祓灼光（まふつのしゃっこう） */
-    { DM_SPECIES_DARUMAMON, DM_MOVE_0064, 1 }, /* ダルマモン: 猛進火達磨（もうしんひだるま） */
-    { DM_SPECIES_DARUMAMON, DM_MOVE_0065, 2 }, /* ダルマモン: 断災達磨落とし（だんさいだるまおとし） */
-    { DM_SPECIES_RHAMPHOMON, DM_MOVE_0066, 1 }, /* ランフォモン: クリスタルキャノン */
-    { DM_SPECIES_RHAMPHOMON, DM_MOVE_0067, 2 }, /* ランフォモン: ハンマーストライク */
-    { DM_SPECIES_RHAMPHOMON, DM_MOVE_0068, 3 }, /* ランフォモン: ノーホープフォール */
-    { DM_SPECIES_RHAMPHOMON, DM_MOVE_0069, 4 }, /* ランフォモン: クリスタルレイン */
-    { DM_SPECIES_CHRONOMON_DESTROY, DM_MOVE_0070, 1 }, /* クロノモン：デストロイモード: フィンガーボム */
-    { DM_SPECIES_CHRONOMON_DESTROY, DM_MOVE_0071, 2 }, /* クロノモン：デストロイモード: ホーリーフレア */
-    { DM_SPECIES_CHRONOMON_DESTROY, DM_MOVE_0072, 3 }, /* クロノモン：デストロイモード: クロノデヴォリューション */
-    { DM_SPECIES_CHRONOMON_HOLY, DM_MOVE_0071, 1 }, /* クロノモン：ホーリーモード: ホーリーフレア */
-    { DM_SPECIES_CHRONOMON_HOLY, DM_MOVE_0073, 2 }, /* クロノモン：ホーリーモード: クロノスクロップ */
-    { DM_SPECIES_BUTENMON, DM_MOVE_0074, 1 }, /* ブテンモン: 日輪の舞 */
-    { DM_SPECIES_BUTENMON, DM_MOVE_0075, 2 }, /* ブテンモン: 暁光一閃 */
-    { DM_SPECIES_BURAIMON, DM_MOVE_0076, 1 }, /* ブライモン: ツバメ二枚返し */
-    { DM_SPECIES_BURAIMON, DM_MOVE_0077, 2 }, /* ブライモン: 秘剣・飛鳥落とし */
-    { DM_SPECIES_HYOKOMON, DM_MOVE_0078, 1 }, /* ヒョコモン: 唐竹割り */
-    { DM_SPECIES_HYOKOMON, DM_MOVE_0079, 2 }, /* ヒョコモン: 秘剣ピヨピヨ斬り */
-    { DM_SPECIES_CHICCHIMON, DM_MOVE_0080, 1 }, /* チッチモン: ピヨピヨ */
-    { DM_SPECIES_ZOMBIEPLUTOMON, DM_MOVE_0081, 1 }, /* ゾンビプルートモン: ハザードホールド */
-    { DM_SPECIES_ZOMBIEPLUTOMON, DM_MOVE_0082, 2 }, /* ゾンビプルートモン: ヘルズスライス */
-    { DM_SPECIES_ZOMBIEPLUTOMON, DM_MOVE_0083, 3 }, /* ゾンビプルートモン: マリオネットアボミネーション */
-    { DM_SPECIES_MANEKIMON, DM_MOVE_0084, 1 }, /* マネキモン: 小判振舞い */
-    { DM_SPECIES_MANEKIMON, DM_MOVE_0085, 2 }, /* マネキモン: 招敵来来拳（しょうてきらいらいけん） */
-    { DM_SPECIES_HAKUBAMON, DM_MOVE_0086, 1 }, /* ハクバモン: 劈龍爪（へきりゅうそう） */
-    { DM_SPECIES_HAKUBAMON, DM_MOVE_0087, 2 }, /* ハクバモン: 焔明珠（えんめいしゅ） */
-    { DM_SPECIES_WANKOMON, DM_MOVE_0088, 1 }, /* ワンコモン: 豪狛毬（ごうはくきゅう） */
-    { DM_SPECIES_WANKOMON, DM_MOVE_0089, 2 }, /* ワンコモン: 石土之体（いしづちのてい） */
-    { DM_SPECIES_GASAMON, DM_MOVE_0090, 1 }, /* ガサモン: 編笠スピン斬り */
-    { DM_SPECIES_GASAMON, DM_MOVE_0091, 2 }, /* ガサモン: 粘溶液（ねんようえき） */
-    { DM_SPECIES_TAKINMON, DM_MOVE_0092, 1 }, /* ターキモン: 猛冲角（もうちゅうかく） */
-    { DM_SPECIES_TAKINMON, DM_MOVE_0093, 2 }, /* ターキモン: 岩衝弾（がんしょうだん） */
-    { DM_SPECIES_FUJAMON, DM_MOVE_0094, 1 }, /* フージャモン: 泿水弾（ぎんすいだん） */
-    { DM_SPECIES_FUJAMON, DM_MOVE_0095, 2 }, /* フージャモン: 蛟牙（こうが） */
-    { DM_SPECIES_KAKAMON, DM_MOVE_0096, 1 }, /* カカモン: 猿攻回転弾（えんこうかいてんだん） */
-    { DM_SPECIES_KAKAMON, DM_MOVE_0097, 2 }, /* カカモン: 金絲吼（きんしこう） */
-    { DM_SPECIES_ARMALIZAMON, DM_MOVE_0098, 1 }, /* アルマリザモン: ニュートロンレイザー */
-    { DM_SPECIES_ARMALIZAMON, DM_MOVE_0099, 2 }, /* アルマリザモン: ニュートロンデフューザー */
-    { DM_SPECIES_ARMALIZAMON, DM_MOVE_0100, 3 }, /* アルマリザモン: ニュートロンブレイド */
-    { DM_SPECIES_ARMALIZAMON, DM_MOVE_0101, 4 }, /* アルマリザモン: デスロールプレス */
-    { DM_SPECIES_ONIBIMON, DM_MOVE_0102, 1 }, /* オニビモン: 燐火（りんか） */
-    { DM_SPECIES_TOMORIMON, DM_MOVE_0103, 1 }, /* トモリモン: ヒノタマ */
-    { DM_SPECIES_MOCOCOMON, DM_MOVE_0104, 1 }, /* モココモン: 黏雲（ねんうん） */
-    { DM_SPECIES_FUKAMON, DM_MOVE_0105, 1 }, /* フカモン: 呼雲（こうん） */
-    { DM_SPECIES_PARALLELMON, DM_MOVE_0106, 1 }, /* パラレルモン: アブソーベント・バン */
-    { DM_SPECIES_PARALLELMON, DM_MOVE_0107, 2 }, /* パラレルモン: エンドレストランス */
-    { DM_SPECIES_NIGHTCHIROPMON, DM_MOVE_0108, 1 }, /* ナイトキロプモン: プロビデンススキャン */
-    { DM_SPECIES_NIGHTCHIROPMON, DM_MOVE_0109, 2 }, /* ナイトキロプモン: シャドウアーツ */
-    { DM_SPECIES_NIGHTCHIROPMON, DM_MOVE_0110, 3 }, /* ナイトキロプモン: ジャイアントラング */
-    { DM_SPECIES_NIGHTCHIROPMON, DM_MOVE_0111, 4 }, /* ナイトキロプモン: メズマバースト */
-    { DM_SPECIES_STYRACOMON, DM_MOVE_0112, 1 }, /* スティラコモン: クリムゾンクレスト */
-    { DM_SPECIES_STYRACOMON, DM_MOVE_0113, 2 }, /* スティラコモン: ドレッドノートスタンピード */
-    { DM_SPECIES_TAOTIEMON, DM_MOVE_0114, 1 }, /* タオティエモン: 九淵貪角(きゅうえんどんかく) */
-    { DM_SPECIES_TAOTIEMON, DM_MOVE_0115, 2 }, /* タオティエモン: 穢吐餓(えとが) */
-    { DM_SPECIES_TAOTIEMON, DM_MOVE_0116, 3 }, /* タオティエモン: 饕飢爆（とうきばく） */
-    { DM_SPECIES_CRANIUMMON_ENBARRMON, DM_MOVE_0117, 1 }, /* クレニアムモン+アンヴァルモン: ルースレスチャージ */
-    { DM_SPECIES_ENBARRMON, DM_MOVE_0118, 1 }, /* アンヴァルモン: ディスレンジホーン */
-    { DM_SPECIES_ENBARRMON, DM_MOVE_0119, 2 }, /* アンヴァルモン: ヴェインアンサー */
-    { DM_SPECIES_METATROMON, DM_MOVE_0120, 1 }, /* メタトロモン: アイアンヘイロウ */
-    { DM_SPECIES_METATROMON, DM_MOVE_0121, 2 }, /* メタトロモン: アイズオブエノク */
-    { DM_SPECIES_METATROMON, DM_MOVE_0122, 3 }, /* メタトロモン: メタトロニオス */
-    { DM_SPECIES_GREATGRYZMON, DM_MOVE_0123, 1 }, /* グレートグリズモン: 闘魂爪（とうこんそう） */
-    { DM_SPECIES_GREATGRYZMON, DM_MOVE_0124, 2 }, /* グレートグリズモン: 爆霧（ばくぎり） */
-    { DM_SPECIES_GREATGRYZMON, DM_MOVE_0125, 3 }, /* グレートグリズモン: GGS（ジージーエス） */
-    { DM_SPECIES_TITAMON_SKULLBALUCHIMON, DM_MOVE_0126, 1 }, /* タイタモン+スカルバルキモン: 千塵鬼神斬（せんじんきしんざん） */
-    { DM_SPECIES_COUGARMON, DM_MOVE_0127, 1 }, /* クーガモン: ルースレスファング */
-    { DM_SPECIES_COUGARMON, DM_MOVE_0128, 2 }, /* クーガモン: ルースレスクロー */
-    { DM_SPECIES_COUGARMON, DM_MOVE_0129, 3 }, /* クーガモン: ラースロア */
-    { DM_SPECIES_MASTERBLIMPMON, DM_MOVE_0130, 1 }, /* マスターブリンプモン: ツェッペリンサーカス */
-    { DM_SPECIES_MASTERBLIMPMON, DM_MOVE_0131, 2 }, /* マスターブリンプモン: デアデビルブレイク */
-    { DM_SPECIES_HYEMON, DM_MOVE_0132, 1 }, /* ハイエモン: カーズバイト */
-    { DM_SPECIES_HYEMON, DM_MOVE_0133, 2 }, /* ハイエモン: リリースハウリング */
-    { DM_SPECIES_MURASAMEMON, DM_MOVE_0134, 1 }, /* ムラサメモン: 豪ノ斬・叢時雨（ごうのざん・むらしぐれ） */
-    { DM_SPECIES_MURASAMEMON, DM_MOVE_0135, 2 }, /* ムラサメモン: 柔ノ斬・月時雨（じゅうのざん・つきしぐれ） */
-    { DM_SPECIES_MURASAMEMON, DM_MOVE_0136, 3 }, /* ムラサメモン: 終ノ斬・哭雨（ついのざん・こくう） */
-    { DM_SPECIES_WOLVERMON, DM_MOVE_0137, 1 }, /* ウルヴァモン: ラピッドバースト */
-    { DM_SPECIES_WOLVERMON, DM_MOVE_0138, 2 }, /* ウルヴァモン: スキャッターロケット */
-    { DM_SPECIES_WOLVERMON, DM_MOVE_0139, 3 }, /* ウルヴァモン: バージャースラッシュ */
-    { DM_SPECIES_WOLVERMON, DM_MOVE_0140, 4 }, /* ウルヴァモン: トムボーイブレイズ */
-    { DM_SPECIES_CHIROPMON, DM_MOVE_0141, 1 }, /* キロプモン: パラライズエコー */
-    { DM_SPECIES_CHIROPMON, DM_MOVE_0142, 2 }, /* キロプモン: アナライズエコー */
-    { DM_SPECIES_CHIROPMON, DM_MOVE_0143, 3 }, /* キロプモン: キュリアスアイズ */
-    { DM_SPECIES_CHIROPMON, DM_MOVE_0144, 4 }, /* キロプモン: コンデンスドエコー */
-    { DM_SPECIES_PRISTIMON, DM_MOVE_0145, 1 }, /* プリスティモン: プリショット */
-    { DM_SPECIES_PRISTIMON, DM_MOVE_0146, 2 }, /* プリスティモン: スタブクロー */
-    { DM_SPECIES_PRISTIMON, DM_MOVE_0147, 3 }, /* プリスティモン: テイルスラップ */
-    { DM_SPECIES_DULLAHAMON, DM_MOVE_0148, 1 }, /* デュラハモン: ベルシラックエッジ */
-    { DM_SPECIES_DULLAHAMON, DM_MOVE_0149, 2 }, /* デュラハモン: スリーピーホロウ */
-    { DM_SPECIES_GEKKOMON, DM_MOVE_0150, 1 }, /* ゲッコーモン: スマッシュビート */
-    { DM_SPECIES_GEKKOMON, DM_MOVE_0151, 2 }, /* ゲッコーモン: ブレイクスロー */
-    { DM_SPECIES_GEKKOMON, DM_MOVE_0152, 3 }, /* ゲッコーモン: スイングタックル */
-    { DM_SPECIES_KEKKOMON, DM_MOVE_0153, 1 }, /* ケッコモン: ビートリック */
-    { DM_SPECIES_KEKOMON, DM_MOVE_0154, 1 }, /* ケコモン: 粘着性の泡 */
-    { DM_SPECIES_MAGNETICDRAMON, DM_MOVE_0155, 1 }, /* マグネティックドラモン: ストーンレールガン */
-    { DM_SPECIES_MAGNETICDRAMON, DM_MOVE_0156, 2 }, /* マグネティックドラモン: エレクトリックコンプレッション */
-    { DM_SPECIES_MAGNETICDRAMON, DM_MOVE_0157, 3 }, /* マグネティックドラモン: マグネティックテンペスト */
-    { DM_SPECIES_MANEUVERMON, DM_MOVE_0158, 1 }, /* マニューバモン: ブルータルエアロバティック */
-    { DM_SPECIES_MANEUVERMON, DM_MOVE_0159, 2 }, /* マニューバモン: フォルゴーレ */
-    { DM_SPECIES_TURBOMON, DM_MOVE_0160, 1 }, /* ターボモン: ブルータルホイール */
-    { DM_SPECIES_TURBOMON, DM_MOVE_0161, 2 }, /* ターボモン: クラッシュギアスピン */
-    { DM_SPECIES_NYABOOTMON, DM_MOVE_0162, 1 }, /* ニャブートモン: グラビトンネコキック */
-    { DM_SPECIES_NYABOOTMON, DM_MOVE_0163, 2 }, /* ニャブートモン: カラバスペシャル */
-    { DM_SPECIES_NYABOOTMON, DM_MOVE_0164, 3 }, /* ニャブートモン: 秘剣キャット・ザ・ナインライブス */
-    { DM_SPECIES_YIHUMON, DM_MOVE_0165, 1 }, /* イーフーモン: 斬空(ざんくう) */
-    { DM_SPECIES_YIHUMON, DM_MOVE_0166, 2 }, /* イーフーモン: 刃羽颪(じんばおろし) */
-    { DM_SPECIES_YIHUMON, DM_MOVE_0167, 3 }, /* イーフーモン: 窮牙嵐断襲(きゅうがらんだんしゅう) */
-    { DM_SPECIES_ARIEMON, DM_MOVE_0168, 1 }, /* アリエモン: 絡縛藻紐（らくばくそうちゅう） */
-    { DM_SPECIES_ARIEMON, DM_MOVE_0169, 2 }, /* アリエモン: 波濤深槍（はとうしんそう） */
-    { DM_SPECIES_ARIEMON, DM_MOVE_0170, 3 }, /* アリエモン: 浄流海癒（じょうりゅうかいゆ） */
-    { DM_SPECIES_SKULLSEADRAMON, DM_MOVE_0171, 1 }, /* スカルシードラモン: サンダージャベリン */
-    { DM_SPECIES_SKULLSEADRAMON, DM_MOVE_0172, 2 }, /* スカルシードラモン: デッドロール */
-    { DM_SPECIES_SHARKMON, DM_MOVE_0173, 1 }, /* シャークモン: 一斉砲撃 */
-    { DM_SPECIES_SHARKMON, DM_MOVE_0174, 2 }, /* シャークモン: プルトダモン */
-    { DM_SPECIES_SHARKMON, DM_MOVE_0175, 3 }, /* シャークモン: ファングチャージ */
-    { DM_SPECIES_KAGUYAMON, DM_MOVE_0176, 1 }, /* カグヤモン: 武獲物語（たけとりものがたり） */
-    { DM_SPECIES_KAGUYAMON, DM_MOVE_0177, 2 }, /* カグヤモン: 月夜之迎（つきよのむかえ） */
-    { DM_SPECIES_KARAKURUMON, DM_MOVE_0178, 1 }, /* カラクルモン: 骸繰艶舞・鉢かづき */
-    { DM_SPECIES_KARAKURUMON, DM_MOVE_0179, 2 }, /* カラクルモン: 初瀬のおもてなし */
-    { DM_SPECIES_KOKESHIMON, DM_MOVE_0180, 1 }, /* コケシモン: ダンマクエンジュ */
-    { DM_SPECIES_KOKESHIMON, DM_MOVE_0181, 2 }, /* コケシモン: キデコノイスクミ */
-    { DM_SPECIES_HANIMON, DM_MOVE_0182, 1 }, /* ハニモン: ハニワフラッシュ */
-    { DM_SPECIES_HANIMON, DM_MOVE_0183, 2 }, /* ハニモン: コフンタックル */
-    { DM_SPECIES_MOCKINGBIRDMON, DM_MOVE_0184, 1 }, /* モッキンバーモン: アイアンインヘイラー */
-    { DM_SPECIES_MOCKINGBIRDMON, DM_MOVE_0185, 2 }, /* モッキンバーモン: トライエアボッツ */
-    { DM_SPECIES_MULEMON, DM_MOVE_0186, 1 }, /* ミュールモン: アイアンギャロップ */
-    { DM_SPECIES_MULEMON, DM_MOVE_0187, 2 }, /* ミュールモン: ロデオミサイル */
-    { DM_SPECIES_MAQUINAMON, DM_MOVE_0188, 1 }, /* マキナモン: ツインバブル */
-    { DM_SPECIES_NAZHAMON_CRIMSON, DM_MOVE_0189, 1 }, /* ナタモン：クリムゾンモード: 斬砍双刃撃 */
-    { DM_SPECIES_NAZHAMON_CRIMSON, DM_MOVE_0190, 2 }, /* ナタモン：クリムゾンモード: 封神六蓮華 */
-    { DM_SPECIES_SHAGARAMON, DM_MOVE_0191, 1 }, /* シャガラモン: 浪濤扇（ろうとうせん） */
-    { DM_SPECIES_SHAGARAMON, DM_MOVE_0192, 2 }, /* シャガラモン: 鹹海炸滄陣（かんかいさくそうじん） */
-    { DM_SPECIES_SHAGARAMON, DM_MOVE_0193, 3 }, /* シャガラモン: 蒼纏龍神牙（そうてんりゅうじんが） */
-    { DM_SPECIES_MEDUSAMON, DM_MOVE_0194, 1 }, /* メデューサモン: バイティングブート */
-    { DM_SPECIES_MEDUSAMON, DM_MOVE_0195, 2 }, /* メデューサモン: アイズオブゴルゴーン */
-    { DM_SPECIES_MEDUSAMON, DM_MOVE_0196, 3 }, /* メデューサモン: レイジングサーペンタイン */
-    { DM_SPECIES_LAMIAMON, DM_MOVE_0197, 1 }, /* ラミアモン: ヴェノブレラ */
-    { DM_SPECIES_LAMIAMON, DM_MOVE_0198, 2 }, /* ラミアモン: スプラッシュトキシン */
-    { DM_SPECIES_NECROMON, DM_MOVE_0199, 1 }, /* ネクロモン: ソウルストライカー */
-    { DM_SPECIES_NECROMON, DM_MOVE_0200, 2 }, /* ネクロモン: アパリションレギオン */
-    { DM_SPECIES_JOUGAMON, DM_MOVE_0201, 1 }, /* ジョウガモン: 墜月衝（ついげつしょう） */
-    { DM_SPECIES_JOUGAMON, DM_MOVE_0202, 2 }, /* ジョウガモン: 蛾眉截波（がびせっぱ） */
-    { DM_SPECIES_JOUGAMON, DM_MOVE_0203, 3 }, /* ジョウガモン: 太陰皓光（たいいんこうこう） */
-    { DM_SPECIES_PYRAMIDIMON, DM_MOVE_0204, 1 }, /* ピラミディモン: ゾフルカーブース */
-    { DM_SPECIES_PYRAMIDIMON, DM_MOVE_0205, 2 }, /* ピラミディモン: アペシュイカーブ */
-    { DM_SPECIES_PYRAMIDIMON, DM_MOVE_0206, 3 }, /* ピラミディモン: ラアナハムシーン */
-    { DM_SPECIES_PROGANOMON, DM_MOVE_0207, 1 }, /* プロガノモン: トリコンビットデモリッシャー */
-    { DM_SPECIES_PROGANOMON, DM_MOVE_0208, 2 }, /* プロガノモン: ドリルエミッション */
-    { DM_SPECIES_LANDRAMON, DM_MOVE_0209, 1 }, /* ランドラモン: グラウンドスパイク */
-    { DM_SPECIES_LANDRAMON, DM_MOVE_0210, 2 }, /* ランドラモン: デザートアビス */
-    { DM_SPECIES_INVISIMON, DM_MOVE_0211, 1 }, /* インビジモン: インビジブルカッター */
-    { DM_SPECIES_INVISIMON, DM_MOVE_0212, 2 }, /* インビジモン: スーパーロケットフィスト */
-    { DM_SPECIES_INVISIMON, DM_MOVE_0213, 3 }, /* インビジモン: アルティメットブレーザー */
-    { DM_SPECIES_OBLIVIMON, DM_MOVE_0214, 1 }, /* オブリビモン: ウェイストアブダクション */
-    { DM_SPECIES_OBLIVIMON, DM_MOVE_0215, 2 }, /* オブリビモン: アナイデントファイド・エアリアル・フェノメノン */
-    { DM_SPECIES_DIMETROMON, DM_MOVE_0216, 1 }, /* ディメトロモン: ルミナスヒート */
-    { DM_SPECIES_DIMETROMON, DM_MOVE_0217, 2 }, /* ディメトロモン: セイリングスピン */
-    { DM_SPECIES_RYUGUMON, DM_MOVE_0218, 1 }, /* リュウグウモン: 儀来四海招（にらいしかいしょう） */
-    { DM_SPECIES_RYUGUMON, DM_MOVE_0219, 2 }, /* リュウグウモン: 海神之祓（わだつみのはらえ） */
-    { DM_SPECIES_CERUNUMON, DM_MOVE_0220, 1 }, /* ケルヌモン: ケルティックバインド */
-    { DM_SPECIES_CERUNUMON, DM_MOVE_0221, 2 }, /* ケルヌモン: スキャッターゴームグラス */
-    { DM_SPECIES_MARINBULLMON, DM_MOVE_0222, 1 }, /* マリンブルモン: ハイドロデモリッシャー */
-    { DM_SPECIES_MARINBULLMON, DM_MOVE_0223, 2 }, /* マリンブルモン: トキシックスプレッド */
-    { DM_SPECIES_ELIZAMON, DM_MOVE_0224, 1 }, /* エリザモン: フリルドカッター */
-    { DM_SPECIES_ELIZAMON, DM_MOVE_0225, 2 }, /* エリザモン: ヘリコプテイル */
-    { DM_SPECIES_NEZHAMON, DM_MOVE_0226, 1 }, /* ナタモン: 乾坤圏 */
-    { DM_SPECIES_NEZHAMON, DM_MOVE_0227, 2 }, /* ナタモン: 爆迅炎戟破 */
-    { DM_SPECIES_DINOMON, DM_MOVE_0228, 1 }, /* ダイナモン: バーニングエンド */
-    { DM_SPECIES_DINOMON, DM_MOVE_0229, 2 }, /* ダイナモン: ダイナブレス */
-    { DM_SPECIES_SKADIMON, DM_MOVE_0230, 1 }, /* スカーディモン: スノースワッター */
-    { DM_SPECIES_SKADIMON, DM_MOVE_0231, 2 }, /* スカーディモン: スノーマンズダンス */
-    { DM_SPECIES_SKADIMON, DM_MOVE_0232, 3 }, /* スカーディモン: レイジングアバランチ */
-    { DM_SPECIES_POLARBEARMON, DM_MOVE_0233, 1 }, /* ポーラーベアモン: コークスクリューキック */
-    { DM_SPECIES_POLARBEARMON, DM_MOVE_0234, 2 }, /* ポーラーベアモン: ウィンターガナリー */
-    { DM_SPECIES_ERLANGMON_BLAST, DM_MOVE_0235, 1 }, /* イーランモン：ブラストモード: 万象逸貫 */
-    { DM_SPECIES_ERLANGMON_BLAST, DM_MOVE_0236, 2 }, /* イーランモン：ブラストモード: 天眼顕聖 */
-    { DM_SPECIES_QUEENBEEMON, DM_MOVE_0237, 1 }, /* クイーンビーモン: アクセルスティンガー */
-    { DM_SPECIES_QUEENBEEMON, DM_MOVE_0238, 2 }, /* クイーンビーモン: ホーネットイレイザー */
-    { DM_SPECIES_VESPAMON, DM_MOVE_0239, 1 }, /* ヴェスパモン: マッハスティンガー */
-    { DM_SPECIES_VESPAMON, DM_MOVE_0240, 2 }, /* ヴェスパモン: ビーファランクス */
-    { DM_SPECIES_FORGEBEEMON, DM_MOVE_0241, 1 }, /* フォージビーモン: トルクスティンガー */
-    { DM_SPECIES_FORGEBEEMON, DM_MOVE_0242, 2 }, /* フォージビーモン: バンブルウェルダー */
-    { DM_SPECIES_HEAVYMETALDRAMON, DM_MOVE_0243, 1 }, /* ヘヴィーメタルドラモン: ブラックサバス */
-    { DM_SPECIES_HEAVYMETALDRAMON, DM_MOVE_0244, 2 }, /* ヘヴィーメタルドラモン: ブルーマーダーフレイム */
-    { DM_SPECIES_LOUDMON, DM_MOVE_0245, 1 }, /* ラウドモン: メタリカエッジ */
-    { DM_SPECIES_LOUDMON, DM_MOVE_0246, 2 }, /* ラウドモン: ディープパープルブラスター */
-    { DM_SPECIES_PUNKMON, DM_MOVE_0247, 1 }, /* パンクモン: ブリッツクリーグバップ */
-    { DM_SPECIES_PUNKMON, DM_MOVE_0248, 2 }, /* パンクモン: アナーキストフレイム */
-    { DM_SPECIES_TAKUTOUMON_WRATH, DM_MOVE_0249, 1 }, /* タクトウモン：ラースモード: 龍閃乱撃 */
-    { DM_SPECIES_TAKUTOUMON_WRATH, DM_MOVE_0250, 2 }, /* タクトウモン：ラースモード: 毘沙門八極殲陣 */
-    { DM_SPECIES_ERLANGMON, DM_MOVE_0251, 1 }, /* イーランモン: 鷹尖円舞 */
-    { DM_SPECIES_ERLANGMON, DM_MOVE_0252, 2 }, /* イーランモン: 招来・哮天犬 */
-    { DM_SPECIES_CENDRILLMON, DM_MOVE_0253, 1 }, /* サンドリモン: マリッジストライク */
-    { DM_SPECIES_CENDRILLMON, DM_MOVE_0254, 2 }, /* サンドリモン: ノーブルファミリアーツ */
-    { DM_SPECIES_CENDRILLMON, DM_MOVE_0255, 3 }, /* サンドリモン: プリズムデイトブレイク */
-    { DM_SPECIES_CHAPEROMON, DM_MOVE_0256, 1 }, /* シャペロモン: アップルフォーユー */
-    { DM_SPECIES_CHAPEROMON, DM_MOVE_0257, 2 }, /* シャペロモン: クリムゾンリッパー */
-    { DM_SPECIES_CHAPEROMON, DM_MOVE_0258, 3 }, /* シャペロモン: マーシーバスケット */
-    { DM_SPECIES_ZEPHAGAMON, DM_MOVE_0259, 1 }, /* ゼファーガモン: ゲイルブレイバー */
-    { DM_SPECIES_ZEPHAGAMON, DM_MOVE_0260, 2 }, /* ゼファーガモン: アネモイエンブレイス */
-    { DM_SPECIES_ZEPHAGAMON, DM_MOVE_0261, 3 }, /* ゼファーガモン: ディバインテンペスト */
-    { DM_SPECIES_GRANDGALEMON, DM_MOVE_0262, 1 }, /* グランゲイルモン: ドラゴニックストーム */
-    { DM_SPECIES_GRANDGALEMON, DM_MOVE_0263, 2 }, /* グランゲイルモン: ウィングトルネード */
-    { DM_SPECIES_FLUFFYMON, DM_MOVE_0264, 1 }, /* フラフィモン: バーディーヘッド */
-    { DM_SPECIES_YOLKMON, DM_MOVE_0265, 1 }, /* ヨークモン: 泡 */
-    { DM_SPECIES_CALLISMON, DM_MOVE_0266, 1 }, /* カリスモン: ディープフォレスト */
-    { DM_SPECIES_CALLISMON, DM_MOVE_0267, 2 }, /* カリスモン: ロデオバレット */
-    { DM_SPECIES_TLALOCMON, DM_MOVE_0268, 1 }, /* トラロックモン: ネトティリズトリ */
-    { DM_SPECIES_TLALOCMON, DM_MOVE_0269, 2 }, /* トラロックモン: ナウイキアウィトル */
-    { DM_SPECIES_SHOESHOEMON, DM_MOVE_0270, 1 }, /* シューシューモン: ローリングストンパー */
-    { DM_SPECIES_SHOESHOEMON, DM_MOVE_0271, 2 }, /* シューシューモン: ドングリボム */
-    { DM_SPECIES_SHOEMON, DM_MOVE_0272, 1 }, /* シューモン: ワンダーストンプ */
-    { DM_SPECIES_SHOEMON, DM_MOVE_0273, 2 }, /* シューモン: プチニードル */
-    { DM_SPECIES_GALEMON, DM_MOVE_0274, 1 }, /* ゲイルモン: ハリケーンスライサー */
-    { DM_SPECIES_GALEMON, DM_MOVE_0275, 2 }, /* ゲイルモン: トルネードスロワー */
-    { DM_SPECIES_PTEROMON, DM_MOVE_0276, 1 }, /* プテロモン: ウィンドスライサー */
-    { DM_SPECIES_PTEROMON, DM_MOVE_0277, 2 }, /* プテロモン: ランブルクロー */
-    { DM_SPECIES_TAKUTOUMON, DM_MOVE_0278, 1 }, /* タクトウモン: 天星斬 */
-    { DM_SPECIES_TAKUTOUMON, DM_MOVE_0279, 2 }, /* タクトウモン: 鉄天摧砕 */
-    { DM_SPECIES_FENRILOOGAMON_TAKEMIKAZUCHI, DM_MOVE_0280, 1 }, /* フェンリルガモン：建御雷神(タケミカヅチ): 終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ） */
-    { DM_SPECIES_FENRILOOGAMON_TAKEMIKAZUCHI, DM_MOVE_0281, 2 }, /* フェンリルガモン：建御雷神(タケミカヅチ): 絶極舞刀建御雷神（ゼツゴクブトウタケミカヅチ） */
-    { DM_SPECIES_BIGUKKOMON, DM_MOVE_0282, 1 }, /* ビッグウッコモン: ヴァイオレントパニッシャー */
-    { DM_SPECIES_UKKOMON, DM_MOVE_0283, 1 }, /* ウッコモン: ワールプールスピン */
-    { DM_SPECIES_UKKOMON, DM_MOVE_0284, 2 }, /* ウッコモン: ライアードリーム */
-    { DM_SPECIES_DIJIANGMON, DM_MOVE_0285, 1 }, /* ディージャンモン: 凶旋壊（きょうせんかい） */
-    { DM_SPECIES_DIJIANGMON, DM_MOVE_0286, 2 }, /* ディージャンモン: 咒煉衝刻（じゅれんしょうこく） */
-    { DM_SPECIES_DIJIANGMON, DM_MOVE_0287, 3 }, /* ディージャンモン: 渾沌亜空虚（こんとんあくうきょ） */
-    { DM_SPECIES_XINGTIANMON, DM_MOVE_0288, 1 }, /* シンテンモン: 斧乗炎怒（ふじょうえんど） */
-    { DM_SPECIES_XINGTIANMON, DM_MOVE_0289, 2 }, /* シンテンモン: 盾射轟哀（じゅんせきごうあい） */
-    { DM_SPECIES_XINGTIANMON, DM_MOVE_0290, 3 }, /* シンテンモン: 雷鬧（らいどう) */
-    { DM_SPECIES_LIANPUMON, DM_MOVE_0291, 1 }, /* リェンフーモン: 鉄壁相（てっぺきのそう） */
-    { DM_SPECIES_LIANPUMON, DM_MOVE_0292, 2 }, /* リェンフーモン: 献身相（けんしんのそう） */
-    { DM_SPECIES_LIANPUMON, DM_MOVE_0293, 3 }, /* リェンフーモン: 九種九面撃（きゅうしゅきゅうめんげき） */
-    { DM_SPECIES_DOMINIMON, DM_MOVE_0294, 1 }, /* ドミニモン: ファイナルエクスキャリバー */
-    { DM_SPECIES_DOMINIMON, DM_MOVE_0295, 2 }, /* ドミニモン: ゼロヘブンズ */
-    { DM_SPECIES_DOMINIMON, DM_MOVE_0296, 3 }, /* ドミニモン: ディヴォーションフィールド */
-    { DM_SPECIES_ARKHAIANGEMON, DM_MOVE_0297, 1 }, /* アルケーエンジェモン: セイントレギオン */
-    { DM_SPECIES_ARKHAIANGEMON, DM_MOVE_0298, 2 }, /* アルケーエンジェモン: ヘブンズフレイム */
-    { DM_SPECIES_ARKHAIANGEMON, DM_MOVE_0299, 3 }, /* アルケーエンジェモン: ブレイブオーラ */
-    { DM_SPECIES_LUXMON, DM_MOVE_0300, 1 }, /* ルクスモン: ピコナックル */
-    { DM_SPECIES_LUXMON, DM_MOVE_0301, 2 }, /* ルクスモン: クラウドバリア */
-    { DM_SPECIES_HUANGLONGMON_RUIN, DM_MOVE_0302, 1 }, /* ファンロンモン：ルインモード: 無極 */
-    { DM_SPECIES_HUANGLONGMON_RUIN, DM_MOVE_0303, 2 }, /* ファンロンモン：ルインモード: 晦冥葬 */
-    { DM_SPECIES_MOONMON, DM_MOVE_0304, 1 }, /* ムンモン: ムーンライトバブル */
-    { DM_SPECIES_SUNMON, DM_MOVE_0305, 1 }, /* サンモン: サンライトバブル */
-    { DM_SPECIES_BRIGADRAMON, DM_MOVE_0306, 1 }, /* ブリガードラモン: ジェノサイドレイン */
-    { DM_SPECIES_BRIGADRAMON, DM_MOVE_0307, 2 }, /* ブリガードラモン: エクサデストロイヤー */
-    { DM_SPECIES_HI_COMMANDRAMON, DM_MOVE_0308, 1 }, /* ハイコマンドラモン: DCDグレネード */
-    { DM_SPECIES_HI_COMMANDRAMON, DM_MOVE_0309, 2 }, /* ハイコマンドラモン: デストロイチャージ */
-    { DM_SPECIES_FENRILOOGAMON, DM_MOVE_0310, 1 }, /* フェンリルガモン: ラグナロクハウリング */
-    { DM_SPECIES_FENRILOOGAMON, DM_MOVE_0311, 2 }, /* フェンリルガモン: ヨトゥンヘイムゲイル */
-    { DM_SPECIES_FENRILOOGAMON, DM_MOVE_0312, 3 }, /* フェンリルガモン: フローズヴィトニル */
-    { DM_SPECIES_HELLOOGARMON, DM_MOVE_0313, 1 }, /* ヘルガルモン: ハウリングバースト */
-    { DM_SPECIES_HELLOOGARMON, DM_MOVE_0314, 2 }, /* ヘルガルモン: インフェルノクロー */
-    { DM_SPECIES_HELLOOGARMON, DM_MOVE_0315, 3 }, /* ヘルガルモン: ハティエンブレイス */
-    { DM_SPECIES_SOLOOGARMON, DM_MOVE_0316, 1 }, /* ソルガルモン: プロミネンスレーザー */
-    { DM_SPECIES_SOLOOGARMON, DM_MOVE_0317, 2 }, /* ソルガルモン: イラプションハウリング */
-    { DM_SPECIES_SOLOOGARMON, DM_MOVE_0318, 3 }, /* ソルガルモン: スコルレイジ */
-    { DM_SPECIES_CARGODRAMON, DM_MOVE_0319, 1 }, /* カーゴドラモン: サプレッションストライク */
-    { DM_SPECIES_CARGODRAMON, DM_MOVE_0320, 2 }, /* カーゴドラモン: スローターブレード */
-    { DM_SPECIES_LOOGARMON, DM_MOVE_0321, 1 }, /* ルガルモン: ハウリングバーナー */
-    { DM_SPECIES_LOOGARMON, DM_MOVE_0322, 2 }, /* ルガルモン: フレイムブロウ */
-    { DM_SPECIES_BOWMON, DM_MOVE_0323, 1 }, /* バウモン: パピースパーク */
-    { DM_SPECIES_FUSAMON, DM_MOVE_0324, 1 }, /* フサモン: パピーノイズ */
-    { DM_SPECIES_QUANTUMON, DM_MOVE_0325, 1 }, /* クオンタモン: アンリミテッドジャーニー */
-    { DM_SPECIES_QUANTUMON, DM_MOVE_0326, 2 }, /* クオンタモン: ヘイジータイム */
-    { DM_SPECIES_LOOGAMON, DM_MOVE_0327, 1 }, /* ルガモン: ハウリングファイア */
-    { DM_SPECIES_LOOGAMON, DM_MOVE_0328, 2 }, /* ルガモン: スパイラルバイト */
-    { DM_SPECIES_PROXIMAMON, DM_MOVE_0329, 1 }, /* プロキシマモン: エクスティンクションクラウド */
-    { DM_SPECIES_PROXIMAMON, DM_MOVE_0330, 2 }, /* プロキシマモン: ライトオブリクリエイション */
-    { DM_SPECIES_ARCTURUSMON, DM_MOVE_0331, 1 }, /* アルクトゥルスモン: ブラックデス */
-    { DM_SPECIES_ARCTURUSMON, DM_MOVE_0332, 2 }, /* アルクトゥルスモン: ブラックコンフェッション */
-    { DM_SPECIES_GREYKNIGHTSMON, DM_MOVE_0333, 1 }, /* グレイナイツモン: ギガーススパイラル */
-    { DM_SPECIES_GREYKNIGHTSMON, DM_MOVE_0334, 2 }, /* グレイナイツモン: ヘルインシネレート */
-    { DM_SPECIES_GREYKNIGHTSMON, DM_MOVE_0335, 3 }, /* グレイナイツモン: デスデストロイヤー */
-    { DM_SPECIES_ZANMETSUMON, DM_MOVE_0336, 1 }, /* ザンメツモン: 伍連断霊斬（ごれんだんれいざん） */
-    { DM_SPECIES_ZANMETSUMON, DM_MOVE_0337, 2 }, /* ザンメツモン: 伍重螺旋断（ごじゅうらせんだち） */
-    { DM_SPECIES_ZANMETSUMON, DM_MOVE_0338, 3 }, /* ザンメツモン: 獄門縛（ごくもんしばり） */
-    { DM_SPECIES_BOMBERMON, DM_MOVE_0339, 1 }, /* ボマーモン: コンボブラスト */
-    { DM_SPECIES_BOMBERMON, DM_MOVE_0340, 2 }, /* ボマーモン: リミットエクスプロージョン */
-    { DM_SPECIES_GHILLIEDHUMON, DM_MOVE_0341, 1 }, /* ギリードゥモン: トゥルーアイズ */
-    { DM_SPECIES_GHILLIEDHUMON, DM_MOVE_0342, 2 }, /* ギリードゥモン: コアシュート */
-    { DM_SPECIES_FUMAMON, DM_MOVE_0343, 1 }, /* フウマモン: 燕（つばくろ） */
-    { DM_SPECIES_FUMAMON, DM_MOVE_0344, 2 }, /* フウマモン: 舎利弗（しゃりほつ） */
-    { DM_SPECIES_FUMAMON, DM_MOVE_0345, 3 }, /* フウマモン: 黄泉戻（よみもどし） */
-    { DM_SPECIES_CTHYLLAMON, DM_MOVE_0346, 1 }, /* クティーラモン: バッカルラッシュ */
-    { DM_SPECIES_CTHYLLAMON, DM_MOVE_0347, 2 }, /* クティーラモン: オーシャンヘル */
-    { DM_SPECIES_CTHYLLAMON, DM_MOVE_0348, 3 }, /* クティーラモン: アクアグラインダー */
-    { DM_SPECIES_REGULUSMON, DM_MOVE_0349, 1 }, /* レグルスモン: カリプバイト */
-    { DM_SPECIES_REGULUSMON, DM_MOVE_0350, 2 }, /* レグルスモン: ゲニアス */
-    { DM_SPECIES_REGULUSMON, DM_MOVE_0351, 3 }, /* レグルスモン: デッドエンドスパイク */
-    { DM_SPECIES_REGULUSMON, DM_MOVE_0352, 4 }, /* レグルスモン: グラントレース */
-    { DM_SPECIES_RAGNAMON, DM_MOVE_0353, 1 }, /* ラグナモン: ラグナロク・キャノン */
-    { DM_SPECIES_RAGNAMON, DM_MOVE_0354, 2 }, /* ラグナモン: ギムレットガン */
-    { DM_SPECIES_RAGNAMON, DM_MOVE_0355, 3 }, /* ラグナモン: スペイザー */
-    { DM_SPECIES_RAGNAMON, DM_MOVE_0356, 4 }, /* ラグナモン: シャトルシザーズ */
-    { DM_SPECIES_RAGNAMON, DM_MOVE_0357, 5 }, /* ラグナモン: サテライトバスター */
-    { DM_SPECIES_RAGNAMON, DM_MOVE_0358, 6 }, /* ラグナモン: フュージョナイズ */
-    { DM_SPECIES_DESTROMON, DM_MOVE_0359, 1 }, /* デストロモン: 3連装砲 */
-    { DM_SPECIES_DESTROMON, DM_MOVE_0360, 2 }, /* デストロモン: ジャガーノートブラスト */
-    { DM_SPECIES_DESTROMON, DM_MOVE_0361, 3 }, /* デストロモン: ロングレンジバスターキャノン */
-    { DM_SPECIES_DESTROMON, DM_MOVE_0358, 4 }, /* デストロモン: フュージョナイズ */
-    { DM_SPECIES_SNATCHMON, DM_MOVE_0362, 1 }, /* スナッチモン: ルインレーザー */
-    { DM_SPECIES_SNATCHMON, DM_MOVE_0363, 2 }, /* スナッチモン: トゥースピア */
-    { DM_SPECIES_SNATCHMON, DM_MOVE_0358, 3 }, /* スナッチモン: フュージョナイズ */
-    { DM_SPECIES_BEMMON, DM_MOVE_0364, 1 }, /* ベムモン: メッサークロー */
-    { DM_SPECIES_BEMMON, DM_MOVE_0358, 2 }, /* ベムモン: フュージョナイズ */
-    { DM_SPECIES_BAALMON_X, DM_MOVE_0365, 1 }, /* バアルモン（X抗体）: トゥーリブラスト */
-    { DM_SPECIES_BAALMON_X, DM_MOVE_0366, 2 }, /* バアルモン（X抗体）: ザイカミウチ */
-    { DM_SPECIES_BAALMON_X, DM_MOVE_0367, 3 }, /* バアルモン（X抗体）: アブソマーク */
-    { DM_SPECIES_AMPHIMON, DM_MOVE_0368, 1 }, /* アンフィモン: クリスタルフリーザー */
-    { DM_SPECIES_AMPHIMON, DM_MOVE_0369, 2 }, /* アンフィモン: アクアザンバー */
-    { DM_SPECIES_AMPHIMON, DM_MOVE_0370, 3 }, /* アンフィモン: ライバーンブレイク */
-    { DM_SPECIES_AMPHIMON, DM_MOVE_0371, 4 }, /* アンフィモン: アンブレディフェンダー */
-    { DM_SPECIES_DIARBBITMON, DM_MOVE_0372, 1 }, /* ディルビットモン: トラスゲイン */
-    { DM_SPECIES_DIARBBITMON, DM_MOVE_0373, 2 }, /* ディルビットモン: ボルジャーグ */
-    { DM_SPECIES_DIARBBITMON, DM_MOVE_0374, 3 }, /* ディルビットモン: バックストラッシュ */
-    { DM_SPECIES_SIRIUSMON, DM_MOVE_0375, 1 }, /* シリウスモン: フォトンブラスター */
-    { DM_SPECIES_SIRIUSMON, DM_MOVE_0376, 2 }, /* シリウスモン: コスモブレード */
-    { DM_SPECIES_SIRIUSMON, DM_MOVE_0377, 3 }, /* シリウスモン: ブレイクエーサー */
-    { DM_SPECIES_SIRIUSMON, DM_MOVE_0378, 4 }, /* シリウスモン: プラネイトナックル */
-    { DM_SPECIES_SHINEGREYMON_RUIN, DM_MOVE_0379, 1 }, /* シャイングレイモン： ルインモード: コロナブレイズソード */
-    { DM_SPECIES_SHINEGREYMON_RUIN, DM_MOVE_0380, 2 }, /* シャイングレイモン： ルインモード: ファイナルシャイニングバースト */
-    { DM_SPECIES_SHINEGREYMON_RUIN, DM_MOVE_0381, 3 }, /* シャイングレイモン： ルインモード: トリッドヴァイス */
-    { DM_SPECIES_CHAMBLEMON, DM_MOVE_0382, 1 }, /* シャンブルモン: スイーポア */
-    { DM_SPECIES_CHAMBLEMON, DM_MOVE_0383, 2 }, /* シャンブルモン: シャンピオン・ボム */
-    { DM_SPECIES_PUBLIMON, DM_MOVE_0384, 1 }, /* パブリモン: デュアルプレッサー */
-    { DM_SPECIES_PUBLIMON, DM_MOVE_0385, 2 }, /* パブリモン: ジュークラック */
-    { DM_SPECIES_OLEAMON, DM_MOVE_0386, 1 }, /* オウリアモン: ジャミール */
-    { DM_SPECIES_OLEAMON, DM_MOVE_0387, 2 }, /* オウリアモン: リーフレッド */
-    { DM_SPECIES_HUANKUNMON, DM_MOVE_0388, 1 }, /* ファンクンモン: 孤籠泡（ころうほう） */
-    { DM_SPECIES_HUANKUNMON, DM_MOVE_0389, 2 }, /* ファンクンモン: 冰乱結突（ひょうらんけっとつ） */
-    { DM_SPECIES_HUANKUNMON, DM_MOVE_0390, 3 }, /* ファンクンモン: 潮流旋禍（ちょうりゅうせんか） */
-    { DM_SPECIES_XIANGPENGMON, DM_MOVE_0391, 1 }, /* シャンポンモン: 雷煌鞭（らいこうべん） */
-    { DM_SPECIES_XIANGPENGMON, DM_MOVE_0392, 2 }, /* シャンポンモン: 神碎牙（しんさいが） */
-    { DM_SPECIES_XIANGPENGMON, DM_MOVE_0393, 3 }, /* シャンポンモン: 天星壊海（てんせいかいかい） */
-    { DM_SPECIES_XIQUEMON, DM_MOVE_0394, 1 }, /* シーチューモン: 瀑閃（ばくせん） */
-    { DM_SPECIES_XIQUEMON, DM_MOVE_0395, 2 }, /* シーチューモン: 魚流炮（ぎょりゅうほう） */
-    { DM_SPECIES_XIQUEMON, DM_MOVE_0396, 3 }, /* シーチューモン: 冰凍爪（ひょうとうそう） */
-    { DM_SPECIES_IMPERIALDRAMONFIGHTERMODE_VI, DM_MOVE_0397, 1 }, /* インペリアルドラモン：ファイターモード（黒）: ポジトロンレーザー */
-    { DM_SPECIES_IMPERIALDRAMONFIGHTERMODE_VI, DM_MOVE_0398, 2 }, /* インペリアルドラモン：ファイターモード（黒）: ギガデス */
-    { DM_SPECIES_IMPERIALDRAMONFIGHTERMODE_VI, DM_MOVE_0399, 3 }, /* インペリアルドラモン：ファイターモード（黒）: ポジトロンレーザーランス */
-    { DM_SPECIES_GREYMON_BLUE_X, DM_MOVE_0400, 1 }, /* グレイモン（青）（X抗体）: メガバースト */
-    { DM_SPECIES_GREYMON_BLUE_X, DM_MOVE_0401, 2 }, /* グレイモン（青）（X抗体）: ブレイダーテイル */
-    { DM_SPECIES_OBOROMON, DM_MOVE_0402, 1 }, /* オボロモン: 千万ノ太刀（ちよろずのたち） */
-    { DM_SPECIES_OBOROMON, DM_MOVE_0403, 2 }, /* オボロモン: 羅焼門（らしょうもん） */
-    { DM_SPECIES_OBOROMON, DM_MOVE_0404, 3 }, /* オボロモン: 幽玄（ゆうげん） */
-    { DM_SPECIES_GYUKIMON, DM_MOVE_0405, 1 }, /* ギュウキモン: 八束染縛（やつかせんばく） */
-    { DM_SPECIES_GYUKIMON, DM_MOVE_0406, 2 }, /* ギュウキモン: 魔塵瓢箪（まじんびょうたん） */
-    { DM_SPECIES_GYUKIMON, DM_MOVE_0407, 3 }, /* ギュウキモン: 千砲土蜘蛛（せんほうつちぐも） */
-    { DM_SPECIES_SHINMONZAEMON, DM_MOVE_0408, 1 }, /* しんもんざえモン: ナイトメアレイン */
-    { DM_SPECIES_SHINMONZAEMON, DM_MOVE_0409, 2 }, /* しんもんざえモン: ファンシーファンタジスタ */
-    { DM_SPECIES_SHINMONZAEMON, DM_MOVE_0410, 3 }, /* しんもんざえモン: スイートラブリーアタック */
-    { DM_SPECIES_HOVERESPIMON, DM_MOVE_0411, 1 }, /* ホバーエスピモン: スタンパーミサイル */
-    { DM_SPECIES_HOVERESPIMON, DM_MOVE_0412, 2 }, /* ホバーエスピモン: ブレストキャノン */
-    { DM_SPECIES_HOVERESPIMON, DM_MOVE_0413, 3 }, /* ホバーエスピモン: ドロンガー */
-    { DM_SPECIES_HOVERESPIMON, DM_MOVE_0414, 4 }, /* ホバーエスピモン: ダイバニッシュ */
-    { DM_SPECIES_ESPIMON, DM_MOVE_0415, 1 }, /* エスピモン: モットボム */
-    { DM_SPECIES_ESPIMON, DM_MOVE_0414, 2 }, /* エスピモン: ダイバニッシュ */
-    { DM_SPECIES_JUPITERMMON_WRATH, DM_MOVE_0416, 1 }, /* ユピテルモン：ラースモード: ケラウノスディバイド */
-    { DM_SPECIES_JUPITERMMON_WRATH, DM_MOVE_0417, 2 }, /* ユピテルモン：ラースモード: ライトニングビー */
-    { DM_SPECIES_JUPITERMMON_WRATH, DM_MOVE_0418, 3 }, /* ユピテルモン：ラースモード: ディオスサンダー */
-    { DM_SPECIES_PLUTOMON, DM_MOVE_0419, 1 }, /* プルートモン: ハガードクラスター */
-    { DM_SPECIES_PLUTOMON, DM_MOVE_0420, 2 }, /* プルートモン: ヘルズゲート */
-    { DM_SPECIES_PLUTOMON, DM_MOVE_0421, 3 }, /* プルートモン: ケイオスライツ */
-    { DM_SPECIES_CERESMON, DM_MOVE_0422, 1 }, /* ケレスモン: アイランドフリーフォール */
-    { DM_SPECIES_CERESMON, DM_MOVE_0423, 2 }, /* ケレスモン: バーニングブラッドシェル */
-    { DM_SPECIES_CERESMON, DM_MOVE_0424, 3 }, /* ケレスモン: フルーツフレシェット */
-    { DM_SPECIES_BACCHUSMON, DM_MOVE_0425, 1 }, /* バッカスモン: クック・オブ・ザ・ヘル */
-    { DM_SPECIES_BACCHUSMON, DM_MOVE_0426, 2 }, /* バッカスモン: パーティー・オブ・ザ・ヘブン */
-    { DM_SPECIES_BACCHUSMON, DM_MOVE_0427, 3 }, /* バッカスモン: リバース・オブ・ザ・デッド */
-    { DM_SPECIES_JUNOMON_HYSTERIC, DM_MOVE_0428, 1 }, /* ユノモン：ヒステリックモード: ウェルカムロスト */
-    { DM_SPECIES_JUNOMON_HYSTERIC, DM_MOVE_0429, 2 }, /* ユノモン：ヒステリックモード: リングラッジ */
-    { DM_SPECIES_JUNOMON_HYSTERIC, DM_MOVE_0430, 3 }, /* ユノモン：ヒステリックモード: ライアーバニッシュメント */
-    { DM_SPECIES_JUNOMON, DM_MOVE_0431, 1 }, /* ユノモン: ニードルハイブ */
-    { DM_SPECIES_JUNOMON, DM_MOVE_0432, 2 }, /* ユノモン: グレイスランス */
-    { DM_SPECIES_JUNOMON, DM_MOVE_0433, 3 }, /* ユノモン: ラブバスケット */
-    { DM_SPECIES_THETISMON, DM_MOVE_0434, 1 }, /* テティスモン: ビリースマッシャー */
-    { DM_SPECIES_THETISMON, DM_MOVE_0435, 2 }, /* テティスモン: ハンマーサンダー */
-    { DM_SPECIES_THETISMON, DM_MOVE_0436, 3 }, /* テティスモン: アドゥワールド */
-    { DM_SPECIES_THETISMON, DM_MOVE_0437, 4 }, /* テティスモン: ドクテアーゼ */
-    { DM_SPECIES_LAMORTMON, DM_MOVE_0438, 1 }, /* ラモールモン: 禍災爪（かさいそう） */
-    { DM_SPECIES_LAMORTMON, DM_MOVE_0439, 2 }, /* ラモールモン: 叩破伐倒（こうはばっとう） */
-    { DM_SPECIES_LAMORTMON, DM_MOVE_0440, 3 }, /* ラモールモン: 風牙烈巻迅（ふうがれっかんじん） */
-    { DM_SPECIES_LAMORTMON, DM_MOVE_0441, 4 }, /* ラモールモン: 豪怨毀永斬（ごうおんきえいざん） */
-    { DM_SPECIES_CANOWEISSMON, DM_MOVE_0442, 1 }, /* カノーヴァイスモン: ガリアフィッシャー */
-    { DM_SPECIES_CANOWEISSMON, DM_MOVE_0443, 2 }, /* カノーヴァイスモン: ドラゴニア */
-    { DM_SPECIES_CANOWEISSMON, DM_MOVE_0444, 3 }, /* カノーヴァイスモン: メテオルクス */
-    { DM_SPECIES_CANOWEISSMON, DM_MOVE_0445, 4 }, /* カノーヴァイスモン: グランノヴァ */
-    { DM_SPECIES_SISTERMON_CIEL_AWAKE, DM_MOVE_0446, 1 }, /* シスタモン シエル（覚醒）: 白詰一文字切り（覚醒） */
-    { DM_SPECIES_SISTERMON_CIEL_AWAKE, DM_MOVE_0447, 2 }, /* シスタモン シエル（覚醒）: 白殺（覚醒）　（びゃくさい） */
-    { DM_SPECIES_SISTERMON_CIEL_AWAKE, DM_MOVE_0448, 3 }, /* シスタモン シエル（覚醒）: 突蜂（覚醒）　（とっほう） */
-    { DM_SPECIES_SISTERMON_NOIR_AWAKE, DM_MOVE_0449, 1 }, /* シスタモン ノワール（覚醒）: ミッキーバレット（覚醒） */
-    { DM_SPECIES_SISTERMON_NOIR_AWAKE, DM_MOVE_0450, 2 }, /* シスタモン ノワール（覚醒）: ブレスファイア（覚醒） */
-    { DM_SPECIES_SISTERMON_NOIR_AWAKE, DM_MOVE_0451, 3 }, /* シスタモン ノワール（覚醒）: グランドシスタークルス（覚醒） */
-    { DM_SPECIES_SISTERMON_BLANC_AWAKE, DM_MOVE_0452, 1 }, /* シスタモン ブラン（覚醒）: ディバインピース(覚醒) */
-    { DM_SPECIES_SISTERMON_BLANC_AWAKE, DM_MOVE_0453, 2 }, /* シスタモン ブラン（覚醒）: プロテクトウェーブ(覚醒) */
-    { DM_SPECIES_SISTERMON_BLANC_AWAKE, DM_MOVE_0454, 3 }, /* シスタモン ブラン（覚醒）: グランドシスタークルス(覚醒) */
-    { DM_SPECIES_GULUSGAMMAMON, DM_MOVE_0455, 1 }, /* グルスガンマモン: ダークパレス */
-    { DM_SPECIES_GULUSGAMMAMON, DM_MOVE_0456, 2 }, /* グルスガンマモン: デスデモーナ */
-    { DM_SPECIES_GULUSGAMMAMON, DM_MOVE_0457, 3 }, /* グルスガンマモン: デッドエンドスキュアー */
-    { DM_SPECIES_TESLAJELLYMON, DM_MOVE_0458, 1 }, /* テスラジェリーモン: フィサリスト */
-    { DM_SPECIES_TESLAJELLYMON, DM_MOVE_0459, 2 }, /* テスラジェリーモン: パニッシューネ */
-    { DM_SPECIES_TESLAJELLYMON, DM_MOVE_0460, 3 }, /* テスラジェリーモン: ボルスプライト */
-    { DM_SPECIES_SYMBAREANGORAMON, DM_MOVE_0461, 1 }, /* ジンバーアンゴラモン: ジャイブ */
-    { DM_SPECIES_SYMBAREANGORAMON, DM_MOVE_0462, 2 }, /* ジンバーアンゴラモン: レントライザー */
-    { DM_SPECIES_SYMBAREANGORAMON, DM_MOVE_0463, 3 }, /* ジンバーアンゴラモン: ブレイキンストリーム */
-    { DM_SPECIES_BLACKTAILMON_UVER, DM_MOVE_0464, 1 }, /* ブラックテイルモン Uver.: ネコパンチ */
-    { DM_SPECIES_BLACKTAILMON_UVER, DM_MOVE_0465, 2 }, /* ブラックテイルモン Uver.: バコーニャ */
-    { DM_SPECIES_WEDDINMON, DM_MOVE_0466, 1 }, /* ウェディンモン: ホイップデコレーション */
-    { DM_SPECIES_WEDDINMON, DM_MOVE_0467, 2 }, /* ウェディンモン: ケーキカッティング */
-    { DM_SPECIES_WEDDINMON, DM_MOVE_0468, 3 }, /* ウェディンモン: ハピネスフォール */
-    { DM_SPECIES_SHORTMON, DM_MOVE_0469, 1 }, /* ショートモン: テイストーン */
-    { DM_SPECIES_SHORTMON, DM_MOVE_0470, 2 }, /* ショートモン: スウィートベリー */
-    { DM_SPECIES_BLACKRAPIDMON, DM_MOVE_0471, 1 }, /* ブラックラピッドモン: ラピッドファイア */
-    { DM_SPECIES_BLACKRAPIDMON, DM_MOVE_0472, 2 }, /* ブラックラピッドモン: ゴールデントライアングル */
-    { DM_SPECIES_BLACKGALGOMON, DM_MOVE_0473, 1 }, /* ブラックガルゴモン: ガトリングアーム */
-    { DM_SPECIES_BLACKGALGOMON, DM_MOVE_0474, 2 }, /* ブラックガルゴモン: ダムダムアッパー */
-    { DM_SPECIES_OMEGAMONZWART_D, DM_MOVE_0475, 1 }, /* オメガモンズワルトDEFEAT: ガルルキャノン */
-    { DM_SPECIES_OMEGAMONZWART_D, DM_MOVE_0476, 2 }, /* オメガモンズワルトDEFEAT: グレイソード */
-    { DM_SPECIES_WEZENGAMMAMON, DM_MOVE_0477, 1 }, /* ウェズンガンマモン: セドナ */
-    { DM_SPECIES_WEZENGAMMAMON, DM_MOVE_0478, 2 }, /* ウェズンガンマモン: アルビオン */
-    { DM_SPECIES_KAUSGAMMAMON, DM_MOVE_0479, 1 }, /* カウスガンマモン: ウルダインパルス */
-    { DM_SPECIES_KAUSGAMMAMON, DM_MOVE_0480, 2 }, /* カウスガンマモン: ランベルタキック */
-    { DM_SPECIES_BETELGAMMAMON, DM_MOVE_0481, 1 }, /* ベテルガンマモン: ソルブロー */
-    { DM_SPECIES_BETELGAMMAMON, DM_MOVE_0482, 2 }, /* ベテルガンマモン: ソルショット */
-    { DM_SPECIES_ABBADOMONCORE, DM_MOVE_0483, 1 }, /* アバドモンコア: エクリプスノーン */
-    { DM_SPECIES_ABBADOMONCORE, DM_MOVE_0484, 2 }, /* アバドモンコア: ビンジェラード */
-    { DM_SPECIES_ABBADOMONCORE, DM_MOVE_0485, 3 }, /* アバドモンコア: デスチャージ */
-    { DM_SPECIES_ABBADOMONCORE, DM_MOVE_0486, 4 }, /* アバドモンコア: ゲーズイレイザー */
-    { DM_SPECIES_SHOUTMONX7_SUPERIOR, DM_MOVE_0487, 1 }, /* シャウトモンX7：スペリオルモード: ファイナルクロスブレード */
-    { DM_SPECIES_SHOUTMONX7_SUPERIOR, DM_MOVE_0488, 2 }, /* シャウトモンX7：スペリオルモード: クロスバーニングロッカー */
-    { DM_SPECIES_SHOUTMONX7_SUPERIOR, DM_MOVE_0489, 3 }, /* シャウトモンX7：スペリオルモード: ダブルフレアバスター */
-    { DM_SPECIES_SHOUTMONX7_SUPERIOR, DM_MOVE_0490, 4 }, /* シャウトモンX7：スペリオルモード: セブンビクトライズ */
-    { DM_SPECIES_JELLYMON, DM_MOVE_0491, 1 }, /* ジェリーモン: ビビサンダー */
-    { DM_SPECIES_JELLYMON, DM_MOVE_0492, 2 }, /* ジェリーモン: ボルトナックル */
-    { DM_SPECIES_JELLYMON, DM_MOVE_0493, 3 }, /* ジェリーモン: スパイラルキック */
-    { DM_SPECIES_PUYOYOMON, DM_MOVE_0494, 1 }, /* プヨヨモン: ゾーンパチパチ */
-    { DM_SPECIES_PUYOMON, DM_MOVE_0495, 1 }, /* プヨモン: パチパチガス */
-    { DM_SPECIES_ANGORAMON, DM_MOVE_0496, 1 }, /* アンゴラモン: ダブルラリアット */
-    { DM_SPECIES_ANGORAMON, DM_MOVE_0497, 2 }, /* アンゴラモン: プチトルネード */
-    { DM_SPECIES_ANGORAMON, DM_MOVE_0498, 3 }, /* アンゴラモン: ピョンダンプ */
-    { DM_SPECIES_BOSAMON, DM_MOVE_0499, 1 }, /* ボサモン: ミッコミ */
-    { DM_SPECIES_PYONMON, DM_MOVE_0500, 1 }, /* ピョンモン: イヤンタ */
-    { DM_SPECIES_GAMMAMON, DM_MOVE_0501, 1 }, /* ガンマモン: ホーンアタック */
-    { DM_SPECIES_GAMMAMON, DM_MOVE_0502, 2 }, /* ガンマモン: ブレイクロー */
-    { DM_SPECIES_GURIMON, DM_MOVE_0503, 1 }, /* グリモン: チクチクアタック */
-    { DM_SPECIES_CURIMON, DM_MOVE_0265, 1 }, /* クリモン: 泡 */
-    { DM_SPECIES_ABBADOMON, DM_MOVE_0486, 1 }, /* アバドモン: ゲーズイレイザー */
-    { DM_SPECIES_ABBADOMON, DM_MOVE_0504, 2 }, /* アバドモン: ガーライトネス */
-    { DM_SPECIES_ABBADOMON, DM_MOVE_0505, 3 }, /* アバドモン: ホワイトライナー */
-    { DM_SPECIES_NEGAMON, DM_MOVE_0506, 1 }, /* ネガーモン: ダウナーアイ */
-    { DM_SPECIES_PILEVOLCAMON, DM_MOVE_0507, 1 }, /* パイルボルケーモン: ボルケニックドライバー */
-    { DM_SPECIES_PILEVOLCAMON, DM_MOVE_0508, 2 }, /* パイルボルケーモン: ダイヤモンドフィスト */
-    { DM_SPECIES_RAIDENMON, DM_MOVE_0509, 1 }, /* ライデンモン: キルリアン・ブラント */
-    { DM_SPECIES_RAIDENMON, DM_MOVE_0510, 2 }, /* ライデンモン: ライジング・サン */
-    { DM_SPECIES_RAIJINMON, DM_MOVE_0511, 1 }, /* ライジンモン: エレクーゲル */
-    { DM_SPECIES_RAIJINMON, DM_MOVE_0512, 2 }, /* ライジンモン: ブリッツアーム */
-    { DM_SPECIES_DOKUNEMON, DM_MOVE_0513, 1 }, /* ドクネモン: ワームベノム */
-    { DM_SPECIES_DOKUNEMON, DM_MOVE_0514, 2 }, /* ドクネモン: ポイズンライド */
-    { DM_SPECIES_MODOKIBETAMON, DM_MOVE_0515, 1 }, /* モドキベタモン: アクアタワー */
-    { DM_SPECIES_MODOKIBETAMON, DM_MOVE_0516, 2 }, /* モドキベタモン: ブレードフィン */
-    { DM_SPECIES_HYDRAMON, DM_MOVE_0517, 1 }, /* ヒュドラモン: バイオトキシン */
-    { DM_SPECIES_HYDRAMON, DM_MOVE_0518, 2 }, /* ヒュドラモン: インテンスランテール */
-    { DM_SPECIES_HYDRAMON, DM_MOVE_0519, 3 }, /* ヒュドラモン: ディビジョンブレイク */
-    { DM_SPECIES_BLOOMLORDMON, DM_MOVE_0520, 1 }, /* ブルムロードモン: マルチプルシード */
-    { DM_SPECIES_BLOOMLORDMON, DM_MOVE_0521, 2 }, /* ブルムロードモン: スプラウトラッシュ */
-    { DM_SPECIES_BLOOMLORDMON, DM_MOVE_0522, 3 }, /* ブルムロードモン: グラン・デル・ソル */
-    { DM_SPECIES_AJATARMON, DM_MOVE_0523, 1 }, /* アヤタラモン: アサルトハチェット */
-    { DM_SPECIES_AJATARMON, DM_MOVE_0524, 2 }, /* アヤタラモン: タイドアップアイビー */
-    { DM_SPECIES_AJATARMON, DM_MOVE_0525, 3 }, /* アヤタラモン: ショットガンモス */
-    { DM_SPECIES_GARDROMON_GOLD, DM_MOVE_0526, 1 }, /* ガードロモン（金）: ディストラクショングレネード */
-    { DM_SPECIES_BURGAMON_LV4, DM_MOVE_0527, 1 }, /* バーガモン: スパイシーオニオン */
-    { DM_SPECIES_BURGAMON_LV4, DM_MOVE_0528, 2 }, /* バーガモン: デリシャスパティ */
-    { DM_SPECIES_PIDMON, DM_MOVE_0529, 1 }, /* ピッドモン: ファイアフェザー */
-    { DM_SPECIES_PIDMON, DM_MOVE_0530, 2 }, /* ピッドモン: ピッドスピード */
-    { DM_SPECIES_SANDYAMMAMON, DM_MOVE_0531, 1 }, /* サンドヤンマモン: デザートウィンド */
-    { DM_SPECIES_YAMMAMON, DM_MOVE_0532, 1 }, /* ヤンマモン: サンダーレイ */
-    { DM_SPECIES_YAMMAMON, DM_MOVE_0533, 2 }, /* ヤンマモン: インセクスオーム */
-    { DM_SPECIES_MORISHELLMON, DM_MOVE_0534, 1 }, /* モリシェルモン: パイルシェル */
-    { DM_SPECIES_MORISHELLMON, DM_MOVE_0535, 2 }, /* モリシェルモン: マインドフォッグ */
-    { DM_SPECIES_BOMBERNANIMON, DM_MOVE_0536, 1 }, /* ボンバーナニモン: フリースローボム */
-    { DM_SPECIES_BOMBERNANIMON, DM_MOVE_0537, 2 }, /* ボンバーナニモン: 爆・オヤジパンチ */
-    { DM_SPECIES_HERAKLEKABUTERIMON_X, DM_MOVE_0538, 1 }, /* ヘラクルカブテリモン（X抗体）: ギガブラスター */
-    { DM_SPECIES_HERAKLEKABUTERIMON_X, DM_MOVE_0539, 2 }, /* ヘラクルカブテリモン（X抗体）: ホーンバスター改 */
-    { DM_SPECIES_STARMON_X, DM_MOVE_0540, 1 }, /* スターモン（X抗体）: メテオスコール */
-    { DM_SPECIES_STARMON_X, DM_MOVE_0541, 2 }, /* スターモン（X抗体）: メテオチャンピオン */
-    { DM_SPECIES_GROWMON_X, DM_MOVE_0542, 1 }, /* グラウモン（X抗体）: プラズマブレイド */
-    { DM_SPECIES_GROWMON_X, DM_MOVE_0543, 2 }, /* グラウモン（X抗体）: エキゾーストフレイム */
-    { DM_SPECIES_GROWMON_X, DM_MOVE_0544, 3 }, /* グラウモン（X抗体）: ライデンブレイド */
-    { DM_SPECIES_HAGURUMON_X, DM_MOVE_0545, 1 }, /* ハグルモン（X抗体）: ダークネスギア */
-    { DM_SPECIES_GAIOUMON_ITTO, DM_MOVE_0546, 1 }, /* ガイオウモン：厳刀ノ型: 旋風縛（せんぷうばく） */
-    { DM_SPECIES_GAIOUMON_ITTO, DM_MOVE_0547, 2 }, /* ガイオウモン：厳刀ノ型: 菊燐一閃・號雷斬（きくりんいっせん・ごうらいざん） */
-    { DM_SPECIES_GAIOUMON_ITTO, DM_MOVE_0548, 3 }, /* ガイオウモン：厳刀ノ型: 刀華静謐（とうかせいひつ） */
-    { DM_SPECIES_BRACHIOMON, DM_MOVE_0549, 1 }, /* ブラキモン: ブラキオバブル */
-    { DM_SPECIES_KYUKIMON, DM_MOVE_0550, 1 }, /* キュウキモン: ブレイドツイスター */
-    { DM_SPECIES_KYUKIMON, DM_MOVE_0551, 2 }, /* キュウキモン: 三連星 */
-    { DM_SPECIES_VERMILLIMON, DM_MOVE_0552, 1 }, /* ヴァーミリモン: ヴォルケーノストライクS */
-    { DM_SPECIES_VERMILLIMON, DM_MOVE_0553, 2 }, /* ヴァーミリモン: ハードタックル */
-    { DM_SPECIES_ASSAULTMON, DM_MOVE_0554, 1 }, /* アサルトモン: ジャスティスマサカー */
-    { DM_SPECIES_ASSAULTMON, DM_MOVE_0555, 2 }, /* アサルトモン: サプライズアタック */
-    { DM_SPECIES_TEKKAMON, DM_MOVE_0556, 1 }, /* テッカモン: 斬電剣 */
-    { DM_SPECIES_TEKKAMON, DM_MOVE_0557, 2 }, /* テッカモン: スカルスタンド */
-    { DM_SPECIES_VULTUREMON, DM_MOVE_0558, 1 }, /* バルチャモン: リーパーストライク */
-    { DM_SPECIES_VULTUREMON, DM_MOVE_0559, 2 }, /* バルチャモン: デザートデスサイズ */
-    { DM_SPECIES_VULTUREMON, DM_MOVE_0560, 3 }, /* バルチャモン: ウィザーウィング */
-    { DM_SPECIES_GOROMON, DM_MOVE_0561, 1 }, /* ゴロモン: ロックブレス */
-    { DM_SPECIES_SUNAMON, DM_MOVE_0562, 1 }, /* スナモン: 砂かけ */
-    { DM_SPECIES_BLACKKINGNUMEMON, DM_MOVE_0563, 1 }, /* ブラックキングヌメモン: ダークピューピル */
-    { DM_SPECIES_BLACKKINGNUMEMON, DM_MOVE_0564, 2 }, /* ブラックキングヌメモン: ポイズンミュークス */
-    { DM_SPECIES_GOLDNUMEMON, DM_MOVE_0565, 1 }, /* ゴールドヌメモン: ゴルドリアンラッシュ */
-    { DM_SPECIES_GOLDNUMEMON, DM_MOVE_0566, 2 }, /* ゴールドヌメモン: ゴールドエクスクレメント */
-    { DM_SPECIES_GLADIMON, DM_MOVE_0567, 1 }, /* グラディモン: ホイールラッシュ */
-    { DM_SPECIES_GLADIMON, DM_MOVE_0568, 2 }, /* グラディモン: ソードダンサー */
-    { DM_SPECIES_SHOUTMONX4K, DM_MOVE_0569, 1 }, /* シャウトモンX4K: バーニングスタークラッシャー */
-    { DM_SPECIES_SHOUTMONX4K, DM_MOVE_0570, 2 }, /* シャウトモンX4K: スリービクトライズ */
-    { DM_SPECIES_SHOUTMONX4K, DM_MOVE_0571, 3 }, /* シャウトモンX4K: スリーインパクト */
-    { DM_SPECIES_SHOUTMONX4K, DM_MOVE_0572, 4 }, /* シャウトモンX4K: ビクトライズブーメラン */
-    { DM_SPECIES_KODOKUGUMON, DM_MOVE_0573, 1 }, /* コドクグモン: ポイズンネイル */
-    { DM_SPECIES_YOXTUYOXTUMON, DM_MOVE_0574, 1 }, /* ヨッ！ヨッ！モン: ラッパーコースター */
-    { DM_SPECIES_YOXTUYOXTUMON, DM_MOVE_0575, 2 }, /* ヨッ！ヨッ！モン: ワンハンド・スイング */
-    { DM_SPECIES_YOXTUYOXTUMON, DM_MOVE_0576, 3 }, /* ヨッ！ヨッ！モン: トルペド・クロッシング */
-    { DM_SPECIES_MINIDEKACHIMON, DM_MOVE_0577, 1 }, /* ミニデカチモン: コッチョン */
-    { DM_SPECIES_MINIDEKACHIMON, DM_MOVE_0578, 2 }, /* ミニデカチモン: ミニデカフレイム */
-    { DM_SPECIES_ATAMADEKACHIMON, DM_MOVE_0579, 1 }, /* アタマデカチモン: 鼓・爆砕 */
-    { DM_SPECIES_ATAMADEKACHIMON, DM_MOVE_0580, 2 }, /* アタマデカチモン: 頭つぶし */
-    { DM_SPECIES_ATAMADEKACHIMON, DM_MOVE_0578, 3 }, /* アタマデカチモン: ミニデカフレイム */
-    { DM_SPECIES_TRAILMON, DM_MOVE_0581, 1 }, /* トレイルモン: クールランニング */
-    { DM_SPECIES_TRAILMON, DM_MOVE_0582, 2 }, /* トレイルモン: 急ブレーキスパーク */
-    { DM_SPECIES_GREATKINGSCUMON, DM_MOVE_0583, 1 }, /* スカモン大王: ウンチ投げ */
-    { DM_SPECIES_GREATKINGSCUMON, DM_MOVE_0584, 2 }, /* スカモン大王: キングスタンプ */
-    { DM_SPECIES_SHROUDMON, DM_MOVE_0585, 1 }, /* シュラウドモン: 鬼瞬轟拳（きしゅんごうけん） */
-    { DM_SPECIES_SHROUDMON, DM_MOVE_0586, 2 }, /* シュラウドモン: 獄炎破回蹴（ごくえんはかいしゅう） */
-    { DM_SPECIES_SHROUDMON, DM_MOVE_0587, 3 }, /* シュラウドモン: 喰雷炎砕破（がらいえんさいは） */
-    { DM_SPECIES_FROSVELGRMON, DM_MOVE_0588, 1 }, /* フロスベルグモン: イノセンスブリザード */
-    { DM_SPECIES_FROSVELGRMON, DM_MOVE_0589, 2 }, /* フロスベルグモン: フリージングレイ */
-    { DM_SPECIES_FROSVELGRMON, DM_MOVE_0590, 3 }, /* フロスベルグモン: ルインリバーヴ */
-    { DM_SPECIES_FROZOMON, DM_MOVE_0591, 1 }, /* フロゾモン: リムーバルブロウ */
-    { DM_SPECIES_FROZOMON, DM_MOVE_0592, 2 }, /* フロゾモン: デフロストブレード */
-    { DM_SPECIES_FROZOMON, DM_MOVE_0593, 3 }, /* フロゾモン: グラシエイトミサイル */
-    { DM_SPECIES_HIYARIMON, DM_MOVE_0594, 1 }, /* ヒヤリモン: ダイアモンドダスト */
-    { DM_SPECIES_BLACKSERAPHIMON, DM_MOVE_0595, 1 }, /* ブラックセラフィモン: セブンヘルズ */
-    { DM_SPECIES_BLACKSERAPHIMON, DM_MOVE_0596, 2 }, /* ブラックセラフィモン: テスタメント */
-    { DM_SPECIES_RARERAREMON, DM_MOVE_0597, 1 }, /* レアレアモン: ダイジェス */
-    { DM_SPECIES_RARERAREMON, DM_MOVE_0598, 2 }, /* レアレアモン: ディケイズン */
-    { DM_SPECIES_CLIMBMON, DM_MOVE_0599, 1 }, /* クライモン: 擬遁アイソレーション（ぎとんあいそれーしょん） */
-    { DM_SPECIES_CLIMBMON, DM_MOVE_0600, 2 }, /* クライモン: クラックハーケン */
-    { DM_SPECIES_CLIMBMON, DM_MOVE_0601, 3 }, /* クライモン: ダイナミックサイファー */
-    { DM_SPECIES_DIVEMON, DM_MOVE_0602, 1 }, /* ダイブモン: フィレットブレード */
-    { DM_SPECIES_DIVEMON, DM_MOVE_0603, 2 }, /* ダイブモン: リップルエッジ */
-    { DM_SPECIES_DIVEMON, DM_MOVE_0604, 3 }, /* ダイブモン: リキッドヴェール */
-    { DM_SPECIES_CLEARAGUMON, DM_MOVE_0605, 1 }, /* クリアアグモン: プレシャスフレア */
-    { DM_SPECIES_CLEARAGUMON, DM_MOVE_0606, 2 }, /* クリアアグモン: ドリームミサイル */
-    { DM_SPECIES_BANCHOLILIMON, DM_MOVE_0607, 1 }, /* バンチョーリリモン: アブソリュートテリトリー */
-    { DM_SPECIES_BANCHOLILIMON, DM_MOVE_0608, 2 }, /* バンチョーリリモン: ナイトメアアッセンブル */
-    { DM_SPECIES_BANCHOLILIMON, DM_MOVE_0609, 3 }, /* バンチョーリリモン: トゥインペタル */
-    { DM_SPECIES_METALGREYMON_VA_X, DM_MOVE_0610, 1 }, /* メタルグレイモン（ワクチン種）（Ｘ抗体）: トライデントアームＶＥＲ９.９ */
-    { DM_SPECIES_METALGREYMON_VA_X, DM_MOVE_0611, 2 }, /* メタルグレイモン（ワクチン種）（Ｘ抗体）: ギガデストロイヤー */
-    { DM_SPECIES_PANJYAMON_X, DM_MOVE_0612, 1 }, /* パンジャモン（Ｘ抗体）: 氷獣拳 */
-    { DM_SPECIES_PANJYAMON_X, DM_MOVE_0613, 2 }, /* パンジャモン（Ｘ抗体）: 雪花火 */
-    { DM_SPECIES_METALMAMEMON_X, DM_MOVE_0614, 1 }, /* メタルマメモン（Ｘ抗体）: エネルギーボム */
-    { DM_SPECIES_METALMAMEMON_X, DM_MOVE_0615, 2 }, /* メタルマメモン（Ｘ抗体）: エネルギーレーザーボム */
-    { DM_SPECIES_THUNDERBALLMON_X, DM_MOVE_0616, 1 }, /* サンダーボールモン（Ｘ抗体）: アノードパンチ */
-    { DM_SPECIES_THUNDERBALLMON_X, DM_MOVE_0617, 2 }, /* サンダーボールモン（Ｘ抗体）: カソードキック */
-    { DM_SPECIES_THUNDERBALLMON_X, DM_MOVE_0618, 3 }, /* サンダーボールモン（Ｘ抗体）: サンダーボマー */
-    { DM_SPECIES_MONOCHROMON_X, DM_MOVE_0619, 1 }, /* モノクロモン（Ｘ抗体）: ヴォルケーノストライク */
-    { DM_SPECIES_MONOCHROMON_X, DM_MOVE_0620, 2 }, /* モノクロモン（Ｘ抗体）: トマホークスラッシュ */
-    { DM_SPECIES_DOBERMON_X, DM_MOVE_0621, 1 }, /* ドーベルモン（Ｘ抗体）: グラオ・レルム */
-    { DM_SPECIES_DOBERMON_X, DM_MOVE_0622, 2 }, /* ドーベルモン（Ｘ抗体）: シュヴァルツ・シュトラール */
-    { DM_SPECIES_GESOMON_X, DM_MOVE_0623, 1 }, /* ゲソモン（Ｘ抗体）: デッドリーシェード */
-    { DM_SPECIES_GESOMON_X, DM_MOVE_0624, 2 }, /* ゲソモン（Ｘ抗体）: マッドバイキング */
-    { DM_SPECIES_GOTTSUMON_X, DM_MOVE_0625, 1 }, /* ゴツモン（Ｘ抗体）: アングリーロック */
-    { DM_SPECIES_GOTTSUMON_X, DM_MOVE_0626, 2 }, /* ゴツモン（Ｘ抗体）: レイジロック */
-    { DM_SPECIES_GANIMON_X, DM_MOVE_0627, 1 }, /* ガニモン（Ｘ抗体）: シザーズエクスキューション */
-    { DM_SPECIES_GANIMON_X, DM_MOVE_0628, 2 }, /* ガニモン（Ｘ抗体）: ヘビークランチ */
-    { DM_SPECIES_GUILMON_X, DM_MOVE_0629, 1 }, /* ギルモン（Ｘ抗体）: ロックブレイカー */
-    { DM_SPECIES_GUILMON_X, DM_MOVE_0630, 2 }, /* ギルモン（Ｘ抗体）: ファイアーボール */
-    { DM_SPECIES_GUILMON_X, DM_MOVE_0631, 3 }, /* ギルモン（Ｘ抗体）: ファイアーミット */
-    { DM_SPECIES_SHOUTMON_EX6, DM_MOVE_0632, 1 }, /* シャウトモンEX6: ソル・キャリバー */
-    { DM_SPECIES_SHOUTMON_EX6, DM_MOVE_0633, 2 }, /* シャウトモンEX6: デモリッションホーン */
-    { DM_SPECIES_SHOUTMON_EX6, DM_MOVE_0634, 3 }, /* シャウトモンEX6: リュウセイロックダマシー */
-    { DM_SPECIES_TORIKARABALLMON, DM_MOVE_0635, 1 }, /* とりからボールモン: 植物性の泡 */
-    { DM_SPECIES_BURGAMON, DM_MOVE_0528, 1 }, /* バーガモン: デリシャスパティ */
-    { DM_SPECIES_BURGAMON, DM_MOVE_0636, 2 }, /* バーガモン: グリーンピクルス */
-    { DM_SPECIES_POTAMON, DM_MOVE_0637, 1 }, /* ポテモン: シュバシュバポテト */
-    { DM_SPECIES_POTAMON, DM_MOVE_0638, 2 }, /* ポテモン: バッシュドポテト */
-    { DM_SPECIES_ACHILLESMON, DM_MOVE_0639, 1 }, /* アキレウスモン: アネモダルメノス */
-    { DM_SPECIES_ACHILLESMON, DM_MOVE_0640, 2 }, /* アキレウスモン: アステロイディス */
-    { DM_SPECIES_ACHILLESMON, DM_MOVE_0641, 3 }, /* アキレウスモン: ロンヒ・アディスタクト */
-    { DM_SPECIES_SHIVAMON, DM_MOVE_0642, 1 }, /* シーヴァモン: クータスタ・キラナ */
-    { DM_SPECIES_SHIVAMON, DM_MOVE_0643, 2 }, /* シーヴァモン: カマラ・カルマ */
-    { DM_SPECIES_SHIVAMON, DM_MOVE_0644, 3 }, /* シーヴァモン: サマディ・シャンティ */
-    { DM_SPECIES_KAZUCHIMON, DM_MOVE_0645, 1 }, /* カヅチモン: 二刀勢雷（にとうせいらい） */
-    { DM_SPECIES_KAZUCHIMON, DM_MOVE_0646, 2 }, /* カヅチモン: 士道一徹（しどういってつ） */
-    { DM_SPECIES_KAZUCHIMON, DM_MOVE_0647, 3 }, /* カヅチモン: 神電召雷光（しんでんしょうらいこう） */
-    { DM_SPECIES_PISTMON, DM_MOVE_0648, 1 }, /* ピストモン: ブランブルショット */
-    { DM_SPECIES_PISTMON, DM_MOVE_0649, 2 }, /* ピストモン: クリムゾンスポアーズ */
-    { DM_SPECIES_PISTMON, DM_MOVE_0650, 3 }, /* ピストモン: キリングケイデンス */
-    { DM_SPECIES_TEMPOMON, DM_MOVE_0651, 1 }, /* テンポモン: リズミック・アーツ */
-    { DM_SPECIES_TEMPOMON, DM_MOVE_0652, 2 }, /* テンポモン: ハウリングブラスト */
-    { DM_SPECIES_TEMPOMON, DM_MOVE_0653, 3 }, /* テンポモン: アップビートツイスター */
-    { DM_SPECIES_SHOOTMON, DM_MOVE_0654, 1 }, /* シュートモン: キャノンボールシューター */
-    { DM_SPECIES_SHOOTMON, DM_MOVE_0655, 2 }, /* シュートモン: ワイルドピッチ */
-    { DM_SPECIES_SHOOTMON, DM_MOVE_0656, 3 }, /* シュートモン: ラウンドジェイル */
-    { DM_SPECIES_BOUTMON, DM_MOVE_0657, 1 }, /* バウトモン: 雷撃踵（らいげきしょう） */
-    { DM_SPECIES_BOUTMON, DM_MOVE_0658, 2 }, /* バウトモン: 武電破弾（ぶでんはだん） */
-    { DM_SPECIES_BOUTMON, DM_MOVE_0659, 3 }, /* バウトモン: 迅雷廻天戟（じんらいかいてんげき） */
-    { DM_SPECIES_MITAMAMON, DM_MOVE_0660, 1 }, /* ミタマモン: 轟炎輪（ごうえんりん） */
-    { DM_SPECIES_MITAMAMON, DM_MOVE_0661, 2 }, /* ミタマモン: 灰迅雷瞳（かいじんらいどう） */
-    { DM_SPECIES_MITAMAMON, DM_MOVE_0662, 3 }, /* ミタマモン: 響香水月（きょうかすいげつ） */
-    { DM_SPECIES_LOVELYANGEMON, DM_MOVE_0663, 1 }, /* ラブリーエンジェモン: マーブルインパクト */
-    { DM_SPECIES_LOVELYANGEMON, DM_MOVE_0664, 2 }, /* ラブリーエンジェモン: ドリームハリケーン */
-    { DM_SPECIES_LOVELYANGEMON, DM_MOVE_0665, 3 }, /* ラブリーエンジェモン: ラブリーシャワー */
-    { DM_SPECIES_BIBIMON, DM_MOVE_0666, 1 }, /* ビビモン: ミニマルフラッシュ */
-    { DM_SPECIES_DOKIMON, DM_MOVE_0667, 1 }, /* ドキモン: 静電気 */
-    { DM_SPECIES_NAMAKEMON, DM_MOVE_0583, 1 }, /* ナマケモン: ウンチ投げ */
-    { DM_SPECIES_NAMAKEMON, DM_MOVE_0668, 2 }, /* ナマケモン: パラライズリック */
-    { DM_SPECIES_RUNNERMON, DM_MOVE_0669, 1 }, /* ランナモン: ライトニングラッシュ */
-    { DM_SPECIES_RUNNERMON, DM_MOVE_0670, 2 }, /* ランナモン: ハートビートインパルス */
-    { DM_SPECIES_EXERMON, DM_MOVE_0671, 1 }, /* エキサモン: インセクマインド */
-    { DM_SPECIES_EXERMON, DM_MOVE_0672, 2 }, /* エキサモン: デフィブレイショック */
-    { DM_SPECIES_BULKMON, DM_MOVE_0673, 1 }, /* バルクモン: エレクトリカルフィスト */
-    { DM_SPECIES_BULKMON, DM_MOVE_0674, 2 }, /* バルクモン: サンダードレッド */
-    { DM_SPECIES_KOMONDOMON, DM_MOVE_0675, 1 }, /* コモンドモン: ワイワイパー */
-    { DM_SPECIES_KOMONDOMON, DM_MOVE_0676, 2 }, /* コモンドモン: マッシグラン */
-    { DM_SPECIES_PULSEMON, DM_MOVE_0677, 1 }, /* パルスモン: エレキラッシュ */
-    { DM_SPECIES_PULSEMON, DM_MOVE_0678, 2 }, /* パルスモン: プチインパルス */
-    { DM_SPECIES_OMEGAMON_MERCIFUL, DM_MOVE_0679, 1 }, /* オメガモン：マーシフルモード: 雅琉々砲（がるるほう） */
-    { DM_SPECIES_OMEGAMON_MERCIFUL, DM_MOVE_0680, 2 }, /* オメガモン：マーシフルモード: 虞玲刀（ぐれいとう） */
-    { DM_SPECIES_DONEDEVIMON, DM_MOVE_0681, 1 }, /* ダンデビモン: デストロイクロウ */
-    { DM_SPECIES_DONEDEVIMON, DM_MOVE_0682, 2 }, /* ダンデビモン: アルティメットフレア */
-    { DM_SPECIES_DONEDEVIMON, DM_MOVE_0683, 3 }, /* ダンデビモン: マイアスピウ */
-    { DM_SPECIES_WAREGARURUMON_SAGITTARIUS, DM_MOVE_0684, 1 }, /* ワーガルルモン：サジタリウスモード: カウスラッガー */
-    { DM_SPECIES_WAREGARURUMON_SAGITTARIUS, DM_MOVE_0685, 2 }, /* ワーガルルモン：サジタリウスモード: アルナスショット */
-    { DM_SPECIES_WAREGARURUMON_SAGITTARIUS, DM_MOVE_0686, 3 }, /* ワーガルルモン：サジタリウスモード: カイザーネイル */
-    { DM_SPECIES_IMPERIALDRAMON_DRAGON_BLACK, DM_MOVE_0687, 1 }, /* インペリアルドラモン：ドラゴンモード(黒): メガデス */
-    { DM_SPECIES_MANTICOREMON, DM_MOVE_0688, 1 }, /* マンティコアモン: トリニティゴスペル */
-    { DM_SPECIES_MANTICOREMON, DM_MOVE_0689, 2 }, /* マンティコアモン: アシッドインジェクション */
-    { DM_SPECIES_MIMICMON, DM_MOVE_0690, 1 }, /* ミミックモン: デッドショット */
-    { DM_SPECIES_MIMICMON, DM_MOVE_0691, 2 }, /* ミミックモン: ヒンダーマイアズマ */
-    { DM_SPECIES_BALUCHIMON, DM_MOVE_0692, 1 }, /* バルキモン: サイキックチェーン */
-    { DM_SPECIES_BALUCHIMON, DM_MOVE_0693, 2 }, /* バルキモン: クラウドビジョン */
-    { DM_SPECIES_DARKMAILDRAMON, DM_MOVE_0694, 1 }, /* ダークメイルドラモン: ダークウィング */
-    { DM_SPECIES_METALGREYMON_ALTER, DM_MOVE_0695, 1 }, /* メタルグレイモン：アルタラウスモード: ポジトロンブラスター */
-    { DM_SPECIES_METALGREYMON_ALTER, DM_MOVE_0696, 2 }, /* メタルグレイモン：アルタラウスモード: アルタブレード */
-    { DM_SPECIES_METALGREYMON_ALTER, DM_MOVE_0611, 3 }, /* メタルグレイモン：アルタラウスモード: ギガデストロイヤー */
-    { DM_SPECIES_METALGREYMON_ALTER, DM_MOVE_0697, 4 }, /* メタルグレイモン：アルタラウスモード: トライデントアーム */
-    { DM_SPECIES_METALGREYMON_ALTER, DM_MOVE_0698, 5 }, /* メタルグレイモン：アルタラウスモード: ジガストーム */
-    { DM_SPECIES_REBELLIMON, DM_MOVE_0699, 1 }, /* リベリモン: ヴァンキッシュミサイル */
-    { DM_SPECIES_REBELLIMON, DM_MOVE_0700, 2 }, /* リベリモン: マキシマムデモリッシャー */
-    { DM_SPECIES_MACHMON, DM_MOVE_0701, 1 }, /* マッハモン: フルスロットルエッジ */
-    { DM_SPECIES_MACHMON, DM_MOVE_0702, 2 }, /* マッハモン: マッドネスファイア */
-    { DM_SPECIES_JUNKMON, DM_MOVE_0703, 1 }, /* ジャンクモン: パラボリックジャンク */
-    { DM_SPECIES_JUNKMON, DM_MOVE_0704, 2 }, /* ジャンクモン: スクラップティース */
-    { DM_SPECIES_HEAVYLEOMON, DM_MOVE_0705, 1 }, /* ヘヴィーレオモン: バレッジスイーパー */
-    { DM_SPECIES_HEAVYLEOMON, DM_MOVE_0706, 2 }, /* ヘヴィーレオモン: レスティングバーナー */
-    { DM_SPECIES_HEAVYLEOMON, DM_MOVE_0707, 3 }, /* ヘヴィーレオモン: ソニックエクスカベーター */
-    { DM_SPECIES_HOPMON, DM_MOVE_0708, 1 }, /* ホップモン: ホップヒップ */
-    { DM_SPECIES_KETOMON, DM_MOVE_0709, 1 }, /* ケトモン: ポッピンティア */
-    { DM_SPECIES_NIDHOGGMON, DM_MOVE_0710, 1 }, /* ニーズヘッグモン: アナイアレンション */
-    { DM_SPECIES_NIDHOGGMON, DM_MOVE_0711, 2 }, /* ニーズヘッグモン: ルウダメント */
-    { DM_SPECIES_ENTMON, DM_MOVE_0712, 1 }, /* エントモン: ドライアドスティンガー */
-    { DM_SPECIES_ENTMON, DM_MOVE_0713, 2 }, /* エントモン: ブラステッドディザスター */
-    { DM_SPECIES_PARASAURMON, DM_MOVE_0714, 1 }, /* パラサウモン: パルシースイート */
-    { DM_SPECIES_PARASAURMON, DM_MOVE_0715, 2 }, /* パラサウモン: ウェイビーオクタヴィスト */
-    { DM_SPECIES_TOROPIAMON, DM_MOVE_0716, 1 }, /* トロピアモン: ペタリーカーネイジ */
-    { DM_SPECIES_TOROPIAMON, DM_MOVE_0717, 2 }, /* トロピアモン: トロピカルヴェノム */
-    { DM_SPECIES_POMUMON, DM_MOVE_0718, 1 }, /* ポームモン: ラピッドシード */
-    { DM_SPECIES_POMUMON, DM_MOVE_0719, 2 }, /* ポームモン: フルーツラッシュ */
-    { DM_SPECIES_EYESMON_SCATTER, DM_MOVE_0720, 1 }, /* アイズモン：スキャッターモード: 邪念眼 */
-    { DM_SPECIES_EYESMON_SCATTER, DM_MOVE_0721, 2 }, /* アイズモン：スキャッターモード: 影縛り */
-    { DM_SPECIES_EYESMON, DM_MOVE_0720, 1 }, /* アイズモン: 邪念眼 */
-    { DM_SPECIES_EYESMON, DM_MOVE_0722, 2 }, /* アイズモン: 愚幻 */
-    { DM_SPECIES_BETAMON_X, DM_MOVE_0723, 1 }, /* ベタモン（X抗体）: 電撃ビリリン185V */
-    { DM_SPECIES_BETAMON_X, DM_MOVE_0724, 2 }, /* ベタモン（X抗体）: 電撃ビリリン */
-    { DM_SPECIES_GAZIMON_X, DM_MOVE_0725, 1 }, /* ガジモン（X抗体）: パラライズブレス */
-    { DM_SPECIES_GAZIMON_X, DM_MOVE_0726, 2 }, /* ガジモン（X抗体）: ブービーピット */
-    { DM_SPECIES_ALGOMON_LV1, DM_MOVE_0727, 1 }, /* アルゴモン: 酸の泡 */
-    { DM_SPECIES_GHOSTMON, DM_MOVE_0728, 1 }, /* ゴースモン: リトルプラズマ */
-    { DM_SPECIES_GHOSTMON, DM_MOVE_0729, 2 }, /* ゴースモン: ジャックレイド */
-    { DM_SPECIES_REGALECUSMON, DM_MOVE_0730, 1 }, /* レガレクスモン: ブリューナストライク */
-    { DM_SPECIES_REGALECUSMON, DM_MOVE_0731, 2 }, /* レガレクスモン: リアクターディスチャージ */
-    { DM_SPECIES_PIRANIMON, DM_MOVE_0732, 1 }, /* ピラニモン: クルーアルインバイト */
-    { DM_SPECIES_PIRANIMON, DM_MOVE_0733, 2 }, /* ピラニモン: カラミティバイス */
-    { DM_SPECIES_GUSOKUMON, DM_MOVE_0734, 1 }, /* グソクモン: ブラントクロー */
-    { DM_SPECIES_GUSOKUMON, DM_MOVE_0735, 2 }, /* グソクモン: コロニートーピード */
-    { DM_SPECIES_MARINCHIMAIRAMON, DM_MOVE_0736, 1 }, /* マリンキメラモン: ポセイドンボルテックス */
-    { DM_SPECIES_MARINCHIMAIRAMON, DM_MOVE_0737, 2 }, /* マリンキメラモン: アクア・バイパー */
-    { DM_SPECIES_TOBIUMON, DM_MOVE_0738, 1 }, /* トビウモン: サッカーフィッシュダーツ */
-    { DM_SPECIES_TOBIUMON, DM_MOVE_0739, 2 }, /* トビウモン: フライングフィニッシュ */
-    { DM_SPECIES_SANGOMON, DM_MOVE_0740, 1 }, /* サンゴモン: レフュージミスト */
-    { DM_SPECIES_SANGOMON, DM_MOVE_0741, 2 }, /* サンゴモン: コーラルプレッシャー */
-    { DM_SPECIES_GOGMAMON, DM_MOVE_0742, 1 }, /* ゴグマモン: ジャイアントグレイター */
-    { DM_SPECIES_GOGMAMON, DM_MOVE_0743, 2 }, /* ゴグマモン: カース・リフレクション */
-    { DM_SPECIES_BABOONGAMON, DM_MOVE_0744, 1 }, /* バブンガモン: マウントストーン */
-    { DM_SPECIES_BABOONGAMON, DM_MOVE_0745, 2 }, /* バブンガモン: グライドロックス */
-    { DM_SPECIES_SUNARIZAMON, DM_MOVE_0746, 1 }, /* スナリザモン: グリットネイル */
-    { DM_SPECIES_SUNARIZAMON, DM_MOVE_0747, 2 }, /* スナリザモン: サンドブラスト */
-    { DM_SPECIES_JEWELBEEMON, DM_MOVE_0748, 1 }, /* ジュエルビーモン: スパイクバスター */
-    { DM_SPECIES_HUDIEMON, DM_MOVE_0749, 1 }, /* フーディエモン: フライングキック */
-    { DM_SPECIES_HUDIEMON, DM_MOVE_0750, 2 }, /* フーディエモン: インフィニティドリーム */
-    { DM_SPECIES_ARRESTERDRAMON_SUPERIOR, DM_MOVE_0751, 1 }, /* アレスタードラモン：スペリオルモード: ブレイズスパイカー */
-    { DM_SPECIES_ARRESTERDRAMON_SUPERIOR, DM_MOVE_0752, 2 }, /* アレスタードラモン：スペリオルモード: マッハフリッカー */
-    { DM_SPECIES_ARRESTERDRAMON_SUPERIOR, DM_MOVE_0753, 3 }, /* アレスタードラモン：スペリオルモード: フロッグショット */
-    { DM_SPECIES_ARRESTERDRAMON_SUPERIOR, DM_MOVE_0754, 4 }, /* アレスタードラモン：スペリオルモード: スピンカリバー */
-    { DM_SPECIES_ARRESTERDRAMON_SUPERIOR, DM_MOVE_0755, 5 }, /* アレスタードラモン：スペリオルモード: スパイラルシュレッダー */
-    { DM_SPECIES_ARRESTERDRAMON_SUPERIOR, DM_MOVE_0756, 6 }, /* アレスタードラモン：スペリオルモード: プリズムギャレット */
-    { DM_SPECIES_GARURUMON_X, DM_MOVE_0757, 1 }, /* ガルルモン（X抗体）: フォックスファイアー */
-    { DM_SPECIES_GREYMON_X, DM_MOVE_0758, 1 }, /* グレイモン（X抗体）: メガフレイム */
-    { DM_SPECIES_GREYMON_X, DM_MOVE_0400, 2 }, /* グレイモン（X抗体）: メガバースト */
-    { DM_SPECIES_ALGOMON_LV4, DM_MOVE_0759, 1 }, /* アルゴモン: ボルトライン */
-    { DM_SPECIES_ALGOMON_LV4, DM_MOVE_0760, 2 }, /* アルゴモン: インプリズメント */
-    { DM_SPECIES_ALGOMON_LV3, DM_MOVE_0761, 1 }, /* アルゴモン: ブルートナックル */
-    { DM_SPECIES_ALGOMON_LV3, DM_MOVE_0760, 2 }, /* アルゴモン: インプリズメント */
-    { DM_SPECIES_ALGOMON_LV2, DM_MOVE_0727, 1 }, /* アルゴモン: 酸の泡 */
-    { DM_SPECIES_SPADAMON, DM_MOVE_0762, 1 }, /* スパーダモン: シュガーパウンド */
-    { DM_SPECIES_SPADAMON, DM_MOVE_0763, 2 }, /* スパーダモン: ブルーブレイブ */
-    { DM_SPECIES_SPADAMON, DM_MOVE_0764, 3 }, /* スパーダモン: オーロラブレイザー */
-    { DM_SPECIES_MORPHOMON, DM_MOVE_0765, 1 }, /* モルフォモン: リンリンテラピー */
-    { DM_SPECIES_EOSMON_LV6, DM_MOVE_0766, 1 }, /* エオスモン: オーロラストリーム */
-    { DM_SPECIES_EOSMON_LV6, DM_MOVE_0767, 2 }, /* エオスモン: カッティングエッジ */
-    { DM_SPECIES_EOSMON_LV6, DM_MOVE_0768, 3 }, /* エオスモン: クルーティレイン */
-    { DM_SPECIES_GABUMON_KIZUNA, DM_MOVE_0769, 1 }, /* ガブモン -友情の絆-: フルメタルマシンガン */
-    { DM_SPECIES_GABUMON_KIZUNA, DM_MOVE_0770, 2 }, /* ガブモン -友情の絆-: クールエッジ */
-    { DM_SPECIES_GABUMON_KIZUNA, DM_MOVE_0771, 3 }, /* ガブモン -友情の絆-: ムーンテンス */
-    { DM_SPECIES_GABUMON_KIZUNA, DM_MOVE_0772, 4 }, /* ガブモン -友情の絆-: レドルスター */
-    { DM_SPECIES_AGUMON_KIZUNA, DM_MOVE_0773, 1 }, /* アグモン -勇気の絆-: レッドリーマー */
-    { DM_SPECIES_AGUMON_KIZUNA, DM_MOVE_0774, 2 }, /* アグモン -勇気の絆-: ストラッシュサラマンダー */
-    { DM_SPECIES_AGUMON_KIZUNA, DM_MOVE_0775, 3 }, /* アグモン -勇気の絆-: ガイアブレイブ */
-    { DM_SPECIES_EOSMON_LV5, DM_MOVE_0776, 1 }, /* エオスモン: ビートプレス */
-    { DM_SPECIES_EOSMON_LV5, DM_MOVE_0777, 2 }, /* エオスモン: ヘクサンダー */
-    { DM_SPECIES_EOSMON_LV5, DM_MOVE_0767, 3 }, /* エオスモン: カッティングエッジ */
-    { DM_SPECIES_EOSMON_LV4, DM_MOVE_0778, 1 }, /* エオスモン: ミラーガード */
-    { DM_SPECIES_EOSMON_LV4, DM_MOVE_0779, 2 }, /* エオスモン: ミラーダスト */
-    { DM_SPECIES_EOSMON_LV4, DM_MOVE_0780, 3 }, /* エオスモン: ボールトリプ */
-    { DM_SPECIES_TONOSAMAMAMEMON, DM_MOVE_0781, 1 }, /* トノサママメモン: 天晴れ桜 */
-    { DM_SPECIES_TONOSAMAMAMEMON, DM_MOVE_0782, 2 }, /* トノサママメモン: 扇子返し */
-    { DM_SPECIES_OMEGAMON_ZWART, DM_MOVE_0475, 1 }, /* オメガモン ズワルト: ガルルキャノン */
-    { DM_SPECIES_OMEGAMON_ZWART, DM_MOVE_0476, 2 }, /* オメガモン ズワルト: グレイソード */
-    { DM_SPECIES_TERRIERMON_ASSISTANT, DM_MOVE_0783, 1 }, /* テリアモン助手: ダイバッチグー */
-    { DM_SPECIES_TERRIERMON_ASSISTANT, DM_MOVE_0784, 2 }, /* テリアモン助手: プチツイスター */
-    { DM_SPECIES_CRYSPALEDRAMON, DM_MOVE_0785, 1 }, /* クリスペイルドラモン: フローズンクロー */
-    { DM_SPECIES_CRYSPALEDRAMON, DM_MOVE_0786, 2 }, /* クリスペイルドラモン: カロスディメンション */
-    { DM_SPECIES_METALLICDRAMON, DM_MOVE_0787, 1 }, /* メタリックドラモン: レーザーカノン */
-    { DM_SPECIES_METALLICDRAMON, DM_MOVE_0788, 2 }, /* メタリックドラモン: レーザーサーベル */
-    { DM_SPECIES_JAZARICHMON, DM_MOVE_0789, 1 }, /* ジャザリッヒモン: メッサースパイラル */
-    { DM_SPECIES_JAZARICHMON, DM_MOVE_0790, 2 }, /* ジャザリッヒモン: N・S・B・M */
-    { DM_SPECIES_JAZARDMON, DM_MOVE_0791, 1 }, /* ジャザードモン: レーザーアイ */
-    { DM_SPECIES_JAZARDMON, DM_MOVE_0792, 2 }, /* ジャザードモン: ソニックバルカン */
-    { DM_SPECIES_JAZAMON, DM_MOVE_0793, 1 }, /* ジャザモン: ココンピック */
-    { DM_SPECIES_HEXEBLAUMON, DM_MOVE_0794, 1 }, /* ヘクセブラウモン: サモンフロスト */
-    { DM_SPECIES_HEXEBLAUMON, DM_MOVE_0795, 2 }, /* ヘクセブラウモン: ヘクトエッジブリザード */
-    { DM_SPECIES_HEXEBLAUMON, DM_MOVE_0796, 3 }, /* ヘクセブラウモン: アブソリュートブラスト */
-    { DM_SPECIES_PALEDRAMON, DM_MOVE_0797, 1 }, /* ペイルドラモン: アイスエイジ */
-    { DM_SPECIES_PALEDRAMON, DM_MOVE_0798, 2 }, /* ペイルドラモン: メテオヘイル */
-    { DM_SPECIES_NOBLEPUMPMON, DM_MOVE_0799, 1 }, /* ノーブルパンプモン: トリックオアトリート・ウォレス */
-    { DM_SPECIES_NOBLEPUMPMON, DM_MOVE_0800, 2 }, /* ノーブルパンプモン: アトランティックダム */
-    { DM_SPECIES_NOBLEPUMPMON, DM_MOVE_0801, 3 }, /* ノーブルパンプモン: ワッサムリングジャック */
-    { DM_SPECIES_OGUDOMON_X, DM_MOVE_0802, 1 }, /* オグドモン（X抗体）: デスティニー・デス・デストラクション（Death3） */
-    { DM_SPECIES_JESMONGX, DM_MOVE_0803, 1 }, /* ジエスモンGX: 聖拳滅破 */
-    { DM_SPECIES_JESMONGX, DM_MOVE_0804, 2 }, /* ジエスモンGX: ナイツ・イントルーダー */
-    { DM_SPECIES_KERAMON_X, DM_MOVE_0805, 1 }, /* ケラモン（X抗体）: クレイジーギグル */
-    { DM_SPECIES_OMEGASHOUTMON_X, DM_MOVE_0806, 1 }, /* オメガシャウトモン（X抗体）: フレアロックダマシー */
-    { DM_SPECIES_OMEGASHOUTMON_X, DM_MOVE_0807, 2 }, /* オメガシャウトモン（X抗体）: ヘヴィヒートバルカン */
-    { DM_SPECIES_OMEGASHOUTMON_X, DM_MOVE_0808, 3 }, /* オメガシャウトモン（X抗体）: ジアルマグナム */
-    { DM_SPECIES_OMEGASHOUTMON_X, DM_MOVE_0809, 4 }, /* オメガシャウトモン（X抗体）: オメガ・ザ・フュージョン */
-    { DM_SPECIES_MERAMON_X, DM_MOVE_0810, 1 }, /* メラモン（X抗体）: エクスラディケート */
-    { DM_SPECIES_PEGASMON_X, DM_MOVE_0811, 1 }, /* ペガスモン（X抗体）: メテオライザー */
-    { DM_SPECIES_PEGASMON_X, DM_MOVE_0812, 2 }, /* ペガスモン（X抗体）: ゴールデンスクエア */
-    { DM_SPECIES_PEGASMON_X, DM_MOVE_0813, 3 }, /* ペガスモン（X抗体）: シークレッドウォール */
-    { DM_SPECIES_RAPIDMON_X, DM_MOVE_0814, 1 }, /* ラピッドモン（X抗体）: ラピッドブラスター */
-    { DM_SPECIES_RAPIDMON_X, DM_MOVE_0815, 2 }, /* ラピッドモン（X抗体）: レーザーガトリングアーム */
-    { DM_SPECIES_RAPIDMON_X, DM_MOVE_0816, 3 }, /* ラピッドモン（X抗体）: ビリオンバレット */
-    { DM_SPECIES_MONZAEMON_X, DM_MOVE_0817, 1 }, /* もんざえモン（X抗体）: ラブリースプラッシュ */
-    { DM_SPECIES_GANKOOMON_X, DM_MOVE_0818, 1 }, /* ガンクゥモン（X抗体）: 究極戦技天仰拳 */
-    { DM_SPECIES_GANKOOMON_X, DM_MOVE_0819, 2 }, /* ガンクゥモン（X抗体）: 鉄ゲタ張り手 */
-    { DM_SPECIES_EXAMON_X, DM_MOVE_0820, 1 }, /* エグザモン（X抗体）: ペンドラゴンスパークル */
-    { DM_SPECIES_EXAMON_X, DM_MOVE_0821, 2 }, /* エグザモン（X抗体）: 雷剣ブレイラガハ */
-    { DM_SPECIES_CYBERDRAMON_X, DM_MOVE_0822, 1 }, /* サイバードラモン（X抗体）: エクストリームテイラー */
-    { DM_SPECIES_CYBERDRAMON_X, DM_MOVE_0823, 2 }, /* サイバードラモン（X抗体）: イレイズクロー */
-    { DM_SPECIES_RIZEGREYMON_X, DM_MOVE_0824, 1 }, /* ライズグレイモン（X抗体）: サンライズバスター */
-    { DM_SPECIES_RIZEGREYMON_X, DM_MOVE_0825, 2 }, /* ライズグレイモン（X抗体）: ザンスラスト */
-    { DM_SPECIES_HOUOUMON_X, DM_MOVE_0826, 1 }, /* ホウオウモン（X抗体）: スターライトエクスプロージョン */
-    { DM_SPECIES_JUSTIMON_X, DM_MOVE_0827, 1 }, /* ジャスティモン（X抗体）: ジャスティスXキック */
-    { DM_SPECIES_JUSTIMON_X, DM_MOVE_0828, 2 }, /* ジャスティモン（X抗体）: ジャスティスXパンチ */
-    { DM_SPECIES_JUSTIMON_X, DM_MOVE_0829, 3 }, /* ジャスティモン（X抗体）: ジャスティスXブレード */
-    { DM_SPECIES_WIZARMON_X, DM_MOVE_0830, 1 }, /* ウィザーモン（X抗体）: ボルトブレイク */
-    { DM_SPECIES_WIZARMON_X, DM_MOVE_0831, 2 }, /* ウィザーモン（X抗体）: サンダークラウド */
-    { DM_SPECIES_SIESAMON_X, DM_MOVE_0832, 1 }, /* シーサモン（X抗体）: 胡劉球（こりゅうきゅう） */
-    { DM_SPECIES_SIESAMON_X, DM_MOVE_0833, 2 }, /* シーサモン（X抗体）: 石敢当（せっかんとう） */
-    { DM_SPECIES_SIESAMON_X, DM_MOVE_0834, 3 }, /* シーサモン（X抗体）: ティーダ・イヤ */
-    { DM_SPECIES_CHERUBIMON_X, DM_MOVE_0835, 1 }, /* ケルビモン（善）（X抗体）: ビリリンハギュー */
-    { DM_SPECIES_CHERUBIMON_X, DM_MOVE_0836, 2 }, /* ケルビモン（善）（X抗体）: ライトニングスピア */
-    { DM_SPECIES_CHERUBIMON_X, DM_MOVE_0837, 3 }, /* ケルビモン（善）（X抗体）: ヘブンズ・ジャッジメント */
-    { DM_SPECIES_OFANIMON_X, DM_MOVE_0838, 1 }, /* オファニモン（X抗体）: ホーリーマテリアル */
-    { DM_SPECIES_OFANIMON_X, DM_MOVE_0839, 2 }, /* オファニモン（X抗体）: エデンスランス */
-    { DM_SPECIES_ANGEWOMON_X, DM_MOVE_0840, 1 }, /* エンジェウーモン（X抗体）: グランドホーリーアロー */
-    { DM_SPECIES_ANGEWOMON_X, DM_MOVE_0841, 2 }, /* エンジェウーモン（X抗体）: ヘブンズチャーム */
-    { DM_SPECIES_DIABLOMON_X, DM_MOVE_0842, 1 }, /* ディアボロモン（Ｘ抗体）: スプーキーザッパー */
-    { DM_SPECIES_DIABLOMON_X, DM_MOVE_0843, 2 }, /* ディアボロモン（Ｘ抗体）: フェイタルゲイズ */
-    { DM_SPECIES_DIABLOMON_X, DM_MOVE_0844, 3 }, /* ディアボロモン（Ｘ抗体）: リワインドアビス13（サーティーン） */
-    { DM_SPECIES_DYNASMON_X, DM_MOVE_0845, 1 }, /* デュナスモン（X抗体）: ドラゴンズロア */
-    { DM_SPECIES_DYNASMON_X, DM_MOVE_0846, 2 }, /* デュナスモン（X抗体）: ブレス・オブ・ワイバーン */
-    { DM_SPECIES_DYNASMON_X, DM_MOVE_0847, 3 }, /* デュナスモン（X抗体）: ドラゴンズガスト */
-    { DM_SPECIES_DUFTMON_X, DM_MOVE_0848, 1 }, /* ドゥフトモン（X抗体）: アウススターベン */
-    { DM_SPECIES_DUFTMON_X, DM_MOVE_0849, 2 }, /* ドゥフトモン（X抗体）: ブラオンネーベル */
-    { DM_SPECIES_DUFTMON_X, DM_MOVE_0850, 3 }, /* ドゥフトモン（X抗体）: アイネ・ビリオン */
-    { DM_SPECIES_HOLYDRAMON_X, DM_MOVE_0851, 1 }, /* ホーリードラモン（X抗体）: ホーリーフレイム */
-    { DM_SPECIES_HOLYDRAMON_X, DM_MOVE_0852, 2 }, /* ホーリードラモン（X抗体）: ホーリーブレイズ */
-    { DM_SPECIES_PLESIOMON_X, DM_MOVE_0853, 1 }, /* プレシオモン（X抗体）: ソローブルー */
-    { DM_SPECIES_PLESIOMON_X, DM_MOVE_0854, 2 }, /* プレシオモン（X抗体）: ファンタジーミスト */
-    { DM_SPECIES_GODDRAMON_X, DM_MOVE_0855, 1 }, /* ゴッドドラモン（X抗体）: ゴッドフレイム */
-    { DM_SPECIES_GODDRAMON_X, DM_MOVE_0856, 2 }, /* ゴッドドラモン（X抗体）: ゴッドフィスト */
-    { DM_SPECIES_GARUDAMON_X, DM_MOVE_0857, 1 }, /* ガルダモン（X抗体）: シャドーウィング */
-    { DM_SPECIES_TAILMON_X, DM_MOVE_0464, 1 }, /* テイルモン（X抗体）: ネコパンチ */
-    { DM_SPECIES_TAILMON_X, DM_MOVE_0858, 2 }, /* テイルモン（X抗体）: ホーリーチャイム */
-    { DM_SPECIES_TOGEMON_X, DM_MOVE_0859, 1 }, /* トゲモン（X抗体）: チクチクバンバン */
-    { DM_SPECIES_TOGEMON_X, DM_MOVE_0860, 2 }, /* トゲモン（X抗体）: チクチクバムバム */
-    { DM_SPECIES_TYLOMON_X, DM_MOVE_0861, 1 }, /* ティロモン（X抗体）: トーピードアタック */
-    { DM_SPECIES_TYLOMON_X, DM_MOVE_0862, 2 }, /* ティロモン（X抗体）: シックルストリーム */
-    { DM_SPECIES_LOPMON_X, DM_MOVE_0863, 1 }, /* ロップモン（X抗体）: ブレイジングアイス */
-    { DM_SPECIES_LOPMON_X, DM_MOVE_0784, 2 }, /* ロップモン（X抗体）: プチツイスター */
-    { DM_SPECIES_LOPMON_X, DM_MOVE_0864, 3 }, /* ロップモン（X抗体）: ファロストタイフーン */
-    { DM_SPECIES_SHAKOMON_X, DM_MOVE_0865, 1 }, /* シャコモン（X抗体）: ブラックパール */
-    { DM_SPECIES_TERRIERMON_X, DM_MOVE_0866, 1 }, /* テリアモン（X抗体）: ブレイジングファイア */
-    { DM_SPECIES_TERRIERMON_X, DM_MOVE_0784, 2 }, /* テリアモン（X抗体）: プチツイスター */
-    { DM_SPECIES_TERRIERMON_X, DM_MOVE_0864, 3 }, /* テリアモン（X抗体）: ファロストタイフーン */
-    { DM_SPECIES_PALMON_X, DM_MOVE_0867, 1 }, /* パルモン（X抗体）: ポイズンアイビー */
-    { DM_SPECIES_PALMON_X, DM_MOVE_0868, 2 }, /* パルモン（X抗体）: ＲＧＢハーブ */
-    { DM_SPECIES_PTERANOMON_X, DM_MOVE_0869, 1 }, /* プテラノモン（X抗体）: ビークピアス */
-    { DM_SPECIES_PTERANOMON_X, DM_MOVE_0870, 2 }, /* プテラノモン（X抗体）: ネイルコーム */
-    { DM_SPECIES_MAMEMON_X, DM_MOVE_0871, 1 }, /* マメモン（X抗体）: スマイリーボム */
-    { DM_SPECIES_MAMEMON_X, DM_MOVE_0872, 2 }, /* マメモン（X抗体）: ボムシング */
-    { DM_SPECIES_EBEMON_X, DM_MOVE_0873, 1 }, /* イーバモン（X抗体）: ブレインラプチュアー */
-    { DM_SPECIES_EBEMON_X, DM_MOVE_0874, 2 }, /* イーバモン（X抗体）: プラネットデストロイヤー */
-    { DM_SPECIES_EBEMON_X, DM_MOVE_0875, 3 }, /* イーバモン（X抗体）: プラネットデストロイヤージャスティス */
-    { DM_SPECIES_SLEIPMON_X, DM_MOVE_0876, 1 }, /* スレイプモン（X抗体）: スルトブランダー */
-    { DM_SPECIES_SLEIPMON_X, DM_MOVE_0877, 2 }, /* スレイプモン（X抗体）: ニヴルヘイムアレスト */
-    { DM_SPECIES_CRANIUMMON_X, DM_MOVE_0878, 1 }, /* クレニアムモン（X抗体）: グランドグリーズル */
-    { DM_SPECIES_CRANIUMMON_X, DM_MOVE_0879, 2 }, /* クレニアムモン（X抗体）: ヒャズニング・ワルツ */
-    { DM_SPECIES_ULFORCEVDRAMON_X, DM_MOVE_0880, 1 }, /* アルフォースブイドラモン（X抗体）: シャイニングＶフォース */
-    { DM_SPECIES_MAGNAMON_X, DM_MOVE_0881, 1 }, /* マグナモン（X抗体）: プラズマシュート */
-    { DM_SPECIES_MAGNAMON_X, DM_MOVE_0882, 2 }, /* マグナモン（X抗体）: シャイニングゴールドソーラーストーム */
-    { DM_SPECIES_MEGASEADRAMON_X, DM_MOVE_0171, 1 }, /* メガシードラモン（X抗体）: サンダージャベリン */
-    { DM_SPECIES_MEGASEADRAMON_X, DM_MOVE_0883, 2 }, /* メガシードラモン（X抗体）: キングジャベリン */
-    { DM_SPECIES_TRICERAMON_X, DM_MOVE_0884, 1 }, /* トリケラモン（X抗体）: トライホーンアタック */
-    { DM_SPECIES_TRICERAMON_X, DM_MOVE_0885, 2 }, /* トリケラモン（X抗体）: ゴールデントライホーンアタック */
-    { DM_SPECIES_OKUWAMON_X, DM_MOVE_0886, 1 }, /* オオクワモン（X抗体）: シザーアームズΩ３^３ */
-    { DM_SPECIES_MANTARAYMON_X, DM_MOVE_0887, 1 }, /* マンタレイモン（X抗体）: パラライズテイル */
-    { DM_SPECIES_MANTARAYMON_X, DM_MOVE_0888, 2 }, /* マンタレイモン（X抗体）: パラライズ・ボム */
-    { DM_SPECIES_NEFERTIMON_X, DM_MOVE_0889, 1 }, /* ネフェルティモン（X抗体）: カースオブクィーン */
-    { DM_SPECIES_NEFERTIMON_X, DM_MOVE_0890, 2 }, /* ネフェルティモン（X抗体）: ロゼッタストーン */
-    { DM_SPECIES_NEFERTIMON_X, DM_MOVE_0891, 3 }, /* ネフェルティモン（X抗体）: カルトゥーシュ */
-    { DM_SPECIES_SEADRAMON_X, DM_MOVE_0892, 1 }, /* シードラモン（X抗体）: アイスアロー */
-    { DM_SPECIES_SEADRAMON_X, DM_MOVE_0893, 2 }, /* シードラモン（X抗体）: アイススピアー */
-    { DM_SPECIES_KUWAGAMON_X, DM_MOVE_0894, 1 }, /* クワガーモン（X抗体）: シザーアームズ */
-    { DM_SPECIES_KUWAGAMON_X, DM_MOVE_0895, 2 }, /* クワガーモン（X抗体）: クランチアーム */
-    { DM_SPECIES_ALLOMON_X, DM_MOVE_0896, 1 }, /* アロモン（X抗体）: ディノバースト */
-    { DM_SPECIES_ALLOMON_X, DM_MOVE_0897, 2 }, /* アロモン（X抗体）: ディノフラッシュ */
-    { DM_SPECIES_GOMAMON_X, DM_MOVE_0898, 1 }, /* ゴマモン（X抗体）: マーチングフィッシィーズ */
-    { DM_SPECIES_KOKUWAMON_X, DM_MOVE_0899, 1 }, /* コクワモン（X抗体）: シザーアームズミニ */
-    { DM_SPECIES_BLACKWARGREYMON_X, DM_MOVE_0900, 1 }, /* ブラックウォーグレイモン（X抗体）: 暗黒のガイアフォース */
-    { DM_SPECIES_BLACKWARGREYMON_X, DM_MOVE_0901, 2 }, /* ブラックウォーグレイモン（X抗体）: ハデスフォース */
-    { DM_SPECIES_BLACKWARGREYMON_X, DM_MOVE_0902, 3 }, /* ブラックウォーグレイモン（X抗体）: アフターバースト */
-    { DM_SPECIES_LADYDEVIMON_X, DM_MOVE_0903, 1 }, /* レディーデビモン（Ｘ抗体）: グレイエム */
-    { DM_SPECIES_LADYDEVIMON_X, DM_MOVE_0904, 2 }, /* レディーデビモン（Ｘ抗体）: エンデブレッヘン */
-    { DM_SPECIES_METALGREYMON_VI_X, DM_MOVE_0905, 1 }, /* メタルグレイモン（ウィルス種）（Ｘ抗体）: エネルギアブリッツ */
-    { DM_SPECIES_METALGREYMON_VI_X, DM_MOVE_0906, 2 }, /* メタルグレイモン（ウィルス種）（Ｘ抗体）: パンデミックデストロイヤー */
-    { DM_SPECIES_ORGEMON_X, DM_MOVE_0907, 1 }, /* オーガモン（Ｘ抗体）: 覇王拳 */
-    { DM_SPECIES_ORGEMON_X, DM_MOVE_0908, 2 }, /* オーガモン（Ｘ抗体）: WEEK END */
-    { DM_SPECIES_AGUMON_B_X, DM_MOVE_0909, 1 }, /* アグモン（黒）（Ｘ抗体）: BBバーナー */
-    { DM_SPECIES_RASENMON, DM_MOVE_0910, 1 }, /* ラセンモン: ジャイロスマッシュ */
-    { DM_SPECIES_RASENMON, DM_MOVE_0911, 2 }, /* ラセンモン: クオリアライズブラスト */
-    { DM_SPECIES_RASENMON, DM_MOVE_0912, 3 }, /* ラセンモン: スパイラルヴァニッシュ */
-    { DM_SPECIES_RASENMON_F, DM_MOVE_0913, 1 }, /* ラセンモン：激昂モード: デスペレイトボルテックス */
-    { DM_SPECIES_RASENMON_F, DM_MOVE_0914, 2 }, /* ラセンモン：激昂モード: プレデターズバイト */
-    { DM_SPECIES_RASENMON_F, DM_MOVE_0915, 3 }, /* ラセンモン：激昂モード: スパイラル・ヘル */
-    { DM_SPECIES_STIFFILMON, DM_MOVE_0916, 1 }, /* スティフィルモン: ギガクリムゾンダイブ */
-    { DM_SPECIES_STIFFILMON, DM_MOVE_0917, 2 }, /* スティフィルモン: ヴァーミリオンボルテックス */
-    { DM_SPECIES_FILMON, DM_MOVE_0918, 1 }, /* フィルモン: ライトニングスティンガー */
-    { DM_SPECIES_FILMON, DM_MOVE_0919, 2 }, /* フィルモン: クリムゾンスラッシュ */
-    { DM_SPECIES_ROSEMON_X, DM_MOVE_0920, 1 }, /* ロゼモン（X抗体）: ソーンウィップ */
-    { DM_SPECIES_ROSEMON_X, DM_MOVE_0921, 2 }, /* ロゼモン（X抗体）: ローゼンブラッド */
-    { DM_SPECIES_PRINCEMAMEMON_X, DM_MOVE_0922, 1 }, /* プリンスマメモン（X抗体）: スマイリーウォーヘッド */
-    { DM_SPECIES_PRINCEMAMEMON_X, DM_MOVE_0923, 2 }, /* プリンスマメモン（X抗体）: デルモウォーキング */
-    { DM_SPECIES_SKULLMAMMON_X, DM_MOVE_0924, 1 }, /* スカルマンモン（X抗体）: スパイラルボーン */
-    { DM_SPECIES_SKULLMAMMON_X, DM_MOVE_0925, 2 }, /* スカルマンモン（X抗体）: ジャイアントクラッシュボーン */
-    { DM_SPECIES_MAMMON_X, DM_MOVE_0926, 1 }, /* マンモン（X抗体）: タスクストライクス */
-    { DM_SPECIES_MAMMON_X, DM_MOVE_0927, 2 }, /* マンモン（X抗体）: ツンドラブレス */
-    { DM_SPECIES_MAMMON_X, DM_MOVE_0928, 3 }, /* マンモン（X抗体）: ジオメトリックフリーザー */
-    { DM_SPECIES_MEPHISMON_X, DM_MOVE_0929, 1 }, /* メフィスモン（Ｘ抗体）: ヘルマニア */
-    { DM_SPECIES_MEPHISMON_X, DM_MOVE_0930, 2 }, /* メフィスモン（Ｘ抗体）: メリーメリーデストラクション */
-    { DM_SPECIES_VAMDEMON_X, DM_MOVE_0931, 1 }, /* ヴァンデモン（X抗体）: ヴァンパイアセオリー */
-    { DM_SPECIES_VAMDEMON_X, DM_MOVE_0932, 2 }, /* ヴァンデモン（X抗体）: ブラッディドレイン */
-    { DM_SPECIES_PLOTMON_X, DM_MOVE_0933, 1 }, /* プロットモン（X抗体）: パピーハウリング */
-    { DM_SPECIES_PLOTMON_X, DM_MOVE_0934, 2 }, /* プロットモン（X抗体）: パピーポー */
-    { DM_SPECIES_OTAMAMON_X, DM_MOVE_0935, 1 }, /* オタマモン（X抗体）: ララバイバブル */
-    { DM_SPECIES_OTAMAMON_X, DM_MOVE_0936, 2 }, /* オタマモン（X抗体）: スマイリーヘッドバット */
-    { DM_SPECIES_YARMON, DM_MOVE_0937, 1 }, /* ヤーモン: ペイントスプラッシュ */
-    { DM_SPECIES_KEEMON, DM_MOVE_0938, 1 }, /* キーモン: プシュー */
-    { DM_SPECIES_IMPMON_X, DM_MOVE_0939, 1 }, /* インプモン（Ｘ抗体）: ナイト・オブ・ファイアー */
-    { DM_SPECIES_IMPMON_X, DM_MOVE_0940, 2 }, /* インプモン（Ｘ抗体）: サモンチェイサー */
-    { DM_SPECIES_DARKTYRANOMON_X, DM_MOVE_0941, 1 }, /* ダークティラノモン（Ｘ抗体）: ファイアーブラスト */
-    { DM_SPECIES_DARKTYRANOMON_X, DM_MOVE_0942, 2 }, /* ダークティラノモン（Ｘ抗体）: フレイムスナッチ */
-    { DM_SPECIES_NUMEMON_X, DM_MOVE_0943, 1 }, /* ヌメモン（Ｘ抗体）: ウンチラッシュ */
-    { DM_SPECIES_LUCEMON_X, DM_MOVE_0944, 1 }, /* ルーチェモン（Ｘ抗体）: パラダイスロスト */
-    { DM_SPECIES_LUCEMON_X, DM_MOVE_0945, 2 }, /* ルーチェモン（Ｘ抗体）: パーガトリアルフレイム */
-    { DM_SPECIES_LUCEMON_X, DM_MOVE_0946, 3 }, /* ルーチェモン（Ｘ抗体）: セブンス・ディバイン・クルス */
-    { DM_SPECIES_LILITHMON_X, DM_MOVE_0947, 1 }, /* リリスモン（Ｘ抗体）: ナザルネイル */
-    { DM_SPECIES_LILITHMON_X, DM_MOVE_0948, 2 }, /* リリスモン（Ｘ抗体）: ファントムペイン */
-    { DM_SPECIES_LILITHMON_X, DM_MOVE_0949, 3 }, /* リリスモン（Ｘ抗体）: セブンス・ファシネイト */
-    { DM_SPECIES_LEVIAMON_X, DM_MOVE_0950, 1 }, /* リヴァイアモン（Ｘ抗体）: カウダ・モルティフェラ */
-    { DM_SPECIES_LEVIAMON_X, DM_MOVE_0951, 2 }, /* リヴァイアモン（Ｘ抗体）: ロストルム・トリアデンス */
-    { DM_SPECIES_LEVIAMON_X, DM_MOVE_0952, 3 }, /* リヴァイアモン（Ｘ抗体）: セブンス・ライトニング */
-    { DM_SPECIES_BELPHEMON_X, DM_MOVE_0953, 1 }, /* ベルフェモン（Ｘ抗体）: ランプランツス */
-    { DM_SPECIES_BELPHEMON_X, DM_MOVE_0954, 2 }, /* ベルフェモン（Ｘ抗体）: ギフトオブダークネス */
-    { DM_SPECIES_BELPHEMON_X, DM_MOVE_0955, 3 }, /* ベルフェモン（Ｘ抗体）: セブンス・ペネトレート */
-    { DM_SPECIES_BARBAMON_X, DM_MOVE_0956, 1 }, /* バルバモン（Ｘ抗体）: デスルアー */
-    { DM_SPECIES_BARBAMON_X, DM_MOVE_0957, 2 }, /* バルバモン（Ｘ抗体）: パンデモニウムロスト */
-    { DM_SPECIES_BARBAMON_X, DM_MOVE_0958, 3 }, /* バルバモン（Ｘ抗体）: セブンス・ジュエライズ */
-    { DM_SPECIES_DEMON_X, DM_MOVE_0959, 1 }, /* デーモン（Ｘ抗体）: フレイムインフェルノ */
-    { DM_SPECIES_DEMON_X, DM_MOVE_0960, 2 }, /* デーモン（Ｘ抗体）: セブンス・グラビトン */
-    { DM_SPECIES_DEMON_X, DM_MOVE_0961, 3 }, /* デーモン（Ｘ抗体）: インフェルノバースト */
-    { DM_SPECIES_DARKKNIGHTMON_X, DM_MOVE_0962, 1 }, /* ダークナイトモン（Ｘ抗体）: クルーエルトルネード */
-    { DM_SPECIES_DARKKNIGHTMON_X, DM_MOVE_0963, 2 }, /* ダークナイトモン（Ｘ抗体）: デッドリーブレイクロスト */
-    { DM_SPECIES_DARKKNIGHTMON_X, DM_MOVE_0964, 3 }, /* ダークナイトモン（Ｘ抗体）: アンデッドソルジャー */
-    { DM_SPECIES_CHERUBIMONDARK_X, DM_MOVE_0836, 1 }, /* ケルビモン（悪）（Ｘ抗体）: ライトニングスピア */
-    { DM_SPECIES_CHERUBIMONDARK_X, DM_MOVE_0837, 2 }, /* ケルビモン（悪）（Ｘ抗体）: ヘブンズ・ジャッジメント */
-    { DM_SPECIES_CHERUBIMONDARK_X, DM_MOVE_0965, 3 }, /* ケルビモン（悪）（Ｘ抗体）: ダークネスプリズン */
-    { DM_SPECIES_OFANIMONFDM_X, DM_MOVE_0966, 1 }, /* オファニモン：フォールダウンモード（Ｘ抗体）: デモンズクリスタル */
-    { DM_SPECIES_OFANIMONFDM_X, DM_MOVE_0967, 2 }, /* オファニモン：フォールダウンモード（Ｘ抗体）: フレイムヘルサイズ */
-    { DM_SPECIES_OFANIMONFDM_X, DM_MOVE_0968, 3 }, /* オファニモン：フォールダウンモード（Ｘ抗体）: ビヘッドスラッシャー */
-    { DM_SPECIES_ULTIMATECHAOSMON, DM_MOVE_0969, 1 }, /* アルティメットカオスモン: ブロウクンデストロイ */
-    { DM_SPECIES_ULTIMATECHAOSMON, DM_MOVE_0970, 2 }, /* アルティメットカオスモン: ウルティマバースト */
-    { DM_SPECIES_PUSURIMON, DM_MOVE_0971, 1 }, /* プスリモン: チクチクローリング */
-    { DM_SPECIES_PUSUMON, DM_MOVE_0972, 1 }, /* プスモン: おしゃぶり */
-    { DM_SPECIES_SURFIMON, DM_MOVE_0973, 1 }, /* サーフィモン: バリアブレード */
-    { DM_SPECIES_SURFIMON, DM_MOVE_0974, 2 }, /* サーフィモン: ライトニングカッター */
-    { DM_SPECIES_BULUCOMON, DM_MOVE_0975, 1 }, /* ブルコモン: ベビーヘイル */
-    { DM_SPECIES_BULUCOMON, DM_MOVE_0976, 2 }, /* ブルコモン: アイスマッシュ */
-    { DM_SPECIES_HERISSMON, DM_MOVE_0977, 1 }, /* エリスモン: ライトニングファー */
-    { DM_SPECIES_HERISSMON, DM_MOVE_0978, 2 }, /* エリスモン: ケンザンダイブ */
-    { DM_SPECIES_METALGARURUMON_BLACK, DM_MOVE_0979, 1 }, /* メタルガルルモン（黒）: コキュートスブレス */
-    { DM_SPECIES_METALGARURUMON_BLACK, DM_MOVE_0980, 2 }, /* メタルガルルモン（黒）: ガルルトマホーク */
-    { DM_SPECIES_METALGARURUMON_BLACK, DM_MOVE_0981, 3 }, /* メタルガルルモン（黒）: グレイスクロスフリーザー */
-    { DM_SPECIES_WEREGARURUMON_BLACK, DM_MOVE_0686, 1 }, /* ワーガルルモン（黒）: カイザーネイル */
-    { DM_SPECIES_GARURUMON_BLACK, DM_MOVE_0757, 1 }, /* ガルルモン（黒）: フォックスファイアー */
-    { DM_SPECIES_JUSTIMON_BLITZARM, DM_MOVE_0982, 1 }, /* ジャスティモン：ブリッツアーム: トリニティーアーム */
-    { DM_SPECIES_JUSTIMON_BLITZARM, DM_MOVE_0983, 2 }, /* ジャスティモン：ブリッツアーム: ジャスティスキック */
-    { DM_SPECIES_GINKAKUMON_PROMOTE, DM_MOVE_0984, 1 }, /* ギンカクモンプロモート: 火電鬼爆波（ひでんきばくは） */
-    { DM_SPECIES_ICEDEVIMON, DM_MOVE_0985, 1 }, /* アイスデビモン: フロストクロー */
-    { DM_SPECIES_KUZUHAMON_MIKO, DM_MOVE_0986, 1 }, /* クズハモン：巫女モード: 裏飯綱（うらいづな） */
-    { DM_SPECIES_KUZUHAMON_MIKO, DM_MOVE_0987, 2 }, /* クズハモン：巫女モード: 胎蔵界曼荼羅（たいぞうかいまんだら） */
-    { DM_SPECIES_MEGALOGRAWMON_ORANGE, DM_MOVE_0988, 1 }, /* メガログラウモン（橙）: ダブルエッジ */
-    { DM_SPECIES_MEGALOGRAWMON_ORANGE, DM_MOVE_0989, 2 }, /* メガログラウモン（橙）: アトミックブラスター */
-    { DM_SPECIES_GREYMON_BLUE, DM_MOVE_0758, 1 }, /* グレイモン（青）: メガフレイム */
-    { DM_SPECIES_SHOUTMON_KING, DM_MOVE_0990, 1 }, /* シャウトモン（キングVer.）: ロックダマシー */
-    { DM_SPECIES_SHOUTMON_KING, DM_MOVE_0991, 2 }, /* シャウトモン（キングVer.）: ソウルクラッシャー */
-    { DM_SPECIES_SHOUTMON_KING, DM_MOVE_0992, 3 }, /* シャウトモン（キングVer.）: ラウディロッカー */
-    { DM_SPECIES_WARGREYMON_X, DM_MOVE_0993, 1 }, /* ウォーグレイモン（X抗体）: ガイアフォースＺＥＲＯ */
-    { DM_SPECIES_WARGREYMON_X, DM_MOVE_0902, 2 }, /* ウォーグレイモン（X抗体）: アフターバースト */
-    { DM_SPECIES_METALGARURUMON_X, DM_MOVE_0994, 1 }, /* メタルガルルモン（X抗体）: メタルストーム */
-    { DM_SPECIES_METALGARURUMON_X, DM_MOVE_0979, 2 }, /* メタルガルルモン（X抗体）: コキュートスブレス */
-    { DM_SPECIES_MEGIDRAMON_X, DM_MOVE_0995, 1 }, /* メギドラモン（X抗体）: ヘル・ハウリング */
-    { DM_SPECIES_MEGIDRAMON_X, DM_MOVE_0996, 2 }, /* メギドラモン（X抗体）: メギドフレイム */
-    { DM_SPECIES_WEREGARURUMON_X, DM_MOVE_0686, 1 }, /* ワーガルルモン（X抗体）: カイザーネイル */
-    { DM_SPECIES_LILIMON_X, DM_MOVE_0997, 1 }, /* リリモン（X抗体）: スリーピーバッド */
-    { DM_SPECIES_LILIMON_X, DM_MOVE_0998, 2 }, /* リリモン（X抗体）: フラウカノン */
-    { DM_SPECIES_SAKUYAMON_X, DM_MOVE_0999, 1 }, /* サクヤモン（Ｘ抗体）: 金剛界曼荼羅（こんごうかいまんだら） */
-    { DM_SPECIES_SAKUYAMON_X, DM_MOVE_1000, 2 }, /* サクヤモン（Ｘ抗体）: 此ノ花戦姫万象（このはなせんきばんしょう） */
-    { DM_SPECIES_SAKUYAMON_X, DM_MOVE_1001, 3 }, /* サクヤモン（Ｘ抗体）: 宇迦之御魂（うかのみたま） */
-    { DM_SPECIES_BEELZEBUMON_X, DM_MOVE_1002, 1 }, /* ベルゼブモン（X抗体）: グラトニーフレア */
-    { DM_SPECIES_BEELZEBUMON_X, DM_MOVE_1003, 2 }, /* ベルゼブモン（X抗体）: ダークネスクロウ */
-    { DM_SPECIES_BEELZEBUMON_X, DM_MOVE_1004, 3 }, /* ベルゼブモン（X抗体）: ダブルインパクト */
-    { DM_SPECIES_BEELZEBUMON_X, DM_MOVE_1005, 4 }, /* ベルゼブモン（X抗体）: セブンス・フルクラスター */
-    { DM_SPECIES_MEGALOGROWMON_X, DM_MOVE_1006, 1 }, /* メガログラウモン（X抗体）: ダブルエッジΣ（シグマ） */
-    { DM_SPECIES_MEGALOGROWMON_X, DM_MOVE_0989, 2 }, /* メガログラウモン（X抗体）: アトミックブラスター */
-    { DM_SPECIES_MEGALOGROWMON_X, DM_MOVE_1007, 3 }, /* メガログラウモン（X抗体）: アトミックメガロブラスター */
-    { DM_SPECIES_RHINOMON_X, DM_MOVE_1008, 1 }, /* ライノモン（Ｘ抗体）: アイン・ソフ・オウル */
-    { DM_SPECIES_RHINOMON_X, DM_MOVE_1009, 2 }, /* ライノモン（Ｘ抗体）: アトミックブレイド */
-    { DM_SPECIES_RHINOMON_X, DM_MOVE_1010, 3 }, /* ライノモン（Ｘ抗体）: スピリットバースト */
-    { DM_SPECIES_RENAMON_X, DM_MOVE_1011, 1 }, /* レナモン（Ｘ抗体）: 太極旋（たいきょくせん） */
-    { DM_SPECIES_RENAMON_X, DM_MOVE_1012, 2 }, /* レナモン（Ｘ抗体）: 狐蝶幻（こちょうげん） */
-    { DM_SPECIES_TOKOMON_X, DM_MOVE_1013, 1 }, /* トコモン（Ｘ抗体）: トコトコダイブ */
-    { DM_SPECIES_TOKOMON_X, DM_MOVE_1014, 2 }, /* トコモン（Ｘ抗体）: 噛み付き */
-    { DM_SPECIES_BEELSTARMON_X, DM_MOVE_1015, 1 }, /* ベルスターモン（Ｘ抗体）: ダブルクロウ */
-    { DM_SPECIES_BEELSTARMON_X, DM_MOVE_1016, 2 }, /* ベルスターモン（Ｘ抗体）: フライバレット・セグンド */
-    { DM_SPECIES_BEELSTARMON_X, DM_MOVE_1017, 3 }, /* ベルスターモン（Ｘ抗体）: ディスタンシア・セロ */
-    { DM_SPECIES_DUKEMON_X, DM_MOVE_1018, 1 }, /* デュークモン（X抗体）: ジークセイバー */
-    { DM_SPECIES_DUKEMON_X, DM_MOVE_1019, 2 }, /* デュークモン（X抗体）: ファイナル・エリシオン */
-    { DM_SPECIES_CERBERUMON_X, DM_MOVE_1020, 1 }, /* ケルベロモン（X抗体）: インフェルノゲート */
-    { DM_SPECIES_CERBERUMON_X, DM_MOVE_1021, 2 }, /* ケルベロモン（X抗体）: ヘルファイアー */
-    { DM_SPECIES_TYRANOMON_X, DM_MOVE_1022, 1 }, /* ティラノモン（X抗体）: クリムゾンブレス */
-    { DM_SPECIES_TYRANOMON_X, DM_MOVE_1023, 2 }, /* ティラノモン（X抗体）: クラッシュローリング */
-    { DM_SPECIES_DRACOMON_X, DM_MOVE_1024, 1 }, /* ドラコモン（X抗体）: ベビーブレイズ */
-    { DM_SPECIES_DRACOMON_X, DM_MOVE_1025, 2 }, /* ドラコモン（X抗体）: スマッシュホーン */
-    { DM_SPECIES_DRACOMON_X, DM_MOVE_1026, 3 }, /* ドラコモン（X抗体）: ジ・シュルネン */
-    { DM_SPECIES_GABUMON_X, DM_MOVE_1027, 1 }, /* ガブモン（X抗体）: プチファイアー */
-    { DM_SPECIES_MINERVAMON_X, DM_MOVE_1028, 1 }, /* ミネルヴァモン（X抗体）: ホーンテッドピルス */
-    { DM_SPECIES_MINERVAMON_X, DM_MOVE_1029, 2 }, /* ミネルヴァモン（X抗体）: クレイジーゴーラウンド */
-    { DM_SPECIES_MINERVAMON_X, DM_MOVE_1030, 3 }, /* ミネルヴァモン（X抗体）: サンクタス・トルメンタム */
-    { DM_SPECIES_LORDKNIGHTMON_X, DM_MOVE_1031, 1 }, /* ロードナイトモン（X抗体）: ロードオブフラタニティ */
-    { DM_SPECIES_LORDKNIGHTMON_X, DM_MOVE_1032, 2 }, /* ロードナイトモン（X抗体）: ノブレス・オブ・ルージュ */
-    { DM_SPECIES_LORDKNIGHTMON_X, DM_MOVE_1033, 3 }, /* ロードナイトモン（X抗体）: 究極戦突剣（きゅうきょくせんとつけん）グランローゼリオ */
-    { DM_SPECIES_SISTERMON_CIEL, DM_MOVE_1034, 1 }, /* シスタモン シエル: 白詰一文字切り */
-    { DM_SPECIES_SISTERMON_CIEL, DM_MOVE_1035, 2 }, /* シスタモン シエル: 白殺（びゃくさい） */
-    { DM_SPECIES_SISTERMON_CIEL, DM_MOVE_1036, 3 }, /* シスタモン シエル: 突蜂（とっほう） */
-    { DM_SPECIES_METALTYRANOMON_X, DM_MOVE_1037, 1 }, /* メタルティラノモン（X抗体）: ギガデストロイヤーⅡ */
-    { DM_SPECIES_METALTYRANOMON_X, DM_MOVE_1038, 2 }, /* メタルティラノモン（X抗体）: ヌークリアレーザーⅡ */
-    { DM_SPECIES_LEOMON_X, DM_MOVE_1039, 1 }, /* レオモン（X抗体）: 獣王拳 */
-    { DM_SPECIES_AGUMON_X, DM_MOVE_1040, 1 }, /* アグモン（X抗体）: ベビーフレイム */
-    { DM_SPECIES_AGUMON_X, DM_MOVE_1041, 2 }, /* アグモン（X抗体）: ベビーバーナー */
-    { DM_SPECIES_JESMON_X, DM_MOVE_1042, 1 }, /* ジエスモン（X抗体）: 鉄拳断罪 */
-    { DM_SPECIES_JESMON_X, DM_MOVE_1043, 2 }, /* ジエスモン（X抗体）: シュベルトフリューゲル */
-    { DM_SPECIES_JESMON_X, DM_MOVE_1044, 3 }, /* ジエスモン（X抗体）: 究極戦刃聖覇剣（きゅうきょくせんじんせいばけん） */
-    { DM_SPECIES_RAGNALOARDMON, DM_MOVE_1045, 1 }, /* ラグナロードモン: ディレクトスマッシャー */
-    { DM_SPECIES_RAGNALOARDMON, DM_MOVE_1046, 2 }, /* ラグナロードモン: イグニッションプロミネンス */
-    { DM_SPECIES_RAGNALOARDMON, DM_MOVE_1047, 3 }, /* ラグナロードモン: デュエルエッジフロージョン */
-    { DM_SPECIES_RAFFLESIMON, DM_MOVE_1048, 1 }, /* ラフレシモン: バレエガン */
-    { DM_SPECIES_RAFFLESIMON, DM_MOVE_1049, 2 }, /* ラフレシモン: ウィスレン */
-    { DM_SPECIES_ORDINEMON, DM_MOVE_1050, 1 }, /* オルディネモン: エンド・オブ・ザ・ワールド */
-    { DM_SPECIES_ORDINEMON, DM_MOVE_1051, 2 }, /* オルディネモン: マグナヴィジビリティ */
-    { DM_SPECIES_ORDINEMON, DM_MOVE_1052, 3 }, /* オルディネモン: サモン・アポカリプス */
-    { DM_SPECIES_RAPTORSPARROWMON, DM_MOVE_1053, 1 }, /* ラプタースパロウモン: ラプターグラップル */
-    { DM_SPECIES_RAPTORSPARROWMON, DM_MOVE_1054, 2 }, /* ラプタースパロウモン: クラッシュチャージ */
-    { DM_SPECIES_BANCHOGOLEMON, DM_MOVE_1055, 1 }, /* バンチョーゴーレモン: 天波返し（てんばがえし） */
-    { DM_SPECIES_BANCHOGOLEMON, DM_MOVE_1056, 2 }, /* バンチョーゴーレモン: 漢癪ダスト（かんしゃくダスト） */
-    { DM_SPECIES_BANCHOGOLEMON, DM_MOVE_1057, 3 }, /* バンチョーゴーレモン: 世堀クロードリル（よぼりクロードリル） */
-    { DM_SPECIES_CERBERUMON_WEREWOLFMODE, DM_MOVE_1058, 1 }, /* ケルベロモン：人狼モード: インフェルノディバイド */
-    { DM_SPECIES_CERBERUMON_WEREWOLFMODE, DM_MOVE_1059, 2 }, /* ケルベロモン：人狼モード: サーベラスイレイズ */
-    { DM_SPECIES_CERBERUMON_WEREWOLFMODE, DM_MOVE_1021, 3 }, /* ケルベロモン：人狼モード: ヘルファイアー */
-    { DM_SPECIES_GROWMON_ORANGE, DM_MOVE_0542, 1 }, /* グラウモン（橙）: プラズマブレイド */
-    { DM_SPECIES_GROWMON_ORANGE, DM_MOVE_0543, 2 }, /* グラウモン（橙）: エキゾーストフレイム */
-    { DM_SPECIES_TOYAGUMON_BLACK, DM_MOVE_1060, 1 }, /* トイアグモン（黒）: トイフレイム */
-    { DM_SPECIES_SHOOTINGSTARMON, DM_MOVE_1061, 1 }, /* シューティングスターモン: アストロボンバー */
-    { DM_SPECIES_SHOOTINGSTARMON, DM_MOVE_1062, 2 }, /* シューティングスターモン: ダイナマイトソウル */
-    { DM_SPECIES_SHOOTINGSTARMON, DM_MOVE_0634, 3 }, /* シューティングスターモン: リュウセイロックダマシー */
-    { DM_SPECIES_JUSTIMON_CRITICALARM, DM_MOVE_0982, 1 }, /* ジャスティモン：クリティカルアーム: トリニティーアーム */
-    { DM_SPECIES_JUSTIMON_CRITICALARM, DM_MOVE_0983, 2 }, /* ジャスティモン：クリティカルアーム: ジャスティスキック */
-    { DM_SPECIES_YATAGARAMON_AXCEL, DM_MOVE_1063, 1 }, /* ヤタガラモン: 甕布都神（ミカフツノカミ） */
-    { DM_SPECIES_YATAGARAMON_AXCEL, DM_MOVE_1064, 2 }, /* ヤタガラモン: 羽黒（ハグロ） */
-    { DM_SPECIES_DINOHUMON, DM_MOVE_1065, 1 }, /* ディノヒューモン: リザードダンス */
-    { DM_SPECIES_RAPIDMON_GOLD, DM_MOVE_0471, 1 }, /* ラピッドモン: ラピッドファイア */
-    { DM_SPECIES_RAPIDMON_GOLD, DM_MOVE_0472, 2 }, /* ラピッドモン: ゴールデントライアングル */
-    { DM_SPECIES_YAEGERDORURUMON, DM_MOVE_1066, 1 }, /* イェーガードルルモン: ヴァイスシュピラーレ */
-    { DM_SPECIES_YAEGERDORURUMON, DM_MOVE_1067, 2 }, /* イェーガードルルモン: シュバルツナーゲル */
-    { DM_SPECIES_GUNDRAMON, DM_MOVE_1068, 1 }, /* ガンドラモン: デルブリッツ */
-    { DM_SPECIES_GUNDRAMON, DM_MOVE_1069, 2 }, /* ガンドラモン: プラッツェンクロイツ */
-    { DM_SPECIES_GUNDRAMON, DM_MOVE_1070, 3 }, /* ガンドラモン: ゲヴァルトシュベルマー */
-    { DM_SPECIES_AEGIOCHUSMON_HOLLY, DM_MOVE_1071, 1 }, /* アイギオテュースモン：ホーリー: ライトニングシャワー */
-    { DM_SPECIES_AEGIOCHUSMON_HOLLY, DM_MOVE_1072, 2 }, /* アイギオテュースモン：ホーリー: サンダースラッシュ */
-    { DM_SPECIES_AEGIOCHUSMON_HOLLY, DM_MOVE_1073, 3 }, /* アイギオテュースモン：ホーリー: サークレットディフェンス */
-    { DM_SPECIES_GABUMON_BLACK, DM_MOVE_1027, 1 }, /* ガブモン（黒）: プチファイアー */
-    { DM_SPECIES_RAGUELMON, DM_MOVE_1074, 1 }, /* ラグエルモン: フォルムタラニス */
-    { DM_SPECIES_RAGUELMON, DM_MOVE_1075, 2 }, /* ラグエルモン: パーホルス */
-    { DM_SPECIES_BRYWELUDRAMON, DM_MOVE_1076, 1 }, /* ブリウエルドラモン: グレンストーム */
-    { DM_SPECIES_BRYWELUDRAMON, DM_MOVE_1077, 2 }, /* ブリウエルドラモン: ブラストスマッシュ */
-    { DM_SPECIES_VOLCANICDRAMON, DM_MOVE_1078, 1 }, /* ヴォルケニックドラモン: ヴォルケニック・フレア */
-    { DM_SPECIES_VOLCANICDRAMON, DM_MOVE_1079, 2 }, /* ヴォルケニックドラモン: グライドブレイズ */
-    { DM_SPECIES_LAVOGARITAMON, DM_MOVE_1080, 1 }, /* ラヴォガリータモン: メルダイナー */
-    { DM_SPECIES_LAVOGARITAMON, DM_MOVE_1081, 2 }, /* ラヴォガリータモン: ワイルドブラスト */
-    { DM_SPECIES_MEICRACKMON_V, DM_MOVE_1082, 1 }, /* メイクラックモン：ヴィシャスモード: フェルトメイド */
-    { DM_SPECIES_MASTEMON, DM_MOVE_1083, 1 }, /* マスティモン: ホーリーディザイア */
-    { DM_SPECIES_MASTEMON, DM_MOVE_1084, 2 }, /* マスティモン: ダークディスパイア */
-    { DM_SPECIES_MASTEMON, DM_MOVE_1085, 3 }, /* マスティモン: カオスディグレイド */
-    { DM_SPECIES_VOLTOBAUTAMON, DM_MOVE_1086, 1 }, /* ボルトバウタモン: パラズィヴァルツァー */
-    { DM_SPECIES_VOLTOBAUTAMON, DM_MOVE_1087, 2 }, /* ボルトバウタモン: クオーツィオーネ */
-    { DM_SPECIES_RAIJILUDOMON, DM_MOVE_1088, 1 }, /* ライジルドモン: ライトニングバスター */
-    { DM_SPECIES_RAIJILUDOMON, DM_MOVE_1089, 2 }, /* ライジルドモン: ロケットメッサー */
-    { DM_SPECIES_TIALUDOMON, DM_MOVE_1090, 1 }, /* ティアルドモン: フリスビッカー */
-    { DM_SPECIES_TIALUDOMON, DM_MOVE_1091, 2 }, /* ティアルドモン: アサルトクロー */
-    { DM_SPECIES_LAVORVOMON, DM_MOVE_1092, 1 }, /* ラヴォーボモン: グレイトフレイム */
-    { DM_SPECIES_LAVORVOMON, DM_MOVE_1093, 2 }, /* ラヴォーボモン: アースタンプ */
-    { DM_SPECIES_BUSHIAGUMON, DM_MOVE_1094, 1 }, /* ブシアグモン: 超低速一文字斬り */
-    { DM_SPECIES_BUSHIAGUMON, DM_MOVE_1095, 2 }, /* ブシアグモン: 超高速一文字斬り */
-    { DM_SPECIES_LUDOMON, DM_MOVE_1096, 1 }, /* ルドモン: ウォルレーキ */
-    { DM_SPECIES_KAKKINMON, DM_MOVE_1097, 1 }, /* カッキンモン: カンカン */
-    { DM_SPECIES_COTSUCOMON, DM_MOVE_1098, 1 }, /* コツコモン: コッツン */
-    { DM_SPECIES_ANDIRAMON_2, DM_MOVE_1099, 1 }, /* アンティラモン: メディテーションキュア */
-    { DM_SPECIES_ANDIRAMON_2, DM_MOVE_1100, 2 }, /* アンティラモン: マントラチャント */
-    { DM_SPECIES_MEICOOMON, DM_MOVE_1101, 1 }, /* メイクーモン: シャットクロー */
-    { DM_SPECIES_MEICOOMON, DM_MOVE_1102, 2 }, /* メイクーモン: トリコベゾアール */
-    { DM_SPECIES_MEICOOMON, DM_MOVE_1103, 3 }, /* メイクーモン: エクススクラッチ */
-    { DM_SPECIES_WHAMON_2, DM_MOVE_1104, 1 }, /* ホエーモン（成熟期）: ジェットアロー */
-    { DM_SPECIES_GEKOMON, DM_MOVE_1105, 1 }, /* ゲコモン: クラッシュシンフォニー */
-    { DM_SPECIES_VORVOMON, DM_MOVE_1106, 1 }, /* ヴォーボモン: プチフレイム */
-    { DM_SPECIES_ATLURBALLISTAMON, DM_MOVE_1107, 1 }, /* アトラーバリスタモン: プラズマクラック */
-    { DM_SPECIES_ATLURBALLISTAMON, DM_MOVE_1108, 2 }, /* アトラーバリスタモン: ロケットバンカー */
-    { DM_SPECIES_OMEGAMON_ALTER_B, DM_MOVE_1109, 1 }, /* オメガモン Alter-B: ガルルソード */
-    { DM_SPECIES_OMEGAMON_ALTER_B, DM_MOVE_1110, 2 }, /* オメガモン Alter-B: グレイキャノン */
-    { DM_SPECIES_BLACKMACHGAOGAMON, DM_MOVE_1111, 1 }, /* ブラックマッハガオガモン: ガオガトルネード */
-    { DM_SPECIES_BLACKMACHGAOGAMON, DM_MOVE_1112, 2 }, /* ブラックマッハガオガモン: ウィニングナックル */
-    { DM_SPECIES_BLACKMACHGAOGAMON, DM_MOVE_1113, 3 }, /* ブラックマッハガオガモン: ハウリングキャノン */
-    { DM_SPECIES_BLACKGAOGAMON, DM_MOVE_1114, 1 }, /* ブラックガオガモン: ダッシュダブルクロー */
-    { DM_SPECIES_BLACKGAOGAMON, DM_MOVE_1115, 2 }, /* ブラックガオガモン: ガオガハウンド */
-    { DM_SPECIES_BLACKGAOGAMON, DM_MOVE_1116, 3 }, /* ブラックガオガモン: スパイラルブロー */
-    { DM_SPECIES_FALCOMON_2006, DM_MOVE_1117, 1 }, /* ファルコモン（２００６アニメ版）: スクラッチスマッシュ */
-    { DM_SPECIES_FALCOMON_2006, DM_MOVE_1118, 2 }, /* ファルコモン（２００６アニメ版）: 手裏裏剣（しゅりりんけん） */
-    { DM_SPECIES_FALCOMON_2006, DM_MOVE_1119, 3 }, /* ファルコモン（２００６アニメ版）: 打竹落し（うちたけおとし） */
-    { DM_SPECIES_KUDAMON_2006, DM_MOVE_1120, 1 }, /* クダモン（２００６アニメ版）: 弾丸旋風（だんがんせんぷう） */
-    { DM_SPECIES_KUDAMON_2006, DM_MOVE_1121, 2 }, /* クダモン（２００６アニメ版）: 絶光衝（ぜっこうしょう） */
-    { DM_SPECIES_KUDAMON_2006, DM_MOVE_1122, 3 }, /* クダモン（２００６アニメ版）: ホーリーショット */
-    { DM_SPECIES_NEO, DM_MOVE_1123, 1 }, /* ネオ: ジャッジメント */
-    { DM_SPECIES_NEO, DM_MOVE_1124, 2 }, /* ネオ: ゼロ・ジェネシス */
-    { DM_SPECIES_YAKIIMON, DM_MOVE_1125, 1 }, /* ヤキイモン: ベニアズマ・ストレート */
-    { DM_SPECIES_YAKIIMON, DM_MOVE_1126, 2 }, /* ヤキイモン: ベニアズマ・アッパーカット */
-    { DM_SPECIES_MONIMON, DM_MOVE_1127, 1 }, /* モニモン: 乱破（らっぱ） */
-    { DM_SPECIES_MONIMON, DM_MOVE_1128, 2 }, /* モニモン: 水破（すっぱ） */
-    { DM_SPECIES_MONIMON, DM_MOVE_1129, 3 }, /* モニモン: 突破（とっぱ） */
-    { DM_SPECIES_MONITAMON, DM_MOVE_1130, 1 }, /* モニタモン: 火弾 */
-    { DM_SPECIES_MONITAMON, DM_MOVE_1131, 2 }, /* モニタモン: 水竜 */
-    { DM_SPECIES_MONITAMON, DM_MOVE_1132, 3 }, /* モニタモン: 風車 */
-    { DM_SPECIES_MONITAMON, DM_MOVE_1133, 4 }, /* モニタモン: 電閃 */
-    { DM_SPECIES_MONITAMON, DM_MOVE_1134, 5 }, /* モニタモン: 索敵 */
-    { DM_SPECIES_MERVAMON, DM_MOVE_1135, 1 }, /* メルヴァモン: ナイトストーカー */
-    { DM_SPECIES_MERVAMON, DM_MOVE_1136, 2 }, /* メルヴァモン: ラブポイズン */
-    { DM_SPECIES_MERVAMON, DM_MOVE_1137, 3 }, /* メルヴァモン: ファイナルストライクロール */
-    { DM_SPECIES_MERVAMON, DM_MOVE_1138, 4 }, /* メルヴァモン: マッドネスメリーゴーランドＤＸ */
-    { DM_SPECIES_METALGREYMON_CYBERLAUNCHER, DM_MOVE_1139, 1 }, /* メタルグレイモン＋サイバーランチャー: サイバーギガンティックランチャー */
-    { DM_SPECIES_METALGREYMON_CYBERLAUNCHER, DM_MOVE_1140, 2 }, /* メタルグレイモン＋サイバーランチャー: コロナル・マス・エジェクション */
-    { DM_SPECIES_METALGREYMON, DM_MOVE_0697, 1 }, /* メタルグレイモン（2010アニメ版）: トライデントアーム */
-    { DM_SPECIES_METALGREYMON, DM_MOVE_0611, 2 }, /* メタルグレイモン（2010アニメ版）: ギガデストロイヤー */
-    { DM_SPECIES_MAILBIRDRAMON, DM_MOVE_1141, 1 }, /* メイルバードラモン: プラズマキャノン */
-    { DM_SPECIES_MAILBIRDRAMON, DM_MOVE_1142, 2 }, /* メイルバードラモン: ナイトホーク */
-    { DM_SPECIES_MAILBIRDRAMON, DM_MOVE_1143, 3 }, /* メイルバードラモン: トライデントテール */
-    { DM_SPECIES_MUSOKNIGHTMON, DM_MOVE_1144, 1 }, /* ムソーナイトモン: 強羅打雷銃（ゴウラダライガン） */
-    { DM_SPECIES_MUSOKNIGHTMON, DM_MOVE_1145, 2 }, /* ムソーナイトモン: 超力鳴動破（チョウリキメイドウハ） */
-    { DM_SPECIES_MUSOKNIGHTMON, DM_MOVE_1146, 3 }, /* ムソーナイトモン: 魔重力呪縛陣（まじゅうりょくじゅばくじん） */
-    { DM_SPECIES_MADLEOMON_ARMEDMODE, DM_MOVE_1147, 1 }, /* マッドレオモン：アームドモード: The Lion Sleeps Tonight */
-    { DM_SPECIES_MADLEOMON_ARMEDMODE, DM_MOVE_1148, 2 }, /* マッドレオモン：アームドモード: Lion Heart */
-    { DM_SPECIES_MADLEOMON, DM_MOVE_1149, 1 }, /* マッドレオモン: 獣王堕拳 */
-    { DM_SPECIES_MADLEOMON, DM_MOVE_1150, 2 }, /* マッドレオモン: 腐毒爪 */
-    { DM_SPECIES_BOMBMON_XWARS, DM_MOVE_1151, 1 }, /* ボムモン（2010アニメ版）: ボンバーヘッド */
-    { DM_SPECIES_BOMBMON_XWARS, DM_MOVE_1152, 2 }, /* ボムモン（2010アニメ版）: ファイヤーワークスレボリューション */
-    { DM_SPECIES_BEELZEBUMON_XWARS, DM_MOVE_1153, 1 }, /* ベルゼブモン（2010アニメ版）: デス・ザ・キャノン */
-    { DM_SPECIES_BEELZEBUMON_XWARS, DM_MOVE_1003, 2 }, /* ベルゼブモン（2010アニメ版）: ダークネスクロウ */
-    { DM_SPECIES_BLASTMON, DM_MOVE_1154, 1 }, /* ブラストモン: ダイアモンドマシンガン */
-    { DM_SPECIES_BLASTMON, DM_MOVE_1155, 2 }, /* ブラストモン: ダイアモンドヘッジホッグ */
-    { DM_SPECIES_BLASTMON, DM_MOVE_1156, 3 }, /* ブラストモン: プリズムフラッシュ */
-    { DM_SPECIES_BLASTMON, DM_MOVE_1157, 4 }, /* ブラストモン: クリスタルブレス */
-    { DM_SPECIES_FOOTMON, DM_MOVE_1158, 1 }, /* フットモン: ライトニングシュート */
-    { DM_SPECIES_FOOTMON, DM_MOVE_1159, 2 }, /* フットモン: ライトニングオーバーヘッド */
-    { DM_SPECIES_PILLOMON, DM_MOVE_0935, 1 }, /* ピロモン: ララバイバブル */
-    { DM_SPECIES_PILLOMON, DM_MOVE_1160, 2 }, /* ピロモン: 悪夢の泡 */
-    { DM_SPECIES_PICKMON, DM_MOVE_1161, 1 }, /* ピックモン: チンチクリン */
-    { DM_SPECIES_PICKMON, DM_MOVE_1162, 2 }, /* ピックモン: シュガープラム */
-    { DM_SPECIES_BARISTAMON, DM_MOVE_1163, 1 }, /* バリスタモン: ホーンブレイカー */
-    { DM_SPECIES_BARISTAMON, DM_MOVE_1164, 2 }, /* バリスタモン: へヴィスピーカー */
-    { DM_SPECIES_BACOMON, DM_MOVE_1165, 1 }, /* バコモン: ガムロール */
-    { DM_SPECIES_BACOMON, DM_MOVE_1166, 2 }, /* バコモン: トランスデリバリー */
-    { DM_SPECIES_BAGRAMON, DM_MOVE_1167, 1 }, /* バグラモン: アストラルスナッチャー */
-    { DM_SPECIES_BAGRAMON, DM_MOVE_1168, 2 }, /* バグラモン: スカーレットブラッドワイン */
-    { DM_SPECIES_BAGRAMON, DM_MOVE_1169, 3 }, /* バグラモン: インビジブルスネークアイズ */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1170, 1 }, /* ハイビジョンモニタモン: 電影烈破（でんえいれっぱ） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1171, 2 }, /* ハイビジョンモニタモン: 光電殺法之陣（こうでんさっぽうのじん） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1172, 3 }, /* ハイビジョンモニタモン: 癒天光(いてんこう） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1173, 4 }, /* ハイビジョンモニタモン: 業火弾（ごうかだん） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1174, 5 }, /* ハイビジョンモニタモン: 爆水竜（ばくすいりゅう） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1175, 6 }, /* ハイビジョンモニタモン: 暴風車（ぼうふうしゃ） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1176, 7 }, /* ハイビジョンモニタモン: 雷電閃（らいでんじん） */
-    { DM_SPECIES_HI_VISIONMONITAMON, DM_MOVE_1177, 8 }, /* ハイビジョンモニタモン: 瞬索敵（しゅんさくてき） */
-    { DM_SPECIES_BAALMON, DM_MOVE_1178, 1 }, /* バアルモン: カミウチ */
-    { DM_SPECIES_BAALMON, DM_MOVE_1179, 2 }, /* バアルモン: ギルティッシュ */
-    { DM_SPECIES_BAALMON, DM_MOVE_1180, 3 }, /* バアルモン: リークインフォメーション */
-    { DM_SPECIES_NEOVAMDEMON, DM_MOVE_1181, 1 }, /* ネオヴァンデモン: ナイトメアレイド */
-    { DM_SPECIES_NEOVAMDEMON, DM_MOVE_1182, 2 }, /* ネオヴァンデモン: ブラッディストリームグレイド */
-    { DM_SPECIES_NEOVAMDEMON, DM_MOVE_1183, 3 }, /* ネオヴァンデモン: ギャディアックレイド */
-    { DM_SPECIES_DONDOKOMON, DM_MOVE_1184, 1 }, /* ドンドコモン: ドンドコ音頭 */
-    { DM_SPECIES_DONDOKOMON, DM_MOVE_1185, 2 }, /* ドンドコモン: 乱れ打ちラッシュ */
-    { DM_SPECIES_DONDOKOMON, DM_MOVE_1186, 3 }, /* ドンドコモン: 極め太鼓 */
-    { DM_SPECIES_DONSHOUTMON, DM_MOVE_1187, 1 }, /* ドンシャウトモン: 漢魂乱れ太鼓 */
-    { DM_SPECIES_DONSHOUTMON, DM_MOVE_1188, 2 }, /* ドンシャウトモン: ラウディドラマー */
-    { DM_SPECIES_DORULUMON, DM_MOVE_1189, 1 }, /* ドルルモン: ドリルバスター */
-    { DM_SPECIES_DORULUMON, DM_MOVE_1190, 2 }, /* ドルルモン: ドルルトルネード */
-    { DM_SPECIES_DORULUMON, DM_MOVE_1191, 3 }, /* ドルルモン: ドリルブレーダー */
-    { DM_SPECIES_DORBICKMON, DM_MOVE_1192, 1 }, /* ドルビックモン: タイラントコルブラント */
-    { DM_SPECIES_DORBICKMON, DM_MOVE_1193, 2 }, /* ドルビックモン: バーニング・ザ・ドラゴン */
-    { DM_SPECIES_DORBICKMON, DM_MOVE_1194, 3 }, /* ドルビックモン: ドラゴンブレストニックファイア */
-    { DM_SPECIES_TROOPMON, DM_MOVE_1195, 1 }, /* トループモン: ハラショーアタック */
-    { DM_SPECIES_TROOPMON, DM_MOVE_1196, 2 }, /* トループモン: デスマーチ */
-    { DM_SPECIES_DEADLYAXEMON, DM_MOVE_1197, 1 }, /* デッドリーアックスモン: エアスライサー */
-    { DM_SPECIES_DEADLYAXEMON, DM_MOVE_1198, 2 }, /* デッドリーアックスモン: アクアレジア */
-    { DM_SPECIES_DEADLYAXEMON, DM_MOVE_1199, 3 }, /* デッドリーアックスモン: アクアレイジ */
-    { DM_SPECIES_DECKERDRAMON, DM_MOVE_1200, 1 }, /* デッカードラモン: デッカードランチャー */
-    { DM_SPECIES_DECKERDRAMON, DM_MOVE_1201, 2 }, /* デッカードラモン: スモーキーファング */
-    { DM_SPECIES_DECKERDRAMON, DM_MOVE_1202, 3 }, /* デッカードラモン: ヘビーテイルフック */
-    { DM_SPECIES_DECKERGREYMON, DM_MOVE_1203, 1 }, /* デッカーグレイモン: プラズマデッカードランチャー */
-    { DM_SPECIES_DECKERGREYMON, DM_MOVE_1204, 2 }, /* デッカーグレイモン: メイルバードランチャー */
-    { DM_SPECIES_DECKERGREYMON, DM_MOVE_1205, 3 }, /* デッカーグレイモン: テラデストロイヤー */
-    { DM_SPECIES_DECKERGREYMON, DM_MOVE_1206, 4 }, /* デッカーグレイモン: ファイナルスパーク */
-    { DM_SPECIES_TUWARMON, DM_MOVE_1207, 1 }, /* ツワーモン: マンティスダンス */
-    { DM_SPECIES_TUWARMON, DM_MOVE_1208, 2 }, /* ツワーモン: スモーキンブギ */
-    { DM_SPECIES_TYUTYUMON, DM_MOVE_1209, 1 }, /* チューチューモン: チューチュー・ツイッター */
-    { DM_SPECIES_CHIBICKMON, DM_MOVE_1210, 1 }, /* チビックモン: チンチクリンリン */
-    { DM_SPECIES_CHIBICKMON, DM_MOVE_1211, 2 }, /* チビックモン: プチシュガープラム */
-    { DM_SPECIES_CHIKURIMON, DM_MOVE_1212, 1 }, /* チクリモン: ファイナルチクリモン */
-    { DM_SPECIES_CHIKURIMON, DM_MOVE_1213, 2 }, /* チクリモン: コンペートーハンマー */
-    { DM_SPECIES_DAMEMON, DM_MOVE_1214, 1 }, /* ダメモン: ブンブン拳 */
-    { DM_SPECIES_DAMEMON, DM_MOVE_1215, 2 }, /* ダメモン: ガンバルカン */
-    { DM_SPECIES_DAMEMON, DM_MOVE_1216, 3 }, /* ダメモン: ブー・スト・アタック */
-    { DM_SPECIES_TACTIMON, DM_MOVE_1217, 1 }, /* タクティモン: 壱の太刀 */
-    { DM_SPECIES_TACTIMON, DM_MOVE_1218, 2 }, /* タクティモン: 弐の太刀 */
-    { DM_SPECIES_TACTIMON, DM_MOVE_1219, 3 }, /* タクティモン: 参の太刀 */
-    { DM_SPECIES_TACTIMON, DM_MOVE_1220, 4 }, /* タクティモン: タネガシマ */
-    { DM_SPECIES_TACTIMON, DM_MOVE_1221, 5 }, /* タクティモン: 鬼神突 */
-    { DM_SPECIES_TACTIMON, DM_MOVE_1222, 6 }, /* タクティモン: 星割り */
-    { DM_SPECIES_DARKNESSBAGRAMON, DM_MOVE_1223, 1 }, /* ダークネスバグラモン: ゴッドオブデススナッチャー */
-    { DM_SPECIES_DARKNESSBAGRAMON, DM_MOVE_1224, 2 }, /* ダークネスバグラモン: バルフィアイズ */
-    { DM_SPECIES_DARKNESSBAGRAMON, DM_MOVE_1225, 3 }, /* ダークネスバグラモン: エターナルダークメア */
-    { DM_SPECIES_DARKKNIGHTMON, DM_MOVE_1226, 1 }, /* ダークナイトモン: ツインスピア */
-    { DM_SPECIES_DARKKNIGHTMON, DM_MOVE_1227, 2 }, /* ダークナイトモン: ショルダーブレード */
-    { DM_SPECIES_DARKKNIGHTMON, DM_MOVE_0964, 3 }, /* ダークナイトモン: アンデッドソルジャー */
-    { DM_SPECIES_ZENIMON, DM_MOVE_1228, 1 }, /* ゼニモン: こめっとランチャー */
-    { DM_SPECIES_ZENIMON, DM_MOVE_1229, 2 }, /* ゼニモン: ゼニナゲ */
-    { DM_SPECIES_SPLASHMON, DM_MOVE_1230, 1 }, /* スプラッシュモン: ポイゾナスフォース */
-    { DM_SPECIES_SPLASHMON, DM_MOVE_1231, 2 }, /* スプラッシュモン: ハイドロプレッシャー */
-    { DM_SPECIES_SPLASHMON, DM_MOVE_1232, 3 }, /* スプラッシュモン: ビードラウン */
-    { DM_SPECIES_SPLASHMON, DM_MOVE_1233, 4 }, /* スプラッシュモン: タイガータイフーン（真の姿時） */
-    { DM_SPECIES_SPARROWMON, DM_MOVE_1234, 1 }, /* スパロウモン: クラッシュブーム */
-    { DM_SPECIES_SPARROWMON, DM_MOVE_1235, 2 }, /* スパロウモン: ウィングエッジ */
-    { DM_SPECIES_SPARROWMON, DM_MOVE_1236, 3 }, /* スパロウモン: ランダムレーザー */
-    { DM_SPECIES_STARMONS, DM_MOVE_0540, 1 }, /* スターモンズ: メテオスコール */
-    { DM_SPECIES_STARMONS, DM_MOVE_1237, 2 }, /* スターモンズ: ウィッシュアポンアスター */
-    { DM_SPECIES_SKULLKNIGHTMONBIGAXEMODE, DM_MOVE_1238, 1 }, /* スカルナイトモン：ビッグアックスモード: アックスライダー */
-    { DM_SPECIES_SKULLKNIGHTMONBIGAXEMODE, DM_MOVE_1239, 2 }, /* スカルナイトモン：ビッグアックスモード: ストームアックス */
-    { DM_SPECIES_SKULLKNIGHTMONCAVALIERMODE, DM_MOVE_1240, 1 }, /* スカルナイトモン：騎馬モード: キバブレイバー */
-    { DM_SPECIES_SKULLKNIGHTMON, DM_MOVE_1241, 1 }, /* スカルナイトモン: スピアニードル */
-    { DM_SPECIES_SKULLKNIGHTMON, DM_MOVE_1242, 2 }, /* スカルナイトモン: ブレストアイ・ウィンク */
-    { DM_SPECIES_JOKERMON, DM_MOVE_1243, 1 }, /* ジョーカーモン: ルナティックスラッシュ */
-    { DM_SPECIES_JOKERMON, DM_MOVE_1244, 2 }, /* ジョーカーモン: ガイアマジッカー */
-    { DM_SPECIES_SHONITAMON, DM_MOVE_1245, 1 }, /* シャニタモン: 霞隠 */
-    { DM_SPECIES_SHONITAMON, DM_MOVE_1246, 2 }, /* シャニタモン: 葉隠 */
-    { DM_SPECIES_DORULUCANNON, DM_MOVE_1247, 1 }, /* シャウトモン＋ドルルキャノン: ドルルキャノン */
-    { DM_SPECIES_STARSWORD, DM_MOVE_1248, 1 }, /* シャウトモン＋スターソード: スターブレイド */
-    { DM_SPECIES_JETSPARROW, DM_MOVE_1249, 1 }, /* シャウトモン＋ジェットスパロウ: エアシューター */
-    { DM_SPECIES_JETSPARROW, DM_MOVE_1250, 2 }, /* シャウトモン＋ジェットスパロウ: プラズマブラスター */
-    { DM_SPECIES_SHOUTMONX7, DM_MOVE_0488, 1 }, /* シャウトモンX7: クロスバーニングロッカー */
-    { DM_SPECIES_SHOUTMONX7, DM_MOVE_0489, 2 }, /* シャウトモンX7: ダブルフレアバスター */
-    { DM_SPECIES_SHOUTMONX7, DM_MOVE_0490, 3 }, /* シャウトモンX7: セブンビクトライズ */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_1251, 1 }, /* シャウトモンX5B: バーストダッシュストリーム */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_1252, 2 }, /* シャウトモンX5B: メテオバスターアタック */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_1253, 3 }, /* シャウトモンX5B: メテオインパクト */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_1254, 4 }, /* シャウトモンX5B: カオスフレア */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_1255, 5 }, /* シャウトモンX5B: スターズブレイドセレストライク */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_0569, 6 }, /* シャウトモンX5B: バーニングスタークラッシャー */
-    { DM_SPECIES_SHOUTMONX5B, DM_MOVE_0570, 7 }, /* シャウトモンX5B: スリービクトライズ */
-    { DM_SPECIES_SHOUTMONX5, DM_MOVE_1252, 1 }, /* シャウトモンX5: メテオバスターアタック */
-    { DM_SPECIES_SHOUTMONX5, DM_MOVE_1253, 2 }, /* シャウトモンX5: メテオインパクト */
-    { DM_SPECIES_SHOUTMONX5, DM_MOVE_0569, 3 }, /* シャウトモンX5: バーニングスタークラッシャー */
-    { DM_SPECIES_SHOUTMONX5, DM_MOVE_0570, 4 }, /* シャウトモンX5: スリービクトライズ */
-    { DM_SPECIES_SHOUTMONX4B, DM_MOVE_1255, 1 }, /* シャウトモンX4B: スターズブレイドセレストライク */
-    { DM_SPECIES_SHOUTMONX4B, DM_MOVE_1254, 2 }, /* シャウトモンX4B: カオスフレア */
-    { DM_SPECIES_SHOUTMONX4B, DM_MOVE_0569, 3 }, /* シャウトモンX4B: バーニングスタークラッシャー */
-    { DM_SPECIES_SHOUTMONX4B, DM_MOVE_0570, 4 }, /* シャウトモンX4B: スリービクトライズ */
-    { DM_SPECIES_SHOUTMONX4, DM_MOVE_0569, 1 }, /* シャウトモンX4: バーニングスタークラッシャー */
-    { DM_SPECIES_SHOUTMONX4, DM_MOVE_0570, 2 }, /* シャウトモンX4: スリービクトライズ */
-    { DM_SPECIES_SHOUTMONX4, DM_MOVE_0571, 3 }, /* シャウトモンX4: スリーインパクト */
-    { DM_SPECIES_SHOUTMONX4, DM_MOVE_1256, 4 }, /* シャウトモンX4: ハイアドモスフェリックプレッシャー */
-    { DM_SPECIES_SHOUTMONX4, DM_MOVE_0572, 5 }, /* シャウトモンX4: ビクトライズブーメラン */
-    { DM_SPECIES_SHOUTMONX4, DM_MOVE_1257, 6 }, /* シャウトモンX4: バーニングスタースラッシャー */
-    { DM_SPECIES_SHOUTMONX3, DM_MOVE_0570, 1 }, /* シャウトモンX3: スリービクトライズ */
-    { DM_SPECIES_SHOUTMONX3, DM_MOVE_0571, 2 }, /* シャウトモンX3: スリーインパクト */
-    { DM_SPECIES_SHOUTMONX3, DM_MOVE_0572, 3 }, /* シャウトモンX3: ビクトライズブーメラン */
-    { DM_SPECIES_SHOUTMONX2, DM_MOVE_1258, 1 }, /* シャウトモンX2: マックアロー */
-    { DM_SPECIES_SHOUTMONX2, DM_MOVE_1259, 2 }, /* シャウトモンX2: ホーンブレイカーDX */
-    { DM_SPECIES_SHOUTMONX2, DM_MOVE_1260, 3 }, /* シャウトモンX2: バディブラスター */
-    { DM_SPECIES_SHOUTMONX2, DM_MOVE_1261, 4 }, /* シャウトモンX2: アームバンカー */
-    { DM_SPECIES_SHOUTMONX2, DM_MOVE_1262, 5 }, /* シャウトモンX2: オプティックレーザー */
-    { DM_SPECIES_SHOUTMONX2, DM_MOVE_1263, 6 }, /* シャウトモンX2: ミヤバルカン */
-    { DM_SPECIES_SHOUTMONDX, DM_MOVE_1264, 1 }, /* シャウトモンDX: トライデントジャスファング */
-    { DM_SPECIES_SHOUTMONDX, DM_MOVE_1265, 2 }, /* シャウトモンDX: ハイパーロックマグナム */
-    { DM_SPECIES_SHOUTMONDX, DM_MOVE_1266, 3 }, /* シャウトモンDX: エレキバスタークロス */
-    { DM_SPECIES_SHOUTMONDX, DM_MOVE_1267, 4 }, /* シャウトモンDX: ビクトライズ・バンキング */
-    { DM_SPECIES_SHOUTMONDX, DM_MOVE_1268, 5 }, /* シャウトモンDX: ブレイブビートロックダブルクロス */
-    { DM_SPECIES_SHOUTMON, DM_MOVE_0990, 1 }, /* シャウトモン: ロックダマシー */
-    { DM_SPECIES_SHOUTMON, DM_MOVE_0991, 2 }, /* シャウトモン: ソウルクラッシャー */
-    { DM_SPECIES_SHOUTMON, DM_MOVE_0992, 3 }, /* シャウトモン: ラウディロッカー */
-    { DM_SPECIES_JETMERVAMON, DM_MOVE_1269, 1 }, /* ジェットメルヴァモン: ハートブレイクショット */
-    { DM_SPECIES_JETMERVAMON, DM_MOVE_1270, 2 }, /* ジェットメルヴァモン: セクシーダイナマイツ */
-    { DM_SPECIES_JETMERVAMON, DM_MOVE_1271, 3 }, /* ジェットメルヴァモン: ウロボロスゲート */
-    { DM_SPECIES_JETMERVAMON, DM_MOVE_1272, 4 }, /* ジェットメルヴァモン: スパイシーハードラヴ */
-    { DM_SPECIES_JETMERVAMON, DM_MOVE_1135, 5 }, /* ジェットメルヴァモン: ナイトストーカー */
-    { DM_SPECIES_JETMERVAMON, DM_MOVE_1136, 6 }, /* ジェットメルヴァモン: ラブポイズン */
-    { DM_SPECIES_ZEKEGREYMON, DM_MOVE_1273, 1 }, /* ジークグレイモン: トライデントファング */
-    { DM_SPECIES_ZEKEGREYMON, DM_MOVE_1274, 2 }, /* ジークグレイモン: デストロイスマッシャー */
-    { DM_SPECIES_ZEKEGREYMON, DM_MOVE_1275, 3 }, /* ジークグレイモン: ジークフレイム */
-    { DM_SPECIES_ZEKEGREYMON, DM_MOVE_1276, 4 }, /* ジークグレイモン: プラズマレールガン */
-    { DM_SPECIES_ZEKEGREYMON, DM_MOVE_1277, 5 }, /* ジークグレイモン: ファイナルストライクス */
-    { DM_SPECIES_ZAMIELMON, DM_MOVE_1278, 1 }, /* ザミエールモン: スナイプヘッドショット */
-    { DM_SPECIES_ZAMIELMON, DM_MOVE_1279, 2 }, /* ザミエールモン: ボウカッター */
-    { DM_SPECIES_ZAMIELMON, DM_MOVE_1280, 3 }, /* ザミエールモン: フットショット */
-    { DM_SPECIES_ZAMIELMON, DM_MOVE_1281, 4 }, /* ザミエールモン: アローランス */
-    { DM_SPECIES_ZAMIELMON, DM_MOVE_1282, 5 }, /* ザミエールモン: タービュランスアロー */
-    { DM_SPECIES_ZAMIELMON, DM_MOVE_1283, 6 }, /* ザミエールモン: ザ・ワールドショット */
-    { DM_SPECIES_SOUNDBIRDMON, DM_MOVE_1284, 1 }, /* サウンドバードモン: ギガスクリーム */
-    { DM_SPECIES_SOUNDBIRDMON, DM_MOVE_1285, 2 }, /* サウンドバードモン: サウンドフィニッシュ */
-    { DM_SPECIES_CYBERDRAMON_XWARS, DM_MOVE_1286, 1 }, /* サイバードラモン: イレイザークロー */
-    { DM_SPECIES_CYBERDRAMON_XWARS, DM_MOVE_1287, 2 }, /* サイバードラモン: グラットンファング */
-    { DM_SPECIES_CYBERDRAMON_XWARS, DM_MOVE_1288, 3 }, /* サイバードラモン: サイバーブレーダー */
-    { DM_SPECIES_CYBERDRAMON_XWARS, DM_MOVE_1289, 4 }, /* サイバードラモン: デスディバイダー */
-    { DM_SPECIES_KOZENIMON, DM_MOVE_1290, 1 }, /* コゼニモン: イッチ・ダン・ケツ */
-    { DM_SPECIES_KOZENIMON, DM_MOVE_1291, 2 }, /* コゼニモン: ￥UE-N */
-    { DM_SPECIES_GREYMON, DM_MOVE_0758, 1 }, /* グレイモン（2010アニメ版）: メガフレイム */
-    { DM_SPECIES_GREYMON, DM_MOVE_1292, 2 }, /* グレイモン（2010アニメ版）: ブラスターテイル */
-    { DM_SPECIES_GREYMON, DM_MOVE_1293, 3 }, /* グレイモン（2010アニメ版）: ホーンストライク */
-    { DM_SPECIES_GRAVIMON, DM_MOVE_1294, 1 }, /* グラビモン: オクタグラビティ */
-    { DM_SPECIES_GRAVIMON, DM_MOVE_1295, 2 }, /* グラビモン: ハイグラビティープレッシャー */
-    { DM_SPECIES_GRAVIMON, DM_MOVE_1296, 3 }, /* グラビモン: グラビティー・バン */
-    { DM_SPECIES_CUTEMON, DM_MOVE_1297, 1 }, /* キュートモン: キズナオール */
-    { DM_SPECIES_CUTEMON, DM_MOVE_1298, 2 }, /* キュートモン: スグナオール */
-    { DM_SPECIES_CUTEMON, DM_MOVE_1299, 3 }, /* キュートモン: ヨクナオール */
-    { DM_SPECIES_CUTEMON, DM_MOVE_1300, 4 }, /* キュートモン: スーパーソニックウェーブ */
-    { DM_SPECIES_CUTEMON, DM_MOVE_1301, 5 }, /* キュートモン: ウルトラソニックウェーブ */
-    { DM_SPECIES_GUMDRAMON, DM_MOVE_1302, 1 }, /* ガムドラモン: ランガムブレイク */
-    { DM_SPECIES_GUMDRAMON, DM_MOVE_1303, 2 }, /* ガムドラモン: ジャックドハンマー */
-    { DM_SPECIES_GUMDRAMON, DM_MOVE_1304, 3 }, /* ガムドラモン: ファイアーボルテクス */
-    { DM_SPECIES_GANEMON, DM_MOVE_1305, 1 }, /* ガネモン: ゴールドボーリング */
-    { DM_SPECIES_GANEMON, DM_MOVE_1306, 2 }, /* ガネモン: ゴールドプレス */
-    { DM_SPECIES_GAOSSMON, DM_MOVE_1307, 1 }, /* ガオスモン: キロフレイム */
-    { DM_SPECIES_GAOSSMON, DM_MOVE_1308, 2 }, /* ガオスモン: ヘッドストライク */
-    { DM_SPECIES_OLEGMON, DM_MOVE_1309, 1 }, /* オレーグモン: デュアルトマホークブーメラン */
-    { DM_SPECIES_OLEGMON, DM_MOVE_1310, 2 }, /* オレーグモン: バイキングヴュッフェ */
-    { DM_SPECIES_OLEGMON, DM_MOVE_1311, 3 }, /* オレーグモン: エイジオブディスカバリー */
-    { DM_SPECIES_OLEGMON, DM_MOVE_1312, 4 }, /* オレーグモン: ドリームカムズトゥルー */
-    { DM_SPECIES_OMEGASHOUTMON, DM_MOVE_1313, 1 }, /* オメガシャウトモン: ヘヴィメタルバルカン */
-    { DM_SPECIES_OMEGASHOUTMON, DM_MOVE_1267, 2 }, /* オメガシャウトモン: ビクトライズ・バンキング */
-    { DM_SPECIES_OMEGASHOUTMON, DM_MOVE_1314, 3 }, /* オメガシャウトモン: ハードロックダマシー */
-    { DM_SPECIES_OMEGASHOUTMON, DM_MOVE_1315, 4 }, /* オメガシャウトモン: ビートスラッシュ */
-    { DM_SPECIES_OMEGASHOUTMON, DM_MOVE_0809, 5 }, /* オメガシャウトモン: オメガ・ザ・フュージョン */
-    { DM_SPECIES_EKAKIMON, DM_MOVE_1316, 1 }, /* エカキモン: ミニミニエカキモン */
-    { DM_SPECIES_EKAKIMON, DM_MOVE_1317, 2 }, /* エカキモン: カラフルチェンジ */
-    { DM_SPECIES_IGUNEETMON, DM_MOVE_1318, 1 }, /* イグニートモン: ガラパゴスフィールド */
-    { DM_SPECIES_IGUNEETMON, DM_MOVE_1319, 2 }, /* イグニートモン: ティモニナイザー */
-    { DM_SPECIES_IGUNEETMON, DM_MOVE_1320, 3 }, /* イグニートモン: ファイナルトラベラー */
-    { DM_SPECIES_ARRESTERDRAMON, DM_MOVE_0752, 1 }, /* アレスタードラモン: マッハフリッカー */
-    { DM_SPECIES_ARRESTERDRAMON, DM_MOVE_0753, 2 }, /* アレスタードラモン: フロッグショット */
-    { DM_SPECIES_ARRESTERDRAMON, DM_MOVE_1321, 3 }, /* アレスタードラモン: スピンカリパー */
-    { DM_SPECIES_ARRESTERDRAMON, DM_MOVE_0755, 4 }, /* アレスタードラモン: スパイラルシュレッダー */
-    { DM_SPECIES_ARRESTERDRAMON, DM_MOVE_0756, 5 }, /* アレスタードラモン: プリズムギャレット */
-    { DM_SPECIES_LOUWEMON, DM_MOVE_1322, 1 }, /* レーベモン: エーヴィッヒ・シュラーフ */
-    { DM_SPECIES_LOUWEMON, DM_MOVE_1323, 2 }, /* レーベモン: エントリヒ・メテオール */
-    { DM_SPECIES_RANAMON, DM_MOVE_1324, 1 }, /* ラーナモン: レインストリーム */
-    { DM_SPECIES_RANAMON, DM_MOVE_1325, 2 }, /* ラーナモン: ジェラシーレイン */
-    { DM_SPECIES_RAIHIMON, DM_MOVE_1326, 1 }, /* ライヒモン: シュバルツ・レールザッツ（黒定理） */
-    { DM_SPECIES_RAIHIMON, DM_MOVE_1327, 2 }, /* ライヒモン: ロート・クロイツ（赤十字架） */
-    { DM_SPECIES_RHINOKABUTERIMON, DM_MOVE_1328, 1 }, /* ライノカブテリモン: コンデンサストーム */
-    { DM_SPECIES_RHINOKABUTERIMON, DM_MOVE_1329, 2 }, /* ライノカブテリモン: サンダーレーザー */
-    { DM_SPECIES_MERCUREMON, DM_MOVE_1330, 1 }, /* メルキューレモン: ジェネラスミラー */
-    { DM_SPECIES_MERCUREMON, DM_MOVE_1331, 2 }, /* メルキューレモン: オフセットリフレクター */
-    { DM_SPECIES_MAGNAGARURUMON, DM_MOVE_1332, 1 }, /* マグナガルルモン: マシンガンデストロイ */
-    { DM_SPECIES_MAGNAGARURUMON, DM_MOVE_1333, 2 }, /* マグナガルルモン: スターライトベロシティ */
-    { DM_SPECIES_BOLGMON, DM_MOVE_1334, 1 }, /* ボルグモン: アルティメットサンダー */
-    { DM_SPECIES_BOLGMON, DM_MOVE_1335, 2 }, /* ボルグモン: フィールドデストロイヤー */
-    { DM_SPECIES_VELGRMON, DM_MOVE_1336, 1 }, /* ベルグモン: ゾーンデリーター */
-    { DM_SPECIES_VELGRMON, DM_MOVE_1337, 2 }, /* ベルグモン: マスターオブダークネス */
-    { DM_SPECIES_PETALDRAMON, DM_MOVE_1338, 1 }, /* ペタルドラモン: リーフサイクロン */
-    { DM_SPECIES_PETALDRAMON, DM_MOVE_1339, 2 }, /* ペタルドラモン: サウザンドスパイク */
-    { DM_SPECIES_BEOWOLFMON, DM_MOVE_1340, 1 }, /* ベオウルフモン: リヒトアングリフ */
-    { DM_SPECIES_BEOWOLFMON, DM_MOVE_1341, 2 }, /* ベオウルフモン: ツヴァイハンダー */
-    { DM_SPECIES_FLAMON, DM_MOVE_1342, 1 }, /* フレイモン: ベビーサラマンダー */
-    { DM_SPECIES_BLITZMON, DM_MOVE_1343, 1 }, /* ブリッツモン: トールハンマー */
-    { DM_SPECIES_BLITZMON, DM_MOVE_1344, 2 }, /* ブリッツモン: ミョルニルサンダー */
-    { DM_SPECIES_BLIZZARMON, DM_MOVE_1345, 1 }, /* ブリザーモン: アヴァランチステップ */
-    { DM_SPECIES_BLIZZARMON, DM_MOVE_1346, 2 }, /* ブリザーモン: グレッチャートルペイド（氷河魚雷） */
-    { DM_SPECIES_FAIRIMON, DM_MOVE_1347, 1 }, /* フェアリモン: トルナード・ガンバ */
-    { DM_SPECIES_FAIRIMON, DM_MOVE_1348, 2 }, /* フェアリモン: ロゼオ・テンポラーレ */
-    { DM_SPECIES_CHACKMON, DM_MOVE_1349, 1 }, /* チャックモン: ツララララ～ */
-    { DM_SPECIES_CHACKMON, DM_MOVE_1350, 2 }, /* チャックモン: スノーボンバー */
-    { DM_SPECIES_DUSKMON, DM_MOVE_1351, 1 }, /* ダスクモン: ガイストアーベント */
-    { DM_SPECIES_DUSKMON, DM_MOVE_1352, 2 }, /* ダスクモン: エアオーベルング */
-    { DM_SPECIES_DAIPENMON, DM_MOVE_1353, 1 }, /* ダイペンモン: ブルーハワイデス */
-    { DM_SPECIES_DAIPENMON, DM_MOVE_1354, 2 }, /* ダイペンモン: イチゴデス */
-    { DM_SPECIES_SEPHIROTHMON, DM_MOVE_1355, 1 }, /* セフィロトモン: ランブルブレンドナンバー（１～１０） */
-    { DM_SPECIES_STORABIMON, DM_MOVE_1356, 1 }, /* ストラビモン: リヒト・ナーゲル */
-    { DM_SPECIES_SHUTUMON, DM_MOVE_1357, 1 }, /* シューツモン: ギルガメッシュスライサー */
-    { DM_SPECIES_SHUTUMON, DM_MOVE_1358, 2 }, /* シューツモン: ウィンドオブペイン */
-    { DM_SPECIES_JETSILPHYMON, DM_MOVE_1359, 1 }, /* ジェットシルフィーモン: ジェットビンター */
-    { DM_SPECIES_JETSILPHYMON, DM_MOVE_1360, 2 }, /* ジェットシルフィーモン: ウルトラタービュレンス */
-    { DM_SPECIES_GROTTEMON, DM_MOVE_1361, 1 }, /* グロットモン: スネークアイブレイク */
-    { DM_SPECIES_GROTTEMON, DM_MOVE_1362, 2 }, /* グロットモン: ジャック・イン・ザ・ボックス */
-    { DM_SPECIES_GIGASMON, DM_MOVE_1363, 1 }, /* ギガスモン: アースクェイク */
-    { DM_SPECIES_GIGASMON, DM_MOVE_1364, 2 }, /* ギガスモン: ハリケーンボンバー */
-    { DM_SPECIES_GARUMMON, DM_MOVE_1365, 1 }, /* ガルムモン: スピードスター */
-    { DM_SPECIES_GARUMMON, DM_MOVE_1366, 2 }, /* ガルムモン: ソーラレーザー */
-    { DM_SPECIES_CALAMARAMON, DM_MOVE_1367, 1 }, /* カルマーラモン: ネーロコルソ */
-    { DM_SPECIES_CALAMARAMON, DM_MOVE_1368, 2 }, /* カルマーラモン: タイタニックチャージ */
-    { DM_SPECIES_KAISERGREYMON, DM_MOVE_1369, 1 }, /* カイゼルグレイモン: 炎龍撃（えんりゅうげき） */
-    { DM_SPECIES_KAISERGREYMON, DM_MOVE_1370, 2 }, /* カイゼルグレイモン: 九頭龍陣（くずりゅうじん） */
-    { DM_SPECIES_KAISERLEOMON, DM_MOVE_1371, 1 }, /* カイザーレオモン: シュヴァルツ・ドンナー */
-    { DM_SPECIES_KAISERLEOMON, DM_MOVE_1372, 2 }, /* カイザーレオモン: シュヴァルツ・ケーニッヒ */
-    { DM_SPECIES_VRITRAMON, DM_MOVE_1373, 1 }, /* ヴリトラモン: コロナブラスター */
-    { DM_SPECIES_VRITRAMON, DM_MOVE_1374, 2 }, /* ヴリトラモン: フレイムストーム */
-    { DM_SPECIES_WOLFMON, DM_MOVE_1375, 1 }, /* ヴォルフモン: リヒト・ズィーガー */
-    { DM_SPECIES_WOLFMON, DM_MOVE_1376, 2 }, /* ヴォルフモン: ツヴァイ・ズィーガー */
-    { DM_SPECIES_ARBORMON, DM_MOVE_1377, 1 }, /* アルボルモン: マシンガン・ダンス（機銃の踊り） */
-    { DM_SPECIES_ARBORMON, DM_MOVE_1378, 2 }, /* アルボルモン: ブロッケイドシード（封じ込めの種） */
-    { DM_SPECIES_ALDAMON, DM_MOVE_1379, 1 }, /* アルダモン: ブラフマシル */
-    { DM_SPECIES_ALDAMON, DM_MOVE_1380, 2 }, /* アルダモン: ブラフマストラ */
-    { DM_SPECIES_AGNIMON, DM_MOVE_1381, 1 }, /* アグニモン: バーニングサラマンダー */
-    { DM_SPECIES_AGNIMON, DM_MOVE_1382, 2 }, /* アグニモン: サラマンダーブレイク */
-    { DM_SPECIES_RINKMON, DM_MOVE_1383, 1 }, /* リンクモン: スピニングカッター */
-    { DM_SPECIES_LYNXMON, DM_MOVE_1384, 1 }, /* ランクスモン: サーマルメイン */
-    { DM_SPECIES_RHINOMON, DM_MOVE_1008, 1 }, /* ライノモン: アイン・ソフ・オウル */
-    { DM_SPECIES_RHINOMON, DM_MOVE_1385, 2 }, /* ライノモン: アトミックバースト */
-    { DM_SPECIES_LIGHDRAMON, DM_MOVE_1386, 1 }, /* ライドラモン: ライトニングブレード */
-    { DM_SPECIES_LIGHDRAMON, DM_MOVE_1387, 2 }, /* ライドラモン: ブルーサンダー */
-    { DM_SPECIES_YAKSAMON, DM_MOVE_1388, 1 }, /* ヤシャモン: 一刀両断（イットウリョウダン） */
-    { DM_SPECIES_YAKSAMON, DM_MOVE_1389, 2 }, /* ヤシャモン: クグツの術 */
-    { DM_SPECIES_MOTHMON, DM_MOVE_1390, 1 }, /* モスモン: モルフォンガトリング */
-    { DM_SPECIES_MAILDRAMON, DM_MOVE_1391, 1 }, /* メイルドラモン: アイアンプレス */
-    { DM_SPECIES_MOOSEMON, DM_MOVE_1392, 1 }, /* ムースモン: ホーンブレード */
-    { DM_SPECIES_MANBOMON, DM_MOVE_1393, 1 }, /* マンボモン: バルーンマイン */
-    { DM_SPECIES_MANBOMON, DM_MOVE_1394, 2 }, /* マンボモン: グローバル・グローブ */
-    { DM_SPECIES_MANTARAYMON, DM_MOVE_0887, 1 }, /* マンタレイモン: パラライズテイル */
-    { DM_SPECIES_MAGNAMON, DM_MOVE_0881, 1 }, /* マグナモン: プラズマシュート */
-    { DM_SPECIES_MAGNAMON, DM_MOVE_0882, 2 }, /* マグナモン: シャイニングゴールドソーラーストーム */
-    { DM_SPECIES_PONCHOMON, DM_MOVE_1395, 1 }, /* ポンチョモン: ブラッドダンス・マラカスバージョン */
-    { DM_SPECIES_PONCHOMON, DM_MOVE_1396, 2 }, /* ポンチョモン: テキーラナックル */
-    { DM_SPECIES_HOLSMON, DM_MOVE_1397, 1 }, /* ホルスモン: マッハインパルス */
-    { DM_SPECIES_HOLSMON, DM_MOVE_1398, 2 }, /* ホルスモン: テンペストウィング */
-    { DM_SPECIES_HOLSMON, DM_MOVE_1399, 3 }, /* ホルスモン: ウジャトゲイズ */
-    { DM_SPECIES_BOARMON, DM_MOVE_1400, 1 }, /* ボアモン: ノーズブラスター */
-    { DM_SPECIES_PEGASMON, DM_MOVE_1401, 1 }, /* ペガスモン: ロデオギャロップ */
-    { DM_SPECIES_PEGASMON, DM_MOVE_1402, 2 }, /* ペガスモン: シルバーブレイズ */
-    { DM_SPECIES_PEGASMON, DM_MOVE_1403, 3 }, /* ペガスモン: シューティングスター */
-    { DM_SPECIES_FROGMON, DM_MOVE_1404, 1 }, /* フロッグモン: リーフホイールカッター */
-    { DM_SPECIES_PRAIRIEMON, DM_MOVE_1405, 1 }, /* プレイリモン: ソニックイヤー */
-    { DM_SPECIES_FLADRAMON, DM_MOVE_1406, 1 }, /* フレイドラモン: ナックルファイア */
-    { DM_SPECIES_FLADRAMON, DM_MOVE_1407, 2 }, /* フレイドラモン: ファイアロケット */
-    { DM_SPECIES_FLAWIZARMON, DM_MOVE_1408, 1 }, /* フレイウィザーモン: マジックイグニッション */
-    { DM_SPECIES_FLAWIZARMON, DM_MOVE_1409, 2 }, /* フレイウィザーモン: ファイヤークラウド */
-    { DM_SPECIES_BULLMON, DM_MOVE_1410, 1 }, /* ブルモン: マタドールダッシュ */
-    { DM_SPECIES_FLYBEEMON, DM_MOVE_1411, 1 }, /* フライビーモン: フライスパーク */
-    { DM_SPECIES_FLYBEEMON, DM_MOVE_1412, 2 }, /* フライビーモン: ニードルスティンガー */
-    { DM_SPECIES_PTERANOMON, DM_MOVE_0869, 1 }, /* プテラノモン: ビークピアス */
-    { DM_SPECIES_PUCCHIEMON_GREEN, DM_MOVE_1413, 1 }, /* プッチーモン（緑）: ハートナービーム */
-    { DM_SPECIES_PUCCHIEMON, DM_MOVE_1413, 1 }, /* プッチーモン: ハートナービーム */
-    { DM_SPECIES_PIPISMON, DM_MOVE_1414, 1 }, /* ピピスモン: クレイジーソニック */
-    { DM_SPECIES_BITMON, DM_MOVE_1415, 1 }, /* ビットモン: イヤーランサー */
-    { DM_SPECIES_PEACOCKMON, DM_MOVE_1416, 1 }, /* ピーコックモン: レインボーシャワー */
-    { DM_SPECIES_BAROMON, DM_MOVE_1417, 1 }, /* バロモン: メテオダンス */
-    { DM_SPECIES_HONEYBEEMON, DM_MOVE_1418, 1 }, /* ハニービーモン: ポイズンパウダー */
-    { DM_SPECIES_HONEYBEEMON, DM_MOVE_1419, 2 }, /* ハニービーモン: パラライズスティング */
-    { DM_SPECIES_BUTTERFLAMON, DM_MOVE_1420, 1 }, /* バタフラモン: スウィートフェロモン */
-    { DM_SPECIES_HARPYMON, DM_MOVE_1421, 1 }, /* ハーピモン: ウィンドシーカー */
-    { DM_SPECIES_NOHEMON, DM_MOVE_1422, 1 }, /* ノヘモン: デリションクロウ */
-    { DM_SPECIES_NEFERTIMON, DM_MOVE_0889, 1 }, /* ネフェルティモン: カースオブクィーン */
-    { DM_SPECIES_NEFERTIMON, DM_MOVE_0890, 2 }, /* ネフェルティモン: ロゼッタストーン */
-    { DM_SPECIES_TOGEMOGUMON, DM_MOVE_1423, 1 }, /* トゲモグモン: ヘイルマシンガン */
-    { DM_SPECIES_TOCANMON, DM_MOVE_1424, 1 }, /* トーカンモン: ペンチカッター */
-    { DM_SPECIES_DEPTHMON, DM_MOVE_1425, 1 }, /* デプスモン: バブルボム */
-    { DM_SPECIES_TYLOMON, DM_MOVE_0861, 1 }, /* ティロモン: トーピードアタック */
-    { DM_SPECIES_TYLOMON, DM_MOVE_1426, 2 }, /* ティロモン: オーシャンストライク */
-    { DM_SPECIES_DIGMON, DM_MOVE_1427, 1 }, /* ディグモン: ビッグクラック */
-    { DM_SPECIES_DIGMON, DM_MOVE_1428, 2 }, /* ディグモン: ゴールドラッシュ */
-    { DM_SPECIES_SEPIKMON, DM_MOVE_1429, 1 }, /* セピックモン: スピリットブーメラン */
-    { DM_SPECIES_SETHMON, DM_MOVE_1430, 1 }, /* セトモン: ヒートストーム */
-    { DM_SPECIES_SETHMON, DM_MOVE_1431, 2 }, /* セトモン: タスクドライバー */
-    { DM_SPECIES_SWANMON, DM_MOVE_1432, 1 }, /* スワンモン: ダウントーネ－ド */
-    { DM_SPECIES_STEGOMON, DM_MOVE_1433, 1 }, /* ステゴモン: シェルニードルレイン */
-    { DM_SPECIES_SHURIMON, DM_MOVE_1434, 1 }, /* シュリモン: 紅葉おろし */
-    { DM_SPECIES_SHURIMON, DM_MOVE_1435, 2 }, /* シュリモン: 草薙 */
-    { DM_SPECIES_SHADRAMON, DM_MOVE_1436, 1 }, /* シェイドラモン: フレアバスター */
-    { DM_SPECIES_SEAHOMON, DM_MOVE_1437, 1 }, /* シーホモン: プリズムレインボー */
-    { DM_SPECIES_SHEEPMON, DM_MOVE_1438, 1 }, /* シープモン: ウールグレネード */
-    { DM_SPECIES_THUNDERBIRMON, DM_MOVE_1439, 1 }, /* サンダーバーモン: スパークウィング */
-    { DM_SPECIES_THUNDERBIRMON, DM_MOVE_1440, 2 }, /* サンダーバーモン: サンダーストーム */
-    { DM_SPECIES_SALAMANDAMON, DM_MOVE_1441, 1 }, /* サラマンダモン: ヒートブレス */
-    { DM_SPECIES_SALAMANDAMON, DM_MOVE_1442, 2 }, /* サラマンダモン: バックドラフト */
-    { DM_SPECIES_SABMARIMON, DM_MOVE_1443, 1 }, /* サブマリモン: オキシジェンホーミング */
-    { DM_SPECIES_SABMARIMON, DM_MOVE_1444, 2 }, /* サブマリモン: サブマリンアタック */
-    { DM_SPECIES_SAGITTARIMON, DM_MOVE_1445, 1 }, /* サジタリモン: ジャッジメントアロー */
-    { DM_SPECIES_SEARCHMON, DM_MOVE_1446, 1 }, /* サーチモン: ジャミングヘルツ */
-    { DM_SPECIES_KONGOUMON, DM_MOVE_1447, 1 }, /* コンゴウモン: 鉄砲（テッポウ） */
-    { DM_SPECIES_GOLDV_DRAMON, DM_MOVE_1448, 1 }, /* ゴールドブイドラモン: ブイブレスアロー */
-    { DM_SPECIES_GOATMON, DM_MOVE_1449, 1 }, /* ゴートモン: ミスティックベル */
-    { DM_SPECIES_KENKIMON, DM_MOVE_1450, 1 }, /* ケンキモン: クレイジークレーン */
-    { DM_SPECIES_QUETZALMON, DM_MOVE_1451, 1 }, /* クアトルモン: フリーズウェーブ */
-    { DM_SPECIES_KANGARUMON, DM_MOVE_1452, 1 }, /* カンガルモン: ジャンピングブロー */
-    { DM_SPECIES_CHAMELEMON, DM_MOVE_1453, 1 }, /* カメレモン: タングウィップ */
-    { DM_SPECIES_KABUKIMON, DM_MOVE_1454, 1 }, /* カブキモン: 桜吹雪 */
-    { DM_SPECIES_KABUKIMON, DM_MOVE_1455, 2 }, /* カブキモン: 連獅子 */
-    { DM_SPECIES_GARGOMON, DM_MOVE_1456, 1 }, /* ガーゴモン: ホワイトスタチュー */
-    { DM_SPECIES_ORCAMON, DM_MOVE_1457, 1 }, /* オルカモン: バサロクラッシュ */
-    { DM_SPECIES_OPOSSUMMON, DM_MOVE_1458, 1 }, /* オポッサモン: マッドバルーンボム */
-    { DM_SPECIES_ELEPHAMON, DM_MOVE_1459, 1 }, /* エレファモン: ニトロタービンウェーブ */
-    { DM_SPECIES_ALLOMON, DM_MOVE_0896, 1 }, /* アロモン: ディノバースト */
-    { DM_SPECIES_ARCHELOMON, DM_MOVE_1460, 1 }, /* アーケロモン: オーシャンストローム */
-    { DM_SPECIES_OWLMON, DM_MOVE_1461, 1 }, /* アウルモン: ミッドナイトクラッチ */
-    { DM_SPECIES_LORDKNIGHTMON, DM_MOVE_1462, 1 }, /* ロードナイトモン: スパイラルマスカレード */
-    { DM_SPECIES_LORDKNIGHTMON, DM_MOVE_1463, 2 }, /* ロードナイトモン: アージェントフィアー */
-    { DM_SPECIES_LOTUSMON, DM_MOVE_1464, 1 }, /* ロトスモン: サーペントキュア */
-    { DM_SPECIES_LOTUSMON, DM_MOVE_1465, 2 }, /* ロトスモン: サーペントルイン */
-    { DM_SPECIES_LOTUSMON, DM_MOVE_1466, 3 }, /* ロトスモン: セブンズファンタジア */
-    { DM_SPECIES_ROSEMONBURSTMODE, DM_MOVE_1467, 1 }, /* ロゼモン：バーストモード: シャリテ */
-    { DM_SPECIES_ROSEMONBURSTMODE, DM_MOVE_1468, 2 }, /* ロゼモン：バーストモード: アギシャンレーヴル */
-    { DM_SPECIES_ROSEMONBURSTMODE, DM_MOVE_1469, 3 }, /* ロゼモン：バーストモード: ティファレト */
-    { DM_SPECIES_ROSEMON, DM_MOVE_0920, 1 }, /* ロゼモン: ソーンウィップ */
-    { DM_SPECIES_ROSEMON, DM_MOVE_1470, 2 }, /* ロゼモン: ローゼスレイピア */
-    { DM_SPECIES_ROSEMON, DM_MOVE_1471, 3 }, /* ロゼモン: フォービドゥンテンプテイション */
-    { DM_SPECIES_RAVMONBURSTMODE, DM_MOVE_1472, 1 }, /* レイヴモン：バーストモード: 無双天翔翼之陣（むそうてんしょうよくのじん） */
-    { DM_SPECIES_RAVMONBURSTMODE, DM_MOVE_1473, 2 }, /* レイヴモン：バーストモード: 怒涛闇供喪之舞（どとうやみくものまい） */
-    { DM_SPECIES_RAVMONBURSTMODE, DM_MOVE_1474, 3 }, /* レイヴモン：バーストモード: 雷光一閃之突（らいこういっせんのつき） */
-    { DM_SPECIES_RAVMON, DM_MOVE_1475, 1 }, /* レイヴモン: スパイラルレイヴンクロウ */
-    { DM_SPECIES_RAVMON, DM_MOVE_1476, 2 }, /* レイヴモン: ブラストウィング */
-    { DM_SPECIES_RAVMON, DM_MOVE_1477, 3 }, /* レイヴモン: 烏王丸（ちょうおうまる） */
-    { DM_SPECIES_LUCEMONSATANMODE, DM_MOVE_0945, 1 }, /* ルーチェモン：サタンモード: パーガトリアルフレイム */
-    { DM_SPECIES_LUCEMONSATANMODE, DM_MOVE_1478, 2 }, /* ルーチェモン：サタンモード: ディバインアトーンメント */
-    { DM_SPECIES_LILITHMON, DM_MOVE_0948, 1 }, /* リリスモン: ファントムペイン */
-    { DM_SPECIES_LEVIAMON, DM_MOVE_1479, 1 }, /* リヴァイアモン: ロストルム */
-    { DM_SPECIES_LEVIAMON, DM_MOVE_1480, 2 }, /* リヴァイアモン: カウダ */
-    { DM_SPECIES_LAMPMON, DM_MOVE_1481, 1 }, /* ランプモン: ファントムターバン */
-    { DM_SPECIES_RUSTTYRANOMON, DM_MOVE_1482, 1 }, /* ラストティラノモン: テラーズクラスター */
-    { DM_SPECIES_RUSTTYRANOMON, DM_MOVE_1483, 2 }, /* ラストティラノモン: ラストブレス */
-    { DM_SPECIES_RASIELMON, DM_MOVE_1484, 1 }, /* ラジエルモン: ノウレッジストリーム */
-    { DM_SPECIES_RASIELMON, DM_MOVE_1485, 2 }, /* ラジエルモン: セファーラジエール */
-    { DM_SPECIES_JUPITERMON, DM_MOVE_1486, 1 }, /* ユピテルモン: マボルト */
-    { DM_SPECIES_JUPITERMON, DM_MOVE_1487, 2 }, /* ユピテルモン: パニッシュジャッジ */
-    { DM_SPECIES_JUPITERMON, DM_MOVE_1488, 3 }, /* ユピテルモン: ワイドプラズメント */
-    { DM_SPECIES_MERCURYMON, DM_MOVE_1489, 1 }, /* メルクリモン: サウザンドフィスト */
-    { DM_SPECIES_MERCURYMON, DM_MOVE_1490, 2 }, /* メルクリモン: スピリチャルエンチャント */
-    { DM_SPECIES_MEDIEVALDUKEMON, DM_MOVE_1491, 1 }, /* メディーバルデュークモン: レイジ・オブ・ワイバーン */
-    { DM_SPECIES_MEDIEVALDUKEMON, DM_MOVE_1492, 2 }, /* メディーバルデュークモン: ファイナル・クレスト */
-    { DM_SPECIES_METALPIRANIMON, DM_MOVE_1493, 1 }, /* メタルピラニモン: ３Dレイザー */
-    { DM_SPECIES_METALPIRANIMON, DM_MOVE_1494, 2 }, /* メタルピラニモン: マックスパワーバイス */
-    { DM_SPECIES_METALSEADRAMON, DM_MOVE_1495, 1 }, /* メタルシードラモン: アルティメットストリーム */
-    { DM_SPECIES_METALGARURUMON, DM_MOVE_0979, 1 }, /* メタルガルルモン: コキュートスブレス */
-    { DM_SPECIES_METALGARURUMON, DM_MOVE_0980, 2 }, /* メタルガルルモン: ガルルトマホーク */
-    { DM_SPECIES_METALGARURUMON, DM_MOVE_0981, 3 }, /* メタルガルルモン: グレイスクロスフリーザー */
-    { DM_SPECIES_METALETEMON, DM_MOVE_1496, 1 }, /* メタルエテモン: バナナスリップ */
-    { DM_SPECIES_MEGIDRAMON, DM_MOVE_0995, 1 }, /* メギドラモン: ヘル・ハウリング */
-    { DM_SPECIES_MEGIDRAMON, DM_MOVE_0996, 2 }, /* メギドラモン: メギドフレイム */
-    { DM_SPECIES_MOONMILLENNIUMON, DM_MOVE_1497, 1 }, /* ムーンミレニアモン: デス・クリスタル */
-    { DM_SPECIES_MURMUKUSMON, DM_MOVE_1498, 1 }, /* ムルムクスモン: ゲヘナ・フレイム */
-    { DM_SPECIES_MUGENDRAMON, DM_MOVE_1499, 1 }, /* ムゲンドラモン: ∞（ムゲン）キャノン */
-    { DM_SPECIES_MILLENNIUMON, DM_MOVE_1500, 1 }, /* ミレニアモン: タイムアンリミテッド */
-    { DM_SPECIES_MIRAGEGAOGAMON_BURSTMODE, DM_MOVE_1501, 1 }, /* ミラージュガオガモン：バーストモード: フルムーンメテオインパクト */
-    { DM_SPECIES_MIRAGEGAOGAMON_BURSTMODE, DM_MOVE_1502, 2 }, /* ミラージュガオガモン：バーストモード: ファイナルミラージュバースト */
-    { DM_SPECIES_MIRAGEGAOGAMON_BURSTMODE, DM_MOVE_1503, 3 }, /* ミラージュガオガモン：バーストモード: ルナハーケンスラッシャー */
-    { DM_SPECIES_MIRAGEGAOGAMON, DM_MOVE_1504, 1 }, /* ミラージュガオガモン: ダブルクレセントミラージュ */
-    { DM_SPECIES_MIRAGEGAOGAMON, DM_MOVE_1505, 2 }, /* ミラージュガオガモン: フルムーンブラスター */
-    { DM_SPECIES_MIRAGEGAOGAMON, DM_MOVE_1506, 3 }, /* ミラージュガオガモン: ゲイルクロー */
-    { DM_SPECIES_MINERVAMON, DM_MOVE_1507, 1 }, /* ミネルヴァモン: ストライクロール */
-    { DM_SPECIES_MINERVAMON, DM_MOVE_1508, 2 }, /* ミネルヴァモン: マッドネスメリーゴーランド */
-    { DM_SPECIES_MARSMON, DM_MOVE_1509, 1 }, /* マルスモン: コロナサンクションズ */
-    { DM_SPECIES_MARINANGEMON, DM_MOVE_1510, 1 }, /* マリンエンジェモン: オーシャンラブ */
-    { DM_SPECIES_MAGNAKIDMON, DM_MOVE_1511, 1 }, /* マグナキッドモン: バインドレッドトリッガー */
-    { DM_SPECIES_MAGNAKIDMON, DM_MOVE_1512, 2 }, /* マグナキッドモン: ハッピーバレットシャワリング */
-    { DM_SPECIES_MAGNAKIDMON, DM_MOVE_1513, 3 }, /* マグナキッドモン: ケイオストライアングラー */
-    { DM_SPECIES_BOLTMON, DM_MOVE_1514, 1 }, /* ボルトモン: トマホークシュタイナー */
-    { DM_SPECIES_HOLYDRAMON, DM_MOVE_0851, 1 }, /* ホーリードラモン: ホーリーフレイム */
-    { DM_SPECIES_HOUOUMON, DM_MOVE_0826, 1 }, /* ホウオウモン: スターライトエクスプロージョン */
-    { DM_SPECIES_BELPHEMONRAGEMODE, DM_MOVE_0953, 1 }, /* ベルフェモン：レイジモード: ランプランツス */
-    { DM_SPECIES_BELPHEMONRAGEMODE, DM_MOVE_0954, 2 }, /* ベルフェモン：レイジモード: ギフトオブダークネス */
-    { DM_SPECIES_BELPHEMONSLEEPMODE, DM_MOVE_1515, 1 }, /* ベルフェモン：スリープモード: エターナルナイトメア */
-    { DM_SPECIES_BELPHEMONSLEEPMODE, DM_MOVE_0953, 2 }, /* ベルフェモン：スリープモード: ランプランツス */
-    { DM_SPECIES_BEELZEBUMONBLASTMODE, DM_MOVE_1516, 1 }, /* ベルゼブモン：ブラストモード: デススリンガー */
-    { DM_SPECIES_BEELZEBUMONBLASTMODE, DM_MOVE_1254, 2 }, /* ベルゼブモン：ブラストモード: カオスフレア */
-    { DM_SPECIES_BEELZEBUMON, DM_MOVE_1003, 1 }, /* ベルゼブモン: ダークネスクロウ */
-    { DM_SPECIES_BEELZEBUMON, DM_MOVE_1004, 2 }, /* ベルゼブモン: ダブルインパクト */
-    { DM_SPECIES_BEELSTARMON, DM_MOVE_1517, 1 }, /* ベルスターモン: フライバレット */
-    { DM_SPECIES_BEELSTARMON, DM_MOVE_1015, 2 }, /* ベルスターモン: ダブルクロウ */
-    { DM_SPECIES_BEELSTARMON, DM_MOVE_1518, 3 }, /* ベルスターモン: ハリケーンビスショット */
-    { DM_SPECIES_BELIALVAMDEMON, DM_MOVE_1519, 1 }, /* ベリアルヴァンデモン: パンデモニウムフレイム */
-    { DM_SPECIES_HERAKLEKABUTERIMON, DM_MOVE_0538, 1 }, /* ヘラクルカブテリモン: ギガブラスター */
-    { DM_SPECIES_PLESIOMON, DM_MOVE_0853, 1 }, /* プレシオモン: ソローブルー */
-    { DM_SPECIES_BREAKDRAMON, DM_MOVE_1520, 1 }, /* ブレイクドラモン: デストロイドラッシュ */
-    { DM_SPECIES_BREAKDRAMON, DM_MOVE_1521, 2 }, /* ブレイクドラモン: インフィニティボーリング */
-    { DM_SPECIES_BREAKDRAMON, DM_MOVE_1522, 3 }, /* ブレイクドラモン: グラビティプレス */
-    { DM_SPECIES_PRINCEMAMEMON, DM_MOVE_0922, 1 }, /* プリンスマメモン: スマイリーウォーヘッド */
-    { DM_SPECIES_BLITZGREYMON, DM_MOVE_1523, 1 }, /* ブリッツグレイモン: プラズマステーク */
-    { DM_SPECIES_BLITZGREYMON, DM_MOVE_1524, 2 }, /* ブリッツグレイモン: サンダーバーニア */
-    { DM_SPECIES_BLITZGREYMON, DM_MOVE_1525, 3 }, /* ブリッツグレイモン: エレックガード */
-    { DM_SPECIES_BLACKSAINTGALGOMON, DM_MOVE_1526, 1 }, /* ブラックセントガルゴモン: ジャイアントミサイル */
-    { DM_SPECIES_BLACKSAINTGALGOMON, DM_MOVE_1527, 2 }, /* ブラックセントガルゴモン: バーストショット */
-    { DM_SPECIES_BLACKWARGREYMON, DM_MOVE_0900, 1 }, /* ブラックウォーグレイモン: 暗黒のガイアフォース */
-    { DM_SPECIES_PLATINUMNUMEMON, DM_MOVE_1528, 1 }, /* プラチナヌメモン: エクスクレメント */
-    { DM_SPECIES_PLATINUMNUMEMON, DM_MOVE_1529, 2 }, /* プラチナヌメモン: プラチナエクスクレメント */
-    { DM_SPECIES_PLATINUMNUMEMON, DM_MOVE_1530, 3 }, /* プラチナヌメモン: プラチナバープ */
-    { DM_SPECIES_PUKUMON, DM_MOVE_1531, 1 }, /* プクモン: ニードルスコール */
-    { DM_SPECIES_FUJINMON, DM_MOVE_1532, 1 }, /* フウジンモン: マルトサイクロン */
-    { DM_SPECIES_FUJINMON, DM_MOVE_1533, 2 }, /* フウジンモン: クリティカルアーム */
-    { DM_SPECIES_HUANGLONGMON, DM_MOVE_1534, 1 }, /* ファンロンモン: 太極（たいきょく） */
-    { DM_SPECIES_HUANGLONGMON, DM_MOVE_1535, 2 }, /* ファンロンモン: 黄廻（おうかい） */
-    { DM_SPECIES_PHARAOHMON, DM_MOVE_1536, 1 }, /* ファラオモン: ネクロミスト */
-    { DM_SPECIES_PINOCHIMON, DM_MOVE_1537, 1 }, /* ピノッキモン: ブリットハンマー */
-    { DM_SPECIES_VICTORYGREYMON, DM_MOVE_1538, 1 }, /* ビクトリーグレイモン: ドラモンブレイカー */
-    { DM_SPECIES_VICTORYGREYMON, DM_MOVE_1539, 2 }, /* ビクトリーグレイモン: トライデントガイア */
-    { DM_SPECIES_VICTORYGREYMON, DM_MOVE_1540, 3 }, /* ビクトリーグレイモン: ビクトリーチャージ */
-    { DM_SPECIES_PIEMON, DM_MOVE_1541, 1 }, /* ピエモン: トランプ・ソード */
-    { DM_SPECIES_BANCHOLEOMON, DM_MOVE_1542, 1 }, /* バンチョーレオモン: 獅子羅王漸（ししらおうざん） */
-    { DM_SPECIES_BANCHOLEOMON, DM_MOVE_1543, 2 }, /* バンチョーレオモン: フラッシュバンチョーパンチ */
-    { DM_SPECIES_BANCHOMAMEMON, DM_MOVE_1544, 1 }, /* バンチョーマメモン: 護王流伝羅守（ごーるでんらっしゅ） */
-    { DM_SPECIES_BANCHOMAMEMON, DM_MOVE_1545, 2 }, /* バンチョーマメモン: 千本爆砕（せんぼんどっかーん） */
-    { DM_SPECIES_BANCHOMAMEMON, DM_MOVE_1546, 3 }, /* バンチョーマメモン: 特攻漢弾（ぶっこみおとこだま） */
-    { DM_SPECIES_BANCHOSTINGMON, DM_MOVE_1547, 1 }, /* バンチョースティングモン: ブラッディーフィニッシュ */
-    { DM_SPECIES_BANCHOSTINGMON, DM_MOVE_1548, 2 }, /* バンチョースティングモン: 爆雷天 */
-    { DM_SPECIES_BANCHOSTINGMON, DM_MOVE_1549, 3 }, /* バンチョースティングモン: レッドバット */
-    { DM_SPECIES_BARBAMON, DM_MOVE_0956, 1 }, /* バルバモン: デスルアー */
-    { DM_SPECIES_BARBAMON, DM_MOVE_0957, 2 }, /* バルバモン: パンデモニウムロスト */
-    { DM_SPECIES_PARASIMON, DM_MOVE_1550, 1 }, /* パラサイモン: エレクトリックバインド */
-    { DM_SPECIES_BABAMON, DM_MOVE_1551, 1 }, /* ババモン: エンブレスヘイズ */
-    { DM_SPECIES_BAIHUMON, DM_MOVE_1552, 1 }, /* バイフーモン: 金剛（こんごう） */
-    { DM_SPECIES_HIANDROMON, DM_MOVE_1553, 1 }, /* ハイアンドロモン: アトミック・レイ */
-    { DM_SPECIES_NEPTUNEMON, DM_MOVE_1554, 1 }, /* ネプトゥーンモン: ボルテックスペネトレート */
-    { DM_SPECIES_NEPTUNEMON, DM_MOVE_1555, 2 }, /* ネプトゥーンモン: ウェーブオブデプス */
-    { DM_SPECIES_DORUGORAMON, DM_MOVE_1556, 1 }, /* ドルゴラモン: ブレイブメタル */
-    { DM_SPECIES_DORUGORAMON, DM_MOVE_1557, 2 }, /* ドルゴラモン: ドルディーン */
-    { DM_SPECIES_DUFTMONLEOPARDMODE, DM_MOVE_1558, 1 }, /* ドゥフトモン：レオパルドモード: ヴォルケンクラッツァー */
-    { DM_SPECIES_DUFTMONLEOPARDMODE, DM_MOVE_1559, 2 }, /* ドゥフトモン：レオパルドモード: ブロッカーデ */
-    { DM_SPECIES_DUFTMONLEOPARDMODE, DM_MOVE_1352, 3 }, /* ドゥフトモン：レオパルドモード: エアオーベルング */
-    { DM_SPECIES_DUFTMON, DM_MOVE_0848, 1 }, /* ドゥフトモン: アウススターベン */
-    { DM_SPECIES_DUFTMON, DM_MOVE_1560, 2 }, /* ドゥフトモン: エルンストウェル */
-    { DM_SPECIES_DURANDAMON, DM_MOVE_1561, 1 }, /* デュランダモン: ツヴァングレンツェ */
-    { DM_SPECIES_DURANDAMON, DM_MOVE_1562, 2 }, /* デュランダモン: トロンメッサー */
-    { DM_SPECIES_DYNASMON, DM_MOVE_0845, 1 }, /* デュナスモン: ドラゴンズロア */
-    { DM_SPECIES_DYNASMON, DM_MOVE_0846, 2 }, /* デュナスモン: ブレス・オブ・ワイバーン */
-    { DM_SPECIES_DUKEMONCRIMSONMODE, DM_MOVE_1563, 1 }, /* デュークモン：クリムゾンモード: インビンシブルソード（無敵剣） */
-    { DM_SPECIES_DUKEMONCRIMSONMODE, DM_MOVE_1564, 2 }, /* デュークモン：クリムゾンモード: クォ・ヴァディス */
-    { DM_SPECIES_DUKEMON, DM_MOVE_1565, 1 }, /* デュークモン: ロイヤルセーバー */
-    { DM_SPECIES_DUKEMON, DM_MOVE_1019, 2 }, /* デュークモン: ファイナル・エリシオン */
-    { DM_SPECIES_DEVITAMAMON, DM_MOVE_1566, 1 }, /* デビタマモン: ブラックデスクラウド */
-    { DM_SPECIES_DEATHMON_BLACK, DM_MOVE_1567, 1 }, /* デスモン（黒）: デスアロー */
-    { DM_SPECIES_DEATHMON_BLACK, DM_MOVE_1568, 2 }, /* デスモン（黒）: エクスプロージョンアイ */
-    { DM_SPECIES_DEATHMON, DM_MOVE_1567, 1 }, /* デスモン: デスアロー */
-    { DM_SPECIES_DEATHMON, DM_MOVE_1568, 2 }, /* デスモン: エクスプロージョンアイ */
-    { DM_SPECIES_DEMON, DM_MOVE_0959, 1 }, /* デーモン: フレイムインフェルノ */
-    { DM_SPECIES_DEATH_X_DORUGORAMON, DM_MOVE_1569, 1 }, /* デクスドルゴラモン: メタルインパルス */
-    { DM_SPECIES_DEATH_X_DORUGORAMON, DM_MOVE_1557, 2 }, /* デクスドルゴラモン: ドルディーン */
-    { DM_SPECIES_DINOREXMON, DM_MOVE_1570, 1 }, /* ディノレクスモン: スプラッターハンティング */
-    { DM_SPECIES_DINOREXMON, DM_MOVE_1571, 2 }, /* ディノレクスモン: オーガフレイム */
-    { DM_SPECIES_DINOTIGERMON, DM_MOVE_1572, 1 }, /* ディノタイガモン: グラウンドファング */
-    { DM_SPECIES_DINOTIGERMON, DM_MOVE_1573, 2 }, /* ディノタイガモン: ハイランドファング */
-    { DM_SPECIES_DIABLOMON, DM_MOVE_1574, 1 }, /* ディアボロモン: カタストロフィーカノン */
-    { DM_SPECIES_DIANAMON, DM_MOVE_1575, 1 }, /* ディアナモン: クレセントハーケン */
-    { DM_SPECIES_DIANAMON, DM_MOVE_1576, 2 }, /* ディアナモン: アロー・オブ・アルテミス */
-    { DM_SPECIES_DIANAMON, DM_MOVE_1577, 3 }, /* ディアナモン: グッドナイト・ムーン */
-    { DM_SPECIES_QINGLONGMON, DM_MOVE_1578, 1 }, /* チンロンモン: 蒼雷（そうらい） */
-    { DM_SPECIES_DARKDRAMON, DM_MOVE_1579, 1 }, /* ダークドラモン: ダークロアー */
-    { DM_SPECIES_DARKDRAMON, DM_MOVE_1580, 2 }, /* ダークドラモン: ギガスティックランス */
-    { DM_SPECIES_TYRANTKABUTERIMON, DM_MOVE_1581, 1 }, /* タイラントカブテリモン: シャインオブビー */
-    { DM_SPECIES_TYRANTKABUTERIMON, DM_MOVE_1582, 2 }, /* タイラントカブテリモン: ビーサイクロン */
-    { DM_SPECIES_TITAMON, DM_MOVE_1583, 1 }, /* タイタモン: 魂魄芯撃（こんぱくしんげき） */
-    { DM_SPECIES_TITAMON, DM_MOVE_1584, 2 }, /* タイタモン: 幻刃無痕（げんじんむこん） */
-    { DM_SPECIES_TITAMON, DM_MOVE_1585, 3 }, /* タイタモン: 呼応冥軍（こおうめいぐん） */
-    { DM_SPECIES_TIGERVESPAMON, DM_MOVE_1586, 1 }, /* タイガーヴェスパモン: マッハスティンガーＶ（ビクトリー） */
-    { DM_SPECIES_SAINTGALGOMON, DM_MOVE_1527, 1 }, /* セントガルゴモン: バーストショット */
-    { DM_SPECIES_SAINTGALGOMON, DM_MOVE_1526, 2 }, /* セントガルゴモン: ジャイアントミサイル */
-    { DM_SPECIES_SERAPHIMON, DM_MOVE_1587, 1 }, /* セラフィモン: セブンヘブンズ */
-    { DM_SPECIES_SERAPHIMON, DM_MOVE_0596, 2 }, /* セラフィモン: テスタメント */
-    { DM_SPECIES_SLAYERDRAMON, DM_MOVE_1588, 1 }, /* スレイヤードラモン: 天竜斬破（てんりゅうざんは） */
-    { DM_SPECIES_SLAYERDRAMON, DM_MOVE_1589, 2 }, /* スレイヤードラモン: 昇竜斬波（しょうりゅうざんぱ） */
-    { DM_SPECIES_SLAYERDRAMON, DM_MOVE_1590, 3 }, /* スレイヤードラモン: 咬竜斬刃（こうりゅうざんば） */
-    { DM_SPECIES_SLEIPMON, DM_MOVE_1591, 1 }, /* スレイプモン: ビフロスト */
-    { DM_SPECIES_SLEIPMON, DM_MOVE_1592, 2 }, /* スレイプモン: オーディンズブレス */
-    { DM_SPECIES_SLASHANGEMON, DM_MOVE_1593, 1 }, /* スラッシュエンジェモン: ホーリーエスパーダ */
-    { DM_SPECIES_SLASHANGEMON, DM_MOVE_1594, 2 }, /* スラッシュエンジェモン: ヘブンズリッパー */
-    { DM_SPECIES_SPINOMON, DM_MOVE_1595, 1 }, /* スピノモン: ソニックスラッシュレイン */
-    { DM_SPECIES_SPINOMON, DM_MOVE_1596, 2 }, /* スピノモン: ブループロミネンス */
-    { DM_SPECIES_SUSANOOMON, DM_MOVE_1597, 1 }, /* スサノオモン: 天羽々斬（あまのはばきり） */
-    { DM_SPECIES_SUSANOOMON, DM_MOVE_1598, 2 }, /* スサノオモン: 八雷神（やくさのいかづち） */
-    { DM_SPECIES_SKULLMAMMON, DM_MOVE_0924, 1 }, /* スカルマンモン: スパイラルボーン */
-    { DM_SPECIES_ZHUQIAOMON, DM_MOVE_1599, 1 }, /* スーツェーモン: 紅焔（こうえん） */
-    { DM_SPECIES_SUIJINMON, DM_MOVE_1600, 1 }, /* スイジンモン: ムゲンキャノン */
-    { DM_SPECIES_SUIJINMON, DM_MOVE_1601, 2 }, /* スイジンモン: アクセルアーム */
-    { DM_SPECIES_ZEEDMILLENNIUMON, DM_MOVE_1602, 1 }, /* ズィードミレニアモン: タイムデストロイヤー */
-    { DM_SPECIES_ZDGARURUMON, DM_MOVE_1603, 1 }, /* ズィードガルルモン: ズィード砲 */
-    { DM_SPECIES_ZDGARURUMON, DM_MOVE_1604, 2 }, /* ズィードガルルモン: フルメタルブレイズ */
-    { DM_SPECIES_ZDGARURUMON, DM_MOVE_1605, 3 }, /* ズィードガルルモン: ブローバックブレス */
-    { DM_SPECIES_JUMBOGAMEMON, DM_MOVE_1606, 1 }, /* ジャンボガメモン: メガトンハイドロレーザー */
-    { DM_SPECIES_JUMBOGAMEMON, DM_MOVE_1607, 2 }, /* ジャンボガメモン: ジャンボクレーター */
-    { DM_SPECIES_JUMBOGAMEMON, DM_MOVE_1608, 3 }, /* ジャンボガメモン: ジャンボジェッター */
-    { DM_SPECIES_JUSTIMON, DM_MOVE_0982, 1 }, /* ジャスティモン：アクセルアーム: トリニティーアーム */
-    { DM_SPECIES_JUSTIMON, DM_MOVE_0983, 2 }, /* ジャスティモン：アクセルアーム: ジャスティスキック */
-    { DM_SPECIES_SHAKAMON, DM_MOVE_1609, 1 }, /* シャカモン: 悟遍路掌（さとりへんろしょう） */
-    { DM_SPECIES_SHAKAMON, DM_MOVE_1610, 2 }, /* シャカモン: 霊光蜘蛛之糸（れいこうくものいと） */
-    { DM_SPECIES_SHAKAMON, DM_MOVE_1611, 3 }, /* シャカモン: 怠条真言（たいじょうしんごん） */
-    { DM_SPECIES_SHINEGREYMONBURSTMODE, DM_MOVE_0379, 1 }, /* シャイングレイモン：バーストモード: コロナブレイズソード */
-    { DM_SPECIES_SHINEGREYMONBURSTMODE, DM_MOVE_0380, 2 }, /* シャイングレイモン：バーストモード: ファイナルシャイニングバースト */
-    { DM_SPECIES_SHINEGREYMONBURSTMODE, DM_MOVE_0381, 3 }, /* シャイングレイモン：バーストモード: トリッドヴァイス */
-    { DM_SPECIES_SHINEGREYMON, DM_MOVE_1612, 1 }, /* シャイングレイモン: グロリアスバースト */
-    { DM_SPECIES_SHINEGREYMON, DM_MOVE_1613, 2 }, /* シャイングレイモン: シャイニングブラスト */
-    { DM_SPECIES_SHINEGREYMON, DM_MOVE_1614, 3 }, /* シャイングレイモン: ジオグレイソード */
-    { DM_SPECIES_JIJIMON, DM_MOVE_1615, 1 }, /* ジジモン: ハング・オン・デス */
-    { DM_SPECIES_XUANWUMON, DM_MOVE_1616, 1 }, /* シェンウーモン: 霧幻（むげん） */
-    { DM_SPECIES_JESMON, DM_MOVE_1617, 1 }, /* ジエスモン: 轍剣成敗（てっけんせいばい） */
-    { DM_SPECIES_JESMON, DM_MOVE_1618, 2 }, /* ジエスモン: シュベルトガイスト */
-    { DM_SPECIES_JESMON, DM_MOVE_1619, 3 }, /* ジエスモン: アウスジェネリクス */
-    { DM_SPECIES_ZANBAMON, DM_MOVE_1620, 1 }, /* ザンバモン: 打首獄門 */
-    { DM_SPECIES_ZANBAMON, DM_MOVE_1621, 2 }, /* ザンバモン: 十文字斬り */
-    { DM_SPECIES_SAKUYAMON, DM_MOVE_1622, 1 }, /* サクヤモン: 飯綱（いづな） */
-    { DM_SPECIES_SAKUYAMON, DM_MOVE_0999, 2 }, /* サクヤモン: 金剛界曼荼羅（こんごうかいまんだら） */
-    { DM_SPECIES_SABERLEOMON, DM_MOVE_1623, 1 }, /* サーベルレオモン: ネイルクラッシャー */
-    { DM_SPECIES_GODDRAMON, DM_MOVE_0855, 1 }, /* ゴッドドラモン: ゴッドフレイム */
-    { DM_SPECIES_GOKUMON, DM_MOVE_1624, 1 }, /* ゴクモン: 髑髏乱舞（どくろらんぶ) */
-    { DM_SPECIES_CHERUBIMON_VICE, DM_MOVE_0836, 1 }, /* ケルビモン（悪）: ライトニングスピア */
-    { DM_SPECIES_CHERUBIMON_VICE, DM_MOVE_0837, 2 }, /* ケルビモン（悪）: ヘブンズ・ジャッジメント */
-    { DM_SPECIES_CHERUBIMON, DM_MOVE_0836, 1 }, /* ケルビモン（善）: ライトニングスピア */
-    { DM_SPECIES_CHERUBIMON, DM_MOVE_0837, 2 }, /* ケルビモン（善）: ヘブンズ・ジャッジメント */
-    { DM_SPECIES_CROSSMON, DM_MOVE_1625, 1 }, /* クロスモン: カイザーフェニックス */
-    { DM_SPECIES_CROSSMON, DM_MOVE_1626, 2 }, /* クロスモン: ミスティックブレイク */
-    { DM_SPECIES_CRANIUMMON, DM_MOVE_1627, 1 }, /* クレニアムモン: エンド・ワルツ */
-    { DM_SPECIES_CRANIUMMON, DM_MOVE_1628, 2 }, /* クレニアムモン: ゴッドブレス */
-    { DM_SPECIES_GRACENOVAMON, DM_MOVE_1629, 1 }, /* グレイスノヴァモン: エクリプスフィンガー */
-    { DM_SPECIES_GRACENOVAMON, DM_MOVE_1630, 2 }, /* グレイスノヴァモン: カリュドーンアルクス */
-    { DM_SPECIES_GRIFFOMON, DM_MOVE_1631, 1 }, /* グリフォモン: スーパーソニックボイス */
-    { DM_SPECIES_GRANDLOCOMON, DM_MOVE_1632, 1 }, /* グランドロコモン: デストロイドクラッシュ */
-    { DM_SPECIES_GRANDDRACUMON, DM_MOVE_1633, 1 }, /* グランドラクモン: クリスタルレボリューション */
-    { DM_SPECIES_GRANDDRACUMON, DM_MOVE_1634, 2 }, /* グランドラクモン: アイオブザゴーゴン */
-    { DM_SPECIES_GRANDISKUWAGAMON, DM_MOVE_1635, 1 }, /* グランディスクワガーモン: グランキラー */
-    { DM_SPECIES_GRANDISKUWAGAMON, DM_MOVE_1636, 2 }, /* グランディスクワガーモン: グランディスシザー */
-    { DM_SPECIES_GRANKUWAGAMON, DM_MOVE_1637, 1 }, /* グランクワガーモン: ディメンションシザー */
-    { DM_SPECIES_CLAVISANGEMON, DM_MOVE_1638, 1 }, /* クラヴィスエンジェモン: ザ・キー */
-    { DM_SPECIES_KUZUHAMON, DM_MOVE_0986, 1 }, /* クズハモン: 裏飯綱（うらいづな） */
-    { DM_SPECIES_KUZUHAMON, DM_MOVE_0987, 2 }, /* クズハモン: 胎蔵界曼荼羅（たいぞうかいまんだら） */
-    { DM_SPECIES_QUARTZMON, DM_MOVE_1639, 1 }, /* クオーツモン: ギュプト粒子砲 */
-    { DM_SPECIES_QUARTZMON, DM_MOVE_1640, 2 }, /* クオーツモン: ルーインブラスト(破滅の爆薬) */
-    { DM_SPECIES_CRESGARURUMON, DM_MOVE_1641, 1 }, /* クーレスガルルモン: 黄獣偃月刀（きじゅうえんげつとう） */
-    { DM_SPECIES_CRESGARURUMON, DM_MOVE_1642, 2 }, /* クーレスガルルモン: 獣狼大回転（じゅうろうだいかいてん) */
-    { DM_SPECIES_CRESGARURUMON, DM_MOVE_1643, 3 }, /* クーレスガルルモン: 激・氷月牙（げき ひょうげつが） */
-    { DM_SPECIES_QUEENCHESSMON, DM_MOVE_1644, 1 }, /* クイーンチェスモン: ハートブレイカー */
-    { DM_SPECIES_QUEENCHESSMON, DM_MOVE_1645, 2 }, /* クイーンチェスモン: クィーンスタンプ */
-    { DM_SPECIES_QUEENCHESSMON, DM_MOVE_1646, 3 }, /* クイーンチェスモン: クィーンスティック */
-    { DM_SPECIES_KINGCHESSMON, DM_MOVE_1647, 1 }, /* キングチェスモン: チェックメイト */
-    { DM_SPECIES_KINGCHESSMON, DM_MOVE_1648, 2 }, /* キングチェスモン: キングスティック */
-    { DM_SPECIES_KINGCHESSMON, DM_MOVE_1649, 3 }, /* キングチェスモン: キングダッシュ */
-    { DM_SPECIES_KINGETEMON, DM_MOVE_1650, 1 }, /* キングエテモン: サルしばい */
-    { DM_SPECIES_CANNONDRAMON, DM_MOVE_1651, 1 }, /* キャノンドラモン: ダイナ・キャノン */
-    { DM_SPECIES_CANNONDRAMON, DM_MOVE_1652, 2 }, /* キャノンドラモン: グレネードストーム */
-    { DM_SPECIES_GIGASEADRAMON, DM_MOVE_1653, 1 }, /* ギガシードラモン: ギガシーデストロイヤー */
-    { DM_SPECIES_GIGASEADRAMON, DM_MOVE_1654, 2 }, /* ギガシードラモン: スカイウェーブ */
-    { DM_SPECIES_GANKOOMON, DM_MOVE_1655, 1 }, /* ガンクゥモン: 鉄拳制裁 */
-    { DM_SPECIES_GANKOOMON, DM_MOVE_1656, 2 }, /* ガンクゥモン: 地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！） */
-    { DM_SPECIES_GANKOOMON, DM_MOVE_1657, 3 }, /* ガンクゥモン: ちゃぶ台返し */
-    { DM_SPECIES_GULFMON, DM_MOVE_1658, 1 }, /* ガルフモン: ブラックレクイエム */
-    { DM_SPECIES_GULFMON, DM_MOVE_1659, 2 }, /* ガルフモン: デッドスクリーム */
-    { DM_SPECIES_CHAOSMONVALDURARM, DM_MOVE_1660, 1 }, /* カオスモン：ヴァロドゥルアーム: 覇王両断剣 */
-    { DM_SPECIES_CHAOSMONVALDURARM, DM_MOVE_1661, 2 }, /* カオスモン：ヴァロドゥルアーム: オーロラブラスター */
-    { DM_SPECIES_CHAOSMON, DM_MOVE_1660, 1 }, /* カオスモン: 覇王両断剣 */
-    { DM_SPECIES_CHAOSMON, DM_MOVE_1662, 2 }, /* カオスモン: ダークプロミネンス */
-    { DM_SPECIES_CHAOSDRAMON_X, DM_MOVE_1663, 1 }, /* カオスドラモン（X抗体）: ハイパームゲンキャノン */
-    { DM_SPECIES_CHAOSDRAMON_X, DM_MOVE_1664, 2 }, /* カオスドラモン（X抗体）: カオスクラッシャー */
-    { DM_SPECIES_CHAOSDRAMON_X, DM_MOVE_1665, 3 }, /* カオスドラモン（X抗体）: スーパージェノサイドアタック */
-    { DM_SPECIES_CHAOSDRAMON, DM_MOVE_1663, 1 }, /* カオスドラモン: ハイパームゲンキャノン */
-    { DM_SPECIES_CHAOSDUKEMON, DM_MOVE_1666, 1 }, /* カオスデュークモン: デモンズディザスター */
-    { DM_SPECIES_CHAOSDUKEMON, DM_MOVE_1667, 2 }, /* カオスデュークモン: ジュデッカプリズン */
-    { DM_SPECIES_GAIOUMON, DM_MOVE_1668, 1 }, /* ガイオウモン: 燐火斬（りんかざん） */
-    { DM_SPECIES_GAIOUMON, DM_MOVE_1669, 2 }, /* ガイオウモン: ガイアリアクター */
-    { DM_SPECIES_GAIOUMON, DM_MOVE_1670, 3 }, /* ガイオウモン: 燐火撃（りんかげき） */
-    { DM_SPECIES_OMEGAMON_ALTER_S, DM_MOVE_1109, 1 }, /* オメガモン Alter-S: ガルルソード */
-    { DM_SPECIES_OMEGAMON_ALTER_S, DM_MOVE_1110, 2 }, /* オメガモン Alter-S: グレイキャノン */
-    { DM_SPECIES_OMEGAMON_X, DM_MOVE_0475, 1 }, /* オメガモン（X抗体）: ガルルキャノン */
-    { DM_SPECIES_OMEGAMON_X, DM_MOVE_0476, 2 }, /* オメガモン（X抗体）: グレイソード */
-    { DM_SPECIES_OMEGAMON_X, DM_MOVE_1671, 3 }, /* オメガモン（X抗体）: オールデリート */
-    { DM_SPECIES_OMEGAMON, DM_MOVE_0475, 1 }, /* オメガモン: ガルルキャノン */
-    { DM_SPECIES_OMEGAMON, DM_MOVE_0476, 2 }, /* オメガモン: グレイソード */
-    { DM_SPECIES_OFANIMONFALLDOWNMODE, DM_MOVE_0967, 1 }, /* オファニモン：フォールダウンモード: フレイムヘルサイズ */
-    { DM_SPECIES_OFANIMONFALLDOWNMODE, DM_MOVE_0966, 2 }, /* オファニモン：フォールダウンモード: デモンズクリスタル */
-    { DM_SPECIES_OFANIMON, DM_MOVE_1672, 1 }, /* オファニモン: エデンズジャベリン */
-    { DM_SPECIES_OFANIMON, DM_MOVE_1673, 2 }, /* オファニモン: セフィロートクリスタル */
-    { DM_SPECIES_ORNISMON, DM_MOVE_1674, 1 }, /* オニスモン: コズミックレイ */
-    { DM_SPECIES_OGUDOMON, DM_MOVE_1675, 1 }, /* オグドモン: オーラーティオ・グランディオロクア */
-    { DM_SPECIES_OGUDOMON, DM_MOVE_1676, 2 }, /* オグドモン: カテドラール */
-    { DM_SPECIES_OGUDOMON, DM_MOVE_1677, 3 }, /* オグドモン: グラドゥス */
-    { DM_SPECIES_OURYUMON, DM_MOVE_1678, 1 }, /* オウリュウモン: 永世竜王刃（えいせいりゅうおうじん） */
-    { DM_SPECIES_OURYUMON, DM_MOVE_1679, 2 }, /* オウリュウモン: 黄鎧（おうがい） */
-    { DM_SPECIES_ANCIENTWISETMON, DM_MOVE_1680, 1 }, /* エンシェントワイズモン: ラプラスの魔 */
-    { DM_SPECIES_ANCIENTWISETMON, DM_MOVE_1681, 2 }, /* エンシェントワイズモン: エルダーサイン */
-    { DM_SPECIES_ANCIENTMEGATHERIUMON, DM_MOVE_1682, 1 }, /* エンシェントメガテリウモン: フリージングブリザード */
-    { DM_SPECIES_ANCIENTMEGATHERIUMON, DM_MOVE_1683, 2 }, /* エンシェントメガテリウモン: グレートスノープロー */
-    { DM_SPECIES_ANCIENTMERMAIMON, DM_MOVE_1684, 1 }, /* エンシェントマーメイモン: グレイト・メイルストローム */
-    { DM_SPECIES_ANCIENTMERMAIMON, DM_MOVE_1685, 2 }, /* エンシェントマーメイモン: クリスタルビロー */
-    { DM_SPECIES_ANCIENTVOLCAMON, DM_MOVE_1686, 1 }, /* エンシェントボルケーモン: アトミックボンバー */
-    { DM_SPECIES_ANCIENTVOLCAMON, DM_MOVE_1687, 2 }, /* エンシェントボルケーモン: スーパーノヴァ */
-    { DM_SPECIES_ANCIENTBEATMON, DM_MOVE_1688, 1 }, /* エンシェントビートモン: カラミティサンダー */
-    { DM_SPECIES_ANCIENTBEATMON, DM_MOVE_1689, 2 }, /* エンシェントビートモン: テラブラスター */
-    { DM_SPECIES_ANCIENTTROIAMON, DM_MOVE_1690, 1 }, /* エンシェントトロイアモン: エペイオスギミック */
-    { DM_SPECIES_ANCIENTTROIAMON, DM_MOVE_1691, 2 }, /* エンシェントトロイアモン: サプライズキャノン */
-    { DM_SPECIES_ANCIENTSPHINKMON, DM_MOVE_1692, 1 }, /* エンシェントスフィンクモン: ダークブラスト */
-    { DM_SPECIES_ANCIENTSPHINKMON, DM_MOVE_1693, 2 }, /* エンシェントスフィンクモン: ネクロエクリプス */
-    { DM_SPECIES_ANCIENTGREYMON, DM_MOVE_1694, 1 }, /* エンシェントグレイモン: ガイアトルネード */
-    { DM_SPECIES_ANCIENTGREYMON, DM_MOVE_1695, 2 }, /* エンシェントグレイモン: オメガバースト */
-    { DM_SPECIES_ANCIENTGARURUMON, DM_MOVE_1696, 1 }, /* エンシェントガルルモン: シャープネスクレイモア */
-    { DM_SPECIES_ANCIENTGARURUMON, DM_MOVE_1697, 2 }, /* エンシェントガルルモン: アブソリュート・ゼロ */
-    { DM_SPECIES_ANCIENTIRISMON, DM_MOVE_1698, 1 }, /* エンシェントイリスモン: ストームゲイザー */
-    { DM_SPECIES_ANCIENTIRISMON, DM_MOVE_1699, 2 }, /* エンシェントイリスモン: レインボーシンフォニー */
-    { DM_SPECIES_ELDORADIMON, DM_MOVE_1700, 1 }, /* エルドラディモン: ゴールデンロード */
-    { DM_SPECIES_ELDORADIMON, DM_MOVE_1701, 2 }, /* エルドラディモン: メテオアースクエイク */
-    { DM_SPECIES_ELDORADIMON, DM_MOVE_1702, 3 }, /* エルドラディモン: ジャイアントニッパー */
-    { DM_SPECIES_EXAMON, DM_MOVE_1703, 1 }, /* エグザモン: アヴァロンズゲート */
-    { DM_SPECIES_EXAMON, DM_MOVE_1704, 2 }, /* エグザモン: ペンドラゴンズグローリー */
-    { DM_SPECIES_EXAMON, DM_MOVE_1705, 3 }, /* エグザモン: ドラゴニックインパクト */
-    { DM_SPECIES_VULCANUSMON, DM_MOVE_1706, 1 }, /* ウルカヌスモン: ピンポイントウェポンワークス */
-    { DM_SPECIES_VULCANUSMON, DM_MOVE_1707, 2 }, /* ウルカヌスモン: アプロプリエートワークス */
-    { DM_SPECIES_VULCANUSMON, DM_MOVE_1708, 3 }, /* ウルカヌスモン: ボンバーアート */
-    { DM_SPECIES_WARGREYMON, DM_MOVE_1709, 1 }, /* ウォーグレイモン: ガイアフォース */
-    { DM_SPECIES_WARGREYMON, DM_MOVE_1710, 2 }, /* ウォーグレイモン: ブレイブトルネード */
-    { DM_SPECIES_VENOMVAMDEMON, DM_MOVE_1711, 1 }, /* ヴェノムヴァンデモン: ヴェノムインフューズ */
-    { DM_SPECIES_VENUSMON, DM_MOVE_1712, 1 }, /* ウェヌスモン: ヒーリングセラピー */
-    { DM_SPECIES_VENUSMON, DM_MOVE_1713, 2 }, /* ウェヌスモン: ＬＯＶＥＹＯＵ */
-    { DM_SPECIES_VENUSMON, DM_MOVE_1714, 3 }, /* ウェヌスモン: ピースファンタジア */
-    { DM_SPECIES_VALDURMON, DM_MOVE_1715, 1 }, /* ヴァロドゥルモン: パージシャイン */
-    { DM_SPECIES_VALDURMON, DM_MOVE_1716, 2 }, /* ヴァロドゥルモン: オーロラアンジュレーション */
-    { DM_SPECIES_VALKYRIMON, DM_MOVE_1717, 1 }, /* ヴァルキリモン: フェンリルソード */
-    { DM_SPECIES_VALKYRIMON, DM_MOVE_1718, 2 }, /* ヴァルキリモン: アウルヴァンディルの矢 */
-    { DM_SPECIES_VIKEMON, DM_MOVE_1719, 1 }, /* ヴァイクモン: アークティックブリザード */
-    { DM_SPECIES_VIKEMON, DM_MOVE_1720, 2 }, /* ヴァイクモン: ミョルニル */
-    { DM_SPECIES_EBEMON, DM_MOVE_0873, 1 }, /* イーバモン: ブレインラプチュアー */
-    { DM_SPECIES_EBEMON, DM_MOVE_0874, 2 }, /* イーバモン: プラネットデストロイヤー */
-    { DM_SPECIES_AGEISDRAMON, DM_MOVE_1721, 1 }, /* イージスドラモン: パワーウォーター */
-    { DM_SPECIES_AGEISDRAMON, DM_MOVE_1722, 2 }, /* イージスドラモン: ブレイズパワー */
-    { DM_SPECIES_AGEISDRAMON, DM_MOVE_1723, 3 }, /* イージスドラモン: テラハイドロブレス */
-    { DM_SPECIES_AGEISDRAMON, DM_MOVE_1724, 4 }, /* イージスドラモン: シャインブレイカー */
-    { DM_SPECIES_IMPERIALDRAMONFIGHTERMODE, DM_MOVE_0397, 1 }, /* インペリアルドラモン：ファイターモード: ポジトロンレーザー */
-    { DM_SPECIES_IMPERIALDRAMONFIGHTERMODE, DM_MOVE_0398, 2 }, /* インペリアルドラモン：ファイターモード: ギガデス */
-    { DM_SPECIES_IMPERIALDRAMONPALADINMODE, DM_MOVE_1725, 1 }, /* インペリアルドラモン：パラディンモード: オメガブレード */
-    { DM_SPECIES_IMPERIALDRAMONDRAGONMODE, DM_MOVE_0687, 1 }, /* インペリアルドラモン：ドラゴンモード: メガデス */
-    { DM_SPECIES_YGGDRASILL7D6, DM_MOVE_1726, 1 }, /* イグドラシル＿７Ｄ６: クリスタルの破片 */
-    { DM_SPECIES_YGGDRASILL7D6, DM_MOVE_1727, 2 }, /* イグドラシル＿７Ｄ６: 巨大なクリスタル */
-    { DM_SPECIES_YGGDRASILL7D6, DM_MOVE_1728, 3 }, /* イグドラシル＿７Ｄ６: 自己修復 */
-    { DM_SPECIES_ULFORCEVDRAMON, DM_MOVE_0880, 1 }, /* アルフォースブイドラモン: シャイニングＶフォース */
-    { DM_SPECIES_ALPHAMON_OURYUKEN, DM_MOVE_1729, 1 }, /* アルファモン：王竜剣: 究極戦刃王竜剣 */
-    { DM_SPECIES_ALPHAMON, DM_MOVE_1730, 1 }, /* アルファモン: 聖剣グレイダルファー */
-    { DM_SPECIES_ALPHAMON, DM_MOVE_1731, 2 }, /* アルファモン: デジタライズ・オブ・ソウル */
-    { DM_SPECIES_ULTIMATEBRAKIMON, DM_MOVE_1732, 1 }, /* アルティメットブラキモン: アルティメットブラスト */
-    { DM_SPECIES_ULTIMATEBRAKIMON, DM_MOVE_1733, 2 }, /* アルティメットブラキモン: アルティメットクエイク */
-    { DM_SPECIES_ALGOMON, DM_MOVE_1734, 1 }, /* アルゴモン: テラバイトディザスター */
-    { DM_SPECIES_ALGOMON, DM_MOVE_1735, 2 }, /* アルゴモン: ディストーションライン */
-    { DM_SPECIES_ALGOMON, DM_MOVE_1736, 3 }, /* アルゴモン: ブルートフォース */
-    { DM_SPECIES_APOLLOMON, DM_MOVE_1737, 1 }, /* アポロモン: ソルブラスター */
-    { DM_SPECIES_APOLLOMON, DM_MOVE_1738, 2 }, /* アポロモン: フォイボス・ブロウ */
-    { DM_SPECIES_APOLLOMON, DM_MOVE_1739, 3 }, /* アポロモン: アロー・オブ・アポロ */
-    { DM_SPECIES_APOCLYMON, DM_MOVE_1740, 1 }, /* アポカリモン: 暗黒(ダークネスゾーン) */
-    { DM_SPECIES_ANUBIMON, DM_MOVE_1741, 1 }, /* アヌビモン: ピラミッドパワー */
-    { DM_SPECIES_ANUBIMON, DM_MOVE_1742, 2 }, /* アヌビモン: アメミット */
-    { DM_SPECIES_ARMAGEMON, DM_MOVE_1743, 1 }, /* アーマゲモン: ブラックレイン */
-    { DM_SPECIES_ARMAGEMON, DM_MOVE_0682, 2 }, /* アーマゲモン: アルティメットフレア */
-    { DM_SPECIES_AVENGEKIDMON, DM_MOVE_1744, 1 }, /* アヴェンジキッドモン: ミザリーバレットレイン */
-    { DM_SPECIES_AVENGEKIDMON, DM_MOVE_1745, 2 }, /* アヴェンジキッドモン: デストラクショントリッガー */
-    { DM_SPECIES_WARUMONZAEMON, DM_MOVE_1746, 1 }, /* ワルもんざえモン: ハートブレイクアタック */
-    { DM_SPECIES_WARUSEADRAMON, DM_MOVE_1747, 1 }, /* ワルシードラモン: ダークストローム */
-    { DM_SPECIES_WARUSEADRAMON, DM_MOVE_1748, 2 }, /* ワルシードラモン: イビルアイシクル */
-    { DM_SPECIES_WARUSEADRAMON, DM_MOVE_1749, 3 }, /* ワルシードラモン: ストレンジミスト */
-    { DM_SPECIES_WISEMON, DM_MOVE_1750, 1 }, /* ワイズモン: パンドーラ・ダイアログ */
-    { DM_SPECIES_WISEMON, DM_MOVE_1751, 2 }, /* ワイズモン: エターナル・ニルヴァーナ */
-    { DM_SPECIES_WEREGARRUMON, DM_MOVE_0686, 1 }, /* ワーガルルモン: カイザーネイル */
-    { DM_SPECIES_LOCOMON, DM_MOVE_1752, 1 }, /* ロコモン: スチームボム */
-    { DM_SPECIES_LOCOMON, DM_MOVE_1753, 2 }, /* ロコモン: ホイールグラインダー */
-    { DM_SPECIES_LOADERLEOMON, DM_MOVE_1754, 1 }, /* ローダーレオモン: ボーリンストーム */
-    { DM_SPECIES_LOADERLEOMON, DM_MOVE_1755, 2 }, /* ローダーレオモン: ローダーモーニングスター */
-    { DM_SPECIES_LADYDEVIMON, DM_MOVE_1756, 1 }, /* レディーデビモン: ダークネスウェーブ */
-    { DM_SPECIES_LADYDEVIMON, DM_MOVE_1757, 2 }, /* レディーデビモン: プワゾン */
-    { DM_SPECIES_LUMINAMON, DM_MOVE_1758, 1 }, /* ルミナモン: ライトニングフィール */
-    { DM_SPECIES_LUMINAMON, DM_MOVE_1759, 2 }, /* ルミナモン: ルミナフラッシュ */
-    { DM_SPECIES_RUCEMONFALLDOWNMODE, DM_MOVE_0944, 1 }, /* ルーチェモン：フォールダウンモード: パラダイスロスト */
-    { DM_SPECIES_RUCEMONFALLDOWNMODE, DM_MOVE_1760, 2 }, /* ルーチェモン：フォールダウンモード: デッド・オア・アライブ */
-    { DM_SPECIES_ROOKCHESSMON, DM_MOVE_1761, 1 }, /* ルークチェスモン: ストロングフォールド */
-    { DM_SPECIES_ROOKCHESSMON, DM_MOVE_1762, 2 }, /* ルークチェスモン: ルークガトリング */
-    { DM_SPECIES_ROOKCHESSMON, DM_MOVE_1763, 3 }, /* ルークチェスモン: キャッスルウォール */
-    { DM_SPECIES_LILIMON, DM_MOVE_0998, 1 }, /* リリモン: フラウカノン */
-    { DM_SPECIES_RAPIDMON, DM_MOVE_0471, 1 }, /* ラピッドモン: ラピッドファイア */
-    { DM_SPECIES_RAPIDMON, DM_MOVE_0472, 2 }, /* ラピッドモン: ゴールデントライアングル */
-    { DM_SPECIES_LILAMON, DM_MOVE_1764, 1 }, /* ライラモン: ライラシャワー */
-    { DM_SPECIES_LILAMON, DM_MOVE_1765, 2 }, /* ライラモン: ビューティースラップ */
-    { DM_SPECIES_LILAMON, DM_MOVE_1766, 3 }, /* ライラモン: アン・ドゥ・ポラン */
-    { DM_SPECIES_RIZEGREYMON, DM_MOVE_1767, 1 }, /* ライズグレイモン: トライデントリボルバー */
-    { DM_SPECIES_RIZEGREYMON, DM_MOVE_1768, 2 }, /* ライズグレイモン: ライジングデストロイヤー */
-    { DM_SPECIES_RIZEGREYMON, DM_MOVE_1769, 3 }, /* ライズグレイモン: ソリッドストライク */
-    { DM_SPECIES_YATAGARAMON, DM_MOVE_1063, 1 }, /* ヤタガラモン（2006年アニメ版）: 甕布都神（ミカフツノカミ） */
-    { DM_SPECIES_YATAGARAMON, DM_MOVE_1064, 2 }, /* ヤタガラモン（2006年アニメ版）: 羽黒（ハグロ） */
-    { DM_SPECIES_MONZAEMON, DM_MOVE_1770, 1 }, /* もんざえモン: ラブリーアタック */
-    { DM_SPECIES_MEPHISMON, DM_MOVE_0243, 1 }, /* メフィスモン: ブラックサバス */
-    { DM_SPECIES_MEPHISMON, DM_MOVE_1771, 2 }, /* メフィスモン: デスクラウド */
-    { DM_SPECIES_METALMAMEMON, DM_MOVE_0614, 1 }, /* メタルマメモン: エネルギーボム */
-    { DM_SPECIES_METALFANTOMON, DM_MOVE_1772, 1 }, /* メタルファントモン: ソウルプレデター */
-    { DM_SPECIES_METALFANTOMON, DM_MOVE_1773, 2 }, /* メタルファントモン: グレイブスクリーム */
-    { DM_SPECIES_METALTYRANOMON, DM_MOVE_1037, 1 }, /* メタルティラノモン: ギガデストロイヤーⅡ */
-    { DM_SPECIES_METALTYRANOMON, DM_MOVE_1774, 2 }, /* メタルティラノモン: ヌークリアレーザー */
-    { DM_SPECIES_METALGREYMON_V, DM_MOVE_0697, 1 }, /* メタルグレイモン（ワクチン種）: トライデントアーム */
-    { DM_SPECIES_METALGREYMON_V, DM_MOVE_0611, 2 }, /* メタルグレイモン（ワクチン種）: ギガデストロイヤー */
-    { DM_SPECIES_METALGREYMON_V, DM_MOVE_0698, 3 }, /* メタルグレイモン（ワクチン種）: ジガストーム */
-    { DM_SPECIES_METALGREYMON_WEB, DM_MOVE_0611, 1 }, /* メタルグレイモン（ウィルス種）: ギガデストロイヤー */
-    { DM_SPECIES_METALLIFEKUWAGAMON, DM_MOVE_1775, 1 }, /* メタリフェクワガーモン: ホーミングレーザー */
-    { DM_SPECIES_METALLIFEKUWAGAMON, DM_MOVE_1776, 2 }, /* メタリフェクワガーモン: エミットブレイド */
-    { DM_SPECIES_MEGALOGROWMON, DM_MOVE_0988, 1 }, /* メガログラウモン: ダブルエッジ */
-    { DM_SPECIES_MEGALOGROWMON, DM_MOVE_0989, 2 }, /* メガログラウモン: アトミックブラスター */
-    { DM_SPECIES_MEGADRAMON, DM_MOVE_1777, 1 }, /* メガドラモン: ジェノサイドアタック */
-    { DM_SPECIES_MEGADRAMON, DM_MOVE_1778, 2 }, /* メガドラモン: アルティメットスライサー */
-    { DM_SPECIES_MEGASEADRAMON, DM_MOVE_0171, 1 }, /* メガシードラモン: サンダージャベリン */
-    { DM_SPECIES_MEICRACKMON, DM_MOVE_1779, 1 }, /* メイクラックモン: モデストリィスタン */
-    { DM_SPECIES_MEICRACKMON, DM_MOVE_1082, 2 }, /* メイクラックモン: フェルトメイド */
-    { DM_SPECIES_MIHIRAMON, DM_MOVE_1780, 1 }, /* ミヒラモン: ヴィモーハナ */
-    { DM_SPECIES_MISTYMON, DM_MOVE_1781, 1 }, /* ミスティモン: コアダート */
-    { DM_SPECIES_MISTYMON, DM_MOVE_1782, 2 }, /* ミスティモン: ブラストファイア */
-    { DM_SPECIES_MAMMON, DM_MOVE_0926, 1 }, /* マンモン: タスクストライクス */
-    { DM_SPECIES_MAMMON, DM_MOVE_0927, 2 }, /* マンモン: ツンドラブレス */
-    { DM_SPECIES_MARINDEVIMON, DM_MOVE_1783, 1 }, /* マリンデビモン: ギルティブラック */
-    { DM_SPECIES_MAMETYRAMON, DM_MOVE_1784, 1 }, /* マメティラモン: マメバイト１０００ */
-    { DM_SPECIES_MAMETYRAMON, DM_MOVE_1785, 2 }, /* マメティラモン: メットラリアット */
-    { DM_SPECIES_MAMEMON, DM_MOVE_0871, 1 }, /* マメモン: スマイリーボム */
-    { DM_SPECIES_MUMMYMON, DM_MOVE_1786, 1 }, /* マミーモン: スネークバンデージ */
-    { DM_SPECIES_MUMMYMON, DM_MOVE_1787, 2 }, /* マミーモン: ネクロフォビア */
-    { DM_SPECIES_MACHGAOGAMON, DM_MOVE_1111, 1 }, /* マッハガオガモン: ガオガトルネード */
-    { DM_SPECIES_MACHGAOGAMON, DM_MOVE_1112, 2 }, /* マッハガオガモン: ウィニングナックル */
-    { DM_SPECIES_MACHGAOGAMON, DM_MOVE_1113, 3 }, /* マッハガオガモン: ハウリングキャノン */
-    { DM_SPECIES_MATADRMON, DM_MOVE_1788, 1 }, /* マタドゥルモン: サウザンドアロー */
-    { DM_SPECIES_MATADRMON, DM_MOVE_1789, 2 }, /* マタドゥルモン: 武舞独繰 */
-    { DM_SPECIES_MATADRMON, DM_MOVE_1790, 3 }, /* マタドゥルモン: 蝶絶喇叭蹴（ちょうぜつらっぱしゅう） */
-    { DM_SPECIES_MASTERTYRANOMON, DM_MOVE_1791, 1 }, /* マスターティラノモン: マスターファイアー */
-    { DM_SPECIES_MAJIRAMON, DM_MOVE_1792, 1 }, /* マジラモン: ヴェーダカ */
-    { DM_SPECIES_MAKURAMON, DM_MOVE_1793, 1 }, /* マクラモン: ラウラヴァ */
-    { DM_SPECIES_MERMAIMON, DM_MOVE_1794, 1 }, /* マーメイモン: チャームプランダー */
-    { DM_SPECIES_MERMAIMON, DM_MOVE_1795, 2 }, /* マーメイモン: ノーザンクロスボンバー */
-    { DM_SPECIES_VOLCAMON, DM_MOVE_1796, 1 }, /* ボルケーモン: ビックバン・ボイス */
-    { DM_SPECIES_VOLCAMON, DM_MOVE_1797, 2 }, /* ボルケーモン: ビックバン・タックル */
-    { DM_SPECIES_HOLYANGEMON, DM_MOVE_1798, 1 }, /* ホーリーエンジェモン: ヘブンズゲート */
-    { DM_SPECIES_WHAMON, DM_MOVE_1799, 1 }, /* ホエーモン: タイダルウェーブ */
-    { DM_SPECIES_BETSUMON, DM_MOVE_1800, 1 }, /* ベツモン: つっこみパンチ */
-    { DM_SPECIES_BETSUMON, DM_MOVE_1801, 2 }, /* ベツモン: コールドギャグ */
-    { DM_SPECIES_VADEMON2, DM_MOVE_1802, 1 }, /* ベーダモン（X抗体）: 悪魔のなげキッス */
-    { DM_SPECIES_VADEMON, DM_MOVE_1802, 1 }, /* ベーダモン: 悪魔のなげキッス */
-    { DM_SPECIES_BLOSSOMON, DM_MOVE_1803, 1 }, /* ブロッサモン: スパイラルフラワー */
-    { DM_SPECIES_FLAREMON, DM_MOVE_1804, 1 }, /* フレアモン: 紅蓮獣王波（ぐれんじゅうおうは） */
-    { DM_SPECIES_FLAREMON, DM_MOVE_1805, 2 }, /* フレアモン: 紅・獅子之舞（くれない・ししのまい） */
-    { DM_SPECIES_FLAREMON, DM_MOVE_1806, 3 }, /* フレアモン: 清々之咆哮（せいせいのほうこう） */
-    { DM_SPECIES_BLUEMERAMON, DM_MOVE_1807, 1 }, /* ブルーメラモン: アイスファントム */
-    { DM_SPECIES_BLUEMERAMON, DM_MOVE_1808, 2 }, /* ブルーメラモン: コールドフレイム */
-    { DM_SPECIES_BLACKMEGALOGROWMON, DM_MOVE_0988, 1 }, /* ブラックメガログラウモン: ダブルエッジ */
-    { DM_SPECIES_BLACKMEGALOGROWMON, DM_MOVE_0989, 2 }, /* ブラックメガログラウモン: アトミックブラスター */
-    { DM_SPECIES_PHELESMON, DM_MOVE_1809, 1 }, /* フェレスモン: ブラックスタチュー */
-    { DM_SPECIES_PHELESMON, DM_MOVE_1810, 2 }, /* フェレスモン: デーモンズシャウト */
-    { DM_SPECIES_FANTOMON, DM_MOVE_1811, 1 }, /* ファントモン: ソウルチョッパー */
-    { DM_SPECIES_HIPPOGRIFFOMON, DM_MOVE_1812, 1 }, /* ヒポグリフォモン: ヒートウェーブ */
-    { DM_SPECIES_PICKLEMON, DM_MOVE_1813, 1 }, /* ピッコロモン: ビットボム */
-    { DM_SPECIES_BIGMAMEMON, DM_MOVE_1814, 1 }, /* ビッグマメモン: ビッグスマイリーボマー */
-    { DM_SPECIES_BISHOPCHESSMON, DM_MOVE_1815, 1 }, /* ビショップチェスモン: ビショップレーザー */
-    { DM_SPECIES_BISHOPCHESSMON, DM_MOVE_1816, 2 }, /* ビショップチェスモン: ビショップクロス */
-    { DM_SPECIES_BISHOPCHESSMON, DM_MOVE_1817, 3 }, /* ビショップチェスモン: マジカルスティック */
-    { DM_SPECIES_HISYARYUMON, DM_MOVE_1818, 1 }, /* ヒシャリュウモン: 成龍刃（せいりゅうじん） */
-    { DM_SPECIES_HISYARYUMON, DM_MOVE_1819, 2 }, /* ヒシャリュウモン: 縦横車（じゅうおうぐるま） */
-    { DM_SPECIES_PUMPMON, DM_MOVE_1820, 1 }, /* パンプモン: トリックオアトリート */
-    { DM_SPECIES_PANDAMON, DM_MOVE_1821, 1 }, /* パンダモン: アニマルネイル */
-    { DM_SPECIES_PANJYAMON, DM_MOVE_0612, 1 }, /* パンジャモン: 氷獣拳 */
-    { DM_SPECIES_HANGYOMON, DM_MOVE_1822, 1 }, /* ハンギョモン: ストライクフィッシング */
-    { DM_SPECIES_PARROTMON, DM_MOVE_1823, 1 }, /* パロットモン: ソニックデストロイヤー */
-    { DM_SPECIES_PARROTMON, DM_MOVE_1344, 2 }, /* パロットモン: ミョルニルサンダー */
-    { DM_SPECIES_VALVEMON, DM_MOVE_1824, 1 }, /* バルブモン: マッドポンプ */
-    { DM_SPECIES_VALVEMON, DM_MOVE_1825, 2 }, /* バルブモン: オクタゴンアタック */
-    { DM_SPECIES_BASTEMON, DM_MOVE_1826, 1 }, /* バステモン: ヘルタースケルター */
-    { DM_SPECIES_BASTEMON, DM_MOVE_1827, 2 }, /* バステモン: ヴァンパイアダンス */
-    { DM_SPECIES_PAJIRAMON, DM_MOVE_1828, 1 }, /* パジラモン: ヴァフニジュヴァーラ */
-    { DM_SPECIES_PAILDRAMON, DM_MOVE_1829, 1 }, /* パイルドラモン: エスグリーマ */
-    { DM_SPECIES_PAILDRAMON, DM_MOVE_1830, 2 }, /* パイルドラモン: デスペラードブラスター */
-    { DM_SPECIES_NEODEVIMON, DM_MOVE_1831, 1 }, /* ネオデビモン: ギルティクロウ */
-    { DM_SPECIES_NANOMON, DM_MOVE_1832, 1 }, /* ナノモン: プラグボム */
-    { DM_SPECIES_KNIGHTMON, DM_MOVE_1833, 1 }, /* ナイトモン: ベルセルクソード */
-    { DM_SPECIES_DORUGUREMON, DM_MOVE_1834, 1 }, /* ドルグレモン: メタルメテオ */
-    { DM_SPECIES_DORUGUREMON, DM_MOVE_1835, 2 }, /* ドルグレモン: ブラッディータワー */
-    { DM_SPECIES_TRICERAMON, DM_MOVE_0884, 1 }, /* トリケラモン: トライホーンアタック */
-    { DM_SPECIES_TONOSAMAGEKOMON, DM_MOVE_1836, 1 }, /* トノサマゲコモン: コブシトーン */
-    { DM_SPECIES_DOUMON, DM_MOVE_1837, 1 }, /* ドウモン: 呪禁札（じゅごんさつ） */
-    { DM_SPECIES_DOUMON, DM_MOVE_1838, 2 }, /* ドウモン: 鬼門遁甲（きもんとんこう） */
-    { DM_SPECIES_DELUMON, DM_MOVE_1839, 1 }, /* デラモン: ロイヤルナッツ */
-    { DM_SPECIES_DURAMON, DM_MOVE_1840, 1 }, /* デュラモン: グラスラッシュ */
-    { DM_SPECIES_DURAMON, DM_MOVE_1841, 2 }, /* デュラモン: ブリンデッド */
-    { DM_SPECIES_DEATHMERAMON, DM_MOVE_1842, 1 }, /* デスメラモン: へヴィーメタルファイアー */
-    { DM_SPECIES_DEATHMERAMON, DM_MOVE_1843, 2 }, /* デスメラモン: ヒートチェーン */
-    { DM_SPECIES_DIGITAMAMON, DM_MOVE_1844, 1 }, /* デジタマモン: エニグマ */
-    { DM_SPECIES_DIGITAMAMON, DM_MOVE_1845, 2 }, /* デジタマモン: ナイトメアシンドローム */
-    { DM_SPECIES_DEATH_X_DORUGUREMON, DM_MOVE_1846, 1 }, /* デクスドルグレモン: ブラッディーケイブ */
-    { DM_SPECIES_DEATH_X_DORUGUREMON, DM_MOVE_1834, 2 }, /* デクスドルグレモン: メタルメテオ */
-    { DM_SPECIES_DINOBEEMON, DM_MOVE_1847, 1 }, /* ディノビーモン: ヘルマスカレード */
-    { DM_SPECIES_CHOHAKKAIMON, DM_MOVE_1848, 1 }, /* チョ・ハッカイモン: 強振砲舞乱（きょうしんホームラン） */
-    { DM_SPECIES_CHOHAKKAIMON, DM_MOVE_1849, 2 }, /* チョ・ハッカイモン: 打々々魅飲血（だだだみんち） */
-    { DM_SPECIES_CHOHAKKAIMON, DM_MOVE_1850, 3 }, /* チョ・ハッカイモン: 豚ノ丸焼（ぶたのまるやき） */
-    { DM_SPECIES_CATURAMON, DM_MOVE_1851, 1 }, /* チャツラモン: シュヴァボージャナ */
-    { DM_SPECIES_TYILINMON, DM_MOVE_1852, 1 }, /* チィリンモン: 疾風天翔剣（しっぷうてんしょうけん） */
-    { DM_SPECIES_TYILINMON, DM_MOVE_1853, 2 }, /* チィリンモン: 迅速の心得（じんそくのこころえ） */
-    { DM_SPECIES_TYILINMON, DM_MOVE_1854, 3 }, /* チィリンモン: 改心の波動 */
-    { DM_SPECIES_TANKDRAMON, DM_MOVE_1855, 1 }, /* タンクドラモン: ストライバ－キャノン */
-    { DM_SPECIES_TANKDRAMON, DM_MOVE_1856, 2 }, /* タンクドラモン: ブラストガトリング */
-    { DM_SPECIES_DAGOMON, DM_MOVE_1857, 1 }, /* ダゴモン: フォービドゥントライデント */
-    { DM_SPECIES_TAOMON, DM_MOVE_1858, 1 }, /* タオモン: 梵筆閃（ぼんひつせん） */
-    { DM_SPECIES_DARKSUPERSTARMON, DM_MOVE_1859, 1 }, /* ダークスーパースターモン: ダークイクスプロージョン */
-    { DM_SPECIES_DARKSUPERSTARMON, DM_MOVE_1860, 2 }, /* ダークスーパースターモン: シュバルツネーベル */
-    { DM_SPECIES_DARKSUPERSTARMON, DM_MOVE_1861, 3 }, /* ダークスーパースターモン: ダークホール */
-    { DM_SPECIES_SIRENMON, DM_MOVE_1862, 1 }, /* セイレーンモン: 第一曲≪ポリフォニー≫ */
-    { DM_SPECIES_SIRENMON, DM_MOVE_1863, 2 }, /* セイレーンモン: 第二曲≪アリア≫ */
-    { DM_SPECIES_SIRENMON, DM_MOVE_1864, 3 }, /* セイレーンモン: 第三曲≪カノン≫ */
-    { DM_SPECIES_SAVIORHUCKMON, DM_MOVE_1865, 1 }, /* セイバーハックモン: レッジストレイド */
-    { DM_SPECIES_SAVIORHUCKMON, DM_MOVE_1866, 2 }, /* セイバーハックモン: メテオフレイム */
-    { DM_SPECIES_SAVIORHUCKMON, DM_MOVE_1867, 3 }, /* セイバーハックモン: トライデントセイバー */
-    { DM_SPECIES_ZUDOMON, DM_MOVE_1868, 1 }, /* ズドモン: ハンマースパーク */
-    { DM_SPECIES_SCORPIOMON, DM_MOVE_1869, 1 }, /* スコピオモン: ブラックアウト */
-    { DM_SPECIES_SCORPIOMON, DM_MOVE_1870, 2 }, /* スコピオモン: ポイズンピアス */
-    { DM_SPECIES_SKULLBALUCHIMON, DM_MOVE_1871, 1 }, /* スカルバルキモン: グレイブボーン */
-    { DM_SPECIES_SKULLBALUCHIMON, DM_MOVE_1872, 2 }, /* スカルバルキモン: デッドリーフィアー */
-    { DM_SPECIES_SKULLSATAMON, DM_MOVE_1873, 1 }, /* スカルサタモン: ネイルボーン */
-    { DM_SPECIES_SKULLGREYMON, DM_MOVE_1874, 1 }, /* スカルグレイモン: オブリビオンバード */
-    { DM_SPECIES_SUPERSTARMON, DM_MOVE_1875, 1 }, /* スーパースターモン: ハレースコール */
-    { DM_SPECIES_SINDURAMON, DM_MOVE_1876, 1 }, /* シンドゥーラモン: プーヤヴァーハ */
-    { DM_SPECIES_SILPHYMON, DM_MOVE_1877, 1 }, /* シルフィーモン: トップガン */
-    { DM_SPECIES_SILPHYMON, DM_MOVE_1878, 2 }, /* シルフィーモン: デュアルソニック */
-    { DM_SPECIES_JYUREIMON, DM_MOVE_1879, 1 }, /* ジュレイモン: チェリーボム */
-    { DM_SPECIES_SHAKKOUMON, DM_MOVE_1880, 1 }, /* シャッコウモン: ニギミタマ */
-    { DM_SPECIES_SHAKKOUMON, DM_MOVE_1881, 2 }, /* シャッコウモン: アラミタマ */
-    { DM_SPECIES_JYAGAMON, DM_MOVE_1882, 1 }, /* ジャガモン: スマッシュポテト */
-    { DM_SPECIES_SHAWUJINMON, DM_MOVE_1883, 1 }, /* シャウジンモン: 降妖杖・渦紋の陣（かもんのじん） */
-    { DM_SPECIES_SHAWUJINMON, DM_MOVE_1884, 2 }, /* シャウジンモン: 降妖杖・滝の陣（たきのじん） */
-    { DM_SPECIES_SHAWUJINMON, DM_MOVE_1885, 3 }, /* シャウジンモン: 月牙斬（げつがざん） */
-    { DM_SPECIES_SANDIRAMON, DM_MOVE_1886, 1 }, /* サンティラモン: クリシュナ */
-    { DM_SPECIES_SANZOMON, DM_MOVE_1887, 1 }, /* サンゾモン: 杜子春経（とししゅんきょう） */
-    { DM_SPECIES_SANZOMON, DM_MOVE_1888, 2 }, /* サンゾモン: 胡蝶夢経（こちょうむきょう） */
-    { DM_SPECIES_SANZOMON, DM_MOVE_1889, 3 }, /* サンゾモン: 無限弾幕心経（むげんだんまくしんきょう） */
-    { DM_SPECIES_SAGOMON, DM_MOVE_1890, 1 }, /* サゴモン: 渦紋の陣（かもんのじん） */
-    { DM_SPECIES_SAGOMON, DM_MOVE_1891, 2 }, /* サゴモン: 滝の陣（たきのじん） */
-    { DM_SPECIES_SAGOMON, DM_MOVE_1885, 3 }, /* サゴモン: 月牙斬（げつがざん） */
-    { DM_SPECIES_CYBERDRAMON, DM_MOVE_0823, 1 }, /* サイバードラモン: イレイズクロー */
-    { DM_SPECIES_GOKUWMON, DM_MOVE_1892, 1 }, /* ゴクウモン: 秘技・夢現影（ひぎ・むげんえい） */
-    { DM_SPECIES_GOKUWMON, DM_MOVE_1893, 2 }, /* ゴクウモン: 疾風迅雷撃（しっぷうじんらいげき） */
-    { DM_SPECIES_GOKUWMON, DM_MOVE_1894, 3 }, /* ゴクウモン: 超帯電雷光砲（ちょうたいでんらいこうほう） */
-    { DM_SPECIES_GOKUWMON, DM_MOVE_1895, 4 }, /* ゴクウモン: 觔斗雲（きんとうん） */
-    { DM_SPECIES_CERBERUMON, DM_MOVE_1020, 1 }, /* ケルベロモン: インフェルノゲート */
-    { DM_SPECIES_CERBERUMON, DM_MOVE_1021, 2 }, /* ケルベロモン: ヘルファイアー */
-    { DM_SPECIES_KUMBHIRAMON, DM_MOVE_1896, 1 }, /* クンビラモン: クリミシャ */
-    { DM_SPECIES_CRESCEMON, DM_MOVE_1897, 1 }, /* クレシェモン: ルナティックダンス */
-    { DM_SPECIES_CRESCEMON, DM_MOVE_1898, 2 }, /* クレシェモン: アイスアーチェリー */
-    { DM_SPECIES_CRESCEMON, DM_MOVE_1899, 3 }, /* クレシェモン: ダークアーチェリー */
-    { DM_SPECIES_GRADEMON, DM_MOVE_1900, 1 }, /* グレイドモン: クロスブレード */
-    { DM_SPECIES_GRADEMON, DM_MOVE_1901, 2 }, /* グレイドモン: グレイドスラッシュ */
-    { DM_SPECIES_GRAPPULEOMON, DM_MOVE_1902, 1 }, /* グラップレオモン: 獅子獣波斬 */
-    { DM_SPECIES_GRAPPULEOMON, DM_MOVE_1903, 2 }, /* グラップレオモン: 旋風タービン蹴り */
-    { DM_SPECIES_GROUNDRAMON, DM_MOVE_1904, 1 }, /* グラウンドラモン: スクラップレスクロー */
-    { DM_SPECIES_GROUNDRAMON, DM_MOVE_1905, 2 }, /* グラウンドラモン: メガトンハマークラッシュ */
-    { DM_SPECIES_GROUNDRAMON, DM_MOVE_1906, 3 }, /* グラウンドラモン: ギガクラック */
-    { DM_SPECIES_GIROMON, DM_MOVE_1907, 1 }, /* ギロモン: デッドリーボム */
-    { DM_SPECIES_CAPTAINHOOKMON, DM_MOVE_1908, 1 }, /* キャプテンフックモン: レイジギガアンカー */
-    { DM_SPECIES_CAPTAINHOOKMON, DM_MOVE_1909, 2 }, /* キャプテンフックモン: パイレーツパニッシャー */
-    { DM_SPECIES_CAPTAINHOOKMON, DM_MOVE_1910, 3 }, /* キャプテンフックモン: レッグリボルバー */
-    { DM_SPECIES_CANNONBEEMON, DM_MOVE_1911, 1 }, /* キャノンビーモン: ニトロスティンガー */
-    { DM_SPECIES_CANNONBEEMON, DM_MOVE_1912, 2 }, /* キャノンビーモン: スカイロケット∞（ムゲン） */
-    { DM_SPECIES_CATCHMAMEMON, DM_MOVE_1913, 1 }, /* キャッチマメモン: マジックアーム */
-    { DM_SPECIES_CATCHMAMEMON, DM_MOVE_1914, 2 }, /* キャッチマメモン: ミラクルボム */
-    { DM_SPECIES_CHIMAIRAMON, DM_MOVE_1915, 1 }, /* キメラモン: ヒート・バイパー */
-    { DM_SPECIES_GIGADRAMON, DM_MOVE_1916, 1 }, /* ギガドラモン: ジェノサイドギア */
-    { DM_SPECIES_GIGADRAMON, DM_MOVE_1917, 2 }, /* ギガドラモン: ギルティクロー */
-    { DM_SPECIES_GARUDAMON, DM_MOVE_0857, 1 }, /* ガルダモン: シャドーウィング */
-    { DM_SPECIES_KARATENMON, DM_MOVE_1918, 1 }, /* カラテンモン: 悟り（さとり） */
-    { DM_SPECIES_KARATENMON, DM_MOVE_1919, 2 }, /* カラテンモン: 衝撃羽（しょうげきは） */
-    { DM_SPECIES_GERBEMON, DM_MOVE_1920, 1 }, /* ガーベモン: ウンチバズーカ */
-    { DM_SPECIES_OROCHIMON, DM_MOVE_1921, 1 }, /* オロチモン: 酒ブレス */
-    { DM_SPECIES_OROCHIMON, DM_MOVE_1922, 2 }, /* オロチモン: アメノムラクモ */
-    { DM_SPECIES_OKUWAMON, DM_MOVE_1923, 1 }, /* オオクワモン: シザーアームズΩ */
-    { DM_SPECIES_ANGEWOMON, DM_MOVE_1924, 1 }, /* エンジェウーモン: ホーリーアロー */
-    { DM_SPECIES_ANGEWOMON, DM_MOVE_0841, 2 }, /* エンジェウーモン: ヘブンズチャーム */
-    { DM_SPECIES_ETEMON, DM_MOVE_1925, 1 }, /* エテモン: ラブ・セレナーデ */
-    { DM_SPECIES_ETEMON, DM_MOVE_1926, 2 }, /* エテモン: ダークスピリッツ */
-    { DM_SPECIES_EX_TYRANOMON, DM_MOVE_1927, 1 }, /* エクスティラノモン: プリティーアタック */
-    { DM_SPECIES_EX_TYRANOMON, DM_MOVE_1928, 2 }, /* エクスティラノモン: ブラックマター */
-    { DM_SPECIES_EAROV_DRAMON, DM_MOVE_1929, 1 }, /* エアロブイドラモン: Ｖウィングブレード */
-    { DM_SPECIES_EAROV_DRAMON, DM_MOVE_1930, 2 }, /* エアロブイドラモン: ドラゴンインパルス */
-    { DM_SPECIES_VOLCDORAMON, DM_MOVE_1931, 1 }, /* ヴォルクドラモン: ヴォルカニックフォーン */
-    { DM_SPECIES_VOLCDORAMON, DM_MOVE_1932, 2 }, /* ヴォルクドラモン: サークルオブデス */
-    { DM_SPECIES_WINGDRAMON, DM_MOVE_1933, 1 }, /* ウイングドラモン: ブレイズソニックブレス */
-    { DM_SPECIES_WINGDRAMON, DM_MOVE_1934, 2 }, /* ウイングドラモン: エクスプロードソニックランス */
-    { DM_SPECIES_WINGDRAMON, DM_MOVE_1935, 3 }, /* ウイングドラモン: ウイングブラスト */
-    { DM_SPECIES_VIKARALAMON, DM_MOVE_1936, 1 }, /* ヴィカラーラモン: スーカラ */
-    { DM_SPECIES_VAMDEMON, DM_MOVE_1937, 1 }, /* ヴァンデモン: ナイトレイド */
-    { DM_SPECIES_VAJRAMON, DM_MOVE_1938, 1 }, /* ヴァジラモン: ローダ */
-    { DM_SPECIES_INFERMON, DM_MOVE_1939, 1 }, /* インフェルモン: ヘルズグレネード */
-    { DM_SPECIES_INFERMON, DM_MOVE_1940, 2 }, /* インフェルモン: コクーンアタック */
-    { DM_SPECIES_INDARAMON, DM_MOVE_1941, 1 }, /* インダラモン: アドームクハ */
-    { DM_SPECIES_INSEKIMON, DM_MOVE_1942, 1 }, /* インセキモン: コズモフラッシュ */
-    { DM_SPECIES_ANDROMON, DM_MOVE_1943, 1 }, /* アンドロモン: ガトリングミサイル */
-    { DM_SPECIES_ANDROMON, DM_MOVE_1944, 2 }, /* アンドロモン: スパイラルソード */
-    { DM_SPECIES_ANDIRAMON, DM_MOVE_1945, 1 }, /* アンティラモン（デーヴァ）: アシパトラヴァナ */
-    { DM_SPECIES_ALGOMON_ULTIMATE, DM_MOVE_0760, 1 }, /* アルゴモン: インプリズメント */
-    { DM_SPECIES_ALGOMON_ULTIMATE, DM_MOVE_1946, 2 }, /* アルゴモン: エリミネイションライン */
-    { DM_SPECIES_ALGOMON_ULTIMATE, DM_MOVE_1947, 3 }, /* アルゴモン: ワームフェイズ */
-    { DM_SPECIES_ARCHNEMON, DM_MOVE_1948, 1 }, /* アルケニモン: スパイダースレッド */
-    { DM_SPECIES_ARCHNEMON, DM_MOVE_1949, 2 }, /* アルケニモン: プレデーションスパイダー */
-    { DM_SPECIES_ANOMALOCARIMON_X, DM_MOVE_1950, 1 }, /* アノマロカリモン（X抗体）: スティンガーサプライズ */
-    { DM_SPECIES_ANOMALOCARIMON, DM_MOVE_1950, 1 }, /* アノマロカリモン: スティンガーサプライズ */
-    { DM_SPECIES_ATLURKABUTERIMON, DM_MOVE_1951, 1 }, /* アトラーカブテリモン（赤）: ホーンバスター */
-    { DM_SPECIES_ATLURKABUTERIMON_BLUE, DM_MOVE_1951, 1 }, /* アトラーカブテリモン（青）: ホーンバスター */
-    { DM_SPECIES_ASTAMON, DM_MOVE_1952, 1 }, /* アスタモン: ヘルファイア */
-    { DM_SPECIES_ASTAMON, DM_MOVE_1953, 2 }, /* アスタモン: マーヴェリック */
-    { DM_SPECIES_ASURAMON, DM_MOVE_1954, 1 }, /* アシュラモン: 阿修羅神拳（あしゅらしんけん） */
-    { DM_SPECIES_AEGIOCHUSMON_BLUE, DM_MOVE_1955, 1 }, /* アイギオテュースモン：ブルー: ペネトレイザー */
-    { DM_SPECIES_AEGIOCHUSMON_BLUE, DM_MOVE_1956, 2 }, /* アイギオテュースモン：ブルー: ウイングカッター */
-    { DM_SPECIES_AEGIOCHUSMON_BLUE, DM_MOVE_1957, 3 }, /* アイギオテュースモン：ブルー: パワードイグニッション */
-    { DM_SPECIES_AEGIOCHUSMON_DARK, DM_MOVE_1958, 1 }, /* アイギオテュースモン：ダーク: トライアングラー */
-    { DM_SPECIES_AEGIOCHUSMON_DARK, DM_MOVE_1959, 2 }, /* アイギオテュースモン：ダーク: プラズマッドネス */
-    { DM_SPECIES_AEGIOCHUSMON_DARK, DM_MOVE_1960, 3 }, /* アイギオテュースモン：ダーク: デスディナー */
-    { DM_SPECIES_AEGIOCHUSMON_GREEN, DM_MOVE_1961, 1 }, /* アイギオテュースモン：グリーン: ブランブルバイト */
-    { DM_SPECIES_AEGIOCHUSMON_GREEN, DM_MOVE_1962, 2 }, /* アイギオテュースモン：グリーン: プラントゾーンクレイドル */
-    { DM_SPECIES_AEGIOCHUSMON_GREEN, DM_MOVE_1963, 3 }, /* アイギオテュースモン：グリーン: チャージングストライク */
-    { DM_SPECIES_AEGIOCHUSMON, DM_MOVE_1964, 1 }, /* アイギオテュースモン: ボルトブレイクノックダウン */
-    { DM_SPECIES_AEGIOCHUSMON, DM_MOVE_1965, 2 }, /* アイギオテュースモン: ライトニングパイル */
-    { DM_SPECIES_AEGIOCHUSMON, DM_MOVE_1963, 3 }, /* アイギオテュースモン: チャージングストライク */
-    { DM_SPECIES_WASPMON, DM_MOVE_1966, 1 }, /* ワスプモン: ターボスティンガー */
-    { DM_SPECIES_WASPMON, DM_MOVE_1967, 2 }, /* ワスプモン: ベアバスター */
-    { DM_SPECIES_REPPAMON, DM_MOVE_1968, 1 }, /* レッパモン: 駆駆裂空斬（くるくるれっくうざん） */
-    { DM_SPECIES_REPPAMON, DM_MOVE_1969, 2 }, /* レッパモン: 獣牙乱撃（じゅうがらんげき） */
-    { DM_SPECIES_REPPAMON, DM_MOVE_1970, 3 }, /* レッパモン: 真空カマイタチ */
-    { DM_SPECIES_REDVEGIMON, DM_MOVE_1971, 1 }, /* レッドベジーモン: ハザードブレス */
-    { DM_SPECIES_LEKISMON, DM_MOVE_1972, 1 }, /* レキスモン: ムーンナイトボム */
-    { DM_SPECIES_LEKISMON, DM_MOVE_1973, 2 }, /* レキスモン: ティアーアロー */
-    { DM_SPECIES_LEKISMON, DM_MOVE_1974, 3 }, /* レキスモン: ムーンナイトキック */
-    { DM_SPECIES_LEOMON, DM_MOVE_1039, 1 }, /* レオモン: 獣王拳 */
-    { DM_SPECIES_RAREMON, DM_MOVE_1975, 1 }, /* レアモン: ヘドロ */
-    { DM_SPECIES_RUKAMON, DM_MOVE_1976, 1 }, /* ルカモン: シェイキングパルス */
-    { DM_SPECIES_REVOLMON, DM_MOVE_1977, 1 }, /* リボルモン: ジャスティスブリット */
-    { DM_SPECIES_RAPTORDRAMON, DM_MOVE_1054, 1 }, /* ラプタードラモン: クラッシュチャージ */
-    { DM_SPECIES_RAPTORDRAMON, DM_MOVE_1978, 2 }, /* ラプタードラモン: アンブッシュクランチ */
-    { DM_SPECIES_LIAMON, DM_MOVE_1979, 1 }, /* ライアモン: サンダーオブキング */
-    { DM_SPECIES_LIAMON, DM_MOVE_1980, 2 }, /* ライアモン: クリティカルストライク */
-    { DM_SPECIES_YOUKOMON, DM_MOVE_1981, 1 }, /* ヨウコモン: 焔玉（ほむらだま） */
-    { DM_SPECIES_YOUKOMON, DM_MOVE_1982, 2 }, /* ヨウコモン: 邪炎龍（じゃえんりゅう) */
-    { DM_SPECIES_YUNIMON, DM_MOVE_1122, 1 }, /* ユニモン: ホーリーショット */
-    { DM_SPECIES_YUKIDARUMON, DM_MOVE_1983, 1 }, /* ユキダルモン: 絶対零度パンチ */
-    { DM_SPECIES_MONOCHROMON, DM_MOVE_0619, 1 }, /* モノクロモン: ヴォルケーノストライク */
-    { DM_SPECIES_MOJYAMON, DM_MOVE_1984, 1 }, /* モジャモン: アイスクルロッド */
-    { DM_SPECIES_MOJYAMON, DM_MOVE_1985, 2 }, /* モジャモン: 骨骨ブーメラン */
-    { DM_SPECIES_MERAMON, DM_MOVE_1986, 1 }, /* メラモン: バーニングフィスト */
-    { DM_SPECIES_MECHANORIMON, DM_MOVE_1987, 1 }, /* メカノリモン: ジャイロブレイク */
-    { DM_SPECIES_MECHANORIMON, DM_MOVE_1988, 2 }, /* メカノリモン: トゥインクルビーム */
-    { DM_SPECIES_MUSYAMON, DM_MOVE_1989, 1 }, /* ムシャモン: 切り捨て御免 */
-    { DM_SPECIES_MINOTAURMON, DM_MOVE_1990, 1 }, /* ミノタルモン: ダークサイドクェイク */
-    { DM_SPECIES_MIKEMON, DM_MOVE_1991, 1 }, /* ミケモン: 肉球パンチ */
-    { DM_SPECIES_MIKEMON, DM_MOVE_1992, 2 }, /* ミケモン: ネコクロー */
-    { DM_SPECIES_PORCUPAMON, DM_MOVE_1993, 1 }, /* ポキュパモン: マッドネスブローチ */
-    { DM_SPECIES_PORCUPAMON, DM_MOVE_1994, 2 }, /* ポキュパモン: スラップアンドリップ */
-    { DM_SPECIES_PECKMON, DM_MOVE_1995, 1 }, /* ペックモン: スパイラルクロー */
-    { DM_SPECIES_PECKMON, DM_MOVE_1996, 2 }, /* ペックモン: 苦無羽（くないばね） */
-    { DM_SPECIES_PECKMON, DM_MOVE_1997, 3 }, /* ペックモン: サウザンドビーク */
-    { DM_SPECIES_VEGIMON, DM_MOVE_0583, 1 }, /* ベジーモン: ウンチ投げ */
-    { DM_SPECIES_BLADEKUWAGAMON, DM_MOVE_1998, 1 }, /* ブレイドクワガーモン: スパークブレイド */
-    { DM_SPECIES_BLADEKUWAGAMON, DM_MOVE_1999, 2 }, /* ブレイドクワガーモン: エアーナイフ */
-    { DM_SPECIES_FLARELIZAMON, DM_MOVE_2000, 1 }, /* フレアリザモン: フレイムヒット */
-    { DM_SPECIES_FLARELIZAMON, DM_MOVE_2001, 2 }, /* フレアリザモン: フレイムタワー */
-    { DM_SPECIES_BLIMPMON, DM_MOVE_2002, 1 }, /* ブリンプモン: ヘリウムボム */
-    { DM_SPECIES_BLIMPMON, DM_MOVE_2003, 2 }, /* ブリンプモン: ツェッペリンエクスプロージョン */
-    { DM_SPECIES_BLACKTAILMON, DM_MOVE_0464, 1 }, /* ブラックテイルモン: ネコパンチ */
-    { DM_SPECIES_BLACKGROWMON, DM_MOVE_0542, 1 }, /* ブラックグラウモン: プラズマブレイド */
-    { DM_SPECIES_BLACKGROWMON, DM_MOVE_0543, 2 }, /* ブラックグラウモン: エキゾーストフレイム */
-    { DM_SPECIES_PLATINASUKAMON, DM_MOVE_2004, 1 }, /* プラチナスカモン: レアメタルウンチ */
-    { DM_SPECIES_FLYMON, DM_MOVE_2005, 1 }, /* フライモン: デッドリースティング */
-    { DM_SPECIES_HOOKMON, DM_MOVE_2006, 1 }, /* フックモン: キャプテンキャノン */
-    { DM_SPECIES_BOOGIEMON, DM_MOVE_2007, 1 }, /* ブギーモン: デスクラッシュ */
-    { DM_SPECIES_FUGAMON, DM_MOVE_2008, 1 }, /* フーガモン: イビルハリケーン */
-    { DM_SPECIES_V_DRAMON, DM_MOVE_1448, 1 }, /* ブイドラモン: ブイブレスアロー */
-    { DM_SPECIES_FANGMON, DM_MOVE_2009, 1 }, /* ファングモン: スナイプスティール */
-    { DM_SPECIES_FANGMON, DM_MOVE_2010, 2 }, /* ファングモン: ブラストコフィン */
-    { DM_SPECIES_FIRAMON, DM_MOVE_2011, 1 }, /* ファイラモン: フレイムダイブ */
-    { DM_SPECIES_FIRAMON, DM_MOVE_2012, 2 }, /* ファイラモン: ファイラクロー */
-    { DM_SPECIES_FIRAMON, DM_MOVE_2013, 3 }, /* ファイラモン: ファイラボム */
-    { DM_SPECIES_HYOUGAMON, DM_MOVE_2014, 1 }, /* ヒョーガモン: スノーパンチ */
-    { DM_SPECIES_PETERMON, DM_MOVE_2015, 1 }, /* ピーターモン: スナイプスティング */
-    { DM_SPECIES_PETERMON, DM_MOVE_2016, 2 }, /* ピーターモン: トゥインクルシュート */
-    { DM_SPECIES_PETERMON, DM_MOVE_2017, 3 }, /* ピーターモン: ミッドナイトファンタジア */
-    { DM_SPECIES_HANUMON, DM_MOVE_2018, 1 }, /* ハヌモン: 怒髪天（どはつてん） */
-    { DM_SPECIES_BAKEMON, DM_MOVE_2019, 1 }, /* バケモン: ヘルズハンド */
-    { DM_SPECIES_BAKEMON, DM_MOVE_2020, 2 }, /* バケモン: デスチャーム */
-    { DM_SPECIES_BAOHUCKMON, DM_MOVE_2021, 1 }, /* バオハックモン: フィフクロス */
-    { DM_SPECIES_BAOHUCKMON, DM_MOVE_2022, 2 }, /* バオハックモン: ティーンブレイド */
-    { DM_SPECIES_BAOHUCKMON, DM_MOVE_2023, 3 }, /* バオハックモン: バーンフレイム */
-    { DM_SPECIES_BAOHUCKMON, DM_MOVE_2024, 4 }, /* バオハックモン: ドラグレスパイカー */
-    { DM_SPECIES_BIRDRAMON, DM_MOVE_2025, 1 }, /* バードラモン: メテオウィング */
-    { DM_SPECIES_NUMEMON, DM_MOVE_0583, 1 }, /* ヌメモン: ウンチ投げ */
-    { DM_SPECIES_NISEDRIMOGEMON, DM_MOVE_2026, 1 }, /* ニセドリモゲモン: ニセドリルスピン */
-    { DM_SPECIES_NANIMON, DM_MOVE_2027, 1 }, /* ナニモン: ウンチ */
-    { DM_SPECIES_NANIMON, DM_MOVE_2028, 2 }, /* ナニモン: ウンチダンク */
-    { DM_SPECIES_KNIGHTCHESSMON, DM_MOVE_2029, 1 }, /* ナイトチェスモン（白）: ビッグダーツ */
-    { DM_SPECIES_KNIGHTCHESSMON, DM_MOVE_2030, 2 }, /* ナイトチェスモン（白）: ギャロップホール */
-    { DM_SPECIES_KNIGHTCHESSMON, DM_MOVE_2031, 3 }, /* ナイトチェスモン（白）: ナイトランサー */
-    { DM_SPECIES_KNIGHTCHESSMON_BLACK, DM_MOVE_2029, 1 }, /* ナイトチェスモン（黒）: ビッグダーツ */
-    { DM_SPECIES_KNIGHTCHESSMON_BLACK, DM_MOVE_2030, 2 }, /* ナイトチェスモン（黒）: ギャロップホール */
-    { DM_SPECIES_KNIGHTCHESSMON_BLACK, DM_MOVE_2031, 3 }, /* ナイトチェスモン（黒）: ナイトランサー */
-    { DM_SPECIES_DORUGAMON, DM_MOVE_2032, 1 }, /* ドルガモン: キャノンボール */
-    { DM_SPECIES_DORUGAMON, DM_MOVE_2033, 2 }, /* ドルガモン: パワーメタル */
-    { DM_SPECIES_DRIMOGEMON, DM_MOVE_2034, 1 }, /* ドリモゲモン: ドリルスピン */
-    { DM_SPECIES_DRIMOGEMON, DM_MOVE_2035, 2 }, /* ドリモゲモン: クラッシャーボーン */
-    { DM_SPECIES_TOBUCATMON, DM_MOVE_2036, 1 }, /* トブキャットモン: トブトブフェニックス */
-    { DM_SPECIES_TOBUCATMON, DM_MOVE_2037, 2 }, /* トブキャットモン: グルグルファイト */
-    { DM_SPECIES_DOGMON, DM_MOVE_2038, 1 }, /* ドッグモン: ジステン・ハウリング */
-    { DM_SPECIES_DOGMON, DM_MOVE_2039, 2 }, /* ドッグモン: ウルトラかみつく */
-    { DM_SPECIES_TOGEMON, DM_MOVE_0859, 1 }, /* トゲモン: チクチクバンバン */
-    { DM_SPECIES_DOKUGUMON, DM_MOVE_2040, 1 }, /* ドクグモン: スティンガー・ポレーション */
-    { DM_SPECIES_DOBERMON, DM_MOVE_0621, 1 }, /* ドーベルモン: グラオ・レルム */
-    { DM_SPECIES_DOBERMON, DM_MOVE_0622, 2 }, /* ドーベルモン: シュヴァルツ・シュトラール */
-    { DM_SPECIES_TORTAMON, DM_MOVE_2041, 1 }, /* トータモン: シェルファランクス */
-    { DM_SPECIES_TURUIEMON, DM_MOVE_2042, 1 }, /* トゥルイエモン: 巌兎烈斗（ガントレット） */
-    { DM_SPECIES_DELTAMON, DM_MOVE_2043, 1 }, /* デルタモン: トリプレックスフォース */
-    { DM_SPECIES_DELTAMON, DM_MOVE_2044, 2 }, /* デルタモン: スカルファング */
-    { DM_SPECIES_DEVIMON, DM_MOVE_2045, 1 }, /* デビモン: デスクロウ */
-    { DM_SPECIES_DEVIDRAMON, DM_MOVE_2046, 1 }, /* デビドラモン: クリムゾンネイル */
-    { DM_SPECIES_DEATH_X_DORUGAMON, DM_MOVE_2032, 1 }, /* デクスドルガモン: キャノンボール */
-    { DM_SPECIES_DEATH_X_DORUGAMON, DM_MOVE_2047, 2 }, /* デクスドルガモン: メタルキャスト */
-    { DM_SPECIES_TAILMON, DM_MOVE_0464, 1 }, /* テイルモン: ネコパンチ */
-    { DM_SPECIES_TAILMON, DM_MOVE_2048, 2 }, /* テイルモン: キャッツ・アイ */
-    { DM_SPECIES_TYRANOMON, DM_MOVE_2049, 1 }, /* ティラノモン: ファイアーブレス */
-    { DM_SPECIES_DIATRYMON, DM_MOVE_2050, 1 }, /* ディアトリモン: メガダッシュインパクト */
-    { DM_SPECIES_DIATRYMON, DM_MOVE_2051, 2 }, /* ディアトリモン: デストラクションロアー */
-    { DM_SPECIES_TUCHIDARUMON, DM_MOVE_2052, 1 }, /* ツチダルモン: グレートウェイト */
-    { DM_SPECIES_TANKMON, DM_MOVE_2053, 1 }, /* タンクモン: ハイパーキャノン */
-    { DM_SPECIES_DARCMON, DM_MOVE_2054, 1 }, /* ダルクモン: ラ・ピュセル */
-    { DM_SPECIES_DARCMON, DM_MOVE_2055, 2 }, /* ダルクモン: バテーム・デ・アムール */
-    { DM_SPECIES_TUSKMON, DM_MOVE_2056, 1 }, /* タスクモン: パンツァーナックル */
-    { DM_SPECIES_TARGETMON, DM_MOVE_2057, 1 }, /* ターゲットモン: 電撃ハグハグスニーカー */
-    { DM_SPECIES_TARGETMON, DM_MOVE_2058, 2 }, /* ターゲットモン: トンガリヘッド */
-    { DM_SPECIES_TARGETMON, DM_MOVE_2059, 3 }, /* ターゲットモン: アンニャセレナーデ */
-    { DM_SPECIES_DARKLIZAMON, DM_MOVE_2060, 1 }, /* ダークリザモン: ドレッドファイア */
-    { DM_SPECIES_DARKTYRANOMON, DM_MOVE_0941, 1 }, /* ダークティラノモン: ファイアーブラスト */
-    { DM_SPECIES_SORCERIMON, DM_MOVE_2061, 1 }, /* ソーサリモン: クリスタルクラウド */
-    { DM_SPECIES_SOULMON, DM_MOVE_2062, 1 }, /* ソウルモン: ネクロマジック */
-    { DM_SPECIES_SABERDRAMON, DM_MOVE_2063, 1 }, /* セーバードラモン: ブラックセーバー */
-    { DM_SPECIES_ZUBAEAGERMON, DM_MOVE_2064, 1 }, /* ズバイガーモン: Road T(w)o Decade */
-    { DM_SPECIES_ZUBAEAGERMON, DM_MOVE_2065, 2 }, /* ズバイガーモン: ヴァンシオン */
-    { DM_SPECIES_SNIMON, DM_MOVE_2066, 1 }, /* スナイモン: シャドウ・シックル */
-    { DM_SPECIES_STRIKEDRAMON, DM_MOVE_2067, 1 }, /* ストライクドラモン: ストライクファング */
-    { DM_SPECIES_STINGMON, DM_MOVE_2068, 1 }, /* スティングモン: スパイキングフィニッシュ */
-    { DM_SPECIES_STARMON, DM_MOVE_0540, 1 }, /* スターモン: メテオスコール */
-    { DM_SPECIES_SCUMON, DM_MOVE_2027, 1 }, /* スカモン: ウンチ */
-    { DM_SPECIES_JUNGLEMOJAMON, DM_MOVE_2069, 1 }, /* ジャングルモジャモン: ジャングルパンチ */
-    { DM_SPECIES_SHIMAUNIMON, DM_MOVE_2070, 1 }, /* シマユニモン: ラスターショット */
-    { DM_SPECIES_SISTERMONNOIR, DM_MOVE_2071, 1 }, /* シスタモン ノワール: ミッキーバレット */
-    { DM_SPECIES_SISTERMONNOIR, DM_MOVE_2072, 2 }, /* シスタモン ノワール: ブレスファイア */
-    { DM_SPECIES_SISTERMONNOIR, DM_MOVE_2073, 3 }, /* シスタモン ノワール: グランドシスタークルス */
-    { DM_SPECIES_GEOGREYMON, DM_MOVE_0758, 1 }, /* ジオグレイモン: メガフレイム */
-    { DM_SPECIES_GEOGREYMON, DM_MOVE_0400, 2 }, /* ジオグレイモン: メガバースト */
-    { DM_SPECIES_GEOGREYMON, DM_MOVE_2074, 3 }, /* ジオグレイモン: ホーンインパルス */
-    { DM_SPECIES_SHELLMON, DM_MOVE_1231, 1 }, /* シェルモン: ハイドロプレッシャー */
-    { DM_SPECIES_SHADEMON, DM_MOVE_2075, 1 }, /* シェイドモン: フリーデスフォール */
-    { DM_SPECIES_SHADEMON, DM_MOVE_2076, 2 }, /* シェイドモン: キルミー */
-    { DM_SPECIES_SEALSDRAMON, DM_MOVE_2077, 1 }, /* シールズドラモン: デスビハインド */
-    { DM_SPECIES_SEALSDRAMON, DM_MOVE_2078, 2 }, /* シールズドラモン: スカウターモノアイ */
-    { DM_SPECIES_COELAMON, DM_MOVE_2079, 1 }, /* シーラモン: ヴァリアブルダーツ */
-    { DM_SPECIES_SEADRAMON, DM_MOVE_0892, 1 }, /* シードラモン: アイスアロー */
-    { DM_SPECIES_SIESAMON, DM_MOVE_0833, 1 }, /* シーサモン: 石敢当（せっかんとう） */
-    { DM_SPECIES_SIESAMON, DM_MOVE_0834, 2 }, /* シーサモン: ティーダ・イヤ */
-    { DM_SPECIES_SUNFLOWMON, DM_MOVE_2080, 1 }, /* サンフラウモン: サンシャインビーム */
-    { DM_SPECIES_SUNFLOWMON, DM_MOVE_2081, 2 }, /* サンフラウモン: スマイリービンタ */
-    { DM_SPECIES_SUNFLOWMON, DM_MOVE_2082, 3 }, /* サンフラウモン: カクタステイル */
-    { DM_SPECIES_THUNDERBALLMON, DM_MOVE_2083, 1 }, /* サンダーボールモン: サンダーボール */
-    { DM_SPECIES_SANGLOUPMON, DM_MOVE_2084, 1 }, /* サングルゥモン: スティッカーブレイド */
-    { DM_SPECIES_SANGLOUPMON, DM_MOVE_2085, 2 }, /* サングルゥモン: ブラックマインド */
-    { DM_SPECIES_ZASSOUMON, DM_MOVE_2086, 1 }, /* ザッソーモン: スクイーズバイン */
-    { DM_SPECIES_CYCLOMON, DM_MOVE_2087, 1 }, /* サイクロモン: ハイパーヒート */
-    { DM_SPECIES_GORIMON, DM_MOVE_2088, 1 }, /* ゴリモン: パワーアタック */
-    { DM_SPECIES_GOKIMON, DM_MOVE_2089, 1 }, /* ゴキモン: ドリームダスト */
-    { DM_SPECIES_GOLEMON, DM_MOVE_2090, 1 }, /* ゴーレモン: カース・クリムゾン */
-    { DM_SPECIES_GOLEMON, DM_MOVE_2091, 2 }, /* ゴーレモン: ゴーレムパンチ */
-    { DM_SPECIES_COCKATRIMON, DM_MOVE_2092, 1 }, /* コカトリモン: ペトラファイアー */
-    { DM_SPECIES_KOUGAMON, DM_MOVE_2093, 1 }, /* コウガモン: コウガ流影分身 */
-    { DM_SPECIES_COREDRAMON_G, DM_MOVE_2094, 1 }, /* コアドラモン（緑）: グリーンフレアブレス */
-    { DM_SPECIES_COREDRAMON_G, DM_MOVE_2095, 2 }, /* コアドラモン（緑）: ストライクボマー */
-    { DM_SPECIES_COREDRAMON_G, DM_MOVE_2096, 3 }, /* コアドラモン（緑）: ジ・シュルネン-Ⅱ */
-    { DM_SPECIES_COREDRAMON_B, DM_MOVE_2097, 1 }, /* コアドラモン（青）: ブルーフレアブレス */
-    { DM_SPECIES_COREDRAMON_B, DM_MOVE_2095, 2 }, /* コアドラモン（青）: ストライクボマー */
-    { DM_SPECIES_COREDRAMON_B, DM_MOVE_2096, 3 }, /* コアドラモン（青）: ジ・シュルネン-Ⅱ */
-    { DM_SPECIES_CENTALMON, DM_MOVE_2098, 1 }, /* ケンタルモン: ハンティングキャノン */
-    { DM_SPECIES_GEREMON, DM_MOVE_2099, 1 }, /* ゲレモン: ハイパースメル */
-    { DM_SPECIES_GESOMON, DM_MOVE_2100, 1 }, /* ゲソモン: デビルバッシング */
-    { DM_SPECIES_GESOMON, DM_MOVE_0623, 2 }, /* ゲソモン: デッドリーシェード */
-    { DM_SPECIES_KUWAGAMON, DM_MOVE_0894, 1 }, /* クワガーモン: シザーアームズ */
-    { DM_SPECIES_CLOCKMON, DM_MOVE_2101, 1 }, /* クロックモン: クロノブレーカー */
-    { DM_SPECIES_GREYMON_FIRST, DM_MOVE_0758, 1 }, /* グレイモン: メガフレイム */
-    { DM_SPECIES_GURURUMON, DM_MOVE_2102, 1 }, /* グルルモン: カオスファイアー */
-    { DM_SPECIES_GRYZMON, DM_MOVE_2103, 1 }, /* グリズモン: 当身返し */
-    { DM_SPECIES_CHRYSALIMON, DM_MOVE_2104, 1 }, /* クリサリモン: データクラッシャー */
-    { DM_SPECIES_GROWMON, DM_MOVE_0542, 1 }, /* グラウモン: プラズマブレイド */
-    { DM_SPECIES_GROWMON, DM_MOVE_0543, 2 }, /* グラウモン: エキゾーストフレイム */
-    { DM_SPECIES_GINRYUMON, DM_MOVE_2105, 1 }, /* ギンリュウモン: 棒陣破（ぼうじんは） */
-    { DM_SPECIES_GINRYUMON, DM_MOVE_2106, 2 }, /* ギンリュウモン: 徹甲刃（てっこうじん） */
-    { DM_SPECIES_GINKAKUMON, DM_MOVE_2107, 1 }, /* ギンカクモン: 鬼炎弾（きえんだん） */
-    { DM_SPECIES_GINKAKUMON, DM_MOVE_2108, 2 }, /* ギンカクモン: 逆撃炎弾（ぎゃくげきえんだん） */
-    { DM_SPECIES_GINKAKUMON, DM_MOVE_2109, 3 }, /* ギンカクモン: 銀角突貫（ぎんかくとっかん） */
-    { DM_SPECIES_GINKAKUMON, DM_MOVE_2110, 4 }, /* ギンカクモン: 金銀雷鳴撃（きんぎんらいめいげき） */
-    { DM_SPECIES_KINKAKUMON, DM_MOVE_2111, 1 }, /* キンカクモン: 鬼爆葬（きばくそう） */
-    { DM_SPECIES_KINKAKUMON, DM_MOVE_2112, 2 }, /* キンカクモン: 怒気怒鬼怒灸（ドキドキドキューン） */
-    { DM_SPECIES_KINKAKUMON, DM_MOVE_2113, 3 }, /* キンカクモン: 雷光鬼蹴（らいこうきしゅう） */
-    { DM_SPECIES_KYUBIMON, DM_MOVE_2114, 1 }, /* キュウビモン: 鬼火玉（おにびだま） */
-    { DM_SPECIES_KYUBIMON, DM_MOVE_2115, 2 }, /* キュウビモン: 狐炎龍（こえんりゅう） */
-    { DM_SPECIES_KIWIMON, DM_MOVE_2116, 1 }, /* キウイモン: リトルペッカ－ */
-    { DM_SPECIES_GAWAPPAMON, DM_MOVE_2117, 1 }, /* ガワッパモン: ＤＪシューター */
-    { DM_SPECIES_GAWAPPAMON, DM_MOVE_2118, 2 }, /* ガワッパモン: ガワッパンチ */
-    { DM_SPECIES_GAWAPPAMON, DM_MOVE_2119, 3 }, /* ガワッパモン: ガワッパラッパー */
-    { DM_SPECIES_GARURUMON, DM_MOVE_0757, 1 }, /* ガルルモン: フォックスファイアー */
-    { DM_SPECIES_GALGOMON, DM_MOVE_0473, 1 }, /* ガルゴモン: ガトリングアーム */
-    { DM_SPECIES_GALGOMON, DM_MOVE_0474, 2 }, /* ガルゴモン: ダムダムアッパー */
-    { DM_SPECIES_KARATUKINUMEMON, DM_MOVE_2120, 1 }, /* カラツキヌメモン: シェルズアタック */
-    { DM_SPECIES_KABUTERIMON, DM_MOVE_2121, 1 }, /* カブテリモン: メガブラスター */
-    { DM_SPECIES_GUARDROMON, DM_MOVE_0526, 1 }, /* ガードロモン: ディストラクショングレネード */
-    { DM_SPECIES_GAOGAMON, DM_MOVE_1114, 1 }, /* ガオガモン: ダッシュダブルクロー */
-    { DM_SPECIES_GAOGAMON, DM_MOVE_1115, 2 }, /* ガオガモン: ガオガハウンド */
-    { DM_SPECIES_GAOGAMON, DM_MOVE_1116, 3 }, /* ガオガモン: スパイラルブロー */
-    { DM_SPECIES_OMEKAMON, DM_MOVE_2122, 1 }, /* オメカモン: ラクガキロケット */
-    { DM_SPECIES_OMEKAMON, DM_MOVE_2123, 2 }, /* オメカモン: オメカキック */
-    { DM_SPECIES_OCTMON, DM_MOVE_2124, 1 }, /* オクタモン: 海鳴墨銃（かいめいぼくじゅう） */
-    { DM_SPECIES_ORGEMON, DM_MOVE_0907, 1 }, /* オーガモン: 覇王拳 */
-    { DM_SPECIES_ANGEMON, DM_MOVE_2125, 1 }, /* エンジェモン: ヘブンズナックル */
-    { DM_SPECIES_EBIDRAMON, DM_MOVE_2126, 1 }, /* エビドラモン: ツインネプチューン */
-    { DM_SPECIES_XV_MON, DM_MOVE_2127, 1 }, /* エクスブイモン: ストロングクランチ */
-    { DM_SPECIES_XV_MON, DM_MOVE_2128, 2 }, /* エクスブイモン: エクスレイザー */
-    { DM_SPECIES_AIRDRAMON, DM_MOVE_2129, 1 }, /* エアドラモン: スピニングニードル */
-    { DM_SPECIES_WOODMON, DM_MOVE_2130, 1 }, /* ウッドモン: ブランチドレイン */
-    { DM_SPECIES_WENDIMON, DM_MOVE_2131, 1 }, /* ウェンディモン: デストロイドボイス */
-    { DM_SPECIES_WENDIMON, DM_MOVE_2132, 2 }, /* ウェンディモン: クラブアーム */
-    { DM_SPECIES_WITCHMON, DM_MOVE_2133, 1 }, /* ウィッチモン: バルルーナゲイル */
-    { DM_SPECIES_WITCHMON, DM_MOVE_2134, 2 }, /* ウィッチモン: アクエリープレッシャー */
-    { DM_SPECIES_WIZARMON, DM_MOVE_0831, 1 }, /* ウィザーモン: サンダークラウド */
-    { DM_SPECIES_EVILMON, DM_MOVE_2135, 1 }, /* イビルモン: ナイトメアショック */
-    { DM_SPECIES_IKKAKUMON, DM_MOVE_2136, 1 }, /* イッカクモン: ハープーンバルカン */
-    { DM_SPECIES_IGAMON, DM_MOVE_2137, 1 }, /* イガモン: イガ流手裏剣投げ */
-    { DM_SPECIES_ANKYLOMON, DM_MOVE_2138, 1 }, /* アンキロモン: メガトンプレス */
-    { DM_SPECIES_ANKYLOMON, DM_MOVE_2139, 2 }, /* アンキロモン: テイルハンマー */
-    { DM_SPECIES_AQUILAMON, DM_MOVE_2140, 1 }, /* アクィラモン: グライドホーン */
-    { DM_SPECIES_AQUILAMON, DM_MOVE_2141, 2 }, /* アクィラモン: ブラストレーザー */
-    { DM_SPECIES_AKATORIMON, DM_MOVE_2142, 1 }, /* アカトリモン: スカーレッドアイ */
-    { DM_SPECIES_ICEMON, DM_MOVE_2143, 1 }, /* アイスモン: アイスボールボム */
-    { DM_SPECIES_AEGIOMON, DM_MOVE_2144, 1 }, /* アイギオモン: アトラクトエコー */
-    { DM_SPECIES_AEGIOMON, DM_MOVE_2145, 2 }, /* アイギオモン: アイアントラスト */
-    { DM_SPECIES_AEGIOMON, DM_MOVE_2146, 3 }, /* アイギオモン: スタンビートブロウ */
-    { DM_SPECIES_WORMMON, DM_MOVE_2147, 1 }, /* ワームモン: ネバネバネット */
-    { DM_SPECIES_WORMMON, DM_MOVE_2148, 2 }, /* ワームモン: シルクスレッド */
-    { DM_SPECIES_LOPMON, DM_MOVE_0784, 1 }, /* ロップモン: プチツイスター */
-    { DM_SPECIES_LOPMON, DM_MOVE_2149, 2 }, /* ロップモン: ダブルタイフーン */
-    { DM_SPECIES_LOPMON, DM_MOVE_0863, 3 }, /* ロップモン: ブレイジングアイス */
-    { DM_SPECIES_RENAMON, DM_MOVE_2150, 1 }, /* レナモン: 狐変虚（こへんきょ） */
-    { DM_SPECIES_RENAMON, DM_MOVE_2151, 2 }, /* レナモン: 狐葉楔（こようせつ） */
-    { DM_SPECIES_LIOLLMON, DM_MOVE_2152, 1 }, /* レオルモン: レオクロー */
-    { DM_SPECIES_LIOLLMON, DM_MOVE_2153, 2 }, /* レオルモン: クリティカルバイト */
-    { DM_SPECIES_LUNAMON, DM_MOVE_2154, 1 }, /* ルナモン: ルナクロー */
-    { DM_SPECIES_LUNAMON, DM_MOVE_2155, 2 }, /* ルナモン: ティアーシュート */
-    { DM_SPECIES_LUNAMON, DM_MOVE_2156, 3 }, /* ルナモン: ロップイヤーリップル */
-    { DM_SPECIES_LUCEMON, DM_MOVE_2157, 1 }, /* ルーチェモン: グランドクロス */
-    { DM_SPECIES_RYUDAMON, DM_MOVE_2158, 1 }, /* リュウダモン: 兜返し */
-    { DM_SPECIES_RYUDAMON, DM_MOVE_2159, 2 }, /* リュウダモン: 居合刃（いあいじん） */
-    { DM_SPECIES_LALAMON, DM_MOVE_2160, 1 }, /* ララモン: ナッツシュート */
-    { DM_SPECIES_LALAMON, DM_MOVE_2161, 2 }, /* ララモン: ララスクリュー */
-    { DM_SPECIES_LALAMON, DM_MOVE_2162, 3 }, /* ララモン: シング・ア・ソング */
-    { DM_SPECIES_LABRAMON, DM_MOVE_2163, 1 }, /* ラブラモン: キュアーリキュール */
-    { DM_SPECIES_LABRAMON, DM_MOVE_2164, 2 }, /* ラブラモン: レトリバーク */
-    { DM_SPECIES_YUKIAGUMON, DM_MOVE_2165, 1 }, /* ユキアグモン: リトルブリザード */
-    { DM_SPECIES_MONODRAMON, DM_MOVE_2166, 1 }, /* モノドラモン: クラックバイト */
-    { DM_SPECIES_MUCHOMON, DM_MOVE_2167, 1 }, /* ムーチョモン: トロピカルビーク */
-    { DM_SPECIES_MUSHMON, DM_MOVE_2168, 1 }, /* マッシュモン: ポイズン・ス・マッシュ */
-    { DM_SPECIES_BOKOMON, DM_MOVE_2169, 1 }, /* ボコモン: 逃げ足猛ダッシュ */
-    { DM_SPECIES_PAUNCHESSMON_WHITE, DM_MOVE_2170, 1 }, /* ポーンチェスモン（白）: ポーンスピアー */
-    { DM_SPECIES_PAUNCHESSMON_WHITE, DM_MOVE_2171, 2 }, /* ポーンチェスモン（白）: ポーンバックラー */
-    { DM_SPECIES_PAUNCHESSMON_WHITE, DM_MOVE_2172, 3 }, /* ポーンチェスモン（白）: ピラミッドフォーメーション */
-    { DM_SPECIES_PAUNCHESSMON, DM_MOVE_2170, 1 }, /* ポーンチェスモン（黒）: ポーンスピアー */
-    { DM_SPECIES_PAUNCHESSMON, DM_MOVE_2171, 2 }, /* ポーンチェスモン（黒）: ポーンバックラー */
-    { DM_SPECIES_PAUNCHESSMON, DM_MOVE_2172, 3 }, /* ポーンチェスモン（黒）: ピラミッドフォーメーション */
-    { DM_SPECIES_HAWKMON, DM_MOVE_2173, 1 }, /* ホークモン: ビークペッカー */
-    { DM_SPECIES_HAWKMON, DM_MOVE_2174, 2 }, /* ホークモン: フェザースラッシュ */
-    { DM_SPECIES_PENMON, DM_MOVE_2175, 1 }, /* ペンモン: 無限ビンタ */
-    { DM_SPECIES_BETAMON, DM_MOVE_0724, 1 }, /* ベタモン: 電撃ビリリン */
-    { DM_SPECIES_BEARMON, DM_MOVE_2176, 1 }, /* ベアモン: 小熊正拳突き */
-    { DM_SPECIES_PLOTMON, DM_MOVE_0933, 1 }, /* プロットモン: パピーハウリング */
-    { DM_SPECIES_FLORAMON, DM_MOVE_2177, 1 }, /* フローラモン: アレルギーシャワー */
-    { DM_SPECIES_V_MON, DM_MOVE_2178, 1 }, /* ブイモン: ブンブンパンチ */
-    { DM_SPECIES_V_MON, DM_MOVE_2179, 2 }, /* ブイモン: ブイモンヘッド */
-    { DM_SPECIES_FUNBEEMON, DM_MOVE_2180, 1 }, /* ファンビーモン: ギアスティンガー */
-    { DM_SPECIES_FUNBEEMON, DM_MOVE_2181, 2 }, /* ファンビーモン: ８８コール（ハチハチコール） */
-    { DM_SPECIES_FALCOMON, DM_MOVE_1117, 1 }, /* ファルコモン: スクラッチスマッシュ */
-    { DM_SPECIES_FALCOMON, DM_MOVE_2182, 2 }, /* ファルコモン: ファルコラッシュ */
-    { DM_SPECIES_PHASCOMON, DM_MOVE_2183, 1 }, /* ファスコモン: エビルスノア */
-    { DM_SPECIES_PHASCOMON, DM_MOVE_2184, 2 }, /* ファスコモン: ユーカリクロー */
-    { DM_SPECIES_PIYOMON, DM_MOVE_2185, 1 }, /* ピヨモン: マジカルファイアー */
-    { DM_SPECIES_PICODEVIMON, DM_MOVE_2186, 1 }, /* ピコデビモン: ピコダーツ */
-    { DM_SPECIES_PALMON, DM_MOVE_0867, 1 }, /* パルモン: ポイズンアイビー */
-    { DM_SPECIES_HUCKMON, DM_MOVE_2187, 1 }, /* ハックモン: フィフスラッシュ */
-    { DM_SPECIES_HUCKMON, DM_MOVE_2188, 2 }, /* ハックモン: ティーンラム */
-    { DM_SPECIES_HUCKMON, DM_MOVE_1040, 3 }, /* ハックモン: ベビーフレイム */
-    { DM_SPECIES_PATAMON, DM_MOVE_2189, 1 }, /* パタモン: エアショット */
-    { DM_SPECIES_PATAMON, DM_MOVE_2190, 2 }, /* パタモン: ハネビンタ */
-    { DM_SPECIES_HAGURUMON, DM_MOVE_0545, 1 }, /* ハグルモン: ダークネスギア */
-    { DM_SPECIES_BAKUMON, DM_MOVE_1845, 1 }, /* バクモン: ナイトメアシンドローム */
-    { DM_SPECIES_NEAMON, DM_MOVE_2191, 1 }, /* ネーモン: 逃げ足ダッシュ */
-    { DM_SPECIES_NEAMON, DM_MOVE_2192, 2 }, /* ネーモン: たぬきねいり */
-    { DM_SPECIES_NISEAGUMONHAKASE, DM_MOVE_2193, 1 }, /* ニセアグモン博士: ニセハカセボウ */
-    { DM_SPECIES_NISEAGUMONHAKASE, DM_MOVE_2194, 2 }, /* ニセアグモン博士: ニセハカセボー */
-    { DM_SPECIES_DORUMON, DM_MOVE_2195, 1 }, /* ドルモン: ダッシュメタル */
-    { DM_SPECIES_DORUMON, DM_MOVE_2196, 2 }, /* ドルモン: メタルキャノン */
-    { DM_SPECIES_DRACOMON, DM_MOVE_2197, 1 }, /* ドラコモン: ベビーブレス */
-    { DM_SPECIES_DRACOMON, DM_MOVE_2198, 2 }, /* ドラコモン: テイルスマッシュ */
-    { DM_SPECIES_DRACOMON, DM_MOVE_1026, 3 }, /* ドラコモン: ジ・シュルネン */
-    { DM_SPECIES_DRACUMON, DM_MOVE_2199, 1 }, /* ドラクモン: アイオブナイトメア */
-    { DM_SPECIES_DRACUMON, DM_MOVE_2200, 2 }, /* ドラクモン: アンデッドファング */
-    { DM_SPECIES_TOYAGUMON, DM_MOVE_1060, 1 }, /* トイアグモン: トイフレイム */
-    { DM_SPECIES_TENTOMON, DM_MOVE_2201, 1 }, /* テントモン: プチサンダー */
-    { DM_SPECIES_TERRIERMON, DM_MOVE_0784, 1 }, /* テリアモン: プチツイスター */
-    { DM_SPECIES_TERRIERMON, DM_MOVE_0866, 2 }, /* テリアモン: ブレイジングファイア */
-    { DM_SPECIES_TERRIERMON, DM_MOVE_2149, 3 }, /* テリアモン: ダブルタイフーン */
-    { DM_SPECIES_TINKERMON, DM_MOVE_2202, 1 }, /* ティンカーモン: スピードナイトメア */
-    { DM_SPECIES_TINKERMON, DM_MOVE_2203, 2 }, /* ティンカーモン: ナイトメアパンデミック */
-    { DM_SPECIES_TINKERMON, DM_MOVE_2204, 3 }, /* ティンカーモン: フェアリーパウダー */
-    { DM_SPECIES_TINKERMON, DM_MOVE_2205, 4 }, /* ティンカーモン: ピーターモンシンドローム */
-    { DM_SPECIES_TUKAIMON, DM_MOVE_2206, 1 }, /* ツカイモン: バッドメッセージ */
-    { DM_SPECIES_TYUMON, DM_MOVE_2207, 1 }, /* チューモン: チーズ爆弾（ボム） */
-    { DM_SPECIES_SOLARMON, DM_MOVE_2208, 1 }, /* ソーラーモン: シャイニーリング */
-    { DM_SPECIES_ZUBAMON, DM_MOVE_2209, 1 }, /* ズバモン: トゥエンティダイブ */
-    { DM_SPECIES_SNOWGOBURIMON, DM_MOVE_2210, 1 }, /* スノーゴブリモン: スノーゴブボルト */
-    { DM_SPECIES_SWIMMON, DM_MOVE_2211, 1 }, /* スイムモン: スラッシュフィン */
-    { DM_SPECIES_SWIMMON, DM_MOVE_2212, 2 }, /* スイムモン: ブラインピストル */
-    { DM_SPECIES_SHAKOMON, DM_MOVE_0865, 1 }, /* シャコモン: ブラックパール */
-    { DM_SPECIES_SHAKOMON, DM_MOVE_2213, 2 }, /* シャコモン: ウォータースクリュー */
-    { DM_SPECIES_SHAMAMON, DM_MOVE_2214, 1 }, /* シャーマモン: シャーマハンマー */
-    { DM_SPECIES_SISTERMONBLANC, DM_MOVE_2215, 1 }, /* シスタモン ブラン: ディバインピース */
-    { DM_SPECIES_SISTERMONBLANC, DM_MOVE_2216, 2 }, /* シスタモン ブラン: プロテクトウェーブ */
-    { DM_SPECIES_SISTERMONBLANC, DM_MOVE_2073, 3 }, /* シスタモン ブラン: グランドシスタークルス */
-    { DM_SPECIES_PSYCHEMON, DM_MOVE_2217, 1 }, /* サイケモン: カワフルスパーク */
-    { DM_SPECIES_PSYCHEMON, DM_MOVE_2218, 2 }, /* サイケモン: ハデハデホーン */
-    { DM_SPECIES_PSYCHEMON, DM_MOVE_2219, 3 }, /* サイケモン: 原色の舞い */
-    { DM_SPECIES_CORONAMON, DM_MOVE_2220, 1 }, /* コロナモン: コロナックル */
-    { DM_SPECIES_CORONAMON, DM_MOVE_2221, 2 }, /* コロナモン: コロナフレイム */
-    { DM_SPECIES_CORONAMON, DM_MOVE_2222, 3 }, /* コロナモン: プチプロミネンス */
-    { DM_SPECIES_COMMANDRAMON, DM_MOVE_2223, 1 }, /* コマンドラモン: Ｍ１６アサシン */
-    { DM_SPECIES_COMMANDRAMON, DM_MOVE_2224, 2 }, /* コマンドラモン: ＤＣＤボム */
-    { DM_SPECIES_GOMAMON, DM_MOVE_0898, 1 }, /* ゴマモン: マーチングフィッシィーズ */
-    { DM_SPECIES_GOBURIMON, DM_MOVE_2225, 1 }, /* ゴブリモン: ゴブリストライク */
-    { DM_SPECIES_KOTEMON, DM_MOVE_2226, 1 }, /* コテモン: サンダーコテ */
-    { DM_SPECIES_KOTEMON, DM_MOVE_2227, 2 }, /* コテモン: ファイヤーメン */
-    { DM_SPECIES_GOTTSUMON, DM_MOVE_0625, 1 }, /* ゴツモン: アングリーロック */
-    { DM_SPECIES_KOKUWAMON, DM_MOVE_0899, 1 }, /* コクワモン: シザーアームズミニ */
-    { DM_SPECIES_KOKABUTERIMON, DM_MOVE_2228, 1 }, /* コカブテリモン: スクープスマッシュ */
-    { DM_SPECIES_KOKABUTERIMON, DM_MOVE_2229, 2 }, /* コカブテリモン: ビートルラリアット */
-    { DM_SPECIES_KOEMON, DM_MOVE_2230, 1 }, /* コエモン: ミスチバスフープ */
-    { DM_SPECIES_KOEMON, DM_MOVE_2231, 2 }, /* コエモン: ベビースリング */
-    { DM_SPECIES_KERAMON, DM_MOVE_0805, 1 }, /* ケラモン: クレイジーギグル */
-    { DM_SPECIES_KUNEMON, DM_MOVE_2232, 1 }, /* クネモン: エレクトリックスレッド */
-    { DM_SPECIES_KUDAMON, DM_MOVE_1120, 1 }, /* クダモン: 弾丸旋風（だんがんせんぷう） */
-    { DM_SPECIES_KUDAMON, DM_MOVE_1121, 2 }, /* クダモン: 絶光衝（ぜっこうしょう） */
-    { DM_SPECIES_GUILMON, DM_MOVE_0629, 1 }, /* ギルモン: ロックブレイカー */
-    { DM_SPECIES_GUILMON, DM_MOVE_0630, 2 }, /* ギルモン: ファイアーボール */
-    { DM_SPECIES_CANDMON, DM_MOVE_2233, 1 }, /* キャンドモン: ボンファイア */
-    { DM_SPECIES_GIZAMON, DM_MOVE_2234, 1 }, /* ギザモン: スパイラルエッジ */
-    { DM_SPECIES_KAMEMON, DM_MOVE_2235, 1 }, /* カメモン: ポインタ・アロー */
-    { DM_SPECIES_KAMEMON, DM_MOVE_2236, 2 }, /* カメモン: メットタックル */
-    { DM_SPECIES_KAMEMON, DM_MOVE_2237, 3 }, /* カメモン: コーラガード */
-    { DM_SPECIES_GABUMON, DM_MOVE_1027, 1 }, /* ガブモン: プチファイアー */
-    { DM_SPECIES_GANIMON, DM_MOVE_0627, 1 }, /* ガニモン: シザーズエクスキューション */
-    { DM_SPECIES_GAZIMON, DM_MOVE_0725, 1 }, /* ガジモン: パラライズブレス */
-    { DM_SPECIES_GAOMON, DM_MOVE_2238, 1 }, /* ガオモン: ローリングアッパー */
-    { DM_SPECIES_GAOMON, DM_MOVE_2239, 2 }, /* ガオモン: ダブルバックハンド */
-    { DM_SPECIES_GAOMON, DM_MOVE_2240, 3 }, /* ガオモン: ガオラッシュ */
-    { DM_SPECIES_OTAMAMON_RED, DM_MOVE_2241, 1 }, /* オタマモン（赤）: ボイルドバブル */
-    { DM_SPECIES_OTAMAMON, DM_MOVE_0935, 1 }, /* オタマモン: ララバイバブル */
-    { DM_SPECIES_ELECMON_VIOLET, DM_MOVE_2242, 1 }, /* エレキモン（紫）: ジャミングサンダー */
-    { DM_SPECIES_ELECMON, DM_MOVE_2243, 1 }, /* エレキモン: スパークリングサンダー */
-    { DM_SPECIES_EBIBURGAMON, DM_MOVE_2244, 1 }, /* エビバーガモン: フレッシュシュリンプ */
-    { DM_SPECIES_EBIBURGAMON, DM_MOVE_2245, 2 }, /* エビバーガモン: ホットカツレツ */
-    { DM_SPECIES_IMPMON, DM_MOVE_2246, 1 }, /* インプモン: サモン */
-    { DM_SPECIES_IMPMON, DM_MOVE_0939, 2 }, /* インプモン: ナイト・オブ・ファイアー */
-    { DM_SPECIES_ALRAUMON, DM_MOVE_2247, 1 }, /* アルラウモン: ネメシスアイビー */
-    { DM_SPECIES_ARMADIMON, DM_MOVE_2248, 1 }, /* アルマジモン: スクラッチビート */
-    { DM_SPECIES_ARMADIMON, DM_MOVE_2249, 2 }, /* アルマジモン: ローリングストーン */
-    { DM_SPECIES_ARKADIMON, DM_MOVE_2250, 1 }, /* アルカディモン: ソウルアブソープション */
-    { DM_SPECIES_ARKADIMON, DM_MOVE_2251, 2 }, /* アルカディモン: イレイズシックル */
-    { DM_SPECIES_AGUMONHAKASE, DM_MOVE_2252, 1 }, /* アグモン博士: ハカセボウ */
-    { DM_SPECIES_AGUMONHAKASE, DM_MOVE_2253, 2 }, /* アグモン博士: ハカセボー */
-    { DM_SPECIES_AGUMON_BLACK, DM_MOVE_1040, 1 }, /* アグモン（黒）: ベビーフレイム */
-    { DM_SPECIES_AGUMON_2006, DM_MOVE_1040, 1 }, /* アグモン（２００６アニメ版）: ベビーフレイム */
-    { DM_SPECIES_AGUMON_2006, DM_MOVE_1041, 2 }, /* アグモン（２００６アニメ版）: ベビーバーナー */
-    { DM_SPECIES_AGUMON, DM_MOVE_1040, 1 }, /* アグモン: ベビーフレイム */
-    { DM_SPECIES_WANYAMON, DM_MOVE_2254, 1 }, /* ワニャモン: スマイルファング */
-    { DM_SPECIES_MOCHIMON, DM_MOVE_2255, 1 }, /* モチモン: 伸縮性のある泡 */
-    { DM_SPECIES_MINOMON, DM_MOVE_2256, 1 }, /* ミノモン: パインコーン */
-    { DM_SPECIES_MISSIMON, DM_MOVE_2257, 1 }, /* ミサイモン: ミサイルクラッシュ */
-    { DM_SPECIES_POROMON, DM_MOVE_2258, 1 }, /* ポロモン: ポロロブリーズ */
-    { DM_SPECIES_POKOMON, DM_MOVE_2259, 1 }, /* ポコモン: 殺生石 */
-    { DM_SPECIES_BABYDMON, DM_MOVE_2260, 1 }, /* ベビドモン: ホットガス */
-    { DM_SPECIES_PUROROMON, DM_MOVE_2261, 1 }, /* プロロモン: チックリット */
-    { DM_SPECIES_FRIMON, DM_MOVE_2262, 1 }, /* フリモン: シッポビンタ */
-    { DM_SPECIES_PETIMERAMON, DM_MOVE_2263, 1 }, /* プチメラモン: 小さな火炎弾 */
-    { DM_SPECIES_PUKAMON, DM_MOVE_2264, 1 }, /* プカモン: 空気の泡 */
-    { DM_SPECIES_PYOCOMON, DM_MOVE_2265, 1 }, /* ピョコモン: シャボンフラワー */
-    { DM_SPECIES_PINAMON, DM_MOVE_2266, 1 }, /* ピナモン: ピリピリスパーク */
-    { DM_SPECIES_BUDMON, DM_MOVE_2267, 1 }, /* バドモン: ドクトゲトゲ */
-    { DM_SPECIES_PAGUMON, DM_MOVE_2268, 1 }, /* パグモン: 毒の泡 */
-    { DM_SPECIES_NYAROMON, DM_MOVE_2269, 1 }, /* ニャロモン: フォックステイル */
-    { DM_SPECIES_DORIMON, DM_MOVE_2270, 1 }, /* ドリモン: メタルドロップ */
-    { DM_SPECIES_TOKOMON, DM_MOVE_1014, 1 }, /* トコモン: 噛み付き */
-    { DM_SPECIES_TSUMEMON, DM_MOVE_2271, 1 }, /* ツメモン: ネイルスクラッチ */
-    { DM_SPECIES_TUNOMON, DM_MOVE_0727, 1 }, /* ツノモン: 酸の泡 */
-    { DM_SPECIES_CHOCOMON, DM_MOVE_2272, 1 }, /* チョコモン: ダブルボブル */
-    { DM_SPECIES_CHAPMON, DM_MOVE_2273, 1 }, /* チャップモン: フォームシャワー */
-    { DM_SPECIES_CHIBIMON, DM_MOVE_2274, 1 }, /* チビモン: ホップアタック */
-    { DM_SPECIES_TANEMON, DM_MOVE_0154, 1 }, /* タネモン: 粘着性の泡 */
-    { DM_SPECIES_XIAOMON, DM_MOVE_2275, 1 }, /* シャオモン: ツゥーモ */
-    { DM_SPECIES_SAKUTTOMON, DM_MOVE_2276, 1 }, /* サクットモン: サクサク */
-    { DM_SPECIES_KOROMON, DM_MOVE_0265, 1 }, /* コロモン: 泡 */
-    { DM_SPECIES_GUMMYMON, DM_MOVE_2272, 1 }, /* グミモン: ダブルボブル */
-    { DM_SPECIES_KYOKYOMON, DM_MOVE_2277, 1 }, /* キョキョモン: メタルストロー */
-    { DM_SPECIES_CUPIMON, DM_MOVE_2278, 1 }, /* キュピモン: エンジェルリング */
-    { DM_SPECIES_KYAROMON, DM_MOVE_2279, 1 }, /* キャロモン: しっぽスイング */
-    { DM_SPECIES_GIGIMON, DM_MOVE_2280, 1 }, /* ギギモン: ホットバイト */
-    { DM_SPECIES_CAPROMON, DM_MOVE_2281, 1 }, /* カプリモン: ハウリングヘルツ */
-    { DM_SPECIES_UPAMON, DM_MOVE_2282, 1 }, /* ウパモン: ショックシャウト */
-    { DM_SPECIES_RELEMON, DM_MOVE_2283, 1 }, /* レレモン: 変身 */
-    { DM_SPECIES_LEAFMON, DM_MOVE_0727, 1 }, /* リーフモン: 酸の泡 */
-    { DM_SPECIES_YURAMON, DM_MOVE_0154, 1 }, /* ユラモン: 粘着性の泡 */
-    { DM_SPECIES_YUKIMIBOTAMON, DM_MOVE_0594, 1 }, /* ユキミボタモン: ダイアモンドダスト */
-    { DM_SPECIES_MOKUMON, DM_MOVE_2284, 1 }, /* モクモン: スモーク */
-    { DM_SPECIES_POYOMON, DM_MOVE_0727, 1 }, /* ポヨモン: 酸の泡 */
-    { DM_SPECIES_BOMMON, DM_MOVE_2285, 1 }, /* ボムモン: バチバチバッチン */
-    { DM_SPECIES_POPOMON, DM_MOVE_2286, 1 }, /* ポポモン: ヘアミスト */
-    { DM_SPECIES_BOTAMON, DM_MOVE_0727, 1 }, /* ボタモン: 酸の泡 */
-    { DM_SPECIES_PUWAMON, DM_MOVE_2287, 1 }, /* プワモン: フワーフェザー */
-    { DM_SPECIES_PURURUMON, DM_MOVE_0727, 1 }, /* プルルモン: 酸の泡 */
-    { DM_SPECIES_PUPUMON, DM_MOVE_2268, 1 }, /* ププモン: 毒の泡 */
-    { DM_SPECIES_FUFUMON, DM_MOVE_2288, 1 }, /* フフモン: 小さな鉄のトゲ */
-    { DM_SPECIES_PUNIMON, DM_MOVE_0727, 1 }, /* プニモン: 酸の泡 */
-    { DM_SPECIES_PUTTIMON, DM_MOVE_2289, 1 }, /* プットモン: エンジェルダスト */
-    { DM_SPECIES_PETITMON, DM_MOVE_2290, 1 }, /* プチモン: 熱い吐息 */
-    { DM_SPECIES_PITCHMON, DM_MOVE_2291, 1 }, /* ピチモン: シャボンの泡 */
-    { DM_SPECIES_PAFUMON, DM_MOVE_2292, 1 }, /* パフモン: パフバルーン */
-    { DM_SPECIES_BUBBMON, DM_MOVE_0154, 1 }, /* バブモン: 粘着性の泡 */
-    { DM_SPECIES_PAOMON, DM_MOVE_0727, 1 }, /* パオモン: 酸の泡 */
-    { DM_SPECIES_NYOKIMON, DM_MOVE_2293, 1 }, /* ニョキモン: シードクラッカー */
-    { DM_SPECIES_DODOMON, DM_MOVE_2294, 1 }, /* ドドモン: 小さな鉄粒 */
-    { DM_SPECIES_TSUBUMON, DM_MOVE_0727, 1 }, /* ツブモン: 酸の泡 */
-    { DM_SPECIES_CHOROMON, DM_MOVE_2295, 1 }, /* チョロモン: ジャミングパウダー */
-    { DM_SPECIES_CHICOMON, DM_MOVE_0727, 1 }, /* チコモン: 酸の泡 */
-    { DM_SPECIES_ZERIMON, DM_MOVE_0727, 1 }, /* ゼリモン: 酸の泡 */
-    { DM_SPECIES_ZURUMON, DM_MOVE_2268, 1 }, /* ズルモン: 毒の泡 */
-    { DM_SPECIES_JYARIMON, DM_MOVE_2296, 1 }, /* ジャリモン: 熱気を帯びた泡 */
-    { DM_SPECIES_SAKUMON, DM_MOVE_2297, 1 }, /* サクモン: サックリ */
-    { DM_SPECIES_COCOMON, DM_MOVE_0727, 1 }, /* ココモン: 酸の泡 */
-    { DM_SPECIES_KURAMON, DM_MOVE_2298, 1 }, /* クラモン: グレアーアイ */
-    { DM_SPECIES_APPMON_001, DM_MOVE_2299, 1 }, /* ガッチモン: ディープサーチ */
-    { DM_SPECIES_APPMON_001, DM_MOVE_2300, 2 }, /* ガッチモン: ガッチクロー */
-    { DM_SPECIES_APPMON_002, DM_MOVE_2301, 1 }, /* コールモン: コネクトライン */
-    { DM_SPECIES_APPMON_002, DM_MOVE_2302, 2 }, /* コールモン: ノイジーコーリング */
-    { DM_SPECIES_APPMON_003, DM_MOVE_2303, 1 }, /* メールモン: メールダーツ */
-    { DM_SPECIES_APPMON_003, DM_MOVE_2304, 2 }, /* メールモン: トラブルポスト */
-    { DM_SPECIES_APPMON_004, DM_MOVE_2305, 1 }, /* ツブモン: ツイボム */
-    { DM_SPECIES_APPMON_004, DM_MOVE_2306, 2 }, /* ツブモン: イイネラッシュ */
-    { DM_SPECIES_APPMON_005, DM_MOVE_2307, 1 }, /* ゲンゴーモン: バベルシャベル */
-    { DM_SPECIES_APPMON_005, DM_MOVE_2308, 2 }, /* ゲンゴーモン: バベルダマル */
-    { DM_SPECIES_APPMON_006, DM_MOVE_2309, 1 }, /* アドモン: アドリサーチ */
-    { DM_SPECIES_APPMON_006, DM_MOVE_2310, 2 }, /* アドモン: アドデリート */
-    { DM_SPECIES_APPMON_007, DM_MOVE_2311, 1 }, /* レビューモン: ポストレビュー */
-    { DM_SPECIES_APPMON_007, DM_MOVE_2312, 2 }, /* レビューモン: 最悪の評価 */
-    { DM_SPECIES_APPMON_008, DM_MOVE_2313, 1 }, /* セットモン: クイックセットアップ */
-    { DM_SPECIES_APPMON_008, DM_MOVE_2314, 2 }, /* セットモン: ピーキーセッティング */
-    { DM_SPECIES_APPMON_009, DM_MOVE_2315, 1 }, /* メッセモン: メッセストリームアタック */
-    { DM_SPECIES_APPMON_009, DM_MOVE_2316, 2 }, /* メッセモン: コトダマレイン */
-    { DM_SPECIES_APPMON_010, DM_MOVE_2317, 1 }, /* コソモン: イドバタペーパー */
-    { DM_SPECIES_APPMON_010, DM_MOVE_2318, 2 }, /* コソモン: コッソリワーク */
-    { DM_SPECIES_APPMON_011, DM_MOVE_2319, 1 }, /* ロケットモン: ロケットバースト */
-    { DM_SPECIES_APPMON_011, DM_MOVE_2320, 2 }, /* ロケットモン: オーバードブースト */
-    { DM_SPECIES_APPMON_012, DM_MOVE_2321, 1 }, /* ナビモン: ナビゲーションアロー */
-    { DM_SPECIES_APPMON_012, DM_MOVE_2322, 2 }, /* ナビモン: ショックアタックマーカー */
-    { DM_SPECIES_APPMON_013, DM_MOVE_2323, 1 }, /* ジェットモン: ホーミングインパクト */
-    { DM_SPECIES_APPMON_013, DM_MOVE_2324, 2 }, /* ジェットモン: ラプターウィング */
-    { DM_SPECIES_APPMON_014, DM_MOVE_2325, 1 }, /* レッシャモン: スイッチングレール */
-    { DM_SPECIES_APPMON_014, DM_MOVE_2326, 2 }, /* レッシャモン: トレイルスラム */
-    { DM_SPECIES_APPMON_015, DM_MOVE_2327, 1 }, /* ウェザーモン: プチプチウェザー */
-    { DM_SPECIES_APPMON_015, DM_MOVE_2328, 2 }, /* ウェザーモン: グズグズウェザー */
-    { DM_SPECIES_APPMON_016, DM_MOVE_2329, 1 }, /* コンパスモン: ぐるぐるパニック */
-    { DM_SPECIES_APPMON_016, DM_MOVE_2330, 2 }, /* コンパスモン: スピンディフレクション */
-    { DM_SPECIES_APPMON_017, DM_MOVE_2331, 1 }, /* ヤドモン: グランドオープン！ */
-    { DM_SPECIES_APPMON_017, DM_MOVE_2332, 2 }, /* ヤドモン: スケアリーサービス */
-    { DM_SPECIES_APPMON_018, DM_MOVE_2333, 1 }, /* ニュースモン: ゴーガイニュース */
-    { DM_SPECIES_APPMON_018, DM_MOVE_2334, 2 }, /* ニュースモン: ショーゲキニュース */
-    { DM_SPECIES_APPMON_019, DM_MOVE_2335, 1 }, /* チュートモン: フィンガーポインター */
-    { DM_SPECIES_APPMON_019, DM_MOVE_2336, 2 }, /* チュートモン: チュートリアライズ */
-    { DM_SPECIES_APPMON_020, DM_MOVE_2337, 1 }, /* エムシーモン: ソウルシャウト */
-    { DM_SPECIES_APPMON_020, DM_MOVE_2338, 2 }, /* エムシーモン: ジッキョークライシス */
-    { DM_SPECIES_APPMON_021, DM_MOVE_2339, 1 }, /* キャメラモン: キリングシャッター */
-    { DM_SPECIES_APPMON_021, DM_MOVE_2340, 2 }, /* キャメラモン: スパイフォーカス */
-    { DM_SPECIES_APPMON_022, DM_MOVE_2341, 1 }, /* レコモン: アブソープインタビュー */
-    { DM_SPECIES_APPMON_022, DM_MOVE_2342, 2 }, /* レコモン: スラックマイク */
-    { DM_SPECIES_APPMON_023, DM_MOVE_2343, 1 }, /* カリキュモン: カウントレーザー */
-    { DM_SPECIES_APPMON_023, DM_MOVE_2344, 2 }, /* カリキュモン: ディバイドアーム */
-    { DM_SPECIES_APPMON_024, DM_MOVE_2345, 1 }, /* ゴミモン: ダストハント */
-    { DM_SPECIES_APPMON_024, DM_MOVE_2346, 2 }, /* ゴミモン: トラッシュボム */
-    { DM_SPECIES_APPMON_025, DM_MOVE_2347, 1 }, /* ミラーモン: キャプチャーミラー */
-    { DM_SPECIES_APPMON_025, DM_MOVE_2348, 2 }, /* ミラーモン: ミラーズリベンジ */
-    { DM_SPECIES_APPMON_026, DM_MOVE_2349, 1 }, /* ライトモン: ブラインドフラッシュ */
-    { DM_SPECIES_APPMON_026, DM_MOVE_2350, 2 }, /* ライトモン: シャイニングボディ */
-    { DM_SPECIES_APPMON_027, DM_MOVE_2351, 1 }, /* ウォッチモン: アラームホールド */
-    { DM_SPECIES_APPMON_027, DM_MOVE_2352, 2 }, /* ウォッチモン: ミニッツスピアー */
-    { DM_SPECIES_APPMON_028, DM_MOVE_2353, 1 }, /* ダイアリモン: オペレートログ */
-    { DM_SPECIES_APPMON_028, DM_MOVE_2354, 2 }, /* ダイアリモン: ロストダイアリー */
-    { DM_SPECIES_APPMON_029, DM_MOVE_2355, 1 }, /* カレンダモン: スティールプラン */
-    { DM_SPECIES_APPMON_029, DM_MOVE_2356, 2 }, /* カレンダモン: ミスティックホリデー */
-    { DM_SPECIES_APPMON_030, DM_MOVE_2357, 1 }, /* オンパモン: ウェーブアタック */
-    { DM_SPECIES_APPMON_030, DM_MOVE_2358, 2 }, /* オンパモン: イージーソナー */
-    { DM_SPECIES_APPMON_031, DM_MOVE_2359, 1 }, /* ジャミングモン: ジャムジャムペイン */
-    { DM_SPECIES_APPMON_031, DM_MOVE_2360, 2 }, /* ジャミングモン: スプリーシグナル */
-    { DM_SPECIES_APPMON_032, DM_MOVE_2361, 1 }, /* プロテクモン: フレイムウォール */
-    { DM_SPECIES_APPMON_032, DM_MOVE_2362, 2 }, /* プロテクモン: オールマイティガード */
-    { DM_SPECIES_APPMON_033, DM_MOVE_2363, 1 }, /* ハックモン: ヴァンキッシュクロー */
-    { DM_SPECIES_APPMON_033, DM_MOVE_2364, 2 }, /* ハックモン: ストレンジハック */
-    { DM_SPECIES_APPMON_034, DM_MOVE_2365, 1 }, /* バッテリモン: エレクトリックチャージ */
-    { DM_SPECIES_APPMON_034, DM_MOVE_2366, 2 }, /* バッテリモン: クラップスパーク */
-    { DM_SPECIES_APPMON_035, DM_MOVE_2367, 1 }, /* ペコモン: ペコペコハンマー */
-    { DM_SPECIES_APPMON_035, DM_MOVE_2368, 2 }, /* ペコモン: ペコスマッシュ */
-    { DM_SPECIES_APPMON_036, DM_MOVE_2369, 1 }, /* ポコモン: ポコポコブロウ */
-    { DM_SPECIES_APPMON_036, DM_MOVE_2370, 2 }, /* ポコモン: ポコメルタ */
-    { DM_SPECIES_APPMON_037, DM_MOVE_2371, 1 }, /* コピペモン: コピー＆ペースト */
-    { DM_SPECIES_APPMON_037, DM_MOVE_2372, 2 }, /* コピペモン: チープイミテーション */
-    { DM_SPECIES_APPMON_038, DM_MOVE_2373, 1 }, /* セーブモン: セービングバブル */
-    { DM_SPECIES_APPMON_038, DM_MOVE_2374, 2 }, /* セーブモン: スプリットメモリー */
-    { DM_SPECIES_APPMON_039, DM_MOVE_2375, 1 }, /* カベモン: リアルプロジェクション */
-    { DM_SPECIES_APPMON_039, DM_MOVE_2376, 2 }, /* カベモン: リカバリーウォール */
-    { DM_SPECIES_APPMON_040, DM_MOVE_2377, 1 }, /* エコモン: エコロジーグラウンド */
-    { DM_SPECIES_APPMON_040, DM_MOVE_2378, 2 }, /* エコモン: バッテリドレイン */
-    { DM_SPECIES_APPMON_041, DM_MOVE_2379, 1 }, /* ピーポモン: スパイドロイド */
-    { DM_SPECIES_APPMON_041, DM_MOVE_2380, 2 }, /* ピーポモン: パニックセントリー */
-    { DM_SPECIES_APPMON_042, DM_MOVE_2381, 1 }, /* デンパモン: シークサークル */
-    { DM_SPECIES_APPMON_042, DM_MOVE_2382, 2 }, /* デンパモン: クリーンシグナル */
-    { DM_SPECIES_APPMON_043, DM_MOVE_2383, 1 }, /* オンモン: スイッチスパーク */
-    { DM_SPECIES_APPMON_043, DM_MOVE_2384, 2 }, /* オンモン: ツナゲルリンク */
-    { DM_SPECIES_APPMON_044, DM_MOVE_2385, 1 }, /* オフモン: スイッチレイジー */
-    { DM_SPECIES_APPMON_044, DM_MOVE_2386, 2 }, /* オフモン: タチキルリンク */
-    { DM_SPECIES_APPMON_045, DM_MOVE_2387, 1 }, /* ドカモン: ドカドカラッシュ */
-    { DM_SPECIES_APPMON_045, DM_MOVE_2388, 2 }, /* ドカモン: ドッカンパンチ */
-    { DM_SPECIES_APPMON_046, DM_MOVE_0690, 1 }, /* ショットモン: デッドショット */
-    { DM_SPECIES_APPMON_046, DM_MOVE_2389, 2 }, /* ショットモン: プレッシャーリボルヴ */
-    { DM_SPECIES_APPMON_047, DM_MOVE_2390, 1 }, /* カードモン: ドローフェイズ */
-    { DM_SPECIES_APPMON_047, DM_MOVE_2391, 2 }, /* カードモン: ブランクカード */
-    { DM_SPECIES_APPMON_048, DM_MOVE_2392, 1 }, /* ロープレモン: ホーリーソード */
-    { DM_SPECIES_APPMON_048, DM_MOVE_2393, 2 }, /* ロープレモン: ブレイブシールド */
-    { DM_SPECIES_APPMON_049, DM_MOVE_2394, 1 }, /* パズルモン: ポッピンスリー */
-    { DM_SPECIES_APPMON_049, DM_MOVE_2395, 2 }, /* パズルモン: エレメントミックス */
-    { DM_SPECIES_APPMON_050, DM_MOVE_2396, 1 }, /* ダンスモン: アップロックビート */
-    { DM_SPECIES_APPMON_050, DM_MOVE_2397, 2 }, /* ダンスモン: クレイジーステップ */
-    { DM_SPECIES_APPMON_051, DM_MOVE_2398, 1 }, /* レースモン: アクセルドライブ */
-    { DM_SPECIES_APPMON_051, DM_MOVE_2399, 2 }, /* レースモン: レイジーラビット */
-    { DM_SPECIES_APPMON_052, DM_MOVE_2400, 1 }, /* ドローモン: インクシャワー */
-    { DM_SPECIES_APPMON_052, DM_MOVE_2401, 2 }, /* ドローモン: ペイントメルト */
-    { DM_SPECIES_APPMON_053, DM_MOVE_2402, 1 }, /* テラーモン: フォーチュンテラー */
-    { DM_SPECIES_APPMON_053, DM_MOVE_2403, 2 }, /* テラーモン: スフィアインパクト */
-    { DM_SPECIES_APPMON_054, DM_MOVE_2404, 1 }, /* ミュージモン: ミュージックアワー！ */
-    { DM_SPECIES_APPMON_054, DM_MOVE_2405, 2 }, /* ミュージモン: ハッピープレイリスト */
-    { DM_SPECIES_APPMON_055, DM_MOVE_2406, 1 }, /* ペロリモン: テイスティングバイト */
-    { DM_SPECIES_APPMON_055, DM_MOVE_2407, 2 }, /* ペロリモン: ペロリンログ */
-    { DM_SPECIES_APPMON_056, DM_MOVE_2408, 1 }, /* ドーガモン: チャンネルプレイ */
-    { DM_SPECIES_APPMON_056, DM_MOVE_2409, 2 }, /* ドーガモン: ダークモニター */
-    { DM_SPECIES_APPMON_057, DM_MOVE_2410, 1 }, /* ドレスモン: ソーイングニードル */
-    { DM_SPECIES_APPMON_057, DM_MOVE_2411, 2 }, /* ドレスモン: シャミングステッチ */
-    { DM_SPECIES_APPMON_058, DM_MOVE_2412, 1 }, /* ブックモン: ページサモン */
-    { DM_SPECIES_APPMON_058, DM_MOVE_2413, 2 }, /* ブックモン: センテンスウィップ */
-    { DM_SPECIES_APPMON_059, DM_MOVE_2414, 1 }, /* ガシャモン: ガシャガシャポン */
-    { DM_SPECIES_APPMON_059, DM_MOVE_2415, 2 }, /* ガシャモン: ドッキリカプセル */
-    { DM_SPECIES_APPMON_060, DM_MOVE_2416, 1 }, /* ラックモン: ラッキースロット */
-    { DM_SPECIES_APPMON_060, DM_MOVE_2417, 2 }, /* ラックモン: トリプルセブン */
-    { DM_SPECIES_APPMON_061, DM_MOVE_2418, 1 }, /* トリックモン: トリッキーハッター */
-    { DM_SPECIES_APPMON_061, DM_MOVE_2419, 2 }, /* トリックモン: グランドイリュージョン */
-    { DM_SPECIES_APPMON_062, DM_MOVE_2420, 1 }, /* ダイスモン: シックスシェイク */
-    { DM_SPECIES_APPMON_062, DM_MOVE_2421, 2 }, /* ダイスモン: ミラクルロール */
-    { DM_SPECIES_APPMON_063, DM_MOVE_2422, 1 }, /* クックモン: アストロクッキング */
-    { DM_SPECIES_APPMON_063, DM_MOVE_2423, 2 }, /* クックモン: ソウルフルコース */
-    { DM_SPECIES_APPMON_064, DM_MOVE_2424, 1 }, /* バイラモン: パープルガスト */
-    { DM_SPECIES_APPMON_064, DM_MOVE_2425, 2 }, /* バイラモン: テンタクルバインド */
-    { DM_SPECIES_APPMON_065, DM_MOVE_2426, 1 }, /* スリープモン: ス～パ～スリ～パ～ */
-    { DM_SPECIES_APPMON_065, DM_MOVE_2427, 2 }, /* スリープモン: レイジングアイ */
-    { DM_SPECIES_APPMON_066, DM_MOVE_2428, 1 }, /* マッスルモン: マッスルポージング */
-    { DM_SPECIES_APPMON_066, DM_MOVE_2429, 2 }, /* マッスルモン: ムキムキスエット */
-    { DM_SPECIES_APPMON_067, DM_MOVE_2430, 1 }, /* エイドモン: ヒーリングバンデージ */
-    { DM_SPECIES_APPMON_067, DM_MOVE_2431, 2 }, /* エイドモン: レスキューキッス */
-    { DM_SPECIES_APPMON_068, DM_MOVE_2432, 1 }, /* マネーモン: ルーレットバンク */
-    { DM_SPECIES_APPMON_068, DM_MOVE_2433, 2 }, /* マネーモン: マニーショック */
-    { DM_SPECIES_APPMON_069, DM_MOVE_2434, 1 }, /* スパモン: ハイドロジェット */
-    { DM_SPECIES_APPMON_069, DM_MOVE_2435, 2 }, /* スパモン: 癒しの湯 */
-    { DM_SPECIES_APPMON_070, DM_MOVE_2436, 1 }, /* サプリモン: バイタルサプリ */
-    { DM_SPECIES_APPMON_070, DM_MOVE_2437, 2 }, /* サプリモン: ミナギルエナジー */
-    { DM_SPECIES_APPMON_071, DM_MOVE_2438, 1 }, /* ドープモン: バイタルリミット              オーバーパワー */
-    { DM_SPECIES_APPMON_072, DM_MOVE_2439, 1 }, /* オクショモン: スペシャルビッド */
-    { DM_SPECIES_APPMON_072, DM_MOVE_2440, 2 }, /* オクショモン: ニューサツスイング */
-    { DM_SPECIES_APPMON_073, DM_MOVE_2441, 1 }, /* カケイモン: セツヤクハート */
-    { DM_SPECIES_APPMON_073, DM_MOVE_2442, 2 }, /* カケイモン: ケチケチハート */
-    { DM_SPECIES_APPMON_074, DM_MOVE_2443, 1 }, /* カイモン: バーゲンプライス */
-    { DM_SPECIES_APPMON_074, DM_MOVE_2444, 2 }, /* カイモン: バクガイタイム */
-    { DM_SPECIES_APPMON_075, DM_MOVE_2445, 1 }, /* ジショモン: ビブリオスキャン */
-    { DM_SPECIES_APPMON_075, DM_MOVE_2446, 2 }, /* ジショモン: ヒデングリフ */
-    { DM_SPECIES_APPMON_076, DM_MOVE_2447, 1 }, /* ロギモン: クライストルネード */
-    { DM_SPECIES_APPMON_076, DM_MOVE_2448, 2 }, /* ロギモン: ロギプラズマ */
-    { DM_SPECIES_APPMON_077, DM_MOVE_2449, 1 }, /* ロガモン: スクラッチバン */
-    { DM_SPECIES_APPMON_077, DM_MOVE_2450, 2 }, /* ロガモン: ロガブラスト */
-    { DM_SPECIES_APPMON_078, DM_MOVE_2451, 1 }, /* ドガッチモン: ディープダイブ */
-    { DM_SPECIES_APPMON_078, DM_MOVE_2452, 2 }, /* ドガッチモン: ドガッチバスター */
-    { DM_SPECIES_APPMON_078, DM_MOVE_2453, 3 }, /* ドガッチモン: ソニックスラッシュ */
-    { DM_SPECIES_APPMON_079, DM_MOVE_2454, 1 }, /* ソーシャモン: メッセシュトロム */
-    { DM_SPECIES_APPMON_079, DM_MOVE_2455, 2 }, /* ソーシャモン: ヘビーギフト */
-    { DM_SPECIES_APPMON_080, DM_MOVE_2456, 1 }, /* ゴシップモン: ブレイズスラング */
-    { DM_SPECIES_APPMON_080, DM_MOVE_2457, 2 }, /* ゴシップモン: ネガティブラスター */
-    { DM_SPECIES_APPMON_081, DM_MOVE_2458, 1 }, /* スカシモン: 失敗しちゃった */
-    { DM_SPECIES_APPMON_081, DM_MOVE_2459, 2 }, /* スカシモン: スカナックル */
-    { DM_SPECIES_APPMON_082, DM_MOVE_2460, 1 }, /* トリップモン: トリップゲート */
-    { DM_SPECIES_APPMON_082, DM_MOVE_2461, 2 }, /* トリップモン: ワンダラーファング */
-    { DM_SPECIES_APPMON_083, DM_MOVE_2462, 1 }, /* ウェザドラモン: ディヴァインブレス */
-    { DM_SPECIES_APPMON_083, DM_MOVE_2463, 2 }, /* ウェザドラモン: パニックサンダー */
-    { DM_SPECIES_APPMON_084, DM_MOVE_2464, 1 }, /* タイムモン: クロノスライド */
-    { DM_SPECIES_APPMON_084, DM_MOVE_2465, 2 }, /* タイムモン: クロックフィスト */
-    { DM_SPECIES_APPMON_084, DM_MOVE_2466, 3 }, /* タイムモン: クロックシールド */
-    { DM_SPECIES_APPMON_085, DM_MOVE_2467, 1 }, /* ロアモン: ライアースロート */
-    { DM_SPECIES_APPMON_085, DM_MOVE_2468, 2 }, /* ロアモン: ツインスクリーム */
-    { DM_SPECIES_APPMON_086, DM_MOVE_2469, 1 }, /* スコープモン: デスウォッチ */
-    { DM_SPECIES_APPMON_086, DM_MOVE_2470, 2 }, /* スコープモン: デッドリースナイプ */
-    { DM_SPECIES_APPMON_087, DM_MOVE_2471, 1 }, /* クラフトモン: トッカンメイカー */
-    { DM_SPECIES_APPMON_087, DM_MOVE_2472, 2 }, /* クラフトモン: ゾーンアーキテクト */
-    { DM_SPECIES_APPMON_088, DM_MOVE_2473, 1 }, /* レイドラモン: クラッキングクレイス */
-    { DM_SPECIES_APPMON_088, DM_MOVE_2474, 2 }, /* レイドラモン: バラージジャック */
-    { DM_SPECIES_APPMON_089, DM_MOVE_2475, 1 }, /* デジップモン: アブソーブジップ */
-    { DM_SPECIES_APPMON_089, DM_MOVE_2476, 2 }, /* デジップモン: アンフリーズフィスト */
-    { DM_SPECIES_APPMON_090, DM_MOVE_2477, 1 }, /* ミエーヌモン: ステルスケープ */
-    { DM_SPECIES_APPMON_090, DM_MOVE_2478, 2 }, /* ミエーヌモン: カメレオンリック */
-    { DM_SPECIES_APPMON_091, DM_MOVE_2479, 1 }, /* ワープモン: ワープループ */
-    { DM_SPECIES_APPMON_091, DM_MOVE_2480, 2 }, /* ワープモン: スケアリーゲート */
-    { DM_SPECIES_APPMON_092, DM_MOVE_2481, 1 }, /* サクシモン: 臥龍扇 */
-    { DM_SPECIES_APPMON_092, DM_MOVE_2482, 2 }, /* サクシモン: 炎舞の陣 */
-    { DM_SPECIES_APPMON_093, DM_MOVE_2483, 1 }, /* ドスコモン: ドヒョウフィールド */
-    { DM_SPECIES_APPMON_093, DM_MOVE_2484, 2 }, /* ドスコモン: ジェット張手 */
-    { DM_SPECIES_APPMON_094, DM_MOVE_2485, 1 }, /* ブレモン: コマンド＝ハイパー */
-    { DM_SPECIES_APPMON_094, DM_MOVE_2486, 2 }, /* ブレモン: クレイジーブレイン */
-    { DM_SPECIES_APPMON_095, DM_MOVE_2487, 1 }, /* コーチモン: 怒ツ鬼金剛棍 */
-    { DM_SPECIES_APPMON_095, DM_MOVE_2488, 2 }, /* コーチモン: 愛の入魂金棒 */
-    { DM_SPECIES_APPMON_096, DM_MOVE_2489, 1 }, /* ウラテクモン: 上下上下右右左左XY */
-    { DM_SPECIES_APPMON_096, DM_MOVE_2490, 2 }, /* ウラテクモン: カミワザコンボ */
-    { DM_SPECIES_APPMON_097, DM_MOVE_2491, 1 }, /* エフェクモン: カラーズマザー */
-    { DM_SPECIES_APPMON_097, DM_MOVE_2492, 2 }, /* エフェクモン: ペイントドラゴン */
-    { DM_SPECIES_APPMON_098, DM_MOVE_2493, 1 }, /* タロットモン: ラメントフェイト */
-    { DM_SPECIES_APPMON_098, DM_MOVE_2494, 2 }, /* タロットモン: アルカナシールド */
-    { DM_SPECIES_APPMON_099, DM_MOVE_2495, 1 }, /* コーデモン: メタモルコーデ */
-    { DM_SPECIES_APPMON_099, DM_MOVE_2496, 2 }, /* コーデモン: フィッティングアロー */
-    { DM_SPECIES_APPMON_100, DM_MOVE_2497, 1 }, /* メディアモン: バーチャルバース */
-    { DM_SPECIES_APPMON_100, DM_MOVE_0652, 2 }, /* メディアモン: ハウリングブラスト */
-    { DM_SPECIES_APPMON_101, DM_MOVE_2498, 1 }, /* ベガスモン: クイーンウィール */
-    { DM_SPECIES_APPMON_101, DM_MOVE_2499, 2 }, /* ベガスモン: ビッグゲーム */
-    { DM_SPECIES_APPMON_102, DM_MOVE_2500, 1 }, /* ドリーモン: ノンレムパペット */
-    { DM_SPECIES_APPMON_102, DM_MOVE_2501, 2 }, /* ドリーモン: ドリームシアター */
-    { DM_SPECIES_APPMON_103, DM_MOVE_2502, 1 }, /* メディックモン: ワンオペレーション */
-    { DM_SPECIES_APPMON_103, DM_MOVE_2503, 2 }, /* メディックモン: ワンダーメディシン */
-    { DM_SPECIES_APPMON_104, DM_MOVE_2504, 1 }, /* ドクモン: スパイラルトリガー */
-    { DM_SPECIES_APPMON_104, DM_MOVE_2505, 2 }, /* ドクモン: マッドネスシリンジ */
-    { DM_SPECIES_APPMON_105, DM_MOVE_2506, 1 }, /* コンサルモン: スリフトアンサー */
-    { DM_SPECIES_APPMON_105, DM_MOVE_2507, 2 }, /* コンサルモン: オクトパラース */
-    { DM_SPECIES_APPMON_106, DM_MOVE_2508, 1 }, /* ライブラモン: バーバルジェイル */
-    { DM_SPECIES_APPMON_106, DM_MOVE_2509, 2 }, /* ライブラモン: デビルズコデックス */
-    { DM_SPECIES_APPMON_107, DM_MOVE_2510, 1 }, /* グローブモン: アルティメットサーチ */
-    { DM_SPECIES_APPMON_107, DM_MOVE_2511, 2 }, /* グローブモン: グランツゲイザー */
-    { DM_SPECIES_APPMON_107, DM_MOVE_2512, 3 }, /* グローブモン: シュベルトカッター */
-    { DM_SPECIES_APPMON_108, DM_MOVE_2513, 1 }, /* カリスモン: ゼーレゲヴァルト */
-    { DM_SPECIES_APPMON_108, DM_MOVE_2514, 2 }, /* カリスモン: アルフ＝アイン */
-    { DM_SPECIES_APPMON_109, DM_MOVE_2515, 1 }, /* ダメダモン: もうダメだ～ */
-    { DM_SPECIES_APPMON_109, DM_MOVE_2516, 2 }, /* ダメダモン: ダメダメージ */
-    { DM_SPECIES_APPMON_110, DM_MOVE_2517, 1 }, /* サテラモン: コズミックレイダー */
-    { DM_SPECIES_APPMON_110, DM_MOVE_2518, 2 }, /* サテラモン: レインボーアサルト */
-    { DM_SPECIES_APPMON_111, DM_MOVE_2519, 1 }, /* コメットモン: メテオレイン */
-    { DM_SPECIES_APPMON_111, DM_MOVE_2520, 2 }, /* コメットモン: ギガントエルガー */
-    { DM_SPECIES_APPMON_112, DM_MOVE_2521, 1 }, /* ブートモン: パワーブート */
-    { DM_SPECIES_APPMON_112, DM_MOVE_2522, 2 }, /* ブートモン: ナックルソル */
-    { DM_SPECIES_APPMON_113, DM_MOVE_2523, 1 }, /* シャットモン: シザーズブラック */
-    { DM_SPECIES_APPMON_113, DM_MOVE_2524, 2 }, /* シャットモン: ルーナインパルス */
-    { DM_SPECIES_APPMON_114, DM_MOVE_2525, 1 }, /* フェイクモン: イミテーションノイズ */
-    { DM_SPECIES_APPMON_114, DM_MOVE_2526, 2 }, /* フェイクモン: クラウンマスク */
-    { DM_SPECIES_APPMON_115, DM_MOVE_2527, 1 }, /* リバイブモン: ヴンダーゲネシス */
-    { DM_SPECIES_APPMON_115, DM_MOVE_2528, 2 }, /* リバイブモン: セイバーシュトラール */
-    { DM_SPECIES_APPMON_116, DM_MOVE_2529, 1 }, /* ワルダモン: デーモンアルム */
-    { DM_SPECIES_APPMON_116, DM_MOVE_2530, 2 }, /* ワルダモン: ザータンムント */
-    { DM_SPECIES_APPMON_117, DM_MOVE_2531, 1 }, /* オウジャモン: ゴールデンファング */
-    { DM_SPECIES_APPMON_117, DM_MOVE_2532, 2 }, /* オウジャモン: フレイムストレート */
-    { DM_SPECIES_APPMON_118, DM_MOVE_2533, 1 }, /* エンタモン: ハッピーファントム */
-    { DM_SPECIES_APPMON_118, DM_MOVE_2534, 2 }, /* エンタモン: ポルテメロス */
-    { DM_SPECIES_APPMON_119, DM_MOVE_2535, 1 }, /* バイオモン: ドクトルメス */
-    { DM_SPECIES_APPMON_119, DM_MOVE_2536, 2 }, /* バイオモン: ナーデルブレイズ */
-    { DM_SPECIES_APPMON_120, DM_MOVE_2537, 1 }, /* ビューティモン: ローザフェニクス */
-    { DM_SPECIES_APPMON_120, DM_MOVE_2538, 2 }, /* ビューティモン: ヴィーナスロッド */
-    { DM_SPECIES_APPMON_120, DM_MOVE_2539, 3 }, /* ビューティモン: ウィングパクト */
-    { DM_SPECIES_APPMON_121, DM_MOVE_2540, 1 }, /* リブートモン: レフィシオール */
-    { DM_SPECIES_APPMON_121, DM_MOVE_2541, 2 }, /* リブートモン: ホライゾンタルフレア */
-    { DM_SPECIES_APPMON_121, DM_MOVE_2542, 3 }, /* リブートモン: エクリプスイレイザー */
-    { DM_SPECIES_APPMON_122, DM_MOVE_2543, 1 }, /* ガイアモン: イマジンマール */
-    { DM_SPECIES_APPMON_122, DM_MOVE_2544, 2 }, /* ガイアモン: アルティメットアダマス */
-    { DM_SPECIES_APPMON_123, DM_MOVE_2545, 1 }, /* ハデスモン: ヘル・カキア */
-    { DM_SPECIES_APPMON_123, DM_MOVE_2546, 2 }, /* ハデスモン: メランエクスプロード */
-    { DM_SPECIES_APPMON_124, DM_MOVE_2547, 1 }, /* ポセイドモン: トライデント・フォール */
-    { DM_SPECIES_APPMON_124, DM_MOVE_2548, 2 }, /* ポセイドモン: 海帝掌打 */
-    { DM_SPECIES_APPMON_125, DM_MOVE_2549, 1 }, /* ウラノスモン: ハロー・ハロー */
-    { DM_SPECIES_APPMON_125, DM_MOVE_2550, 2 }, /* ウラノスモン: アストラルイラプション */
-    { DM_SPECIES_APPMON_126, DM_MOVE_2551, 1 }, /* デウスモン: コード：オリジン */
-    { DM_SPECIES_APPMON_126, DM_MOVE_2552, 2 }, /* デウスモン: イニシャル・ゼロ */
-    { DM_SPECIES_APPMON_127, DM_MOVE_2553, 1 }, /* タップモン(ソーシャル): スピンシュート */
-    { DM_SPECIES_APPMON_128, DM_MOVE_2553, 1 }, /* タップモン(ナビ): スピンシュート */
-    { DM_SPECIES_APPMON_129, DM_MOVE_2553, 1 }, /* タップモン(ツール): スピンシュート */
-    { DM_SPECIES_APPMON_130, DM_MOVE_2553, 1 }, /* タップモン(システム): スピンシュート */
-    { DM_SPECIES_APPMON_131, DM_MOVE_2553, 1 }, /* タップモン(ゲーム): スピンシュート */
-    { DM_SPECIES_APPMON_132, DM_MOVE_2553, 1 }, /* タップモン(エンタメ): スピンシュート */
-    { DM_SPECIES_APPMON_133, DM_MOVE_2553, 1 }, /* タップモン(ライフ): スピンシュート */
-    { DM_SPECIES_APPMON_134, DM_MOVE_2554, 1 }, /* フリックモン(ソーシャル): みみだまし */
-    { DM_SPECIES_APPMON_135, DM_MOVE_2554, 1 }, /* フリックモン(ナビ): みみだまし */
-    { DM_SPECIES_APPMON_136, DM_MOVE_2554, 1 }, /* フリックモン(ツール): みみだまし */
-    { DM_SPECIES_APPMON_137, DM_MOVE_2554, 1 }, /* フリックモン(システム): みみだまし */
-    { DM_SPECIES_APPMON_138, DM_MOVE_2554, 1 }, /* フリックモン(ゲーム): みみだまし */
-    { DM_SPECIES_APPMON_139, DM_MOVE_2554, 1 }, /* フリックモン(エンタメ): みみだまし */
-    { DM_SPECIES_APPMON_140, DM_MOVE_2554, 1 }, /* フリックモン(ライフ): みみだまし */
-    { DM_SPECIES_APPMON_141, DM_MOVE_2555, 1 }, /* スワイプモン(ソーシャル): ボディスピアー */
-    { DM_SPECIES_APPMON_142, DM_MOVE_2555, 1 }, /* スワイプモン(ナビ): ボディスピアー */
-    { DM_SPECIES_APPMON_143, DM_MOVE_2555, 1 }, /* スワイプモン(ツール): ボディスピアー */
-    { DM_SPECIES_APPMON_144, DM_MOVE_2555, 1 }, /* スワイプモン(システム): ボディスピアー */
-    { DM_SPECIES_APPMON_145, DM_MOVE_2555, 1 }, /* スワイプモン(ゲーム): ボディスピアー */
-    { DM_SPECIES_APPMON_146, DM_MOVE_2555, 1 }, /* スワイプモン(エンタメ): ボディスピアー */
-    { DM_SPECIES_APPMON_147, DM_MOVE_2555, 1 }, /* スワイプモン(ライフ): ボディスピアー */
-    { DM_SPECIES_APPMON_148, DM_MOVE_2556, 1 }, /* ダンテモン: 断鉄剣（だんてつけん） */
-    { DM_SPECIES_APPMON_148, DM_MOVE_2557, 2 }, /* ダンテモン: 戸締用心(とじまりようじん) */
+    { 1, DM_TECHNIQUE_0001, 935, 1 }, /* ノスフェラモン: ランページバレット */
+    { 1, DM_TECHNIQUE_0002, 936, 2 }, /* ノスフェラモン: アネスシージアゲイズ */
+    { 2, DM_TECHNIQUE_0003, 937, 1 }, /* アルティオモン: ドゥームバスター */
+    { 2, DM_TECHNIQUE_0004, 938, 2 }, /* アルティオモン: ディキャピテイトクロウ */
+    { 5, DM_TECHNIQUE_0005, 939, 1 }, /* ヘリオスボアモン: ソウルパラヴライザー */
+    { 5, DM_TECHNIQUE_0006, 940, 2 }, /* ヘリオスボアモン: レストリクトアイ */
+    { 6, DM_TECHNIQUE_0007, 941, 1 }, /* ハバキリモン: 羽々斬（はばきり） */
+    { 6, DM_TECHNIQUE_0008, 942, 2 }, /* ハバキリモン: 麁正（あらまさ） */
+    { 7, DM_TECHNIQUE_0009, 943, 1 }, /* ベアキャットモン: ペネトレイトブロウ */
+    { 7, DM_TECHNIQUE_0010, 944, 2 }, /* ベアキャットモン: マーダライズラッシュ */
+    { 7, DM_TECHNIQUE_0011, 945, 3 }, /* ベアキャットモン: ベアダウンスピニングキック */
+    { 8, DM_TECHNIQUE_0012, 946, 1 }, /* タオウーモン: 氷骸礫(ひょうがいれき) */
+    { 8, DM_TECHNIQUE_0013, 947, 2 }, /* タオウーモン: 轟蹄崩(ごうていほう) */
+    { 8, DM_TECHNIQUE_0014, 948, 3 }, /* タオウーモン: 凍烈檮牙(とうれつとうが) */
+    { 9, DM_TECHNIQUE_0015, 949, 1 }, /* スカージキロプモン: トライアンギュレーションスキャン */
+    { 9, DM_TECHNIQUE_0016, 950, 2 }, /* スカージキロプモン: デスペアブラスト */
+    { 9, DM_TECHNIQUE_0017, 951, 3 }, /* スカージキロプモン: エリミネイトレイン */
+    { 9, DM_TECHNIQUE_0018, 952, 4 }, /* スカージキロプモン: サイレントスクリーム */
+    { 10, DM_TECHNIQUE_0019, 953, 1 }, /* モナークリザモン: アナイアレイトエッジ */
+    { 10, DM_TECHNIQUE_0020, 954, 2 }, /* モナークリザモン: モナークオーディナンス */
+    { 10, DM_TECHNIQUE_0021, 955, 3 }, /* モナークリザモン: ファイナルジャッジメント */
+    { 11, DM_TECHNIQUE_0022, 956, 1 }, /* アポロモン：ウィスパード: アロー・オブ・ウィスパード */
+    { 11, DM_TECHNIQUE_0023, 957, 2 }, /* アポロモン：ウィスパード: サン・オブ・ソローズ */
+    { 12, DM_TECHNIQUE_0024, 958, 1 }, /* キングホエーモン: ウォジェット */
+    { 12, DM_TECHNIQUE_0025, 959, 2 }, /* キングホエーモン: ライドライト */
+    { 13, DM_TECHNIQUE_0026, 960, 1 }, /* アルマモン：バーストモード: ソード・オブ・メテオ */
+    { 13, DM_TECHNIQUE_0027, 961, 2 }, /* アルマモン：バーストモード: インフィニティソードレイン */
+    { 14, DM_TECHNIQUE_0028, 962, 1 }, /* アルマモン: マルクトクリスタル */
+    { 14, DM_TECHNIQUE_0029, 963, 2 }, /* アルマモン: レインボーハンド */
+    { 14, DM_TECHNIQUE_0030, 964, 3 }, /* アルマモン: ソードマスカレード */
+    { 15, DM_TECHNIQUE_0031, 965, 1 }, /* シャウトモンX5S: スペースチャクラム */
+    { 15, DM_TECHNIQUE_0032, 966, 2 }, /* シャウトモンX5S: ヘリオスラッシャー */
+    { 15, DM_TECHNIQUE_0033, 967, 3 }, /* シャウトモンX5S: コズモビクトリー */
+    { 16, DM_TECHNIQUE_0034, 968, 1 }, /* ヴォルテクスドラモン: フローズンガスト */
+    { 16, DM_TECHNIQUE_0035, 969, 2 }, /* ヴォルテクスドラモン: ブレイジングガスト */
+    { 16, DM_TECHNIQUE_0036, 970, 3 }, /* ヴォルテクスドラモン: レーヴァテイン */
+    { 17, DM_TECHNIQUE_0037, 971, 1 }, /* シャウトモンX4S: ブレイズファイアー */
+    { 17, DM_TECHNIQUE_0038, 972, 2 }, /* シャウトモンX4S: クロスレッド＆ブルー */
+    { 17, DM_TECHNIQUE_0039, 973, 3 }, /* シャウトモンX4S: ビクトリーブレイブ */
+    { 18, DM_TECHNIQUE_0040, 974, 1 }, /* シャウトモンX3SD: アシッドタイフーン */
+    { 18, DM_TECHNIQUE_0041, 975, 2 }, /* シャウトモンX3SD: ビリオンスタブ */
+    { 19, DM_TECHNIQUE_0042, 976, 1 }, /* シャウトモンX3GM: ワイルドバーニング */
+    { 19, DM_TECHNIQUE_0043, 977, 2 }, /* シャウトモンX3GM: ブリリアンスダガー */
+    { 19, DM_TECHNIQUE_0044, 978, 3 }, /* シャウトモンX3GM: ブレス・オブ・ペルーン */
+    { 20, DM_TECHNIQUE_0045, 979, 1 }, /* アズダルモン: トマホークストライク */
+    { 20, DM_TECHNIQUE_0046, 980, 2 }, /* アズダルモン: トライカーヴレイン */
+    { 20, DM_TECHNIQUE_0047, 981, 3 }, /* アズダルモン: トリニティライトニング */
+    { 21, DM_TECHNIQUE_0048, 982, 1 }, /* テングモン: 魔縁斬蹴撃（まえんざんしゅうげき） */
+    { 21, DM_TECHNIQUE_0049, 983, 2 }, /* テングモン: 尊天大烈風（そんてんだいれっぷう） */
+    { 22, DM_TECHNIQUE_0050, 984, 1 }, /* アマテラスモン: 厳之御魂（いづのみたま） */
+    { 22, DM_TECHNIQUE_0051, 985, 2 }, /* アマテラスモン: 六合照徹閃（りくごうしょうてつせん） */
+    { 23, DM_TECHNIQUE_0052, 986, 1 }, /* エンマモン: 浄玻璃鏡(じょうはりのかがみ) */
+    { 23, DM_TECHNIQUE_0053, 987, 2 }, /* エンマモン: 閻羅王降誕（えんらおうごうたん） */
+    { 24, DM_TECHNIQUE_0054, 988, 1 }, /* セイテンゴクウモン: 火眼金睛（かがんきんせい） */
+    { 24, DM_TECHNIQUE_0055, 989, 2 }, /* セイテンゴクウモン: 八戒炎天撃（はっかいえんてんげき） */
+    { 24, DM_TECHNIQUE_0056, 990, 3 }, /* セイテンゴクウモン: 悟浄水天葬（ごじょうすいてんそう） */
+    { 24, DM_TECHNIQUE_0057, 991, 4 }, /* セイテンゴクウモン: 超大聖雷天砲（ちょうたいせいらいてんほう） */
+    { 25, DM_TECHNIQUE_0058, 992, 1 }, /* エクスマキナモン: エスカトン */
+    { 26, DM_TECHNIQUE_0059, 993, 1 }, /* ダルフォモン: プロフェットオブエリヤ */
+    { 26, DM_TECHNIQUE_0060, 994, 2 }, /* ダルフォモン: ジェイルマオン */
+    { 26, DM_TECHNIQUE_0061, 995, 3 }, /* ダルフォモン: ブルータルヘイロウ */
+    { 27, DM_TECHNIQUE_0062, 996, 1 }, /* シシマモン: 光爪神楽（こうそうかぐら） */
+    { 27, DM_TECHNIQUE_0063, 997, 2 }, /* シシマモン: 魔祓灼光（まふつのしゃっこう） */
+    { 28, DM_TECHNIQUE_0064, 998, 1 }, /* ダルマモン: 猛進火達磨（もうしんひだるま） */
+    { 28, DM_TECHNIQUE_0065, 999, 2 }, /* ダルマモン: 断災達磨落とし（だんさいだるまおとし） */
+    { 29, DM_TECHNIQUE_0066, 1000, 1 }, /* ランフォモン: クリスタルキャノン */
+    { 29, DM_TECHNIQUE_0067, 1001, 2 }, /* ランフォモン: ハンマーストライク */
+    { 29, DM_TECHNIQUE_0068, 1002, 3 }, /* ランフォモン: ノーホープフォール */
+    { 29, DM_TECHNIQUE_0069, 1003, 4 }, /* ランフォモン: クリスタルレイン */
+    { 30, DM_TECHNIQUE_0070, 1004, 1 }, /* クロノモン：デストロイモード: フィンガーボム */
+    { 30, DM_TECHNIQUE_0071, 1005, 2 }, /* クロノモン：デストロイモード: ホーリーフレア */
+    { 30, DM_TECHNIQUE_0072, 1006, 3 }, /* クロノモン：デストロイモード: クロノデヴォリューション */
+    { 31, DM_TECHNIQUE_0071, 1005, 1 }, /* クロノモン：ホーリーモード: ホーリーフレア */
+    { 31, DM_TECHNIQUE_0073, 1007, 2 }, /* クロノモン：ホーリーモード: クロノスクロップ */
+    { 32, DM_TECHNIQUE_0074, 1008, 1 }, /* ブテンモン: 日輪の舞 */
+    { 32, DM_TECHNIQUE_0075, 1009, 2 }, /* ブテンモン: 暁光一閃 */
+    { 33, DM_TECHNIQUE_0076, 1010, 1 }, /* ブライモン: ツバメ二枚返し */
+    { 33, DM_TECHNIQUE_0077, 1011, 2 }, /* ブライモン: 秘剣・飛鳥落とし */
+    { 34, DM_TECHNIQUE_0078, 1012, 1 }, /* ヒョコモン: 唐竹割り */
+    { 34, DM_TECHNIQUE_0079, 1013, 2 }, /* ヒョコモン: 秘剣ピヨピヨ斬り */
+    { 35, DM_TECHNIQUE_0080, 1014, 1 }, /* チッチモン: ピヨピヨ */
+    { 36, DM_TECHNIQUE_0081, 1015, 1 }, /* ゾンビプルートモン: ハザードホールド */
+    { 36, DM_TECHNIQUE_0082, 1016, 2 }, /* ゾンビプルートモン: ヘルズスライス */
+    { 36, DM_TECHNIQUE_0083, 1017, 3 }, /* ゾンビプルートモン: マリオネットアボミネーション */
+    { 37, DM_TECHNIQUE_0084, 1018, 1 }, /* マネキモン: 小判振舞い */
+    { 37, DM_TECHNIQUE_0085, 1019, 2 }, /* マネキモン: 招敵来来拳（しょうてきらいらいけん） */
+    { 38, DM_TECHNIQUE_0086, 1020, 1 }, /* ハクバモン: 劈龍爪（へきりゅうそう） */
+    { 38, DM_TECHNIQUE_0087, 1021, 2 }, /* ハクバモン: 焔明珠（えんめいしゅ） */
+    { 39, DM_TECHNIQUE_0088, 1022, 1 }, /* ワンコモン: 豪狛毬（ごうはくきゅう） */
+    { 39, DM_TECHNIQUE_0089, 1023, 2 }, /* ワンコモン: 石土之体（いしづちのてい） */
+    { 40, DM_TECHNIQUE_0090, 1024, 1 }, /* ガサモン: 編笠スピン斬り */
+    { 40, DM_TECHNIQUE_0091, 1025, 2 }, /* ガサモン: 粘溶液（ねんようえき） */
+    { 41, DM_TECHNIQUE_0092, 1026, 1 }, /* ターキモン: 猛冲角（もうちゅうかく） */
+    { 41, DM_TECHNIQUE_0093, 1027, 2 }, /* ターキモン: 岩衝弾（がんしょうだん） */
+    { 42, DM_TECHNIQUE_0094, 1028, 1 }, /* フージャモン: 泿水弾（ぎんすいだん） */
+    { 42, DM_TECHNIQUE_0095, 1029, 2 }, /* フージャモン: 蛟牙（こうが） */
+    { 43, DM_TECHNIQUE_0096, 1030, 1 }, /* カカモン: 猿攻回転弾（えんこうかいてんだん） */
+    { 43, DM_TECHNIQUE_0097, 1031, 2 }, /* カカモン: 金絲吼（きんしこう） */
+    { 44, DM_TECHNIQUE_0098, 1032, 1 }, /* アルマリザモン: ニュートロンレイザー */
+    { 44, DM_TECHNIQUE_0099, 1033, 2 }, /* アルマリザモン: ニュートロンデフューザー */
+    { 44, DM_TECHNIQUE_0100, 1034, 3 }, /* アルマリザモン: ニュートロンブレイド */
+    { 44, DM_TECHNIQUE_0101, 1035, 4 }, /* アルマリザモン: デスロールプレス */
+    { 45, DM_TECHNIQUE_0102, 1036, 1 }, /* オニビモン: 燐火（りんか） */
+    { 46, DM_TECHNIQUE_0103, 1037, 1 }, /* トモリモン: ヒノタマ */
+    { 47, DM_TECHNIQUE_0104, 1038, 1 }, /* モココモン: 黏雲（ねんうん） */
+    { 48, DM_TECHNIQUE_0105, 1039, 1 }, /* フカモン: 呼雲（こうん） */
+    { 49, DM_TECHNIQUE_0106, 1040, 1 }, /* パラレルモン: アブソーベント・バン */
+    { 49, DM_TECHNIQUE_0107, 1041, 2 }, /* パラレルモン: エンドレストランス */
+    { 50, DM_TECHNIQUE_0108, 1042, 1 }, /* ナイトキロプモン: プロビデンススキャン */
+    { 50, DM_TECHNIQUE_0109, 1043, 2 }, /* ナイトキロプモン: シャドウアーツ */
+    { 50, DM_TECHNIQUE_0110, 1044, 3 }, /* ナイトキロプモン: ジャイアントラング */
+    { 50, DM_TECHNIQUE_0111, 1045, 4 }, /* ナイトキロプモン: メズマバースト */
+    { 51, DM_TECHNIQUE_0112, 1046, 1 }, /* スティラコモン: クリムゾンクレスト */
+    { 51, DM_TECHNIQUE_0113, 1047, 2 }, /* スティラコモン: ドレッドノートスタンピード */
+    { 52, DM_TECHNIQUE_0114, 1048, 1 }, /* タオティエモン: 九淵貪角(きゅうえんどんかく) */
+    { 52, DM_TECHNIQUE_0115, 1049, 2 }, /* タオティエモン: 穢吐餓(えとが) */
+    { 52, DM_TECHNIQUE_0116, 1050, 3 }, /* タオティエモン: 饕飢爆（とうきばく） */
+    { 53, DM_TECHNIQUE_0117, 1051, 1 }, /* クレニアムモン+アンヴァルモン: ルースレスチャージ */
+    { 54, DM_TECHNIQUE_0118, 1052, 1 }, /* アンヴァルモン: ディスレンジホーン */
+    { 54, DM_TECHNIQUE_0119, 1053, 2 }, /* アンヴァルモン: ヴェインアンサー */
+    { 55, DM_TECHNIQUE_0120, 1054, 1 }, /* メタトロモン: アイアンヘイロウ */
+    { 55, DM_TECHNIQUE_0121, 1055, 2 }, /* メタトロモン: アイズオブエノク */
+    { 55, DM_TECHNIQUE_0122, 1056, 3 }, /* メタトロモン: メタトロニオス */
+    { 56, DM_TECHNIQUE_0123, 1057, 1 }, /* グレートグリズモン: 闘魂爪（とうこんそう） */
+    { 56, DM_TECHNIQUE_0124, 1058, 2 }, /* グレートグリズモン: 爆霧（ばくぎり） */
+    { 56, DM_TECHNIQUE_0125, 1059, 3 }, /* グレートグリズモン: GGS（ジージーエス） */
+    { 57, DM_TECHNIQUE_0126, 1060, 1 }, /* タイタモン+スカルバルキモン: 千塵鬼神斬（せんじんきしんざん） */
+    { 58, DM_TECHNIQUE_0127, 1061, 1 }, /* クーガモン: ルースレスファング */
+    { 58, DM_TECHNIQUE_0128, 1062, 2 }, /* クーガモン: ルースレスクロー */
+    { 58, DM_TECHNIQUE_0129, 1063, 3 }, /* クーガモン: ラースロア */
+    { 59, DM_TECHNIQUE_0130, 1064, 1 }, /* マスターブリンプモン: ツェッペリンサーカス */
+    { 59, DM_TECHNIQUE_0131, 1065, 2 }, /* マスターブリンプモン: デアデビルブレイク */
+    { 60, DM_TECHNIQUE_0132, 1066, 1 }, /* ハイエモン: カーズバイト */
+    { 60, DM_TECHNIQUE_0133, 1067, 2 }, /* ハイエモン: リリースハウリング */
+    { 61, DM_TECHNIQUE_0134, 1068, 1 }, /* ムラサメモン: 豪ノ斬・叢時雨（ごうのざん・むらしぐれ） */
+    { 61, DM_TECHNIQUE_0135, 1069, 2 }, /* ムラサメモン: 柔ノ斬・月時雨（じゅうのざん・つきしぐれ） */
+    { 61, DM_TECHNIQUE_0136, 1070, 3 }, /* ムラサメモン: 終ノ斬・哭雨（ついのざん・こくう） */
+    { 62, DM_TECHNIQUE_0137, 1071, 1 }, /* ウルヴァモン: ラピッドバースト */
+    { 62, DM_TECHNIQUE_0138, 1072, 2 }, /* ウルヴァモン: スキャッターロケット */
+    { 62, DM_TECHNIQUE_0139, 1073, 3 }, /* ウルヴァモン: バージャースラッシュ */
+    { 62, DM_TECHNIQUE_0140, 1074, 4 }, /* ウルヴァモン: トムボーイブレイズ */
+    { 63, DM_TECHNIQUE_0141, 1075, 1 }, /* キロプモン: パラライズエコー */
+    { 63, DM_TECHNIQUE_0142, 1076, 2 }, /* キロプモン: アナライズエコー */
+    { 63, DM_TECHNIQUE_0143, 1077, 3 }, /* キロプモン: キュリアスアイズ */
+    { 63, DM_TECHNIQUE_0144, 1078, 4 }, /* キロプモン: コンデンスドエコー */
+    { 64, DM_TECHNIQUE_0145, 1079, 1 }, /* プリスティモン: プリショット */
+    { 64, DM_TECHNIQUE_0146, 1080, 2 }, /* プリスティモン: スタブクロー */
+    { 64, DM_TECHNIQUE_0147, 1081, 3 }, /* プリスティモン: テイルスラップ */
+    { 65, DM_TECHNIQUE_0148, 1082, 1 }, /* デュラハモン: ベルシラックエッジ */
+    { 65, DM_TECHNIQUE_0149, 1083, 2 }, /* デュラハモン: スリーピーホロウ */
+    { 66, DM_TECHNIQUE_0150, 1084, 1 }, /* ゲッコーモン: スマッシュビート */
+    { 66, DM_TECHNIQUE_0151, 1085, 2 }, /* ゲッコーモン: ブレイクスロー */
+    { 66, DM_TECHNIQUE_0152, 1086, 3 }, /* ゲッコーモン: スイングタックル */
+    { 67, DM_TECHNIQUE_0153, 1087, 1 }, /* ケッコモン: ビートリック */
+    { 68, DM_TECHNIQUE_0154, 1088, 1 }, /* ケコモン: 粘着性の泡 */
+    { 69, DM_TECHNIQUE_0155, 1089, 1 }, /* マグネティックドラモン: ストーンレールガン */
+    { 69, DM_TECHNIQUE_0156, 1090, 2 }, /* マグネティックドラモン: エレクトリックコンプレッション */
+    { 69, DM_TECHNIQUE_0157, 1091, 3 }, /* マグネティックドラモン: マグネティックテンペスト */
+    { 70, DM_TECHNIQUE_0158, 1092, 1 }, /* マニューバモン: ブルータルエアロバティック */
+    { 70, DM_TECHNIQUE_0159, 1093, 2 }, /* マニューバモン: フォルゴーレ */
+    { 71, DM_TECHNIQUE_0160, 1094, 1 }, /* ターボモン: ブルータルホイール */
+    { 71, DM_TECHNIQUE_0161, 1095, 2 }, /* ターボモン: クラッシュギアスピン */
+    { 72, DM_TECHNIQUE_0162, 1096, 1 }, /* ニャブートモン: グラビトンネコキック */
+    { 72, DM_TECHNIQUE_0163, 1097, 2 }, /* ニャブートモン: カラバスペシャル */
+    { 72, DM_TECHNIQUE_0164, 1098, 3 }, /* ニャブートモン: 秘剣キャット・ザ・ナインライブス */
+    { 73, DM_TECHNIQUE_0165, 1099, 1 }, /* イーフーモン: 斬空(ざんくう) */
+    { 73, DM_TECHNIQUE_0166, 1100, 2 }, /* イーフーモン: 刃羽颪(じんばおろし) */
+    { 73, DM_TECHNIQUE_0167, 1101, 3 }, /* イーフーモン: 窮牙嵐断襲(きゅうがらんだんしゅう) */
+    { 74, DM_TECHNIQUE_0168, 1102, 1 }, /* アリエモン: 絡縛藻紐（らくばくそうちゅう） */
+    { 74, DM_TECHNIQUE_0169, 1103, 2 }, /* アリエモン: 波濤深槍（はとうしんそう） */
+    { 74, DM_TECHNIQUE_0170, 1104, 3 }, /* アリエモン: 浄流海癒（じょうりゅうかいゆ） */
+    { 75, DM_TECHNIQUE_0171, 1105, 1 }, /* スカルシードラモン: サンダージャベリン */
+    { 75, DM_TECHNIQUE_0172, 1106, 2 }, /* スカルシードラモン: デッドロール */
+    { 76, DM_TECHNIQUE_0173, 1107, 1 }, /* シャークモン: 一斉砲撃 */
+    { 76, DM_TECHNIQUE_0174, 1108, 2 }, /* シャークモン: プルトダモン */
+    { 76, DM_TECHNIQUE_0175, 1109, 3 }, /* シャークモン: ファングチャージ */
+    { 77, DM_TECHNIQUE_0176, 1110, 1 }, /* カグヤモン: 武獲物語（たけとりものがたり） */
+    { 77, DM_TECHNIQUE_0177, 1111, 2 }, /* カグヤモン: 月夜之迎（つきよのむかえ） */
+    { 78, DM_TECHNIQUE_0178, 1112, 1 }, /* カラクルモン: 骸繰艶舞・鉢かづき */
+    { 78, DM_TECHNIQUE_0179, 1113, 2 }, /* カラクルモン: 初瀬のおもてなし */
+    { 79, DM_TECHNIQUE_0180, 1114, 1 }, /* コケシモン: ダンマクエンジュ */
+    { 79, DM_TECHNIQUE_0181, 1115, 2 }, /* コケシモン: キデコノイスクミ */
+    { 80, DM_TECHNIQUE_0182, 1116, 1 }, /* ハニモン: ハニワフラッシュ */
+    { 80, DM_TECHNIQUE_0183, 1117, 2 }, /* ハニモン: コフンタックル */
+    { 81, DM_TECHNIQUE_0184, 1118, 1 }, /* モッキンバーモン: アイアンインヘイラー */
+    { 81, DM_TECHNIQUE_0185, 1119, 2 }, /* モッキンバーモン: トライエアボッツ */
+    { 82, DM_TECHNIQUE_0186, 1120, 1 }, /* ミュールモン: アイアンギャロップ */
+    { 82, DM_TECHNIQUE_0187, 1121, 2 }, /* ミュールモン: ロデオミサイル */
+    { 83, DM_TECHNIQUE_0188, 1122, 1 }, /* マキナモン: ツインバブル */
+    { 84, DM_TECHNIQUE_0189, 1123, 1 }, /* ナタモン：クリムゾンモード: 斬砍双刃撃 */
+    { 84, DM_TECHNIQUE_0190, 1124, 2 }, /* ナタモン：クリムゾンモード: 封神六蓮華 */
+    { 85, DM_TECHNIQUE_0191, 1125, 1 }, /* シャガラモン: 浪濤扇（ろうとうせん） */
+    { 85, DM_TECHNIQUE_0192, 1126, 2 }, /* シャガラモン: 鹹海炸滄陣（かんかいさくそうじん） */
+    { 85, DM_TECHNIQUE_0193, 1127, 3 }, /* シャガラモン: 蒼纏龍神牙（そうてんりゅうじんが） */
+    { 86, DM_TECHNIQUE_0194, 1128, 1 }, /* メデューサモン: バイティングブート */
+    { 86, DM_TECHNIQUE_0195, 1129, 2 }, /* メデューサモン: アイズオブゴルゴーン */
+    { 86, DM_TECHNIQUE_0196, 1130, 3 }, /* メデューサモン: レイジングサーペンタイン */
+    { 87, DM_TECHNIQUE_0197, 1131, 1 }, /* ラミアモン: ヴェノブレラ */
+    { 87, DM_TECHNIQUE_0198, 1132, 2 }, /* ラミアモン: スプラッシュトキシン */
+    { 88, DM_TECHNIQUE_0199, 1133, 1 }, /* ネクロモン: ソウルストライカー */
+    { 88, DM_TECHNIQUE_0200, 1134, 2 }, /* ネクロモン: アパリションレギオン */
+    { 89, DM_TECHNIQUE_0201, 1135, 1 }, /* ジョウガモン: 墜月衝（ついげつしょう） */
+    { 89, DM_TECHNIQUE_0202, 1136, 2 }, /* ジョウガモン: 蛾眉截波（がびせっぱ） */
+    { 89, DM_TECHNIQUE_0203, 1137, 3 }, /* ジョウガモン: 太陰皓光（たいいんこうこう） */
+    { 90, DM_TECHNIQUE_0204, 1138, 1 }, /* ピラミディモン: ゾフルカーブース */
+    { 90, DM_TECHNIQUE_0205, 1139, 2 }, /* ピラミディモン: アペシュイカーブ */
+    { 90, DM_TECHNIQUE_0206, 1140, 3 }, /* ピラミディモン: ラアナハムシーン */
+    { 91, DM_TECHNIQUE_0207, 1141, 1 }, /* プロガノモン: トリコンビットデモリッシャー */
+    { 91, DM_TECHNIQUE_0208, 1142, 2 }, /* プロガノモン: ドリルエミッション */
+    { 92, DM_TECHNIQUE_0209, 1143, 1 }, /* ランドラモン: グラウンドスパイク */
+    { 92, DM_TECHNIQUE_0210, 1144, 2 }, /* ランドラモン: デザートアビス */
+    { 93, DM_TECHNIQUE_0211, 1145, 1 }, /* インビジモン: インビジブルカッター */
+    { 93, DM_TECHNIQUE_0212, 1146, 2 }, /* インビジモン: スーパーロケットフィスト */
+    { 93, DM_TECHNIQUE_0213, 1147, 3 }, /* インビジモン: アルティメットブレーザー */
+    { 94, DM_TECHNIQUE_0214, 1148, 1 }, /* オブリビモン: ウェイストアブダクション */
+    { 94, DM_TECHNIQUE_0215, 1149, 2 }, /* オブリビモン: アナイデントファイド・エアリアル・フェノメノン */
+    { 95, DM_TECHNIQUE_0216, 1150, 1 }, /* ディメトロモン: ルミナスヒート */
+    { 95, DM_TECHNIQUE_0217, 1151, 2 }, /* ディメトロモン: セイリングスピン */
+    { 96, DM_TECHNIQUE_0218, 1152, 1 }, /* リュウグウモン: 儀来四海招（にらいしかいしょう） */
+    { 96, DM_TECHNIQUE_0219, 1153, 2 }, /* リュウグウモン: 海神之祓（わだつみのはらえ） */
+    { 97, DM_TECHNIQUE_0220, 1154, 1 }, /* ケルヌモン: ケルティックバインド */
+    { 97, DM_TECHNIQUE_0221, 1155, 2 }, /* ケルヌモン: スキャッターゴームグラス */
+    { 98, DM_TECHNIQUE_0222, 1156, 1 }, /* マリンブルモン: ハイドロデモリッシャー */
+    { 98, DM_TECHNIQUE_0223, 1157, 2 }, /* マリンブルモン: トキシックスプレッド */
+    { 99, DM_TECHNIQUE_0224, 1158, 1 }, /* エリザモン: フリルドカッター */
+    { 99, DM_TECHNIQUE_0225, 1159, 2 }, /* エリザモン: ヘリコプテイル */
+    { 100, DM_TECHNIQUE_0226, 1160, 1 }, /* ナタモン: 乾坤圏 */
+    { 100, DM_TECHNIQUE_0227, 1161, 2 }, /* ナタモン: 爆迅炎戟破 */
+    { 101, DM_TECHNIQUE_0228, 1162, 1 }, /* ダイナモン: バーニングエンド */
+    { 101, DM_TECHNIQUE_0229, 1163, 2 }, /* ダイナモン: ダイナブレス */
+    { 102, DM_TECHNIQUE_0230, 1164, 1 }, /* スカーディモン: スノースワッター */
+    { 102, DM_TECHNIQUE_0231, 1165, 2 }, /* スカーディモン: スノーマンズダンス */
+    { 102, DM_TECHNIQUE_0232, 1166, 3 }, /* スカーディモン: レイジングアバランチ */
+    { 103, DM_TECHNIQUE_0233, 1167, 1 }, /* ポーラーベアモン: コークスクリューキック */
+    { 103, DM_TECHNIQUE_0234, 1168, 2 }, /* ポーラーベアモン: ウィンターガナリー */
+    { 104, DM_TECHNIQUE_0235, 1169, 1 }, /* イーランモン：ブラストモード: 万象逸貫 */
+    { 104, DM_TECHNIQUE_0236, 1170, 2 }, /* イーランモン：ブラストモード: 天眼顕聖 */
+    { 105, DM_TECHNIQUE_0237, 1171, 1 }, /* クイーンビーモン: アクセルスティンガー */
+    { 105, DM_TECHNIQUE_0238, 1172, 2 }, /* クイーンビーモン: ホーネットイレイザー */
+    { 106, DM_TECHNIQUE_0239, 1173, 1 }, /* ヴェスパモン: マッハスティンガー */
+    { 106, DM_TECHNIQUE_0240, 1174, 2 }, /* ヴェスパモン: ビーファランクス */
+    { 107, DM_TECHNIQUE_0241, 1175, 1 }, /* フォージビーモン: トルクスティンガー */
+    { 107, DM_TECHNIQUE_0242, 1176, 2 }, /* フォージビーモン: バンブルウェルダー */
+    { 108, DM_TECHNIQUE_0243, 1177, 1 }, /* ヘヴィーメタルドラモン: ブラックサバス */
+    { 108, DM_TECHNIQUE_0244, 1178, 2 }, /* ヘヴィーメタルドラモン: ブルーマーダーフレイム */
+    { 109, DM_TECHNIQUE_0245, 1179, 1 }, /* ラウドモン: メタリカエッジ */
+    { 109, DM_TECHNIQUE_0246, 1180, 2 }, /* ラウドモン: ディープパープルブラスター */
+    { 110, DM_TECHNIQUE_0247, 1181, 1 }, /* パンクモン: ブリッツクリーグバップ */
+    { 110, DM_TECHNIQUE_0248, 1182, 2 }, /* パンクモン: アナーキストフレイム */
+    { 111, DM_TECHNIQUE_0249, 1183, 1 }, /* タクトウモン：ラースモード: 龍閃乱撃 */
+    { 111, DM_TECHNIQUE_0250, 1184, 2 }, /* タクトウモン：ラースモード: 毘沙門八極殲陣 */
+    { 112, DM_TECHNIQUE_0251, 1185, 1 }, /* イーランモン: 鷹尖円舞 */
+    { 112, DM_TECHNIQUE_0252, 1186, 2 }, /* イーランモン: 招来・哮天犬 */
+    { 113, DM_TECHNIQUE_0253, 1187, 1 }, /* サンドリモン: マリッジストライク */
+    { 113, DM_TECHNIQUE_0254, 1188, 2 }, /* サンドリモン: ノーブルファミリアーツ */
+    { 113, DM_TECHNIQUE_0255, 1189, 3 }, /* サンドリモン: プリズムデイトブレイク */
+    { 114, DM_TECHNIQUE_0256, 1190, 1 }, /* シャペロモン: アップルフォーユー */
+    { 114, DM_TECHNIQUE_0257, 1191, 2 }, /* シャペロモン: クリムゾンリッパー */
+    { 114, DM_TECHNIQUE_0258, 1192, 3 }, /* シャペロモン: マーシーバスケット */
+    { 115, DM_TECHNIQUE_0259, 1193, 1 }, /* ゼファーガモン: ゲイルブレイバー */
+    { 115, DM_TECHNIQUE_0260, 1194, 2 }, /* ゼファーガモン: アネモイエンブレイス */
+    { 115, DM_TECHNIQUE_0261, 1195, 3 }, /* ゼファーガモン: ディバインテンペスト */
+    { 116, DM_TECHNIQUE_0262, 1196, 1 }, /* グランゲイルモン: ドラゴニックストーム */
+    { 116, DM_TECHNIQUE_0263, 1197, 2 }, /* グランゲイルモン: ウィングトルネード */
+    { 117, DM_TECHNIQUE_0264, 1198, 1 }, /* フラフィモン: バーディーヘッド */
+    { 118, DM_TECHNIQUE_0265, 1199, 1 }, /* ヨークモン: 泡 */
+    { 119, DM_TECHNIQUE_0266, 1200, 1 }, /* カリスモン: ディープフォレスト */
+    { 119, DM_TECHNIQUE_0267, 1201, 2 }, /* カリスモン: ロデオバレット */
+    { 120, DM_TECHNIQUE_0268, 1202, 1 }, /* トラロックモン: ネトティリズトリ */
+    { 120, DM_TECHNIQUE_0269, 1203, 2 }, /* トラロックモン: ナウイキアウィトル */
+    { 121, DM_TECHNIQUE_0270, 1204, 1 }, /* シューシューモン: ローリングストンパー */
+    { 121, DM_TECHNIQUE_0271, 1205, 2 }, /* シューシューモン: ドングリボム */
+    { 122, DM_TECHNIQUE_0272, 1206, 1 }, /* シューモン: ワンダーストンプ */
+    { 122, DM_TECHNIQUE_0273, 1207, 2 }, /* シューモン: プチニードル */
+    { 123, DM_TECHNIQUE_0274, 1208, 1 }, /* ゲイルモン: ハリケーンスライサー */
+    { 123, DM_TECHNIQUE_0275, 1209, 2 }, /* ゲイルモン: トルネードスロワー */
+    { 124, DM_TECHNIQUE_0276, 1210, 1 }, /* プテロモン: ウィンドスライサー */
+    { 124, DM_TECHNIQUE_0277, 1211, 2 }, /* プテロモン: ランブルクロー */
+    { 125, DM_TECHNIQUE_0278, 1212, 1 }, /* タクトウモン: 天星斬 */
+    { 125, DM_TECHNIQUE_0279, 1213, 2 }, /* タクトウモン: 鉄天摧砕 */
+    { 126, DM_TECHNIQUE_0280, 1214, 1 }, /* フェンリルガモン：建御雷神(タケミカヅチ): 終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ） */
+    { 126, DM_TECHNIQUE_0281, 1215, 2 }, /* フェンリルガモン：建御雷神(タケミカヅチ): 絶極舞刀建御雷神（ゼツゴクブトウタケミカヅチ） */
+    { 127, DM_TECHNIQUE_0282, 1216, 1 }, /* ビッグウッコモン: ヴァイオレントパニッシャー */
+    { 128, DM_TECHNIQUE_0283, 1217, 1 }, /* ウッコモン: ワールプールスピン */
+    { 128, DM_TECHNIQUE_0284, 1218, 2 }, /* ウッコモン: ライアードリーム */
+    { 129, DM_TECHNIQUE_0285, 1219, 1 }, /* ディージャンモン: 凶旋壊（きょうせんかい） */
+    { 129, DM_TECHNIQUE_0286, 1220, 2 }, /* ディージャンモン: 咒煉衝刻（じゅれんしょうこく） */
+    { 129, DM_TECHNIQUE_0287, 1221, 3 }, /* ディージャンモン: 渾沌亜空虚（こんとんあくうきょ） */
+    { 130, DM_TECHNIQUE_0288, 1222, 1 }, /* シンテンモン: 斧乗炎怒（ふじょうえんど） */
+    { 130, DM_TECHNIQUE_0289, 1223, 2 }, /* シンテンモン: 盾射轟哀（じゅんせきごうあい） */
+    { 130, DM_TECHNIQUE_0290, 1224, 3 }, /* シンテンモン: 雷鬧（らいどう) */
+    { 131, DM_TECHNIQUE_0291, 1225, 1 }, /* リェンフーモン: 鉄壁相（てっぺきのそう） */
+    { 131, DM_TECHNIQUE_0292, 1226, 2 }, /* リェンフーモン: 献身相（けんしんのそう） */
+    { 131, DM_TECHNIQUE_0293, 1227, 3 }, /* リェンフーモン: 九種九面撃（きゅうしゅきゅうめんげき） */
+    { 132, DM_TECHNIQUE_0294, 1228, 1 }, /* ドミニモン: ファイナルエクスキャリバー */
+    { 132, DM_TECHNIQUE_0295, 1229, 2 }, /* ドミニモン: ゼロヘブンズ */
+    { 132, DM_TECHNIQUE_0296, 1230, 3 }, /* ドミニモン: ディヴォーションフィールド */
+    { 133, DM_TECHNIQUE_0297, 1231, 1 }, /* アルケーエンジェモン: セイントレギオン */
+    { 133, DM_TECHNIQUE_0298, 1232, 2 }, /* アルケーエンジェモン: ヘブンズフレイム */
+    { 133, DM_TECHNIQUE_0299, 1233, 3 }, /* アルケーエンジェモン: ブレイブオーラ */
+    { 134, DM_TECHNIQUE_0300, 1234, 1 }, /* ルクスモン: ピコナックル */
+    { 134, DM_TECHNIQUE_0301, 1235, 2 }, /* ルクスモン: クラウドバリア */
+    { 135, DM_TECHNIQUE_0302, 1236, 1 }, /* ファンロンモン：ルインモード: 無極 */
+    { 135, DM_TECHNIQUE_0303, 1237, 2 }, /* ファンロンモン：ルインモード: 晦冥葬 */
+    { 136, DM_TECHNIQUE_0304, 1238, 1 }, /* ムンモン: ムーンライトバブル */
+    { 137, DM_TECHNIQUE_0305, 1239, 1 }, /* サンモン: サンライトバブル */
+    { 138, DM_TECHNIQUE_0306, 1240, 1 }, /* ブリガードラモン: ジェノサイドレイン */
+    { 138, DM_TECHNIQUE_0307, 1241, 2 }, /* ブリガードラモン: エクサデストロイヤー */
+    { 139, DM_TECHNIQUE_0308, 1242, 1 }, /* ハイコマンドラモン: DCDグレネード */
+    { 139, DM_TECHNIQUE_0309, 1243, 2 }, /* ハイコマンドラモン: デストロイチャージ */
+    { 140, DM_TECHNIQUE_0310, 1244, 1 }, /* フェンリルガモン: ラグナロクハウリング */
+    { 140, DM_TECHNIQUE_0311, 1245, 2 }, /* フェンリルガモン: ヨトゥンヘイムゲイル */
+    { 140, DM_TECHNIQUE_0312, 1246, 3 }, /* フェンリルガモン: フローズヴィトニル */
+    { 141, DM_TECHNIQUE_0313, 1247, 1 }, /* ヘルガルモン: ハウリングバースト */
+    { 141, DM_TECHNIQUE_0314, 1248, 2 }, /* ヘルガルモン: インフェルノクロー */
+    { 141, DM_TECHNIQUE_0315, 1249, 3 }, /* ヘルガルモン: ハティエンブレイス */
+    { 142, DM_TECHNIQUE_0316, 1250, 1 }, /* ソルガルモン: プロミネンスレーザー */
+    { 142, DM_TECHNIQUE_0317, 1251, 2 }, /* ソルガルモン: イラプションハウリング */
+    { 142, DM_TECHNIQUE_0318, 1252, 3 }, /* ソルガルモン: スコルレイジ */
+    { 143, DM_TECHNIQUE_0319, 1253, 1 }, /* カーゴドラモン: サプレッションストライク */
+    { 143, DM_TECHNIQUE_0320, 1254, 2 }, /* カーゴドラモン: スローターブレード */
+    { 144, DM_TECHNIQUE_0321, 1255, 1 }, /* ルガルモン: ハウリングバーナー */
+    { 144, DM_TECHNIQUE_0322, 1256, 2 }, /* ルガルモン: フレイムブロウ */
+    { 145, DM_TECHNIQUE_0323, 1257, 1 }, /* バウモン: パピースパーク */
+    { 146, DM_TECHNIQUE_0324, 1258, 1 }, /* フサモン: パピーノイズ */
+    { 147, DM_TECHNIQUE_0325, 1259, 1 }, /* クオンタモン: アンリミテッドジャーニー */
+    { 147, DM_TECHNIQUE_0326, 1260, 2 }, /* クオンタモン: ヘイジータイム */
+    { 148, DM_TECHNIQUE_0327, 1261, 1 }, /* ルガモン: ハウリングファイア */
+    { 148, DM_TECHNIQUE_0328, 1262, 2 }, /* ルガモン: スパイラルバイト */
+    { 149, DM_TECHNIQUE_0329, 1263, 1 }, /* プロキシマモン: エクスティンクションクラウド */
+    { 149, DM_TECHNIQUE_0330, 1264, 2 }, /* プロキシマモン: ライトオブリクリエイション */
+    { 150, DM_TECHNIQUE_0331, 1265, 1 }, /* アルクトゥルスモン: ブラックデス */
+    { 150, DM_TECHNIQUE_0332, 1266, 2 }, /* アルクトゥルスモン: ブラックコンフェッション */
+    { 151, DM_TECHNIQUE_0333, 1267, 1 }, /* グレイナイツモン: ギガーススパイラル */
+    { 151, DM_TECHNIQUE_0334, 1268, 2 }, /* グレイナイツモン: ヘルインシネレート */
+    { 151, DM_TECHNIQUE_0335, 1269, 3 }, /* グレイナイツモン: デスデストロイヤー */
+    { 152, DM_TECHNIQUE_0336, 1270, 1 }, /* ザンメツモン: 伍連断霊斬（ごれんだんれいざん） */
+    { 152, DM_TECHNIQUE_0337, 1271, 2 }, /* ザンメツモン: 伍重螺旋断（ごじゅうらせんだち） */
+    { 152, DM_TECHNIQUE_0338, 1272, 3 }, /* ザンメツモン: 獄門縛（ごくもんしばり） */
+    { 153, DM_TECHNIQUE_0339, 1273, 1 }, /* ボマーモン: コンボブラスト */
+    { 153, DM_TECHNIQUE_0340, 1274, 2 }, /* ボマーモン: リミットエクスプロージョン */
+    { 154, DM_TECHNIQUE_0341, 1275, 1 }, /* ギリードゥモン: トゥルーアイズ */
+    { 154, DM_TECHNIQUE_0342, 1276, 2 }, /* ギリードゥモン: コアシュート */
+    { 155, DM_TECHNIQUE_0343, 1277, 1 }, /* フウマモン: 燕（つばくろ） */
+    { 155, DM_TECHNIQUE_0344, 1278, 2 }, /* フウマモン: 舎利弗（しゃりほつ） */
+    { 155, DM_TECHNIQUE_0345, 1279, 3 }, /* フウマモン: 黄泉戻（よみもどし） */
+    { 156, DM_TECHNIQUE_0346, 1280, 1 }, /* クティーラモン: バッカルラッシュ */
+    { 156, DM_TECHNIQUE_0347, 1281, 2 }, /* クティーラモン: オーシャンヘル */
+    { 156, DM_TECHNIQUE_0348, 1282, 3 }, /* クティーラモン: アクアグラインダー */
+    { 157, DM_TECHNIQUE_0349, 1283, 1 }, /* レグルスモン: カリプバイト */
+    { 157, DM_TECHNIQUE_0350, 1284, 2 }, /* レグルスモン: ゲニアス */
+    { 157, DM_TECHNIQUE_0351, 1285, 3 }, /* レグルスモン: デッドエンドスパイク */
+    { 157, DM_TECHNIQUE_0352, 1286, 4 }, /* レグルスモン: グラントレース */
+    { 158, DM_TECHNIQUE_0353, 1287, 1 }, /* ラグナモン: ラグナロク・キャノン */
+    { 158, DM_TECHNIQUE_0354, 1288, 2 }, /* ラグナモン: ギムレットガン */
+    { 158, DM_TECHNIQUE_0355, 1289, 3 }, /* ラグナモン: スペイザー */
+    { 158, DM_TECHNIQUE_0356, 1290, 4 }, /* ラグナモン: シャトルシザーズ */
+    { 158, DM_TECHNIQUE_0357, 1291, 5 }, /* ラグナモン: サテライトバスター */
+    { 158, DM_TECHNIQUE_0358, 1292, 6 }, /* ラグナモン: フュージョナイズ */
+    { 159, DM_TECHNIQUE_0359, 1293, 1 }, /* デストロモン: 3連装砲 */
+    { 159, DM_TECHNIQUE_0360, 1294, 2 }, /* デストロモン: ジャガーノートブラスト */
+    { 159, DM_TECHNIQUE_0361, 1295, 3 }, /* デストロモン: ロングレンジバスターキャノン */
+    { 159, DM_TECHNIQUE_0358, 1292, 4 }, /* デストロモン: フュージョナイズ */
+    { 160, DM_TECHNIQUE_0362, 1296, 1 }, /* スナッチモン: ルインレーザー */
+    { 160, DM_TECHNIQUE_0363, 1297, 2 }, /* スナッチモン: トゥースピア */
+    { 160, DM_TECHNIQUE_0358, 1292, 3 }, /* スナッチモン: フュージョナイズ */
+    { 161, DM_TECHNIQUE_0364, 1298, 1 }, /* ベムモン: メッサークロー */
+    { 161, DM_TECHNIQUE_0358, 1292, 2 }, /* ベムモン: フュージョナイズ */
+    { 162, DM_TECHNIQUE_0365, 1299, 1 }, /* バアルモン（X抗体）: トゥーリブラスト */
+    { 162, DM_TECHNIQUE_0366, 1300, 2 }, /* バアルモン（X抗体）: ザイカミウチ */
+    { 162, DM_TECHNIQUE_0367, 1301, 3 }, /* バアルモン（X抗体）: アブソマーク */
+    { 163, DM_TECHNIQUE_0368, 1302, 1 }, /* アンフィモン: クリスタルフリーザー */
+    { 163, DM_TECHNIQUE_0369, 1303, 2 }, /* アンフィモン: アクアザンバー */
+    { 163, DM_TECHNIQUE_0370, 1304, 3 }, /* アンフィモン: ライバーンブレイク */
+    { 163, DM_TECHNIQUE_0371, 1305, 4 }, /* アンフィモン: アンブレディフェンダー */
+    { 164, DM_TECHNIQUE_0372, 1306, 1 }, /* ディルビットモン: トラスゲイン */
+    { 164, DM_TECHNIQUE_0373, 1307, 2 }, /* ディルビットモン: ボルジャーグ */
+    { 164, DM_TECHNIQUE_0374, 1308, 3 }, /* ディルビットモン: バックストラッシュ */
+    { 165, DM_TECHNIQUE_0375, 1309, 1 }, /* シリウスモン: フォトンブラスター */
+    { 165, DM_TECHNIQUE_0376, 1310, 2 }, /* シリウスモン: コスモブレード */
+    { 165, DM_TECHNIQUE_0377, 1311, 3 }, /* シリウスモン: ブレイクエーサー */
+    { 165, DM_TECHNIQUE_0378, 1312, 4 }, /* シリウスモン: プラネイトナックル */
+    { 166, DM_TECHNIQUE_0379, 1313, 1 }, /* シャイングレイモン： ルインモード: コロナブレイズソード */
+    { 166, DM_TECHNIQUE_0380, 1314, 2 }, /* シャイングレイモン： ルインモード: ファイナルシャイニングバースト */
+    { 166, DM_TECHNIQUE_0381, 1315, 3 }, /* シャイングレイモン： ルインモード: トリッドヴァイス */
+    { 167, DM_TECHNIQUE_0382, 1316, 1 }, /* シャンブルモン: スイーポア */
+    { 167, DM_TECHNIQUE_0383, 1317, 2 }, /* シャンブルモン: シャンピオン・ボム */
+    { 168, DM_TECHNIQUE_0384, 1318, 1 }, /* パブリモン: デュアルプレッサー */
+    { 168, DM_TECHNIQUE_0385, 1319, 2 }, /* パブリモン: ジュークラック */
+    { 169, DM_TECHNIQUE_0386, 1320, 1 }, /* オウリアモン: ジャミール */
+    { 169, DM_TECHNIQUE_0387, 1321, 2 }, /* オウリアモン: リーフレッド */
+    { 170, DM_TECHNIQUE_0388, 1322, 1 }, /* ファンクンモン: 孤籠泡（ころうほう） */
+    { 170, DM_TECHNIQUE_0389, 1323, 2 }, /* ファンクンモン: 冰乱結突（ひょうらんけっとつ） */
+    { 170, DM_TECHNIQUE_0390, 1324, 3 }, /* ファンクンモン: 潮流旋禍（ちょうりゅうせんか） */
+    { 171, DM_TECHNIQUE_0391, 1325, 1 }, /* シャンポンモン: 雷煌鞭（らいこうべん） */
+    { 171, DM_TECHNIQUE_0392, 1326, 2 }, /* シャンポンモン: 神碎牙（しんさいが） */
+    { 171, DM_TECHNIQUE_0393, 1327, 3 }, /* シャンポンモン: 天星壊海（てんせいかいかい） */
+    { 172, DM_TECHNIQUE_0394, 1328, 1 }, /* シーチューモン: 瀑閃（ばくせん） */
+    { 172, DM_TECHNIQUE_0395, 1329, 2 }, /* シーチューモン: 魚流炮（ぎょりゅうほう） */
+    { 172, DM_TECHNIQUE_0396, 1330, 3 }, /* シーチューモン: 冰凍爪（ひょうとうそう） */
+    { 173, DM_TECHNIQUE_0397, 1331, 1 }, /* インペリアルドラモン：ファイターモード（黒）: ポジトロンレーザー */
+    { 173, DM_TECHNIQUE_0398, 1332, 2 }, /* インペリアルドラモン：ファイターモード（黒）: ギガデス */
+    { 173, DM_TECHNIQUE_0399, 1333, 3 }, /* インペリアルドラモン：ファイターモード（黒）: ポジトロンレーザーランス */
+    { 174, DM_TECHNIQUE_0400, 1334, 1 }, /* グレイモン（青）（X抗体）: メガバースト */
+    { 174, DM_TECHNIQUE_0401, 1335, 2 }, /* グレイモン（青）（X抗体）: ブレイダーテイル */
+    { 175, DM_TECHNIQUE_0402, 1336, 1 }, /* オボロモン: 千万ノ太刀（ちよろずのたち） */
+    { 175, DM_TECHNIQUE_0403, 1337, 2 }, /* オボロモン: 羅焼門（らしょうもん） */
+    { 175, DM_TECHNIQUE_0404, 1338, 3 }, /* オボロモン: 幽玄（ゆうげん） */
+    { 176, DM_TECHNIQUE_0405, 1339, 1 }, /* ギュウキモン: 八束染縛（やつかせんばく） */
+    { 176, DM_TECHNIQUE_0406, 1340, 2 }, /* ギュウキモン: 魔塵瓢箪（まじんびょうたん） */
+    { 176, DM_TECHNIQUE_0407, 1341, 3 }, /* ギュウキモン: 千砲土蜘蛛（せんほうつちぐも） */
+    { 177, DM_TECHNIQUE_0408, 1342, 1 }, /* しんもんざえモン: ナイトメアレイン */
+    { 177, DM_TECHNIQUE_0409, 1343, 2 }, /* しんもんざえモン: ファンシーファンタジスタ */
+    { 177, DM_TECHNIQUE_0410, 1344, 3 }, /* しんもんざえモン: スイートラブリーアタック */
+    { 178, DM_TECHNIQUE_0411, 1345, 1 }, /* ホバーエスピモン: スタンパーミサイル */
+    { 178, DM_TECHNIQUE_0412, 1346, 2 }, /* ホバーエスピモン: ブレストキャノン */
+    { 178, DM_TECHNIQUE_0413, 1347, 3 }, /* ホバーエスピモン: ドロンガー */
+    { 178, DM_TECHNIQUE_0414, 1348, 4 }, /* ホバーエスピモン: ダイバニッシュ */
+    { 179, DM_TECHNIQUE_0415, 1349, 1 }, /* エスピモン: モットボム */
+    { 179, DM_TECHNIQUE_0414, 1348, 2 }, /* エスピモン: ダイバニッシュ */
+    { 180, DM_TECHNIQUE_0416, 1350, 1 }, /* ユピテルモン：ラースモード: ケラウノスディバイド */
+    { 180, DM_TECHNIQUE_0417, 1351, 2 }, /* ユピテルモン：ラースモード: ライトニングビー */
+    { 180, DM_TECHNIQUE_0418, 1352, 3 }, /* ユピテルモン：ラースモード: ディオスサンダー */
+    { 181, DM_TECHNIQUE_0419, 1353, 1 }, /* プルートモン: ハガードクラスター */
+    { 181, DM_TECHNIQUE_0420, 1354, 2 }, /* プルートモン: ヘルズゲート */
+    { 181, DM_TECHNIQUE_0421, 1355, 3 }, /* プルートモン: ケイオスライツ */
+    { 182, DM_TECHNIQUE_0422, 1356, 1 }, /* ケレスモン: アイランドフリーフォール */
+    { 182, DM_TECHNIQUE_0423, 1357, 2 }, /* ケレスモン: バーニングブラッドシェル */
+    { 182, DM_TECHNIQUE_0424, 1358, 3 }, /* ケレスモン: フルーツフレシェット */
+    { 183, DM_TECHNIQUE_0425, 1359, 1 }, /* バッカスモン: クック・オブ・ザ・ヘル */
+    { 183, DM_TECHNIQUE_0426, 1360, 2 }, /* バッカスモン: パーティー・オブ・ザ・ヘブン */
+    { 183, DM_TECHNIQUE_0427, 1361, 3 }, /* バッカスモン: リバース・オブ・ザ・デッド */
+    { 184, DM_TECHNIQUE_0428, 1362, 1 }, /* ユノモン：ヒステリックモード: ウェルカムロスト */
+    { 184, DM_TECHNIQUE_0429, 1363, 2 }, /* ユノモン：ヒステリックモード: リングラッジ */
+    { 184, DM_TECHNIQUE_0430, 1364, 3 }, /* ユノモン：ヒステリックモード: ライアーバニッシュメント */
+    { 185, DM_TECHNIQUE_0431, 1365, 1 }, /* ユノモン: ニードルハイブ */
+    { 185, DM_TECHNIQUE_0432, 1366, 2 }, /* ユノモン: グレイスランス */
+    { 185, DM_TECHNIQUE_0433, 1367, 3 }, /* ユノモン: ラブバスケット */
+    { 186, DM_TECHNIQUE_0434, 1368, 1 }, /* テティスモン: ビリースマッシャー */
+    { 186, DM_TECHNIQUE_0435, 1369, 2 }, /* テティスモン: ハンマーサンダー */
+    { 186, DM_TECHNIQUE_0436, 1370, 3 }, /* テティスモン: アドゥワールド */
+    { 186, DM_TECHNIQUE_0437, 1371, 4 }, /* テティスモン: ドクテアーゼ */
+    { 187, DM_TECHNIQUE_0438, 1372, 1 }, /* ラモールモン: 禍災爪（かさいそう） */
+    { 187, DM_TECHNIQUE_0439, 1373, 2 }, /* ラモールモン: 叩破伐倒（こうはばっとう） */
+    { 187, DM_TECHNIQUE_0440, 1374, 3 }, /* ラモールモン: 風牙烈巻迅（ふうがれっかんじん） */
+    { 187, DM_TECHNIQUE_0441, 1375, 4 }, /* ラモールモン: 豪怨毀永斬（ごうおんきえいざん） */
+    { 188, DM_TECHNIQUE_0442, 1376, 1 }, /* カノーヴァイスモン: ガリアフィッシャー */
+    { 188, DM_TECHNIQUE_0443, 1377, 2 }, /* カノーヴァイスモン: ドラゴニア */
+    { 188, DM_TECHNIQUE_0444, 1378, 3 }, /* カノーヴァイスモン: メテオルクス */
+    { 188, DM_TECHNIQUE_0445, 1379, 4 }, /* カノーヴァイスモン: グランノヴァ */
+    { 189, DM_TECHNIQUE_0446, 1380, 1 }, /* シスタモン シエル（覚醒）: 白詰一文字切り（覚醒） */
+    { 189, DM_TECHNIQUE_0447, 1381, 2 }, /* シスタモン シエル（覚醒）: 白殺（覚醒）　（びゃくさい） */
+    { 189, DM_TECHNIQUE_0448, 1382, 3 }, /* シスタモン シエル（覚醒）: 突蜂（覚醒）　（とっほう） */
+    { 190, DM_TECHNIQUE_0449, 1383, 1 }, /* シスタモン ノワール（覚醒）: ミッキーバレット（覚醒） */
+    { 190, DM_TECHNIQUE_0450, 1384, 2 }, /* シスタモン ノワール（覚醒）: ブレスファイア（覚醒） */
+    { 190, DM_TECHNIQUE_0451, 1385, 3 }, /* シスタモン ノワール（覚醒）: グランドシスタークルス（覚醒） */
+    { 191, DM_TECHNIQUE_0452, 1386, 1 }, /* シスタモン ブラン（覚醒）: ディバインピース(覚醒) */
+    { 191, DM_TECHNIQUE_0453, 1387, 2 }, /* シスタモン ブラン（覚醒）: プロテクトウェーブ(覚醒) */
+    { 191, DM_TECHNIQUE_0454, 1388, 3 }, /* シスタモン ブラン（覚醒）: グランドシスタークルス(覚醒) */
+    { 192, DM_TECHNIQUE_0455, 1389, 1 }, /* グルスガンマモン: ダークパレス */
+    { 192, DM_TECHNIQUE_0456, 1390, 2 }, /* グルスガンマモン: デスデモーナ */
+    { 192, DM_TECHNIQUE_0457, 1391, 3 }, /* グルスガンマモン: デッドエンドスキュアー */
+    { 193, DM_TECHNIQUE_0458, 1392, 1 }, /* テスラジェリーモン: フィサリスト */
+    { 193, DM_TECHNIQUE_0459, 1393, 2 }, /* テスラジェリーモン: パニッシューネ */
+    { 193, DM_TECHNIQUE_0460, 1394, 3 }, /* テスラジェリーモン: ボルスプライト */
+    { 194, DM_TECHNIQUE_0461, 1395, 1 }, /* ジンバーアンゴラモン: ジャイブ */
+    { 194, DM_TECHNIQUE_0462, 1396, 2 }, /* ジンバーアンゴラモン: レントライザー */
+    { 194, DM_TECHNIQUE_0463, 1397, 3 }, /* ジンバーアンゴラモン: ブレイキンストリーム */
+    { 195, DM_TECHNIQUE_0464, 1398, 1 }, /* ブラックテイルモン Uver.: ネコパンチ */
+    { 195, DM_TECHNIQUE_0465, 1399, 2 }, /* ブラックテイルモン Uver.: バコーニャ */
+    { 196, DM_TECHNIQUE_0466, 1400, 1 }, /* ウェディンモン: ホイップデコレーション */
+    { 196, DM_TECHNIQUE_0467, 1401, 2 }, /* ウェディンモン: ケーキカッティング */
+    { 196, DM_TECHNIQUE_0468, 1402, 3 }, /* ウェディンモン: ハピネスフォール */
+    { 197, DM_TECHNIQUE_0469, 1403, 1 }, /* ショートモン: テイストーン */
+    { 197, DM_TECHNIQUE_0470, 1404, 2 }, /* ショートモン: スウィートベリー */
+    { 198, DM_TECHNIQUE_0471, 1405, 1 }, /* ブラックラピッドモン: ラピッドファイア */
+    { 198, DM_TECHNIQUE_0472, 1406, 2 }, /* ブラックラピッドモン: ゴールデントライアングル */
+    { 199, DM_TECHNIQUE_0473, 1407, 1 }, /* ブラックガルゴモン: ガトリングアーム */
+    { 199, DM_TECHNIQUE_0474, 1408, 2 }, /* ブラックガルゴモン: ダムダムアッパー */
+    { 200, DM_TECHNIQUE_0475, 1409, 1 }, /* オメガモンズワルトDEFEAT: ガルルキャノン */
+    { 200, DM_TECHNIQUE_0476, 1410, 2 }, /* オメガモンズワルトDEFEAT: グレイソード */
+    { 201, DM_TECHNIQUE_0477, 1411, 1 }, /* ウェズンガンマモン: セドナ */
+    { 201, DM_TECHNIQUE_0478, 1412, 2 }, /* ウェズンガンマモン: アルビオン */
+    { 202, DM_TECHNIQUE_0479, 1413, 1 }, /* カウスガンマモン: ウルダインパルス */
+    { 202, DM_TECHNIQUE_0480, 1414, 2 }, /* カウスガンマモン: ランベルタキック */
+    { 203, DM_TECHNIQUE_0481, 1415, 1 }, /* ベテルガンマモン: ソルブロー */
+    { 203, DM_TECHNIQUE_0482, 1416, 2 }, /* ベテルガンマモン: ソルショット */
+    { 204, DM_TECHNIQUE_0483, 1417, 1 }, /* アバドモンコア: エクリプスノーン */
+    { 204, DM_TECHNIQUE_0484, 1418, 2 }, /* アバドモンコア: ビンジェラード */
+    { 204, DM_TECHNIQUE_0485, 1419, 3 }, /* アバドモンコア: デスチャージ */
+    { 204, DM_TECHNIQUE_0486, 1420, 4 }, /* アバドモンコア: ゲーズイレイザー */
+    { 206, DM_TECHNIQUE_0487, 1421, 1 }, /* シャウトモンX7：スペリオルモード: ファイナルクロスブレード */
+    { 206, DM_TECHNIQUE_0488, 1422, 2 }, /* シャウトモンX7：スペリオルモード: クロスバーニングロッカー */
+    { 206, DM_TECHNIQUE_0489, 1423, 3 }, /* シャウトモンX7：スペリオルモード: ダブルフレアバスター */
+    { 206, DM_TECHNIQUE_0490, 1424, 4 }, /* シャウトモンX7：スペリオルモード: セブンビクトライズ */
+    { 207, DM_TECHNIQUE_0491, 1425, 1 }, /* ジェリーモン: ビビサンダー */
+    { 207, DM_TECHNIQUE_0492, 1426, 2 }, /* ジェリーモン: ボルトナックル */
+    { 207, DM_TECHNIQUE_0493, 1427, 3 }, /* ジェリーモン: スパイラルキック */
+    { 208, DM_TECHNIQUE_0494, 1428, 1 }, /* プヨヨモン: ゾーンパチパチ */
+    { 209, DM_TECHNIQUE_0495, 1429, 1 }, /* プヨモン: パチパチガス */
+    { 210, DM_TECHNIQUE_0496, 1430, 1 }, /* アンゴラモン: ダブルラリアット */
+    { 210, DM_TECHNIQUE_0497, 1431, 2 }, /* アンゴラモン: プチトルネード */
+    { 210, DM_TECHNIQUE_0498, 1432, 3 }, /* アンゴラモン: ピョンダンプ */
+    { 211, DM_TECHNIQUE_0499, 1433, 1 }, /* ボサモン: ミッコミ */
+    { 212, DM_TECHNIQUE_0500, 1434, 1 }, /* ピョンモン: イヤンタ */
+    { 213, DM_TECHNIQUE_0501, 1435, 1 }, /* ガンマモン: ホーンアタック */
+    { 213, DM_TECHNIQUE_0502, 1436, 2 }, /* ガンマモン: ブレイクロー */
+    { 214, DM_TECHNIQUE_0503, 1437, 1 }, /* グリモン: チクチクアタック */
+    { 215, DM_TECHNIQUE_0265, 1199, 1 }, /* クリモン: 泡 */
+    { 216, DM_TECHNIQUE_0486, 1420, 1 }, /* アバドモン: ゲーズイレイザー */
+    { 216, DM_TECHNIQUE_0504, 1438, 2 }, /* アバドモン: ガーライトネス */
+    { 216, DM_TECHNIQUE_0505, 1439, 3 }, /* アバドモン: ホワイトライナー */
+    { 217, DM_TECHNIQUE_0506, 1440, 1 }, /* ネガーモン: ダウナーアイ */
+    { 218, DM_TECHNIQUE_0507, 1441, 1 }, /* パイルボルケーモン: ボルケニックドライバー */
+    { 218, DM_TECHNIQUE_0508, 1442, 2 }, /* パイルボルケーモン: ダイヤモンドフィスト */
+    { 219, DM_TECHNIQUE_0509, 1443, 1 }, /* ライデンモン: キルリアン・ブラント */
+    { 219, DM_TECHNIQUE_0510, 1444, 2 }, /* ライデンモン: ライジング・サン */
+    { 220, DM_TECHNIQUE_0511, 1445, 1 }, /* ライジンモン: エレクーゲル */
+    { 220, DM_TECHNIQUE_0512, 1446, 2 }, /* ライジンモン: ブリッツアーム */
+    { 221, DM_TECHNIQUE_0513, 1447, 1 }, /* ドクネモン: ワームベノム */
+    { 221, DM_TECHNIQUE_0514, 1448, 2 }, /* ドクネモン: ポイズンライド */
+    { 222, DM_TECHNIQUE_0515, 1449, 1 }, /* モドキベタモン: アクアタワー */
+    { 222, DM_TECHNIQUE_0516, 1450, 2 }, /* モドキベタモン: ブレードフィン */
+    { 223, DM_TECHNIQUE_0517, 1451, 1 }, /* ヒュドラモン: バイオトキシン */
+    { 223, DM_TECHNIQUE_0518, 1452, 2 }, /* ヒュドラモン: インテンスランテール */
+    { 223, DM_TECHNIQUE_0519, 1453, 3 }, /* ヒュドラモン: ディビジョンブレイク */
+    { 224, DM_TECHNIQUE_0520, 1454, 1 }, /* ブルムロードモン: マルチプルシード */
+    { 224, DM_TECHNIQUE_0521, 1455, 2 }, /* ブルムロードモン: スプラウトラッシュ */
+    { 224, DM_TECHNIQUE_0522, 1456, 3 }, /* ブルムロードモン: グラン・デル・ソル */
+    { 225, DM_TECHNIQUE_0523, 1457, 1 }, /* アヤタラモン: アサルトハチェット */
+    { 225, DM_TECHNIQUE_0524, 1458, 2 }, /* アヤタラモン: タイドアップアイビー */
+    { 225, DM_TECHNIQUE_0525, 1459, 3 }, /* アヤタラモン: ショットガンモス */
+    { 226, DM_TECHNIQUE_0526, 1460, 1 }, /* ガードロモン（金）: ディストラクショングレネード */
+    { 227, DM_TECHNIQUE_0527, 1461, 1 }, /* バーガモン: スパイシーオニオン */
+    { 227, DM_TECHNIQUE_0528, 1462, 2 }, /* バーガモン: デリシャスパティ */
+    { 228, DM_TECHNIQUE_0529, 1463, 1 }, /* ピッドモン: ファイアフェザー */
+    { 228, DM_TECHNIQUE_0530, 1464, 2 }, /* ピッドモン: ピッドスピード */
+    { 229, DM_TECHNIQUE_0531, 1465, 1 }, /* サンドヤンマモン: デザートウィンド */
+    { 230, DM_TECHNIQUE_0532, 1466, 1 }, /* ヤンマモン: サンダーレイ */
+    { 230, DM_TECHNIQUE_0533, 1467, 2 }, /* ヤンマモン: インセクスオーム */
+    { 231, DM_TECHNIQUE_0534, 1468, 1 }, /* モリシェルモン: パイルシェル */
+    { 231, DM_TECHNIQUE_0535, 1469, 2 }, /* モリシェルモン: マインドフォッグ */
+    { 232, DM_TECHNIQUE_0536, 1470, 1 }, /* ボンバーナニモン: フリースローボム */
+    { 232, DM_TECHNIQUE_0537, 1471, 2 }, /* ボンバーナニモン: 爆・オヤジパンチ */
+    { 233, DM_TECHNIQUE_0538, 1472, 1 }, /* ヘラクルカブテリモン（X抗体）: ギガブラスター */
+    { 233, DM_TECHNIQUE_0539, 1473, 2 }, /* ヘラクルカブテリモン（X抗体）: ホーンバスター改 */
+    { 234, DM_TECHNIQUE_0540, 1474, 1 }, /* スターモン（X抗体）: メテオスコール */
+    { 234, DM_TECHNIQUE_0541, 1475, 2 }, /* スターモン（X抗体）: メテオチャンピオン */
+    { 235, DM_TECHNIQUE_0542, 1476, 1 }, /* グラウモン（X抗体）: プラズマブレイド */
+    { 235, DM_TECHNIQUE_0543, 1477, 2 }, /* グラウモン（X抗体）: エキゾーストフレイム */
+    { 235, DM_TECHNIQUE_0544, 1478, 3 }, /* グラウモン（X抗体）: ライデンブレイド */
+    { 236, DM_TECHNIQUE_0545, 1479, 1 }, /* ハグルモン（X抗体）: ダークネスギア */
+    { 237, DM_TECHNIQUE_0546, 1480, 1 }, /* ガイオウモン：厳刀ノ型: 旋風縛（せんぷうばく） */
+    { 237, DM_TECHNIQUE_0547, 1481, 2 }, /* ガイオウモン：厳刀ノ型: 菊燐一閃・號雷斬（きくりんいっせん・ごうらいざん） */
+    { 237, DM_TECHNIQUE_0548, 1482, 3 }, /* ガイオウモン：厳刀ノ型: 刀華静謐（とうかせいひつ） */
+    { 238, DM_TECHNIQUE_0549, 1483, 1 }, /* ブラキモン: ブラキオバブル */
+    { 239, DM_TECHNIQUE_0550, 1484, 1 }, /* キュウキモン: ブレイドツイスター */
+    { 239, DM_TECHNIQUE_0551, 1485, 2 }, /* キュウキモン: 三連星 */
+    { 240, DM_TECHNIQUE_0552, 1486, 1 }, /* ヴァーミリモン: ヴォルケーノストライクS */
+    { 240, DM_TECHNIQUE_0553, 1487, 2 }, /* ヴァーミリモン: ハードタックル */
+    { 241, DM_TECHNIQUE_0554, 1488, 1 }, /* アサルトモン: ジャスティスマサカー */
+    { 241, DM_TECHNIQUE_0555, 1489, 2 }, /* アサルトモン: サプライズアタック */
+    { 242, DM_TECHNIQUE_0556, 1490, 1 }, /* テッカモン: 斬電剣 */
+    { 242, DM_TECHNIQUE_0557, 1491, 2 }, /* テッカモン: スカルスタンド */
+    { 243, DM_TECHNIQUE_0558, 1492, 1 }, /* バルチャモン: リーパーストライク */
+    { 243, DM_TECHNIQUE_0559, 1493, 2 }, /* バルチャモン: デザートデスサイズ */
+    { 243, DM_TECHNIQUE_0560, 1494, 3 }, /* バルチャモン: ウィザーウィング */
+    { 244, DM_TECHNIQUE_0561, 1495, 1 }, /* ゴロモン: ロックブレス */
+    { 245, DM_TECHNIQUE_0562, 1496, 1 }, /* スナモン: 砂かけ */
+    { 247, DM_TECHNIQUE_0563, 1497, 1 }, /* ブラックキングヌメモン: ダークピューピル */
+    { 247, DM_TECHNIQUE_0564, 1498, 2 }, /* ブラックキングヌメモン: ポイズンミュークス */
+    { 248, DM_TECHNIQUE_0565, 1499, 1 }, /* ゴールドヌメモン: ゴルドリアンラッシュ */
+    { 248, DM_TECHNIQUE_0566, 1500, 2 }, /* ゴールドヌメモン: ゴールドエクスクレメント */
+    { 250, DM_TECHNIQUE_0567, 1501, 1 }, /* グラディモン: ホイールラッシュ */
+    { 250, DM_TECHNIQUE_0568, 1502, 2 }, /* グラディモン: ソードダンサー */
+    { 251, DM_TECHNIQUE_0569, 1503, 1 }, /* シャウトモンX4K: バーニングスタークラッシャー */
+    { 251, DM_TECHNIQUE_0570, 1504, 2 }, /* シャウトモンX4K: スリービクトライズ */
+    { 251, DM_TECHNIQUE_0571, 1505, 3 }, /* シャウトモンX4K: スリーインパクト */
+    { 251, DM_TECHNIQUE_0572, 1506, 4 }, /* シャウトモンX4K: ビクトライズブーメラン */
+    { 252, DM_TECHNIQUE_0573, 1507, 1 }, /* コドクグモン: ポイズンネイル */
+    { 253, DM_TECHNIQUE_0574, 1508, 1 }, /* ヨッ！ヨッ！モン: ラッパーコースター */
+    { 253, DM_TECHNIQUE_0575, 1509, 2 }, /* ヨッ！ヨッ！モン: ワンハンド・スイング */
+    { 253, DM_TECHNIQUE_0576, 1510, 3 }, /* ヨッ！ヨッ！モン: トルペド・クロッシング */
+    { 254, DM_TECHNIQUE_0577, 1511, 1 }, /* ミニデカチモン: コッチョン */
+    { 254, DM_TECHNIQUE_0578, 1512, 2 }, /* ミニデカチモン: ミニデカフレイム */
+    { 255, DM_TECHNIQUE_0579, 1513, 1 }, /* アタマデカチモン: 鼓・爆砕 */
+    { 255, DM_TECHNIQUE_0580, 1514, 2 }, /* アタマデカチモン: 頭つぶし */
+    { 255, DM_TECHNIQUE_0578, 1512, 3 }, /* アタマデカチモン: ミニデカフレイム */
+    { 256, DM_TECHNIQUE_0581, 1515, 1 }, /* トレイルモン: クールランニング */
+    { 256, DM_TECHNIQUE_0582, 1516, 2 }, /* トレイルモン: 急ブレーキスパーク */
+    { 257, DM_TECHNIQUE_0583, 1517, 1 }, /* スカモン大王: ウンチ投げ */
+    { 257, DM_TECHNIQUE_0584, 1518, 2 }, /* スカモン大王: キングスタンプ */
+    { 258, DM_TECHNIQUE_0585, 1519, 1 }, /* シュラウドモン: 鬼瞬轟拳（きしゅんごうけん） */
+    { 258, DM_TECHNIQUE_0586, 1520, 2 }, /* シュラウドモン: 獄炎破回蹴（ごくえんはかいしゅう） */
+    { 258, DM_TECHNIQUE_0587, 1521, 3 }, /* シュラウドモン: 喰雷炎砕破（がらいえんさいは） */
+    { 259, DM_TECHNIQUE_0588, 1522, 1 }, /* フロスベルグモン: イノセンスブリザード */
+    { 259, DM_TECHNIQUE_0589, 1523, 2 }, /* フロスベルグモン: フリージングレイ */
+    { 259, DM_TECHNIQUE_0590, 1524, 3 }, /* フロスベルグモン: ルインリバーヴ */
+    { 260, DM_TECHNIQUE_0591, 1525, 1 }, /* フロゾモン: リムーバルブロウ */
+    { 260, DM_TECHNIQUE_0592, 1526, 2 }, /* フロゾモン: デフロストブレード */
+    { 260, DM_TECHNIQUE_0593, 1527, 3 }, /* フロゾモン: グラシエイトミサイル */
+    { 261, DM_TECHNIQUE_0594, 1528, 1 }, /* ヒヤリモン: ダイアモンドダスト */
+    { 262, DM_TECHNIQUE_0595, 1529, 1 }, /* ブラックセラフィモン: セブンヘルズ */
+    { 262, DM_TECHNIQUE_0596, 1530, 2 }, /* ブラックセラフィモン: テスタメント */
+    { 263, DM_TECHNIQUE_0597, 1531, 1 }, /* レアレアモン: ダイジェス */
+    { 263, DM_TECHNIQUE_0598, 1532, 2 }, /* レアレアモン: ディケイズン */
+    { 264, DM_TECHNIQUE_0599, 1533, 1 }, /* クライモン: 擬遁アイソレーション（ぎとんあいそれーしょん） */
+    { 264, DM_TECHNIQUE_0600, 1534, 2 }, /* クライモン: クラックハーケン */
+    { 264, DM_TECHNIQUE_0601, 1535, 3 }, /* クライモン: ダイナミックサイファー */
+    { 265, DM_TECHNIQUE_0602, 1536, 1 }, /* ダイブモン: フィレットブレード */
+    { 265, DM_TECHNIQUE_0603, 1537, 2 }, /* ダイブモン: リップルエッジ */
+    { 265, DM_TECHNIQUE_0604, 1538, 3 }, /* ダイブモン: リキッドヴェール */
+    { 266, DM_TECHNIQUE_0605, 1539, 1 }, /* クリアアグモン: プレシャスフレア */
+    { 266, DM_TECHNIQUE_0606, 1540, 2 }, /* クリアアグモン: ドリームミサイル */
+    { 267, DM_TECHNIQUE_0607, 1541, 1 }, /* バンチョーリリモン: アブソリュートテリトリー */
+    { 267, DM_TECHNIQUE_0608, 1542, 2 }, /* バンチョーリリモン: ナイトメアアッセンブル */
+    { 267, DM_TECHNIQUE_0609, 1543, 3 }, /* バンチョーリリモン: トゥインペタル */
+    { 268, DM_TECHNIQUE_0610, 1544, 1 }, /* メタルグレイモン（ワクチン種）（Ｘ抗体）: トライデントアームＶＥＲ９.９ */
+    { 268, DM_TECHNIQUE_0611, 1545, 2 }, /* メタルグレイモン（ワクチン種）（Ｘ抗体）: ギガデストロイヤー */
+    { 269, DM_TECHNIQUE_0612, 1546, 1 }, /* パンジャモン（Ｘ抗体）: 氷獣拳 */
+    { 269, DM_TECHNIQUE_0613, 1547, 2 }, /* パンジャモン（Ｘ抗体）: 雪花火 */
+    { 270, DM_TECHNIQUE_0614, 1548, 1 }, /* メタルマメモン（Ｘ抗体）: エネルギーボム */
+    { 270, DM_TECHNIQUE_0615, 1549, 2 }, /* メタルマメモン（Ｘ抗体）: エネルギーレーザーボム */
+    { 271, DM_TECHNIQUE_0616, 1550, 1 }, /* サンダーボールモン（Ｘ抗体）: アノードパンチ */
+    { 271, DM_TECHNIQUE_0617, 1551, 2 }, /* サンダーボールモン（Ｘ抗体）: カソードキック */
+    { 271, DM_TECHNIQUE_0618, 1552, 3 }, /* サンダーボールモン（Ｘ抗体）: サンダーボマー */
+    { 272, DM_TECHNIQUE_0619, 1553, 1 }, /* モノクロモン（Ｘ抗体）: ヴォルケーノストライク */
+    { 272, DM_TECHNIQUE_0620, 1554, 2 }, /* モノクロモン（Ｘ抗体）: トマホークスラッシュ */
+    { 273, DM_TECHNIQUE_0621, 1555, 1 }, /* ドーベルモン（Ｘ抗体）: グラオ・レルム */
+    { 273, DM_TECHNIQUE_0622, 1556, 2 }, /* ドーベルモン（Ｘ抗体）: シュヴァルツ・シュトラール */
+    { 274, DM_TECHNIQUE_0623, 1557, 1 }, /* ゲソモン（Ｘ抗体）: デッドリーシェード */
+    { 274, DM_TECHNIQUE_0624, 1558, 2 }, /* ゲソモン（Ｘ抗体）: マッドバイキング */
+    { 275, DM_TECHNIQUE_0625, 1559, 1 }, /* ゴツモン（Ｘ抗体）: アングリーロック */
+    { 275, DM_TECHNIQUE_0626, 1560, 2 }, /* ゴツモン（Ｘ抗体）: レイジロック */
+    { 276, DM_TECHNIQUE_0627, 1561, 1 }, /* ガニモン（Ｘ抗体）: シザーズエクスキューション */
+    { 276, DM_TECHNIQUE_0628, 1562, 2 }, /* ガニモン（Ｘ抗体）: ヘビークランチ */
+    { 277, DM_TECHNIQUE_0629, 1563, 1 }, /* ギルモン（Ｘ抗体）: ロックブレイカー */
+    { 277, DM_TECHNIQUE_0630, 1564, 2 }, /* ギルモン（Ｘ抗体）: ファイアーボール */
+    { 277, DM_TECHNIQUE_0631, 1565, 3 }, /* ギルモン（Ｘ抗体）: ファイアーミット */
+    { 278, DM_TECHNIQUE_0632, 1566, 1 }, /* シャウトモンEX6: ソル・キャリバー */
+    { 278, DM_TECHNIQUE_0633, 1567, 2 }, /* シャウトモンEX6: デモリッションホーン */
+    { 278, DM_TECHNIQUE_0634, 1568, 3 }, /* シャウトモンEX6: リュウセイロックダマシー */
+    { 279, DM_TECHNIQUE_0635, 1569, 1 }, /* とりからボールモン: 植物性の泡 */
+    { 280, DM_TECHNIQUE_0528, 1462, 1 }, /* バーガモン: デリシャスパティ */
+    { 280, DM_TECHNIQUE_0636, 1570, 2 }, /* バーガモン: グリーンピクルス */
+    { 281, DM_TECHNIQUE_0637, 1571, 1 }, /* ポテモン: シュバシュバポテト */
+    { 281, DM_TECHNIQUE_0638, 1572, 2 }, /* ポテモン: バッシュドポテト */
+    { 282, DM_TECHNIQUE_0639, 1573, 1 }, /* アキレウスモン: アネモダルメノス */
+    { 282, DM_TECHNIQUE_0640, 1574, 2 }, /* アキレウスモン: アステロイディス */
+    { 282, DM_TECHNIQUE_0641, 1575, 3 }, /* アキレウスモン: ロンヒ・アディスタクト */
+    { 283, DM_TECHNIQUE_0642, 1576, 1 }, /* シーヴァモン: クータスタ・キラナ */
+    { 283, DM_TECHNIQUE_0643, 1577, 2 }, /* シーヴァモン: カマラ・カルマ */
+    { 283, DM_TECHNIQUE_0644, 1578, 3 }, /* シーヴァモン: サマディ・シャンティ */
+    { 284, DM_TECHNIQUE_0645, 1579, 1 }, /* カヅチモン: 二刀勢雷（にとうせいらい） */
+    { 284, DM_TECHNIQUE_0646, 1580, 2 }, /* カヅチモン: 士道一徹（しどういってつ） */
+    { 284, DM_TECHNIQUE_0647, 1581, 3 }, /* カヅチモン: 神電召雷光（しんでんしょうらいこう） */
+    { 285, DM_TECHNIQUE_0648, 1582, 1 }, /* ピストモン: ブランブルショット */
+    { 285, DM_TECHNIQUE_0649, 1583, 2 }, /* ピストモン: クリムゾンスポアーズ */
+    { 285, DM_TECHNIQUE_0650, 1584, 3 }, /* ピストモン: キリングケイデンス */
+    { 286, DM_TECHNIQUE_0651, 1585, 1 }, /* テンポモン: リズミック・アーツ */
+    { 286, DM_TECHNIQUE_0652, 1586, 2 }, /* テンポモン: ハウリングブラスト */
+    { 286, DM_TECHNIQUE_0653, 1587, 3 }, /* テンポモン: アップビートツイスター */
+    { 287, DM_TECHNIQUE_0654, 1588, 1 }, /* シュートモン: キャノンボールシューター */
+    { 287, DM_TECHNIQUE_0655, 1589, 2 }, /* シュートモン: ワイルドピッチ */
+    { 287, DM_TECHNIQUE_0656, 1590, 3 }, /* シュートモン: ラウンドジェイル */
+    { 288, DM_TECHNIQUE_0657, 1591, 1 }, /* バウトモン: 雷撃踵（らいげきしょう） */
+    { 288, DM_TECHNIQUE_0658, 1592, 2 }, /* バウトモン: 武電破弾（ぶでんはだん） */
+    { 288, DM_TECHNIQUE_0659, 1593, 3 }, /* バウトモン: 迅雷廻天戟（じんらいかいてんげき） */
+    { 289, DM_TECHNIQUE_0660, 1594, 1 }, /* ミタマモン: 轟炎輪（ごうえんりん） */
+    { 289, DM_TECHNIQUE_0661, 1595, 2 }, /* ミタマモン: 灰迅雷瞳（かいじんらいどう） */
+    { 289, DM_TECHNIQUE_0662, 1596, 3 }, /* ミタマモン: 響香水月（きょうかすいげつ） */
+    { 290, DM_TECHNIQUE_0663, 1597, 1 }, /* ラブリーエンジェモン: マーブルインパクト */
+    { 290, DM_TECHNIQUE_0664, 1598, 2 }, /* ラブリーエンジェモン: ドリームハリケーン */
+    { 290, DM_TECHNIQUE_0665, 1599, 3 }, /* ラブリーエンジェモン: ラブリーシャワー */
+    { 291, DM_TECHNIQUE_0666, 1600, 1 }, /* ビビモン: ミニマルフラッシュ */
+    { 292, DM_TECHNIQUE_0667, 1601, 1 }, /* ドキモン: 静電気 */
+    { 293, DM_TECHNIQUE_0583, 1517, 1 }, /* ナマケモン: ウンチ投げ */
+    { 293, DM_TECHNIQUE_0668, 1602, 2 }, /* ナマケモン: パラライズリック */
+    { 294, DM_TECHNIQUE_0669, 1603, 1 }, /* ランナモン: ライトニングラッシュ */
+    { 294, DM_TECHNIQUE_0670, 1604, 2 }, /* ランナモン: ハートビートインパルス */
+    { 295, DM_TECHNIQUE_0671, 1605, 1 }, /* エキサモン: インセクマインド */
+    { 295, DM_TECHNIQUE_0672, 1606, 2 }, /* エキサモン: デフィブレイショック */
+    { 296, DM_TECHNIQUE_0673, 1607, 1 }, /* バルクモン: エレクトリカルフィスト */
+    { 296, DM_TECHNIQUE_0674, 1608, 2 }, /* バルクモン: サンダードレッド */
+    { 297, DM_TECHNIQUE_0675, 1609, 1 }, /* コモンドモン: ワイワイパー */
+    { 297, DM_TECHNIQUE_0676, 1610, 2 }, /* コモンドモン: マッシグラン */
+    { 298, DM_TECHNIQUE_0677, 1611, 1 }, /* パルスモン: エレキラッシュ */
+    { 298, DM_TECHNIQUE_0678, 1612, 2 }, /* パルスモン: プチインパルス */
+    { 299, DM_TECHNIQUE_0679, 1613, 1 }, /* オメガモン：マーシフルモード: 雅琉々砲（がるるほう） */
+    { 299, DM_TECHNIQUE_0680, 1614, 2 }, /* オメガモン：マーシフルモード: 虞玲刀（ぐれいとう） */
+    { 300, DM_TECHNIQUE_0681, 1615, 1 }, /* ダンデビモン: デストロイクロウ */
+    { 300, DM_TECHNIQUE_0682, 1616, 2 }, /* ダンデビモン: アルティメットフレア */
+    { 300, DM_TECHNIQUE_0683, 1617, 3 }, /* ダンデビモン: マイアスピウ */
+    { 301, DM_TECHNIQUE_0684, 1618, 1 }, /* ワーガルルモン：サジタリウスモード: カウスラッガー */
+    { 301, DM_TECHNIQUE_0685, 1619, 2 }, /* ワーガルルモン：サジタリウスモード: アルナスショット */
+    { 301, DM_TECHNIQUE_0686, 1620, 3 }, /* ワーガルルモン：サジタリウスモード: カイザーネイル */
+    { 302, DM_TECHNIQUE_0687, 1621, 1 }, /* インペリアルドラモン：ドラゴンモード(黒): メガデス */
+    { 303, DM_TECHNIQUE_0688, 1622, 1 }, /* マンティコアモン: トリニティゴスペル */
+    { 303, DM_TECHNIQUE_0689, 1623, 2 }, /* マンティコアモン: アシッドインジェクション */
+    { 304, DM_TECHNIQUE_0690, 1624, 1 }, /* ミミックモン: デッドショット */
+    { 304, DM_TECHNIQUE_0691, 1625, 2 }, /* ミミックモン: ヒンダーマイアズマ */
+    { 305, DM_TECHNIQUE_0692, 1626, 1 }, /* バルキモン: サイキックチェーン */
+    { 305, DM_TECHNIQUE_0693, 1627, 2 }, /* バルキモン: クラウドビジョン */
+    { 306, DM_TECHNIQUE_0694, 1628, 1 }, /* ダークメイルドラモン: ダークウィング */
+    { 307, DM_TECHNIQUE_0695, 1629, 1 }, /* メタルグレイモン：アルタラウスモード: ポジトロンブラスター */
+    { 307, DM_TECHNIQUE_0696, 1630, 2 }, /* メタルグレイモン：アルタラウスモード: アルタブレード */
+    { 307, DM_TECHNIQUE_0611, 1545, 3 }, /* メタルグレイモン：アルタラウスモード: ギガデストロイヤー */
+    { 307, DM_TECHNIQUE_0697, 1631, 4 }, /* メタルグレイモン：アルタラウスモード: トライデントアーム */
+    { 307, DM_TECHNIQUE_0698, 1632, 5 }, /* メタルグレイモン：アルタラウスモード: ジガストーム */
+    { 308, DM_TECHNIQUE_0699, 1633, 1 }, /* リベリモン: ヴァンキッシュミサイル */
+    { 308, DM_TECHNIQUE_0700, 1634, 2 }, /* リベリモン: マキシマムデモリッシャー */
+    { 309, DM_TECHNIQUE_0701, 1635, 1 }, /* マッハモン: フルスロットルエッジ */
+    { 309, DM_TECHNIQUE_0702, 1636, 2 }, /* マッハモン: マッドネスファイア */
+    { 310, DM_TECHNIQUE_0703, 1637, 1 }, /* ジャンクモン: パラボリックジャンク */
+    { 310, DM_TECHNIQUE_0704, 1638, 2 }, /* ジャンクモン: スクラップティース */
+    { 311, DM_TECHNIQUE_0705, 1639, 1 }, /* ヘヴィーレオモン: バレッジスイーパー */
+    { 311, DM_TECHNIQUE_0706, 1640, 2 }, /* ヘヴィーレオモン: レスティングバーナー */
+    { 311, DM_TECHNIQUE_0707, 1641, 3 }, /* ヘヴィーレオモン: ソニックエクスカベーター */
+    { 312, DM_TECHNIQUE_0708, 1642, 1 }, /* ホップモン: ホップヒップ */
+    { 313, DM_TECHNIQUE_0709, 1643, 1 }, /* ケトモン: ポッピンティア */
+    { 314, DM_TECHNIQUE_0710, 1644, 1 }, /* ニーズヘッグモン: アナイアレンション */
+    { 314, DM_TECHNIQUE_0711, 1645, 2 }, /* ニーズヘッグモン: ルウダメント */
+    { 315, DM_TECHNIQUE_0712, 1646, 1 }, /* エントモン: ドライアドスティンガー */
+    { 315, DM_TECHNIQUE_0713, 1647, 2 }, /* エントモン: ブラステッドディザスター */
+    { 316, DM_TECHNIQUE_0714, 1648, 1 }, /* パラサウモン: パルシースイート */
+    { 316, DM_TECHNIQUE_0715, 1649, 2 }, /* パラサウモン: ウェイビーオクタヴィスト */
+    { 317, DM_TECHNIQUE_0716, 1650, 1 }, /* トロピアモン: ペタリーカーネイジ */
+    { 317, DM_TECHNIQUE_0717, 1651, 2 }, /* トロピアモン: トロピカルヴェノム */
+    { 318, DM_TECHNIQUE_0718, 1652, 1 }, /* ポームモン: ラピッドシード */
+    { 318, DM_TECHNIQUE_0719, 1653, 2 }, /* ポームモン: フルーツラッシュ */
+    { 319, DM_TECHNIQUE_0720, 1654, 1 }, /* アイズモン：スキャッターモード: 邪念眼 */
+    { 319, DM_TECHNIQUE_0721, 1655, 2 }, /* アイズモン：スキャッターモード: 影縛り */
+    { 320, DM_TECHNIQUE_0720, 1654, 1 }, /* アイズモン: 邪念眼 */
+    { 320, DM_TECHNIQUE_0722, 1656, 2 }, /* アイズモン: 愚幻 */
+    { 321, DM_TECHNIQUE_0723, 1657, 1 }, /* ベタモン（X抗体）: 電撃ビリリン185V */
+    { 321, DM_TECHNIQUE_0724, 1658, 2 }, /* ベタモン（X抗体）: 電撃ビリリン */
+    { 322, DM_TECHNIQUE_0725, 1659, 1 }, /* ガジモン（X抗体）: パラライズブレス */
+    { 322, DM_TECHNIQUE_0726, 1660, 2 }, /* ガジモン（X抗体）: ブービーピット */
+    { 323, DM_TECHNIQUE_0727, 1661, 1 }, /* アルゴモン: 酸の泡 */
+    { 324, DM_TECHNIQUE_0728, 1662, 1 }, /* ゴースモン: リトルプラズマ */
+    { 324, DM_TECHNIQUE_0729, 1663, 2 }, /* ゴースモン: ジャックレイド */
+    { 325, DM_TECHNIQUE_0730, 1664, 1 }, /* レガレクスモン: ブリューナストライク */
+    { 325, DM_TECHNIQUE_0731, 1665, 2 }, /* レガレクスモン: リアクターディスチャージ */
+    { 326, DM_TECHNIQUE_0732, 1666, 1 }, /* ピラニモン: クルーアルインバイト */
+    { 326, DM_TECHNIQUE_0733, 1667, 2 }, /* ピラニモン: カラミティバイス */
+    { 327, DM_TECHNIQUE_0734, 1668, 1 }, /* グソクモン: ブラントクロー */
+    { 327, DM_TECHNIQUE_0735, 1669, 2 }, /* グソクモン: コロニートーピード */
+    { 328, DM_TECHNIQUE_0736, 1670, 1 }, /* マリンキメラモン: ポセイドンボルテックス */
+    { 328, DM_TECHNIQUE_0737, 1671, 2 }, /* マリンキメラモン: アクア・バイパー */
+    { 329, DM_TECHNIQUE_0738, 1672, 1 }, /* トビウモン: サッカーフィッシュダーツ */
+    { 329, DM_TECHNIQUE_0739, 1673, 2 }, /* トビウモン: フライングフィニッシュ */
+    { 330, DM_TECHNIQUE_0740, 1674, 1 }, /* サンゴモン: レフュージミスト */
+    { 330, DM_TECHNIQUE_0741, 1675, 2 }, /* サンゴモン: コーラルプレッシャー */
+    { 331, DM_TECHNIQUE_0742, 1676, 1 }, /* ゴグマモン: ジャイアントグレイター */
+    { 331, DM_TECHNIQUE_0743, 1677, 2 }, /* ゴグマモン: カース・リフレクション */
+    { 332, DM_TECHNIQUE_0744, 1678, 1 }, /* バブンガモン: マウントストーン */
+    { 332, DM_TECHNIQUE_0745, 1679, 2 }, /* バブンガモン: グライドロックス */
+    { 333, DM_TECHNIQUE_0746, 1680, 1 }, /* スナリザモン: グリットネイル */
+    { 333, DM_TECHNIQUE_0747, 1681, 2 }, /* スナリザモン: サンドブラスト */
+    { 334, DM_TECHNIQUE_0748, 1682, 1 }, /* ジュエルビーモン: スパイクバスター */
+    { 335, DM_TECHNIQUE_0749, 1683, 1 }, /* フーディエモン: フライングキック */
+    { 335, DM_TECHNIQUE_0750, 1684, 2 }, /* フーディエモン: インフィニティドリーム */
+    { 336, DM_TECHNIQUE_0751, 1685, 1 }, /* アレスタードラモン：スペリオルモード: ブレイズスパイカー */
+    { 336, DM_TECHNIQUE_0752, 1686, 2 }, /* アレスタードラモン：スペリオルモード: マッハフリッカー */
+    { 336, DM_TECHNIQUE_0753, 1687, 3 }, /* アレスタードラモン：スペリオルモード: フロッグショット */
+    { 336, DM_TECHNIQUE_0754, 1688, 4 }, /* アレスタードラモン：スペリオルモード: スピンカリバー */
+    { 336, DM_TECHNIQUE_0755, 1689, 5 }, /* アレスタードラモン：スペリオルモード: スパイラルシュレッダー */
+    { 336, DM_TECHNIQUE_0756, 1690, 6 }, /* アレスタードラモン：スペリオルモード: プリズムギャレット */
+    { 337, DM_TECHNIQUE_0757, 1691, 1 }, /* ガルルモン（X抗体）: フォックスファイアー */
+    { 338, DM_TECHNIQUE_0758, 1692, 1 }, /* グレイモン（X抗体）: メガフレイム */
+    { 338, DM_TECHNIQUE_0400, 1334, 2 }, /* グレイモン（X抗体）: メガバースト */
+    { 339, DM_TECHNIQUE_0759, 1693, 1 }, /* アルゴモン: ボルトライン */
+    { 339, DM_TECHNIQUE_0760, 1694, 2 }, /* アルゴモン: インプリズメント */
+    { 340, DM_TECHNIQUE_0761, 1695, 1 }, /* アルゴモン: ブルートナックル */
+    { 340, DM_TECHNIQUE_0760, 1694, 2 }, /* アルゴモン: インプリズメント */
+    { 341, DM_TECHNIQUE_0727, 1661, 1 }, /* アルゴモン: 酸の泡 */
+    { 342, DM_TECHNIQUE_0762, 1696, 1 }, /* スパーダモン: シュガーパウンド */
+    { 342, DM_TECHNIQUE_0763, 1697, 2 }, /* スパーダモン: ブルーブレイブ */
+    { 342, DM_TECHNIQUE_0764, 1698, 3 }, /* スパーダモン: オーロラブレイザー */
+    { 343, DM_TECHNIQUE_0765, 1699, 1 }, /* モルフォモン: リンリンテラピー */
+    { 344, DM_TECHNIQUE_0766, 1700, 1 }, /* エオスモン: オーロラストリーム */
+    { 344, DM_TECHNIQUE_0767, 1701, 2 }, /* エオスモン: カッティングエッジ */
+    { 344, DM_TECHNIQUE_0768, 1702, 3 }, /* エオスモン: クルーティレイン */
+    { 345, DM_TECHNIQUE_0769, 1703, 1 }, /* ガブモン -友情の絆-: フルメタルマシンガン */
+    { 345, DM_TECHNIQUE_0770, 1704, 2 }, /* ガブモン -友情の絆-: クールエッジ */
+    { 345, DM_TECHNIQUE_0771, 1705, 3 }, /* ガブモン -友情の絆-: ムーンテンス */
+    { 345, DM_TECHNIQUE_0772, 1706, 4 }, /* ガブモン -友情の絆-: レドルスター */
+    { 346, DM_TECHNIQUE_0773, 1707, 1 }, /* アグモン -勇気の絆-: レッドリーマー */
+    { 346, DM_TECHNIQUE_0774, 1708, 2 }, /* アグモン -勇気の絆-: ストラッシュサラマンダー */
+    { 346, DM_TECHNIQUE_0775, 1709, 3 }, /* アグモン -勇気の絆-: ガイアブレイブ */
+    { 347, DM_TECHNIQUE_0776, 1710, 1 }, /* エオスモン: ビートプレス */
+    { 347, DM_TECHNIQUE_0777, 1711, 2 }, /* エオスモン: ヘクサンダー */
+    { 347, DM_TECHNIQUE_0767, 1701, 3 }, /* エオスモン: カッティングエッジ */
+    { 348, DM_TECHNIQUE_0778, 1712, 1 }, /* エオスモン: ミラーガード */
+    { 348, DM_TECHNIQUE_0779, 1713, 2 }, /* エオスモン: ミラーダスト */
+    { 348, DM_TECHNIQUE_0780, 1714, 3 }, /* エオスモン: ボールトリプ */
+    { 349, DM_TECHNIQUE_0781, 1715, 1 }, /* トノサママメモン: 天晴れ桜 */
+    { 349, DM_TECHNIQUE_0782, 1716, 2 }, /* トノサママメモン: 扇子返し */
+    { 350, DM_TECHNIQUE_0475, 1409, 1 }, /* オメガモン ズワルト: ガルルキャノン */
+    { 350, DM_TECHNIQUE_0476, 1410, 2 }, /* オメガモン ズワルト: グレイソード */
+    { 351, DM_TECHNIQUE_0783, 1717, 1 }, /* テリアモン助手: ダイバッチグー */
+    { 351, DM_TECHNIQUE_0784, 1718, 2 }, /* テリアモン助手: プチツイスター */
+    { 352, DM_TECHNIQUE_0785, 1719, 1 }, /* クリスペイルドラモン: フローズンクロー */
+    { 352, DM_TECHNIQUE_0786, 1720, 2 }, /* クリスペイルドラモン: カロスディメンション */
+    { 353, DM_TECHNIQUE_0787, 1721, 1 }, /* メタリックドラモン: レーザーカノン */
+    { 353, DM_TECHNIQUE_0788, 1722, 2 }, /* メタリックドラモン: レーザーサーベル */
+    { 354, DM_TECHNIQUE_0789, 1723, 1 }, /* ジャザリッヒモン: メッサースパイラル */
+    { 354, DM_TECHNIQUE_0790, 1724, 2 }, /* ジャザリッヒモン: N・S・B・M */
+    { 355, DM_TECHNIQUE_0791, 1725, 1 }, /* ジャザードモン: レーザーアイ */
+    { 355, DM_TECHNIQUE_0792, 1726, 2 }, /* ジャザードモン: ソニックバルカン */
+    { 356, DM_TECHNIQUE_0793, 1727, 1 }, /* ジャザモン: ココンピック */
+    { 357, DM_TECHNIQUE_0794, 1728, 1 }, /* ヘクセブラウモン: サモンフロスト */
+    { 357, DM_TECHNIQUE_0795, 1729, 2 }, /* ヘクセブラウモン: ヘクトエッジブリザード */
+    { 357, DM_TECHNIQUE_0796, 1730, 3 }, /* ヘクセブラウモン: アブソリュートブラスト */
+    { 358, DM_TECHNIQUE_0797, 1731, 1 }, /* ペイルドラモン: アイスエイジ */
+    { 358, DM_TECHNIQUE_0798, 1732, 2 }, /* ペイルドラモン: メテオヘイル */
+    { 359, DM_TECHNIQUE_0799, 1733, 1 }, /* ノーブルパンプモン: トリックオアトリート・ウォレス */
+    { 359, DM_TECHNIQUE_0800, 1734, 2 }, /* ノーブルパンプモン: アトランティックダム */
+    { 359, DM_TECHNIQUE_0801, 1735, 3 }, /* ノーブルパンプモン: ワッサムリングジャック */
+    { 360, DM_TECHNIQUE_0802, 1736, 1 }, /* オグドモン（X抗体）: デスティニー・デス・デストラクション（Death3） */
+    { 361, DM_TECHNIQUE_0803, 1737, 1 }, /* ジエスモンGX: 聖拳滅破 */
+    { 361, DM_TECHNIQUE_0804, 1738, 2 }, /* ジエスモンGX: ナイツ・イントルーダー */
+    { 362, DM_TECHNIQUE_0805, 1739, 1 }, /* ケラモン（X抗体）: クレイジーギグル */
+    { 363, DM_TECHNIQUE_0806, 1740, 1 }, /* オメガシャウトモン（X抗体）: フレアロックダマシー */
+    { 363, DM_TECHNIQUE_0807, 1741, 2 }, /* オメガシャウトモン（X抗体）: ヘヴィヒートバルカン */
+    { 363, DM_TECHNIQUE_0808, 1742, 3 }, /* オメガシャウトモン（X抗体）: ジアルマグナム */
+    { 363, DM_TECHNIQUE_0809, 1743, 4 }, /* オメガシャウトモン（X抗体）: オメガ・ザ・フュージョン */
+    { 364, DM_TECHNIQUE_0810, 1744, 1 }, /* メラモン（X抗体）: エクスラディケート */
+    { 365, DM_TECHNIQUE_0811, 1745, 1 }, /* ペガスモン（X抗体）: メテオライザー */
+    { 365, DM_TECHNIQUE_0812, 1746, 2 }, /* ペガスモン（X抗体）: ゴールデンスクエア */
+    { 365, DM_TECHNIQUE_0813, 1747, 3 }, /* ペガスモン（X抗体）: シークレッドウォール */
+    { 366, DM_TECHNIQUE_0814, 1748, 1 }, /* ラピッドモン（X抗体）: ラピッドブラスター */
+    { 366, DM_TECHNIQUE_0815, 1749, 2 }, /* ラピッドモン（X抗体）: レーザーガトリングアーム */
+    { 366, DM_TECHNIQUE_0816, 1750, 3 }, /* ラピッドモン（X抗体）: ビリオンバレット */
+    { 367, DM_TECHNIQUE_0817, 1751, 1 }, /* もんざえモン（X抗体）: ラブリースプラッシュ */
+    { 368, DM_TECHNIQUE_0818, 1752, 1 }, /* ガンクゥモン（X抗体）: 究極戦技天仰拳 */
+    { 368, DM_TECHNIQUE_0819, 1753, 2 }, /* ガンクゥモン（X抗体）: 鉄ゲタ張り手 */
+    { 369, DM_TECHNIQUE_0820, 1754, 1 }, /* エグザモン（X抗体）: ペンドラゴンスパークル */
+    { 369, DM_TECHNIQUE_0821, 1755, 2 }, /* エグザモン（X抗体）: 雷剣ブレイラガハ */
+    { 370, DM_TECHNIQUE_0822, 1756, 1 }, /* サイバードラモン（X抗体）: エクストリームテイラー */
+    { 370, DM_TECHNIQUE_0823, 1757, 2 }, /* サイバードラモン（X抗体）: イレイズクロー */
+    { 371, DM_TECHNIQUE_0824, 1758, 1 }, /* ライズグレイモン（X抗体）: サンライズバスター */
+    { 371, DM_TECHNIQUE_0825, 1759, 2 }, /* ライズグレイモン（X抗体）: ザンスラスト */
+    { 372, DM_TECHNIQUE_0826, 1760, 1 }, /* ホウオウモン（X抗体）: スターライトエクスプロージョン */
+    { 373, DM_TECHNIQUE_0827, 1761, 1 }, /* ジャスティモン（X抗体）: ジャスティスXキック */
+    { 373, DM_TECHNIQUE_0828, 1762, 2 }, /* ジャスティモン（X抗体）: ジャスティスXパンチ */
+    { 373, DM_TECHNIQUE_0829, 1763, 3 }, /* ジャスティモン（X抗体）: ジャスティスXブレード */
+    { 374, DM_TECHNIQUE_0830, 1764, 1 }, /* ウィザーモン（X抗体）: ボルトブレイク */
+    { 374, DM_TECHNIQUE_0831, 1765, 2 }, /* ウィザーモン（X抗体）: サンダークラウド */
+    { 375, DM_TECHNIQUE_0832, 1766, 1 }, /* シーサモン（X抗体）: 胡劉球（こりゅうきゅう） */
+    { 375, DM_TECHNIQUE_0833, 1767, 2 }, /* シーサモン（X抗体）: 石敢当（せっかんとう） */
+    { 375, DM_TECHNIQUE_0834, 1768, 3 }, /* シーサモン（X抗体）: ティーダ・イヤ */
+    { 376, DM_TECHNIQUE_0835, 1769, 1 }, /* ケルビモン（善）（X抗体）: ビリリンハギュー */
+    { 376, DM_TECHNIQUE_0836, 1770, 2 }, /* ケルビモン（善）（X抗体）: ライトニングスピア */
+    { 376, DM_TECHNIQUE_0837, 1771, 3 }, /* ケルビモン（善）（X抗体）: ヘブンズ・ジャッジメント */
+    { 377, DM_TECHNIQUE_0838, 1772, 1 }, /* オファニモン（X抗体）: ホーリーマテリアル */
+    { 377, DM_TECHNIQUE_0839, 1773, 2 }, /* オファニモン（X抗体）: エデンスランス */
+    { 378, DM_TECHNIQUE_0840, 1774, 1 }, /* エンジェウーモン（X抗体）: グランドホーリーアロー */
+    { 378, DM_TECHNIQUE_0841, 1775, 2 }, /* エンジェウーモン（X抗体）: ヘブンズチャーム */
+    { 379, DM_TECHNIQUE_0842, 1776, 1 }, /* ディアボロモン（Ｘ抗体）: スプーキーザッパー */
+    { 379, DM_TECHNIQUE_0843, 1777, 2 }, /* ディアボロモン（Ｘ抗体）: フェイタルゲイズ */
+    { 379, DM_TECHNIQUE_0844, 1778, 3 }, /* ディアボロモン（Ｘ抗体）: リワインドアビス13（サーティーン） */
+    { 380, DM_TECHNIQUE_0845, 1779, 1 }, /* デュナスモン（X抗体）: ドラゴンズロア */
+    { 380, DM_TECHNIQUE_0846, 1780, 2 }, /* デュナスモン（X抗体）: ブレス・オブ・ワイバーン */
+    { 380, DM_TECHNIQUE_0847, 1781, 3 }, /* デュナスモン（X抗体）: ドラゴンズガスト */
+    { 381, DM_TECHNIQUE_0848, 1782, 1 }, /* ドゥフトモン（X抗体）: アウススターベン */
+    { 381, DM_TECHNIQUE_0849, 1783, 2 }, /* ドゥフトモン（X抗体）: ブラオンネーベル */
+    { 381, DM_TECHNIQUE_0850, 1784, 3 }, /* ドゥフトモン（X抗体）: アイネ・ビリオン */
+    { 382, DM_TECHNIQUE_0851, 1785, 1 }, /* ホーリードラモン（X抗体）: ホーリーフレイム */
+    { 382, DM_TECHNIQUE_0852, 1786, 2 }, /* ホーリードラモン（X抗体）: ホーリーブレイズ */
+    { 383, DM_TECHNIQUE_0853, 1787, 1 }, /* プレシオモン（X抗体）: ソローブルー */
+    { 383, DM_TECHNIQUE_0854, 1788, 2 }, /* プレシオモン（X抗体）: ファンタジーミスト */
+    { 384, DM_TECHNIQUE_0855, 1789, 1 }, /* ゴッドドラモン（X抗体）: ゴッドフレイム */
+    { 384, DM_TECHNIQUE_0856, 1790, 2 }, /* ゴッドドラモン（X抗体）: ゴッドフィスト */
+    { 385, DM_TECHNIQUE_0857, 1791, 1 }, /* ガルダモン（X抗体）: シャドーウィング */
+    { 386, DM_TECHNIQUE_0464, 1398, 1 }, /* テイルモン（X抗体）: ネコパンチ */
+    { 386, DM_TECHNIQUE_0858, 1792, 2 }, /* テイルモン（X抗体）: ホーリーチャイム */
+    { 387, DM_TECHNIQUE_0859, 1793, 1 }, /* トゲモン（X抗体）: チクチクバンバン */
+    { 387, DM_TECHNIQUE_0860, 1794, 2 }, /* トゲモン（X抗体）: チクチクバムバム */
+    { 388, DM_TECHNIQUE_0861, 1795, 1 }, /* ティロモン（X抗体）: トーピードアタック */
+    { 388, DM_TECHNIQUE_0862, 1796, 2 }, /* ティロモン（X抗体）: シックルストリーム */
+    { 389, DM_TECHNIQUE_0863, 1797, 1 }, /* ロップモン（X抗体）: ブレイジングアイス */
+    { 389, DM_TECHNIQUE_0784, 1718, 2 }, /* ロップモン（X抗体）: プチツイスター */
+    { 389, DM_TECHNIQUE_0864, 1798, 3 }, /* ロップモン（X抗体）: ファロストタイフーン */
+    { 390, DM_TECHNIQUE_0865, 1799, 1 }, /* シャコモン（X抗体）: ブラックパール */
+    { 391, DM_TECHNIQUE_0866, 1800, 1 }, /* テリアモン（X抗体）: ブレイジングファイア */
+    { 391, DM_TECHNIQUE_0784, 1718, 2 }, /* テリアモン（X抗体）: プチツイスター */
+    { 391, DM_TECHNIQUE_0864, 1798, 3 }, /* テリアモン（X抗体）: ファロストタイフーン */
+    { 392, DM_TECHNIQUE_0867, 1801, 1 }, /* パルモン（X抗体）: ポイズンアイビー */
+    { 392, DM_TECHNIQUE_0868, 1802, 2 }, /* パルモン（X抗体）: ＲＧＢハーブ */
+    { 393, DM_TECHNIQUE_0869, 1803, 1 }, /* プテラノモン（X抗体）: ビークピアス */
+    { 393, DM_TECHNIQUE_0870, 1804, 2 }, /* プテラノモン（X抗体）: ネイルコーム */
+    { 394, DM_TECHNIQUE_0871, 1805, 1 }, /* マメモン（X抗体）: スマイリーボム */
+    { 394, DM_TECHNIQUE_0872, 1806, 2 }, /* マメモン（X抗体）: ボムシング */
+    { 395, DM_TECHNIQUE_0873, 1807, 1 }, /* イーバモン（X抗体）: ブレインラプチュアー */
+    { 395, DM_TECHNIQUE_0874, 1808, 2 }, /* イーバモン（X抗体）: プラネットデストロイヤー */
+    { 395, DM_TECHNIQUE_0875, 1809, 3 }, /* イーバモン（X抗体）: プラネットデストロイヤージャスティス */
+    { 396, DM_TECHNIQUE_0876, 1810, 1 }, /* スレイプモン（X抗体）: スルトブランダー */
+    { 396, DM_TECHNIQUE_0877, 1811, 2 }, /* スレイプモン（X抗体）: ニヴルヘイムアレスト */
+    { 397, DM_TECHNIQUE_0878, 1812, 1 }, /* クレニアムモン（X抗体）: グランドグリーズル */
+    { 397, DM_TECHNIQUE_0879, 1813, 2 }, /* クレニアムモン（X抗体）: ヒャズニング・ワルツ */
+    { 398, DM_TECHNIQUE_0880, 1814, 1 }, /* アルフォースブイドラモン（X抗体）: シャイニングＶフォース */
+    { 399, DM_TECHNIQUE_0881, 1815, 1 }, /* マグナモン（X抗体）: プラズマシュート */
+    { 399, DM_TECHNIQUE_0882, 1816, 2 }, /* マグナモン（X抗体）: シャイニングゴールドソーラーストーム */
+    { 400, DM_TECHNIQUE_0171, 1105, 1 }, /* メガシードラモン（X抗体）: サンダージャベリン */
+    { 400, DM_TECHNIQUE_0883, 1817, 2 }, /* メガシードラモン（X抗体）: キングジャベリン */
+    { 401, DM_TECHNIQUE_0884, 1818, 1 }, /* トリケラモン（X抗体）: トライホーンアタック */
+    { 401, DM_TECHNIQUE_0885, 1819, 2 }, /* トリケラモン（X抗体）: ゴールデントライホーンアタック */
+    { 402, DM_TECHNIQUE_0886, 1820, 1 }, /* オオクワモン（X抗体）: シザーアームズΩ３^３ */
+    { 403, DM_TECHNIQUE_0887, 1821, 1 }, /* マンタレイモン（X抗体）: パラライズテイル */
+    { 403, DM_TECHNIQUE_0888, 1822, 2 }, /* マンタレイモン（X抗体）: パラライズ・ボム */
+    { 404, DM_TECHNIQUE_0889, 1823, 1 }, /* ネフェルティモン（X抗体）: カースオブクィーン */
+    { 404, DM_TECHNIQUE_0890, 1824, 2 }, /* ネフェルティモン（X抗体）: ロゼッタストーン */
+    { 404, DM_TECHNIQUE_0891, 1825, 3 }, /* ネフェルティモン（X抗体）: カルトゥーシュ */
+    { 405, DM_TECHNIQUE_0892, 1826, 1 }, /* シードラモン（X抗体）: アイスアロー */
+    { 405, DM_TECHNIQUE_0893, 1827, 2 }, /* シードラモン（X抗体）: アイススピアー */
+    { 406, DM_TECHNIQUE_0894, 1828, 1 }, /* クワガーモン（X抗体）: シザーアームズ */
+    { 406, DM_TECHNIQUE_0895, 1829, 2 }, /* クワガーモン（X抗体）: クランチアーム */
+    { 407, DM_TECHNIQUE_0896, 1830, 1 }, /* アロモン（X抗体）: ディノバースト */
+    { 407, DM_TECHNIQUE_0897, 1831, 2 }, /* アロモン（X抗体）: ディノフラッシュ */
+    { 408, DM_TECHNIQUE_0898, 1832, 1 }, /* ゴマモン（X抗体）: マーチングフィッシィーズ */
+    { 409, DM_TECHNIQUE_0899, 1833, 1 }, /* コクワモン（X抗体）: シザーアームズミニ */
+    { 410, DM_TECHNIQUE_0900, 1834, 1 }, /* ブラックウォーグレイモン（X抗体）: 暗黒のガイアフォース */
+    { 410, DM_TECHNIQUE_0901, 1835, 2 }, /* ブラックウォーグレイモン（X抗体）: ハデスフォース */
+    { 410, DM_TECHNIQUE_0902, 1836, 3 }, /* ブラックウォーグレイモン（X抗体）: アフターバースト */
+    { 411, DM_TECHNIQUE_0903, 1837, 1 }, /* レディーデビモン（Ｘ抗体）: グレイエム */
+    { 411, DM_TECHNIQUE_0904, 1838, 2 }, /* レディーデビモン（Ｘ抗体）: エンデブレッヘン */
+    { 412, DM_TECHNIQUE_0905, 1839, 1 }, /* メタルグレイモン（ウィルス種）（Ｘ抗体）: エネルギアブリッツ */
+    { 412, DM_TECHNIQUE_0906, 1840, 2 }, /* メタルグレイモン（ウィルス種）（Ｘ抗体）: パンデミックデストロイヤー */
+    { 413, DM_TECHNIQUE_0907, 1841, 1 }, /* オーガモン（Ｘ抗体）: 覇王拳 */
+    { 413, DM_TECHNIQUE_0908, 1842, 2 }, /* オーガモン（Ｘ抗体）: WEEK END */
+    { 414, DM_TECHNIQUE_0909, 1843, 1 }, /* アグモン（黒）（Ｘ抗体）: BBバーナー */
+    { 415, DM_TECHNIQUE_0910, 1844, 1 }, /* ラセンモン: ジャイロスマッシュ */
+    { 415, DM_TECHNIQUE_0911, 1845, 2 }, /* ラセンモン: クオリアライズブラスト */
+    { 415, DM_TECHNIQUE_0912, 1846, 3 }, /* ラセンモン: スパイラルヴァニッシュ */
+    { 416, DM_TECHNIQUE_0913, 1847, 1 }, /* ラセンモン：激昂モード: デスペレイトボルテックス */
+    { 416, DM_TECHNIQUE_0914, 1848, 2 }, /* ラセンモン：激昂モード: プレデターズバイト */
+    { 416, DM_TECHNIQUE_0915, 1849, 3 }, /* ラセンモン：激昂モード: スパイラル・ヘル */
+    { 417, DM_TECHNIQUE_0916, 1850, 1 }, /* スティフィルモン: ギガクリムゾンダイブ */
+    { 417, DM_TECHNIQUE_0917, 1851, 2 }, /* スティフィルモン: ヴァーミリオンボルテックス */
+    { 418, DM_TECHNIQUE_0918, 1852, 1 }, /* フィルモン: ライトニングスティンガー */
+    { 418, DM_TECHNIQUE_0919, 1853, 2 }, /* フィルモン: クリムゾンスラッシュ */
+    { 419, DM_TECHNIQUE_0920, 1854, 1 }, /* ロゼモン（X抗体）: ソーンウィップ */
+    { 419, DM_TECHNIQUE_0921, 1855, 2 }, /* ロゼモン（X抗体）: ローゼンブラッド */
+    { 420, DM_TECHNIQUE_0922, 1856, 1 }, /* プリンスマメモン（X抗体）: スマイリーウォーヘッド */
+    { 420, DM_TECHNIQUE_0923, 1857, 2 }, /* プリンスマメモン（X抗体）: デルモウォーキング */
+    { 421, DM_TECHNIQUE_0924, 1858, 1 }, /* スカルマンモン（X抗体）: スパイラルボーン */
+    { 421, DM_TECHNIQUE_0925, 1859, 2 }, /* スカルマンモン（X抗体）: ジャイアントクラッシュボーン */
+    { 422, DM_TECHNIQUE_0926, 1860, 1 }, /* マンモン（X抗体）: タスクストライクス */
+    { 422, DM_TECHNIQUE_0927, 1861, 2 }, /* マンモン（X抗体）: ツンドラブレス */
+    { 422, DM_TECHNIQUE_0928, 1862, 3 }, /* マンモン（X抗体）: ジオメトリックフリーザー */
+    { 423, DM_TECHNIQUE_0929, 1863, 1 }, /* メフィスモン（Ｘ抗体）: ヘルマニア */
+    { 423, DM_TECHNIQUE_0930, 1864, 2 }, /* メフィスモン（Ｘ抗体）: メリーメリーデストラクション */
+    { 424, DM_TECHNIQUE_0931, 1865, 1 }, /* ヴァンデモン（X抗体）: ヴァンパイアセオリー */
+    { 424, DM_TECHNIQUE_0932, 1866, 2 }, /* ヴァンデモン（X抗体）: ブラッディドレイン */
+    { 425, DM_TECHNIQUE_0933, 1867, 1 }, /* プロットモン（X抗体）: パピーハウリング */
+    { 425, DM_TECHNIQUE_0934, 1868, 2 }, /* プロットモン（X抗体）: パピーポー */
+    { 426, DM_TECHNIQUE_0935, 1869, 1 }, /* オタマモン（X抗体）: ララバイバブル */
+    { 426, DM_TECHNIQUE_0936, 1870, 2 }, /* オタマモン（X抗体）: スマイリーヘッドバット */
+    { 427, DM_TECHNIQUE_0937, 1871, 1 }, /* ヤーモン: ペイントスプラッシュ */
+    { 428, DM_TECHNIQUE_0938, 1872, 1 }, /* キーモン: プシュー */
+    { 429, DM_TECHNIQUE_0939, 1873, 1 }, /* インプモン（Ｘ抗体）: ナイト・オブ・ファイアー */
+    { 429, DM_TECHNIQUE_0940, 1874, 2 }, /* インプモン（Ｘ抗体）: サモンチェイサー */
+    { 430, DM_TECHNIQUE_0941, 1875, 1 }, /* ダークティラノモン（Ｘ抗体）: ファイアーブラスト */
+    { 430, DM_TECHNIQUE_0942, 1876, 2 }, /* ダークティラノモン（Ｘ抗体）: フレイムスナッチ */
+    { 431, DM_TECHNIQUE_0943, 1877, 1 }, /* ヌメモン（Ｘ抗体）: ウンチラッシュ */
+    { 432, DM_TECHNIQUE_0944, 1878, 1 }, /* ルーチェモン（Ｘ抗体）: パラダイスロスト */
+    { 432, DM_TECHNIQUE_0945, 1879, 2 }, /* ルーチェモン（Ｘ抗体）: パーガトリアルフレイム */
+    { 432, DM_TECHNIQUE_0946, 1880, 3 }, /* ルーチェモン（Ｘ抗体）: セブンス・ディバイン・クルス */
+    { 433, DM_TECHNIQUE_0947, 1881, 1 }, /* リリスモン（Ｘ抗体）: ナザルネイル */
+    { 433, DM_TECHNIQUE_0948, 1882, 2 }, /* リリスモン（Ｘ抗体）: ファントムペイン */
+    { 433, DM_TECHNIQUE_0949, 1883, 3 }, /* リリスモン（Ｘ抗体）: セブンス・ファシネイト */
+    { 434, DM_TECHNIQUE_0950, 1884, 1 }, /* リヴァイアモン（Ｘ抗体）: カウダ・モルティフェラ */
+    { 434, DM_TECHNIQUE_0951, 1885, 2 }, /* リヴァイアモン（Ｘ抗体）: ロストルム・トリアデンス */
+    { 434, DM_TECHNIQUE_0952, 1886, 3 }, /* リヴァイアモン（Ｘ抗体）: セブンス・ライトニング */
+    { 435, DM_TECHNIQUE_0953, 1887, 1 }, /* ベルフェモン（Ｘ抗体）: ランプランツス */
+    { 435, DM_TECHNIQUE_0954, 1888, 2 }, /* ベルフェモン（Ｘ抗体）: ギフトオブダークネス */
+    { 435, DM_TECHNIQUE_0955, 1889, 3 }, /* ベルフェモン（Ｘ抗体）: セブンス・ペネトレート */
+    { 436, DM_TECHNIQUE_0956, 1890, 1 }, /* バルバモン（Ｘ抗体）: デスルアー */
+    { 436, DM_TECHNIQUE_0957, 1891, 2 }, /* バルバモン（Ｘ抗体）: パンデモニウムロスト */
+    { 436, DM_TECHNIQUE_0958, 1892, 3 }, /* バルバモン（Ｘ抗体）: セブンス・ジュエライズ */
+    { 437, DM_TECHNIQUE_0959, 1893, 1 }, /* デーモン（Ｘ抗体）: フレイムインフェルノ */
+    { 437, DM_TECHNIQUE_0960, 1894, 2 }, /* デーモン（Ｘ抗体）: セブンス・グラビトン */
+    { 437, DM_TECHNIQUE_0961, 1895, 3 }, /* デーモン（Ｘ抗体）: インフェルノバースト */
+    { 438, DM_TECHNIQUE_0962, 1896, 1 }, /* ダークナイトモン（Ｘ抗体）: クルーエルトルネード */
+    { 438, DM_TECHNIQUE_0963, 1897, 2 }, /* ダークナイトモン（Ｘ抗体）: デッドリーブレイクロスト */
+    { 438, DM_TECHNIQUE_0964, 1898, 3 }, /* ダークナイトモン（Ｘ抗体）: アンデッドソルジャー */
+    { 439, DM_TECHNIQUE_0836, 1770, 1 }, /* ケルビモン（悪）（Ｘ抗体）: ライトニングスピア */
+    { 439, DM_TECHNIQUE_0837, 1771, 2 }, /* ケルビモン（悪）（Ｘ抗体）: ヘブンズ・ジャッジメント */
+    { 439, DM_TECHNIQUE_0965, 1899, 3 }, /* ケルビモン（悪）（Ｘ抗体）: ダークネスプリズン */
+    { 440, DM_TECHNIQUE_0966, 1900, 1 }, /* オファニモン：フォールダウンモード（Ｘ抗体）: デモンズクリスタル */
+    { 440, DM_TECHNIQUE_0967, 1901, 2 }, /* オファニモン：フォールダウンモード（Ｘ抗体）: フレイムヘルサイズ */
+    { 440, DM_TECHNIQUE_0968, 1902, 3 }, /* オファニモン：フォールダウンモード（Ｘ抗体）: ビヘッドスラッシャー */
+    { 441, DM_TECHNIQUE_0969, 1903, 1 }, /* アルティメットカオスモン: ブロウクンデストロイ */
+    { 441, DM_TECHNIQUE_0970, 1904, 2 }, /* アルティメットカオスモン: ウルティマバースト */
+    { 442, DM_TECHNIQUE_0971, 1905, 1 }, /* プスリモン: チクチクローリング */
+    { 443, DM_TECHNIQUE_0972, 1906, 1 }, /* プスモン: おしゃぶり */
+    { 444, DM_TECHNIQUE_0973, 1907, 1 }, /* サーフィモン: バリアブレード */
+    { 444, DM_TECHNIQUE_0974, 1908, 2 }, /* サーフィモン: ライトニングカッター */
+    { 445, DM_TECHNIQUE_0975, 1909, 1 }, /* ブルコモン: ベビーヘイル */
+    { 445, DM_TECHNIQUE_0976, 1910, 2 }, /* ブルコモン: アイスマッシュ */
+    { 446, DM_TECHNIQUE_0977, 1911, 1 }, /* エリスモン: ライトニングファー */
+    { 446, DM_TECHNIQUE_0978, 1912, 2 }, /* エリスモン: ケンザンダイブ */
+    { 447, DM_TECHNIQUE_0979, 1913, 1 }, /* メタルガルルモン（黒）: コキュートスブレス */
+    { 447, DM_TECHNIQUE_0980, 1914, 2 }, /* メタルガルルモン（黒）: ガルルトマホーク */
+    { 447, DM_TECHNIQUE_0981, 1915, 3 }, /* メタルガルルモン（黒）: グレイスクロスフリーザー */
+    { 448, DM_TECHNIQUE_0686, 1620, 1 }, /* ワーガルルモン（黒）: カイザーネイル */
+    { 449, DM_TECHNIQUE_0757, 1691, 1 }, /* ガルルモン（黒）: フォックスファイアー */
+    { 450, DM_TECHNIQUE_0982, 1916, 1 }, /* ジャスティモン：ブリッツアーム: トリニティーアーム */
+    { 450, DM_TECHNIQUE_0983, 1917, 2 }, /* ジャスティモン：ブリッツアーム: ジャスティスキック */
+    { 451, DM_TECHNIQUE_0984, 1918, 1 }, /* ギンカクモンプロモート: 火電鬼爆波（ひでんきばくは） */
+    { 452, DM_TECHNIQUE_0985, 1919, 1 }, /* アイスデビモン: フロストクロー */
+    { 453, DM_TECHNIQUE_0986, 1920, 1 }, /* クズハモン：巫女モード: 裏飯綱（うらいづな） */
+    { 453, DM_TECHNIQUE_0987, 1921, 2 }, /* クズハモン：巫女モード: 胎蔵界曼荼羅（たいぞうかいまんだら） */
+    { 454, DM_TECHNIQUE_0988, 1922, 1 }, /* メガログラウモン（橙）: ダブルエッジ */
+    { 454, DM_TECHNIQUE_0989, 1923, 2 }, /* メガログラウモン（橙）: アトミックブラスター */
+    { 455, DM_TECHNIQUE_0758, 1692, 1 }, /* グレイモン（青）: メガフレイム */
+    { 456, DM_TECHNIQUE_0990, 1924, 1 }, /* シャウトモン（キングVer.）: ロックダマシー */
+    { 456, DM_TECHNIQUE_0991, 1925, 2 }, /* シャウトモン（キングVer.）: ソウルクラッシャー */
+    { 456, DM_TECHNIQUE_0992, 1926, 3 }, /* シャウトモン（キングVer.）: ラウディロッカー */
+    { 457, DM_TECHNIQUE_0993, 1927, 1 }, /* ウォーグレイモン（X抗体）: ガイアフォースＺＥＲＯ */
+    { 457, DM_TECHNIQUE_0902, 1836, 2 }, /* ウォーグレイモン（X抗体）: アフターバースト */
+    { 458, DM_TECHNIQUE_0994, 1928, 1 }, /* メタルガルルモン（X抗体）: メタルストーム */
+    { 458, DM_TECHNIQUE_0979, 1913, 2 }, /* メタルガルルモン（X抗体）: コキュートスブレス */
+    { 459, DM_TECHNIQUE_0995, 1929, 1 }, /* メギドラモン（X抗体）: ヘル・ハウリング */
+    { 459, DM_TECHNIQUE_0996, 1930, 2 }, /* メギドラモン（X抗体）: メギドフレイム */
+    { 460, DM_TECHNIQUE_0686, 1620, 1 }, /* ワーガルルモン（X抗体）: カイザーネイル */
+    { 461, DM_TECHNIQUE_0997, 1931, 1 }, /* リリモン（X抗体）: スリーピーバッド */
+    { 461, DM_TECHNIQUE_0998, 1932, 2 }, /* リリモン（X抗体）: フラウカノン */
+    { 462, DM_TECHNIQUE_0999, 1933, 1 }, /* サクヤモン（Ｘ抗体）: 金剛界曼荼羅（こんごうかいまんだら） */
+    { 462, DM_TECHNIQUE_1000, 1934, 2 }, /* サクヤモン（Ｘ抗体）: 此ノ花戦姫万象（このはなせんきばんしょう） */
+    { 462, DM_TECHNIQUE_1001, 1935, 3 }, /* サクヤモン（Ｘ抗体）: 宇迦之御魂（うかのみたま） */
+    { 463, DM_TECHNIQUE_1002, 1936, 1 }, /* ベルゼブモン（X抗体）: グラトニーフレア */
+    { 463, DM_TECHNIQUE_1003, 1937, 2 }, /* ベルゼブモン（X抗体）: ダークネスクロウ */
+    { 463, DM_TECHNIQUE_1004, 1938, 3 }, /* ベルゼブモン（X抗体）: ダブルインパクト */
+    { 463, DM_TECHNIQUE_1005, 1939, 4 }, /* ベルゼブモン（X抗体）: セブンス・フルクラスター */
+    { 464, DM_TECHNIQUE_1006, 1940, 1 }, /* メガログラウモン（X抗体）: ダブルエッジΣ（シグマ） */
+    { 464, DM_TECHNIQUE_0989, 1923, 2 }, /* メガログラウモン（X抗体）: アトミックブラスター */
+    { 464, DM_TECHNIQUE_1007, 1941, 3 }, /* メガログラウモン（X抗体）: アトミックメガロブラスター */
+    { 465, DM_TECHNIQUE_1008, 1942, 1 }, /* ライノモン（Ｘ抗体）: アイン・ソフ・オウル */
+    { 465, DM_TECHNIQUE_1009, 1943, 2 }, /* ライノモン（Ｘ抗体）: アトミックブレイド */
+    { 465, DM_TECHNIQUE_1010, 1944, 3 }, /* ライノモン（Ｘ抗体）: スピリットバースト */
+    { 466, DM_TECHNIQUE_1011, 1945, 1 }, /* レナモン（Ｘ抗体）: 太極旋（たいきょくせん） */
+    { 466, DM_TECHNIQUE_1012, 1946, 2 }, /* レナモン（Ｘ抗体）: 狐蝶幻（こちょうげん） */
+    { 467, DM_TECHNIQUE_1013, 1947, 1 }, /* トコモン（Ｘ抗体）: トコトコダイブ */
+    { 467, DM_TECHNIQUE_1014, 1948, 2 }, /* トコモン（Ｘ抗体）: 噛み付き */
+    { 468, DM_TECHNIQUE_1015, 1949, 1 }, /* ベルスターモン（Ｘ抗体）: ダブルクロウ */
+    { 468, DM_TECHNIQUE_1016, 1950, 2 }, /* ベルスターモン（Ｘ抗体）: フライバレット・セグンド */
+    { 468, DM_TECHNIQUE_1017, 1951, 3 }, /* ベルスターモン（Ｘ抗体）: ディスタンシア・セロ */
+    { 469, DM_TECHNIQUE_1018, 1952, 1 }, /* デュークモン（X抗体）: ジークセイバー */
+    { 469, DM_TECHNIQUE_1019, 1953, 2 }, /* デュークモン（X抗体）: ファイナル・エリシオン */
+    { 470, DM_TECHNIQUE_1020, 1954, 1 }, /* ケルベロモン（X抗体）: インフェルノゲート */
+    { 470, DM_TECHNIQUE_1021, 1955, 2 }, /* ケルベロモン（X抗体）: ヘルファイアー */
+    { 471, DM_TECHNIQUE_1022, 1956, 1 }, /* ティラノモン（X抗体）: クリムゾンブレス */
+    { 471, DM_TECHNIQUE_1023, 1957, 2 }, /* ティラノモン（X抗体）: クラッシュローリング */
+    { 472, DM_TECHNIQUE_1024, 1958, 1 }, /* ドラコモン（X抗体）: ベビーブレイズ */
+    { 472, DM_TECHNIQUE_1025, 1959, 2 }, /* ドラコモン（X抗体）: スマッシュホーン */
+    { 472, DM_TECHNIQUE_1026, 1960, 3 }, /* ドラコモン（X抗体）: ジ・シュルネン */
+    { 473, DM_TECHNIQUE_1027, 1961, 1 }, /* ガブモン（X抗体）: プチファイアー */
+    { 474, DM_TECHNIQUE_1028, 1962, 1 }, /* ミネルヴァモン（X抗体）: ホーンテッドピルス */
+    { 474, DM_TECHNIQUE_1029, 1963, 2 }, /* ミネルヴァモン（X抗体）: クレイジーゴーラウンド */
+    { 474, DM_TECHNIQUE_1030, 1964, 3 }, /* ミネルヴァモン（X抗体）: サンクタス・トルメンタム */
+    { 475, DM_TECHNIQUE_1031, 1965, 1 }, /* ロードナイトモン（X抗体）: ロードオブフラタニティ */
+    { 475, DM_TECHNIQUE_1032, 1966, 2 }, /* ロードナイトモン（X抗体）: ノブレス・オブ・ルージュ */
+    { 475, DM_TECHNIQUE_1033, 1967, 3 }, /* ロードナイトモン（X抗体）: 究極戦突剣（きゅうきょくせんとつけん）グランローゼリオ */
+    { 476, DM_TECHNIQUE_1034, 1968, 1 }, /* シスタモン シエル: 白詰一文字切り */
+    { 476, DM_TECHNIQUE_1035, 1969, 2 }, /* シスタモン シエル: 白殺（びゃくさい） */
+    { 476, DM_TECHNIQUE_1036, 1970, 3 }, /* シスタモン シエル: 突蜂（とっほう） */
+    { 477, DM_TECHNIQUE_1037, 1971, 1 }, /* メタルティラノモン（X抗体）: ギガデストロイヤーⅡ */
+    { 477, DM_TECHNIQUE_1038, 1972, 2 }, /* メタルティラノモン（X抗体）: ヌークリアレーザーⅡ */
+    { 478, DM_TECHNIQUE_1039, 1973, 1 }, /* レオモン（X抗体）: 獣王拳 */
+    { 479, DM_TECHNIQUE_1040, 1974, 1 }, /* アグモン（X抗体）: ベビーフレイム */
+    { 479, DM_TECHNIQUE_1041, 1975, 2 }, /* アグモン（X抗体）: ベビーバーナー */
+    { 480, DM_TECHNIQUE_1042, 1976, 1 }, /* ジエスモン（X抗体）: 鉄拳断罪 */
+    { 480, DM_TECHNIQUE_1043, 1977, 2 }, /* ジエスモン（X抗体）: シュベルトフリューゲル */
+    { 480, DM_TECHNIQUE_1044, 1978, 3 }, /* ジエスモン（X抗体）: 究極戦刃聖覇剣（きゅうきょくせんじんせいばけん） */
+    { 481, DM_TECHNIQUE_1045, 1979, 1 }, /* ラグナロードモン: ディレクトスマッシャー */
+    { 481, DM_TECHNIQUE_1046, 1980, 2 }, /* ラグナロードモン: イグニッションプロミネンス */
+    { 481, DM_TECHNIQUE_1047, 1981, 3 }, /* ラグナロードモン: デュエルエッジフロージョン */
+    { 482, DM_TECHNIQUE_1048, 1982, 1 }, /* ラフレシモン: バレエガン */
+    { 482, DM_TECHNIQUE_1049, 1983, 2 }, /* ラフレシモン: ウィスレン */
+    { 483, DM_TECHNIQUE_1050, 1984, 1 }, /* オルディネモン: エンド・オブ・ザ・ワールド */
+    { 483, DM_TECHNIQUE_1051, 1985, 2 }, /* オルディネモン: マグナヴィジビリティ */
+    { 483, DM_TECHNIQUE_1052, 1986, 3 }, /* オルディネモン: サモン・アポカリプス */
+    { 484, DM_TECHNIQUE_1053, 1987, 1 }, /* ラプタースパロウモン: ラプターグラップル */
+    { 484, DM_TECHNIQUE_1054, 1988, 2 }, /* ラプタースパロウモン: クラッシュチャージ */
+    { 485, DM_TECHNIQUE_1055, 1989, 1 }, /* バンチョーゴーレモン: 天波返し（てんばがえし） */
+    { 485, DM_TECHNIQUE_1056, 1990, 2 }, /* バンチョーゴーレモン: 漢癪ダスト（かんしゃくダスト） */
+    { 485, DM_TECHNIQUE_1057, 1991, 3 }, /* バンチョーゴーレモン: 世堀クロードリル（よぼりクロードリル） */
+    { 486, DM_TECHNIQUE_1058, 1992, 1 }, /* ケルベロモン：人狼モード: インフェルノディバイド */
+    { 486, DM_TECHNIQUE_1059, 1993, 2 }, /* ケルベロモン：人狼モード: サーベラスイレイズ */
+    { 486, DM_TECHNIQUE_1021, 1955, 3 }, /* ケルベロモン：人狼モード: ヘルファイアー */
+    { 487, DM_TECHNIQUE_0542, 1476, 1 }, /* グラウモン（橙）: プラズマブレイド */
+    { 487, DM_TECHNIQUE_0543, 1477, 2 }, /* グラウモン（橙）: エキゾーストフレイム */
+    { 488, DM_TECHNIQUE_1060, 1994, 1 }, /* トイアグモン（黒）: トイフレイム */
+    { 489, DM_TECHNIQUE_1061, 1995, 1 }, /* シューティングスターモン: アストロボンバー */
+    { 489, DM_TECHNIQUE_1062, 1996, 2 }, /* シューティングスターモン: ダイナマイトソウル */
+    { 489, DM_TECHNIQUE_0634, 1568, 3 }, /* シューティングスターモン: リュウセイロックダマシー */
+    { 490, DM_TECHNIQUE_0982, 1916, 1 }, /* ジャスティモン：クリティカルアーム: トリニティーアーム */
+    { 490, DM_TECHNIQUE_0983, 1917, 2 }, /* ジャスティモン：クリティカルアーム: ジャスティスキック */
+    { 491, DM_TECHNIQUE_1063, 1997, 1 }, /* ヤタガラモン: 甕布都神（ミカフツノカミ） */
+    { 491, DM_TECHNIQUE_1064, 1998, 2 }, /* ヤタガラモン: 羽黒（ハグロ） */
+    { 492, DM_TECHNIQUE_1065, 1999, 1 }, /* ディノヒューモン: リザードダンス */
+    { 493, DM_TECHNIQUE_0471, 1405, 1 }, /* ラピッドモン: ラピッドファイア */
+    { 493, DM_TECHNIQUE_0472, 1406, 2 }, /* ラピッドモン: ゴールデントライアングル */
+    { 494, DM_TECHNIQUE_1066, 2000, 1 }, /* イェーガードルルモン: ヴァイスシュピラーレ */
+    { 494, DM_TECHNIQUE_1067, 2001, 2 }, /* イェーガードルルモン: シュバルツナーゲル */
+    { 495, DM_TECHNIQUE_1068, 2002, 1 }, /* ガンドラモン: デルブリッツ */
+    { 495, DM_TECHNIQUE_1069, 2003, 2 }, /* ガンドラモン: プラッツェンクロイツ */
+    { 495, DM_TECHNIQUE_1070, 2004, 3 }, /* ガンドラモン: ゲヴァルトシュベルマー */
+    { 496, DM_TECHNIQUE_1071, 2005, 1 }, /* アイギオテュースモン：ホーリー: ライトニングシャワー */
+    { 496, DM_TECHNIQUE_1072, 2006, 2 }, /* アイギオテュースモン：ホーリー: サンダースラッシュ */
+    { 496, DM_TECHNIQUE_1073, 2007, 3 }, /* アイギオテュースモン：ホーリー: サークレットディフェンス */
+    { 497, DM_TECHNIQUE_1027, 1961, 1 }, /* ガブモン（黒）: プチファイアー */
+    { 499, DM_TECHNIQUE_1074, 2008, 1 }, /* ラグエルモン: フォルムタラニス */
+    { 499, DM_TECHNIQUE_1075, 2009, 2 }, /* ラグエルモン: パーホルス */
+    { 500, DM_TECHNIQUE_1076, 2010, 1 }, /* ブリウエルドラモン: グレンストーム */
+    { 500, DM_TECHNIQUE_1077, 2011, 2 }, /* ブリウエルドラモン: ブラストスマッシュ */
+    { 501, DM_TECHNIQUE_1078, 2012, 1 }, /* ヴォルケニックドラモン: ヴォルケニック・フレア */
+    { 501, DM_TECHNIQUE_1079, 2013, 2 }, /* ヴォルケニックドラモン: グライドブレイズ */
+    { 502, DM_TECHNIQUE_1080, 2014, 1 }, /* ラヴォガリータモン: メルダイナー */
+    { 502, DM_TECHNIQUE_1081, 2015, 2 }, /* ラヴォガリータモン: ワイルドブラスト */
+    { 503, DM_TECHNIQUE_1082, 2016, 1 }, /* メイクラックモン：ヴィシャスモード: フェルトメイド */
+    { 504, DM_TECHNIQUE_1083, 2017, 1 }, /* マスティモン: ホーリーディザイア */
+    { 504, DM_TECHNIQUE_1084, 2018, 2 }, /* マスティモン: ダークディスパイア */
+    { 504, DM_TECHNIQUE_1085, 2019, 3 }, /* マスティモン: カオスディグレイド */
+    { 505, DM_TECHNIQUE_1086, 2020, 1 }, /* ボルトバウタモン: パラズィヴァルツァー */
+    { 505, DM_TECHNIQUE_1087, 2021, 2 }, /* ボルトバウタモン: クオーツィオーネ */
+    { 506, DM_TECHNIQUE_1088, 2022, 1 }, /* ライジルドモン: ライトニングバスター */
+    { 506, DM_TECHNIQUE_1089, 2023, 2 }, /* ライジルドモン: ロケットメッサー */
+    { 507, DM_TECHNIQUE_1090, 2024, 1 }, /* ティアルドモン: フリスビッカー */
+    { 507, DM_TECHNIQUE_1091, 2025, 2 }, /* ティアルドモン: アサルトクロー */
+    { 508, DM_TECHNIQUE_1092, 2026, 1 }, /* ラヴォーボモン: グレイトフレイム */
+    { 508, DM_TECHNIQUE_1093, 2027, 2 }, /* ラヴォーボモン: アースタンプ */
+    { 509, DM_TECHNIQUE_1094, 2028, 1 }, /* ブシアグモン: 超低速一文字斬り */
+    { 509, DM_TECHNIQUE_1095, 2029, 2 }, /* ブシアグモン: 超高速一文字斬り */
+    { 510, DM_TECHNIQUE_1096, 2030, 1 }, /* ルドモン: ウォルレーキ */
+    { 511, DM_TECHNIQUE_1097, 2031, 1 }, /* カッキンモン: カンカン */
+    { 512, DM_TECHNIQUE_1098, 2032, 1 }, /* コツコモン: コッツン */
+    { 513, DM_TECHNIQUE_1099, 2033, 1 }, /* アンティラモン: メディテーションキュア */
+    { 513, DM_TECHNIQUE_1100, 2034, 2 }, /* アンティラモン: マントラチャント */
+    { 514, DM_TECHNIQUE_1101, 2035, 1 }, /* メイクーモン: シャットクロー */
+    { 514, DM_TECHNIQUE_1102, 2036, 2 }, /* メイクーモン: トリコベゾアール */
+    { 514, DM_TECHNIQUE_1103, 2037, 3 }, /* メイクーモン: エクススクラッチ */
+    { 515, DM_TECHNIQUE_1104, 2038, 1 }, /* ホエーモン（成熟期）: ジェットアロー */
+    { 516, DM_TECHNIQUE_1105, 2039, 1 }, /* ゲコモン: クラッシュシンフォニー */
+    { 517, DM_TECHNIQUE_1106, 2040, 1 }, /* ヴォーボモン: プチフレイム */
+    { 518, DM_TECHNIQUE_1107, 2041, 1 }, /* アトラーバリスタモン: プラズマクラック */
+    { 518, DM_TECHNIQUE_1108, 2042, 2 }, /* アトラーバリスタモン: ロケットバンカー */
+    { 519, DM_TECHNIQUE_1109, 2043, 1 }, /* オメガモン Alter-B: ガルルソード */
+    { 519, DM_TECHNIQUE_1110, 2044, 2 }, /* オメガモン Alter-B: グレイキャノン */
+    { 520, DM_TECHNIQUE_1111, 2045, 1 }, /* ブラックマッハガオガモン: ガオガトルネード */
+    { 520, DM_TECHNIQUE_1112, 2046, 2 }, /* ブラックマッハガオガモン: ウィニングナックル */
+    { 520, DM_TECHNIQUE_1113, 2047, 3 }, /* ブラックマッハガオガモン: ハウリングキャノン */
+    { 521, DM_TECHNIQUE_1114, 2048, 1 }, /* ブラックガオガモン: ダッシュダブルクロー */
+    { 521, DM_TECHNIQUE_1115, 2049, 2 }, /* ブラックガオガモン: ガオガハウンド */
+    { 521, DM_TECHNIQUE_1116, 2050, 3 }, /* ブラックガオガモン: スパイラルブロー */
+    { 522, DM_TECHNIQUE_1117, 2051, 1 }, /* ファルコモン（２００６アニメ版）: スクラッチスマッシュ */
+    { 522, DM_TECHNIQUE_1118, 2052, 2 }, /* ファルコモン（２００６アニメ版）: 手裏裏剣（しゅりりんけん） */
+    { 522, DM_TECHNIQUE_1119, 2053, 3 }, /* ファルコモン（２００６アニメ版）: 打竹落し（うちたけおとし） */
+    { 523, DM_TECHNIQUE_1120, 2054, 1 }, /* クダモン（２００６アニメ版）: 弾丸旋風（だんがんせんぷう） */
+    { 523, DM_TECHNIQUE_1121, 2055, 2 }, /* クダモン（２００６アニメ版）: 絶光衝（ぜっこうしょう） */
+    { 523, DM_TECHNIQUE_1122, 2056, 3 }, /* クダモン（２００６アニメ版）: ホーリーショット */
+    { 524, DM_TECHNIQUE_1123, 2057, 1 }, /* ネオ: ジャッジメント */
+    { 524, DM_TECHNIQUE_1124, 2058, 2 }, /* ネオ: ゼロ・ジェネシス */
+    { 525, DM_TECHNIQUE_1125, 2059, 1 }, /* ヤキイモン: ベニアズマ・ストレート */
+    { 525, DM_TECHNIQUE_1126, 2060, 2 }, /* ヤキイモン: ベニアズマ・アッパーカット */
+    { 526, DM_TECHNIQUE_1127, 2061, 1 }, /* モニモン: 乱破（らっぱ） */
+    { 526, DM_TECHNIQUE_1128, 2062, 2 }, /* モニモン: 水破（すっぱ） */
+    { 526, DM_TECHNIQUE_1129, 2063, 3 }, /* モニモン: 突破（とっぱ） */
+    { 527, DM_TECHNIQUE_1130, 2064, 1 }, /* モニタモン: 火弾 */
+    { 527, DM_TECHNIQUE_1131, 2065, 2 }, /* モニタモン: 水竜 */
+    { 527, DM_TECHNIQUE_1132, 2066, 3 }, /* モニタモン: 風車 */
+    { 527, DM_TECHNIQUE_1133, 2067, 4 }, /* モニタモン: 電閃 */
+    { 527, DM_TECHNIQUE_1134, 2068, 5 }, /* モニタモン: 索敵 */
+    { 528, DM_TECHNIQUE_1135, 2069, 1 }, /* メルヴァモン: ナイトストーカー */
+    { 528, DM_TECHNIQUE_1136, 2070, 2 }, /* メルヴァモン: ラブポイズン */
+    { 528, DM_TECHNIQUE_1137, 2071, 3 }, /* メルヴァモン: ファイナルストライクロール */
+    { 528, DM_TECHNIQUE_1138, 2072, 4 }, /* メルヴァモン: マッドネスメリーゴーランドＤＸ */
+    { 529, DM_TECHNIQUE_1139, 2073, 1 }, /* メタルグレイモン＋サイバーランチャー: サイバーギガンティックランチャー */
+    { 529, DM_TECHNIQUE_1140, 2074, 2 }, /* メタルグレイモン＋サイバーランチャー: コロナル・マス・エジェクション */
+    { 530, DM_TECHNIQUE_0697, 1631, 1 }, /* メタルグレイモン（2010アニメ版）: トライデントアーム */
+    { 530, DM_TECHNIQUE_0611, 1545, 2 }, /* メタルグレイモン（2010アニメ版）: ギガデストロイヤー */
+    { 531, DM_TECHNIQUE_1141, 2075, 1 }, /* メイルバードラモン: プラズマキャノン */
+    { 531, DM_TECHNIQUE_1142, 2076, 2 }, /* メイルバードラモン: ナイトホーク */
+    { 531, DM_TECHNIQUE_1143, 2077, 3 }, /* メイルバードラモン: トライデントテール */
+    { 532, DM_TECHNIQUE_1144, 2078, 1 }, /* ムソーナイトモン: 強羅打雷銃（ゴウラダライガン） */
+    { 532, DM_TECHNIQUE_1145, 2079, 2 }, /* ムソーナイトモン: 超力鳴動破（チョウリキメイドウハ） */
+    { 532, DM_TECHNIQUE_1146, 2080, 3 }, /* ムソーナイトモン: 魔重力呪縛陣（まじゅうりょくじゅばくじん） */
+    { 533, DM_TECHNIQUE_1147, 2081, 1 }, /* マッドレオモン：アームドモード: The Lion Sleeps Tonight */
+    { 533, DM_TECHNIQUE_1148, 2082, 2 }, /* マッドレオモン：アームドモード: Lion Heart */
+    { 534, DM_TECHNIQUE_1149, 2083, 1 }, /* マッドレオモン: 獣王堕拳 */
+    { 534, DM_TECHNIQUE_1150, 2084, 2 }, /* マッドレオモン: 腐毒爪 */
+    { 535, DM_TECHNIQUE_1151, 2085, 1 }, /* ボムモン（2010アニメ版）: ボンバーヘッド */
+    { 535, DM_TECHNIQUE_1152, 2086, 2 }, /* ボムモン（2010アニメ版）: ファイヤーワークスレボリューション */
+    { 536, DM_TECHNIQUE_1153, 2087, 1 }, /* ベルゼブモン（2010アニメ版）: デス・ザ・キャノン */
+    { 536, DM_TECHNIQUE_1003, 1937, 2 }, /* ベルゼブモン（2010アニメ版）: ダークネスクロウ */
+    { 537, DM_TECHNIQUE_1154, 2088, 1 }, /* ブラストモン: ダイアモンドマシンガン */
+    { 537, DM_TECHNIQUE_1155, 2089, 2 }, /* ブラストモン: ダイアモンドヘッジホッグ */
+    { 537, DM_TECHNIQUE_1156, 2090, 3 }, /* ブラストモン: プリズムフラッシュ */
+    { 537, DM_TECHNIQUE_1157, 2091, 4 }, /* ブラストモン: クリスタルブレス */
+    { 538, DM_TECHNIQUE_1158, 2092, 1 }, /* フットモン: ライトニングシュート */
+    { 538, DM_TECHNIQUE_1159, 2093, 2 }, /* フットモン: ライトニングオーバーヘッド */
+    { 539, DM_TECHNIQUE_0935, 1869, 1 }, /* ピロモン: ララバイバブル */
+    { 539, DM_TECHNIQUE_1160, 2094, 2 }, /* ピロモン: 悪夢の泡 */
+    { 540, DM_TECHNIQUE_1161, 2095, 1 }, /* ピックモン: チンチクリン */
+    { 540, DM_TECHNIQUE_1162, 2096, 2 }, /* ピックモン: シュガープラム */
+    { 541, DM_TECHNIQUE_1163, 2097, 1 }, /* バリスタモン: ホーンブレイカー */
+    { 541, DM_TECHNIQUE_1164, 2098, 2 }, /* バリスタモン: へヴィスピーカー */
+    { 542, DM_TECHNIQUE_1165, 2099, 1 }, /* バコモン: ガムロール */
+    { 542, DM_TECHNIQUE_1166, 2100, 2 }, /* バコモン: トランスデリバリー */
+    { 543, DM_TECHNIQUE_1167, 2101, 1 }, /* バグラモン: アストラルスナッチャー */
+    { 543, DM_TECHNIQUE_1168, 2102, 2 }, /* バグラモン: スカーレットブラッドワイン */
+    { 543, DM_TECHNIQUE_1169, 2103, 3 }, /* バグラモン: インビジブルスネークアイズ */
+    { 544, DM_TECHNIQUE_1170, 2104, 1 }, /* ハイビジョンモニタモン: 電影烈破（でんえいれっぱ） */
+    { 544, DM_TECHNIQUE_1171, 2105, 2 }, /* ハイビジョンモニタモン: 光電殺法之陣（こうでんさっぽうのじん） */
+    { 544, DM_TECHNIQUE_1172, 2106, 3 }, /* ハイビジョンモニタモン: 癒天光(いてんこう） */
+    { 544, DM_TECHNIQUE_1173, 2107, 4 }, /* ハイビジョンモニタモン: 業火弾（ごうかだん） */
+    { 544, DM_TECHNIQUE_1174, 2108, 5 }, /* ハイビジョンモニタモン: 爆水竜（ばくすいりゅう） */
+    { 544, DM_TECHNIQUE_1175, 2109, 6 }, /* ハイビジョンモニタモン: 暴風車（ぼうふうしゃ） */
+    { 544, DM_TECHNIQUE_1176, 2110, 7 }, /* ハイビジョンモニタモン: 雷電閃（らいでんじん） */
+    { 544, DM_TECHNIQUE_1177, 2111, 8 }, /* ハイビジョンモニタモン: 瞬索敵（しゅんさくてき） */
+    { 545, DM_TECHNIQUE_1178, 2112, 1 }, /* バアルモン: カミウチ */
+    { 545, DM_TECHNIQUE_1179, 2113, 2 }, /* バアルモン: ギルティッシュ */
+    { 545, DM_TECHNIQUE_1180, 2114, 3 }, /* バアルモン: リークインフォメーション */
+    { 546, DM_TECHNIQUE_1181, 2115, 1 }, /* ネオヴァンデモン: ナイトメアレイド */
+    { 546, DM_TECHNIQUE_1182, 2116, 2 }, /* ネオヴァンデモン: ブラッディストリームグレイド */
+    { 546, DM_TECHNIQUE_1183, 2117, 3 }, /* ネオヴァンデモン: ギャディアックレイド */
+    { 547, DM_TECHNIQUE_1184, 2118, 1 }, /* ドンドコモン: ドンドコ音頭 */
+    { 547, DM_TECHNIQUE_1185, 2119, 2 }, /* ドンドコモン: 乱れ打ちラッシュ */
+    { 547, DM_TECHNIQUE_1186, 2120, 3 }, /* ドンドコモン: 極め太鼓 */
+    { 548, DM_TECHNIQUE_1187, 2121, 1 }, /* ドンシャウトモン: 漢魂乱れ太鼓 */
+    { 548, DM_TECHNIQUE_1188, 2122, 2 }, /* ドンシャウトモン: ラウディドラマー */
+    { 549, DM_TECHNIQUE_1189, 2123, 1 }, /* ドルルモン: ドリルバスター */
+    { 549, DM_TECHNIQUE_1190, 2124, 2 }, /* ドルルモン: ドルルトルネード */
+    { 549, DM_TECHNIQUE_1191, 2125, 3 }, /* ドルルモン: ドリルブレーダー */
+    { 550, DM_TECHNIQUE_1192, 2126, 1 }, /* ドルビックモン: タイラントコルブラント */
+    { 550, DM_TECHNIQUE_1193, 2127, 2 }, /* ドルビックモン: バーニング・ザ・ドラゴン */
+    { 550, DM_TECHNIQUE_1194, 2128, 3 }, /* ドルビックモン: ドラゴンブレストニックファイア */
+    { 551, DM_TECHNIQUE_1195, 2129, 1 }, /* トループモン: ハラショーアタック */
+    { 551, DM_TECHNIQUE_1196, 2130, 2 }, /* トループモン: デスマーチ */
+    { 552, DM_TECHNIQUE_1197, 2131, 1 }, /* デッドリーアックスモン: エアスライサー */
+    { 552, DM_TECHNIQUE_1198, 2132, 2 }, /* デッドリーアックスモン: アクアレジア */
+    { 552, DM_TECHNIQUE_1199, 2133, 3 }, /* デッドリーアックスモン: アクアレイジ */
+    { 553, DM_TECHNIQUE_1200, 2134, 1 }, /* デッカードラモン: デッカードランチャー */
+    { 553, DM_TECHNIQUE_1201, 2135, 2 }, /* デッカードラモン: スモーキーファング */
+    { 553, DM_TECHNIQUE_1202, 2136, 3 }, /* デッカードラモン: ヘビーテイルフック */
+    { 554, DM_TECHNIQUE_1203, 2137, 1 }, /* デッカーグレイモン: プラズマデッカードランチャー */
+    { 554, DM_TECHNIQUE_1204, 2138, 2 }, /* デッカーグレイモン: メイルバードランチャー */
+    { 554, DM_TECHNIQUE_1205, 2139, 3 }, /* デッカーグレイモン: テラデストロイヤー */
+    { 554, DM_TECHNIQUE_1206, 2140, 4 }, /* デッカーグレイモン: ファイナルスパーク */
+    { 555, DM_TECHNIQUE_1207, 2141, 1 }, /* ツワーモン: マンティスダンス */
+    { 555, DM_TECHNIQUE_1208, 2142, 2 }, /* ツワーモン: スモーキンブギ */
+    { 556, DM_TECHNIQUE_1209, 2143, 1 }, /* チューチューモン: チューチュー・ツイッター */
+    { 557, DM_TECHNIQUE_1210, 2144, 1 }, /* チビックモン: チンチクリンリン */
+    { 557, DM_TECHNIQUE_1211, 2145, 2 }, /* チビックモン: プチシュガープラム */
+    { 558, DM_TECHNIQUE_1212, 2146, 1 }, /* チクリモン: ファイナルチクリモン */
+    { 558, DM_TECHNIQUE_1213, 2147, 2 }, /* チクリモン: コンペートーハンマー */
+    { 559, DM_TECHNIQUE_1214, 2148, 1 }, /* ダメモン: ブンブン拳 */
+    { 559, DM_TECHNIQUE_1215, 2149, 2 }, /* ダメモン: ガンバルカン */
+    { 559, DM_TECHNIQUE_1216, 2150, 3 }, /* ダメモン: ブー・スト・アタック */
+    { 560, DM_TECHNIQUE_1217, 2151, 1 }, /* タクティモン: 壱の太刀 */
+    { 560, DM_TECHNIQUE_1218, 2152, 2 }, /* タクティモン: 弐の太刀 */
+    { 560, DM_TECHNIQUE_1219, 2153, 3 }, /* タクティモン: 参の太刀 */
+    { 560, DM_TECHNIQUE_1220, 2154, 4 }, /* タクティモン: タネガシマ */
+    { 560, DM_TECHNIQUE_1221, 2155, 5 }, /* タクティモン: 鬼神突 */
+    { 560, DM_TECHNIQUE_1222, 2156, 6 }, /* タクティモン: 星割り */
+    { 561, DM_TECHNIQUE_1223, 2157, 1 }, /* ダークネスバグラモン: ゴッドオブデススナッチャー */
+    { 561, DM_TECHNIQUE_1224, 2158, 2 }, /* ダークネスバグラモン: バルフィアイズ */
+    { 561, DM_TECHNIQUE_1225, 2159, 3 }, /* ダークネスバグラモン: エターナルダークメア */
+    { 562, DM_TECHNIQUE_1226, 2160, 1 }, /* ダークナイトモン: ツインスピア */
+    { 562, DM_TECHNIQUE_1227, 2161, 2 }, /* ダークナイトモン: ショルダーブレード */
+    { 562, DM_TECHNIQUE_0964, 1898, 3 }, /* ダークナイトモン: アンデッドソルジャー */
+    { 563, DM_TECHNIQUE_1228, 2162, 1 }, /* ゼニモン: こめっとランチャー */
+    { 563, DM_TECHNIQUE_1229, 2163, 2 }, /* ゼニモン: ゼニナゲ */
+    { 564, DM_TECHNIQUE_1230, 2164, 1 }, /* スプラッシュモン: ポイゾナスフォース */
+    { 564, DM_TECHNIQUE_1231, 2165, 2 }, /* スプラッシュモン: ハイドロプレッシャー */
+    { 564, DM_TECHNIQUE_1232, 2166, 3 }, /* スプラッシュモン: ビードラウン */
+    { 564, DM_TECHNIQUE_1233, 2167, 4 }, /* スプラッシュモン: タイガータイフーン（真の姿時） */
+    { 565, DM_TECHNIQUE_1234, 2168, 1 }, /* スパロウモン: クラッシュブーム */
+    { 565, DM_TECHNIQUE_1235, 2169, 2 }, /* スパロウモン: ウィングエッジ */
+    { 565, DM_TECHNIQUE_1236, 2170, 3 }, /* スパロウモン: ランダムレーザー */
+    { 566, DM_TECHNIQUE_0540, 1474, 1 }, /* スターモンズ: メテオスコール */
+    { 566, DM_TECHNIQUE_1237, 2171, 2 }, /* スターモンズ: ウィッシュアポンアスター */
+    { 567, DM_TECHNIQUE_1238, 2172, 1 }, /* スカルナイトモン：ビッグアックスモード: アックスライダー */
+    { 567, DM_TECHNIQUE_1239, 2173, 2 }, /* スカルナイトモン：ビッグアックスモード: ストームアックス */
+    { 568, DM_TECHNIQUE_1240, 2174, 1 }, /* スカルナイトモン：騎馬モード: キバブレイバー */
+    { 569, DM_TECHNIQUE_1241, 2175, 1 }, /* スカルナイトモン: スピアニードル */
+    { 569, DM_TECHNIQUE_1242, 2176, 2 }, /* スカルナイトモン: ブレストアイ・ウィンク */
+    { 570, DM_TECHNIQUE_1243, 2177, 1 }, /* ジョーカーモン: ルナティックスラッシュ */
+    { 570, DM_TECHNIQUE_1244, 2178, 2 }, /* ジョーカーモン: ガイアマジッカー */
+    { 571, DM_TECHNIQUE_1245, 2179, 1 }, /* シャニタモン: 霞隠 */
+    { 571, DM_TECHNIQUE_1246, 2180, 2 }, /* シャニタモン: 葉隠 */
+    { 572, DM_TECHNIQUE_1247, 2181, 1 }, /* シャウトモン＋ドルルキャノン: ドルルキャノン */
+    { 573, DM_TECHNIQUE_1248, 2182, 1 }, /* シャウトモン＋スターソード: スターブレイド */
+    { 574, DM_TECHNIQUE_1249, 2183, 1 }, /* シャウトモン＋ジェットスパロウ: エアシューター */
+    { 574, DM_TECHNIQUE_1250, 2184, 2 }, /* シャウトモン＋ジェットスパロウ: プラズマブラスター */
+    { 575, DM_TECHNIQUE_0488, 1422, 1 }, /* シャウトモンX7: クロスバーニングロッカー */
+    { 575, DM_TECHNIQUE_0489, 1423, 2 }, /* シャウトモンX7: ダブルフレアバスター */
+    { 575, DM_TECHNIQUE_0490, 1424, 3 }, /* シャウトモンX7: セブンビクトライズ */
+    { 576, DM_TECHNIQUE_1251, 2185, 1 }, /* シャウトモンX5B: バーストダッシュストリーム */
+    { 576, DM_TECHNIQUE_1252, 2186, 2 }, /* シャウトモンX5B: メテオバスターアタック */
+    { 576, DM_TECHNIQUE_1253, 2187, 3 }, /* シャウトモンX5B: メテオインパクト */
+    { 576, DM_TECHNIQUE_1254, 2188, 4 }, /* シャウトモンX5B: カオスフレア */
+    { 576, DM_TECHNIQUE_1255, 2189, 5 }, /* シャウトモンX5B: スターズブレイドセレストライク */
+    { 576, DM_TECHNIQUE_0569, 1503, 6 }, /* シャウトモンX5B: バーニングスタークラッシャー */
+    { 576, DM_TECHNIQUE_0570, 1504, 7 }, /* シャウトモンX5B: スリービクトライズ */
+    { 577, DM_TECHNIQUE_1252, 2186, 1 }, /* シャウトモンX5: メテオバスターアタック */
+    { 577, DM_TECHNIQUE_1253, 2187, 2 }, /* シャウトモンX5: メテオインパクト */
+    { 577, DM_TECHNIQUE_0569, 1503, 3 }, /* シャウトモンX5: バーニングスタークラッシャー */
+    { 577, DM_TECHNIQUE_0570, 1504, 4 }, /* シャウトモンX5: スリービクトライズ */
+    { 578, DM_TECHNIQUE_1255, 2189, 1 }, /* シャウトモンX4B: スターズブレイドセレストライク */
+    { 578, DM_TECHNIQUE_1254, 2188, 2 }, /* シャウトモンX4B: カオスフレア */
+    { 578, DM_TECHNIQUE_0569, 1503, 3 }, /* シャウトモンX4B: バーニングスタークラッシャー */
+    { 578, DM_TECHNIQUE_0570, 1504, 4 }, /* シャウトモンX4B: スリービクトライズ */
+    { 579, DM_TECHNIQUE_0569, 1503, 1 }, /* シャウトモンX4: バーニングスタークラッシャー */
+    { 579, DM_TECHNIQUE_0570, 1504, 2 }, /* シャウトモンX4: スリービクトライズ */
+    { 579, DM_TECHNIQUE_0571, 1505, 3 }, /* シャウトモンX4: スリーインパクト */
+    { 579, DM_TECHNIQUE_1256, 2190, 4 }, /* シャウトモンX4: ハイアドモスフェリックプレッシャー */
+    { 579, DM_TECHNIQUE_0572, 1506, 5 }, /* シャウトモンX4: ビクトライズブーメラン */
+    { 579, DM_TECHNIQUE_1257, 2191, 6 }, /* シャウトモンX4: バーニングスタースラッシャー */
+    { 580, DM_TECHNIQUE_0570, 1504, 1 }, /* シャウトモンX3: スリービクトライズ */
+    { 580, DM_TECHNIQUE_0571, 1505, 2 }, /* シャウトモンX3: スリーインパクト */
+    { 580, DM_TECHNIQUE_0572, 1506, 3 }, /* シャウトモンX3: ビクトライズブーメラン */
+    { 581, DM_TECHNIQUE_1258, 2192, 1 }, /* シャウトモンX2: マックアロー */
+    { 581, DM_TECHNIQUE_1259, 2193, 2 }, /* シャウトモンX2: ホーンブレイカーDX */
+    { 581, DM_TECHNIQUE_1260, 2194, 3 }, /* シャウトモンX2: バディブラスター */
+    { 581, DM_TECHNIQUE_1261, 2195, 4 }, /* シャウトモンX2: アームバンカー */
+    { 581, DM_TECHNIQUE_1262, 2196, 5 }, /* シャウトモンX2: オプティックレーザー */
+    { 581, DM_TECHNIQUE_1263, 2197, 6 }, /* シャウトモンX2: ミヤバルカン */
+    { 582, DM_TECHNIQUE_1264, 2198, 1 }, /* シャウトモンDX: トライデントジャスファング */
+    { 582, DM_TECHNIQUE_1265, 2199, 2 }, /* シャウトモンDX: ハイパーロックマグナム */
+    { 582, DM_TECHNIQUE_1266, 2200, 3 }, /* シャウトモンDX: エレキバスタークロス */
+    { 582, DM_TECHNIQUE_1267, 2201, 4 }, /* シャウトモンDX: ビクトライズ・バンキング */
+    { 582, DM_TECHNIQUE_1268, 2202, 5 }, /* シャウトモンDX: ブレイブビートロックダブルクロス */
+    { 583, DM_TECHNIQUE_0990, 1924, 1 }, /* シャウトモン: ロックダマシー */
+    { 583, DM_TECHNIQUE_0991, 1925, 2 }, /* シャウトモン: ソウルクラッシャー */
+    { 583, DM_TECHNIQUE_0992, 1926, 3 }, /* シャウトモン: ラウディロッカー */
+    { 584, DM_TECHNIQUE_1269, 2203, 1 }, /* ジェットメルヴァモン: ハートブレイクショット */
+    { 584, DM_TECHNIQUE_1270, 2204, 2 }, /* ジェットメルヴァモン: セクシーダイナマイツ */
+    { 584, DM_TECHNIQUE_1271, 2205, 3 }, /* ジェットメルヴァモン: ウロボロスゲート */
+    { 584, DM_TECHNIQUE_1272, 2206, 4 }, /* ジェットメルヴァモン: スパイシーハードラヴ */
+    { 584, DM_TECHNIQUE_1135, 2069, 5 }, /* ジェットメルヴァモン: ナイトストーカー */
+    { 584, DM_TECHNIQUE_1136, 2070, 6 }, /* ジェットメルヴァモン: ラブポイズン */
+    { 585, DM_TECHNIQUE_1273, 2207, 1 }, /* ジークグレイモン: トライデントファング */
+    { 585, DM_TECHNIQUE_1274, 2208, 2 }, /* ジークグレイモン: デストロイスマッシャー */
+    { 585, DM_TECHNIQUE_1275, 2209, 3 }, /* ジークグレイモン: ジークフレイム */
+    { 585, DM_TECHNIQUE_1276, 2210, 4 }, /* ジークグレイモン: プラズマレールガン */
+    { 585, DM_TECHNIQUE_1277, 2211, 5 }, /* ジークグレイモン: ファイナルストライクス */
+    { 586, DM_TECHNIQUE_1278, 2212, 1 }, /* ザミエールモン: スナイプヘッドショット */
+    { 586, DM_TECHNIQUE_1279, 2213, 2 }, /* ザミエールモン: ボウカッター */
+    { 586, DM_TECHNIQUE_1280, 2214, 3 }, /* ザミエールモン: フットショット */
+    { 586, DM_TECHNIQUE_1281, 2215, 4 }, /* ザミエールモン: アローランス */
+    { 586, DM_TECHNIQUE_1282, 2216, 5 }, /* ザミエールモン: タービュランスアロー */
+    { 586, DM_TECHNIQUE_1283, 2217, 6 }, /* ザミエールモン: ザ・ワールドショット */
+    { 587, DM_TECHNIQUE_1284, 2218, 1 }, /* サウンドバードモン: ギガスクリーム */
+    { 587, DM_TECHNIQUE_1285, 2219, 2 }, /* サウンドバードモン: サウンドフィニッシュ */
+    { 588, DM_TECHNIQUE_1286, 2220, 1 }, /* サイバードラモン: イレイザークロー */
+    { 588, DM_TECHNIQUE_1287, 2221, 2 }, /* サイバードラモン: グラットンファング */
+    { 588, DM_TECHNIQUE_1288, 2222, 3 }, /* サイバードラモン: サイバーブレーダー */
+    { 588, DM_TECHNIQUE_1289, 2223, 4 }, /* サイバードラモン: デスディバイダー */
+    { 589, DM_TECHNIQUE_1290, 2224, 1 }, /* コゼニモン: イッチ・ダン・ケツ */
+    { 589, DM_TECHNIQUE_1291, 2225, 2 }, /* コゼニモン: ￥UE-N */
+    { 590, DM_TECHNIQUE_0758, 1692, 1 }, /* グレイモン（2010アニメ版）: メガフレイム */
+    { 590, DM_TECHNIQUE_1292, 2226, 2 }, /* グレイモン（2010アニメ版）: ブラスターテイル */
+    { 590, DM_TECHNIQUE_1293, 2227, 3 }, /* グレイモン（2010アニメ版）: ホーンストライク */
+    { 591, DM_TECHNIQUE_1294, 2228, 1 }, /* グラビモン: オクタグラビティ */
+    { 591, DM_TECHNIQUE_1295, 2229, 2 }, /* グラビモン: ハイグラビティープレッシャー */
+    { 591, DM_TECHNIQUE_1296, 2230, 3 }, /* グラビモン: グラビティー・バン */
+    { 592, DM_TECHNIQUE_1297, 2231, 1 }, /* キュートモン: キズナオール */
+    { 592, DM_TECHNIQUE_1298, 2232, 2 }, /* キュートモン: スグナオール */
+    { 592, DM_TECHNIQUE_1299, 2233, 3 }, /* キュートモン: ヨクナオール */
+    { 592, DM_TECHNIQUE_1300, 2234, 4 }, /* キュートモン: スーパーソニックウェーブ */
+    { 592, DM_TECHNIQUE_1301, 2235, 5 }, /* キュートモン: ウルトラソニックウェーブ */
+    { 593, DM_TECHNIQUE_1302, 2236, 1 }, /* ガムドラモン: ランガムブレイク */
+    { 593, DM_TECHNIQUE_1303, 2237, 2 }, /* ガムドラモン: ジャックドハンマー */
+    { 593, DM_TECHNIQUE_1304, 2238, 3 }, /* ガムドラモン: ファイアーボルテクス */
+    { 594, DM_TECHNIQUE_1305, 2239, 1 }, /* ガネモン: ゴールドボーリング */
+    { 594, DM_TECHNIQUE_1306, 2240, 2 }, /* ガネモン: ゴールドプレス */
+    { 595, DM_TECHNIQUE_1307, 2241, 1 }, /* ガオスモン: キロフレイム */
+    { 595, DM_TECHNIQUE_1308, 2242, 2 }, /* ガオスモン: ヘッドストライク */
+    { 596, DM_TECHNIQUE_1309, 2243, 1 }, /* オレーグモン: デュアルトマホークブーメラン */
+    { 596, DM_TECHNIQUE_1310, 2244, 2 }, /* オレーグモン: バイキングヴュッフェ */
+    { 596, DM_TECHNIQUE_1311, 2245, 3 }, /* オレーグモン: エイジオブディスカバリー */
+    { 596, DM_TECHNIQUE_1312, 2246, 4 }, /* オレーグモン: ドリームカムズトゥルー */
+    { 597, DM_TECHNIQUE_1313, 2247, 1 }, /* オメガシャウトモン: ヘヴィメタルバルカン */
+    { 597, DM_TECHNIQUE_1267, 2201, 2 }, /* オメガシャウトモン: ビクトライズ・バンキング */
+    { 597, DM_TECHNIQUE_1314, 2248, 3 }, /* オメガシャウトモン: ハードロックダマシー */
+    { 597, DM_TECHNIQUE_1315, 2249, 4 }, /* オメガシャウトモン: ビートスラッシュ */
+    { 597, DM_TECHNIQUE_0809, 1743, 5 }, /* オメガシャウトモン: オメガ・ザ・フュージョン */
+    { 598, DM_TECHNIQUE_1316, 2250, 1 }, /* エカキモン: ミニミニエカキモン */
+    { 598, DM_TECHNIQUE_1317, 2251, 2 }, /* エカキモン: カラフルチェンジ */
+    { 599, DM_TECHNIQUE_1318, 2252, 1 }, /* イグニートモン: ガラパゴスフィールド */
+    { 599, DM_TECHNIQUE_1319, 2253, 2 }, /* イグニートモン: ティモニナイザー */
+    { 599, DM_TECHNIQUE_1320, 2254, 3 }, /* イグニートモン: ファイナルトラベラー */
+    { 600, DM_TECHNIQUE_0752, 1686, 1 }, /* アレスタードラモン: マッハフリッカー */
+    { 600, DM_TECHNIQUE_0753, 1687, 2 }, /* アレスタードラモン: フロッグショット */
+    { 600, DM_TECHNIQUE_1321, 2255, 3 }, /* アレスタードラモン: スピンカリパー */
+    { 600, DM_TECHNIQUE_0755, 1689, 4 }, /* アレスタードラモン: スパイラルシュレッダー */
+    { 600, DM_TECHNIQUE_0756, 1690, 5 }, /* アレスタードラモン: プリズムギャレット */
+    { 601, DM_TECHNIQUE_1322, 2256, 1 }, /* レーベモン: エーヴィッヒ・シュラーフ */
+    { 601, DM_TECHNIQUE_1323, 2257, 2 }, /* レーベモン: エントリヒ・メテオール */
+    { 602, DM_TECHNIQUE_1324, 2258, 1 }, /* ラーナモン: レインストリーム */
+    { 602, DM_TECHNIQUE_1325, 2259, 2 }, /* ラーナモン: ジェラシーレイン */
+    { 603, DM_TECHNIQUE_1326, 2260, 1 }, /* ライヒモン: シュバルツ・レールザッツ（黒定理） */
+    { 603, DM_TECHNIQUE_1327, 2261, 2 }, /* ライヒモン: ロート・クロイツ（赤十字架） */
+    { 604, DM_TECHNIQUE_1328, 2262, 1 }, /* ライノカブテリモン: コンデンサストーム */
+    { 604, DM_TECHNIQUE_1329, 2263, 2 }, /* ライノカブテリモン: サンダーレーザー */
+    { 605, DM_TECHNIQUE_1330, 2264, 1 }, /* メルキューレモン: ジェネラスミラー */
+    { 605, DM_TECHNIQUE_1331, 2265, 2 }, /* メルキューレモン: オフセットリフレクター */
+    { 606, DM_TECHNIQUE_1332, 2266, 1 }, /* マグナガルルモン: マシンガンデストロイ */
+    { 606, DM_TECHNIQUE_1333, 2267, 2 }, /* マグナガルルモン: スターライトベロシティ */
+    { 607, DM_TECHNIQUE_1334, 2268, 1 }, /* ボルグモン: アルティメットサンダー */
+    { 607, DM_TECHNIQUE_1335, 2269, 2 }, /* ボルグモン: フィールドデストロイヤー */
+    { 608, DM_TECHNIQUE_1336, 2270, 1 }, /* ベルグモン: ゾーンデリーター */
+    { 608, DM_TECHNIQUE_1337, 2271, 2 }, /* ベルグモン: マスターオブダークネス */
+    { 609, DM_TECHNIQUE_1338, 2272, 1 }, /* ペタルドラモン: リーフサイクロン */
+    { 609, DM_TECHNIQUE_1339, 2273, 2 }, /* ペタルドラモン: サウザンドスパイク */
+    { 610, DM_TECHNIQUE_1340, 2274, 1 }, /* ベオウルフモン: リヒトアングリフ */
+    { 610, DM_TECHNIQUE_1341, 2275, 2 }, /* ベオウルフモン: ツヴァイハンダー */
+    { 611, DM_TECHNIQUE_1342, 2276, 1 }, /* フレイモン: ベビーサラマンダー */
+    { 612, DM_TECHNIQUE_1343, 2277, 1 }, /* ブリッツモン: トールハンマー */
+    { 612, DM_TECHNIQUE_1344, 2278, 2 }, /* ブリッツモン: ミョルニルサンダー */
+    { 613, DM_TECHNIQUE_1345, 2279, 1 }, /* ブリザーモン: アヴァランチステップ */
+    { 613, DM_TECHNIQUE_1346, 2280, 2 }, /* ブリザーモン: グレッチャートルペイド（氷河魚雷） */
+    { 614, DM_TECHNIQUE_1347, 2281, 1 }, /* フェアリモン: トルナード・ガンバ */
+    { 614, DM_TECHNIQUE_1348, 2282, 2 }, /* フェアリモン: ロゼオ・テンポラーレ */
+    { 615, DM_TECHNIQUE_1349, 2283, 1 }, /* チャックモン: ツララララ～ */
+    { 615, DM_TECHNIQUE_1350, 2284, 2 }, /* チャックモン: スノーボンバー */
+    { 616, DM_TECHNIQUE_1351, 2285, 1 }, /* ダスクモン: ガイストアーベント */
+    { 616, DM_TECHNIQUE_1352, 2286, 2 }, /* ダスクモン: エアオーベルング */
+    { 617, DM_TECHNIQUE_1353, 2287, 1 }, /* ダイペンモン: ブルーハワイデス */
+    { 617, DM_TECHNIQUE_1354, 2288, 2 }, /* ダイペンモン: イチゴデス */
+    { 618, DM_TECHNIQUE_1355, 2289, 1 }, /* セフィロトモン: ランブルブレンドナンバー（１～１０） */
+    { 619, DM_TECHNIQUE_1356, 2290, 1 }, /* ストラビモン: リヒト・ナーゲル */
+    { 620, DM_TECHNIQUE_1357, 2291, 1 }, /* シューツモン: ギルガメッシュスライサー */
+    { 620, DM_TECHNIQUE_1358, 2292, 2 }, /* シューツモン: ウィンドオブペイン */
+    { 621, DM_TECHNIQUE_1359, 2293, 1 }, /* ジェットシルフィーモン: ジェットビンター */
+    { 621, DM_TECHNIQUE_1360, 2294, 2 }, /* ジェットシルフィーモン: ウルトラタービュレンス */
+    { 622, DM_TECHNIQUE_1361, 2295, 1 }, /* グロットモン: スネークアイブレイク */
+    { 622, DM_TECHNIQUE_1362, 2296, 2 }, /* グロットモン: ジャック・イン・ザ・ボックス */
+    { 623, DM_TECHNIQUE_1363, 2297, 1 }, /* ギガスモン: アースクェイク */
+    { 623, DM_TECHNIQUE_1364, 2298, 2 }, /* ギガスモン: ハリケーンボンバー */
+    { 624, DM_TECHNIQUE_1365, 2299, 1 }, /* ガルムモン: スピードスター */
+    { 624, DM_TECHNIQUE_1366, 2300, 2 }, /* ガルムモン: ソーラレーザー */
+    { 625, DM_TECHNIQUE_1367, 2301, 1 }, /* カルマーラモン: ネーロコルソ */
+    { 625, DM_TECHNIQUE_1368, 2302, 2 }, /* カルマーラモン: タイタニックチャージ */
+    { 626, DM_TECHNIQUE_1369, 2303, 1 }, /* カイゼルグレイモン: 炎龍撃（えんりゅうげき） */
+    { 626, DM_TECHNIQUE_1370, 2304, 2 }, /* カイゼルグレイモン: 九頭龍陣（くずりゅうじん） */
+    { 627, DM_TECHNIQUE_1371, 2305, 1 }, /* カイザーレオモン: シュヴァルツ・ドンナー */
+    { 627, DM_TECHNIQUE_1372, 2306, 2 }, /* カイザーレオモン: シュヴァルツ・ケーニッヒ */
+    { 628, DM_TECHNIQUE_1373, 2307, 1 }, /* ヴリトラモン: コロナブラスター */
+    { 628, DM_TECHNIQUE_1374, 2308, 2 }, /* ヴリトラモン: フレイムストーム */
+    { 629, DM_TECHNIQUE_1375, 2309, 1 }, /* ヴォルフモン: リヒト・ズィーガー */
+    { 629, DM_TECHNIQUE_1376, 2310, 2 }, /* ヴォルフモン: ツヴァイ・ズィーガー */
+    { 630, DM_TECHNIQUE_1377, 2311, 1 }, /* アルボルモン: マシンガン・ダンス（機銃の踊り） */
+    { 630, DM_TECHNIQUE_1378, 2312, 2 }, /* アルボルモン: ブロッケイドシード（封じ込めの種） */
+    { 631, DM_TECHNIQUE_1379, 2313, 1 }, /* アルダモン: ブラフマシル */
+    { 631, DM_TECHNIQUE_1380, 2314, 2 }, /* アルダモン: ブラフマストラ */
+    { 632, DM_TECHNIQUE_1381, 2315, 1 }, /* アグニモン: バーニングサラマンダー */
+    { 632, DM_TECHNIQUE_1382, 2316, 2 }, /* アグニモン: サラマンダーブレイク */
+    { 633, DM_TECHNIQUE_1383, 2317, 1 }, /* リンクモン: スピニングカッター */
+    { 634, DM_TECHNIQUE_1384, 2318, 1 }, /* ランクスモン: サーマルメイン */
+    { 635, DM_TECHNIQUE_1008, 1942, 1 }, /* ライノモン: アイン・ソフ・オウル */
+    { 635, DM_TECHNIQUE_1385, 2319, 2 }, /* ライノモン: アトミックバースト */
+    { 636, DM_TECHNIQUE_1386, 2320, 1 }, /* ライドラモン: ライトニングブレード */
+    { 636, DM_TECHNIQUE_1387, 2321, 2 }, /* ライドラモン: ブルーサンダー */
+    { 637, DM_TECHNIQUE_1388, 2322, 1 }, /* ヤシャモン: 一刀両断（イットウリョウダン） */
+    { 637, DM_TECHNIQUE_1389, 2323, 2 }, /* ヤシャモン: クグツの術 */
+    { 638, DM_TECHNIQUE_1390, 2324, 1 }, /* モスモン: モルフォンガトリング */
+    { 639, DM_TECHNIQUE_1391, 2325, 1 }, /* メイルドラモン: アイアンプレス */
+    { 640, DM_TECHNIQUE_1392, 2326, 1 }, /* ムースモン: ホーンブレード */
+    { 641, DM_TECHNIQUE_1393, 2327, 1 }, /* マンボモン: バルーンマイン */
+    { 641, DM_TECHNIQUE_1394, 2328, 2 }, /* マンボモン: グローバル・グローブ */
+    { 642, DM_TECHNIQUE_0887, 1821, 1 }, /* マンタレイモン: パラライズテイル */
+    { 643, DM_TECHNIQUE_0881, 1815, 1 }, /* マグナモン: プラズマシュート */
+    { 643, DM_TECHNIQUE_0882, 1816, 2 }, /* マグナモン: シャイニングゴールドソーラーストーム */
+    { 644, DM_TECHNIQUE_1395, 2329, 1 }, /* ポンチョモン: ブラッドダンス・マラカスバージョン */
+    { 644, DM_TECHNIQUE_1396, 2330, 2 }, /* ポンチョモン: テキーラナックル */
+    { 645, DM_TECHNIQUE_1397, 2331, 1 }, /* ホルスモン: マッハインパルス */
+    { 645, DM_TECHNIQUE_1398, 2332, 2 }, /* ホルスモン: テンペストウィング */
+    { 645, DM_TECHNIQUE_1399, 2333, 3 }, /* ホルスモン: ウジャトゲイズ */
+    { 646, DM_TECHNIQUE_1400, 2334, 1 }, /* ボアモン: ノーズブラスター */
+    { 647, DM_TECHNIQUE_1401, 2335, 1 }, /* ペガスモン: ロデオギャロップ */
+    { 647, DM_TECHNIQUE_1402, 2336, 2 }, /* ペガスモン: シルバーブレイズ */
+    { 647, DM_TECHNIQUE_1403, 2337, 3 }, /* ペガスモン: シューティングスター */
+    { 648, DM_TECHNIQUE_1404, 2338, 1 }, /* フロッグモン: リーフホイールカッター */
+    { 649, DM_TECHNIQUE_1405, 2339, 1 }, /* プレイリモン: ソニックイヤー */
+    { 650, DM_TECHNIQUE_1406, 2340, 1 }, /* フレイドラモン: ナックルファイア */
+    { 650, DM_TECHNIQUE_1407, 2341, 2 }, /* フレイドラモン: ファイアロケット */
+    { 651, DM_TECHNIQUE_1408, 2342, 1 }, /* フレイウィザーモン: マジックイグニッション */
+    { 651, DM_TECHNIQUE_1409, 2343, 2 }, /* フレイウィザーモン: ファイヤークラウド */
+    { 652, DM_TECHNIQUE_1410, 2344, 1 }, /* ブルモン: マタドールダッシュ */
+    { 653, DM_TECHNIQUE_1411, 2345, 1 }, /* フライビーモン: フライスパーク */
+    { 653, DM_TECHNIQUE_1412, 2346, 2 }, /* フライビーモン: ニードルスティンガー */
+    { 654, DM_TECHNIQUE_0869, 1803, 1 }, /* プテラノモン: ビークピアス */
+    { 655, DM_TECHNIQUE_1413, 2347, 1 }, /* プッチーモン（緑）: ハートナービーム */
+    { 656, DM_TECHNIQUE_1413, 2347, 1 }, /* プッチーモン: ハートナービーム */
+    { 657, DM_TECHNIQUE_1414, 2348, 1 }, /* ピピスモン: クレイジーソニック */
+    { 658, DM_TECHNIQUE_1415, 2349, 1 }, /* ビットモン: イヤーランサー */
+    { 659, DM_TECHNIQUE_1416, 2350, 1 }, /* ピーコックモン: レインボーシャワー */
+    { 660, DM_TECHNIQUE_1417, 2351, 1 }, /* バロモン: メテオダンス */
+    { 661, DM_TECHNIQUE_1418, 2352, 1 }, /* ハニービーモン: ポイズンパウダー */
+    { 661, DM_TECHNIQUE_1419, 2353, 2 }, /* ハニービーモン: パラライズスティング */
+    { 662, DM_TECHNIQUE_1420, 2354, 1 }, /* バタフラモン: スウィートフェロモン */
+    { 663, DM_TECHNIQUE_1421, 2355, 1 }, /* ハーピモン: ウィンドシーカー */
+    { 664, DM_TECHNIQUE_1422, 2356, 1 }, /* ノヘモン: デリションクロウ */
+    { 665, DM_TECHNIQUE_0889, 1823, 1 }, /* ネフェルティモン: カースオブクィーン */
+    { 665, DM_TECHNIQUE_0890, 1824, 2 }, /* ネフェルティモン: ロゼッタストーン */
+    { 666, DM_TECHNIQUE_1423, 2357, 1 }, /* トゲモグモン: ヘイルマシンガン */
+    { 667, DM_TECHNIQUE_1424, 2358, 1 }, /* トーカンモン: ペンチカッター */
+    { 668, DM_TECHNIQUE_1425, 2359, 1 }, /* デプスモン: バブルボム */
+    { 669, DM_TECHNIQUE_0861, 1795, 1 }, /* ティロモン: トーピードアタック */
+    { 669, DM_TECHNIQUE_1426, 2360, 2 }, /* ティロモン: オーシャンストライク */
+    { 670, DM_TECHNIQUE_1427, 2361, 1 }, /* ディグモン: ビッグクラック */
+    { 670, DM_TECHNIQUE_1428, 2362, 2 }, /* ディグモン: ゴールドラッシュ */
+    { 671, DM_TECHNIQUE_1429, 2363, 1 }, /* セピックモン: スピリットブーメラン */
+    { 672, DM_TECHNIQUE_1430, 2364, 1 }, /* セトモン: ヒートストーム */
+    { 672, DM_TECHNIQUE_1431, 2365, 2 }, /* セトモン: タスクドライバー */
+    { 673, DM_TECHNIQUE_1432, 2366, 1 }, /* スワンモン: ダウントーネ－ド */
+    { 674, DM_TECHNIQUE_1433, 2367, 1 }, /* ステゴモン: シェルニードルレイン */
+    { 675, DM_TECHNIQUE_1434, 2368, 1 }, /* シュリモン: 紅葉おろし */
+    { 675, DM_TECHNIQUE_1435, 2369, 2 }, /* シュリモン: 草薙 */
+    { 676, DM_TECHNIQUE_1436, 2370, 1 }, /* シェイドラモン: フレアバスター */
+    { 677, DM_TECHNIQUE_1437, 2371, 1 }, /* シーホモン: プリズムレインボー */
+    { 678, DM_TECHNIQUE_1438, 2372, 1 }, /* シープモン: ウールグレネード */
+    { 679, DM_TECHNIQUE_1439, 2373, 1 }, /* サンダーバーモン: スパークウィング */
+    { 679, DM_TECHNIQUE_1440, 2374, 2 }, /* サンダーバーモン: サンダーストーム */
+    { 680, DM_TECHNIQUE_1441, 2375, 1 }, /* サラマンダモン: ヒートブレス */
+    { 680, DM_TECHNIQUE_1442, 2376, 2 }, /* サラマンダモン: バックドラフト */
+    { 681, DM_TECHNIQUE_1443, 2377, 1 }, /* サブマリモン: オキシジェンホーミング */
+    { 681, DM_TECHNIQUE_1444, 2378, 2 }, /* サブマリモン: サブマリンアタック */
+    { 682, DM_TECHNIQUE_1445, 2379, 1 }, /* サジタリモン: ジャッジメントアロー */
+    { 683, DM_TECHNIQUE_1446, 2380, 1 }, /* サーチモン: ジャミングヘルツ */
+    { 684, DM_TECHNIQUE_1447, 2381, 1 }, /* コンゴウモン: 鉄砲（テッポウ） */
+    { 685, DM_TECHNIQUE_1448, 2382, 1 }, /* ゴールドブイドラモン: ブイブレスアロー */
+    { 686, DM_TECHNIQUE_1449, 2383, 1 }, /* ゴートモン: ミスティックベル */
+    { 687, DM_TECHNIQUE_1450, 2384, 1 }, /* ケンキモン: クレイジークレーン */
+    { 688, DM_TECHNIQUE_1451, 2385, 1 }, /* クアトルモン: フリーズウェーブ */
+    { 689, DM_TECHNIQUE_1452, 2386, 1 }, /* カンガルモン: ジャンピングブロー */
+    { 690, DM_TECHNIQUE_1453, 2387, 1 }, /* カメレモン: タングウィップ */
+    { 691, DM_TECHNIQUE_1454, 2388, 1 }, /* カブキモン: 桜吹雪 */
+    { 691, DM_TECHNIQUE_1455, 2389, 2 }, /* カブキモン: 連獅子 */
+    { 692, DM_TECHNIQUE_1456, 2390, 1 }, /* ガーゴモン: ホワイトスタチュー */
+    { 693, DM_TECHNIQUE_1457, 2391, 1 }, /* オルカモン: バサロクラッシュ */
+    { 694, DM_TECHNIQUE_1458, 2392, 1 }, /* オポッサモン: マッドバルーンボム */
+    { 695, DM_TECHNIQUE_1459, 2393, 1 }, /* エレファモン: ニトロタービンウェーブ */
+    { 696, DM_TECHNIQUE_0896, 1830, 1 }, /* アロモン: ディノバースト */
+    { 697, DM_TECHNIQUE_1460, 2394, 1 }, /* アーケロモン: オーシャンストローム */
+    { 698, DM_TECHNIQUE_1461, 2395, 1 }, /* アウルモン: ミッドナイトクラッチ */
+    { 699, DM_TECHNIQUE_1462, 2396, 1 }, /* ロードナイトモン: スパイラルマスカレード */
+    { 699, DM_TECHNIQUE_1463, 2397, 2 }, /* ロードナイトモン: アージェントフィアー */
+    { 700, DM_TECHNIQUE_1464, 2398, 1 }, /* ロトスモン: サーペントキュア */
+    { 700, DM_TECHNIQUE_1465, 2399, 2 }, /* ロトスモン: サーペントルイン */
+    { 700, DM_TECHNIQUE_1466, 2400, 3 }, /* ロトスモン: セブンズファンタジア */
+    { 701, DM_TECHNIQUE_1467, 2401, 1 }, /* ロゼモン：バーストモード: シャリテ */
+    { 701, DM_TECHNIQUE_1468, 2402, 2 }, /* ロゼモン：バーストモード: アギシャンレーヴル */
+    { 701, DM_TECHNIQUE_1469, 2403, 3 }, /* ロゼモン：バーストモード: ティファレト */
+    { 702, DM_TECHNIQUE_0920, 1854, 1 }, /* ロゼモン: ソーンウィップ */
+    { 702, DM_TECHNIQUE_1470, 2404, 2 }, /* ロゼモン: ローゼスレイピア */
+    { 702, DM_TECHNIQUE_1471, 2405, 3 }, /* ロゼモン: フォービドゥンテンプテイション */
+    { 703, DM_TECHNIQUE_1472, 2406, 1 }, /* レイヴモン：バーストモード: 無双天翔翼之陣（むそうてんしょうよくのじん） */
+    { 703, DM_TECHNIQUE_1473, 2407, 2 }, /* レイヴモン：バーストモード: 怒涛闇供喪之舞（どとうやみくものまい） */
+    { 703, DM_TECHNIQUE_1474, 2408, 3 }, /* レイヴモン：バーストモード: 雷光一閃之突（らいこういっせんのつき） */
+    { 704, DM_TECHNIQUE_1475, 2409, 1 }, /* レイヴモン: スパイラルレイヴンクロウ */
+    { 704, DM_TECHNIQUE_1476, 2410, 2 }, /* レイヴモン: ブラストウィング */
+    { 704, DM_TECHNIQUE_1477, 2411, 3 }, /* レイヴモン: 烏王丸（ちょうおうまる） */
+    { 706, DM_TECHNIQUE_0945, 1879, 1 }, /* ルーチェモン：サタンモード: パーガトリアルフレイム */
+    { 706, DM_TECHNIQUE_1478, 2412, 2 }, /* ルーチェモン：サタンモード: ディバインアトーンメント */
+    { 707, DM_TECHNIQUE_0948, 1882, 1 }, /* リリスモン: ファントムペイン */
+    { 708, DM_TECHNIQUE_1479, 2413, 1 }, /* リヴァイアモン: ロストルム */
+    { 708, DM_TECHNIQUE_1480, 2414, 2 }, /* リヴァイアモン: カウダ */
+    { 709, DM_TECHNIQUE_1481, 2415, 1 }, /* ランプモン: ファントムターバン */
+    { 710, DM_TECHNIQUE_1482, 2416, 1 }, /* ラストティラノモン: テラーズクラスター */
+    { 710, DM_TECHNIQUE_1483, 2417, 2 }, /* ラストティラノモン: ラストブレス */
+    { 711, DM_TECHNIQUE_1484, 2418, 1 }, /* ラジエルモン: ノウレッジストリーム */
+    { 711, DM_TECHNIQUE_1485, 2419, 2 }, /* ラジエルモン: セファーラジエール */
+    { 712, DM_TECHNIQUE_1486, 2420, 1 }, /* ユピテルモン: マボルト */
+    { 712, DM_TECHNIQUE_1487, 2421, 2 }, /* ユピテルモン: パニッシュジャッジ */
+    { 712, DM_TECHNIQUE_1488, 2422, 3 }, /* ユピテルモン: ワイドプラズメント */
+    { 713, DM_TECHNIQUE_1489, 2423, 1 }, /* メルクリモン: サウザンドフィスト */
+    { 713, DM_TECHNIQUE_1490, 2424, 2 }, /* メルクリモン: スピリチャルエンチャント */
+    { 714, DM_TECHNIQUE_1491, 2425, 1 }, /* メディーバルデュークモン: レイジ・オブ・ワイバーン */
+    { 714, DM_TECHNIQUE_1492, 2426, 2 }, /* メディーバルデュークモン: ファイナル・クレスト */
+    { 715, DM_TECHNIQUE_1493, 2427, 1 }, /* メタルピラニモン: ３Dレイザー */
+    { 715, DM_TECHNIQUE_1494, 2428, 2 }, /* メタルピラニモン: マックスパワーバイス */
+    { 716, DM_TECHNIQUE_1495, 2429, 1 }, /* メタルシードラモン: アルティメットストリーム */
+    { 717, DM_TECHNIQUE_0979, 1913, 1 }, /* メタルガルルモン: コキュートスブレス */
+    { 717, DM_TECHNIQUE_0980, 1914, 2 }, /* メタルガルルモン: ガルルトマホーク */
+    { 717, DM_TECHNIQUE_0981, 1915, 3 }, /* メタルガルルモン: グレイスクロスフリーザー */
+    { 718, DM_TECHNIQUE_1496, 2430, 1 }, /* メタルエテモン: バナナスリップ */
+    { 719, DM_TECHNIQUE_0995, 1929, 1 }, /* メギドラモン: ヘル・ハウリング */
+    { 719, DM_TECHNIQUE_0996, 1930, 2 }, /* メギドラモン: メギドフレイム */
+    { 720, DM_TECHNIQUE_1497, 2431, 1 }, /* ムーンミレニアモン: デス・クリスタル */
+    { 721, DM_TECHNIQUE_1498, 2432, 1 }, /* ムルムクスモン: ゲヘナ・フレイム */
+    { 722, DM_TECHNIQUE_1499, 2433, 1 }, /* ムゲンドラモン: ∞（ムゲン）キャノン */
+    { 723, DM_TECHNIQUE_1500, 2434, 1 }, /* ミレニアモン: タイムアンリミテッド */
+    { 724, DM_TECHNIQUE_1501, 2435, 1 }, /* ミラージュガオガモン：バーストモード: フルムーンメテオインパクト */
+    { 724, DM_TECHNIQUE_1502, 2436, 2 }, /* ミラージュガオガモン：バーストモード: ファイナルミラージュバースト */
+    { 724, DM_TECHNIQUE_1503, 2437, 3 }, /* ミラージュガオガモン：バーストモード: ルナハーケンスラッシャー */
+    { 725, DM_TECHNIQUE_1504, 2438, 1 }, /* ミラージュガオガモン: ダブルクレセントミラージュ */
+    { 725, DM_TECHNIQUE_1505, 2439, 2 }, /* ミラージュガオガモン: フルムーンブラスター */
+    { 725, DM_TECHNIQUE_1506, 2440, 3 }, /* ミラージュガオガモン: ゲイルクロー */
+    { 726, DM_TECHNIQUE_1507, 2441, 1 }, /* ミネルヴァモン: ストライクロール */
+    { 726, DM_TECHNIQUE_1508, 2442, 2 }, /* ミネルヴァモン: マッドネスメリーゴーランド */
+    { 727, DM_TECHNIQUE_1509, 2443, 1 }, /* マルスモン: コロナサンクションズ */
+    { 728, DM_TECHNIQUE_1510, 2444, 1 }, /* マリンエンジェモン: オーシャンラブ */
+    { 729, DM_TECHNIQUE_1511, 2445, 1 }, /* マグナキッドモン: バインドレッドトリッガー */
+    { 729, DM_TECHNIQUE_1512, 2446, 2 }, /* マグナキッドモン: ハッピーバレットシャワリング */
+    { 729, DM_TECHNIQUE_1513, 2447, 3 }, /* マグナキッドモン: ケイオストライアングラー */
+    { 730, DM_TECHNIQUE_1514, 2448, 1 }, /* ボルトモン: トマホークシュタイナー */
+    { 731, DM_TECHNIQUE_0851, 1785, 1 }, /* ホーリードラモン: ホーリーフレイム */
+    { 732, DM_TECHNIQUE_0826, 1760, 1 }, /* ホウオウモン: スターライトエクスプロージョン */
+    { 733, DM_TECHNIQUE_0953, 1887, 1 }, /* ベルフェモン：レイジモード: ランプランツス */
+    { 733, DM_TECHNIQUE_0954, 1888, 2 }, /* ベルフェモン：レイジモード: ギフトオブダークネス */
+    { 734, DM_TECHNIQUE_1515, 2449, 1 }, /* ベルフェモン：スリープモード: エターナルナイトメア */
+    { 734, DM_TECHNIQUE_0953, 1887, 2 }, /* ベルフェモン：スリープモード: ランプランツス */
+    { 735, DM_TECHNIQUE_1516, 2450, 1 }, /* ベルゼブモン：ブラストモード: デススリンガー */
+    { 735, DM_TECHNIQUE_1254, 2188, 2 }, /* ベルゼブモン：ブラストモード: カオスフレア */
+    { 736, DM_TECHNIQUE_1003, 1937, 1 }, /* ベルゼブモン: ダークネスクロウ */
+    { 736, DM_TECHNIQUE_1004, 1938, 2 }, /* ベルゼブモン: ダブルインパクト */
+    { 737, DM_TECHNIQUE_1517, 2451, 1 }, /* ベルスターモン: フライバレット */
+    { 737, DM_TECHNIQUE_1015, 1949, 2 }, /* ベルスターモン: ダブルクロウ */
+    { 737, DM_TECHNIQUE_1518, 2452, 3 }, /* ベルスターモン: ハリケーンビスショット */
+    { 738, DM_TECHNIQUE_1519, 2453, 1 }, /* ベリアルヴァンデモン: パンデモニウムフレイム */
+    { 739, DM_TECHNIQUE_0538, 1472, 1 }, /* ヘラクルカブテリモン: ギガブラスター */
+    { 740, DM_TECHNIQUE_0853, 1787, 1 }, /* プレシオモン: ソローブルー */
+    { 741, DM_TECHNIQUE_1520, 2454, 1 }, /* ブレイクドラモン: デストロイドラッシュ */
+    { 741, DM_TECHNIQUE_1521, 2455, 2 }, /* ブレイクドラモン: インフィニティボーリング */
+    { 741, DM_TECHNIQUE_1522, 2456, 3 }, /* ブレイクドラモン: グラビティプレス */
+    { 742, DM_TECHNIQUE_0922, 1856, 1 }, /* プリンスマメモン: スマイリーウォーヘッド */
+    { 743, DM_TECHNIQUE_1523, 2457, 1 }, /* ブリッツグレイモン: プラズマステーク */
+    { 743, DM_TECHNIQUE_1524, 2458, 2 }, /* ブリッツグレイモン: サンダーバーニア */
+    { 743, DM_TECHNIQUE_1525, 2459, 3 }, /* ブリッツグレイモン: エレックガード */
+    { 744, DM_TECHNIQUE_1526, 2460, 1 }, /* ブラックセントガルゴモン: ジャイアントミサイル */
+    { 744, DM_TECHNIQUE_1527, 2461, 2 }, /* ブラックセントガルゴモン: バーストショット */
+    { 745, DM_TECHNIQUE_0900, 1834, 1 }, /* ブラックウォーグレイモン: 暗黒のガイアフォース */
+    { 746, DM_TECHNIQUE_1528, 2462, 1 }, /* プラチナヌメモン: エクスクレメント */
+    { 746, DM_TECHNIQUE_1529, 2463, 2 }, /* プラチナヌメモン: プラチナエクスクレメント */
+    { 746, DM_TECHNIQUE_1530, 2464, 3 }, /* プラチナヌメモン: プラチナバープ */
+    { 747, DM_TECHNIQUE_1531, 2465, 1 }, /* プクモン: ニードルスコール */
+    { 748, DM_TECHNIQUE_1532, 2466, 1 }, /* フウジンモン: マルトサイクロン */
+    { 748, DM_TECHNIQUE_1533, 2467, 2 }, /* フウジンモン: クリティカルアーム */
+    { 749, DM_TECHNIQUE_1534, 2468, 1 }, /* ファンロンモン: 太極（たいきょく） */
+    { 749, DM_TECHNIQUE_1535, 2469, 2 }, /* ファンロンモン: 黄廻（おうかい） */
+    { 750, DM_TECHNIQUE_1536, 2470, 1 }, /* ファラオモン: ネクロミスト */
+    { 751, DM_TECHNIQUE_1537, 2471, 1 }, /* ピノッキモン: ブリットハンマー */
+    { 752, DM_TECHNIQUE_1538, 2472, 1 }, /* ビクトリーグレイモン: ドラモンブレイカー */
+    { 752, DM_TECHNIQUE_1539, 2473, 2 }, /* ビクトリーグレイモン: トライデントガイア */
+    { 752, DM_TECHNIQUE_1540, 2474, 3 }, /* ビクトリーグレイモン: ビクトリーチャージ */
+    { 753, DM_TECHNIQUE_1541, 2475, 1 }, /* ピエモン: トランプ・ソード */
+    { 754, DM_TECHNIQUE_1542, 2476, 1 }, /* バンチョーレオモン: 獅子羅王漸（ししらおうざん） */
+    { 754, DM_TECHNIQUE_1543, 2477, 2 }, /* バンチョーレオモン: フラッシュバンチョーパンチ */
+    { 755, DM_TECHNIQUE_1544, 2478, 1 }, /* バンチョーマメモン: 護王流伝羅守（ごーるでんらっしゅ） */
+    { 755, DM_TECHNIQUE_1545, 2479, 2 }, /* バンチョーマメモン: 千本爆砕（せんぼんどっかーん） */
+    { 755, DM_TECHNIQUE_1546, 2480, 3 }, /* バンチョーマメモン: 特攻漢弾（ぶっこみおとこだま） */
+    { 756, DM_TECHNIQUE_1547, 2481, 1 }, /* バンチョースティングモン: ブラッディーフィニッシュ */
+    { 756, DM_TECHNIQUE_1548, 2482, 2 }, /* バンチョースティングモン: 爆雷天 */
+    { 756, DM_TECHNIQUE_1549, 2483, 3 }, /* バンチョースティングモン: レッドバット */
+    { 757, DM_TECHNIQUE_0956, 1890, 1 }, /* バルバモン: デスルアー */
+    { 757, DM_TECHNIQUE_0957, 1891, 2 }, /* バルバモン: パンデモニウムロスト */
+    { 758, DM_TECHNIQUE_1550, 2484, 1 }, /* パラサイモン: エレクトリックバインド */
+    { 759, DM_TECHNIQUE_1551, 2485, 1 }, /* ババモン: エンブレスヘイズ */
+    { 760, DM_TECHNIQUE_1552, 2486, 1 }, /* バイフーモン: 金剛（こんごう） */
+    { 761, DM_TECHNIQUE_1553, 2487, 1 }, /* ハイアンドロモン: アトミック・レイ */
+    { 762, DM_TECHNIQUE_1554, 2488, 1 }, /* ネプトゥーンモン: ボルテックスペネトレート */
+    { 762, DM_TECHNIQUE_1555, 2489, 2 }, /* ネプトゥーンモン: ウェーブオブデプス */
+    { 763, DM_TECHNIQUE_1556, 2490, 1 }, /* ドルゴラモン: ブレイブメタル */
+    { 763, DM_TECHNIQUE_1557, 2491, 2 }, /* ドルゴラモン: ドルディーン */
+    { 764, DM_TECHNIQUE_1558, 2492, 1 }, /* ドゥフトモン：レオパルドモード: ヴォルケンクラッツァー */
+    { 764, DM_TECHNIQUE_1559, 2493, 2 }, /* ドゥフトモン：レオパルドモード: ブロッカーデ */
+    { 764, DM_TECHNIQUE_1352, 2286, 3 }, /* ドゥフトモン：レオパルドモード: エアオーベルング */
+    { 765, DM_TECHNIQUE_0848, 1782, 1 }, /* ドゥフトモン: アウススターベン */
+    { 765, DM_TECHNIQUE_1560, 2494, 2 }, /* ドゥフトモン: エルンストウェル */
+    { 766, DM_TECHNIQUE_1561, 2495, 1 }, /* デュランダモン: ツヴァングレンツェ */
+    { 766, DM_TECHNIQUE_1562, 2496, 2 }, /* デュランダモン: トロンメッサー */
+    { 767, DM_TECHNIQUE_0845, 1779, 1 }, /* デュナスモン: ドラゴンズロア */
+    { 767, DM_TECHNIQUE_0846, 1780, 2 }, /* デュナスモン: ブレス・オブ・ワイバーン */
+    { 768, DM_TECHNIQUE_1563, 2497, 1 }, /* デュークモン：クリムゾンモード: インビンシブルソード（無敵剣） */
+    { 768, DM_TECHNIQUE_1564, 2498, 2 }, /* デュークモン：クリムゾンモード: クォ・ヴァディス */
+    { 769, DM_TECHNIQUE_1565, 2499, 1 }, /* デュークモン: ロイヤルセーバー */
+    { 769, DM_TECHNIQUE_1019, 1953, 2 }, /* デュークモン: ファイナル・エリシオン */
+    { 770, DM_TECHNIQUE_1566, 2500, 1 }, /* デビタマモン: ブラックデスクラウド */
+    { 771, DM_TECHNIQUE_1567, 2501, 1 }, /* デスモン（黒）: デスアロー */
+    { 771, DM_TECHNIQUE_1568, 2502, 2 }, /* デスモン（黒）: エクスプロージョンアイ */
+    { 772, DM_TECHNIQUE_1567, 2501, 1 }, /* デスモン: デスアロー */
+    { 772, DM_TECHNIQUE_1568, 2502, 2 }, /* デスモン: エクスプロージョンアイ */
+    { 774, DM_TECHNIQUE_0959, 1893, 1 }, /* デーモン: フレイムインフェルノ */
+    { 775, DM_TECHNIQUE_1569, 2503, 1 }, /* デクスドルゴラモン: メタルインパルス */
+    { 775, DM_TECHNIQUE_1557, 2491, 2 }, /* デクスドルゴラモン: ドルディーン */
+    { 776, DM_TECHNIQUE_1570, 2504, 1 }, /* ディノレクスモン: スプラッターハンティング */
+    { 776, DM_TECHNIQUE_1571, 2505, 2 }, /* ディノレクスモン: オーガフレイム */
+    { 777, DM_TECHNIQUE_1572, 2506, 1 }, /* ディノタイガモン: グラウンドファング */
+    { 777, DM_TECHNIQUE_1573, 2507, 2 }, /* ディノタイガモン: ハイランドファング */
+    { 778, DM_TECHNIQUE_1574, 2508, 1 }, /* ディアボロモン: カタストロフィーカノン */
+    { 779, DM_TECHNIQUE_1575, 2509, 1 }, /* ディアナモン: クレセントハーケン */
+    { 779, DM_TECHNIQUE_1576, 2510, 2 }, /* ディアナモン: アロー・オブ・アルテミス */
+    { 779, DM_TECHNIQUE_1577, 2511, 3 }, /* ディアナモン: グッドナイト・ムーン */
+    { 780, DM_TECHNIQUE_1578, 2512, 1 }, /* チンロンモン: 蒼雷（そうらい） */
+    { 781, DM_TECHNIQUE_1579, 2513, 1 }, /* ダークドラモン: ダークロアー */
+    { 781, DM_TECHNIQUE_1580, 2514, 2 }, /* ダークドラモン: ギガスティックランス */
+    { 782, DM_TECHNIQUE_1581, 2515, 1 }, /* タイラントカブテリモン: シャインオブビー */
+    { 782, DM_TECHNIQUE_1582, 2516, 2 }, /* タイラントカブテリモン: ビーサイクロン */
+    { 783, DM_TECHNIQUE_1583, 2517, 1 }, /* タイタモン: 魂魄芯撃（こんぱくしんげき） */
+    { 783, DM_TECHNIQUE_1584, 2518, 2 }, /* タイタモン: 幻刃無痕（げんじんむこん） */
+    { 783, DM_TECHNIQUE_1585, 2519, 3 }, /* タイタモン: 呼応冥軍（こおうめいぐん） */
+    { 784, DM_TECHNIQUE_1586, 2520, 1 }, /* タイガーヴェスパモン: マッハスティンガーＶ（ビクトリー） */
+    { 785, DM_TECHNIQUE_1527, 2461, 1 }, /* セントガルゴモン: バーストショット */
+    { 785, DM_TECHNIQUE_1526, 2460, 2 }, /* セントガルゴモン: ジャイアントミサイル */
+    { 786, DM_TECHNIQUE_1587, 2521, 1 }, /* セラフィモン: セブンヘブンズ */
+    { 786, DM_TECHNIQUE_0596, 1530, 2 }, /* セラフィモン: テスタメント */
+    { 787, DM_TECHNIQUE_1588, 2522, 1 }, /* スレイヤードラモン: 天竜斬破（てんりゅうざんは） */
+    { 787, DM_TECHNIQUE_1589, 2523, 2 }, /* スレイヤードラモン: 昇竜斬波（しょうりゅうざんぱ） */
+    { 787, DM_TECHNIQUE_1590, 2524, 3 }, /* スレイヤードラモン: 咬竜斬刃（こうりゅうざんば） */
+    { 788, DM_TECHNIQUE_1591, 2525, 1 }, /* スレイプモン: ビフロスト */
+    { 788, DM_TECHNIQUE_1592, 2526, 2 }, /* スレイプモン: オーディンズブレス */
+    { 789, DM_TECHNIQUE_1593, 2527, 1 }, /* スラッシュエンジェモン: ホーリーエスパーダ */
+    { 789, DM_TECHNIQUE_1594, 2528, 2 }, /* スラッシュエンジェモン: ヘブンズリッパー */
+    { 790, DM_TECHNIQUE_1595, 2529, 1 }, /* スピノモン: ソニックスラッシュレイン */
+    { 790, DM_TECHNIQUE_1596, 2530, 2 }, /* スピノモン: ブループロミネンス */
+    { 791, DM_TECHNIQUE_1597, 2531, 1 }, /* スサノオモン: 天羽々斬（あまのはばきり） */
+    { 791, DM_TECHNIQUE_1598, 2532, 2 }, /* スサノオモン: 八雷神（やくさのいかづち） */
+    { 792, DM_TECHNIQUE_0924, 1858, 1 }, /* スカルマンモン: スパイラルボーン */
+    { 793, DM_TECHNIQUE_1599, 2533, 1 }, /* スーツェーモン: 紅焔（こうえん） */
+    { 794, DM_TECHNIQUE_1600, 2534, 1 }, /* スイジンモン: ムゲンキャノン */
+    { 794, DM_TECHNIQUE_1601, 2535, 2 }, /* スイジンモン: アクセルアーム */
+    { 795, DM_TECHNIQUE_1602, 2536, 1 }, /* ズィードミレニアモン: タイムデストロイヤー */
+    { 796, DM_TECHNIQUE_1603, 2537, 1 }, /* ズィードガルルモン: ズィード砲 */
+    { 796, DM_TECHNIQUE_1604, 2538, 2 }, /* ズィードガルルモン: フルメタルブレイズ */
+    { 796, DM_TECHNIQUE_1605, 2539, 3 }, /* ズィードガルルモン: ブローバックブレス */
+    { 797, DM_TECHNIQUE_1606, 2540, 1 }, /* ジャンボガメモン: メガトンハイドロレーザー */
+    { 797, DM_TECHNIQUE_1607, 2541, 2 }, /* ジャンボガメモン: ジャンボクレーター */
+    { 797, DM_TECHNIQUE_1608, 2542, 3 }, /* ジャンボガメモン: ジャンボジェッター */
+    { 798, DM_TECHNIQUE_0982, 1916, 1 }, /* ジャスティモン：アクセルアーム: トリニティーアーム */
+    { 798, DM_TECHNIQUE_0983, 1917, 2 }, /* ジャスティモン：アクセルアーム: ジャスティスキック */
+    { 799, DM_TECHNIQUE_1609, 2543, 1 }, /* シャカモン: 悟遍路掌（さとりへんろしょう） */
+    { 799, DM_TECHNIQUE_1610, 2544, 2 }, /* シャカモン: 霊光蜘蛛之糸（れいこうくものいと） */
+    { 799, DM_TECHNIQUE_1611, 2545, 3 }, /* シャカモン: 怠条真言（たいじょうしんごん） */
+    { 800, DM_TECHNIQUE_0379, 1313, 1 }, /* シャイングレイモン：バーストモード: コロナブレイズソード */
+    { 800, DM_TECHNIQUE_0380, 1314, 2 }, /* シャイングレイモン：バーストモード: ファイナルシャイニングバースト */
+    { 800, DM_TECHNIQUE_0381, 1315, 3 }, /* シャイングレイモン：バーストモード: トリッドヴァイス */
+    { 801, DM_TECHNIQUE_1612, 2546, 1 }, /* シャイングレイモン: グロリアスバースト */
+    { 801, DM_TECHNIQUE_1613, 2547, 2 }, /* シャイングレイモン: シャイニングブラスト */
+    { 801, DM_TECHNIQUE_1614, 2548, 3 }, /* シャイングレイモン: ジオグレイソード */
+    { 802, DM_TECHNIQUE_1615, 2549, 1 }, /* ジジモン: ハング・オン・デス */
+    { 803, DM_TECHNIQUE_1616, 2550, 1 }, /* シェンウーモン: 霧幻（むげん） */
+    { 804, DM_TECHNIQUE_1617, 2551, 1 }, /* ジエスモン: 轍剣成敗（てっけんせいばい） */
+    { 804, DM_TECHNIQUE_1618, 2552, 2 }, /* ジエスモン: シュベルトガイスト */
+    { 804, DM_TECHNIQUE_1619, 2553, 3 }, /* ジエスモン: アウスジェネリクス */
+    { 805, DM_TECHNIQUE_1620, 2554, 1 }, /* ザンバモン: 打首獄門 */
+    { 805, DM_TECHNIQUE_1621, 2555, 2 }, /* ザンバモン: 十文字斬り */
+    { 807, DM_TECHNIQUE_1622, 2556, 1 }, /* サクヤモン: 飯綱（いづな） */
+    { 807, DM_TECHNIQUE_0999, 1933, 2 }, /* サクヤモン: 金剛界曼荼羅（こんごうかいまんだら） */
+    { 808, DM_TECHNIQUE_1623, 2557, 1 }, /* サーベルレオモン: ネイルクラッシャー */
+    { 809, DM_TECHNIQUE_0855, 1789, 1 }, /* ゴッドドラモン: ゴッドフレイム */
+    { 810, DM_TECHNIQUE_1624, 2558, 1 }, /* ゴクモン: 髑髏乱舞（どくろらんぶ) */
+    { 811, DM_TECHNIQUE_0836, 1770, 1 }, /* ケルビモン（悪）: ライトニングスピア */
+    { 811, DM_TECHNIQUE_0837, 1771, 2 }, /* ケルビモン（悪）: ヘブンズ・ジャッジメント */
+    { 812, DM_TECHNIQUE_0836, 1770, 1 }, /* ケルビモン（善）: ライトニングスピア */
+    { 812, DM_TECHNIQUE_0837, 1771, 2 }, /* ケルビモン（善）: ヘブンズ・ジャッジメント */
+    { 813, DM_TECHNIQUE_1625, 2559, 1 }, /* クロスモン: カイザーフェニックス */
+    { 813, DM_TECHNIQUE_1626, 2560, 2 }, /* クロスモン: ミスティックブレイク */
+    { 814, DM_TECHNIQUE_1627, 2561, 1 }, /* クレニアムモン: エンド・ワルツ */
+    { 814, DM_TECHNIQUE_1628, 2562, 2 }, /* クレニアムモン: ゴッドブレス */
+    { 815, DM_TECHNIQUE_1629, 2563, 1 }, /* グレイスノヴァモン: エクリプスフィンガー */
+    { 815, DM_TECHNIQUE_1630, 2564, 2 }, /* グレイスノヴァモン: カリュドーンアルクス */
+    { 816, DM_TECHNIQUE_1631, 2565, 1 }, /* グリフォモン: スーパーソニックボイス */
+    { 817, DM_TECHNIQUE_1632, 2566, 1 }, /* グランドロコモン: デストロイドクラッシュ */
+    { 818, DM_TECHNIQUE_1633, 2567, 1 }, /* グランドラクモン: クリスタルレボリューション */
+    { 818, DM_TECHNIQUE_1634, 2568, 2 }, /* グランドラクモン: アイオブザゴーゴン */
+    { 819, DM_TECHNIQUE_1635, 2569, 1 }, /* グランディスクワガーモン: グランキラー */
+    { 819, DM_TECHNIQUE_1636, 2570, 2 }, /* グランディスクワガーモン: グランディスシザー */
+    { 820, DM_TECHNIQUE_1637, 2571, 1 }, /* グランクワガーモン: ディメンションシザー */
+    { 821, DM_TECHNIQUE_1638, 2572, 1 }, /* クラヴィスエンジェモン: ザ・キー */
+    { 822, DM_TECHNIQUE_0986, 1920, 1 }, /* クズハモン: 裏飯綱（うらいづな） */
+    { 822, DM_TECHNIQUE_0987, 1921, 2 }, /* クズハモン: 胎蔵界曼荼羅（たいぞうかいまんだら） */
+    { 823, DM_TECHNIQUE_1639, 2573, 1 }, /* クオーツモン: ギュプト粒子砲 */
+    { 823, DM_TECHNIQUE_1640, 2574, 2 }, /* クオーツモン: ルーインブラスト(破滅の爆薬) */
+    { 824, DM_TECHNIQUE_1641, 2575, 1 }, /* クーレスガルルモン: 黄獣偃月刀（きじゅうえんげつとう） */
+    { 824, DM_TECHNIQUE_1642, 2576, 2 }, /* クーレスガルルモン: 獣狼大回転（じゅうろうだいかいてん) */
+    { 824, DM_TECHNIQUE_1643, 2577, 3 }, /* クーレスガルルモン: 激・氷月牙（げき ひょうげつが） */
+    { 825, DM_TECHNIQUE_1644, 2578, 1 }, /* クイーンチェスモン: ハートブレイカー */
+    { 825, DM_TECHNIQUE_1645, 2579, 2 }, /* クイーンチェスモン: クィーンスタンプ */
+    { 825, DM_TECHNIQUE_1646, 2580, 3 }, /* クイーンチェスモン: クィーンスティック */
+    { 826, DM_TECHNIQUE_1647, 2581, 1 }, /* キングチェスモン: チェックメイト */
+    { 826, DM_TECHNIQUE_1648, 2582, 2 }, /* キングチェスモン: キングスティック */
+    { 826, DM_TECHNIQUE_1649, 2583, 3 }, /* キングチェスモン: キングダッシュ */
+    { 827, DM_TECHNIQUE_1650, 2584, 1 }, /* キングエテモン: サルしばい */
+    { 828, DM_TECHNIQUE_1651, 2585, 1 }, /* キャノンドラモン: ダイナ・キャノン */
+    { 828, DM_TECHNIQUE_1652, 2586, 2 }, /* キャノンドラモン: グレネードストーム */
+    { 829, DM_TECHNIQUE_1653, 2587, 1 }, /* ギガシードラモン: ギガシーデストロイヤー */
+    { 829, DM_TECHNIQUE_1654, 2588, 2 }, /* ギガシードラモン: スカイウェーブ */
+    { 830, DM_TECHNIQUE_1655, 2589, 1 }, /* ガンクゥモン: 鉄拳制裁 */
+    { 830, DM_TECHNIQUE_1656, 2590, 2 }, /* ガンクゥモン: 地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！） */
+    { 830, DM_TECHNIQUE_1657, 2591, 3 }, /* ガンクゥモン: ちゃぶ台返し */
+    { 831, DM_TECHNIQUE_1658, 2592, 1 }, /* ガルフモン: ブラックレクイエム */
+    { 831, DM_TECHNIQUE_1659, 2593, 2 }, /* ガルフモン: デッドスクリーム */
+    { 832, DM_TECHNIQUE_1660, 2594, 1 }, /* カオスモン：ヴァロドゥルアーム: 覇王両断剣 */
+    { 832, DM_TECHNIQUE_1661, 2595, 2 }, /* カオスモン：ヴァロドゥルアーム: オーロラブラスター */
+    { 833, DM_TECHNIQUE_1660, 2594, 1 }, /* カオスモン: 覇王両断剣 */
+    { 833, DM_TECHNIQUE_1662, 2596, 2 }, /* カオスモン: ダークプロミネンス */
+    { 834, DM_TECHNIQUE_1663, 2597, 1 }, /* カオスドラモン（X抗体）: ハイパームゲンキャノン */
+    { 834, DM_TECHNIQUE_1664, 2598, 2 }, /* カオスドラモン（X抗体）: カオスクラッシャー */
+    { 834, DM_TECHNIQUE_1665, 2599, 3 }, /* カオスドラモン（X抗体）: スーパージェノサイドアタック */
+    { 835, DM_TECHNIQUE_1663, 2597, 1 }, /* カオスドラモン: ハイパームゲンキャノン */
+    { 836, DM_TECHNIQUE_1666, 2600, 1 }, /* カオスデュークモン: デモンズディザスター */
+    { 836, DM_TECHNIQUE_1667, 2601, 2 }, /* カオスデュークモン: ジュデッカプリズン */
+    { 837, DM_TECHNIQUE_1668, 2602, 1 }, /* ガイオウモン: 燐火斬（りんかざん） */
+    { 837, DM_TECHNIQUE_1669, 2603, 2 }, /* ガイオウモン: ガイアリアクター */
+    { 837, DM_TECHNIQUE_1670, 2604, 3 }, /* ガイオウモン: 燐火撃（りんかげき） */
+    { 838, DM_TECHNIQUE_1109, 2043, 1 }, /* オメガモン Alter-S: ガルルソード */
+    { 838, DM_TECHNIQUE_1110, 2044, 2 }, /* オメガモン Alter-S: グレイキャノン */
+    { 839, DM_TECHNIQUE_0475, 1409, 1 }, /* オメガモン（X抗体）: ガルルキャノン */
+    { 839, DM_TECHNIQUE_0476, 1410, 2 }, /* オメガモン（X抗体）: グレイソード */
+    { 839, DM_TECHNIQUE_1671, 2605, 3 }, /* オメガモン（X抗体）: オールデリート */
+    { 840, DM_TECHNIQUE_0475, 1409, 1 }, /* オメガモン: ガルルキャノン */
+    { 840, DM_TECHNIQUE_0476, 1410, 2 }, /* オメガモン: グレイソード */
+    { 841, DM_TECHNIQUE_0967, 1901, 1 }, /* オファニモン：フォールダウンモード: フレイムヘルサイズ */
+    { 841, DM_TECHNIQUE_0966, 1900, 2 }, /* オファニモン：フォールダウンモード: デモンズクリスタル */
+    { 842, DM_TECHNIQUE_1672, 2606, 1 }, /* オファニモン: エデンズジャベリン */
+    { 842, DM_TECHNIQUE_1673, 2607, 2 }, /* オファニモン: セフィロートクリスタル */
+    { 843, DM_TECHNIQUE_1674, 2608, 1 }, /* オニスモン: コズミックレイ */
+    { 844, DM_TECHNIQUE_1675, 2609, 1 }, /* オグドモン: オーラーティオ・グランディオロクア */
+    { 844, DM_TECHNIQUE_1676, 2610, 2 }, /* オグドモン: カテドラール */
+    { 844, DM_TECHNIQUE_1677, 2611, 3 }, /* オグドモン: グラドゥス */
+    { 845, DM_TECHNIQUE_1678, 2612, 1 }, /* オウリュウモン: 永世竜王刃（えいせいりゅうおうじん） */
+    { 845, DM_TECHNIQUE_1679, 2613, 2 }, /* オウリュウモン: 黄鎧（おうがい） */
+    { 846, DM_TECHNIQUE_1680, 2614, 1 }, /* エンシェントワイズモン: ラプラスの魔 */
+    { 846, DM_TECHNIQUE_1681, 2615, 2 }, /* エンシェントワイズモン: エルダーサイン */
+    { 847, DM_TECHNIQUE_1682, 2616, 1 }, /* エンシェントメガテリウモン: フリージングブリザード */
+    { 847, DM_TECHNIQUE_1683, 2617, 2 }, /* エンシェントメガテリウモン: グレートスノープロー */
+    { 848, DM_TECHNIQUE_1684, 2618, 1 }, /* エンシェントマーメイモン: グレイト・メイルストローム */
+    { 848, DM_TECHNIQUE_1685, 2619, 2 }, /* エンシェントマーメイモン: クリスタルビロー */
+    { 849, DM_TECHNIQUE_1686, 2620, 1 }, /* エンシェントボルケーモン: アトミックボンバー */
+    { 849, DM_TECHNIQUE_1687, 2621, 2 }, /* エンシェントボルケーモン: スーパーノヴァ */
+    { 850, DM_TECHNIQUE_1688, 2622, 1 }, /* エンシェントビートモン: カラミティサンダー */
+    { 850, DM_TECHNIQUE_1689, 2623, 2 }, /* エンシェントビートモン: テラブラスター */
+    { 851, DM_TECHNIQUE_1690, 2624, 1 }, /* エンシェントトロイアモン: エペイオスギミック */
+    { 851, DM_TECHNIQUE_1691, 2625, 2 }, /* エンシェントトロイアモン: サプライズキャノン */
+    { 852, DM_TECHNIQUE_1692, 2626, 1 }, /* エンシェントスフィンクモン: ダークブラスト */
+    { 852, DM_TECHNIQUE_1693, 2627, 2 }, /* エンシェントスフィンクモン: ネクロエクリプス */
+    { 853, DM_TECHNIQUE_1694, 2628, 1 }, /* エンシェントグレイモン: ガイアトルネード */
+    { 853, DM_TECHNIQUE_1695, 2629, 2 }, /* エンシェントグレイモン: オメガバースト */
+    { 854, DM_TECHNIQUE_1696, 2630, 1 }, /* エンシェントガルルモン: シャープネスクレイモア */
+    { 854, DM_TECHNIQUE_1697, 2631, 2 }, /* エンシェントガルルモン: アブソリュート・ゼロ */
+    { 855, DM_TECHNIQUE_1698, 2632, 1 }, /* エンシェントイリスモン: ストームゲイザー */
+    { 855, DM_TECHNIQUE_1699, 2633, 2 }, /* エンシェントイリスモン: レインボーシンフォニー */
+    { 856, DM_TECHNIQUE_1700, 2634, 1 }, /* エルドラディモン: ゴールデンロード */
+    { 856, DM_TECHNIQUE_1701, 2635, 2 }, /* エルドラディモン: メテオアースクエイク */
+    { 856, DM_TECHNIQUE_1702, 2636, 3 }, /* エルドラディモン: ジャイアントニッパー */
+    { 857, DM_TECHNIQUE_1703, 2637, 1 }, /* エグザモン: アヴァロンズゲート */
+    { 857, DM_TECHNIQUE_1704, 2638, 2 }, /* エグザモン: ペンドラゴンズグローリー */
+    { 857, DM_TECHNIQUE_1705, 2639, 3 }, /* エグザモン: ドラゴニックインパクト */
+    { 858, DM_TECHNIQUE_1706, 2640, 1 }, /* ウルカヌスモン: ピンポイントウェポンワークス */
+    { 858, DM_TECHNIQUE_1707, 2641, 2 }, /* ウルカヌスモン: アプロプリエートワークス */
+    { 858, DM_TECHNIQUE_1708, 2642, 3 }, /* ウルカヌスモン: ボンバーアート */
+    { 859, DM_TECHNIQUE_1709, 2643, 1 }, /* ウォーグレイモン: ガイアフォース */
+    { 859, DM_TECHNIQUE_1710, 2644, 2 }, /* ウォーグレイモン: ブレイブトルネード */
+    { 860, DM_TECHNIQUE_1711, 2645, 1 }, /* ヴェノムヴァンデモン: ヴェノムインフューズ */
+    { 861, DM_TECHNIQUE_1712, 2646, 1 }, /* ウェヌスモン: ヒーリングセラピー */
+    { 861, DM_TECHNIQUE_1713, 2647, 2 }, /* ウェヌスモン: ＬＯＶＥＹＯＵ */
+    { 861, DM_TECHNIQUE_1714, 2648, 3 }, /* ウェヌスモン: ピースファンタジア */
+    { 862, DM_TECHNIQUE_1715, 2649, 1 }, /* ヴァロドゥルモン: パージシャイン */
+    { 862, DM_TECHNIQUE_1716, 2650, 2 }, /* ヴァロドゥルモン: オーロラアンジュレーション */
+    { 863, DM_TECHNIQUE_1717, 2651, 1 }, /* ヴァルキリモン: フェンリルソード */
+    { 863, DM_TECHNIQUE_1718, 2652, 2 }, /* ヴァルキリモン: アウルヴァンディルの矢 */
+    { 864, DM_TECHNIQUE_1719, 2653, 1 }, /* ヴァイクモン: アークティックブリザード */
+    { 864, DM_TECHNIQUE_1720, 2654, 2 }, /* ヴァイクモン: ミョルニル */
+    { 865, DM_TECHNIQUE_0873, 1807, 1 }, /* イーバモン: ブレインラプチュアー */
+    { 865, DM_TECHNIQUE_0874, 1808, 2 }, /* イーバモン: プラネットデストロイヤー */
+    { 866, DM_TECHNIQUE_1721, 2655, 1 }, /* イージスドラモン: パワーウォーター */
+    { 866, DM_TECHNIQUE_1722, 2656, 2 }, /* イージスドラモン: ブレイズパワー */
+    { 866, DM_TECHNIQUE_1723, 2657, 3 }, /* イージスドラモン: テラハイドロブレス */
+    { 866, DM_TECHNIQUE_1724, 2658, 4 }, /* イージスドラモン: シャインブレイカー */
+    { 867, DM_TECHNIQUE_0397, 1331, 1 }, /* インペリアルドラモン：ファイターモード: ポジトロンレーザー */
+    { 867, DM_TECHNIQUE_0398, 1332, 2 }, /* インペリアルドラモン：ファイターモード: ギガデス */
+    { 868, DM_TECHNIQUE_1725, 2659, 1 }, /* インペリアルドラモン：パラディンモード: オメガブレード */
+    { 869, DM_TECHNIQUE_0687, 1621, 1 }, /* インペリアルドラモン：ドラゴンモード: メガデス */
+    { 870, DM_TECHNIQUE_1726, 2660, 1 }, /* イグドラシル＿７Ｄ６: クリスタルの破片 */
+    { 870, DM_TECHNIQUE_1727, 2661, 2 }, /* イグドラシル＿７Ｄ６: 巨大なクリスタル */
+    { 870, DM_TECHNIQUE_1728, 2662, 3 }, /* イグドラシル＿７Ｄ６: 自己修復 */
+    { 871, DM_TECHNIQUE_0880, 1814, 1 }, /* アルフォースブイドラモン: シャイニングＶフォース */
+    { 872, DM_TECHNIQUE_1729, 2663, 1 }, /* アルファモン：王竜剣: 究極戦刃王竜剣 */
+    { 873, DM_TECHNIQUE_1730, 2664, 1 }, /* アルファモン: 聖剣グレイダルファー */
+    { 873, DM_TECHNIQUE_1731, 2665, 2 }, /* アルファモン: デジタライズ・オブ・ソウル */
+    { 874, DM_TECHNIQUE_1732, 2666, 1 }, /* アルティメットブラキモン: アルティメットブラスト */
+    { 874, DM_TECHNIQUE_1733, 2667, 2 }, /* アルティメットブラキモン: アルティメットクエイク */
+    { 875, DM_TECHNIQUE_1734, 2668, 1 }, /* アルゴモン: テラバイトディザスター */
+    { 875, DM_TECHNIQUE_1735, 2669, 2 }, /* アルゴモン: ディストーションライン */
+    { 875, DM_TECHNIQUE_1736, 2670, 3 }, /* アルゴモン: ブルートフォース */
+    { 876, DM_TECHNIQUE_1737, 2671, 1 }, /* アポロモン: ソルブラスター */
+    { 876, DM_TECHNIQUE_1738, 2672, 2 }, /* アポロモン: フォイボス・ブロウ */
+    { 876, DM_TECHNIQUE_1739, 2673, 3 }, /* アポロモン: アロー・オブ・アポロ */
+    { 877, DM_TECHNIQUE_1740, 2674, 1 }, /* アポカリモン: 暗黒(ダークネスゾーン) */
+    { 878, DM_TECHNIQUE_1741, 2675, 1 }, /* アヌビモン: ピラミッドパワー */
+    { 878, DM_TECHNIQUE_1742, 2676, 2 }, /* アヌビモン: アメミット */
+    { 879, DM_TECHNIQUE_1743, 2677, 1 }, /* アーマゲモン: ブラックレイン */
+    { 879, DM_TECHNIQUE_0682, 1616, 2 }, /* アーマゲモン: アルティメットフレア */
+    { 880, DM_TECHNIQUE_1744, 2678, 1 }, /* アヴェンジキッドモン: ミザリーバレットレイン */
+    { 880, DM_TECHNIQUE_1745, 2679, 2 }, /* アヴェンジキッドモン: デストラクショントリッガー */
+    { 881, DM_TECHNIQUE_1746, 2680, 1 }, /* ワルもんざえモン: ハートブレイクアタック */
+    { 882, DM_TECHNIQUE_1747, 2681, 1 }, /* ワルシードラモン: ダークストローム */
+    { 882, DM_TECHNIQUE_1748, 2682, 2 }, /* ワルシードラモン: イビルアイシクル */
+    { 882, DM_TECHNIQUE_1749, 2683, 3 }, /* ワルシードラモン: ストレンジミスト */
+    { 883, DM_TECHNIQUE_1750, 2684, 1 }, /* ワイズモン: パンドーラ・ダイアログ */
+    { 883, DM_TECHNIQUE_1751, 2685, 2 }, /* ワイズモン: エターナル・ニルヴァーナ */
+    { 884, DM_TECHNIQUE_0686, 1620, 1 }, /* ワーガルルモン: カイザーネイル */
+    { 885, DM_TECHNIQUE_1752, 2686, 1 }, /* ロコモン: スチームボム */
+    { 885, DM_TECHNIQUE_1753, 2687, 2 }, /* ロコモン: ホイールグラインダー */
+    { 886, DM_TECHNIQUE_1754, 2688, 1 }, /* ローダーレオモン: ボーリンストーム */
+    { 886, DM_TECHNIQUE_1755, 2689, 2 }, /* ローダーレオモン: ローダーモーニングスター */
+    { 887, DM_TECHNIQUE_1756, 2690, 1 }, /* レディーデビモン: ダークネスウェーブ */
+    { 887, DM_TECHNIQUE_1757, 2691, 2 }, /* レディーデビモン: プワゾン */
+    { 888, DM_TECHNIQUE_1758, 2692, 1 }, /* ルミナモン: ライトニングフィール */
+    { 888, DM_TECHNIQUE_1759, 2693, 2 }, /* ルミナモン: ルミナフラッシュ */
+    { 889, DM_TECHNIQUE_0944, 1878, 1 }, /* ルーチェモン：フォールダウンモード: パラダイスロスト */
+    { 889, DM_TECHNIQUE_1760, 2694, 2 }, /* ルーチェモン：フォールダウンモード: デッド・オア・アライブ */
+    { 890, DM_TECHNIQUE_1761, 2695, 1 }, /* ルークチェスモン: ストロングフォールド */
+    { 890, DM_TECHNIQUE_1762, 2696, 2 }, /* ルークチェスモン: ルークガトリング */
+    { 890, DM_TECHNIQUE_1763, 2697, 3 }, /* ルークチェスモン: キャッスルウォール */
+    { 891, DM_TECHNIQUE_0998, 1932, 1 }, /* リリモン: フラウカノン */
+    { 892, DM_TECHNIQUE_0471, 1405, 1 }, /* ラピッドモン: ラピッドファイア */
+    { 892, DM_TECHNIQUE_0472, 1406, 2 }, /* ラピッドモン: ゴールデントライアングル */
+    { 893, DM_TECHNIQUE_1764, 2698, 1 }, /* ライラモン: ライラシャワー */
+    { 893, DM_TECHNIQUE_1765, 2699, 2 }, /* ライラモン: ビューティースラップ */
+    { 893, DM_TECHNIQUE_1766, 2700, 3 }, /* ライラモン: アン・ドゥ・ポラン */
+    { 894, DM_TECHNIQUE_1767, 2701, 1 }, /* ライズグレイモン: トライデントリボルバー */
+    { 894, DM_TECHNIQUE_1768, 2702, 2 }, /* ライズグレイモン: ライジングデストロイヤー */
+    { 894, DM_TECHNIQUE_1769, 2703, 3 }, /* ライズグレイモン: ソリッドストライク */
+    { 895, DM_TECHNIQUE_1063, 1997, 1 }, /* ヤタガラモン（2006年アニメ版）: 甕布都神（ミカフツノカミ） */
+    { 895, DM_TECHNIQUE_1064, 1998, 2 }, /* ヤタガラモン（2006年アニメ版）: 羽黒（ハグロ） */
+    { 896, DM_TECHNIQUE_1770, 2704, 1 }, /* もんざえモン: ラブリーアタック */
+    { 897, DM_TECHNIQUE_0243, 1177, 1 }, /* メフィスモン: ブラックサバス */
+    { 897, DM_TECHNIQUE_1771, 2705, 2 }, /* メフィスモン: デスクラウド */
+    { 898, DM_TECHNIQUE_0614, 1548, 1 }, /* メタルマメモン: エネルギーボム */
+    { 899, DM_TECHNIQUE_1772, 2706, 1 }, /* メタルファントモン: ソウルプレデター */
+    { 899, DM_TECHNIQUE_1773, 2707, 2 }, /* メタルファントモン: グレイブスクリーム */
+    { 900, DM_TECHNIQUE_1037, 1971, 1 }, /* メタルティラノモン: ギガデストロイヤーⅡ */
+    { 900, DM_TECHNIQUE_1774, 2708, 2 }, /* メタルティラノモン: ヌークリアレーザー */
+    { 901, DM_TECHNIQUE_0697, 1631, 1 }, /* メタルグレイモン（ワクチン種）: トライデントアーム */
+    { 901, DM_TECHNIQUE_0611, 1545, 2 }, /* メタルグレイモン（ワクチン種）: ギガデストロイヤー */
+    { 901, DM_TECHNIQUE_0698, 1632, 3 }, /* メタルグレイモン（ワクチン種）: ジガストーム */
+    { 902, DM_TECHNIQUE_0611, 1545, 1 }, /* メタルグレイモン（ウィルス種）: ギガデストロイヤー */
+    { 903, DM_TECHNIQUE_1775, 2709, 1 }, /* メタリフェクワガーモン: ホーミングレーザー */
+    { 903, DM_TECHNIQUE_1776, 2710, 2 }, /* メタリフェクワガーモン: エミットブレイド */
+    { 904, DM_TECHNIQUE_0988, 1922, 1 }, /* メガログラウモン: ダブルエッジ */
+    { 904, DM_TECHNIQUE_0989, 1923, 2 }, /* メガログラウモン: アトミックブラスター */
+    { 905, DM_TECHNIQUE_1777, 2711, 1 }, /* メガドラモン: ジェノサイドアタック */
+    { 905, DM_TECHNIQUE_1778, 2712, 2 }, /* メガドラモン: アルティメットスライサー */
+    { 906, DM_TECHNIQUE_0171, 1105, 1 }, /* メガシードラモン: サンダージャベリン */
+    { 907, DM_TECHNIQUE_1779, 2713, 1 }, /* メイクラックモン: モデストリィスタン */
+    { 907, DM_TECHNIQUE_1082, 2016, 2 }, /* メイクラックモン: フェルトメイド */
+    { 908, DM_TECHNIQUE_1780, 2714, 1 }, /* ミヒラモン: ヴィモーハナ */
+    { 909, DM_TECHNIQUE_1781, 2715, 1 }, /* ミスティモン: コアダート */
+    { 909, DM_TECHNIQUE_1782, 2716, 2 }, /* ミスティモン: ブラストファイア */
+    { 910, DM_TECHNIQUE_0926, 1860, 1 }, /* マンモン: タスクストライクス */
+    { 910, DM_TECHNIQUE_0927, 1861, 2 }, /* マンモン: ツンドラブレス */
+    { 911, DM_TECHNIQUE_1783, 2717, 1 }, /* マリンデビモン: ギルティブラック */
+    { 912, DM_TECHNIQUE_1784, 2718, 1 }, /* マメティラモン: マメバイト１０００ */
+    { 912, DM_TECHNIQUE_1785, 2719, 2 }, /* マメティラモン: メットラリアット */
+    { 913, DM_TECHNIQUE_0871, 1805, 1 }, /* マメモン: スマイリーボム */
+    { 914, DM_TECHNIQUE_1786, 2720, 1 }, /* マミーモン: スネークバンデージ */
+    { 914, DM_TECHNIQUE_1787, 2721, 2 }, /* マミーモン: ネクロフォビア */
+    { 915, DM_TECHNIQUE_1111, 2045, 1 }, /* マッハガオガモン: ガオガトルネード */
+    { 915, DM_TECHNIQUE_1112, 2046, 2 }, /* マッハガオガモン: ウィニングナックル */
+    { 915, DM_TECHNIQUE_1113, 2047, 3 }, /* マッハガオガモン: ハウリングキャノン */
+    { 916, DM_TECHNIQUE_1788, 2722, 1 }, /* マタドゥルモン: サウザンドアロー */
+    { 916, DM_TECHNIQUE_1789, 2723, 2 }, /* マタドゥルモン: 武舞独繰 */
+    { 916, DM_TECHNIQUE_1790, 2724, 3 }, /* マタドゥルモン: 蝶絶喇叭蹴（ちょうぜつらっぱしゅう） */
+    { 917, DM_TECHNIQUE_1791, 2725, 1 }, /* マスターティラノモン: マスターファイアー */
+    { 918, DM_TECHNIQUE_1792, 2726, 1 }, /* マジラモン: ヴェーダカ */
+    { 919, DM_TECHNIQUE_1793, 2727, 1 }, /* マクラモン: ラウラヴァ */
+    { 920, DM_TECHNIQUE_1794, 2728, 1 }, /* マーメイモン: チャームプランダー */
+    { 920, DM_TECHNIQUE_1795, 2729, 2 }, /* マーメイモン: ノーザンクロスボンバー */
+    { 921, DM_TECHNIQUE_1796, 2730, 1 }, /* ボルケーモン: ビックバン・ボイス */
+    { 921, DM_TECHNIQUE_1797, 2731, 2 }, /* ボルケーモン: ビックバン・タックル */
+    { 922, DM_TECHNIQUE_1798, 2732, 1 }, /* ホーリーエンジェモン: ヘブンズゲート */
+    { 923, DM_TECHNIQUE_1799, 2733, 1 }, /* ホエーモン: タイダルウェーブ */
+    { 924, DM_TECHNIQUE_1800, 2734, 1 }, /* ベツモン: つっこみパンチ */
+    { 924, DM_TECHNIQUE_1801, 2735, 2 }, /* ベツモン: コールドギャグ */
+    { 925, DM_TECHNIQUE_1802, 2736, 1 }, /* ベーダモン（X抗体）: 悪魔のなげキッス */
+    { 926, DM_TECHNIQUE_1802, 2736, 1 }, /* ベーダモン: 悪魔のなげキッス */
+    { 927, DM_TECHNIQUE_1803, 2737, 1 }, /* ブロッサモン: スパイラルフラワー */
+    { 928, DM_TECHNIQUE_1804, 2738, 1 }, /* フレアモン: 紅蓮獣王波（ぐれんじゅうおうは） */
+    { 928, DM_TECHNIQUE_1805, 2739, 2 }, /* フレアモン: 紅・獅子之舞（くれない・ししのまい） */
+    { 928, DM_TECHNIQUE_1806, 2740, 3 }, /* フレアモン: 清々之咆哮（せいせいのほうこう） */
+    { 929, DM_TECHNIQUE_1807, 2741, 1 }, /* ブルーメラモン: アイスファントム */
+    { 929, DM_TECHNIQUE_1808, 2742, 2 }, /* ブルーメラモン: コールドフレイム */
+    { 930, DM_TECHNIQUE_0988, 1922, 1 }, /* ブラックメガログラウモン: ダブルエッジ */
+    { 930, DM_TECHNIQUE_0989, 1923, 2 }, /* ブラックメガログラウモン: アトミックブラスター */
+    { 931, DM_TECHNIQUE_1809, 2743, 1 }, /* フェレスモン: ブラックスタチュー */
+    { 931, DM_TECHNIQUE_1810, 2744, 2 }, /* フェレスモン: デーモンズシャウト */
+    { 932, DM_TECHNIQUE_1811, 2745, 1 }, /* ファントモン: ソウルチョッパー */
+    { 933, DM_TECHNIQUE_1812, 2746, 1 }, /* ヒポグリフォモン: ヒートウェーブ */
+    { 934, DM_TECHNIQUE_1813, 2747, 1 }, /* ピッコロモン: ビットボム */
+    { 935, DM_TECHNIQUE_1814, 2748, 1 }, /* ビッグマメモン: ビッグスマイリーボマー */
+    { 936, DM_TECHNIQUE_1815, 2749, 1 }, /* ビショップチェスモン: ビショップレーザー */
+    { 936, DM_TECHNIQUE_1816, 2750, 2 }, /* ビショップチェスモン: ビショップクロス */
+    { 936, DM_TECHNIQUE_1817, 2751, 3 }, /* ビショップチェスモン: マジカルスティック */
+    { 937, DM_TECHNIQUE_1818, 2752, 1 }, /* ヒシャリュウモン: 成龍刃（せいりゅうじん） */
+    { 937, DM_TECHNIQUE_1819, 2753, 2 }, /* ヒシャリュウモン: 縦横車（じゅうおうぐるま） */
+    { 938, DM_TECHNIQUE_1820, 2754, 1 }, /* パンプモン: トリックオアトリート */
+    { 939, DM_TECHNIQUE_1821, 2755, 1 }, /* パンダモン: アニマルネイル */
+    { 940, DM_TECHNIQUE_0612, 1546, 1 }, /* パンジャモン: 氷獣拳 */
+    { 941, DM_TECHNIQUE_1822, 2756, 1 }, /* ハンギョモン: ストライクフィッシング */
+    { 942, DM_TECHNIQUE_1823, 2757, 1 }, /* パロットモン: ソニックデストロイヤー */
+    { 942, DM_TECHNIQUE_1344, 2278, 2 }, /* パロットモン: ミョルニルサンダー */
+    { 943, DM_TECHNIQUE_1824, 2758, 1 }, /* バルブモン: マッドポンプ */
+    { 943, DM_TECHNIQUE_1825, 2759, 2 }, /* バルブモン: オクタゴンアタック */
+    { 944, DM_TECHNIQUE_1826, 2760, 1 }, /* バステモン: ヘルタースケルター */
+    { 944, DM_TECHNIQUE_1827, 2761, 2 }, /* バステモン: ヴァンパイアダンス */
+    { 945, DM_TECHNIQUE_1828, 2762, 1 }, /* パジラモン: ヴァフニジュヴァーラ */
+    { 946, DM_TECHNIQUE_1829, 2763, 1 }, /* パイルドラモン: エスグリーマ */
+    { 946, DM_TECHNIQUE_1830, 2764, 2 }, /* パイルドラモン: デスペラードブラスター */
+    { 947, DM_TECHNIQUE_1831, 2765, 1 }, /* ネオデビモン: ギルティクロウ */
+    { 948, DM_TECHNIQUE_1832, 2766, 1 }, /* ナノモン: プラグボム */
+    { 949, DM_TECHNIQUE_1833, 2767, 1 }, /* ナイトモン: ベルセルクソード */
+    { 950, DM_TECHNIQUE_1834, 2768, 1 }, /* ドルグレモン: メタルメテオ */
+    { 950, DM_TECHNIQUE_1835, 2769, 2 }, /* ドルグレモン: ブラッディータワー */
+    { 951, DM_TECHNIQUE_0884, 1818, 1 }, /* トリケラモン: トライホーンアタック */
+    { 952, DM_TECHNIQUE_1836, 2770, 1 }, /* トノサマゲコモン: コブシトーン */
+    { 953, DM_TECHNIQUE_1837, 2771, 1 }, /* ドウモン: 呪禁札（じゅごんさつ） */
+    { 953, DM_TECHNIQUE_1838, 2772, 2 }, /* ドウモン: 鬼門遁甲（きもんとんこう） */
+    { 954, DM_TECHNIQUE_1839, 2773, 1 }, /* デラモン: ロイヤルナッツ */
+    { 955, DM_TECHNIQUE_1840, 2774, 1 }, /* デュラモン: グラスラッシュ */
+    { 955, DM_TECHNIQUE_1841, 2775, 2 }, /* デュラモン: ブリンデッド */
+    { 956, DM_TECHNIQUE_1842, 2776, 1 }, /* デスメラモン: へヴィーメタルファイアー */
+    { 956, DM_TECHNIQUE_1843, 2777, 2 }, /* デスメラモン: ヒートチェーン */
+    { 957, DM_TECHNIQUE_1844, 2778, 1 }, /* デジタマモン: エニグマ */
+    { 957, DM_TECHNIQUE_1845, 2779, 2 }, /* デジタマモン: ナイトメアシンドローム */
+    { 958, DM_TECHNIQUE_1846, 2780, 1 }, /* デクスドルグレモン: ブラッディーケイブ */
+    { 958, DM_TECHNIQUE_1834, 2768, 2 }, /* デクスドルグレモン: メタルメテオ */
+    { 959, DM_TECHNIQUE_1847, 2781, 1 }, /* ディノビーモン: ヘルマスカレード */
+    { 960, DM_TECHNIQUE_1848, 2782, 1 }, /* チョ・ハッカイモン: 強振砲舞乱（きょうしんホームラン） */
+    { 960, DM_TECHNIQUE_1849, 2783, 2 }, /* チョ・ハッカイモン: 打々々魅飲血（だだだみんち） */
+    { 960, DM_TECHNIQUE_1850, 2784, 3 }, /* チョ・ハッカイモン: 豚ノ丸焼（ぶたのまるやき） */
+    { 961, DM_TECHNIQUE_1851, 2785, 1 }, /* チャツラモン: シュヴァボージャナ */
+    { 962, DM_TECHNIQUE_1852, 2786, 1 }, /* チィリンモン: 疾風天翔剣（しっぷうてんしょうけん） */
+    { 962, DM_TECHNIQUE_1853, 2787, 2 }, /* チィリンモン: 迅速の心得（じんそくのこころえ） */
+    { 962, DM_TECHNIQUE_1854, 2788, 3 }, /* チィリンモン: 改心の波動 */
+    { 963, DM_TECHNIQUE_1855, 2789, 1 }, /* タンクドラモン: ストライバ－キャノン */
+    { 963, DM_TECHNIQUE_1856, 2790, 2 }, /* タンクドラモン: ブラストガトリング */
+    { 964, DM_TECHNIQUE_1857, 2791, 1 }, /* ダゴモン: フォービドゥントライデント */
+    { 965, DM_TECHNIQUE_1858, 2792, 1 }, /* タオモン: 梵筆閃（ぼんひつせん） */
+    { 966, DM_TECHNIQUE_1859, 2793, 1 }, /* ダークスーパースターモン: ダークイクスプロージョン */
+    { 966, DM_TECHNIQUE_1860, 2794, 2 }, /* ダークスーパースターモン: シュバルツネーベル */
+    { 966, DM_TECHNIQUE_1861, 2795, 3 }, /* ダークスーパースターモン: ダークホール */
+    { 967, DM_TECHNIQUE_1862, 2796, 1 }, /* セイレーンモン: 第一曲≪ポリフォニー≫ */
+    { 967, DM_TECHNIQUE_1863, 2797, 2 }, /* セイレーンモン: 第二曲≪アリア≫ */
+    { 967, DM_TECHNIQUE_1864, 2798, 3 }, /* セイレーンモン: 第三曲≪カノン≫ */
+    { 968, DM_TECHNIQUE_1865, 2799, 1 }, /* セイバーハックモン: レッジストレイド */
+    { 968, DM_TECHNIQUE_1866, 2800, 2 }, /* セイバーハックモン: メテオフレイム */
+    { 968, DM_TECHNIQUE_1867, 2801, 3 }, /* セイバーハックモン: トライデントセイバー */
+    { 969, DM_TECHNIQUE_1868, 2802, 1 }, /* ズドモン: ハンマースパーク */
+    { 970, DM_TECHNIQUE_1869, 2803, 1 }, /* スコピオモン: ブラックアウト */
+    { 970, DM_TECHNIQUE_1870, 2804, 2 }, /* スコピオモン: ポイズンピアス */
+    { 971, DM_TECHNIQUE_1871, 2805, 1 }, /* スカルバルキモン: グレイブボーン */
+    { 971, DM_TECHNIQUE_1872, 2806, 2 }, /* スカルバルキモン: デッドリーフィアー */
+    { 972, DM_TECHNIQUE_1873, 2807, 1 }, /* スカルサタモン: ネイルボーン */
+    { 973, DM_TECHNIQUE_1874, 2808, 1 }, /* スカルグレイモン: オブリビオンバード */
+    { 974, DM_TECHNIQUE_1875, 2809, 1 }, /* スーパースターモン: ハレースコール */
+    { 975, DM_TECHNIQUE_1876, 2810, 1 }, /* シンドゥーラモン: プーヤヴァーハ */
+    { 976, DM_TECHNIQUE_1877, 2811, 1 }, /* シルフィーモン: トップガン */
+    { 976, DM_TECHNIQUE_1878, 2812, 2 }, /* シルフィーモン: デュアルソニック */
+    { 977, DM_TECHNIQUE_1879, 2813, 1 }, /* ジュレイモン: チェリーボム */
+    { 978, DM_TECHNIQUE_1880, 2814, 1 }, /* シャッコウモン: ニギミタマ */
+    { 978, DM_TECHNIQUE_1881, 2815, 2 }, /* シャッコウモン: アラミタマ */
+    { 979, DM_TECHNIQUE_1882, 2816, 1 }, /* ジャガモン: スマッシュポテト */
+    { 980, DM_TECHNIQUE_1883, 2817, 1 }, /* シャウジンモン: 降妖杖・渦紋の陣（かもんのじん） */
+    { 980, DM_TECHNIQUE_1884, 2818, 2 }, /* シャウジンモン: 降妖杖・滝の陣（たきのじん） */
+    { 980, DM_TECHNIQUE_1885, 2819, 3 }, /* シャウジンモン: 月牙斬（げつがざん） */
+    { 981, DM_TECHNIQUE_1886, 2820, 1 }, /* サンティラモン: クリシュナ */
+    { 982, DM_TECHNIQUE_1887, 2821, 1 }, /* サンゾモン: 杜子春経（とししゅんきょう） */
+    { 982, DM_TECHNIQUE_1888, 2822, 2 }, /* サンゾモン: 胡蝶夢経（こちょうむきょう） */
+    { 982, DM_TECHNIQUE_1889, 2823, 3 }, /* サンゾモン: 無限弾幕心経（むげんだんまくしんきょう） */
+    { 983, DM_TECHNIQUE_1890, 2824, 1 }, /* サゴモン: 渦紋の陣（かもんのじん） */
+    { 983, DM_TECHNIQUE_1891, 2825, 2 }, /* サゴモン: 滝の陣（たきのじん） */
+    { 983, DM_TECHNIQUE_1885, 2819, 3 }, /* サゴモン: 月牙斬（げつがざん） */
+    { 984, DM_TECHNIQUE_0823, 1757, 1 }, /* サイバードラモン: イレイズクロー */
+    { 985, DM_TECHNIQUE_1892, 2826, 1 }, /* ゴクウモン: 秘技・夢現影（ひぎ・むげんえい） */
+    { 985, DM_TECHNIQUE_1893, 2827, 2 }, /* ゴクウモン: 疾風迅雷撃（しっぷうじんらいげき） */
+    { 985, DM_TECHNIQUE_1894, 2828, 3 }, /* ゴクウモン: 超帯電雷光砲（ちょうたいでんらいこうほう） */
+    { 985, DM_TECHNIQUE_1895, 2829, 4 }, /* ゴクウモン: 觔斗雲（きんとうん） */
+    { 986, DM_TECHNIQUE_1020, 1954, 1 }, /* ケルベロモン: インフェルノゲート */
+    { 986, DM_TECHNIQUE_1021, 1955, 2 }, /* ケルベロモン: ヘルファイアー */
+    { 987, DM_TECHNIQUE_1896, 2830, 1 }, /* クンビラモン: クリミシャ */
+    { 988, DM_TECHNIQUE_1897, 2831, 1 }, /* クレシェモン: ルナティックダンス */
+    { 988, DM_TECHNIQUE_1898, 2832, 2 }, /* クレシェモン: アイスアーチェリー */
+    { 988, DM_TECHNIQUE_1899, 2833, 3 }, /* クレシェモン: ダークアーチェリー */
+    { 989, DM_TECHNIQUE_1900, 2834, 1 }, /* グレイドモン: クロスブレード */
+    { 989, DM_TECHNIQUE_1901, 2835, 2 }, /* グレイドモン: グレイドスラッシュ */
+    { 990, DM_TECHNIQUE_1902, 2836, 1 }, /* グラップレオモン: 獅子獣波斬 */
+    { 990, DM_TECHNIQUE_1903, 2837, 2 }, /* グラップレオモン: 旋風タービン蹴り */
+    { 991, DM_TECHNIQUE_1904, 2838, 1 }, /* グラウンドラモン: スクラップレスクロー */
+    { 991, DM_TECHNIQUE_1905, 2839, 2 }, /* グラウンドラモン: メガトンハマークラッシュ */
+    { 991, DM_TECHNIQUE_1906, 2840, 3 }, /* グラウンドラモン: ギガクラック */
+    { 992, DM_TECHNIQUE_1907, 2841, 1 }, /* ギロモン: デッドリーボム */
+    { 993, DM_TECHNIQUE_1908, 2842, 1 }, /* キャプテンフックモン: レイジギガアンカー */
+    { 993, DM_TECHNIQUE_1909, 2843, 2 }, /* キャプテンフックモン: パイレーツパニッシャー */
+    { 993, DM_TECHNIQUE_1910, 2844, 3 }, /* キャプテンフックモン: レッグリボルバー */
+    { 994, DM_TECHNIQUE_1911, 2845, 1 }, /* キャノンビーモン: ニトロスティンガー */
+    { 994, DM_TECHNIQUE_1912, 2846, 2 }, /* キャノンビーモン: スカイロケット∞（ムゲン） */
+    { 995, DM_TECHNIQUE_1913, 2847, 1 }, /* キャッチマメモン: マジックアーム */
+    { 995, DM_TECHNIQUE_1914, 2848, 2 }, /* キャッチマメモン: ミラクルボム */
+    { 996, DM_TECHNIQUE_1915, 2849, 1 }, /* キメラモン: ヒート・バイパー */
+    { 997, DM_TECHNIQUE_1916, 2850, 1 }, /* ギガドラモン: ジェノサイドギア */
+    { 997, DM_TECHNIQUE_1917, 2851, 2 }, /* ギガドラモン: ギルティクロー */
+    { 998, DM_TECHNIQUE_0857, 1791, 1 }, /* ガルダモン: シャドーウィング */
+    { 999, DM_TECHNIQUE_1918, 2852, 1 }, /* カラテンモン: 悟り（さとり） */
+    { 999, DM_TECHNIQUE_1919, 2853, 2 }, /* カラテンモン: 衝撃羽（しょうげきは） */
+    { 1000, DM_TECHNIQUE_1920, 2854, 1 }, /* ガーベモン: ウンチバズーカ */
+    { 1001, DM_TECHNIQUE_1921, 2855, 1 }, /* オロチモン: 酒ブレス */
+    { 1001, DM_TECHNIQUE_1922, 2856, 2 }, /* オロチモン: アメノムラクモ */
+    { 1002, DM_TECHNIQUE_1923, 2857, 1 }, /* オオクワモン: シザーアームズΩ */
+    { 1003, DM_TECHNIQUE_1924, 2858, 1 }, /* エンジェウーモン: ホーリーアロー */
+    { 1003, DM_TECHNIQUE_0841, 1775, 2 }, /* エンジェウーモン: ヘブンズチャーム */
+    { 1004, DM_TECHNIQUE_1925, 2859, 1 }, /* エテモン: ラブ・セレナーデ */
+    { 1004, DM_TECHNIQUE_1926, 2860, 2 }, /* エテモン: ダークスピリッツ */
+    { 1005, DM_TECHNIQUE_1927, 2861, 1 }, /* エクスティラノモン: プリティーアタック */
+    { 1005, DM_TECHNIQUE_1928, 2862, 2 }, /* エクスティラノモン: ブラックマター */
+    { 1006, DM_TECHNIQUE_1929, 2863, 1 }, /* エアロブイドラモン: Ｖウィングブレード */
+    { 1006, DM_TECHNIQUE_1930, 2864, 2 }, /* エアロブイドラモン: ドラゴンインパルス */
+    { 1007, DM_TECHNIQUE_1931, 2865, 1 }, /* ヴォルクドラモン: ヴォルカニックフォーン */
+    { 1007, DM_TECHNIQUE_1932, 2866, 2 }, /* ヴォルクドラモン: サークルオブデス */
+    { 1008, DM_TECHNIQUE_1933, 2867, 1 }, /* ウイングドラモン: ブレイズソニックブレス */
+    { 1008, DM_TECHNIQUE_1934, 2868, 2 }, /* ウイングドラモン: エクスプロードソニックランス */
+    { 1008, DM_TECHNIQUE_1935, 2869, 3 }, /* ウイングドラモン: ウイングブラスト */
+    { 1009, DM_TECHNIQUE_1936, 2870, 1 }, /* ヴィカラーラモン: スーカラ */
+    { 1010, DM_TECHNIQUE_1937, 2871, 1 }, /* ヴァンデモン: ナイトレイド */
+    { 1011, DM_TECHNIQUE_1938, 2872, 1 }, /* ヴァジラモン: ローダ */
+    { 1012, DM_TECHNIQUE_1939, 2873, 1 }, /* インフェルモン: ヘルズグレネード */
+    { 1012, DM_TECHNIQUE_1940, 2874, 2 }, /* インフェルモン: コクーンアタック */
+    { 1013, DM_TECHNIQUE_1941, 2875, 1 }, /* インダラモン: アドームクハ */
+    { 1014, DM_TECHNIQUE_1942, 2876, 1 }, /* インセキモン: コズモフラッシュ */
+    { 1015, DM_TECHNIQUE_1943, 2877, 1 }, /* アンドロモン: ガトリングミサイル */
+    { 1015, DM_TECHNIQUE_1944, 2878, 2 }, /* アンドロモン: スパイラルソード */
+    { 1016, DM_TECHNIQUE_1945, 2879, 1 }, /* アンティラモン（デーヴァ）: アシパトラヴァナ */
+    { 1017, DM_TECHNIQUE_0760, 1694, 1 }, /* アルゴモン: インプリズメント */
+    { 1017, DM_TECHNIQUE_1946, 2880, 2 }, /* アルゴモン: エリミネイションライン */
+    { 1017, DM_TECHNIQUE_1947, 2881, 3 }, /* アルゴモン: ワームフェイズ */
+    { 1018, DM_TECHNIQUE_1948, 2882, 1 }, /* アルケニモン: スパイダースレッド */
+    { 1018, DM_TECHNIQUE_1949, 2883, 2 }, /* アルケニモン: プレデーションスパイダー */
+    { 1019, DM_TECHNIQUE_1950, 2884, 1 }, /* アノマロカリモン（X抗体）: スティンガーサプライズ */
+    { 1020, DM_TECHNIQUE_1950, 2884, 1 }, /* アノマロカリモン: スティンガーサプライズ */
+    { 1021, DM_TECHNIQUE_1951, 2885, 1 }, /* アトラーカブテリモン（赤）: ホーンバスター */
+    { 1022, DM_TECHNIQUE_1951, 2885, 1 }, /* アトラーカブテリモン（青）: ホーンバスター */
+    { 1023, DM_TECHNIQUE_1952, 2886, 1 }, /* アスタモン: ヘルファイア */
+    { 1023, DM_TECHNIQUE_1953, 2887, 2 }, /* アスタモン: マーヴェリック */
+    { 1024, DM_TECHNIQUE_1954, 2888, 1 }, /* アシュラモン: 阿修羅神拳（あしゅらしんけん） */
+    { 1025, DM_TECHNIQUE_1955, 2889, 1 }, /* アイギオテュースモン：ブルー: ペネトレイザー */
+    { 1025, DM_TECHNIQUE_1956, 2890, 2 }, /* アイギオテュースモン：ブルー: ウイングカッター */
+    { 1025, DM_TECHNIQUE_1957, 2891, 3 }, /* アイギオテュースモン：ブルー: パワードイグニッション */
+    { 1026, DM_TECHNIQUE_1958, 2892, 1 }, /* アイギオテュースモン：ダーク: トライアングラー */
+    { 1026, DM_TECHNIQUE_1959, 2893, 2 }, /* アイギオテュースモン：ダーク: プラズマッドネス */
+    { 1026, DM_TECHNIQUE_1960, 2894, 3 }, /* アイギオテュースモン：ダーク: デスディナー */
+    { 1027, DM_TECHNIQUE_1961, 2895, 1 }, /* アイギオテュースモン：グリーン: ブランブルバイト */
+    { 1027, DM_TECHNIQUE_1962, 2896, 2 }, /* アイギオテュースモン：グリーン: プラントゾーンクレイドル */
+    { 1027, DM_TECHNIQUE_1963, 2897, 3 }, /* アイギオテュースモン：グリーン: チャージングストライク */
+    { 1028, DM_TECHNIQUE_1964, 2898, 1 }, /* アイギオテュースモン: ボルトブレイクノックダウン */
+    { 1028, DM_TECHNIQUE_1965, 2899, 2 }, /* アイギオテュースモン: ライトニングパイル */
+    { 1028, DM_TECHNIQUE_1963, 2897, 3 }, /* アイギオテュースモン: チャージングストライク */
+    { 1029, DM_TECHNIQUE_1966, 2900, 1 }, /* ワスプモン: ターボスティンガー */
+    { 1029, DM_TECHNIQUE_1967, 2901, 2 }, /* ワスプモン: ベアバスター */
+    { 1030, DM_TECHNIQUE_1968, 2902, 1 }, /* レッパモン: 駆駆裂空斬（くるくるれっくうざん） */
+    { 1030, DM_TECHNIQUE_1969, 2903, 2 }, /* レッパモン: 獣牙乱撃（じゅうがらんげき） */
+    { 1030, DM_TECHNIQUE_1970, 2904, 3 }, /* レッパモン: 真空カマイタチ */
+    { 1031, DM_TECHNIQUE_1971, 2905, 1 }, /* レッドベジーモン: ハザードブレス */
+    { 1032, DM_TECHNIQUE_1972, 2906, 1 }, /* レキスモン: ムーンナイトボム */
+    { 1032, DM_TECHNIQUE_1973, 2907, 2 }, /* レキスモン: ティアーアロー */
+    { 1032, DM_TECHNIQUE_1974, 2908, 3 }, /* レキスモン: ムーンナイトキック */
+    { 1033, DM_TECHNIQUE_1039, 1973, 1 }, /* レオモン: 獣王拳 */
+    { 1034, DM_TECHNIQUE_1975, 2909, 1 }, /* レアモン: ヘドロ */
+    { 1035, DM_TECHNIQUE_1976, 2910, 1 }, /* ルカモン: シェイキングパルス */
+    { 1036, DM_TECHNIQUE_1977, 2911, 1 }, /* リボルモン: ジャスティスブリット */
+    { 1037, DM_TECHNIQUE_1054, 1988, 1 }, /* ラプタードラモン: クラッシュチャージ */
+    { 1037, DM_TECHNIQUE_1978, 2912, 2 }, /* ラプタードラモン: アンブッシュクランチ */
+    { 1038, DM_TECHNIQUE_1979, 2913, 1 }, /* ライアモン: サンダーオブキング */
+    { 1038, DM_TECHNIQUE_1980, 2914, 2 }, /* ライアモン: クリティカルストライク */
+    { 1039, DM_TECHNIQUE_1981, 2915, 1 }, /* ヨウコモン: 焔玉（ほむらだま） */
+    { 1039, DM_TECHNIQUE_1982, 2916, 2 }, /* ヨウコモン: 邪炎龍（じゃえんりゅう) */
+    { 1040, DM_TECHNIQUE_1122, 2056, 1 }, /* ユニモン: ホーリーショット */
+    { 1041, DM_TECHNIQUE_1983, 2917, 1 }, /* ユキダルモン: 絶対零度パンチ */
+    { 1042, DM_TECHNIQUE_0619, 1553, 1 }, /* モノクロモン: ヴォルケーノストライク */
+    { 1043, DM_TECHNIQUE_1984, 2918, 1 }, /* モジャモン: アイスクルロッド */
+    { 1043, DM_TECHNIQUE_1985, 2919, 2 }, /* モジャモン: 骨骨ブーメラン */
+    { 1044, DM_TECHNIQUE_1986, 2920, 1 }, /* メラモン: バーニングフィスト */
+    { 1045, DM_TECHNIQUE_1987, 2921, 1 }, /* メカノリモン: ジャイロブレイク */
+    { 1045, DM_TECHNIQUE_1988, 2922, 2 }, /* メカノリモン: トゥインクルビーム */
+    { 1046, DM_TECHNIQUE_1989, 2923, 1 }, /* ムシャモン: 切り捨て御免 */
+    { 1047, DM_TECHNIQUE_1990, 2924, 1 }, /* ミノタルモン: ダークサイドクェイク */
+    { 1048, DM_TECHNIQUE_1991, 2925, 1 }, /* ミケモン: 肉球パンチ */
+    { 1048, DM_TECHNIQUE_1992, 2926, 2 }, /* ミケモン: ネコクロー */
+    { 1049, DM_TECHNIQUE_1993, 2927, 1 }, /* ポキュパモン: マッドネスブローチ */
+    { 1049, DM_TECHNIQUE_1994, 2928, 2 }, /* ポキュパモン: スラップアンドリップ */
+    { 1050, DM_TECHNIQUE_1995, 2929, 1 }, /* ペックモン: スパイラルクロー */
+    { 1050, DM_TECHNIQUE_1996, 2930, 2 }, /* ペックモン: 苦無羽（くないばね） */
+    { 1050, DM_TECHNIQUE_1997, 2931, 3 }, /* ペックモン: サウザンドビーク */
+    { 1051, DM_TECHNIQUE_0583, 1517, 1 }, /* ベジーモン: ウンチ投げ */
+    { 1052, DM_TECHNIQUE_1998, 2932, 1 }, /* ブレイドクワガーモン: スパークブレイド */
+    { 1052, DM_TECHNIQUE_1999, 2933, 2 }, /* ブレイドクワガーモン: エアーナイフ */
+    { 1053, DM_TECHNIQUE_2000, 2934, 1 }, /* フレアリザモン: フレイムヒット */
+    { 1053, DM_TECHNIQUE_2001, 2935, 2 }, /* フレアリザモン: フレイムタワー */
+    { 1054, DM_TECHNIQUE_2002, 2936, 1 }, /* ブリンプモン: ヘリウムボム */
+    { 1054, DM_TECHNIQUE_2003, 2937, 2 }, /* ブリンプモン: ツェッペリンエクスプロージョン */
+    { 1055, DM_TECHNIQUE_0464, 1398, 1 }, /* ブラックテイルモン: ネコパンチ */
+    { 1056, DM_TECHNIQUE_0542, 1476, 1 }, /* ブラックグラウモン: プラズマブレイド */
+    { 1056, DM_TECHNIQUE_0543, 1477, 2 }, /* ブラックグラウモン: エキゾーストフレイム */
+    { 1057, DM_TECHNIQUE_2004, 2938, 1 }, /* プラチナスカモン: レアメタルウンチ */
+    { 1058, DM_TECHNIQUE_2005, 2939, 1 }, /* フライモン: デッドリースティング */
+    { 1059, DM_TECHNIQUE_2006, 2940, 1 }, /* フックモン: キャプテンキャノン */
+    { 1060, DM_TECHNIQUE_2007, 2941, 1 }, /* ブギーモン: デスクラッシュ */
+    { 1061, DM_TECHNIQUE_2008, 2942, 1 }, /* フーガモン: イビルハリケーン */
+    { 1062, DM_TECHNIQUE_1448, 2382, 1 }, /* ブイドラモン: ブイブレスアロー */
+    { 1063, DM_TECHNIQUE_2009, 2943, 1 }, /* ファングモン: スナイプスティール */
+    { 1063, DM_TECHNIQUE_2010, 2944, 2 }, /* ファングモン: ブラストコフィン */
+    { 1064, DM_TECHNIQUE_2011, 2945, 1 }, /* ファイラモン: フレイムダイブ */
+    { 1064, DM_TECHNIQUE_2012, 2946, 2 }, /* ファイラモン: ファイラクロー */
+    { 1064, DM_TECHNIQUE_2013, 2947, 3 }, /* ファイラモン: ファイラボム */
+    { 1065, DM_TECHNIQUE_2014, 2948, 1 }, /* ヒョーガモン: スノーパンチ */
+    { 1066, DM_TECHNIQUE_2015, 2949, 1 }, /* ピーターモン: スナイプスティング */
+    { 1066, DM_TECHNIQUE_2016, 2950, 2 }, /* ピーターモン: トゥインクルシュート */
+    { 1066, DM_TECHNIQUE_2017, 2951, 3 }, /* ピーターモン: ミッドナイトファンタジア */
+    { 1067, DM_TECHNIQUE_2018, 2952, 1 }, /* ハヌモン: 怒髪天（どはつてん） */
+    { 1068, DM_TECHNIQUE_2019, 2953, 1 }, /* バケモン: ヘルズハンド */
+    { 1068, DM_TECHNIQUE_2020, 2954, 2 }, /* バケモン: デスチャーム */
+    { 1069, DM_TECHNIQUE_2021, 2955, 1 }, /* バオハックモン: フィフクロス */
+    { 1069, DM_TECHNIQUE_2022, 2956, 2 }, /* バオハックモン: ティーンブレイド */
+    { 1069, DM_TECHNIQUE_2023, 2957, 3 }, /* バオハックモン: バーンフレイム */
+    { 1069, DM_TECHNIQUE_2024, 2958, 4 }, /* バオハックモン: ドラグレスパイカー */
+    { 1070, DM_TECHNIQUE_2025, 2959, 1 }, /* バードラモン: メテオウィング */
+    { 1071, DM_TECHNIQUE_0583, 1517, 1 }, /* ヌメモン: ウンチ投げ */
+    { 1072, DM_TECHNIQUE_2026, 2960, 1 }, /* ニセドリモゲモン: ニセドリルスピン */
+    { 1073, DM_TECHNIQUE_2027, 2961, 1 }, /* ナニモン: ウンチ */
+    { 1073, DM_TECHNIQUE_2028, 2962, 2 }, /* ナニモン: ウンチダンク */
+    { 1074, DM_TECHNIQUE_2029, 2963, 1 }, /* ナイトチェスモン（白）: ビッグダーツ */
+    { 1074, DM_TECHNIQUE_2030, 2964, 2 }, /* ナイトチェスモン（白）: ギャロップホール */
+    { 1074, DM_TECHNIQUE_2031, 2965, 3 }, /* ナイトチェスモン（白）: ナイトランサー */
+    { 1075, DM_TECHNIQUE_2029, 2963, 1 }, /* ナイトチェスモン（黒）: ビッグダーツ */
+    { 1075, DM_TECHNIQUE_2030, 2964, 2 }, /* ナイトチェスモン（黒）: ギャロップホール */
+    { 1075, DM_TECHNIQUE_2031, 2965, 3 }, /* ナイトチェスモン（黒）: ナイトランサー */
+    { 1076, DM_TECHNIQUE_2032, 2966, 1 }, /* ドルガモン: キャノンボール */
+    { 1076, DM_TECHNIQUE_2033, 2967, 2 }, /* ドルガモン: パワーメタル */
+    { 1077, DM_TECHNIQUE_2034, 2968, 1 }, /* ドリモゲモン: ドリルスピン */
+    { 1077, DM_TECHNIQUE_2035, 2969, 2 }, /* ドリモゲモン: クラッシャーボーン */
+    { 1078, DM_TECHNIQUE_2036, 2970, 1 }, /* トブキャットモン: トブトブフェニックス */
+    { 1078, DM_TECHNIQUE_2037, 2971, 2 }, /* トブキャットモン: グルグルファイト */
+    { 1079, DM_TECHNIQUE_2038, 2972, 1 }, /* ドッグモン: ジステン・ハウリング */
+    { 1079, DM_TECHNIQUE_2039, 2973, 2 }, /* ドッグモン: ウルトラかみつく */
+    { 1080, DM_TECHNIQUE_0859, 1793, 1 }, /* トゲモン: チクチクバンバン */
+    { 1081, DM_TECHNIQUE_2040, 2974, 1 }, /* ドクグモン: スティンガー・ポレーション */
+    { 1082, DM_TECHNIQUE_0621, 1555, 1 }, /* ドーベルモン: グラオ・レルム */
+    { 1082, DM_TECHNIQUE_0622, 1556, 2 }, /* ドーベルモン: シュヴァルツ・シュトラール */
+    { 1083, DM_TECHNIQUE_2041, 2975, 1 }, /* トータモン: シェルファランクス */
+    { 1084, DM_TECHNIQUE_2042, 2976, 1 }, /* トゥルイエモン: 巌兎烈斗（ガントレット） */
+    { 1085, DM_TECHNIQUE_2043, 2977, 1 }, /* デルタモン: トリプレックスフォース */
+    { 1085, DM_TECHNIQUE_2044, 2978, 2 }, /* デルタモン: スカルファング */
+    { 1086, DM_TECHNIQUE_2045, 2979, 1 }, /* デビモン: デスクロウ */
+    { 1087, DM_TECHNIQUE_2046, 2980, 1 }, /* デビドラモン: クリムゾンネイル */
+    { 1088, DM_TECHNIQUE_2032, 2966, 1 }, /* デクスドルガモン: キャノンボール */
+    { 1088, DM_TECHNIQUE_2047, 2981, 2 }, /* デクスドルガモン: メタルキャスト */
+    { 1089, DM_TECHNIQUE_0464, 1398, 1 }, /* テイルモン: ネコパンチ */
+    { 1089, DM_TECHNIQUE_2048, 2982, 2 }, /* テイルモン: キャッツ・アイ */
+    { 1090, DM_TECHNIQUE_2049, 2983, 1 }, /* ティラノモン: ファイアーブレス */
+    { 1091, DM_TECHNIQUE_2050, 2984, 1 }, /* ディアトリモン: メガダッシュインパクト */
+    { 1091, DM_TECHNIQUE_2051, 2985, 2 }, /* ディアトリモン: デストラクションロアー */
+    { 1092, DM_TECHNIQUE_2052, 2986, 1 }, /* ツチダルモン: グレートウェイト */
+    { 1093, DM_TECHNIQUE_2053, 2987, 1 }, /* タンクモン: ハイパーキャノン */
+    { 1094, DM_TECHNIQUE_2054, 2988, 1 }, /* ダルクモン: ラ・ピュセル */
+    { 1094, DM_TECHNIQUE_2055, 2989, 2 }, /* ダルクモン: バテーム・デ・アムール */
+    { 1095, DM_TECHNIQUE_2056, 2990, 1 }, /* タスクモン: パンツァーナックル */
+    { 1096, DM_TECHNIQUE_2057, 2991, 1 }, /* ターゲットモン: 電撃ハグハグスニーカー */
+    { 1096, DM_TECHNIQUE_2058, 2992, 2 }, /* ターゲットモン: トンガリヘッド */
+    { 1096, DM_TECHNIQUE_2059, 2993, 3 }, /* ターゲットモン: アンニャセレナーデ */
+    { 1097, DM_TECHNIQUE_2060, 2994, 1 }, /* ダークリザモン: ドレッドファイア */
+    { 1098, DM_TECHNIQUE_0941, 1875, 1 }, /* ダークティラノモン: ファイアーブラスト */
+    { 1099, DM_TECHNIQUE_2061, 2995, 1 }, /* ソーサリモン: クリスタルクラウド */
+    { 1100, DM_TECHNIQUE_2062, 2996, 1 }, /* ソウルモン: ネクロマジック */
+    { 1101, DM_TECHNIQUE_2063, 2997, 1 }, /* セーバードラモン: ブラックセーバー */
+    { 1102, DM_TECHNIQUE_2064, 2998, 1 }, /* ズバイガーモン: Road T(w)o Decade */
+    { 1102, DM_TECHNIQUE_2065, 2999, 2 }, /* ズバイガーモン: ヴァンシオン */
+    { 1103, DM_TECHNIQUE_2066, 3000, 1 }, /* スナイモン: シャドウ・シックル */
+    { 1104, DM_TECHNIQUE_2067, 3001, 1 }, /* ストライクドラモン: ストライクファング */
+    { 1105, DM_TECHNIQUE_2068, 3002, 1 }, /* スティングモン: スパイキングフィニッシュ */
+    { 1106, DM_TECHNIQUE_0540, 1474, 1 }, /* スターモン: メテオスコール */
+    { 1107, DM_TECHNIQUE_2027, 2961, 1 }, /* スカモン: ウンチ */
+    { 1108, DM_TECHNIQUE_2069, 3003, 1 }, /* ジャングルモジャモン: ジャングルパンチ */
+    { 1109, DM_TECHNIQUE_2070, 3004, 1 }, /* シマユニモン: ラスターショット */
+    { 1110, DM_TECHNIQUE_2071, 3005, 1 }, /* シスタモン ノワール: ミッキーバレット */
+    { 1110, DM_TECHNIQUE_2072, 3006, 2 }, /* シスタモン ノワール: ブレスファイア */
+    { 1110, DM_TECHNIQUE_2073, 3007, 3 }, /* シスタモン ノワール: グランドシスタークルス */
+    { 1111, DM_TECHNIQUE_0758, 1692, 1 }, /* ジオグレイモン: メガフレイム */
+    { 1111, DM_TECHNIQUE_0400, 1334, 2 }, /* ジオグレイモン: メガバースト */
+    { 1111, DM_TECHNIQUE_2074, 3008, 3 }, /* ジオグレイモン: ホーンインパルス */
+    { 1112, DM_TECHNIQUE_1231, 2165, 1 }, /* シェルモン: ハイドロプレッシャー */
+    { 1113, DM_TECHNIQUE_2075, 3009, 1 }, /* シェイドモン: フリーデスフォール */
+    { 1113, DM_TECHNIQUE_2076, 3010, 2 }, /* シェイドモン: キルミー */
+    { 1114, DM_TECHNIQUE_2077, 3011, 1 }, /* シールズドラモン: デスビハインド */
+    { 1114, DM_TECHNIQUE_2078, 3012, 2 }, /* シールズドラモン: スカウターモノアイ */
+    { 1115, DM_TECHNIQUE_2079, 3013, 1 }, /* シーラモン: ヴァリアブルダーツ */
+    { 1116, DM_TECHNIQUE_0892, 1826, 1 }, /* シードラモン: アイスアロー */
+    { 1117, DM_TECHNIQUE_0833, 1767, 1 }, /* シーサモン: 石敢当（せっかんとう） */
+    { 1117, DM_TECHNIQUE_0834, 1768, 2 }, /* シーサモン: ティーダ・イヤ */
+    { 1118, DM_TECHNIQUE_2080, 3014, 1 }, /* サンフラウモン: サンシャインビーム */
+    { 1118, DM_TECHNIQUE_2081, 3015, 2 }, /* サンフラウモン: スマイリービンタ */
+    { 1118, DM_TECHNIQUE_2082, 3016, 3 }, /* サンフラウモン: カクタステイル */
+    { 1119, DM_TECHNIQUE_2083, 3017, 1 }, /* サンダーボールモン: サンダーボール */
+    { 1120, DM_TECHNIQUE_2084, 3018, 1 }, /* サングルゥモン: スティッカーブレイド */
+    { 1120, DM_TECHNIQUE_2085, 3019, 2 }, /* サングルゥモン: ブラックマインド */
+    { 1121, DM_TECHNIQUE_2086, 3020, 1 }, /* ザッソーモン: スクイーズバイン */
+    { 1122, DM_TECHNIQUE_2087, 3021, 1 }, /* サイクロモン: ハイパーヒート */
+    { 1123, DM_TECHNIQUE_2088, 3022, 1 }, /* ゴリモン: パワーアタック */
+    { 1124, DM_TECHNIQUE_2089, 3023, 1 }, /* ゴキモン: ドリームダスト */
+    { 1125, DM_TECHNIQUE_2090, 3024, 1 }, /* ゴーレモン: カース・クリムゾン */
+    { 1125, DM_TECHNIQUE_2091, 3025, 2 }, /* ゴーレモン: ゴーレムパンチ */
+    { 1126, DM_TECHNIQUE_2092, 3026, 1 }, /* コカトリモン: ペトラファイアー */
+    { 1127, DM_TECHNIQUE_2093, 3027, 1 }, /* コウガモン: コウガ流影分身 */
+    { 1128, DM_TECHNIQUE_2094, 3028, 1 }, /* コアドラモン（緑）: グリーンフレアブレス */
+    { 1128, DM_TECHNIQUE_2095, 3029, 2 }, /* コアドラモン（緑）: ストライクボマー */
+    { 1128, DM_TECHNIQUE_2096, 3030, 3 }, /* コアドラモン（緑）: ジ・シュルネン-Ⅱ */
+    { 1129, DM_TECHNIQUE_2097, 3031, 1 }, /* コアドラモン（青）: ブルーフレアブレス */
+    { 1129, DM_TECHNIQUE_2095, 3029, 2 }, /* コアドラモン（青）: ストライクボマー */
+    { 1129, DM_TECHNIQUE_2096, 3030, 3 }, /* コアドラモン（青）: ジ・シュルネン-Ⅱ */
+    { 1130, DM_TECHNIQUE_2098, 3032, 1 }, /* ケンタルモン: ハンティングキャノン */
+    { 1131, DM_TECHNIQUE_2099, 3033, 1 }, /* ゲレモン: ハイパースメル */
+    { 1132, DM_TECHNIQUE_2100, 3034, 1 }, /* ゲソモン: デビルバッシング */
+    { 1132, DM_TECHNIQUE_0623, 1557, 2 }, /* ゲソモン: デッドリーシェード */
+    { 1133, DM_TECHNIQUE_0894, 1828, 1 }, /* クワガーモン: シザーアームズ */
+    { 1134, DM_TECHNIQUE_2101, 3035, 1 }, /* クロックモン: クロノブレーカー */
+    { 1135, DM_TECHNIQUE_0758, 1692, 1 }, /* グレイモン: メガフレイム */
+    { 1136, DM_TECHNIQUE_2102, 3036, 1 }, /* グルルモン: カオスファイアー */
+    { 1137, DM_TECHNIQUE_2103, 3037, 1 }, /* グリズモン: 当身返し */
+    { 1138, DM_TECHNIQUE_2104, 3038, 1 }, /* クリサリモン: データクラッシャー */
+    { 1139, DM_TECHNIQUE_0542, 1476, 1 }, /* グラウモン: プラズマブレイド */
+    { 1139, DM_TECHNIQUE_0543, 1477, 2 }, /* グラウモン: エキゾーストフレイム */
+    { 1140, DM_TECHNIQUE_2105, 3039, 1 }, /* ギンリュウモン: 棒陣破（ぼうじんは） */
+    { 1140, DM_TECHNIQUE_2106, 3040, 2 }, /* ギンリュウモン: 徹甲刃（てっこうじん） */
+    { 1141, DM_TECHNIQUE_2107, 3041, 1 }, /* ギンカクモン: 鬼炎弾（きえんだん） */
+    { 1141, DM_TECHNIQUE_2108, 3042, 2 }, /* ギンカクモン: 逆撃炎弾（ぎゃくげきえんだん） */
+    { 1141, DM_TECHNIQUE_2109, 3043, 3 }, /* ギンカクモン: 銀角突貫（ぎんかくとっかん） */
+    { 1141, DM_TECHNIQUE_2110, 3044, 4 }, /* ギンカクモン: 金銀雷鳴撃（きんぎんらいめいげき） */
+    { 1142, DM_TECHNIQUE_2111, 3045, 1 }, /* キンカクモン: 鬼爆葬（きばくそう） */
+    { 1142, DM_TECHNIQUE_2112, 3046, 2 }, /* キンカクモン: 怒気怒鬼怒灸（ドキドキドキューン） */
+    { 1142, DM_TECHNIQUE_2113, 3047, 3 }, /* キンカクモン: 雷光鬼蹴（らいこうきしゅう） */
+    { 1143, DM_TECHNIQUE_2114, 3048, 1 }, /* キュウビモン: 鬼火玉（おにびだま） */
+    { 1143, DM_TECHNIQUE_2115, 3049, 2 }, /* キュウビモン: 狐炎龍（こえんりゅう） */
+    { 1144, DM_TECHNIQUE_2116, 3050, 1 }, /* キウイモン: リトルペッカ－ */
+    { 1145, DM_TECHNIQUE_2117, 3051, 1 }, /* ガワッパモン: ＤＪシューター */
+    { 1145, DM_TECHNIQUE_2118, 3052, 2 }, /* ガワッパモン: ガワッパンチ */
+    { 1145, DM_TECHNIQUE_2119, 3053, 3 }, /* ガワッパモン: ガワッパラッパー */
+    { 1146, DM_TECHNIQUE_0757, 1691, 1 }, /* ガルルモン: フォックスファイアー */
+    { 1147, DM_TECHNIQUE_0473, 1407, 1 }, /* ガルゴモン: ガトリングアーム */
+    { 1147, DM_TECHNIQUE_0474, 1408, 2 }, /* ガルゴモン: ダムダムアッパー */
+    { 1148, DM_TECHNIQUE_2120, 3054, 1 }, /* カラツキヌメモン: シェルズアタック */
+    { 1149, DM_TECHNIQUE_2121, 3055, 1 }, /* カブテリモン: メガブラスター */
+    { 1150, DM_TECHNIQUE_0526, 1460, 1 }, /* ガードロモン: ディストラクショングレネード */
+    { 1151, DM_TECHNIQUE_1114, 2048, 1 }, /* ガオガモン: ダッシュダブルクロー */
+    { 1151, DM_TECHNIQUE_1115, 2049, 2 }, /* ガオガモン: ガオガハウンド */
+    { 1151, DM_TECHNIQUE_1116, 2050, 3 }, /* ガオガモン: スパイラルブロー */
+    { 1152, DM_TECHNIQUE_2122, 3056, 1 }, /* オメカモン: ラクガキロケット */
+    { 1152, DM_TECHNIQUE_2123, 3057, 2 }, /* オメカモン: オメカキック */
+    { 1153, DM_TECHNIQUE_2124, 3058, 1 }, /* オクタモン: 海鳴墨銃（かいめいぼくじゅう） */
+    { 1154, DM_TECHNIQUE_0907, 1841, 1 }, /* オーガモン: 覇王拳 */
+    { 1155, DM_TECHNIQUE_2125, 3059, 1 }, /* エンジェモン: ヘブンズナックル */
+    { 1156, DM_TECHNIQUE_2126, 3060, 1 }, /* エビドラモン: ツインネプチューン */
+    { 1157, DM_TECHNIQUE_2127, 3061, 1 }, /* エクスブイモン: ストロングクランチ */
+    { 1157, DM_TECHNIQUE_2128, 3062, 2 }, /* エクスブイモン: エクスレイザー */
+    { 1158, DM_TECHNIQUE_2129, 3063, 1 }, /* エアドラモン: スピニングニードル */
+    { 1159, DM_TECHNIQUE_2130, 3064, 1 }, /* ウッドモン: ブランチドレイン */
+    { 1160, DM_TECHNIQUE_2131, 3065, 1 }, /* ウェンディモン: デストロイドボイス */
+    { 1160, DM_TECHNIQUE_2132, 3066, 2 }, /* ウェンディモン: クラブアーム */
+    { 1161, DM_TECHNIQUE_2133, 3067, 1 }, /* ウィッチモン: バルルーナゲイル */
+    { 1161, DM_TECHNIQUE_2134, 3068, 2 }, /* ウィッチモン: アクエリープレッシャー */
+    { 1162, DM_TECHNIQUE_0831, 1765, 1 }, /* ウィザーモン: サンダークラウド */
+    { 1163, DM_TECHNIQUE_2135, 3069, 1 }, /* イビルモン: ナイトメアショック */
+    { 1164, DM_TECHNIQUE_2136, 3070, 1 }, /* イッカクモン: ハープーンバルカン */
+    { 1165, DM_TECHNIQUE_2137, 3071, 1 }, /* イガモン: イガ流手裏剣投げ */
+    { 1166, DM_TECHNIQUE_2138, 3072, 1 }, /* アンキロモン: メガトンプレス */
+    { 1166, DM_TECHNIQUE_2139, 3073, 2 }, /* アンキロモン: テイルハンマー */
+    { 1167, DM_TECHNIQUE_2140, 3074, 1 }, /* アクィラモン: グライドホーン */
+    { 1167, DM_TECHNIQUE_2141, 3075, 2 }, /* アクィラモン: ブラストレーザー */
+    { 1168, DM_TECHNIQUE_2142, 3076, 1 }, /* アカトリモン: スカーレッドアイ */
+    { 1169, DM_TECHNIQUE_2143, 3077, 1 }, /* アイスモン: アイスボールボム */
+    { 1170, DM_TECHNIQUE_2144, 3078, 1 }, /* アイギオモン: アトラクトエコー */
+    { 1170, DM_TECHNIQUE_2145, 3079, 2 }, /* アイギオモン: アイアントラスト */
+    { 1170, DM_TECHNIQUE_2146, 3080, 3 }, /* アイギオモン: スタンビートブロウ */
+    { 1171, DM_TECHNIQUE_2147, 3081, 1 }, /* ワームモン: ネバネバネット */
+    { 1171, DM_TECHNIQUE_2148, 3082, 2 }, /* ワームモン: シルクスレッド */
+    { 1172, DM_TECHNIQUE_0784, 1718, 1 }, /* ロップモン: プチツイスター */
+    { 1172, DM_TECHNIQUE_2149, 3083, 2 }, /* ロップモン: ダブルタイフーン */
+    { 1172, DM_TECHNIQUE_0863, 1797, 3 }, /* ロップモン: ブレイジングアイス */
+    { 1173, DM_TECHNIQUE_2150, 3084, 1 }, /* レナモン: 狐変虚（こへんきょ） */
+    { 1173, DM_TECHNIQUE_2151, 3085, 2 }, /* レナモン: 狐葉楔（こようせつ） */
+    { 1174, DM_TECHNIQUE_2152, 3086, 1 }, /* レオルモン: レオクロー */
+    { 1174, DM_TECHNIQUE_2153, 3087, 2 }, /* レオルモン: クリティカルバイト */
+    { 1175, DM_TECHNIQUE_2154, 3088, 1 }, /* ルナモン: ルナクロー */
+    { 1175, DM_TECHNIQUE_2155, 3089, 2 }, /* ルナモン: ティアーシュート */
+    { 1175, DM_TECHNIQUE_2156, 3090, 3 }, /* ルナモン: ロップイヤーリップル */
+    { 1176, DM_TECHNIQUE_2157, 3091, 1 }, /* ルーチェモン: グランドクロス */
+    { 1177, DM_TECHNIQUE_2158, 3092, 1 }, /* リュウダモン: 兜返し */
+    { 1177, DM_TECHNIQUE_2159, 3093, 2 }, /* リュウダモン: 居合刃（いあいじん） */
+    { 1178, DM_TECHNIQUE_2160, 3094, 1 }, /* ララモン: ナッツシュート */
+    { 1178, DM_TECHNIQUE_2161, 3095, 2 }, /* ララモン: ララスクリュー */
+    { 1178, DM_TECHNIQUE_2162, 3096, 3 }, /* ララモン: シング・ア・ソング */
+    { 1179, DM_TECHNIQUE_2163, 3097, 1 }, /* ラブラモン: キュアーリキュール */
+    { 1179, DM_TECHNIQUE_2164, 3098, 2 }, /* ラブラモン: レトリバーク */
+    { 1180, DM_TECHNIQUE_2165, 3099, 1 }, /* ユキアグモン: リトルブリザード */
+    { 1181, DM_TECHNIQUE_2166, 3100, 1 }, /* モノドラモン: クラックバイト */
+    { 1182, DM_TECHNIQUE_2167, 3101, 1 }, /* ムーチョモン: トロピカルビーク */
+    { 1183, DM_TECHNIQUE_2168, 3102, 1 }, /* マッシュモン: ポイズン・ス・マッシュ */
+    { 1184, DM_TECHNIQUE_2169, 3103, 1 }, /* ボコモン: 逃げ足猛ダッシュ */
+    { 1185, DM_TECHNIQUE_2170, 3104, 1 }, /* ポーンチェスモン（白）: ポーンスピアー */
+    { 1185, DM_TECHNIQUE_2171, 3105, 2 }, /* ポーンチェスモン（白）: ポーンバックラー */
+    { 1185, DM_TECHNIQUE_2172, 3106, 3 }, /* ポーンチェスモン（白）: ピラミッドフォーメーション */
+    { 1186, DM_TECHNIQUE_2170, 3104, 1 }, /* ポーンチェスモン（黒）: ポーンスピアー */
+    { 1186, DM_TECHNIQUE_2171, 3105, 2 }, /* ポーンチェスモン（黒）: ポーンバックラー */
+    { 1186, DM_TECHNIQUE_2172, 3106, 3 }, /* ポーンチェスモン（黒）: ピラミッドフォーメーション */
+    { 1187, DM_TECHNIQUE_2173, 3107, 1 }, /* ホークモン: ビークペッカー */
+    { 1187, DM_TECHNIQUE_2174, 3108, 2 }, /* ホークモン: フェザースラッシュ */
+    { 1188, DM_TECHNIQUE_2175, 3109, 1 }, /* ペンモン: 無限ビンタ */
+    { 1189, DM_TECHNIQUE_0724, 1658, 1 }, /* ベタモン: 電撃ビリリン */
+    { 1190, DM_TECHNIQUE_2176, 3110, 1 }, /* ベアモン: 小熊正拳突き */
+    { 1191, DM_TECHNIQUE_0933, 1867, 1 }, /* プロットモン: パピーハウリング */
+    { 1192, DM_TECHNIQUE_2177, 3111, 1 }, /* フローラモン: アレルギーシャワー */
+    { 1193, DM_TECHNIQUE_2178, 3112, 1 }, /* ブイモン: ブンブンパンチ */
+    { 1193, DM_TECHNIQUE_2179, 3113, 2 }, /* ブイモン: ブイモンヘッド */
+    { 1194, DM_TECHNIQUE_2180, 3114, 1 }, /* ファンビーモン: ギアスティンガー */
+    { 1194, DM_TECHNIQUE_2181, 3115, 2 }, /* ファンビーモン: ８８コール（ハチハチコール） */
+    { 1195, DM_TECHNIQUE_1117, 2051, 1 }, /* ファルコモン: スクラッチスマッシュ */
+    { 1195, DM_TECHNIQUE_2182, 3116, 2 }, /* ファルコモン: ファルコラッシュ */
+    { 1196, DM_TECHNIQUE_2183, 3117, 1 }, /* ファスコモン: エビルスノア */
+    { 1196, DM_TECHNIQUE_2184, 3118, 2 }, /* ファスコモン: ユーカリクロー */
+    { 1197, DM_TECHNIQUE_2185, 3119, 1 }, /* ピヨモン: マジカルファイアー */
+    { 1198, DM_TECHNIQUE_2186, 3120, 1 }, /* ピコデビモン: ピコダーツ */
+    { 1199, DM_TECHNIQUE_0867, 1801, 1 }, /* パルモン: ポイズンアイビー */
+    { 1200, DM_TECHNIQUE_2187, 3121, 1 }, /* ハックモン: フィフスラッシュ */
+    { 1200, DM_TECHNIQUE_2188, 3122, 2 }, /* ハックモン: ティーンラム */
+    { 1200, DM_TECHNIQUE_1040, 1974, 3 }, /* ハックモン: ベビーフレイム */
+    { 1201, DM_TECHNIQUE_2189, 3123, 1 }, /* パタモン: エアショット */
+    { 1201, DM_TECHNIQUE_2190, 3124, 2 }, /* パタモン: ハネビンタ */
+    { 1202, DM_TECHNIQUE_0545, 1479, 1 }, /* ハグルモン: ダークネスギア */
+    { 1203, DM_TECHNIQUE_1845, 2779, 1 }, /* バクモン: ナイトメアシンドローム */
+    { 1204, DM_TECHNIQUE_2191, 3125, 1 }, /* ネーモン: 逃げ足ダッシュ */
+    { 1204, DM_TECHNIQUE_2192, 3126, 2 }, /* ネーモン: たぬきねいり */
+    { 1205, DM_TECHNIQUE_2193, 3127, 1 }, /* ニセアグモン博士: ニセハカセボウ */
+    { 1205, DM_TECHNIQUE_2194, 3128, 2 }, /* ニセアグモン博士: ニセハカセボー */
+    { 1206, DM_TECHNIQUE_2195, 3129, 1 }, /* ドルモン: ダッシュメタル */
+    { 1206, DM_TECHNIQUE_2196, 3130, 2 }, /* ドルモン: メタルキャノン */
+    { 1207, DM_TECHNIQUE_2197, 3131, 1 }, /* ドラコモン: ベビーブレス */
+    { 1207, DM_TECHNIQUE_2198, 3132, 2 }, /* ドラコモン: テイルスマッシュ */
+    { 1207, DM_TECHNIQUE_1026, 1960, 3 }, /* ドラコモン: ジ・シュルネン */
+    { 1208, DM_TECHNIQUE_2199, 3133, 1 }, /* ドラクモン: アイオブナイトメア */
+    { 1208, DM_TECHNIQUE_2200, 3134, 2 }, /* ドラクモン: アンデッドファング */
+    { 1209, DM_TECHNIQUE_1060, 1994, 1 }, /* トイアグモン: トイフレイム */
+    { 1210, DM_TECHNIQUE_2201, 3135, 1 }, /* テントモン: プチサンダー */
+    { 1211, DM_TECHNIQUE_0784, 1718, 1 }, /* テリアモン: プチツイスター */
+    { 1211, DM_TECHNIQUE_0866, 1800, 2 }, /* テリアモン: ブレイジングファイア */
+    { 1211, DM_TECHNIQUE_2149, 3083, 3 }, /* テリアモン: ダブルタイフーン */
+    { 1212, DM_TECHNIQUE_2202, 3136, 1 }, /* ティンカーモン: スピードナイトメア */
+    { 1212, DM_TECHNIQUE_2203, 3137, 2 }, /* ティンカーモン: ナイトメアパンデミック */
+    { 1212, DM_TECHNIQUE_2204, 3138, 3 }, /* ティンカーモン: フェアリーパウダー */
+    { 1212, DM_TECHNIQUE_2205, 3139, 4 }, /* ティンカーモン: ピーターモンシンドローム */
+    { 1213, DM_TECHNIQUE_2206, 3140, 1 }, /* ツカイモン: バッドメッセージ */
+    { 1214, DM_TECHNIQUE_2207, 3141, 1 }, /* チューモン: チーズ爆弾（ボム） */
+    { 1215, DM_TECHNIQUE_2208, 3142, 1 }, /* ソーラーモン: シャイニーリング */
+    { 1216, DM_TECHNIQUE_2209, 3143, 1 }, /* ズバモン: トゥエンティダイブ */
+    { 1217, DM_TECHNIQUE_2210, 3144, 1 }, /* スノーゴブリモン: スノーゴブボルト */
+    { 1218, DM_TECHNIQUE_2211, 3145, 1 }, /* スイムモン: スラッシュフィン */
+    { 1218, DM_TECHNIQUE_2212, 3146, 2 }, /* スイムモン: ブラインピストル */
+    { 1219, DM_TECHNIQUE_0865, 1799, 1 }, /* シャコモン: ブラックパール */
+    { 1219, DM_TECHNIQUE_2213, 3147, 2 }, /* シャコモン: ウォータースクリュー */
+    { 1220, DM_TECHNIQUE_2214, 3148, 1 }, /* シャーマモン: シャーマハンマー */
+    { 1221, DM_TECHNIQUE_2215, 3149, 1 }, /* シスタモン ブラン: ディバインピース */
+    { 1221, DM_TECHNIQUE_2216, 3150, 2 }, /* シスタモン ブラン: プロテクトウェーブ */
+    { 1221, DM_TECHNIQUE_2073, 3007, 3 }, /* シスタモン ブラン: グランドシスタークルス */
+    { 1222, DM_TECHNIQUE_2217, 3151, 1 }, /* サイケモン: カワフルスパーク */
+    { 1222, DM_TECHNIQUE_2218, 3152, 2 }, /* サイケモン: ハデハデホーン */
+    { 1222, DM_TECHNIQUE_2219, 3153, 3 }, /* サイケモン: 原色の舞い */
+    { 1223, DM_TECHNIQUE_2220, 3154, 1 }, /* コロナモン: コロナックル */
+    { 1223, DM_TECHNIQUE_2221, 3155, 2 }, /* コロナモン: コロナフレイム */
+    { 1223, DM_TECHNIQUE_2222, 3156, 3 }, /* コロナモン: プチプロミネンス */
+    { 1224, DM_TECHNIQUE_2223, 3157, 1 }, /* コマンドラモン: Ｍ１６アサシン */
+    { 1224, DM_TECHNIQUE_2224, 3158, 2 }, /* コマンドラモン: ＤＣＤボム */
+    { 1225, DM_TECHNIQUE_0898, 1832, 1 }, /* ゴマモン: マーチングフィッシィーズ */
+    { 1226, DM_TECHNIQUE_2225, 3159, 1 }, /* ゴブリモン: ゴブリストライク */
+    { 1227, DM_TECHNIQUE_2226, 3160, 1 }, /* コテモン: サンダーコテ */
+    { 1227, DM_TECHNIQUE_2227, 3161, 2 }, /* コテモン: ファイヤーメン */
+    { 1228, DM_TECHNIQUE_0625, 1559, 1 }, /* ゴツモン: アングリーロック */
+    { 1229, DM_TECHNIQUE_0899, 1833, 1 }, /* コクワモン: シザーアームズミニ */
+    { 1230, DM_TECHNIQUE_2228, 3162, 1 }, /* コカブテリモン: スクープスマッシュ */
+    { 1230, DM_TECHNIQUE_2229, 3163, 2 }, /* コカブテリモン: ビートルラリアット */
+    { 1231, DM_TECHNIQUE_2230, 3164, 1 }, /* コエモン: ミスチバスフープ */
+    { 1231, DM_TECHNIQUE_2231, 3165, 2 }, /* コエモン: ベビースリング */
+    { 1232, DM_TECHNIQUE_0805, 1739, 1 }, /* ケラモン: クレイジーギグル */
+    { 1233, DM_TECHNIQUE_2232, 3166, 1 }, /* クネモン: エレクトリックスレッド */
+    { 1234, DM_TECHNIQUE_1120, 2054, 1 }, /* クダモン: 弾丸旋風（だんがんせんぷう） */
+    { 1234, DM_TECHNIQUE_1121, 2055, 2 }, /* クダモン: 絶光衝（ぜっこうしょう） */
+    { 1235, DM_TECHNIQUE_0629, 1563, 1 }, /* ギルモン: ロックブレイカー */
+    { 1235, DM_TECHNIQUE_0630, 1564, 2 }, /* ギルモン: ファイアーボール */
+    { 1236, DM_TECHNIQUE_2233, 3167, 1 }, /* キャンドモン: ボンファイア */
+    { 1237, DM_TECHNIQUE_2234, 3168, 1 }, /* ギザモン: スパイラルエッジ */
+    { 1238, DM_TECHNIQUE_2235, 3169, 1 }, /* カメモン: ポインタ・アロー */
+    { 1238, DM_TECHNIQUE_2236, 3170, 2 }, /* カメモン: メットタックル */
+    { 1238, DM_TECHNIQUE_2237, 3171, 3 }, /* カメモン: コーラガード */
+    { 1239, DM_TECHNIQUE_1027, 1961, 1 }, /* ガブモン: プチファイアー */
+    { 1240, DM_TECHNIQUE_0627, 1561, 1 }, /* ガニモン: シザーズエクスキューション */
+    { 1241, DM_TECHNIQUE_0725, 1659, 1 }, /* ガジモン: パラライズブレス */
+    { 1242, DM_TECHNIQUE_2238, 3172, 1 }, /* ガオモン: ローリングアッパー */
+    { 1242, DM_TECHNIQUE_2239, 3173, 2 }, /* ガオモン: ダブルバックハンド */
+    { 1242, DM_TECHNIQUE_2240, 3174, 3 }, /* ガオモン: ガオラッシュ */
+    { 1243, DM_TECHNIQUE_2241, 3175, 1 }, /* オタマモン（赤）: ボイルドバブル */
+    { 1244, DM_TECHNIQUE_0935, 1869, 1 }, /* オタマモン: ララバイバブル */
+    { 1245, DM_TECHNIQUE_2242, 3176, 1 }, /* エレキモン（紫）: ジャミングサンダー */
+    { 1246, DM_TECHNIQUE_2243, 3177, 1 }, /* エレキモン: スパークリングサンダー */
+    { 1247, DM_TECHNIQUE_2244, 3178, 1 }, /* エビバーガモン: フレッシュシュリンプ */
+    { 1247, DM_TECHNIQUE_2245, 3179, 2 }, /* エビバーガモン: ホットカツレツ */
+    { 1248, DM_TECHNIQUE_2246, 3180, 1 }, /* インプモン: サモン */
+    { 1248, DM_TECHNIQUE_0939, 1873, 2 }, /* インプモン: ナイト・オブ・ファイアー */
+    { 1249, DM_TECHNIQUE_2247, 3181, 1 }, /* アルラウモン: ネメシスアイビー */
+    { 1250, DM_TECHNIQUE_2248, 3182, 1 }, /* アルマジモン: スクラッチビート */
+    { 1250, DM_TECHNIQUE_2249, 3183, 2 }, /* アルマジモン: ローリングストーン */
+    { 1251, DM_TECHNIQUE_2250, 3184, 1 }, /* アルカディモン: ソウルアブソープション */
+    { 1251, DM_TECHNIQUE_2251, 3185, 2 }, /* アルカディモン: イレイズシックル */
+    { 1252, DM_TECHNIQUE_2252, 3186, 1 }, /* アグモン博士: ハカセボウ */
+    { 1252, DM_TECHNIQUE_2253, 3187, 2 }, /* アグモン博士: ハカセボー */
+    { 1253, DM_TECHNIQUE_1040, 1974, 1 }, /* アグモン（黒）: ベビーフレイム */
+    { 1254, DM_TECHNIQUE_1040, 1974, 1 }, /* アグモン（２００６アニメ版）: ベビーフレイム */
+    { 1254, DM_TECHNIQUE_1041, 1975, 2 }, /* アグモン（２００６アニメ版）: ベビーバーナー */
+    { 1255, DM_TECHNIQUE_1040, 1974, 1 }, /* アグモン: ベビーフレイム */
+    { 1256, DM_TECHNIQUE_2254, 3188, 1 }, /* ワニャモン: スマイルファング */
+    { 1257, DM_TECHNIQUE_2255, 3189, 1 }, /* モチモン: 伸縮性のある泡 */
+    { 1258, DM_TECHNIQUE_2256, 3190, 1 }, /* ミノモン: パインコーン */
+    { 1259, DM_TECHNIQUE_2257, 3191, 1 }, /* ミサイモン: ミサイルクラッシュ */
+    { 1260, DM_TECHNIQUE_2258, 3192, 1 }, /* ポロモン: ポロロブリーズ */
+    { 1261, DM_TECHNIQUE_2259, 3193, 1 }, /* ポコモン: 殺生石 */
+    { 1262, DM_TECHNIQUE_2260, 3194, 1 }, /* ベビドモン: ホットガス */
+    { 1263, DM_TECHNIQUE_2261, 3195, 1 }, /* プロロモン: チックリット */
+    { 1264, DM_TECHNIQUE_2262, 3196, 1 }, /* フリモン: シッポビンタ */
+    { 1265, DM_TECHNIQUE_2263, 3197, 1 }, /* プチメラモン: 小さな火炎弾 */
+    { 1266, DM_TECHNIQUE_2264, 3198, 1 }, /* プカモン: 空気の泡 */
+    { 1267, DM_TECHNIQUE_2265, 3199, 1 }, /* ピョコモン: シャボンフラワー */
+    { 1268, DM_TECHNIQUE_2266, 3200, 1 }, /* ピナモン: ピリピリスパーク */
+    { 1269, DM_TECHNIQUE_2267, 3201, 1 }, /* バドモン: ドクトゲトゲ */
+    { 1270, DM_TECHNIQUE_2268, 3202, 1 }, /* パグモン: 毒の泡 */
+    { 1271, DM_TECHNIQUE_2269, 3203, 1 }, /* ニャロモン: フォックステイル */
+    { 1272, DM_TECHNIQUE_2270, 3204, 1 }, /* ドリモン: メタルドロップ */
+    { 1273, DM_TECHNIQUE_1014, 1948, 1 }, /* トコモン: 噛み付き */
+    { 1274, DM_TECHNIQUE_2271, 3205, 1 }, /* ツメモン: ネイルスクラッチ */
+    { 1275, DM_TECHNIQUE_0727, 1661, 1 }, /* ツノモン: 酸の泡 */
+    { 1276, DM_TECHNIQUE_2272, 3206, 1 }, /* チョコモン: ダブルボブル */
+    { 1277, DM_TECHNIQUE_2273, 3207, 1 }, /* チャップモン: フォームシャワー */
+    { 1278, DM_TECHNIQUE_2274, 3208, 1 }, /* チビモン: ホップアタック */
+    { 1279, DM_TECHNIQUE_0154, 1088, 1 }, /* タネモン: 粘着性の泡 */
+    { 1280, DM_TECHNIQUE_2275, 3209, 1 }, /* シャオモン: ツゥーモ */
+    { 1281, DM_TECHNIQUE_2276, 3210, 1 }, /* サクットモン: サクサク */
+    { 1282, DM_TECHNIQUE_0265, 1199, 1 }, /* コロモン: 泡 */
+    { 1283, DM_TECHNIQUE_2272, 3206, 1 }, /* グミモン: ダブルボブル */
+    { 1284, DM_TECHNIQUE_2277, 3211, 1 }, /* キョキョモン: メタルストロー */
+    { 1285, DM_TECHNIQUE_2278, 3212, 1 }, /* キュピモン: エンジェルリング */
+    { 1286, DM_TECHNIQUE_2279, 3213, 1 }, /* キャロモン: しっぽスイング */
+    { 1287, DM_TECHNIQUE_2280, 3214, 1 }, /* ギギモン: ホットバイト */
+    { 1288, DM_TECHNIQUE_2281, 3215, 1 }, /* カプリモン: ハウリングヘルツ */
+    { 1289, DM_TECHNIQUE_2282, 3216, 1 }, /* ウパモン: ショックシャウト */
+    { 1290, DM_TECHNIQUE_2283, 3217, 1 }, /* レレモン: 変身 */
+    { 1291, DM_TECHNIQUE_0727, 1661, 1 }, /* リーフモン: 酸の泡 */
+    { 1292, DM_TECHNIQUE_0154, 1088, 1 }, /* ユラモン: 粘着性の泡 */
+    { 1293, DM_TECHNIQUE_0594, 1528, 1 }, /* ユキミボタモン: ダイアモンドダスト */
+    { 1294, DM_TECHNIQUE_2284, 3218, 1 }, /* モクモン: スモーク */
+    { 1295, DM_TECHNIQUE_0727, 1661, 1 }, /* ポヨモン: 酸の泡 */
+    { 1296, DM_TECHNIQUE_2285, 3219, 1 }, /* ボムモン: バチバチバッチン */
+    { 1297, DM_TECHNIQUE_2286, 3220, 1 }, /* ポポモン: ヘアミスト */
+    { 1298, DM_TECHNIQUE_0727, 1661, 1 }, /* ボタモン: 酸の泡 */
+    { 1299, DM_TECHNIQUE_2287, 3221, 1 }, /* プワモン: フワーフェザー */
+    { 1300, DM_TECHNIQUE_0727, 1661, 1 }, /* プルルモン: 酸の泡 */
+    { 1301, DM_TECHNIQUE_2268, 3202, 1 }, /* ププモン: 毒の泡 */
+    { 1302, DM_TECHNIQUE_2288, 3222, 1 }, /* フフモン: 小さな鉄のトゲ */
+    { 1303, DM_TECHNIQUE_0727, 1661, 1 }, /* プニモン: 酸の泡 */
+    { 1304, DM_TECHNIQUE_2289, 3223, 1 }, /* プットモン: エンジェルダスト */
+    { 1305, DM_TECHNIQUE_2290, 3224, 1 }, /* プチモン: 熱い吐息 */
+    { 1306, DM_TECHNIQUE_2291, 3225, 1 }, /* ピチモン: シャボンの泡 */
+    { 1307, DM_TECHNIQUE_2292, 3226, 1 }, /* パフモン: パフバルーン */
+    { 1308, DM_TECHNIQUE_0154, 1088, 1 }, /* バブモン: 粘着性の泡 */
+    { 1309, DM_TECHNIQUE_0727, 1661, 1 }, /* パオモン: 酸の泡 */
+    { 1310, DM_TECHNIQUE_2293, 3227, 1 }, /* ニョキモン: シードクラッカー */
+    { 1311, DM_TECHNIQUE_2294, 3228, 1 }, /* ドドモン: 小さな鉄粒 */
+    { 1312, DM_TECHNIQUE_0727, 1661, 1 }, /* ツブモン: 酸の泡 */
+    { 1313, DM_TECHNIQUE_2295, 3229, 1 }, /* チョロモン: ジャミングパウダー */
+    { 1314, DM_TECHNIQUE_0727, 1661, 1 }, /* チコモン: 酸の泡 */
+    { 1315, DM_TECHNIQUE_0727, 1661, 1 }, /* ゼリモン: 酸の泡 */
+    { 1316, DM_TECHNIQUE_2268, 3202, 1 }, /* ズルモン: 毒の泡 */
+    { 1317, DM_TECHNIQUE_2296, 3230, 1 }, /* ジャリモン: 熱気を帯びた泡 */
+    { 1318, DM_TECHNIQUE_2297, 3231, 1 }, /* サクモン: サックリ */
+    { 1319, DM_TECHNIQUE_0727, 1661, 1 }, /* ココモン: 酸の泡 */
+    { 1320, DM_TECHNIQUE_2298, 3232, 1 }, /* クラモン: グレアーアイ */
+    { 1321, DM_TECHNIQUE_2299, 3233, 1 }, /* ガッチモン: ディープサーチ */
+    { 1321, DM_TECHNIQUE_2300, 3234, 2 }, /* ガッチモン: ガッチクロー */
+    { 1322, DM_TECHNIQUE_2301, 3235, 1 }, /* コールモン: コネクトライン */
+    { 1322, DM_TECHNIQUE_2302, 3236, 2 }, /* コールモン: ノイジーコーリング */
+    { 1323, DM_TECHNIQUE_2303, 3237, 1 }, /* メールモン: メールダーツ */
+    { 1323, DM_TECHNIQUE_2304, 3238, 2 }, /* メールモン: トラブルポスト */
+    { 1324, DM_TECHNIQUE_2305, 3239, 1 }, /* ツブモン: ツイボム */
+    { 1324, DM_TECHNIQUE_2306, 3240, 2 }, /* ツブモン: イイネラッシュ */
+    { 1325, DM_TECHNIQUE_2307, 3241, 1 }, /* ゲンゴーモン: バベルシャベル */
+    { 1325, DM_TECHNIQUE_2308, 3242, 2 }, /* ゲンゴーモン: バベルダマル */
+    { 1326, DM_TECHNIQUE_2309, 3243, 1 }, /* アドモン: アドリサーチ */
+    { 1326, DM_TECHNIQUE_2310, 3244, 2 }, /* アドモン: アドデリート */
+    { 1327, DM_TECHNIQUE_2311, 3245, 1 }, /* レビューモン: ポストレビュー */
+    { 1327, DM_TECHNIQUE_2312, 3246, 2 }, /* レビューモン: 最悪の評価 */
+    { 1328, DM_TECHNIQUE_2313, 3247, 1 }, /* セットモン: クイックセットアップ */
+    { 1328, DM_TECHNIQUE_2314, 3248, 2 }, /* セットモン: ピーキーセッティング */
+    { 1329, DM_TECHNIQUE_2315, 3249, 1 }, /* メッセモン: メッセストリームアタック */
+    { 1329, DM_TECHNIQUE_2316, 3250, 2 }, /* メッセモン: コトダマレイン */
+    { 1330, DM_TECHNIQUE_2317, 3251, 1 }, /* コソモン: イドバタペーパー */
+    { 1330, DM_TECHNIQUE_2318, 3252, 2 }, /* コソモン: コッソリワーク */
+    { 1331, DM_TECHNIQUE_2319, 3253, 1 }, /* ロケットモン: ロケットバースト */
+    { 1331, DM_TECHNIQUE_2320, 3254, 2 }, /* ロケットモン: オーバードブースト */
+    { 1332, DM_TECHNIQUE_2321, 3255, 1 }, /* ナビモン: ナビゲーションアロー */
+    { 1332, DM_TECHNIQUE_2322, 3256, 2 }, /* ナビモン: ショックアタックマーカー */
+    { 1333, DM_TECHNIQUE_2323, 3257, 1 }, /* ジェットモン: ホーミングインパクト */
+    { 1333, DM_TECHNIQUE_2324, 3258, 2 }, /* ジェットモン: ラプターウィング */
+    { 1334, DM_TECHNIQUE_2325, 3259, 1 }, /* レッシャモン: スイッチングレール */
+    { 1334, DM_TECHNIQUE_2326, 3260, 2 }, /* レッシャモン: トレイルスラム */
+    { 1335, DM_TECHNIQUE_2327, 3261, 1 }, /* ウェザーモン: プチプチウェザー */
+    { 1335, DM_TECHNIQUE_2328, 3262, 2 }, /* ウェザーモン: グズグズウェザー */
+    { 1336, DM_TECHNIQUE_2329, 3263, 1 }, /* コンパスモン: ぐるぐるパニック */
+    { 1336, DM_TECHNIQUE_2330, 3264, 2 }, /* コンパスモン: スピンディフレクション */
+    { 1337, DM_TECHNIQUE_2331, 3265, 1 }, /* ヤドモン: グランドオープン！ */
+    { 1337, DM_TECHNIQUE_2332, 3266, 2 }, /* ヤドモン: スケアリーサービス */
+    { 1338, DM_TECHNIQUE_2333, 3267, 1 }, /* ニュースモン: ゴーガイニュース */
+    { 1338, DM_TECHNIQUE_2334, 3268, 2 }, /* ニュースモン: ショーゲキニュース */
+    { 1339, DM_TECHNIQUE_2335, 3269, 1 }, /* チュートモン: フィンガーポインター */
+    { 1339, DM_TECHNIQUE_2336, 3270, 2 }, /* チュートモン: チュートリアライズ */
+    { 1340, DM_TECHNIQUE_2337, 3271, 1 }, /* エムシーモン: ソウルシャウト */
+    { 1340, DM_TECHNIQUE_2338, 3272, 2 }, /* エムシーモン: ジッキョークライシス */
+    { 1341, DM_TECHNIQUE_2339, 3273, 1 }, /* キャメラモン: キリングシャッター */
+    { 1341, DM_TECHNIQUE_2340, 3274, 2 }, /* キャメラモン: スパイフォーカス */
+    { 1342, DM_TECHNIQUE_2341, 3275, 1 }, /* レコモン: アブソープインタビュー */
+    { 1342, DM_TECHNIQUE_2342, 3276, 2 }, /* レコモン: スラックマイク */
+    { 1343, DM_TECHNIQUE_2343, 3277, 1 }, /* カリキュモン: カウントレーザー */
+    { 1343, DM_TECHNIQUE_2344, 3278, 2 }, /* カリキュモン: ディバイドアーム */
+    { 1344, DM_TECHNIQUE_2345, 3279, 1 }, /* ゴミモン: ダストハント */
+    { 1344, DM_TECHNIQUE_2346, 3280, 2 }, /* ゴミモン: トラッシュボム */
+    { 1345, DM_TECHNIQUE_2347, 3281, 1 }, /* ミラーモン: キャプチャーミラー */
+    { 1345, DM_TECHNIQUE_2348, 3282, 2 }, /* ミラーモン: ミラーズリベンジ */
+    { 1346, DM_TECHNIQUE_2349, 3283, 1 }, /* ライトモン: ブラインドフラッシュ */
+    { 1346, DM_TECHNIQUE_2350, 3284, 2 }, /* ライトモン: シャイニングボディ */
+    { 1347, DM_TECHNIQUE_2351, 3285, 1 }, /* ウォッチモン: アラームホールド */
+    { 1347, DM_TECHNIQUE_2352, 3286, 2 }, /* ウォッチモン: ミニッツスピアー */
+    { 1348, DM_TECHNIQUE_2353, 3287, 1 }, /* ダイアリモン: オペレートログ */
+    { 1348, DM_TECHNIQUE_2354, 3288, 2 }, /* ダイアリモン: ロストダイアリー */
+    { 1349, DM_TECHNIQUE_2355, 3289, 1 }, /* カレンダモン: スティールプラン */
+    { 1349, DM_TECHNIQUE_2356, 3290, 2 }, /* カレンダモン: ミスティックホリデー */
+    { 1350, DM_TECHNIQUE_2357, 3291, 1 }, /* オンパモン: ウェーブアタック */
+    { 1350, DM_TECHNIQUE_2358, 3292, 2 }, /* オンパモン: イージーソナー */
+    { 1351, DM_TECHNIQUE_2359, 3293, 1 }, /* ジャミングモン: ジャムジャムペイン */
+    { 1351, DM_TECHNIQUE_2360, 3294, 2 }, /* ジャミングモン: スプリーシグナル */
+    { 1352, DM_TECHNIQUE_2361, 3295, 1 }, /* プロテクモン: フレイムウォール */
+    { 1352, DM_TECHNIQUE_2362, 3296, 2 }, /* プロテクモン: オールマイティガード */
+    { 1353, DM_TECHNIQUE_2363, 3297, 1 }, /* ハックモン: ヴァンキッシュクロー */
+    { 1353, DM_TECHNIQUE_2364, 3298, 2 }, /* ハックモン: ストレンジハック */
+    { 1354, DM_TECHNIQUE_2365, 3299, 1 }, /* バッテリモン: エレクトリックチャージ */
+    { 1354, DM_TECHNIQUE_2366, 3300, 2 }, /* バッテリモン: クラップスパーク */
+    { 1355, DM_TECHNIQUE_2367, 3301, 1 }, /* ペコモン: ペコペコハンマー */
+    { 1355, DM_TECHNIQUE_2368, 3302, 2 }, /* ペコモン: ペコスマッシュ */
+    { 1356, DM_TECHNIQUE_2369, 3303, 1 }, /* ポコモン: ポコポコブロウ */
+    { 1356, DM_TECHNIQUE_2370, 3304, 2 }, /* ポコモン: ポコメルタ */
+    { 1357, DM_TECHNIQUE_2371, 3305, 1 }, /* コピペモン: コピー＆ペースト */
+    { 1357, DM_TECHNIQUE_2372, 3306, 2 }, /* コピペモン: チープイミテーション */
+    { 1358, DM_TECHNIQUE_2373, 3307, 1 }, /* セーブモン: セービングバブル */
+    { 1358, DM_TECHNIQUE_2374, 3308, 2 }, /* セーブモン: スプリットメモリー */
+    { 1359, DM_TECHNIQUE_2375, 3309, 1 }, /* カベモン: リアルプロジェクション */
+    { 1359, DM_TECHNIQUE_2376, 3310, 2 }, /* カベモン: リカバリーウォール */
+    { 1360, DM_TECHNIQUE_2377, 3311, 1 }, /* エコモン: エコロジーグラウンド */
+    { 1360, DM_TECHNIQUE_2378, 3312, 2 }, /* エコモン: バッテリドレイン */
+    { 1361, DM_TECHNIQUE_2379, 3313, 1 }, /* ピーポモン: スパイドロイド */
+    { 1361, DM_TECHNIQUE_2380, 3314, 2 }, /* ピーポモン: パニックセントリー */
+    { 1362, DM_TECHNIQUE_2381, 3315, 1 }, /* デンパモン: シークサークル */
+    { 1362, DM_TECHNIQUE_2382, 3316, 2 }, /* デンパモン: クリーンシグナル */
+    { 1363, DM_TECHNIQUE_2383, 3317, 1 }, /* オンモン: スイッチスパーク */
+    { 1363, DM_TECHNIQUE_2384, 3318, 2 }, /* オンモン: ツナゲルリンク */
+    { 1364, DM_TECHNIQUE_2385, 3319, 1 }, /* オフモン: スイッチレイジー */
+    { 1364, DM_TECHNIQUE_2386, 3320, 2 }, /* オフモン: タチキルリンク */
+    { 1365, DM_TECHNIQUE_2387, 3321, 1 }, /* ドカモン: ドカドカラッシュ */
+    { 1365, DM_TECHNIQUE_2388, 3322, 2 }, /* ドカモン: ドッカンパンチ */
+    { 1366, DM_TECHNIQUE_0690, 1624, 1 }, /* ショットモン: デッドショット */
+    { 1366, DM_TECHNIQUE_2389, 3323, 2 }, /* ショットモン: プレッシャーリボルヴ */
+    { 1367, DM_TECHNIQUE_2390, 3324, 1 }, /* カードモン: ドローフェイズ */
+    { 1367, DM_TECHNIQUE_2391, 3325, 2 }, /* カードモン: ブランクカード */
+    { 1368, DM_TECHNIQUE_2392, 3326, 1 }, /* ロープレモン: ホーリーソード */
+    { 1368, DM_TECHNIQUE_2393, 3327, 2 }, /* ロープレモン: ブレイブシールド */
+    { 1369, DM_TECHNIQUE_2394, 3328, 1 }, /* パズルモン: ポッピンスリー */
+    { 1369, DM_TECHNIQUE_2395, 3329, 2 }, /* パズルモン: エレメントミックス */
+    { 1370, DM_TECHNIQUE_2396, 3330, 1 }, /* ダンスモン: アップロックビート */
+    { 1370, DM_TECHNIQUE_2397, 3331, 2 }, /* ダンスモン: クレイジーステップ */
+    { 1371, DM_TECHNIQUE_2398, 3332, 1 }, /* レースモン: アクセルドライブ */
+    { 1371, DM_TECHNIQUE_2399, 3333, 2 }, /* レースモン: レイジーラビット */
+    { 1372, DM_TECHNIQUE_2400, 3334, 1 }, /* ドローモン: インクシャワー */
+    { 1372, DM_TECHNIQUE_2401, 3335, 2 }, /* ドローモン: ペイントメルト */
+    { 1373, DM_TECHNIQUE_2402, 3336, 1 }, /* テラーモン: フォーチュンテラー */
+    { 1373, DM_TECHNIQUE_2403, 3337, 2 }, /* テラーモン: スフィアインパクト */
+    { 1374, DM_TECHNIQUE_2404, 3338, 1 }, /* ミュージモン: ミュージックアワー！ */
+    { 1374, DM_TECHNIQUE_2405, 3339, 2 }, /* ミュージモン: ハッピープレイリスト */
+    { 1375, DM_TECHNIQUE_2406, 3340, 1 }, /* ペロリモン: テイスティングバイト */
+    { 1375, DM_TECHNIQUE_2407, 3341, 2 }, /* ペロリモン: ペロリンログ */
+    { 1376, DM_TECHNIQUE_2408, 3342, 1 }, /* ドーガモン: チャンネルプレイ */
+    { 1376, DM_TECHNIQUE_2409, 3343, 2 }, /* ドーガモン: ダークモニター */
+    { 1377, DM_TECHNIQUE_2410, 3344, 1 }, /* ドレスモン: ソーイングニードル */
+    { 1377, DM_TECHNIQUE_2411, 3345, 2 }, /* ドレスモン: シャミングステッチ */
+    { 1378, DM_TECHNIQUE_2412, 3346, 1 }, /* ブックモン: ページサモン */
+    { 1378, DM_TECHNIQUE_2413, 3347, 2 }, /* ブックモン: センテンスウィップ */
+    { 1379, DM_TECHNIQUE_2414, 3348, 1 }, /* ガシャモン: ガシャガシャポン */
+    { 1379, DM_TECHNIQUE_2415, 3349, 2 }, /* ガシャモン: ドッキリカプセル */
+    { 1380, DM_TECHNIQUE_2416, 3350, 1 }, /* ラックモン: ラッキースロット */
+    { 1380, DM_TECHNIQUE_2417, 3351, 2 }, /* ラックモン: トリプルセブン */
+    { 1381, DM_TECHNIQUE_2418, 3352, 1 }, /* トリックモン: トリッキーハッター */
+    { 1381, DM_TECHNIQUE_2419, 3353, 2 }, /* トリックモン: グランドイリュージョン */
+    { 1382, DM_TECHNIQUE_2420, 3354, 1 }, /* ダイスモン: シックスシェイク */
+    { 1382, DM_TECHNIQUE_2421, 3355, 2 }, /* ダイスモン: ミラクルロール */
+    { 1383, DM_TECHNIQUE_2422, 3356, 1 }, /* クックモン: アストロクッキング */
+    { 1383, DM_TECHNIQUE_2423, 3357, 2 }, /* クックモン: ソウルフルコース */
+    { 1384, DM_TECHNIQUE_2424, 3358, 1 }, /* バイラモン: パープルガスト */
+    { 1384, DM_TECHNIQUE_2425, 3359, 2 }, /* バイラモン: テンタクルバインド */
+    { 1385, DM_TECHNIQUE_2426, 3360, 1 }, /* スリープモン: ス～パ～スリ～パ～ */
+    { 1385, DM_TECHNIQUE_2427, 3361, 2 }, /* スリープモン: レイジングアイ */
+    { 1386, DM_TECHNIQUE_2428, 3362, 1 }, /* マッスルモン: マッスルポージング */
+    { 1386, DM_TECHNIQUE_2429, 3363, 2 }, /* マッスルモン: ムキムキスエット */
+    { 1387, DM_TECHNIQUE_2430, 3364, 1 }, /* エイドモン: ヒーリングバンデージ */
+    { 1387, DM_TECHNIQUE_2431, 3365, 2 }, /* エイドモン: レスキューキッス */
+    { 1388, DM_TECHNIQUE_2432, 3366, 1 }, /* マネーモン: ルーレットバンク */
+    { 1388, DM_TECHNIQUE_2433, 3367, 2 }, /* マネーモン: マニーショック */
+    { 1389, DM_TECHNIQUE_2434, 3368, 1 }, /* スパモン: ハイドロジェット */
+    { 1389, DM_TECHNIQUE_2435, 3369, 2 }, /* スパモン: 癒しの湯 */
+    { 1390, DM_TECHNIQUE_2436, 3370, 1 }, /* サプリモン: バイタルサプリ */
+    { 1390, DM_TECHNIQUE_2437, 3371, 2 }, /* サプリモン: ミナギルエナジー */
+    { 1391, DM_TECHNIQUE_2438, 3372, 1 }, /* ドープモン: バイタルリミット              オーバーパワー */
+    { 1392, DM_TECHNIQUE_2439, 3373, 1 }, /* オクショモン: スペシャルビッド */
+    { 1392, DM_TECHNIQUE_2440, 3374, 2 }, /* オクショモン: ニューサツスイング */
+    { 1393, DM_TECHNIQUE_2441, 3375, 1 }, /* カケイモン: セツヤクハート */
+    { 1393, DM_TECHNIQUE_2442, 3376, 2 }, /* カケイモン: ケチケチハート */
+    { 1394, DM_TECHNIQUE_2443, 3377, 1 }, /* カイモン: バーゲンプライス */
+    { 1394, DM_TECHNIQUE_2444, 3378, 2 }, /* カイモン: バクガイタイム */
+    { 1395, DM_TECHNIQUE_2445, 3379, 1 }, /* ジショモン: ビブリオスキャン */
+    { 1395, DM_TECHNIQUE_2446, 3380, 2 }, /* ジショモン: ヒデングリフ */
+    { 1396, DM_TECHNIQUE_2447, 3381, 1 }, /* ロギモン: クライストルネード */
+    { 1396, DM_TECHNIQUE_2448, 3382, 2 }, /* ロギモン: ロギプラズマ */
+    { 1397, DM_TECHNIQUE_2449, 3383, 1 }, /* ロガモン: スクラッチバン */
+    { 1397, DM_TECHNIQUE_2450, 3384, 2 }, /* ロガモン: ロガブラスト */
+    { 1398, DM_TECHNIQUE_2451, 3385, 1 }, /* ドガッチモン: ディープダイブ */
+    { 1398, DM_TECHNIQUE_2452, 3386, 2 }, /* ドガッチモン: ドガッチバスター */
+    { 1398, DM_TECHNIQUE_2453, 3387, 3 }, /* ドガッチモン: ソニックスラッシュ */
+    { 1399, DM_TECHNIQUE_2454, 3388, 1 }, /* ソーシャモン: メッセシュトロム */
+    { 1399, DM_TECHNIQUE_2455, 3389, 2 }, /* ソーシャモン: ヘビーギフト */
+    { 1400, DM_TECHNIQUE_2456, 3390, 1 }, /* ゴシップモン: ブレイズスラング */
+    { 1400, DM_TECHNIQUE_2457, 3391, 2 }, /* ゴシップモン: ネガティブラスター */
+    { 1401, DM_TECHNIQUE_2458, 3392, 1 }, /* スカシモン: 失敗しちゃった */
+    { 1401, DM_TECHNIQUE_2459, 3393, 2 }, /* スカシモン: スカナックル */
+    { 1402, DM_TECHNIQUE_2460, 3394, 1 }, /* トリップモン: トリップゲート */
+    { 1402, DM_TECHNIQUE_2461, 3395, 2 }, /* トリップモン: ワンダラーファング */
+    { 1403, DM_TECHNIQUE_2462, 3396, 1 }, /* ウェザドラモン: ディヴァインブレス */
+    { 1403, DM_TECHNIQUE_2463, 3397, 2 }, /* ウェザドラモン: パニックサンダー */
+    { 1404, DM_TECHNIQUE_2464, 3398, 1 }, /* タイムモン: クロノスライド */
+    { 1404, DM_TECHNIQUE_2465, 3399, 2 }, /* タイムモン: クロックフィスト */
+    { 1404, DM_TECHNIQUE_2466, 3400, 3 }, /* タイムモン: クロックシールド */
+    { 1405, DM_TECHNIQUE_2467, 3401, 1 }, /* ロアモン: ライアースロート */
+    { 1405, DM_TECHNIQUE_2468, 3402, 2 }, /* ロアモン: ツインスクリーム */
+    { 1406, DM_TECHNIQUE_2469, 3403, 1 }, /* スコープモン: デスウォッチ */
+    { 1406, DM_TECHNIQUE_2470, 3404, 2 }, /* スコープモン: デッドリースナイプ */
+    { 1407, DM_TECHNIQUE_2471, 3405, 1 }, /* クラフトモン: トッカンメイカー */
+    { 1407, DM_TECHNIQUE_2472, 3406, 2 }, /* クラフトモン: ゾーンアーキテクト */
+    { 1408, DM_TECHNIQUE_2473, 3407, 1 }, /* レイドラモン: クラッキングクレイス */
+    { 1408, DM_TECHNIQUE_2474, 3408, 2 }, /* レイドラモン: バラージジャック */
+    { 1409, DM_TECHNIQUE_2475, 3409, 1 }, /* デジップモン: アブソーブジップ */
+    { 1409, DM_TECHNIQUE_2476, 3410, 2 }, /* デジップモン: アンフリーズフィスト */
+    { 1410, DM_TECHNIQUE_2477, 3411, 1 }, /* ミエーヌモン: ステルスケープ */
+    { 1410, DM_TECHNIQUE_2478, 3412, 2 }, /* ミエーヌモン: カメレオンリック */
+    { 1411, DM_TECHNIQUE_2479, 3413, 1 }, /* ワープモン: ワープループ */
+    { 1411, DM_TECHNIQUE_2480, 3414, 2 }, /* ワープモン: スケアリーゲート */
+    { 1412, DM_TECHNIQUE_2481, 3415, 1 }, /* サクシモン: 臥龍扇 */
+    { 1412, DM_TECHNIQUE_2482, 3416, 2 }, /* サクシモン: 炎舞の陣 */
+    { 1413, DM_TECHNIQUE_2483, 3417, 1 }, /* ドスコモン: ドヒョウフィールド */
+    { 1413, DM_TECHNIQUE_2484, 3418, 2 }, /* ドスコモン: ジェット張手 */
+    { 1414, DM_TECHNIQUE_2485, 3419, 1 }, /* ブレモン: コマンド＝ハイパー */
+    { 1414, DM_TECHNIQUE_2486, 3420, 2 }, /* ブレモン: クレイジーブレイン */
+    { 1415, DM_TECHNIQUE_2487, 3421, 1 }, /* コーチモン: 怒ツ鬼金剛棍 */
+    { 1415, DM_TECHNIQUE_2488, 3422, 2 }, /* コーチモン: 愛の入魂金棒 */
+    { 1416, DM_TECHNIQUE_2489, 3423, 1 }, /* ウラテクモン: 上下上下右右左左XY */
+    { 1416, DM_TECHNIQUE_2490, 3424, 2 }, /* ウラテクモン: カミワザコンボ */
+    { 1417, DM_TECHNIQUE_2491, 3425, 1 }, /* エフェクモン: カラーズマザー */
+    { 1417, DM_TECHNIQUE_2492, 3426, 2 }, /* エフェクモン: ペイントドラゴン */
+    { 1418, DM_TECHNIQUE_2493, 3427, 1 }, /* タロットモン: ラメントフェイト */
+    { 1418, DM_TECHNIQUE_2494, 3428, 2 }, /* タロットモン: アルカナシールド */
+    { 1419, DM_TECHNIQUE_2495, 3429, 1 }, /* コーデモン: メタモルコーデ */
+    { 1419, DM_TECHNIQUE_2496, 3430, 2 }, /* コーデモン: フィッティングアロー */
+    { 1420, DM_TECHNIQUE_2497, 3431, 1 }, /* メディアモン: バーチャルバース */
+    { 1420, DM_TECHNIQUE_0652, 1586, 2 }, /* メディアモン: ハウリングブラスト */
+    { 1421, DM_TECHNIQUE_2498, 3432, 1 }, /* ベガスモン: クイーンウィール */
+    { 1421, DM_TECHNIQUE_2499, 3433, 2 }, /* ベガスモン: ビッグゲーム */
+    { 1422, DM_TECHNIQUE_2500, 3434, 1 }, /* ドリーモン: ノンレムパペット */
+    { 1422, DM_TECHNIQUE_2501, 3435, 2 }, /* ドリーモン: ドリームシアター */
+    { 1423, DM_TECHNIQUE_2502, 3436, 1 }, /* メディックモン: ワンオペレーション */
+    { 1423, DM_TECHNIQUE_2503, 3437, 2 }, /* メディックモン: ワンダーメディシン */
+    { 1424, DM_TECHNIQUE_2504, 3438, 1 }, /* ドクモン: スパイラルトリガー */
+    { 1424, DM_TECHNIQUE_2505, 3439, 2 }, /* ドクモン: マッドネスシリンジ */
+    { 1425, DM_TECHNIQUE_2506, 3440, 1 }, /* コンサルモン: スリフトアンサー */
+    { 1425, DM_TECHNIQUE_2507, 3441, 2 }, /* コンサルモン: オクトパラース */
+    { 1426, DM_TECHNIQUE_2508, 3442, 1 }, /* ライブラモン: バーバルジェイル */
+    { 1426, DM_TECHNIQUE_2509, 3443, 2 }, /* ライブラモン: デビルズコデックス */
+    { 1427, DM_TECHNIQUE_2510, 3444, 1 }, /* グローブモン: アルティメットサーチ */
+    { 1427, DM_TECHNIQUE_2511, 3445, 2 }, /* グローブモン: グランツゲイザー */
+    { 1427, DM_TECHNIQUE_2512, 3446, 3 }, /* グローブモン: シュベルトカッター */
+    { 1428, DM_TECHNIQUE_2513, 3447, 1 }, /* カリスモン: ゼーレゲヴァルト */
+    { 1428, DM_TECHNIQUE_2514, 3448, 2 }, /* カリスモン: アルフ＝アイン */
+    { 1429, DM_TECHNIQUE_2515, 3449, 1 }, /* ダメダモン: もうダメだ～ */
+    { 1429, DM_TECHNIQUE_2516, 3450, 2 }, /* ダメダモン: ダメダメージ */
+    { 1430, DM_TECHNIQUE_2517, 3451, 1 }, /* サテラモン: コズミックレイダー */
+    { 1430, DM_TECHNIQUE_2518, 3452, 2 }, /* サテラモン: レインボーアサルト */
+    { 1431, DM_TECHNIQUE_2519, 3453, 1 }, /* コメットモン: メテオレイン */
+    { 1431, DM_TECHNIQUE_2520, 3454, 2 }, /* コメットモン: ギガントエルガー */
+    { 1432, DM_TECHNIQUE_2521, 3455, 1 }, /* ブートモン: パワーブート */
+    { 1432, DM_TECHNIQUE_2522, 3456, 2 }, /* ブートモン: ナックルソル */
+    { 1433, DM_TECHNIQUE_2523, 3457, 1 }, /* シャットモン: シザーズブラック */
+    { 1433, DM_TECHNIQUE_2524, 3458, 2 }, /* シャットモン: ルーナインパルス */
+    { 1434, DM_TECHNIQUE_2525, 3459, 1 }, /* フェイクモン: イミテーションノイズ */
+    { 1434, DM_TECHNIQUE_2526, 3460, 2 }, /* フェイクモン: クラウンマスク */
+    { 1435, DM_TECHNIQUE_2527, 3461, 1 }, /* リバイブモン: ヴンダーゲネシス */
+    { 1435, DM_TECHNIQUE_2528, 3462, 2 }, /* リバイブモン: セイバーシュトラール */
+    { 1436, DM_TECHNIQUE_2529, 3463, 1 }, /* ワルダモン: デーモンアルム */
+    { 1436, DM_TECHNIQUE_2530, 3464, 2 }, /* ワルダモン: ザータンムント */
+    { 1437, DM_TECHNIQUE_2531, 3465, 1 }, /* オウジャモン: ゴールデンファング */
+    { 1437, DM_TECHNIQUE_2532, 3466, 2 }, /* オウジャモン: フレイムストレート */
+    { 1438, DM_TECHNIQUE_2533, 3467, 1 }, /* エンタモン: ハッピーファントム */
+    { 1438, DM_TECHNIQUE_2534, 3468, 2 }, /* エンタモン: ポルテメロス */
+    { 1439, DM_TECHNIQUE_2535, 3469, 1 }, /* バイオモン: ドクトルメス */
+    { 1439, DM_TECHNIQUE_2536, 3470, 2 }, /* バイオモン: ナーデルブレイズ */
+    { 1440, DM_TECHNIQUE_2537, 3471, 1 }, /* ビューティモン: ローザフェニクス */
+    { 1440, DM_TECHNIQUE_2538, 3472, 2 }, /* ビューティモン: ヴィーナスロッド */
+    { 1440, DM_TECHNIQUE_2539, 3473, 3 }, /* ビューティモン: ウィングパクト */
+    { 1441, DM_TECHNIQUE_2540, 3474, 1 }, /* リブートモン: レフィシオール */
+    { 1441, DM_TECHNIQUE_2541, 3475, 2 }, /* リブートモン: ホライゾンタルフレア */
+    { 1441, DM_TECHNIQUE_2542, 3476, 3 }, /* リブートモン: エクリプスイレイザー */
+    { 1442, DM_TECHNIQUE_2543, 3477, 1 }, /* ガイアモン: イマジンマール */
+    { 1442, DM_TECHNIQUE_2544, 3478, 2 }, /* ガイアモン: アルティメットアダマス */
+    { 1443, DM_TECHNIQUE_2545, 3479, 1 }, /* ハデスモン: ヘル・カキア */
+    { 1443, DM_TECHNIQUE_2546, 3480, 2 }, /* ハデスモン: メランエクスプロード */
+    { 1444, DM_TECHNIQUE_2547, 3481, 1 }, /* ポセイドモン: トライデント・フォール */
+    { 1444, DM_TECHNIQUE_2548, 3482, 2 }, /* ポセイドモン: 海帝掌打 */
+    { 1445, DM_TECHNIQUE_2549, 3483, 1 }, /* ウラノスモン: ハロー・ハロー */
+    { 1445, DM_TECHNIQUE_2550, 3484, 2 }, /* ウラノスモン: アストラルイラプション */
+    { 1446, DM_TECHNIQUE_2551, 3485, 1 }, /* デウスモン: コード：オリジン */
+    { 1446, DM_TECHNIQUE_2552, 3486, 2 }, /* デウスモン: イニシャル・ゼロ */
+    { 1447, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(ソーシャル): スピンシュート */
+    { 1448, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(ナビ): スピンシュート */
+    { 1449, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(ツール): スピンシュート */
+    { 1450, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(システム): スピンシュート */
+    { 1451, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(ゲーム): スピンシュート */
+    { 1452, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(エンタメ): スピンシュート */
+    { 1453, DM_TECHNIQUE_2553, 3487, 1 }, /* タップモン(ライフ): スピンシュート */
+    { 1454, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(ソーシャル): みみだまし */
+    { 1455, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(ナビ): みみだまし */
+    { 1456, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(ツール): みみだまし */
+    { 1457, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(システム): みみだまし */
+    { 1458, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(ゲーム): みみだまし */
+    { 1459, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(エンタメ): みみだまし */
+    { 1460, DM_TECHNIQUE_2554, 3488, 1 }, /* フリックモン(ライフ): みみだまし */
+    { 1461, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(ソーシャル): ボディスピアー */
+    { 1462, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(ナビ): ボディスピアー */
+    { 1463, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(ツール): ボディスピアー */
+    { 1464, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(システム): ボディスピアー */
+    { 1465, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(ゲーム): ボディスピアー */
+    { 1466, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(エンタメ): ボディスピアー */
+    { 1467, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(ライフ): ボディスピアー */
+    { 1468, DM_TECHNIQUE_2556, 3490, 1 }, /* ダンテモン: 断鉄剣（だんてつけん） */
+    { 1468, DM_TECHNIQUE_2557, 3491, 2 }, /* ダンテモン: 戸締用心(とじまりようじん) */
 };
 
 #define DM_OFFICIAL_TECHNIQUE_ASSIGNMENT_COUNT (sizeof(gDigitalMonsterOfficialTechniqueAssignments) / sizeof(gDigitalMonsterOfficialTechniqueAssignments[0]))
