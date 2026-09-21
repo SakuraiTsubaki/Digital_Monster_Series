@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "canonical_language": "ja",
+  "baseline_engine_ref": "75b806a3ab57a81ff1eb6179288981f0b3cc3050",
+  "current_required_unique_characters": 845,
+  "existing_direct_charmap_characters": 312,
+  "extended_required_characters": 642,
+  "extended_glyph_range": {
+    "start_hex": "0x0200",
+    "end_hex": "0x0481",
+    "count": 642
+  },
+  "encoding": {
+    "prefix": [
+      "0xFC",
+      "0x1D"
+    ],
+    "payload": "little-endian u16 glyph ID",
+    "bytes_per_extended_glyph": 4
+  },
+  "storage_policy": {
+    "fixed_nickname_storage": "keep existing Emerald limits",
+    "official_species_display_name": "pointer-backed Digital Monster table",
+    "official_technique_display_name": "pointer-backed Digital Monster table",
+    "truncate_official_names": false
+  },
+  "renderer_status": "patch prepared; extended atlas assets not yet generated/verified",
+  "required_next": [
+    "prepare normal/small/short extended glyph atlas for all mapped characters",
+    "patch display-name access sites to use pointer-backed Digital Monster name tables",
+    "run build and width/layout tests on Japanese names",
+    "verify ROM growth stays inside 32 MiB target"
+  ]
+}
