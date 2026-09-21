@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "measurement": "Unicode code point count only; not yet Emerald encoded-byte length",
+  "current_engine_limits": {
+    "species_name_length": 12,
+    "move_name_length": 16
+  },
+  "species": {
+    "count": 1468,
+    "max_codepoints": 22,
+    "over_current_limit": 104
+  },
+  "techniques": {
+    "count": 2557,
+    "max_codepoints": 30,
+    "over_current_limit": 68
+  },
+  "conclusion": "runtime text storage/rendering must be audited and expanded; do not truncate official Japanese names"
+}
