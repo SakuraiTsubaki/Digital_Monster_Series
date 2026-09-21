@@ -1,0 +1,7 @@
+language,region,rom_file,rom_sha256,rom_size,game_code,revision,save_file,save_sha256,save_size
+ja,Japan,Pocket Monsters - Emerald (Japan).gba,33f5610b9186b4add09fef68895deb00f552b997b3d133b5a961e5123506343c,16777216,BPEJ,0,Pocket Monsters - Emerald (Japan).sav,a8606bb3ddda5393838bd7360b132c4897865ac2db1c8b32edbdf018aad2f584,131072
+en,USA_Europe,"Pokemon - Emerald Version (USA, Europe).gba",a9dec84dfe7f62ab2220bafaef7479da0929d066ece16a6885f6226db19085af,16777216,BPEE,0,"Pokemon - Emerald Version (USA, Europe).sav",58824a475456312d42fdabc343c6c13719879e0fd4a4840bcebf5555f798cd9e,131072
+de,Germany,Pokemon - Smaragd-Edition (Germany).gba,7c599c56849efeebeb93bd71f714932ae4cdf980db51c9c1016b4431057f71d4,16777216,BPED,0,Pokemon - Smaragd-Edition (Germany).sav,12ef6ef2b7b02b6589b641721adbbe46cf1a5364d8ddc00c21f206fa249a3d51,131072
+fr,France,Pokemon - Version Emeraude (France).gba,e79b40e6189550b4870b06918a5c59e04d3a2e1d7c92718aeda92181201f51e4,16777216,BPEF,0,Pokemon - Version Emeraude (France).sav,993beac20da29b25b19e8d3b20c83f96f7fa9108e8f109c7ab47726c4ea0df64,131072
+it,Italy,Pokemon - Versione Smeraldo (Italy).gba,63cbff3500b657cb6966568beb0780de3655d3a0b2e5ac6e0ec33d5d01a916ad,16777216,BPEI,0,Pokemon - Versione Smeraldo (Italy).sav,5d61f65b473e4f5edc28a0f8392ab0c7044932e1198b15bea040917bfd29438f,131072
+es,Spain,Pokemon - Edicion Esmeralda (Spain).gba,e32c82bd10f174cf4019123b36f3ef7729105fb6634d9aa6b61413ee5101a55e,16777216,BPES,0,Pokemon - Edicion Esmeralda (Spain).sav,7217c9fde60f9b450827ecf32041aa14b3ec6aa87777d3d1bc467fb19292896a,131072
