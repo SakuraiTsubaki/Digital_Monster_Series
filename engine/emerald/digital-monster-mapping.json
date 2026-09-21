@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "purpose": "Map the Emerald engine data model to Digital Monster Series semantics without conflating source taxonomies.",
+  "mappings": [
+    {
+      "emerald": "species/entity",
+      "digital_monster": "Digimon/Appmon entity",
+      "status": "direct_backing_id",
+      "capacity": 2047
+    },
+    {
+      "emerald": "move",
+      "digital_monster": "special move / technique",
+      "status": "deduplicate_then_assign",
+      "capacity": 2047
+    },
+    {
+      "emerald": "held item",
+      "digital_monster": "item/equipment",
+      "status": "direct_backing_id_after_16bit_patch",
+      "capacity": 65535
+    },
+    {
+      "emerald": "level",
+      "digital_monster": "level",
+      "status": "initial_engine_parameter",
+      "range": "1..100"
+    },
+    {
+      "emerald": "party",
+      "digital_monster": "active Digimon party",
+      "status": "initial_engine_parameter",
+      "capacity": 6
+    },
+    {
+      "emerald": "four move slots",
+      "digital_monster": "equipped techniques",
+      "status": "initial_engine_parameter",
+      "capacity": 4
+    },
+    {
+      "emerald": "Pokemon type",
+      "digital_monster": "battle affinity layer",
+      "status": "requires_design",
+      "note": "Do not map the official Digimon 型 taxonomy one-to-one to the Emerald battle-type enum."
+    },
+    {
+      "emerald": "Pokemon evolution",
+      "digital_monster": "digivolution",
+      "status": "requires_graph_adapter",
+      "note": "Branching, conditional and reversible/temporary transformations must be modeled explicitly."
+    },
+    {
+      "emerald": "ability",
+      "digital_monster": "passive/trait system",
+      "status": "requires_design"
+    },
+    {
+      "emerald": "Pokedex",
+      "digital_monster": "Digimon encyclopedia",
+      "status": "replace_frontend_and_indexing"
+    }
+  ],
+  "immediate_capacity_checks": {
+    "entity_catalog": {
+      "digimon_reference_rows": 1320,
+      "appmon_rows": 148,
+      "combined_rows": 1468,
+      "species_id_limit": 2047,
+      "result": "fits"
+    },
+    "technique_catalog": {
+      "digimon_reference_move_rows": 2593,
+      "appmon_move_rows": 279,
+      "move_id_limit": 2047,
+      "result": "unique_count_required_before_decision"
+    },
+    "taxonomy": {
+      "digimon_reference_type_unique_values": 142,
+      "emerald_battle_type_slots_at_pinned_engine_including_TYPE_NONE": 21,
+      "result": "must_be_separate_from_official_Digimon_type_taxonomy"
+    }
+  }
+}
