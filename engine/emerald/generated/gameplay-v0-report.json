@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "profile": "gameplay-v0",
+  "canonical": false,
+  "species_count": 1468,
+  "technique_count": 2557,
+  "tier_counts": {
+    "究極体": 374,
+    "完全体": 283,
+    "成熟期": 278,
+    "成長期": 175,
+    "幼年期Ⅱ": 59,
+    "幼年期Ⅰ": 49,
+    "不明": 4,
+    "アーマー体": 67,
+    "ハイブリッド体": 32,
+    "並": 75,
+    "超": 31,
+    "極": 14,
+    "神": 6,
+    "－": 21
+  },
+  "bst_range": {
+    "min": 180,
+    "max": 600
+  },
+  "max_single_base_stat": 130,
+  "note": "This layer exists solely to make Emerald playtesting possible while official source data remains untouched."
+}
