@@ -66,15 +66,30 @@
       "widening_policy": "defer_until_real_entity_count_requires_it"
     },
     "move_backing_field": {
-      "bits": 11,
-      "max_value": 2047,
+      "bits_current": 11,
+      "max_value_current": 2047,
       "digital_monster_role": "technique_id",
-      "known_source_rows": {
-        "digimon_reference_special_move_rows": 2593,
-        "appmon_special_move_rows": 279
+      "source_assignment_rows": {
+        "digimon_reference": 2593,
+        "appmon": 279,
+        "combined": 2872
       },
-      "status": "audit_unique_technique_count_before_assignment",
-      "note": "source rows are assignments, not unique technique IDs; widen only if deduplicated catalog exceeds the 11-bit range"
+      "exact_unique_japanese_techniques": 2557,
+      "minimum_required_bits": 12,
+      "target_bits": 12,
+      "target_max_value": 4095,
+      "status": "requires_persistent_move_field_repack_before_full_import",
+      "pinned_engine_layout": {
+        "move1_bits": 11,
+        "move2_bits": 11,
+        "move3_bits": 11,
+        "move4_bits": 11,
+        "evolution_tracker_bits_total": 10,
+        "unused_bits_adjacent_to_move3": 5,
+        "unused_bits_adjacent_to_move4_before_hyper_flags": 3,
+        "hyper_training_bits_adjacent_to_move4": 2
+      },
+      "compatibility_rule": "keep BoxPokemon substruct size stable; implement explicit migration/repack instead of silently truncating IDs"
     },
     "held_item_backing_field": {
       "bits_before": 10,
