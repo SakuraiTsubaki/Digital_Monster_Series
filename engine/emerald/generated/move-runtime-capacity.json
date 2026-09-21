@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "pinned_engine_moves_count_all": 935,
+  "existing_runtime_id_range": "0..934",
+  "digital_monster_logical_id_range": "1..2557",
+  "digital_monster_runtime_id_range": "935..3491",
+  "runtime_moves_count_all": 3492,
+  "persistent_move_bits": 12,
+  "persistent_move_max": 4095,
+  "remaining_runtime_ids": 604,
+  "strategy": "append Digital Monster techniques after existing engine move catalog; do not replace engine move constants"
+}
