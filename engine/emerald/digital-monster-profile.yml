@@ -1,0 +1,32 @@
+schema: 1
+profile: digital_monster_replacement
+runtime: Pokemon Emerald / pokeemerald-expansion
+
+catalog:
+  mode: replace
+  replace_pokemon_species_catalog: true
+  append_to_existing_pokemon_catalog: false
+  species_id_start: 1
+  species_id_end: 1468
+  technique_id_start: 1
+  technique_id_end: 2557
+
+storage:
+  species_bits: 11
+  species_max: 2047
+  technique_bits: 12
+  technique_max: 4095
+  save_flash_bytes: 131072
+  rom_build_target_mib: 32
+
+activation:
+  species_info_enabled: false
+  reason: battle parameters, battle affinity mapping, graphics, cries, and digivolution conditions are not yet source-backed
+  never_use_unrelated_pokemon_stats_as_fallback: true
+  never_truncate_official_names: true
+
+source_priority:
+  - ja
+  - ko
+  - en
+  - other
