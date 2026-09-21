@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "profile": "gameplay-v0",
+  "species_count": 1468,
+  "species_runtime_indices": "1..1468",
+  "placeholder_assets": "CircledQuestionMark / QuestionMark icon / Porygon cry ID",
+  "official_display_names": "pointer-backed table, separate from fixed SpeciesInfo.speciesName",
+  "internal_species_names": "DM0001..DM1468",
+  "learnset_rule": "official technique source order -> levels 1,10,20,30,40,50,60,70",
+  "max_official_techniques_per_entity": 8,
+  "no_official_technique_entities": [
+    {
+      "species_id": 3,
+      "name_ja": "アトラタスモン",
+      "source_id": "atratusmon"
+    },
+    {
+      "species_id": 4,
+      "name_ja": "アルバタスモン",
+      "source_id": "albatusmon"
+    },
+    {
+      "species_id": 205,
+      "name_ja": "ルミナモン（ネネVer.）",
+      "source_id": "luminamon_nene"
+    },
+    {
+      "species_id": 246,
+      "name_ja": "ば～ぷモン",
+      "source_id": "burpmon"
+    },
+    {
+      "species_id": 249,
+      "name_ja": "クルモン",
+      "source_id": "culumon"
+    },
+    {
+      "species_id": 498,
+      "name_ja": "ピピモン",
+      "source_id": "pipimon"
+    },
+    {
+      "species_id": 705,
+      "name_ja": "ルーチェモン：ラルバ",
+      "source_id": "lucemonlarva"
+    },
+    {
+      "species_id": 773,
+      "name_ja": "デクスモン",
+      "source_id": "death-x-mon"
+    },
+    {
+      "species_id": 806,
+      "name_ja": "サクヤモン：巫女モード",
+      "source_id": "sakuyamon:mikomode"
+    }
+  ],
+  "fallback_move": {
+    "constant": "DM_MOVE_BOOTSTRAP_ATTACK",
+    "runtime_id": 3492,
+    "canonical": false
+  },
+  "battle_affinity": "TYPE_NORMAL gameplay-v0 only",
+  "abilities": "ABILITY_NONE gameplay-v0",
+  "dex": "NATIONAL_DEX_NONE until Digital Monster dex frontend exists",
+  "ready_for_engine_sync": true
+}
