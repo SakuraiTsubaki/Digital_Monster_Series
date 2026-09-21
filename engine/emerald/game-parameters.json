@@ -89,7 +89,20 @@
         "unused_bits_adjacent_to_move4_before_hyper_flags": 3,
         "hyper_training_bits_adjacent_to_move4": 2
       },
-      "compatibility_rule": "keep BoxPokemon substruct size stable; implement explicit migration/repack instead of silently truncating IDs"
+      "compatibility_rule": "keep BoxPokemon substruct size stable; implement explicit migration/repack instead of silently truncating IDs",
+      "logical_catalog": {
+        "id_start": 1,
+        "id_end": 2557,
+        "count": 2557
+      },
+      "runtime_catalog": {
+        "pinned_engine_moves_count_all": 935,
+        "engine_move_id_range": "0..934",
+        "digital_monster_move_id_range": "935..3491",
+        "runtime_moves_count_all": 3492,
+        "remaining_12bit_ids": 604,
+        "strategy": "append after engine move catalog"
+      }
     },
     "held_item_backing_field": {
       "bits_before": 10,
