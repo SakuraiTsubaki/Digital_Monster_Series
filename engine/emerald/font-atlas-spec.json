@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "upstream": {
+    "repository": "rh-hideout/pokeemerald-expansion",
+    "ref": "75b806a3ab57a81ff1eb6179288981f0b3cc3050",
+    "source_files": [
+      "graphics/fonts/japanese_normal.png",
+      "graphics/fonts/japanese_small.png",
+      "graphics/fonts/japanese_short.png",
+      "tools/gbagfx/font.c"
+    ]
+  },
+  "stock_atlases": {
+    "japanese_normal": {
+      "format": ".hwjpnfont",
+      "png_width": 128,
+      "png_height": 512,
+      "glyph_width": 8,
+      "glyph_height": 16,
+      "columns": 16,
+      "rows": 32,
+      "glyph_count": 512,
+      "bytes_per_glyph": 32
+    },
+    "japanese_small": {
+      "format": ".hwjpnfont",
+      "png_width": 128,
+      "png_height": 512,
+      "glyph_width": 8,
+      "glyph_height": 16,
+      "columns": 16,
+      "rows": 32,
+      "glyph_count": 512,
+      "bytes_per_glyph": 32
+    },
+    "japanese_short": {
+      "format": ".fwjpnfont",
+      "png_width": 256,
+      "png_height": 512,
+      "glyph_width": 16,
+      "glyph_height": 16,
+      "columns": 16,
+      "rows": 32,
+      "glyph_count": 512,
+      "bytes_per_glyph": 64
+    }
+  },
+  "digital_monster_extended": {
+    "glyph_count": 642,
+    "glyph_id_start": "0x0200",
+    "glyph_id_end": "0x0481",
+    "local_index_start": 0,
+    "local_index_end": 641,
+    "normal_small": {
+      "glyph_width": 8,
+      "glyph_height": 16,
+      "columns": 16,
+      "rows": 41,
+      "png_width": 128,
+      "png_height": 656,
+      "padded_glyph_capacity": 656,
+      "unused_tail_slots": 14,
+      "format": ".hwjpnfont"
+    },
+    "short": {
+      "glyph_width": 16,
+      "glyph_height": 16,
+      "columns": 16,
+      "rows": 41,
+      "png_width": 256,
+      "png_height": 656,
+      "padded_glyph_capacity": 656,
+      "unused_tail_slots": 14,
+      "format": ".fwjpnfont"
+    },
+    "rule": "glyphId >= 0x0200 maps to local extended index glyphId - 0x0200"
+  },
+  "asset_status": "source glyph artwork not yet populated",
+  "policy": [
+    "Do not synthesize or transliterate official Japanese text at runtime.",
+    "Do not mutate the stock 512-glyph Japanese atlases.",
+    "Extended normal/small/short atlases are separate assets.",
+    "Atlas dimensions are padded to a multiple of 16 glyphs because gbagfx requires glyph counts divisible by 16."
+  ]
+}
