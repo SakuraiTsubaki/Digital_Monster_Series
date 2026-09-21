@@ -28,7 +28,8 @@ def main():
     assert len(species) == 1468
     assert len(techniques) == 2557
     assert max(int(x["emerald_species_id"]) for x in species) <= 2047
-    assert max(int(x["emerald_move_id"]) for x in techniques) <= 4095
+    assert max(int(x["dm_technique_id"]) for x in techniques) <= 2557
+    assert 934 + max(int(x["dm_technique_id"]) for x in techniques) <= 4095
 
     keys = {(x["source_kind"], x["source_id"]) for x in species}
     missing = [(x["source_kind"], x["source_id"]) for x in assignments if (x["source_kind"], x["source_id"]) not in keys]
