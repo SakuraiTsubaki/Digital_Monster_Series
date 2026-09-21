@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "name": "gameplay-v0",
+  "canonical": false,
+  "purpose": "bootstrap playable Emerald balance layer; never overwrite official source fields",
+  "entity_tiers": {
+    "幼年期Ⅰ": {
+      "bst": 180,
+      "growth": "medium_fast",
+      "catch": 255,
+      "exp": 30
+    },
+    "幼年期Ⅱ": {
+      "bst": 240,
+      "growth": "medium_fast",
+      "catch": 220,
+      "exp": 45
+    },
+    "成長期": {
+      "bst": 330,
+      "growth": "medium_fast",
+      "catch": 180,
+      "exp": 70
+    },
+    "成熟期": {
+      "bst": 430,
+      "growth": "medium_slow",
+      "catch": 120,
+      "exp": 120
+    },
+    "完全体": {
+      "bst": 520,
+      "growth": "slow",
+      "catch": 60,
+      "exp": 180
+    },
+    "究極体": {
+      "bst": 600,
+      "growth": "slow",
+      "catch": 30,
+      "exp": 240
+    },
+    "アーマー体": {
+      "bst": 450,
+      "growth": "medium_slow",
+      "catch": 100,
+      "exp": 140
+    },
+    "ハイブリッド体": {
+      "bst": 500,
+      "growth": "slow",
+      "catch": 75,
+      "exp": 170
+    },
+    "不明": {
+      "bst": 430,
+      "growth": "medium_slow",
+      "catch": 120,
+      "exp": 120
+    },
+    "並": {
+      "bst": 330,
+      "growth": "medium_fast",
+      "catch": 180,
+      "exp": 70
+    },
+    "超": {
+      "bst": 430,
+      "growth": "medium_slow",
+      "catch": 120,
+      "exp": 120
+    },
+    "極": {
+      "bst": 520,
+      "growth": "slow",
+      "catch": 60,
+      "exp": 180
+    },
+    "神": {
+      "bst": 600,
+      "growth": "slow",
+      "catch": 30,
+      "exp": 240
+    },
+    "－": {
+      "bst": 430,
+      "growth": "medium_slow",
+      "catch": 120,
+      "exp": 120
+    }
+  },
+  "archetypes": [
+    {
+      "name": "balanced",
+      "weights": {
+        "hp": 1,
+        "attack": 1,
+        "defense": 1,
+        "speed": 1,
+        "special_attack": 1,
+        "special_defense": 1
+      }
+    },
+    {
+      "name": "physical",
+      "weights": {
+        "hp": 1,
+        "attack": 1.25,
+        "defense": 1,
+        "speed": 0.95,
+        "special_attack": 0.8,
+        "special_defense": 1
+      }
+    },
+    {
+      "name": "special",
+      "weights": {
+        "hp": 1,
+        "attack": 0.8,
+        "defense": 0.95,
+        "speed": 1,
+        "special_attack": 1.25,
+        "special_defense": 1
+      }
+    },
+    {
+      "name": "swift_physical",
+      "weights": {
+        "hp": 0.9,
+        "attack": 1.2,
+        "defense": 0.85,
+        "speed": 1.3,
+        "special_attack": 0.8,
+        "special_defense": 0.95
+      }
+    },
+    {
+      "name": "swift_special",
+      "weights": {
+        "hp": 0.9,
+        "attack": 0.8,
+        "defense": 0.9,
+        "speed": 1.3,
+        "special_attack": 1.2,
+        "special_defense": 0.95
+      }
+    },
+    {
+      "name": "physical_tank",
+      "weights": {
+        "hp": 1.1,
+        "attack": 1.05,
+        "defense": 1.3,
+        "speed": 0.75,
+        "special_attack": 0.75,
+        "special_defense": 1.05
+      }
+    },
+    {
+      "name": "special_tank",
+      "weights": {
+        "hp": 1.1,
+        "attack": 0.75,
+        "defense": 1.05,
+        "speed": 0.8,
+        "special_attack": 1.05,
+        "special_defense": 1.25
+      }
+    },
+    {
+      "name": "mixed",
+      "weights": {
+        "hp": 1,
+        "attack": 1.1,
+        "defense": 0.9,
+        "speed": 1,
+        "special_attack": 1.1,
+        "special_defense": 0.9
+      }
+    }
+  ],
+  "archetype_assignment": "FNV-1a(source_kind + ':' + source_id) modulo archetype count; deterministic, explicitly non-canonical",
+  "battle_affinity": {
+    "mode": "neutral_v0",
+    "all_matchups_multiplier": 1,
+    "official_attribute_preserved_separately": true
+  },
+  "techniques": {
+    "power": 70,
+    "accuracy": 100,
+    "pp": 15,
+    "category": "deterministic physical/special split by FNV-1a parity",
+    "affinity": "neutral_v0",
+    "effect": "hit",
+    "note": "bootstrap only; official move descriptions/effects may replace these values later"
+  },
+  "capture": "project-defined stage/grade difficulty for playtest only",
+  "stats": "project-defined BST by official level/grade plus deterministic archetype; no claim of canonical Digimon combat stats"
+}
