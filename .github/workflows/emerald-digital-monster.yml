@@ -1,0 +1,73 @@
+name: Emerald Digital Monster Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "engine/emerald/**"
+      - ".github/workflows/emerald-digital-monster.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GAME_VERSION: EMERALD
+      GAME_REVISION: 0
+      GAME_LANGUAGE: ENGLISH
+      COMPARE: 0
+      UNUSED_ERROR: 0
+      DEPRECATED_ERROR: 0
+    steps:
+      - name: Checkout Digital_Monster_Series
+        uses: actions/checkout@v4
+        with:
+          path: project
+
+      - name: Checkout pinned pokeemerald-expansion
+        uses: actions/checkout@v4
+        with:
+          repository: rh-hideout/pokeemerald-expansion
+          ref: 75b806a3ab57a81ff1eb6179288981f0b3cc3050
+          path: engine
+
+      - name: Validate generated catalogs
+        run: |
+          python3 project/engine/emerald/validation/verify_id_capacity.py
+          python3 project/engine/emerald/validation/verify_generated_runtime.py
+
+      - name: Apply Digital Monster engine integration
+        run: |
+          python3 project/engine/emerald/tools/apply_pinned_engine_integration.py engine
+          python3 project/engine/emerald/tools/sync_generated_engine_files.py engine
+
+      - name: Verify move-storage integration
+        run: |
+          python3 project/engine/emerald/validation/verify_move_storage_patch.py engine
+
+      - name: Install GBA build toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+
+      - name: Build Digital Monster Emerald
+        working-directory: engine
+        run: make DIGITAL_MONSTER_SERIES=1 -j$(nproc) -O all
+
+      - name: Verify ROM profile
+        working-directory: engine
+        run: |
+          test -f pokeemerald.gba
+          size=$(stat -c%s pokeemerald.gba)
+          test "$size" -le 33554432
+          sha256sum pokeemerald.gba
+          echo "ROM size: $size bytes"
+          echo "ROM SHA-256: $(sha256sum pokeemerald.gba | cut -d' ' -f1)" >> "$GITHUB_STEP_SUMMARY"
+          echo "ROM size: $size bytes / 33554432 max" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Do not publish ROM binary
+        run: rm -f engine/pokeemerald.gba
