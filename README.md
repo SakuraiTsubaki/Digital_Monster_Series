@@ -1,6 +1,26 @@
 # Digital Monster Series
 
-일본어 공식 자료를 최우선 기준으로 디지털 몬스터 시리즈의 공식 데이터를 조사·검증·구조화하는 저장소입니다.
+**Pokemon Emerald / pokeemerald-expansion 엔진 위에서 Digital Monster Series를 플레이할 수 있도록 구현하는 프로젝트입니다.**
+
+일본어 공식 자료를 최우선 기준으로 디지털 몬스터 시리즈의 공식 데이터를 조사·검증·구조화하고, 그 데이터를 Emerald 엔진의 전투·성장·기술·아이템·진화·맵·세이브 시스템에 연결합니다.
+
+## Emerald 엔진 기준선
+
+엔진 파라미터 위치: [`engine/emerald/`](engine/emerald/)
+
+현재 기준:
+
+- 일본판 Emerald(BPEJ)를 ROM 기준선으로 우선 사용
+- 일본/영문/독문/불문/이문/서문 6개 원본 Emerald ROM+SAVE 쌍 검증
+- 원본 ROM 16 MiB
+- 표준 GBA 선형 확장 프로필 32 MiB
+- SAVE 128 KiB Flash / 32 sectors / 2 slots
+- Digimon/Appmon 엔티티 ID는 Emerald의 species 저장 필드를 백엔드로 사용
+- 기술은 move 저장 필드를 백엔드로 사용하되, 고유 기술 수를 계산한 뒤 11비트 확장 필요성을 결정
+- 공식 Digimon 타입·속성·Appmon 등급/앱 종류는 Pokémon 전투 타입과 섞지 않고 별도 메타데이터로 유지
+- ROM 바이너리는 저장소에 커밋하지 않고 해시·구조·파라미터만 보존
+
+현재 공식 데이터 1,320 Digimon + 148 Appmon = 1,468 엔티티는 11비트 species ID 범위(최대 2,047)에 들어갑니다.
 
 ## 현재 데이터셋
 
