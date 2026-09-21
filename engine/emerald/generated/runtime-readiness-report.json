@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "profile": "digital_monster_replacement",
+  "total_entities": 1468,
+  "source_backed_now": [
+    "stable species ID",
+    "Japanese official name",
+    "official Digimon/Appmon level-or-grade label",
+    "official type/app label",
+    "official attribute label",
+    "official technique assignments"
+  ],
+  "unresolved_for_SpeciesInfo_activation": [
+    "baseHP",
+    "baseAttack",
+    "baseDefense",
+    "baseSpeed",
+    "baseSpAttack",
+    "baseSpDefense",
+    "Emerald battle type mapping",
+    "catchRate",
+    "expYield",
+    "growthRate",
+    "abilities",
+    "height/weight where not separately sourced",
+    "runtime graphics",
+    "cry",
+    "Digivolution graph and conditions"
+  ],
+  "activation_gate": {
+    "species_info_runtime_enabled": false,
+    "reason": "Do not fabricate gameplay parameters or silently reuse unrelated Pokémon values.",
+    "required_before_enable": [
+      "all six base stats assigned by a documented Digital Monster ruleset",
+      "battle affinity mapping defined separately from official Digimon 型 taxonomy",
+      "technique metadata gains power/accuracy/category/PP/effect parameters",
+      "name encoding/buffer expansion verified",
+      "graphics and icon assets mapped or deliberate placeholders approved",
+      "Digivolution graph semantics defined"
+    ]
+  },
+  "engine_replacement": {
+    "replace_pokemon_species_catalog": true,
+    "append_to_existing_pokemon_catalog": false,
+    "target_species_range": "1..1468",
+    "target_move_range": "1..2557",
+    "species_bits": 11,
+    "move_bits": 12
+  }
+}
