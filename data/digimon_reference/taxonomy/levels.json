@@ -1,0 +1,76 @@
+{
+  "detail_page_values": [
+    {
+      "raw_value": "アーマー体",
+      "count": 67
+    },
+    {
+      "raw_value": "ハイブリッド体",
+      "count": 32
+    },
+    {
+      "raw_value": "不明",
+      "count": 3
+    },
+    {
+      "raw_value": "完全体",
+      "count": 261
+    },
+    {
+      "raw_value": "完全体\n(クロスウォーズ)",
+      "count": 22
+    },
+    {
+      "raw_value": "幼年期Ⅰ",
+      "count": 47
+    },
+    {
+      "raw_value": "幼年期Ⅰ\n(クロスウォーズ)",
+      "count": 2
+    },
+    {
+      "raw_value": "幼年期Ⅱ",
+      "count": 56
+    },
+    {
+      "raw_value": "幼年期Ⅱ\n(クロスウォーズ)",
+      "count": 3
+    },
+    {
+      "raw_value": "成熟期",
+      "count": 252
+    },
+    {
+      "raw_value": "成熟期\n(クロスウォーズ)",
+      "count": 26
+    },
+    {
+      "raw_value": "成長期",
+      "count": 156
+    },
+    {
+      "raw_value": "成長期\n(クロスウォーズ)",
+      "count": 19
+    },
+    {
+      "raw_value": "究極体",
+      "count": 353
+    },
+    {
+      "raw_value": "究極体\n(クロスウォーズ)",
+      "count": 21
+    }
+  ],
+  "index_filter_values": [
+    "幼年期Ⅰ",
+    "幼年期Ⅱ",
+    "成長期",
+    "成熟期",
+    "完全体",
+    "究極体",
+    "アーマー体",
+    "ハイブリッド体",
+    "クロスウォーズ",
+    "不明"
+  ]
+}

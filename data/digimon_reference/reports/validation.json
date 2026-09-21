@@ -1,0 +1,97 @@
+{
+  "collected_at_utc": "2026-09-21T12:59:43.572602+00:00",
+  "official_displayed_count": 1320,
+  "listing_rows_received": 1320,
+  "unique_directory_names": 1320,
+  "successfully_parsed_detail_pages": 1320,
+  "missing_count_vs_official_display": 0,
+  "failed_pages": [],
+  "duplicate_directory_names_in_listing": [],
+  "listing_requests": [
+    {
+      "offset": 0,
+      "row_count": 96,
+      "next": 96,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=0"
+    },
+    {
+      "offset": 96,
+      "row_count": 96,
+      "next": 192,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=96"
+    },
+    {
+      "offset": 192,
+      "row_count": 96,
+      "next": 288,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=192"
+    },
+    {
+      "offset": 288,
+      "row_count": 96,
+      "next": 384,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=288"
+    },
+    {
+      "offset": 384,
+      "row_count": 96,
+      "next": 480,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=384"
+    },
+    {
+      "offset": 480,
+      "row_count": 96,
+      "next": 576,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=480"
+    },
+    {
+      "offset": 576,
+      "row_count": 96,
+      "next": 672,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=576"
+    },
+    {
+      "offset": 672,
+      "row_count": 96,
+      "next": 768,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=672"
+    },
+    {
+      "offset": 768,
+      "row_count": 96,
+      "next": 864,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=768"
+    },
+    {
+      "offset": 864,
+      "row_count": 96,
+      "next": 960,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=864"
+    },
+    {
+      "offset": 960,
+      "row_count": 96,
+      "next": 1056,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=960"
+    },
+    {
+      "offset": 1056,
+      "row_count": 96,
+      "next": 1152,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=1056"
+    },
+    {
+      "offset": 1152,
+      "row_count": 96,
+      "next": 1248,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=1152"
+    },
+    {
+      "offset": 1248,
+      "row_count": 72,
+      "next": -1,
+      "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=1248"
+    }
+  ],
+  "index_sha256": "f3c879bcfd1faa810967c92748f55dee21daaf00cb7e78e6d15a52a45b276f08"
+}

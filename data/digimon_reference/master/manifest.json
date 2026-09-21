@@ -1,0 +1,14 @@
+{
+  "format": "segmented_json_arrays",
+  "record_count": 1320,
+  "part_count": 6,
+  "ordering": "official listing API order at collection time",
+  "parts": [
+    {"path": "digimon_master.part-01.json", "records": 220, "sha256": "38699edd4a56c3bd12e3575c95d61242f9a438bfac1db124659df4efe941b1d1"},
+    {"path": "digimon_master.part-02.json", "records": 220, "sha256": "f2e3997c71e9ade4aa45208a29aeaffd51e6ae5e03d67bd4eabf0b089bbc09ba"},
+    {"path": "digimon_master.part-03.json", "records": 220, "sha256": "e8ead2af700b4db5f38badaa2fb86373e81c888983b5dee0f3eb6a77d0528991"},
+    {"path": "digimon_master.part-04.json", "records": 220, "sha256": "8570208ad2eb682d4a6af7cc35534faf93c89eaf6fc0e15911ebbfeeac6eddfb"},
+    {"path": "digimon_master.part-05.json", "records": 220, "sha256": "8240830ec8b5ec9390998b9f4bf232825d22f463e2bc3ef459a6722bec657b28"},
+    {"path": "digimon_master.part-06.json", "records": 220, "sha256": "a7d318342afbc8bf4e9860193f46d792c4bb1d029fc40c7716157eae289ad23e"}
+  ]
+}

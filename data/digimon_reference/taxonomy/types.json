@@ -1,0 +1,715 @@
+{
+  "detail_page_values": [
+    {
+      "raw_value": "NO DATA",
+      "count": 1
+    },
+    {
+      "raw_value": "アンデッド型",
+      "count": 25
+    },
+    {
+      "raw_value": "インベイド型",
+      "count": 2
+    },
+    {
+      "raw_value": "エイリアン型",
+      "count": 1
+    },
+    {
+      "raw_value": "エンシェント型",
+      "count": 2
+    },
+    {
+      "raw_value": "ゴースト型",
+      "count": 9
+    },
+    {
+      "raw_value": "サイボーグ型",
+      "count": 100
+    },
+    {
+      "raw_value": "スモーク型",
+      "count": 3
+    },
+    {
+      "raw_value": "スライム型",
+      "count": 36
+    },
+    {
+      "raw_value": "パペット型",
+      "count": 50
+    },
+    {
+      "raw_value": "パーフェクト型",
+      "count": 1
+    },
+    {
+      "raw_value": "ヒナ鳥型",
+      "count": 5
+    },
+    {
+      "raw_value": "ブラウン型",
+      "count": 2
+    },
+    {
+      "raw_value": "マイナー型",
+      "count": 1
+    },
+    {
+      "raw_value": "マシーン型",
+      "count": 44
+    },
+    {
+      "raw_value": "ミュータント型",
+      "count": 1
+    },
+    {
+      "raw_value": "メジャー型",
+      "count": 1
+    },
+    {
+      "raw_value": "レッサー型",
+      "count": 31
+    },
+    {
+      "raw_value": "不明",
+      "count": 15
+    },
+    {
+      "raw_value": "両生類型",
+      "count": 9
+    },
+    {
+      "raw_value": "主天使型",
+      "count": 1
+    },
+    {
+      "raw_value": "僧侶型",
+      "count": 1
+    },
+    {
+      "raw_value": "光竜型",
+      "count": 4
+    },
+    {
+      "raw_value": "剣竜型",
+      "count": 1
+    },
+    {
+      "raw_value": "力天使型",
+      "count": 1
+    },
+    {
+      "raw_value": "化身型",
+      "count": 2
+    },
+    {
+      "raw_value": "古代妖精型",
+      "count": 2
+    },
+    {
+      "raw_value": "古代幻獣型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代昆虫型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代植物型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代水棲獣人型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代獣型",
+      "count": 7
+    },
+    {
+      "raw_value": "古代甲殻類型",
+      "count": 2
+    },
+    {
+      "raw_value": "古代突然変異型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代竜人型",
+      "count": 2
+    },
+    {
+      "raw_value": "古代竜型",
+      "count": 3
+    },
+    {
+      "raw_value": "古代聖騎士型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代鉱物型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代魚型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代鳥人型",
+      "count": 1
+    },
+    {
+      "raw_value": "古代鳥型",
+      "count": 3
+    },
+    {
+      "raw_value": "合成型",
+      "count": 19
+    },
+    {
+      "raw_value": "哺乳類型",
+      "count": 23
+    },
+    {
+      "raw_value": "地竜型",
+      "count": 2
+    },
+    {
+      "raw_value": "堕天使型",
+      "count": 12
+    },
+    {
+      "raw_value": "大天使型",
+      "count": 3
+    },
+    {
+      "raw_value": "天使型",
+      "count": 6
+    },
+    {
+      "raw_value": "天竜型",
+      "count": 3
+    },
+    {
+      "raw_value": "如来型",
+      "count": 2
+    },
+    {
+      "raw_value": "妖獣型",
+      "count": 5
+    },
+    {
+      "raw_value": "妖精型",
+      "count": 24
+    },
+    {
+      "raw_value": "妖鳥型",
+      "count": 2
+    },
+    {
+      "raw_value": "宇宙人型",
+      "count": 2
+    },
+    {
+      "raw_value": "寄生型",
+      "count": 1
+    },
+    {
+      "raw_value": "小天使型",
+      "count": 2
+    },
+    {
+      "raw_value": "小悪魔型",
+      "count": 4
+    },
+    {
+      "raw_value": "小竜型",
+      "count": 8
+    },
+    {
+      "raw_value": "小鳥型",
+      "count": 2
+    },
+    {
+      "raw_value": "岩竜型",
+      "count": 4
+    },
+    {
+      "raw_value": "巨鳥型",
+      "count": 10
+    },
+    {
+      "raw_value": "幻獣型",
+      "count": 8
+    },
+    {
+      "raw_value": "幻竜型",
+      "count": 3
+    },
+    {
+      "raw_value": "幼竜型",
+      "count": 3
+    },
+    {
+      "raw_value": "幼虫型",
+      "count": 5
+    },
+    {
+      "raw_value": "座天使型",
+      "count": 3
+    },
+    {
+      "raw_value": "強化型",
+      "count": 12
+    },
+    {
+      "raw_value": "恐竜型",
+      "count": 26
+    },
+    {
+      "raw_value": "戦士型",
+      "count": 11
+    },
+    {
+      "raw_value": "昆虫型",
+      "count": 41
+    },
+    {
+      "raw_value": "智天使型",
+      "count": 4
+    },
+    {
+      "raw_value": "暗黒騎士型",
+      "count": 4
+    },
+    {
+      "raw_value": "植物型",
+      "count": 25
+    },
+    {
+      "raw_value": "楽器型",
+      "count": 1
+    },
+    {
+      "raw_value": "権天使型",
+      "count": 1
+    },
+    {
+      "raw_value": "機竜型",
+      "count": 3
+    },
+    {
+      "raw_value": "機雷型",
+      "count": 2
+    },
+    {
+      "raw_value": "武器型",
+      "count": 8
+    },
+    {
+      "raw_value": "水棲哺乳類型",
+      "count": 4
+    },
+    {
+      "raw_value": "水棲型",
+      "count": 21
+    },
+    {
+      "raw_value": "水棲獣人型",
+      "count": 8
+    },
+    {
+      "raw_value": "氷雪型",
+      "count": 5
+    },
+    {
+      "raw_value": "海人型",
+      "count": 1
+    },
+    {
+      "raw_value": "海獣型",
+      "count": 5
+    },
+    {
+      "raw_value": "海竜型",
+      "count": 2
+    },
+    {
+      "raw_value": "液晶薄型",
+      "count": 1
+    },
+    {
+      "raw_value": "火炎型",
+      "count": 6
+    },
+    {
+      "raw_value": "火炎竜型",
+      "count": 1
+    },
+    {
+      "raw_value": "熱帯魚型",
+      "count": 1
+    },
+    {
+      "raw_value": "熾天使型",
+      "count": 2
+    },
+    {
+      "raw_value": "爬人型",
+      "count": 1
+    },
+    {
+      "raw_value": "爬虫類型",
+      "count": 18
+    },
+    {
+      "raw_value": "特異型",
+      "count": 6
+    },
+    {
+      "raw_value": "獣人型",
+      "count": 43
+    },
+    {
+      "raw_value": "獣型",
+      "count": 46
+    },
+    {
+      "raw_value": "獣竜型",
+      "count": 7
+    },
+    {
+      "raw_value": "獣騎士型",
+      "count": 4
+    },
+    {
+      "raw_value": "珍獣型",
+      "count": 2
+    },
+    {
+      "raw_value": "球根型",
+      "count": 2
+    },
+    {
+      "raw_value": "甲殻類型",
+      "count": 6
+    },
+    {
+      "raw_value": "神人型",
+      "count": 45
+    },
+    {
+      "raw_value": "神獣型",
+      "count": 3
+    },
+    {
+      "raw_value": "種子型",
+      "count": 2
+    },
+    {
+      "raw_value": "種族不明",
+      "count": 15
+    },
+    {
+      "raw_value": "突然変異",
+      "count": 1
+    },
+    {
+      "raw_value": "突然変異型",
+      "count": 60
+    },
+    {
+      "raw_value": "竜人型",
+      "count": 28
+    },
+    {
+      "raw_value": "竜型",
+      "count": 8
+    },
+    {
+      "raw_value": "竜戦士型",
+      "count": 1
+    },
+    {
+      "raw_value": "精霊型",
+      "count": 1
+    },
+    {
+      "raw_value": "翼竜型",
+      "count": 5
+    },
+    {
+      "raw_value": "聖剣型",
+      "count": 1
+    },
+    {
+      "raw_value": "聖獣型",
+      "count": 34
+    },
+    {
+      "raw_value": "聖竜型",
+      "count": 8
+    },
+    {
+      "raw_value": "聖騎士型",
+      "count": 36
+    },
+    {
+      "raw_value": "聖鳥型",
+      "count": 4
+    },
+    {
+      "raw_value": "能天使型",
+      "count": 1
+    },
+    {
+      "raw_value": "角竜型",
+      "count": 4
+    },
+    {
+      "raw_value": "解析不能",
+      "count": 1
+    },
+    {
+      "raw_value": "超メジャー型",
+      "count": 1
+    },
+    {
+      "raw_value": "軟体型",
+      "count": 15
+    },
+    {
+      "raw_value": "邪神型",
+      "count": 2
+    },
+    {
+      "raw_value": "邪竜型",
+      "count": 6
+    },
+    {
+      "raw_value": "鉱物型",
+      "count": 8
+    },
+    {
+      "raw_value": "鉱石型",
+      "count": 5
+    },
+    {
+      "raw_value": "銀河型",
+      "count": 1
+    },
+    {
+      "raw_value": "鎧竜型",
+      "count": 4
+    },
+    {
+      "raw_value": "防具型",
+      "count": 6
+    },
+    {
+      "raw_value": "食物型",
+      "count": 6
+    },
+    {
+      "raw_value": "食虫植物型",
+      "count": 2
+    },
+    {
+      "raw_value": "首長竜型",
+      "count": 3
+    },
+    {
+      "raw_value": "鬼人型",
+      "count": 12
+    },
+    {
+      "raw_value": "魔人型",
+      "count": 37
+    },
+    {
+      "raw_value": "魔法戦士型",
+      "count": 1
+    },
+    {
+      "raw_value": "魔法騎士型",
+      "count": 2
+    },
+    {
+      "raw_value": "魔獣型",
+      "count": 26
+    },
+    {
+      "raw_value": "魔王型",
+      "count": 23
+    },
+    {
+      "raw_value": "魔神型",
+      "count": 2
+    },
+    {
+      "raw_value": "魔竜型",
+      "count": 11
+    },
+    {
+      "raw_value": "鳥人型",
+      "count": 7
+    },
+    {
+      "raw_value": "鳥型",
+      "count": 13
+    },
+    {
+      "raw_value": "鳥竜型",
+      "count": 5
+    },
+    {
+      "raw_value": "９０００型",
+      "count": 1
+    }
+  ],
+  "index_filter_values": [
+    "NO DATA",
+    "アンデッド型",
+    "インベイド型",
+    "エイリアン型",
+    "エンシェント型",
+    "ゴースト型",
+    "サイボーグ型",
+    "スライム型",
+    "スモーク型",
+    "パペット型",
+    "パーフェクト型",
+    "ヒナ鳥型",
+    "ブラウン型",
+    "マイナー型",
+    "マシーン型",
+    "ミュータント型",
+    "メジャー型",
+    "レッサー型",
+    "不明",
+    "両生類型",
+    "僧侶型",
+    "光竜型",
+    "剣竜型",
+    "力天使型",
+    "化身型",
+    "古代幻獣型",
+    "古代昆虫型",
+    "古代植物型",
+    "古代水棲獣人型",
+    "古代獣型",
+    "古代甲殻類型",
+    "古代突然変異型",
+    "古代竜人型",
+    "古代竜型",
+    "古代聖騎士型",
+    "古代鉱物型",
+    "古代魚型",
+    "古代鳥人型",
+    "古代鳥型",
+    "古代妖精型",
+    "合成型",
+    "哺乳類型",
+    "地竜型",
+    "堕天使型",
+    "大天使型",
+    "天使型",
+    "天竜型",
+    "如来型",
+    "妖獣型",
+    "妖精型",
+    "妖鳥型",
+    "宇宙人型",
+    "寄生型",
+    "小天使型",
+    "小悪魔型",
+    "小竜型",
+    "小鳥型",
+    "岩竜型",
+    "巨鳥型",
+    "幻獣型",
+    "幻竜型",
+    "幼虫型",
+    "幼竜型",
+    "座天使型",
+    "強化型",
+    "恐竜型",
+    "戦士型",
+    "昆虫型",
+    "智天使型",
+    "暗黒騎士型",
+    "植物型",
+    "楽器型",
+    "機竜型",
+    "機雷型",
+    "武器型",
+    "水棲哺乳類型",
+    "水棲型",
+    "水棲獣人型",
+    "氷雪型",
+    "海人型",
+    "海獣型",
+    "海竜型",
+    "液晶薄型",
+    "火炎型",
+    "火炎竜型",
+    "熱帯魚型",
+    "熾天使型",
+    "主天使型",
+    "爬人型",
+    "爬虫類型",
+    "特異型",
+    "獣人型",
+    "獣型",
+    "獣竜型",
+    "獣騎士型",
+    "珍獣型",
+    "球根型",
+    "甲殻類型",
+    "神人型",
+    "神獣型",
+    "種子型",
+    "種族不明",
+    "突然変異型",
+    "竜人型",
+    "竜型",
+    "竜戦士型",
+    "精霊型",
+    "翼竜型",
+    "聖剣型",
+    "聖獣型",
+    "聖竜型",
+    "聖騎士型",
+    "聖鳥型",
+    "能天使型",
+    "角竜型",
+    "解析不能",
+    "超メジャー型",
+    "軟体型",
+    "邪神型",
+    "邪竜型",
+    "鉱物型",
+    "鉱石型",
+    "銀河型",
+    "鎧竜型",
+    "権天使型",
+    "防具型",
+    "食物型",
+    "食虫植物型",
+    "首長竜型",
+    "鬼人型",
+    "魔人型",
+    "魔法戦士型",
+    "魔法騎士型",
+    "魔獣型",
+    "魔王型",
+    "魔神型",
+    "魔竜型",
+    "鳥人型",
+    "鳥型",
+    "鳥竜型",
+    "９０００型"
+  ]
+}

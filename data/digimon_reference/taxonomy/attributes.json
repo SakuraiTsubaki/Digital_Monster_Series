@@ -1,0 +1,45 @@
+{
+  "detail_page_values": [
+    {
+      "raw_value": "NO DATA",
+      "count": 2
+    },
+    {
+      "raw_value": "ウィルス",
+      "count": 422
+    },
+    {
+      "raw_value": "データ",
+      "count": 325
+    },
+    {
+      "raw_value": "フリー",
+      "count": 88
+    },
+    {
+      "raw_value": "ワクチン",
+      "count": 315
+    },
+    {
+      "raw_value": "ヴァリアブル",
+      "count": 32
+    },
+    {
+      "raw_value": "不明",
+      "count": 28
+    },
+    {
+      "raw_value": null,
+      "count": 108
+    }
+  ],
+  "index_filter_values": [
+    "ワクチン",
+    "データ",
+    "ウィルス",
+    "フリー",
+    "ヴァリアブル",
+    "不明",
+    "NO DATA"
+  ]
+}

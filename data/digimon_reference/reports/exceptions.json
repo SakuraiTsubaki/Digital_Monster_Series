@@ -1,0 +1,1355 @@
+{
+  "missing_values": [
+    {
+      "directory_name": "chicchimon",
+      "name_ja": "チッチモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "onibimon",
+      "name_ja": "オニビモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tomorimon",
+      "name_ja": "トモリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "mococomon",
+      "name_ja": "モココモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "fukamon",
+      "name_ja": "フカモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kekkomon",
+      "name_ja": "ケッコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kekomon",
+      "name_ja": "ケコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "fluffymon",
+      "name_ja": "フラフィモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "yolkmon",
+      "name_ja": "ヨークモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "moonmon",
+      "name_ja": "ムンモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "sunmon",
+      "name_ja": "サンモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "bowmon",
+      "name_ja": "バウモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "fusamon",
+      "name_ja": "フサモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "puyoyomon",
+      "name_ja": "プヨヨモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "puyomon",
+      "name_ja": "プヨモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "bosamon",
+      "name_ja": "ボサモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pyonmon",
+      "name_ja": "ピョンモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "gurimon",
+      "name_ja": "グリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "curimon",
+      "name_ja": "クリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "negamon",
+      "name_ja": "ネガーモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "goromon",
+      "name_ja": "ゴロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "sunamon",
+      "name_ja": "スナモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "hiyarimon",
+      "name_ja": "ヒヤリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "torikaraballmon",
+      "name_ja": "とりからボールモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "bibimon",
+      "name_ja": "ビビモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "dokimon",
+      "name_ja": "ドキモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "hopmon",
+      "name_ja": "ホップモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "ketomon",
+      "name_ja": "ケトモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "algomon_lv1",
+      "name_ja": "アルゴモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "algomon_lv2",
+      "name_ja": "アルゴモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "yarmon",
+      "name_ja": "ヤーモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "keemon",
+      "name_ja": "キーモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pusurimon",
+      "name_ja": "プスリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pusumon",
+      "name_ja": "プスモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tokomon_x",
+      "name_ja": "トコモン（Ｘ抗体）",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pipimon",
+      "name_ja": "ピピモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kakkinmon",
+      "name_ja": "カッキンモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "cotsucomon",
+      "name_ja": "コツコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "monimon",
+      "name_ja": "モニモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "bombmon-xwars",
+      "name_ja": "ボムモン（2010アニメ版）",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pickmon",
+      "name_ja": "ピックモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "chibickmon",
+      "name_ja": "チビックモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kozenimon",
+      "name_ja": "コゼニモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "wanyamon",
+      "name_ja": "ワニャモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "mochimon",
+      "name_ja": "モチモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "minomon",
+      "name_ja": "ミノモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "missimon",
+      "name_ja": "ミサイモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "poromon",
+      "name_ja": "ポロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pokomon",
+      "name_ja": "ポコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "babydmon",
+      "name_ja": "ベビドモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "puroromon",
+      "name_ja": "プロロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "frimon",
+      "name_ja": "フリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "petimeramon",
+      "name_ja": "プチメラモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pukamon",
+      "name_ja": "プカモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pyocomon",
+      "name_ja": "ピョコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pinamon",
+      "name_ja": "ピナモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "budmon",
+      "name_ja": "バドモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pagumon",
+      "name_ja": "パグモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "nyaromon",
+      "name_ja": "ニャロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "dorimon",
+      "name_ja": "ドリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tokomon",
+      "name_ja": "トコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tsumemon",
+      "name_ja": "ツメモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tunomon",
+      "name_ja": "ツノモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "chocomon",
+      "name_ja": "チョコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "chapmon",
+      "name_ja": "チャップモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "chibimon",
+      "name_ja": "チビモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tanemon",
+      "name_ja": "タネモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "xiaomon",
+      "name_ja": "シャオモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "sakuttomon",
+      "name_ja": "サクットモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "koromon",
+      "name_ja": "コロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "gummymon",
+      "name_ja": "グミモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kyokyomon",
+      "name_ja": "キョキョモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "cupimon",
+      "name_ja": "キュピモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kyaromon",
+      "name_ja": "キャロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "gigimon",
+      "name_ja": "ギギモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "capromon",
+      "name_ja": "カプリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "upamon",
+      "name_ja": "ウパモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "relemon",
+      "name_ja": "レレモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "leafmon",
+      "name_ja": "リーフモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "yuramon",
+      "name_ja": "ユラモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "yukimibotamon",
+      "name_ja": "ユキミボタモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "mokumon",
+      "name_ja": "モクモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "poyomon",
+      "name_ja": "ポヨモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "bommon",
+      "name_ja": "ボムモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "popomon",
+      "name_ja": "ポポモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "botamon",
+      "name_ja": "ボタモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "puwamon",
+      "name_ja": "プワモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pururumon",
+      "name_ja": "プルルモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pupumon",
+      "name_ja": "ププモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "fufumon",
+      "name_ja": "フフモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "punimon",
+      "name_ja": "プニモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "puttimon",
+      "name_ja": "プットモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "petitmon",
+      "name_ja": "プチモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pitchmon",
+      "name_ja": "ピチモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "pafumon",
+      "name_ja": "パフモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "bubbmon",
+      "name_ja": "バブモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "paomon",
+      "name_ja": "パオモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "nyokimon",
+      "name_ja": "ニョキモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "dodomon",
+      "name_ja": "ドドモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "tsubumon",
+      "name_ja": "ツブモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "choromon",
+      "name_ja": "チョロモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "chicomon",
+      "name_ja": "チコモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "zerimon",
+      "name_ja": "ゼリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "zurumon",
+      "name_ja": "ズルモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "jyarimon",
+      "name_ja": "ジャリモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "sakumon",
+      "name_ja": "サクモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "cocomon",
+      "name_ja": "ココモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "kuramon",
+      "name_ja": "クラモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    }
+  ],
+  "duplicate_exact_names": {
+    "バーガモン": [
+      "burgamon_lv4",
+      "burgamon"
+    ],
+    "アルゴモン": [
+      "algomon_lv1",
+      "algomon_lv4",
+      "algomon_lv3",
+      "algomon_lv2",
+      "algomon",
+      "algomon-ultimate"
+    ],
+    "エオスモン": [
+      "eosmon_lv6",
+      "eosmon_lv5",
+      "eosmon_lv4"
+    ],
+    "ラピッドモン": [
+      "rapidmon_gold",
+      "rapidmon"
+    ],
+    "サイバードラモン": [
+      "cyberdramon-xwars",
+      "cyberdramon"
+    ]
+  },
+  "similar_name_groups": {
+    "アポロモン": [
+      {
+        "name_ja": "アポロモン：ウィスパード",
+        "directory_name": "apollomon_whispered"
+      },
+      {
+        "name_ja": "アポロモン",
+        "directory_name": "apollomon"
+      }
+    ],
+    "アルマモン": [
+      {
+        "name_ja": "アルマモン：バーストモード",
+        "directory_name": "armamon_burstmode"
+      },
+      {
+        "name_ja": "アルマモン",
+        "directory_name": "armamon"
+      }
+    ],
+    "クロノモン": [
+      {
+        "name_ja": "クロノモン：デストロイモード",
+        "directory_name": "chronomon_destroy"
+      },
+      {
+        "name_ja": "クロノモン：ホーリーモード",
+        "directory_name": "chronomon_holy"
+      }
+    ],
+    "ナタモン": [
+      {
+        "name_ja": "ナタモン：クリムゾンモード",
+        "directory_name": "nazhamon_crimson"
+      },
+      {
+        "name_ja": "ナタモン",
+        "directory_name": "nezhamon"
+      }
+    ],
+    "イーランモン": [
+      {
+        "name_ja": "イーランモン：ブラストモード",
+        "directory_name": "erlangmon_blast"
+      },
+      {
+        "name_ja": "イーランモン",
+        "directory_name": "erlangmon"
+      }
+    ],
+    "タクトウモン": [
+      {
+        "name_ja": "タクトウモン：ラースモード",
+        "directory_name": "takutoumon_wrath"
+      },
+      {
+        "name_ja": "タクトウモン",
+        "directory_name": "takutoumon"
+      }
+    ],
+    "フェンリルガモン": [
+      {
+        "name_ja": "フェンリルガモン：建御雷神(タケミカヅチ)",
+        "directory_name": "fenriloogamon_takemikazuchi"
+      },
+      {
+        "name_ja": "フェンリルガモン",
+        "directory_name": "fenriloogamon"
+      }
+    ],
+    "ファンロンモン": [
+      {
+        "name_ja": "ファンロンモン：ルインモード",
+        "directory_name": "huanglongmon_ruin"
+      },
+      {
+        "name_ja": "ファンロンモン",
+        "directory_name": "huanglongmon"
+      }
+    ],
+    "シャイングレイモン": [
+      {
+        "name_ja": "シャイングレイモン： ルインモード",
+        "directory_name": "shinegreymon_ruin"
+      },
+      {
+        "name_ja": "シャイングレイモン：バーストモード",
+        "directory_name": "shinegreymonburstmode"
+      },
+      {
+        "name_ja": "シャイングレイモン",
+        "directory_name": "shinegreymon"
+      }
+    ],
+    "インペリアルドラモン": [
+      {
+        "name_ja": "インペリアルドラモン：ファイターモード（黒）",
+        "directory_name": "imperialdramonfightermode_vi"
+      },
+      {
+        "name_ja": "インペリアルドラモン：ドラゴンモード(黒)",
+        "directory_name": "imperialdramon_dragon_black"
+      },
+      {
+        "name_ja": "インペリアルドラモン：ファイターモード",
+        "directory_name": "imperialdramonfightermode"
+      },
+      {
+        "name_ja": "インペリアルドラモン：パラディンモード",
+        "directory_name": "imperialdramonpaladinmode"
+      },
+      {
+        "name_ja": "インペリアルドラモン：ドラゴンモード",
+        "directory_name": "imperialdramondragonmode"
+      }
+    ],
+    "ユピテルモン": [
+      {
+        "name_ja": "ユピテルモン：ラースモード",
+        "directory_name": "jupitermmon_wrath"
+      },
+      {
+        "name_ja": "ユピテルモン",
+        "directory_name": "jupitermon"
+      }
+    ],
+    "ユノモン": [
+      {
+        "name_ja": "ユノモン：ヒステリックモード",
+        "directory_name": "junomon_hysteric"
+      },
+      {
+        "name_ja": "ユノモン",
+        "directory_name": "junomon"
+      }
+    ],
+    "シスタモン": [
+      {
+        "name_ja": "シスタモン シエル（覚醒）",
+        "directory_name": "sistermon_ciel_Awake"
+      },
+      {
+        "name_ja": "シスタモン ノワール（覚醒）",
+        "directory_name": "sistermon_noir_Awake"
+      },
+      {
+        "name_ja": "シスタモン ブラン（覚醒）",
+        "directory_name": "sistermon_blanc_Awake"
+      },
+      {
+        "name_ja": "シスタモン シエル",
+        "directory_name": "sistermon_ciel"
+      },
+      {
+        "name_ja": "シスタモン ノワール",
+        "directory_name": "sistermonnoir"
+      },
+      {
+        "name_ja": "シスタモン ブラン",
+        "directory_name": "sistermonblanc"
+      }
+    ],
+    "ブラックテイルモン": [
+      {
+        "name_ja": "ブラックテイルモン Uver.",
+        "directory_name": "blacktailmon_uver"
+      },
+      {
+        "name_ja": "ブラックテイルモン",
+        "directory_name": "blacktailmon"
+      }
+    ],
+    "シャウトモンX7": [
+      {
+        "name_ja": "シャウトモンX7：スペリオルモード",
+        "directory_name": "shoutmonx7_superior"
+      },
+      {
+        "name_ja": "シャウトモンX7",
+        "directory_name": "shoutmonx7"
+      }
+    ],
+    "バーガモン": [
+      {
+        "name_ja": "バーガモン",
+        "directory_name": "burgamon_lv4"
+      },
+      {
+        "name_ja": "バーガモン",
+        "directory_name": "burgamon"
+      }
+    ],
+    "ガイオウモン": [
+      {
+        "name_ja": "ガイオウモン：厳刀ノ型",
+        "directory_name": "gaioumon_itto"
+      },
+      {
+        "name_ja": "ガイオウモン",
+        "directory_name": "gaioumon"
+      }
+    ],
+    "オメガモン": [
+      {
+        "name_ja": "オメガモン：マーシフルモード",
+        "directory_name": "omegamon_merciful"
+      },
+      {
+        "name_ja": "オメガモン ズワルト",
+        "directory_name": "omegamon_zwart"
+      },
+      {
+        "name_ja": "オメガモン Alter-B",
+        "directory_name": "omegamon_alter-b"
+      },
+      {
+        "name_ja": "オメガモン Alter-S",
+        "directory_name": "omegamon-alter-s"
+      },
+      {
+        "name_ja": "オメガモン",
+        "directory_name": "omegamon"
+      }
+    ],
+    "ワーガルルモン": [
+      {
+        "name_ja": "ワーガルルモン：サジタリウスモード",
+        "directory_name": "waregarurumon_sagittarius"
+      },
+      {
+        "name_ja": "ワーガルルモン",
+        "directory_name": "weregarrumon"
+      }
+    ],
+    "アイズモン": [
+      {
+        "name_ja": "アイズモン：スキャッターモード",
+        "directory_name": "eyesmon_scatter"
+      },
+      {
+        "name_ja": "アイズモン",
+        "directory_name": "eyesmon"
+      }
+    ],
+    "アルゴモン": [
+      {
+        "name_ja": "アルゴモン",
+        "directory_name": "algomon_lv1"
+      },
+      {
+        "name_ja": "アルゴモン",
+        "directory_name": "algomon_lv4"
+      },
+      {
+        "name_ja": "アルゴモン",
+        "directory_name": "algomon_lv3"
+      },
+      {
+        "name_ja": "アルゴモン",
+        "directory_name": "algomon_lv2"
+      },
+      {
+        "name_ja": "アルゴモン",
+        "directory_name": "algomon"
+      },
+      {
+        "name_ja": "アルゴモン",
+        "directory_name": "algomon-ultimate"
+      }
+    ],
+    "アレスタードラモン": [
+      {
+        "name_ja": "アレスタードラモン：スペリオルモード",
+        "directory_name": "arresterdramon_superior"
+      },
+      {
+        "name_ja": "アレスタードラモン",
+        "directory_name": "arresterdramon"
+      }
+    ],
+    "エオスモン": [
+      {
+        "name_ja": "エオスモン",
+        "directory_name": "eosmon_lv6"
+      },
+      {
+        "name_ja": "エオスモン",
+        "directory_name": "eosmon_lv5"
+      },
+      {
+        "name_ja": "エオスモン",
+        "directory_name": "eosmon_lv4"
+      }
+    ],
+    "ガブモン": [
+      {
+        "name_ja": "ガブモン -友情の絆-",
+        "directory_name": "gabumon_kizuna"
+      },
+      {
+        "name_ja": "ガブモン",
+        "directory_name": "gabumon"
+      }
+    ],
+    "アグモン": [
+      {
+        "name_ja": "アグモン -勇気の絆-",
+        "directory_name": "agumon_kizuna"
+      },
+      {
+        "name_ja": "アグモン",
+        "directory_name": "agumon"
+      }
+    ],
+    "ラセンモン": [
+      {
+        "name_ja": "ラセンモン",
+        "directory_name": "rasenmon"
+      },
+      {
+        "name_ja": "ラセンモン：激昂モード",
+        "directory_name": "rasenmon_f"
+      }
+    ],
+    "オファニモン": [
+      {
+        "name_ja": "オファニモン：フォールダウンモード（Ｘ抗体）",
+        "directory_name": "ofanimonfdm_x"
+      },
+      {
+        "name_ja": "オファニモン：フォールダウンモード",
+        "directory_name": "ofanimonfalldownmode"
+      },
+      {
+        "name_ja": "オファニモン",
+        "directory_name": "ofanimon"
+      }
+    ],
+    "ジャスティモン": [
+      {
+        "name_ja": "ジャスティモン：ブリッツアーム",
+        "directory_name": "justimon_blitzarm"
+      },
+      {
+        "name_ja": "ジャスティモン：クリティカルアーム",
+        "directory_name": "justimon_criticalarm"
+      },
+      {
+        "name_ja": "ジャスティモン：アクセルアーム",
+        "directory_name": "justimon"
+      }
+    ],
+    "クズハモン": [
+      {
+        "name_ja": "クズハモン：巫女モード",
+        "directory_name": "kuzuhamon_miko"
+      },
+      {
+        "name_ja": "クズハモン",
+        "directory_name": "kuzuhamon"
+      }
+    ],
+    "ケルベロモン": [
+      {
+        "name_ja": "ケルベロモン：人狼モード",
+        "directory_name": "cerberumon_werewolfmode"
+      },
+      {
+        "name_ja": "ケルベロモン",
+        "directory_name": "cerberumon"
+      }
+    ],
+    "ラピッドモン": [
+      {
+        "name_ja": "ラピッドモン",
+        "directory_name": "rapidmon_gold"
+      },
+      {
+        "name_ja": "ラピッドモン",
+        "directory_name": "rapidmon"
+      }
+    ],
+    "アイギオテュースモン": [
+      {
+        "name_ja": "アイギオテュースモン：ホーリー",
+        "directory_name": "aegiochusmon_holly"
+      },
+      {
+        "name_ja": "アイギオテュースモン：ブルー",
+        "directory_name": "aegiochusmon:blue"
+      },
+      {
+        "name_ja": "アイギオテュースモン：ダーク",
+        "directory_name": "aegiochusmon:dark"
+      },
+      {
+        "name_ja": "アイギオテュースモン：グリーン",
+        "directory_name": "aegiochusmon:green"
+      },
+      {
+        "name_ja": "アイギオテュースモン",
+        "directory_name": "aegiochusmon"
+      }
+    ],
+    "メイクラックモン": [
+      {
+        "name_ja": "メイクラックモン：ヴィシャスモード",
+        "directory_name": "meicrackmon_v"
+      },
+      {
+        "name_ja": "メイクラックモン",
+        "directory_name": "meicrackmon"
+      }
+    ],
+    "マッドレオモン": [
+      {
+        "name_ja": "マッドレオモン：アームドモード",
+        "directory_name": "madleomon:armedmode"
+      },
+      {
+        "name_ja": "マッドレオモン",
+        "directory_name": "madleomon"
+      }
+    ],
+    "スカルナイトモン": [
+      {
+        "name_ja": "スカルナイトモン：ビッグアックスモード",
+        "directory_name": "skullknightmonbigaxemode"
+      },
+      {
+        "name_ja": "スカルナイトモン：騎馬モード",
+        "directory_name": "skullknightmoncavaliermode"
+      },
+      {
+        "name_ja": "スカルナイトモン",
+        "directory_name": "skullknightmon"
+      }
+    ],
+    "サイバードラモン": [
+      {
+        "name_ja": "サイバードラモン",
+        "directory_name": "cyberdramon-xwars"
+      },
+      {
+        "name_ja": "サイバードラモン",
+        "directory_name": "cyberdramon"
+      }
+    ],
+    "ロゼモン": [
+      {
+        "name_ja": "ロゼモン：バーストモード",
+        "directory_name": "rosemonburstmode"
+      },
+      {
+        "name_ja": "ロゼモン",
+        "directory_name": "rosemon"
+      }
+    ],
+    "レイヴモン": [
+      {
+        "name_ja": "レイヴモン：バーストモード",
+        "directory_name": "ravmonburstmode"
+      },
+      {
+        "name_ja": "レイヴモン",
+        "directory_name": "ravmon"
+      }
+    ],
+    "ルーチェモン": [
+      {
+        "name_ja": "ルーチェモン：ラルバ",
+        "directory_name": "lucemonlarva"
+      },
+      {
+        "name_ja": "ルーチェモン：サタンモード",
+        "directory_name": "lucemonsatanmode"
+      },
+      {
+        "name_ja": "ルーチェモン：フォールダウンモード",
+        "directory_name": "rucemonfalldownmode"
+      },
+      {
+        "name_ja": "ルーチェモン",
+        "directory_name": "lucemon"
+      }
+    ],
+    "ミラージュガオガモン": [
+      {
+        "name_ja": "ミラージュガオガモン：バーストモード",
+        "directory_name": "miragegaogamon:burstmode"
+      },
+      {
+        "name_ja": "ミラージュガオガモン",
+        "directory_name": "miragegaogamon"
+      }
+    ],
+    "ベルフェモン": [
+      {
+        "name_ja": "ベルフェモン：レイジモード",
+        "directory_name": "belphemonragemode"
+      },
+      {
+        "name_ja": "ベルフェモン：スリープモード",
+        "directory_name": "belphemonsleepmode"
+      }
+    ],
+    "ベルゼブモン": [
+      {
+        "name_ja": "ベルゼブモン：ブラストモード",
+        "directory_name": "beelzebumonblastmode"
+      },
+      {
+        "name_ja": "ベルゼブモン",
+        "directory_name": "beelzebumon"
+      }
+    ],
+    "ドゥフトモン": [
+      {
+        "name_ja": "ドゥフトモン：レオパルドモード",
+        "directory_name": "duftmonleopardmode"
+      },
+      {
+        "name_ja": "ドゥフトモン",
+        "directory_name": "duftmon"
+      }
+    ],
+    "デュークモン": [
+      {
+        "name_ja": "デュークモン：クリムゾンモード",
+        "directory_name": "dukemoncrimsonmode"
+      },
+      {
+        "name_ja": "デュークモン",
+        "directory_name": "dukemon"
+      }
+    ],
+    "サクヤモン": [
+      {
+        "name_ja": "サクヤモン：巫女モード",
+        "directory_name": "sakuyamon:mikomode"
+      },
+      {
+        "name_ja": "サクヤモン",
+        "directory_name": "sakuyamon"
+      }
+    ],
+    "カオスモン": [
+      {
+        "name_ja": "カオスモン：ヴァロドゥルアーム",
+        "directory_name": "chaosmonvaldurarm"
+      },
+      {
+        "name_ja": "カオスモン",
+        "directory_name": "chaosmon"
+      }
+    ],
+    "アルファモン": [
+      {
+        "name_ja": "アルファモン：王竜剣",
+        "directory_name": "alphamon:ouryuken"
+      },
+      {
+        "name_ja": "アルファモン",
+        "directory_name": "alphamon"
+      }
+    ]
+  }
+}
