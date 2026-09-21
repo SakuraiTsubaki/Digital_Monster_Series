@@ -1,0 +1,36 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+Subject: [PATCH] Add Digital Monster replacement species profile hook
+
+Target: rh-hideout/pokeemerald-expansion
+Ref: 75b806a3ab57a81ff1eb6179288981f0b3cc3050
+
+This patch only establishes the catalog switch point. Runtime activation remains
+blocked until generated Digital Monster SpeciesInfo data passes the project
+readiness gate.
+
+diff --git a/src/data/pokemon/species_info.h b/src/data/pokemon/species_info.h
+--- a/src/data/pokemon/species_info.h
++++ b/src/data/pokemon/species_info.h
+@@
+-    #include "species_info/gen_1_families.h"
+-    #include "species_info/gen_2_families.h"
+-    #include "species_info/gen_3_families.h"
+-    #include "species_info/gen_4_families.h"
+-    #include "species_info/gen_5_families.h"
+-    #include "species_info/gen_6_families.h"
+-    #include "species_info/gen_7_families.h"
+-    #include "species_info/gen_8_families.h"
+-    #include "species_info/gen_9_families.h"
++#ifdef DIGITAL_MONSTER_SERIES
++    #include "species_info/digital_monster_families.h"
++#else
++    #include "species_info/gen_1_families.h"
++    #include "species_info/gen_2_families.h"
++    #include "species_info/gen_3_families.h"
++    #include "species_info/gen_4_families.h"
++    #include "species_info/gen_5_families.h"
++    #include "species_info/gen_6_families.h"
++    #include "species_info/gen_7_families.h"
++    #include "species_info/gen_8_families.h"
++    #include "species_info/gen_9_families.h"
++#endif
