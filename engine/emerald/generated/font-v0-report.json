@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "profile": "font-v0",
+  "canonical": false,
+  "mapped_glyphs": 642,
+  "padded_capacity": 656,
+  "unused_tail_slots": 14,
+  "source_counts": {
+    "M+ Bitmap Font mplus_f12r": 1,
+    "M+ Bitmap Font mplus_j12r": 638,
+    "Ark Pixel Font 12px Mono zh_cn": 3
+  },
+  "coverage_complete": true,
+  "output": {
+    "normal": {
+      "glyph_geometry": "8x16",
+      "visible_height": 15,
+      "u16_count": 10496,
+      "bytes": 20992
+    },
+    "small": {
+      "glyph_geometry": "8x16",
+      "visible_height": 12,
+      "u16_count": 10496,
+      "bytes": 20992
+    },
+    "short": {
+      "glyph_geometry": "16x16",
+      "visible_height": 14,
+      "u16_count": 20992,
+      "bytes": 41984
+    }
+  },
+  "rare_official_characters": {
+    "泿": "official Digimon reference / Fujamon / 泿水弾",
+    "砍": "official Digimon reference / Nezhamon Crimson Mode / 斬砍双刃撃",
+    "觔": "official Digimon reference / Gokuwmon / 觔斗雲",
+    "^": "official Digimon reference / Okuwamon (X Antibody) / シザーアームズΩ３^３"
+  },
+  "policy": "Use only as a rendering/bootstrap font. Official Japanese strings remain unchanged. Replace appearance with verified official/extracted glyph assets when available."
+}
