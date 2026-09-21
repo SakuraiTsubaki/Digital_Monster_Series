@@ -1,0 +1,108 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+Subject: [PATCH] Disable Pokemon species families in Digital Monster profile
+
+Target: rh-hideout/pokeemerald-expansion
+Ref: 75b806a3ab57a81ff1eb6179288981f0b3cc3050
+
+Digital Monster entities occupy species IDs 1..1468. The stock engine has
+Pokemon/form constants through 1572, so leaving family-specific features
+enabled could cause numeric-ID collisions (for example, a Pokemon-specific
+branch interpreting a Digital Monster ID as that Pokemon).
+
+Disable Pokemon families/forms and graphics-only species systems for the
+DIGITAL_MONSTER_SERIES profile. Constants remain available for compilation,
+but their family data/features are gated off.
+
+diff --git a/include/config/species_enabled.h b/include/config/species_enabled.h
+--- a/include/config/species_enabled.h
++++ b/include/config/species_enabled.h
+@@
+ // To disable specific families, replace P_GEN_x_POKEMON with FALSE.
++#ifdef DIGITAL_MONSTER_SERIES
++#undef P_GEN_1_POKEMON
++#undef P_GEN_2_POKEMON
++#undef P_GEN_3_POKEMON
++#undef P_GEN_4_POKEMON
++#undef P_GEN_5_POKEMON
++#undef P_GEN_6_POKEMON
++#undef P_GEN_7_POKEMON
++#undef P_GEN_8_POKEMON
++#undef P_GEN_9_POKEMON
++#define P_GEN_1_POKEMON FALSE
++#define P_GEN_2_POKEMON FALSE
++#define P_GEN_3_POKEMON FALSE
++#define P_GEN_4_POKEMON FALSE
++#define P_GEN_5_POKEMON FALSE
++#define P_GEN_6_POKEMON FALSE
++#define P_GEN_7_POKEMON FALSE
++#define P_GEN_8_POKEMON FALSE
++#define P_GEN_9_POKEMON FALSE
++#undef P_MEGA_EVOLUTIONS
++#undef P_PRIMAL_REVERSIONS
++#undef P_ULTRA_BURST_FORMS
++#undef P_GIGANTAMAX_FORMS
++#undef P_TERA_FORMS
++#undef P_FUSION_FORMS
++#undef P_REGIONAL_FORMS
++#undef P_ALOLAN_FORMS
++#undef P_GALARIAN_FORMS
++#undef P_HISUIAN_FORMS
++#undef P_PALDEAN_FORMS
++#undef P_PIKACHU_EXTRA_FORMS
++#undef P_COSPLAY_PIKACHU_FORMS
++#undef P_CAP_PIKACHU_FORMS
++#undef P_CROSS_GENERATION_EVOS
++#undef P_GEN_2_CROSS_EVOS
++#undef P_GEN_3_CROSS_EVOS
++#undef P_GEN_4_CROSS_EVOS
++#undef P_GEN_6_CROSS_EVOS
++#undef P_GEN_8_CROSS_EVOS
++#undef P_GEN_9_CROSS_EVOS
++#define P_MEGA_EVOLUTIONS FALSE
++#define P_PRIMAL_REVERSIONS FALSE
++#define P_ULTRA_BURST_FORMS FALSE
++#define P_GIGANTAMAX_FORMS FALSE
++#define P_TERA_FORMS FALSE
++#define P_FUSION_FORMS FALSE
++#define P_REGIONAL_FORMS FALSE
++#define P_ALOLAN_FORMS FALSE
++#define P_GALARIAN_FORMS FALSE
++#define P_HISUIAN_FORMS FALSE
++#define P_PALDEAN_FORMS FALSE
++#define P_PIKACHU_EXTRA_FORMS FALSE
++#define P_COSPLAY_PIKACHU_FORMS FALSE
++#define P_CAP_PIKACHU_FORMS FALSE
++#define P_CROSS_GENERATION_EVOS FALSE
++#define P_GEN_2_CROSS_EVOS FALSE
++#define P_GEN_3_CROSS_EVOS FALSE
++#define P_GEN_4_CROSS_EVOS FALSE
++#define P_GEN_6_CROSS_EVOS FALSE
++#define P_GEN_8_CROSS_EVOS FALSE
++#define P_GEN_9_CROSS_EVOS FALSE
++#endif
++
+ #define P_FAMILY_BULBASAUR               P_GEN_1_POKEMON
+diff --git a/include/config/pokemon.h b/include/config/pokemon.h
+--- a/include/config/pokemon.h
++++ b/include/config/pokemon.h
+@@
+ #define P_CRIES_ENABLED                  TRUE
++#ifdef DIGITAL_MONSTER_SERIES
++#undef P_GENDER_DIFFERENCES
++#undef P_CUSTOM_GENDER_DIFF_ICONS
++#undef P_FOOTPRINTS
++#undef P_CRIES_ENABLED
++#define P_GENDER_DIFFERENCES FALSE
++#define P_CUSTOM_GENDER_DIFF_ICONS FALSE
++#define P_FOOTPRINTS FALSE
++#define P_CRIES_ENABLED FALSE
++#endif
+diff --git a/include/config/overworld.h b/include/config/overworld.h
+--- a/include/config/overworld.h
++++ b/include/config/overworld.h
+@@
+ #define OW_POKEMON_OBJECT_EVENTS       TRUE
++#ifdef DIGITAL_MONSTER_SERIES
++#undef OW_POKEMON_OBJECT_EVENTS
++#define OW_POKEMON_OBJECT_EVENTS FALSE
++#endif

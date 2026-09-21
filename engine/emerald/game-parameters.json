@@ -99,9 +99,10 @@
         "pinned_engine_moves_count_all": 935,
         "engine_move_id_range": "0..934",
         "digital_monster_move_id_range": "935..3491",
-        "runtime_moves_count_all": 3492,
-        "remaining_12bit_ids": 604,
-        "strategy": "append after engine move catalog"
+        "runtime_moves_count_all": 3493,
+        "remaining_12bit_ids": 603,
+        "strategy": "append after engine move catalog",
+        "bootstrap_move_id": 3492
       }
     },
     "held_item_backing_field": {
