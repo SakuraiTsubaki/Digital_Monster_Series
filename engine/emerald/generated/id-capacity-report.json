@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "generated_from": {
+    "digimon_master": "data/digimon_reference/master/digimon_master.csv",
+    "appmon_master": "appmon/appmon_master.csv",
+    "digimon_moves": "data/digimon_reference/moves/special_moves.csv",
+    "appmon_moves": "appmon/appmon_special_moves.csv"
+  },
+  "species": {
+    "digimon_rows": 1320,
+    "appmon_rows": 148,
+    "combined_rows": 1468,
+    "assigned_id_start": 1,
+    "assigned_id_end": 1468,
+    "emerald_11bit_max": 2047,
+    "remaining_ids": 579,
+    "fits_11bit": true
+  },
+  "techniques": {
+    "digimon_assignment_rows": 2593,
+    "appmon_assignment_rows": 279,
+    "combined_assignment_rows": 2872,
+    "exact_unique_japanese_names": 2557,
+    "assigned_id_start": 1,
+    "assigned_id_end": 2557,
+    "emerald_11bit_max": 2047,
+    "remaining_ids_if_fit": 0,
+    "fits_11bit": false,
+    "policy": "requires_move_id_widening_before_full_import",
+    "normalization": "none; exact official Japanese strings preserved and deduplicated byte-for-byte"
+  }
+}
