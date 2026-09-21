@@ -1,0 +1,12 @@
+﻿scope,id,field,issue_type,ja_value,localized_value,assessment,evidence_url
+site,,all non-Japanese text,machine_translation_scope,日本語を基本として制作,영어·중국어·한국어는 기계번역 사용 가능,공식 사이트가 비일본어 문구에 기계번역을 사용한다고 명시. 일본어를 정본으로 취급해야 함.,https://digimon.net/appmon/
+site,,Korean naming,term_inconsistency,アプモン,페이지 제목: 아프몬 / 프로필 96건: 어플몬 / 관련 제목: 압몬,동일 개념의 한국어 표기가 페이지 영역에 따라 일치하지 않음.,https://digimon.net/appmon_ko/detail.php?id=1
+site,,related Appmon,dynamic_recommendation_not_evolution,関連するアプモンはこちら,재요청 시 추천 ID 조합이 변함,관계 블록은 진화 관계로 확정할 수 없는 동적 추천 스냅샷. 데이터에는 스냅샷으로만 보존.,https://digimon.net/appmon/detail.php?id=1
+record,121,attribute_ko,likely_machine_translation,ゴッド,하나님,분류명 God을 고유 분류가 아닌 종교적 호칭처럼 번역한 것으로 보임.,https://digimon.net/appmon_ko/detail.php?id=121
+record,122,attribute_ko,likely_machine_translation,ゴッド,하나님,분류명 God을 고유 분류가 아닌 종교적 호칭처럼 번역한 것으로 보임.,https://digimon.net/appmon_ko/detail.php?id=122
+record,123,attribute_ko,likely_machine_translation,ゴッド,하나님,분류명 God을 고유 분류가 아닌 종교적 호칭처럼 번역한 것으로 보임.,https://digimon.net/appmon_ko/detail.php?id=123
+record,124,attribute_ko,likely_machine_translation,ゴッド,하나님,분류명 God을 고유 분류가 아닌 종교적 호칭처럼 번역한 것으로 보임.,https://digimon.net/appmon_ko/detail.php?id=124
+record,125,attribute_ko,likely_machine_translation,ゴッド,하나님,분류명 God을 고유 분류가 아닌 종교적 호칭처럼 번역한 것으로 보임.,https://digimon.net/appmon_ko/detail.php?id=125
+record,126,attribute_ko,likely_machine_translation,ゴッド,하나님,분류명 God을 고유 분류가 아닌 종교적 호칭처럼 번역한 것으로 보임.,https://digimon.net/appmon_ko/detail.php?id=126
+record,148,attribute_ko,semantic_mismatch,不明,없음,일본어는 '불명/unknown'인데 한국어 속성은 '없음/none'으로 표시. 같은 페이지의 등급은 '불명'.,https://digimon.net/appmon_ko/detail.php?id=148
+record,148,icon,not_listed_on_detail_page,상세 페이지의 아이콘 img 태그 없음,관례 경로 img_icon_148.png는 별도 HTTP 확인 시 200,아이콘 파일 경로는 응답하지만 상세 페이지에는 공식 이미지로 노출되지 않음. 마스터의 icon_listed는 false 유지.,https://digimon.net/appmon/detail.php?id=148

@@ -1,0 +1,149 @@
+﻿id,name_ja,name_ko,name_en,name_zh_hans,name_zh_hant,url_ja,url_ko,url_en
+1,ガッチモン,서치몬,Gatchmon,盖奇兽,蓋奇獸,https://digimon.net/appmon/detail.php?id=1,https://digimon.net/appmon_ko/detail.php?id=1,https://digimon.net/appmon_en/detail.php?id=1
+2,コールモン,콜몬,Callmon,电话兽,電話獸,https://digimon.net/appmon/detail.php?id=2,https://digimon.net/appmon_ko/detail.php?id=2,https://digimon.net/appmon_en/detail.php?id=2
+3,メールモン,메일몬,Mailmon,邮件兽,郵件獸,https://digimon.net/appmon/detail.php?id=3,https://digimon.net/appmon_ko/detail.php?id=3,https://digimon.net/appmon_en/detail.php?id=3
+4,ツブモン,츠부몬,Tweetmon,发文兽,發文獸,https://digimon.net/appmon/detail.php?id=4,https://digimon.net/appmon_ko/detail.php?id=4,https://digimon.net/appmon_en/detail.php?id=4
+5,ゲンゴーモン,언어몬,Gengomon,语言兽,語言獸,https://digimon.net/appmon/detail.php?id=5,https://digimon.net/appmon_ko/detail.php?id=5,https://digimon.net/appmon_en/detail.php?id=5
+6,アドモン,어드몬,Addmon,通讯录兽,通訊錄獸,https://digimon.net/appmon/detail.php?id=6,https://digimon.net/appmon_ko/detail.php?id=6,https://digimon.net/appmon_en/detail.php?id=6
+7,レビューモン,리뷰몬,Reviewmon,评论兽,評論獸,https://digimon.net/appmon/detail.php?id=7,https://digimon.net/appmon_ko/detail.php?id=7,https://digimon.net/appmon_en/detail.php?id=7
+8,セットモン,세팅몬,Setmon,设置兽,設定獸,https://digimon.net/appmon/detail.php?id=8,https://digimon.net/appmon_ko/detail.php?id=8,https://digimon.net/appmon_en/detail.php?id=8
+9,メッセモン,메시몬,Messemon,信息兽,訊息獸,https://digimon.net/appmon/detail.php?id=9,https://digimon.net/appmon_ko/detail.php?id=9,https://digimon.net/appmon_en/detail.php?id=9
+10,コソモン,속닥몬,Kosomon,嘀咕兽,傳聞獸,https://digimon.net/appmon/detail.php?id=10,https://digimon.net/appmon_ko/detail.php?id=10,https://digimon.net/appmon_en/detail.php?id=10
+11,ロケットモン,로켓몬,Rocketmon,火箭兽,火箭獸,https://digimon.net/appmon/detail.php?id=11,https://digimon.net/appmon_ko/detail.php?id=11,https://digimon.net/appmon_en/detail.php?id=11
+12,ナビモン,내비몬,Navimon,导航兽,導航獸,https://digimon.net/appmon/detail.php?id=12,https://digimon.net/appmon_ko/detail.php?id=12,https://digimon.net/appmon_en/detail.php?id=12
+13,ジェットモン,제트몬,Jetmon,喷气兽,噴射機獸,https://digimon.net/appmon/detail.php?id=13,https://digimon.net/appmon_ko/detail.php?id=13,https://digimon.net/appmon_en/detail.php?id=13
+14,レッシャモン,열차몬,Resshamon,列车兽,列車獸,https://digimon.net/appmon/detail.php?id=14,https://digimon.net/appmon_ko/detail.php?id=14,https://digimon.net/appmon_en/detail.php?id=14
+15,ウェザーモン,웨더몬,Weathermon,天气兽,天氣獸,https://digimon.net/appmon/detail.php?id=15,https://digimon.net/appmon_ko/detail.php?id=15,https://digimon.net/appmon_en/detail.php?id=15
+16,コンパスモン,컴퍼스몬,Compassmon,指南针兽,指南針獸,https://digimon.net/appmon/detail.php?id=16,https://digimon.net/appmon_ko/detail.php?id=16,https://digimon.net/appmon_en/detail.php?id=16
+17,ヤドモン,호텔몬,Yadomon,旅店兽,旅館獸,https://digimon.net/appmon/detail.php?id=17,https://digimon.net/appmon_ko/detail.php?id=17,https://digimon.net/appmon_en/detail.php?id=17
+18,ニュースモン,뉴스몬,Newsmon,新闻兽,新聞獸,https://digimon.net/appmon/detail.php?id=18,https://digimon.net/appmon_ko/detail.php?id=18,https://digimon.net/appmon_en/detail.php?id=18
+19,チュートモン,튜토몬,Tutomon,解说兽,解說獸,https://digimon.net/appmon/detail.php?id=19,https://digimon.net/appmon_ko/detail.php?id=19,https://digimon.net/appmon_en/detail.php?id=19
+20,エムシーモン,엠시몬,Mcmon,主持兽,主持獸,https://digimon.net/appmon/detail.php?id=20,https://digimon.net/appmon_ko/detail.php?id=20,https://digimon.net/appmon_en/detail.php?id=20
+21,キャメラモン,카메라몬,Cameramon,摄影兽,攝影獸,https://digimon.net/appmon/detail.php?id=21,https://digimon.net/appmon_ko/detail.php?id=21,https://digimon.net/appmon_en/detail.php?id=21
+22,レコモン,레코몬,Recomon,录音兽,錄音獸,https://digimon.net/appmon/detail.php?id=22,https://digimon.net/appmon_ko/detail.php?id=22,https://digimon.net/appmon_en/detail.php?id=22
+23,カリキュモン,칼큐몬,Calcumon,计算兽,計算獸,https://digimon.net/appmon/detail.php?id=23,https://digimon.net/appmon_ko/detail.php?id=23,https://digimon.net/appmon_en/detail.php?id=23
+24,ゴミモン,트래쉬몬,Gomimon,垃圾兽,垃圾獸,https://digimon.net/appmon/detail.php?id=24,https://digimon.net/appmon_ko/detail.php?id=24,https://digimon.net/appmon_en/detail.php?id=24
+25,ミラーモン,미러몬,Mirrormon,镜面兽,鏡子獸,https://digimon.net/appmon/detail.php?id=25,https://digimon.net/appmon_ko/detail.php?id=25,https://digimon.net/appmon_en/detail.php?id=25
+26,ライトモン,라이트몬,Lightmon,灯光兽,照明獸,https://digimon.net/appmon/detail.php?id=26,https://digimon.net/appmon_ko/detail.php?id=26,https://digimon.net/appmon_en/detail.php?id=26
+27,ウォッチモン,워치몬,Watchmon,手表兽,手錶獸,https://digimon.net/appmon/detail.php?id=27,https://digimon.net/appmon_ko/detail.php?id=27,https://digimon.net/appmon_en/detail.php?id=27
+28,ダイアリモン,다이어리몬,Diarimon,日记兽,日記獸,https://digimon.net/appmon/detail.php?id=28,https://digimon.net/appmon_ko/detail.php?id=28,https://digimon.net/appmon_en/detail.php?id=28
+29,カレンダモン,캘린더몬,Calendamon,日历兽,日曆獸,https://digimon.net/appmon/detail.php?id=29,https://digimon.net/appmon_ko/detail.php?id=29,https://digimon.net/appmon_en/detail.php?id=29
+30,オンパモン,음파몬,Onpamon,声波兽,音波獸,https://digimon.net/appmon/detail.php?id=30,https://digimon.net/appmon_ko/detail.php?id=30,https://digimon.net/appmon_en/detail.php?id=30
+31,ジャミングモン,재밍몬,Jammingmon,干扰兽,干擾獸,https://digimon.net/appmon/detail.php?id=31,https://digimon.net/appmon_ko/detail.php?id=31,https://digimon.net/appmon_en/detail.php?id=31
+32,プロテクモン,프로텍몬,Protecmon,防护兽,防護獸,https://digimon.net/appmon/detail.php?id=32,https://digimon.net/appmon_ko/detail.php?id=32,https://digimon.net/appmon_en/detail.php?id=32
+33,ハックモン,핵몬,Hackmon,黑客兽,駭客獸,https://digimon.net/appmon/detail.php?id=33,https://digimon.net/appmon_ko/detail.php?id=33,https://digimon.net/appmon_en/detail.php?id=33
+34,バッテリモン,배터리몬,Batterimon,电池兽,電池獸,https://digimon.net/appmon/detail.php?id=34,https://digimon.net/appmon_ko/detail.php?id=34,https://digimon.net/appmon_en/detail.php?id=34
+35,ペコモン,페코몬,Pekomon,扁扁兽,壓縮獸,https://digimon.net/appmon/detail.php?id=35,https://digimon.net/appmon_ko/detail.php?id=35,https://digimon.net/appmon_en/detail.php?id=35
+36,ポコモン,포코몬,Pokomon,鼓鼓兽,解壓獸,https://digimon.net/appmon/detail.php?id=36,https://digimon.net/appmon_ko/detail.php?id=36,https://digimon.net/appmon_en/detail.php?id=36
+37,コピペモン,카피페몬,Copipemon,复制粘贴兽,複製貼上獸,https://digimon.net/appmon/detail.php?id=37,https://digimon.net/appmon_ko/detail.php?id=37,https://digimon.net/appmon_en/detail.php?id=37
+38,セーブモン,세이브몬,Savemon,储存兽,存檔獸,https://digimon.net/appmon/detail.php?id=38,https://digimon.net/appmon_ko/detail.php?id=38,https://digimon.net/appmon_en/detail.php?id=38
+39,カベモン,월몬,Kabemon,壁纸兽,桌布獸,https://digimon.net/appmon/detail.php?id=39,https://digimon.net/appmon_ko/detail.php?id=39,https://digimon.net/appmon_en/detail.php?id=39
+40,エコモン,에코몬,Ecomon,节能兽,節能獸,https://digimon.net/appmon/detail.php?id=40,https://digimon.net/appmon_ko/detail.php?id=40,https://digimon.net/appmon_en/detail.php?id=40
+41,ピーポモン,삐뽀몬,Pipomon,警笛兽,警報獸,https://digimon.net/appmon/detail.php?id=41,https://digimon.net/appmon_ko/detail.php?id=41,https://digimon.net/appmon_en/detail.php?id=41
+42,デンパモン,시그널몬,Denpamon,电波兽,電波獸,https://digimon.net/appmon/detail.php?id=42,https://digimon.net/appmon_ko/detail.php?id=42,https://digimon.net/appmon_en/detail.php?id=42
+43,オンモン,온몬,Onmon,上线兽,連線獸,https://digimon.net/appmon/detail.php?id=43,https://digimon.net/appmon_ko/detail.php?id=43,https://digimon.net/appmon_en/detail.php?id=43
+44,オフモン,오프몬,Offmon,离线兽,離線獸,https://digimon.net/appmon/detail.php?id=44,https://digimon.net/appmon_ko/detail.php?id=44,https://digimon.net/appmon_en/detail.php?id=44
+45,ドカモン,콰광몬,Dokamon,多卡兽,多卡獸,https://digimon.net/appmon/detail.php?id=45,https://digimon.net/appmon_ko/detail.php?id=45,https://digimon.net/appmon_en/detail.php?id=45
+46,ショットモン,샷몬,Shotmon,射击兽,射擊獸,https://digimon.net/appmon/detail.php?id=46,https://digimon.net/appmon_ko/detail.php?id=46,https://digimon.net/appmon_en/detail.php?id=46
+47,カードモン,카드몬,Cardmon,卡片兽,卡牌獸,https://digimon.net/appmon/detail.php?id=47,https://digimon.net/appmon_ko/detail.php?id=47,https://digimon.net/appmon_en/detail.php?id=47
+48,ロープレモン,롤플레잉몬,Roleplaymon,角色扮演兽,角色扮演獸,https://digimon.net/appmon/detail.php?id=48,https://digimon.net/appmon_ko/detail.php?id=48,https://digimon.net/appmon_en/detail.php?id=48
+49,パズルモン,퍼즐몬,Puzzlemon,智谜兽,益智獸,https://digimon.net/appmon/detail.php?id=49,https://digimon.net/appmon_ko/detail.php?id=49,https://digimon.net/appmon_en/detail.php?id=49
+50,ダンスモン,댄스몬,Dancemon,舞蹈兽,舞蹈獸,https://digimon.net/appmon/detail.php?id=50,https://digimon.net/appmon_ko/detail.php?id=50,https://digimon.net/appmon_en/detail.php?id=50
+51,レースモン,레이스몬,Racemon,竞速兽,賽車獸,https://digimon.net/appmon/detail.php?id=51,https://digimon.net/appmon_ko/detail.php?id=51,https://digimon.net/appmon_en/detail.php?id=51
+52,ドローモン,드로몬,Drawmon,颜料兽,繪圖獸,https://digimon.net/appmon/detail.php?id=52,https://digimon.net/appmon_ko/detail.php?id=52,https://digimon.net/appmon_en/detail.php?id=52
+53,テラーモン,텔러몬,Tellermon,预言兽,預知獸,https://digimon.net/appmon/detail.php?id=53,https://digimon.net/appmon_ko/detail.php?id=53,https://digimon.net/appmon_en/detail.php?id=53
+54,ミュージモン,뮤지몬,Musimon,音乐兽,音樂獸,https://digimon.net/appmon/detail.php?id=54,https://digimon.net/appmon_ko/detail.php?id=54,https://digimon.net/appmon_en/detail.php?id=54
+55,ペロリモン,덥석몬,Perorimon,舔舔兽,舔舔獸,https://digimon.net/appmon/detail.php?id=55,https://digimon.net/appmon_ko/detail.php?id=55,https://digimon.net/appmon_en/detail.php?id=55
+56,ドーガモン,비디몬,Dogamon,影视兽,影片獸,https://digimon.net/appmon/detail.php?id=56,https://digimon.net/appmon_ko/detail.php?id=56,https://digimon.net/appmon_en/detail.php?id=56
+57,ドレスモン,드레스몬,Dressmon,洋装兽,服裝獸,https://digimon.net/appmon/detail.php?id=57,https://digimon.net/appmon_ko/detail.php?id=57,https://digimon.net/appmon_en/detail.php?id=57
+58,ブックモン,북몬,Bookmon,书本兽,書本獸,https://digimon.net/appmon/detail.php?id=58,https://digimon.net/appmon_ko/detail.php?id=58,https://digimon.net/appmon_en/detail.php?id=58
+59,ガシャモン,뽑몬,Gashamon,扭蛋兽,扭蛋獸,https://digimon.net/appmon/detail.php?id=59,https://digimon.net/appmon_ko/detail.php?id=59,https://digimon.net/appmon_en/detail.php?id=59
+60,ラックモン,럭몬,Luckmon,好运兽,幸運獸,https://digimon.net/appmon/detail.php?id=60,https://digimon.net/appmon_ko/detail.php?id=60,https://digimon.net/appmon_en/detail.php?id=60
+61,トリックモン,트릭몬,Trickmon,魔术兽,魔術獸,https://digimon.net/appmon/detail.php?id=61,https://digimon.net/appmon_ko/detail.php?id=61,https://digimon.net/appmon_en/detail.php?id=61
+62,ダイスモン,다이스몬,Dicemon,骰子兽,骰子獸,https://digimon.net/appmon/detail.php?id=62,https://digimon.net/appmon_ko/detail.php?id=62,https://digimon.net/appmon_en/detail.php?id=62
+63,クックモン,쿡몬,Cookmon,烹饪兽,廚師獸,https://digimon.net/appmon/detail.php?id=63,https://digimon.net/appmon_ko/detail.php?id=63,https://digimon.net/appmon_en/detail.php?id=63
+64,バイラモン,바이러몬,Virusmon,病毒兽,病毒獸,https://digimon.net/appmon/detail.php?id=64,https://digimon.net/appmon_ko/detail.php?id=64,https://digimon.net/appmon_en/detail.php?id=64
+65,スリープモン,슬립몬,Sleepmon,睡眠兽,睡眠獸,https://digimon.net/appmon/detail.php?id=65,https://digimon.net/appmon_ko/detail.php?id=65,https://digimon.net/appmon_en/detail.php?id=65
+66,マッスルモン,머슬몬,Musclemon,肌肉兽,肌肉獸,https://digimon.net/appmon/detail.php?id=66,https://digimon.net/appmon_ko/detail.php?id=66,https://digimon.net/appmon_en/detail.php?id=66
+67,エイドモン,에이드몬,Aidmon,救护兽,救援獸,https://digimon.net/appmon/detail.php?id=67,https://digimon.net/appmon_ko/detail.php?id=67,https://digimon.net/appmon_en/detail.php?id=67
+68,マネーモン,머니몬,Moneymon,财富兽,提款機獸,https://digimon.net/appmon/detail.php?id=68,https://digimon.net/appmon_ko/detail.php?id=68,https://digimon.net/appmon_en/detail.php?id=68
+69,スパモン,스파몬,Spamon,水疗兽,溫泉獸,https://digimon.net/appmon/detail.php?id=69,https://digimon.net/appmon_ko/detail.php?id=69,https://digimon.net/appmon_en/detail.php?id=69
+70,サプリモン,서플리몬,Supplemon,补药兽,補品獸,https://digimon.net/appmon/detail.php?id=70,https://digimon.net/appmon_ko/detail.php?id=70,https://digimon.net/appmon_en/detail.php?id=70
+71,ドープモン,도프몬,Dopemon,禁药兽,毒藥獸,https://digimon.net/appmon/detail.php?id=71,https://digimon.net/appmon_ko/detail.php?id=71,https://digimon.net/appmon_en/detail.php?id=71
+72,オクショモン,옥셔몬,Auctiomon,拍卖兽,拍賣獸,https://digimon.net/appmon/detail.php?id=72,https://digimon.net/appmon_ko/detail.php?id=72,https://digimon.net/appmon_en/detail.php?id=72
+73,カケイモン,가계몬,Kakeimon,家计兽,家計獸,https://digimon.net/appmon/detail.php?id=73,https://digimon.net/appmon_ko/detail.php?id=73,https://digimon.net/appmon_en/detail.php?id=73
+74,カイモン,쇼핑몬,Kaimon,购物兽,購物獸,https://digimon.net/appmon/detail.php?id=74,https://digimon.net/appmon_ko/detail.php?id=74,https://digimon.net/appmon_en/detail.php?id=74
+75,ジショモン,딕셔몬,Jishomon,辞典兽,辭典獸,https://digimon.net/appmon/detail.php?id=75,https://digimon.net/appmon_ko/detail.php?id=75,https://digimon.net/appmon_en/detail.php?id=75
+76,ロギモン,로긴몬,Logimon,洛基兽,登入獸,https://digimon.net/appmon/detail.php?id=76,https://digimon.net/appmon_ko/detail.php?id=76,https://digimon.net/appmon_en/detail.php?id=76
+77,ロガモン,로간몬,Logamon,洛迦兽,登出獸,https://digimon.net/appmon/detail.php?id=77,https://digimon.net/appmon_ko/detail.php?id=77,https://digimon.net/appmon_en/detail.php?id=77
+78,ドガッチモン,슈퍼 서치몬,DoGatchmon,大盖奇兽,大蓋奇獸,https://digimon.net/appmon/detail.php?id=78,https://digimon.net/appmon_ko/detail.php?id=78,https://digimon.net/appmon_en/detail.php?id=78
+79,ソーシャモン,소셔몬,Sociamon,社交兽,社交獸,https://digimon.net/appmon/detail.php?id=79,https://digimon.net/appmon_ko/detail.php?id=79,https://digimon.net/appmon_en/detail.php?id=79
+80,ゴシップモン,가십몬,Gossipmon,闲言兽,傳聞獸,https://digimon.net/appmon/detail.php?id=80,https://digimon.net/appmon_ko/detail.php?id=80,https://digimon.net/appmon_en/detail.php?id=80
+81,スカシモン,스카시몬,Sukasimon,扑空兽,撲空獸,https://digimon.net/appmon/detail.php?id=81,https://digimon.net/appmon_ko/detail.php?id=81,https://digimon.net/appmon_en/detail.php?id=81
+82,トリップモン,트립몬,Tripmon,云游兽,旅行獸,https://digimon.net/appmon/detail.php?id=82,https://digimon.net/appmon_ko/detail.php?id=82,https://digimon.net/appmon_en/detail.php?id=82
+83,ウェザドラモン,웨더드라몬,Weatherdramon,气象龙兽,氣象龍獸,https://digimon.net/appmon/detail.php?id=83,https://digimon.net/appmon_ko/detail.php?id=83,https://digimon.net/appmon_en/detail.php?id=83
+84,タイムモン,타임몬,Timemon,时间兽,時間獸,https://digimon.net/appmon/detail.php?id=84,https://digimon.net/appmon_ko/detail.php?id=84,https://digimon.net/appmon_en/detail.php?id=84
+85,ロアモン,로어몬,Roamon,罗亚兽,咆哮獸,https://digimon.net/appmon/detail.php?id=85,https://digimon.net/appmon_ko/detail.php?id=85,https://digimon.net/appmon_en/detail.php?id=85
+86,スコープモン,스코프몬,Scopemon,天眼兽,瞄準鏡獸,https://digimon.net/appmon/detail.php?id=86,https://digimon.net/appmon_ko/detail.php?id=86,https://digimon.net/appmon_en/detail.php?id=86
+87,クラフトモン,크래프트몬,Craftmon,天工兽,工藝獸,https://digimon.net/appmon/detail.php?id=87,https://digimon.net/appmon_ko/detail.php?id=87,https://digimon.net/appmon_en/detail.php?id=87
+88,レイドラモン,레이드라몬,Raidramon,掠龙兽,掠龍獸,https://digimon.net/appmon/detail.php?id=88,https://digimon.net/appmon_ko/detail.php?id=88,https://digimon.net/appmon_en/detail.php?id=88
+89,デジップモン,데집몬,Dezipmon,整合兽,解壓縮獸,https://digimon.net/appmon/detail.php?id=89,https://digimon.net/appmon_ko/detail.php?id=89,https://digimon.net/appmon_en/detail.php?id=89
+90,ミエーヌモン,미에누몬,Mienumon,障目兽,看不見獸,https://digimon.net/appmon/detail.php?id=90,https://digimon.net/appmon_ko/detail.php?id=90,https://digimon.net/appmon_en/detail.php?id=90
+91,ワープモン,워프몬,Warpmon,传送兽,傳送獸,https://digimon.net/appmon/detail.php?id=91,https://digimon.net/appmon_ko/detail.php?id=91,https://digimon.net/appmon_en/detail.php?id=91
+92,サクシモン,책사몬,Sakusimon,策士兽,策士獸,https://digimon.net/appmon/detail.php?id=92,https://digimon.net/appmon_ko/detail.php?id=92,https://digimon.net/appmon_en/detail.php?id=92
+93,ドスコモン,도스코몬,Dosukomon,相扑兽,相撲獸,https://digimon.net/appmon/detail.php?id=93,https://digimon.net/appmon_ko/detail.php?id=93,https://digimon.net/appmon_en/detail.php?id=93
+94,ブレモン,브레몬,Bramon,健脑兽,大腦獸,https://digimon.net/appmon/detail.php?id=94,https://digimon.net/appmon_ko/detail.php?id=94,https://digimon.net/appmon_en/detail.php?id=94
+95,コーチモン,코치몬,Coachmon,教练兽,教練獸,https://digimon.net/appmon/detail.php?id=95,https://digimon.net/appmon_ko/detail.php?id=95,https://digimon.net/appmon_en/detail.php?id=95
+96,ウラテクモン,테크마스몬,Uratechmon,秘技兽,秘技獸,https://digimon.net/appmon/detail.php?id=96,https://digimon.net/appmon_ko/detail.php?id=96,https://digimon.net/appmon_en/detail.php?id=96
+97,エフェクモン,이펙몬,Effecmon,特效兽,效果獸,https://digimon.net/appmon/detail.php?id=97,https://digimon.net/appmon_ko/detail.php?id=97,https://digimon.net/appmon_en/detail.php?id=97
+98,タロットモン,타로몬,Tarotmon,塔罗兽,塔羅牌獸,https://digimon.net/appmon/detail.php?id=98,https://digimon.net/appmon_ko/detail.php?id=98,https://digimon.net/appmon_en/detail.php?id=98
+99,コーデモン,코디몬,Coordemon,品衣兽,穿搭獸,https://digimon.net/appmon/detail.php?id=99,https://digimon.net/appmon_ko/detail.php?id=99,https://digimon.net/appmon_en/detail.php?id=99
+100,メディアモン,미디어몬,Mediamon,媒体兽,媒體獸,https://digimon.net/appmon/detail.php?id=100,https://digimon.net/appmon_ko/detail.php?id=100,https://digimon.net/appmon_en/detail.php?id=100
+101,ベガスモン,베이거스몬,Vegasmon,维加斯兽,維加斯獸,https://digimon.net/appmon/detail.php?id=101,https://digimon.net/appmon_ko/detail.php?id=101,https://digimon.net/appmon_en/detail.php?id=101
+102,ドリーモン,드리몬,Dreammon,梦境兽,夢境獸,https://digimon.net/appmon/detail.php?id=102,https://digimon.net/appmon_ko/detail.php?id=102,https://digimon.net/appmon_en/detail.php?id=102
+103,メディックモン,메딕몬,Medicmon,医生兽,醫療獸,https://digimon.net/appmon/detail.php?id=103,https://digimon.net/appmon_ko/detail.php?id=103,https://digimon.net/appmon_en/detail.php?id=103
+104,ドクモン,닥몬,Docmon,怪医兽,醫生獸,https://digimon.net/appmon/detail.php?id=104,https://digimon.net/appmon_ko/detail.php?id=104,https://digimon.net/appmon_en/detail.php?id=104
+105,コンサルモン,컨설몬,Consulmon,顾问兽,顧問獸,https://digimon.net/appmon/detail.php?id=105,https://digimon.net/appmon_ko/detail.php?id=105,https://digimon.net/appmon_en/detail.php?id=105
+106,ライブラモン,라이브러몬,Libramon,书库兽,圖書館獸,https://digimon.net/appmon/detail.php?id=106,https://digimon.net/appmon_ko/detail.php?id=106,https://digimon.net/appmon_en/detail.php?id=106
+107,グローブモン,글로브몬,Globemon,环球兽,全球獸,https://digimon.net/appmon/detail.php?id=107,https://digimon.net/appmon_ko/detail.php?id=107,https://digimon.net/appmon_en/detail.php?id=107
+108,カリスモン,카리스몬,Charismon,领袖兽,領袖獸,https://digimon.net/appmon/detail.php?id=108,https://digimon.net/appmon_ko/detail.php?id=108,https://digimon.net/appmon_en/detail.php?id=108
+109,ダメダモン,안댐몬,Damedamon,废柴兽,廢物獸,https://digimon.net/appmon/detail.php?id=109,https://digimon.net/appmon_ko/detail.php?id=109,https://digimon.net/appmon_en/detail.php?id=109
+110,サテラモン,새틀라몬,Satellamon,卫星兽,衛星獸,https://digimon.net/appmon/detail.php?id=110,https://digimon.net/appmon_ko/detail.php?id=110,https://digimon.net/appmon_en/detail.php?id=110
+111,コメットモン,코멧몬,Cometmon,彗星兽,彗星獸,https://digimon.net/appmon/detail.php?id=111,https://digimon.net/appmon_ko/detail.php?id=111,https://digimon.net/appmon_en/detail.php?id=111
+112,ブートモン,부팅몬,Bootmon,启动兽,開機獸,https://digimon.net/appmon/detail.php?id=112,https://digimon.net/appmon_ko/detail.php?id=112,https://digimon.net/appmon_en/detail.php?id=112
+113,シャットモン,셧몬,Shutmon,关闭兽,關機獸,https://digimon.net/appmon/detail.php?id=113,https://digimon.net/appmon_ko/detail.php?id=113,https://digimon.net/appmon_en/detail.php?id=113
+114,フェイクモン,페이크몬,Fakemon,伪装兽,偽裝獸,https://digimon.net/appmon/detail.php?id=114,https://digimon.net/appmon_ko/detail.php?id=114,https://digimon.net/appmon_en/detail.php?id=114
+115,リバイブモン,리바이브몬,Revivemon,复活兽,復原獸,https://digimon.net/appmon/detail.php?id=115,https://digimon.net/appmon_ko/detail.php?id=115,https://digimon.net/appmon_en/detail.php?id=115
+116,ワルダモン,와루다몬,Warudamon,诡姬兽,謀略獸,https://digimon.net/appmon/detail.php?id=116,https://digimon.net/appmon_ko/detail.php?id=116,https://digimon.net/appmon_en/detail.php?id=116
+117,オウジャモン,오우자몬,Oujamon,王者兽,王者獸,https://digimon.net/appmon/detail.php?id=117,https://digimon.net/appmon_ko/detail.php?id=117,https://digimon.net/appmon_en/detail.php?id=117
+118,エンタモン,엔터몬,Entermon,娱乐兽,娛樂獸,https://digimon.net/appmon/detail.php?id=118,https://digimon.net/appmon_ko/detail.php?id=118,https://digimon.net/appmon_en/detail.php?id=118
+119,バイオモン,바이오몬,Biomon,生命兽,生命獸,https://digimon.net/appmon/detail.php?id=119,https://digimon.net/appmon_ko/detail.php?id=119,https://digimon.net/appmon_en/detail.php?id=119
+120,ビューティモン,뷰티몬,Beautymon,美姿兽,美麗獸,https://digimon.net/appmon/detail.php?id=120,https://digimon.net/appmon_ko/detail.php?id=120,https://digimon.net/appmon_en/detail.php?id=120
+121,リブートモン,리부트몬,Rebootmon,重启兽,重啟獸,https://digimon.net/appmon/detail.php?id=121,https://digimon.net/appmon_ko/detail.php?id=121,https://digimon.net/appmon_en/detail.php?id=121
+122,ガイアモン,가이아몬,Gaiamon,盖亚兽,蓋亞獸,https://digimon.net/appmon/detail.php?id=122,https://digimon.net/appmon_ko/detail.php?id=122,https://digimon.net/appmon_en/detail.php?id=122
+123,ハデスモン,하데스몬,Hadesmon,哈迪斯兽,黑帝斯獸,https://digimon.net/appmon/detail.php?id=123,https://digimon.net/appmon_ko/detail.php?id=123,https://digimon.net/appmon_en/detail.php?id=123
+124,ポセイドモン,포세이도몬,Poseidomon,波塞冬兽,波塞頓獸,https://digimon.net/appmon/detail.php?id=124,https://digimon.net/appmon_ko/detail.php?id=124,https://digimon.net/appmon_en/detail.php?id=124
+125,ウラノスモン,우라노스몬,Ouranosmon,乌拉诺斯兽,烏拉諾斯獸,https://digimon.net/appmon/detail.php?id=125,https://digimon.net/appmon_ko/detail.php?id=125,https://digimon.net/appmon_en/detail.php?id=125
+126,デウスモン,데우스몬,Deusmon,宙斯兽,宙斯獸,https://digimon.net/appmon/detail.php?id=126,https://digimon.net/appmon_ko/detail.php?id=126,https://digimon.net/appmon_en/detail.php?id=126
+127,タップモン(ソーシャル),탭몬(소셜),Tapmon (Social),轻敲兽（社交）,點擊獸（社交）,https://digimon.net/appmon/detail.php?id=127,https://digimon.net/appmon_ko/detail.php?id=127,https://digimon.net/appmon_en/detail.php?id=127
+128,タップモン(ナビ),탭몬(내비),Tapmon (Navi),轻敲兽（导航）,點擊獸（導航）,https://digimon.net/appmon/detail.php?id=128,https://digimon.net/appmon_ko/detail.php?id=128,https://digimon.net/appmon_en/detail.php?id=128
+129,タップモン(ツール),탭몬(툴),Tapmon (Tool),轻敲兽（工具）,點擊獸（工具）,https://digimon.net/appmon/detail.php?id=129,https://digimon.net/appmon_ko/detail.php?id=129,https://digimon.net/appmon_en/detail.php?id=129
+130,タップモン(システム),탭몬(시스템),Tapmon (System),轻敲兽（系统）,點擊獸（系統）,https://digimon.net/appmon/detail.php?id=130,https://digimon.net/appmon_ko/detail.php?id=130,https://digimon.net/appmon_en/detail.php?id=130
+131,タップモン(ゲーム),탭몬(게임),Tapmon (Game),轻敲兽（游戏）,點擊獸（遊戲）,https://digimon.net/appmon/detail.php?id=131,https://digimon.net/appmon_ko/detail.php?id=131,https://digimon.net/appmon_en/detail.php?id=131
+132,タップモン(エンタメ),탭몬(엔터테인먼트),Tapmon (Entertainment),轻敲兽（娱乐）,點擊獸（娛樂）,https://digimon.net/appmon/detail.php?id=132,https://digimon.net/appmon_ko/detail.php?id=132,https://digimon.net/appmon_en/detail.php?id=132
+133,タップモン(ライフ),탭몬(라이프),Tapmon (Life),轻敲兽（生活）,點擊獸（生活）,https://digimon.net/appmon/detail.php?id=133,https://digimon.net/appmon_ko/detail.php?id=133,https://digimon.net/appmon_en/detail.php?id=133
+134,フリックモン(ソーシャル),플릭몬(소셜),Flickmon (Social),轻弹兽（社交）,推滑獸（社交）,https://digimon.net/appmon/detail.php?id=134,https://digimon.net/appmon_ko/detail.php?id=134,https://digimon.net/appmon_en/detail.php?id=134
+135,フリックモン(ナビ),플릭몬(내비),Flickmon (Navi),轻弹兽（导航）,推滑獸（導航）,https://digimon.net/appmon/detail.php?id=135,https://digimon.net/appmon_ko/detail.php?id=135,https://digimon.net/appmon_en/detail.php?id=135
+136,フリックモン(ツール),플릭몬(툴),Flickmon (Tool),轻弹兽（工具）,推滑獸（工具）,https://digimon.net/appmon/detail.php?id=136,https://digimon.net/appmon_ko/detail.php?id=136,https://digimon.net/appmon_en/detail.php?id=136
+137,フリックモン(システム),플릭몬(시스템),Flickmon (System),轻弹兽（系统）,推滑獸（系統）,https://digimon.net/appmon/detail.php?id=137,https://digimon.net/appmon_ko/detail.php?id=137,https://digimon.net/appmon_en/detail.php?id=137
+138,フリックモン(ゲーム),플릭몬(게임),Flickmon (Game),轻弹兽（系统）,推滑獸（遊戲）,https://digimon.net/appmon/detail.php?id=138,https://digimon.net/appmon_ko/detail.php?id=138,https://digimon.net/appmon_en/detail.php?id=138
+139,フリックモン(エンタメ),플릭몬(엔터테인먼트),Flickmon (Entertainment),轻弹兽（娱乐）,推滑獸（娛樂）,https://digimon.net/appmon/detail.php?id=139,https://digimon.net/appmon_ko/detail.php?id=139,https://digimon.net/appmon_en/detail.php?id=139
+140,フリックモン(ライフ),플릭몬(라이프),Flickmon (Life),轻弹兽（生活）,推滑獸（生活）,https://digimon.net/appmon/detail.php?id=140,https://digimon.net/appmon_ko/detail.php?id=140,https://digimon.net/appmon_en/detail.php?id=140
+141,スワイプモン(ソーシャル),스와이프몬(소셜),Swipemon (Social),轻扫兽（社交）,滑動獸（社交）,https://digimon.net/appmon/detail.php?id=141,https://digimon.net/appmon_ko/detail.php?id=141,https://digimon.net/appmon_en/detail.php?id=141
+142,スワイプモン(ナビ),스와이프몬(내비),Swipemon (Navi),轻扫兽（导航）,滑動獸（導航）,https://digimon.net/appmon/detail.php?id=142,https://digimon.net/appmon_ko/detail.php?id=142,https://digimon.net/appmon_en/detail.php?id=142
+143,スワイプモン(ツール),스와이프몬(툴),Swipemon (Tool),轻扫兽（工具）,滑動獸（工具）,https://digimon.net/appmon/detail.php?id=143,https://digimon.net/appmon_ko/detail.php?id=143,https://digimon.net/appmon_en/detail.php?id=143
+144,スワイプモン(システム),스와이프몬(시스템),Swipemon (System),轻扫兽（系统）,滑動獸（系統）,https://digimon.net/appmon/detail.php?id=144,https://digimon.net/appmon_ko/detail.php?id=144,https://digimon.net/appmon_en/detail.php?id=144
+145,スワイプモン(ゲーム),스와이프몬(게임),Swipemon (Game),轻扫兽（游戏）,滑動獸（遊戲）,https://digimon.net/appmon/detail.php?id=145,https://digimon.net/appmon_ko/detail.php?id=145,https://digimon.net/appmon_en/detail.php?id=145
+146,スワイプモン(エンタメ),스와이프몬(엔터테인먼트),Swipemon (Entertainment),轻扫兽（娱乐）,滑動獸（娛樂）,https://digimon.net/appmon/detail.php?id=146,https://digimon.net/appmon_ko/detail.php?id=146,https://digimon.net/appmon_en/detail.php?id=146
+147,スワイプモン(ライフ),스와이프몬(라이프),Swipemon (Life),轻扫兽（生活）,滑動獸（生活）,https://digimon.net/appmon/detail.php?id=147,https://digimon.net/appmon_ko/detail.php?id=147,https://digimon.net/appmon_en/detail.php?id=147
+148,ダンテモン,단테몬,Dantemon,但丁兽,但丁獸,https://digimon.net/appmon/detail.php?id=148,https://digimon.net/appmon_ko/detail.php?id=148,https://digimon.net/appmon_en/detail.php?id=148
