@@ -1,0 +1,643 @@
+char,codepoint,script,species_occurrences,technique_occurrences,total_occurrences,examples
+（,U+FF08,Other,169,257,426,species:162:バアルモン（X抗体） | species:173:インペリアルドラモン：ファイターモード（黒） | species:174:グレイモン（青）（X抗体）
+）,U+FF09,Other,169,254,423,species:162:バアルモン（X抗体） | species:173:インペリアルドラモン：ファイターモード（黒） | species:174:グレイモン（青）（X抗体）
+・,U+30FB,Other,1,191,192,species:960:チョ・ハッカイモン | technique:22:アロー・オブ・ウィスパード | technique:22:アロー・オブ・ウィスパード
+体,U+4F53,Han,121,1,122,species:162:バアルモン（X抗体） | species:174:グレイモン（青）（X抗体） | species:233:ヘラクルカブテリモン（X抗体）
+抗,U+6297,Han,121,0,121,species:162:バアルモン（X抗体） | species:174:グレイモン（青）（X抗体） | species:233:ヘラクルカブテリモン（X抗体）
+ヴ,U+30F4,Other,43,69,112,species:16:ヴォルテクスドラモン | species:53:クレニアムモン+アンヴァルモン | species:54:アンヴァルモン
+：,U+FF1A,Other,55,1,56,species:11:アポロモン：ウィスパード | species:13:アルマモン：バーストモード | species:30:クロノモン：デストロイモード
+Ｘ,U+FF38,Other,33,1,34,species:268:メタルグレイモン（ワクチン種）（Ｘ抗体） | species:269:パンジャモン（Ｘ抗体） | species:270:メタルマメモン（Ｘ抗体）
+斬,U+65AC,Han,0,26,26,technique:7:羽々斬（はばきり） | technique:48:魔縁斬蹴撃（まえんざんしゅうげき） | technique:79:秘剣ピヨピヨ斬り
+雷,U+96F7,Han,1,24,25,species:126:フェンリルガモン：建御雷神(タケミカヅチ) | technique:57:超大聖雷天砲（ちょうたいせいらいてんほう） | technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ）
+天,U+5929,Han,0,20,20,technique:49:尊天大烈風（そんてんだいれっぷう） | technique:55:八戒炎天撃（はっかいえんてんげき） | technique:56:悟浄水天葬（ごじょうすいてんそう）
+撃,U+6483,Han,0,18,18,technique:48:魔縁斬蹴撃（まえんざんしゅうげき） | technique:55:八戒炎天撃（はっかいえんてんげき） | technique:173:一斉砲撃
+剣,U+5263,Han,1,16,17,species:872:アルファモン：王竜剣 | technique:77:秘剣・飛鳥落とし | technique:79:秘剣ピヨピヨ斬り
+神,U+795E,Han,1,16,17,species:126:フェンリルガモン：建御雷神(タケミカヅチ) | technique:62:光爪神楽（こうそうかぐら） | technique:126:千塵鬼神斬（せんじんきしんざん）
+黒,U+9ED2,Han,12,4,16,species:173:インペリアルドラモン：ファイターモード（黒） | species:302:インペリアルドラモン：ドラゴンモード(黒) | species:414:アグモン（黒）（Ｘ抗体）
+破,U+7834,Han,0,15,15,technique:227:爆迅炎戟破 | technique:439:叩破伐倒（こうはばっとう） | technique:586:獄炎破回蹴（ごくえんはかいしゅう）
+弾,U+5F3E,Han,0,13,13,technique:93:岩衝弾（がんしょうだん） | technique:94:泿水弾（ぎんすいだん） | technique:96:猿攻回転弾（えんこうかいてんだん）
+拳,U+62F3,Han,0,13,13,technique:85:招敵来来拳（しょうてきらいらいけん） | technique:585:鬼瞬轟拳（きしゅんごうけん） | technique:612:氷獣拳
+炎,U+708E,Han,0,13,13,technique:55:八戒炎天撃（はっかいえんてんげき） | technique:227:爆迅炎戟破 | technique:288:斧乗炎怒（ふじょうえんど）
+王,U+738B,Han,2,11,13,species:257:スカモン大王 | species:872:アルファモン：王竜剣 | technique:53:閻羅王降誕（えんらおうごうたん）
+電,U+96FB,Han,0,13,13,technique:556:斬電剣 | technique:647:神電召雷光（しんでんしょうらいこう） | technique:658:武電破弾（ぶでんはだん）
+之,U+4E4B,Han,0,12,12,technique:50:厳之御魂（いづのみたま） | technique:89:石土之体（いしづちのてい） | technique:177:月夜之迎（つきよのむかえ）
+光,U+5149,Han,0,12,12,technique:62:光爪神楽（こうそうかぐら） | technique:63:魔祓灼光（まふつのしゃっこう） | technique:75:暁光一閃
+爆,U+7206,Han,0,12,12,technique:116:饕飢爆（とうきばく） | technique:124:爆霧（ばくぎり） | technique:227:爆迅炎戟破
+舞,U+821E,Han,0,12,12,technique:74:日輪の舞 | technique:84:小判振舞い | technique:178:骸繰艶舞・鉢かづき
+覚,U+899A,Han,3,9,12,species:189:シスタモン シエル（覚醒） | species:190:シスタモン ノワール（覚醒） | species:191:シスタモン ブラン（覚醒）
+醒,U+9192,Han,3,9,12,species:189:シスタモン シエル（覚醒） | species:190:シスタモン ノワール（覚醒） | species:191:シスタモン ブラン（覚醒）
+陣,U+9663,Han,0,12,12,technique:192:鹹海炸滄陣（かんかいさくそうじん） | technique:250:毘沙門八極殲陣 | technique:1146:魔重力呪縛陣（まじゅうりょくじゅばくじん）
+一,U+4E00,Han,0,11,11,technique:75:暁光一閃 | technique:173:一斉砲撃 | technique:446:白詰一文字切り（覚醒）
+刀,U+5200,Han,1,10,11,species:237:ガイオウモン：厳刀ノ型 | technique:281:絶極舞刀建御雷神（ゼツゴクブトウタケミカヅチ） | technique:402:千万ノ太刀（ちよろずのたち）
+刃,U+5203,Han,0,11,11,technique:166:刃羽颪(じんばおろし) | technique:189:斬砍双刃撃 | technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ）
+極,U+6975,Han,0,11,11,technique:250:毘沙門八極殲陣 | technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ） | technique:281:絶極舞刀建御雷神（ゼツゴクブトウタケミカヅチ）
+泡,U+6CE1,Han,0,11,11,technique:154:粘着性の泡 | technique:265:泡 | technique:388:孤籠泡（ころうほう）
+火,U+706B,Han,0,11,11,technique:54:火眼金睛（かがんきんせい） | technique:64:猛進火達磨（もうしんひだるま） | technique:102:燐火（りんか）
+鬼,U+9B3C,Han,0,11,11,technique:126:千塵鬼神斬（せんじんきしんざん） | technique:585:鬼瞬轟拳（きしゅんごうけん） | technique:984:火電鬼爆波（ひでんきばくは）
+砲,U+7832,Han,0,10,10,technique:57:超大聖雷天砲（ちょうたいせいらいてんほう） | technique:173:一斉砲撃 | technique:359:3連装砲
+０,U+FF10,Other,6,4,10,species:522:ファルコモン（２００６アニメ版） | species:522:ファルコモン（２００６アニメ版） | species:523:クダモン（２００６アニメ版）
+太,U+592A,Han,0,9,9,technique:203:太陰皓光（たいいんこうこう） | technique:402:千万ノ太刀（ちよろずのたち） | technique:1011:太極旋（たいきょくせん）
+牙,U+7259,Han,0,9,9,technique:14:凍烈檮牙(とうれつとうが) | technique:95:蛟牙（こうが） | technique:167:窮牙嵐断襲(きゅうがらんだんしゅう)
+突,U+7A81,Han,0,9,9,technique:389:冰乱結突（ひょうらんけっとつ） | technique:448:突蜂（覚醒）　（とっほう） | technique:1033:究極戦突剣（きゅうきょくせんとつけん）グランローゼリオ
+鉄,U+9244,Han,0,9,9,technique:279:鉄天摧砕 | technique:291:鉄壁相（てっぺきのそう） | technique:819:鉄ゲタ張り手
+閃,U+9583,Han,0,9,9,technique:51:六合照徹閃（りくごうしょうてつせん） | technique:75:暁光一閃 | technique:249:龍閃乱撃
+風,U+98A8,Han,0,9,9,technique:49:尊天大烈風（そんてんだいれっぷう） | technique:440:風牙烈巻迅（ふうがれっかんじん） | technique:546:旋風縛（せんぷうばく）
+龍,U+9F8D,Han,0,9,9,technique:86:劈龍爪（へきりゅうそう） | technique:193:蒼纏龍神牙（そうてんりゅうじんが） | technique:249:龍閃乱撃
+乱,U+4E71,Han,0,8,8,technique:249:龍閃乱撃 | technique:389:冰乱結突（ひょうらんけっとつ） | technique:1127:乱破（らっぱ）
+断,U+65AD,Han,0,8,8,technique:65:断災達磨落とし（だんさいだるまおとし） | technique:167:窮牙嵐断襲(きゅうがらんだんしゅう) | technique:336:伍連断霊斬（ごれんだんれいざん）
+波,U+6CE2,Han,0,8,8,technique:169:波濤深槍（はとうしんそう） | technique:202:蛾眉截波（がびせっぱ） | technique:984:火電鬼爆波（ひでんきばくは）
+版,U+7248,Han,8,0,8,species:522:ファルコモン（２００６アニメ版） | species:523:クダモン（２００６アニメ版） | species:530:メタルグレイモン（2010アニメ版）
+獣,U+7363,Han,0,8,8,technique:612:氷獣拳 | technique:1039:獣王拳 | technique:1149:獣王堕拳
+竜,U+7ADC,Han,1,7,8,species:872:アルファモン：王竜剣 | technique:1131:水竜 | technique:1174:爆水竜（ばくすいりゅう）
+羅,U+7F85,Han,0,8,8,technique:53:閻羅王降誕（えんらおうごうたん） | technique:403:羅焼門（らしょうもん） | technique:987:胎蔵界曼荼羅（たいぞうかいまんだら）
+金,U+91D1,Han,1,7,8,species:226:ガードロモン（金） | technique:54:火眼金睛（かがんきんせい） | technique:97:金絲吼（きんしこう）
+～,U+FF5E,Other,1,7,8,species:246:ば～ぷモン | technique:1349:ツララララ～ | technique:1355:ランブルブレンドナンバー（１～１０）
+子,U+5B50,Han,0,7,7,technique:782:扇子返し | technique:1455:連獅子 | technique:1542:獅子羅王漸（ししらおうざん）
+怒,U+6012,Han,0,7,7,technique:288:斧乗炎怒（ふじょうえんど） | technique:1473:怒涛闇供喪之舞（どとうやみくものまい） | technique:2018:怒髪天（どはつてん）
+旋,U+65CB,Han,0,7,7,technique:285:凶旋壊（きょうせんかい） | technique:337:伍重螺旋断（ごじゅうらせんだち） | technique:390:潮流旋禍（ちょうりゅうせんか）
+月,U+6708,Han,0,7,7,technique:135:柔ノ斬・月時雨（じゅうのざん・つきしぐれ） | technique:177:月夜之迎（つきよのむかえ） | technique:201:墜月衝（ついげつしょう）
+海,U+6D77,Han,0,7,7,technique:170:浄流海癒（じょうりゅうかいゆ） | technique:192:鹹海炸滄陣（かんかいさくそうじん） | technique:218:儀来四海招（にらいしかいしょう）
+無,U+7121,Han,0,7,7,technique:302:無極 | technique:1472:無双天翔翼之陣（むそうてんしょうよくのじん） | technique:1563:インビンシブルソード（無敵剣）
+々,U+3005,Han,0,6,6,technique:7:羽々斬（はばきり） | technique:679:雅琉々砲（がるるほう） | technique:1597:天羽々斬（あまのはばきり）
+字,U+5B57,Han,0,6,6,technique:446:白詰一文字切り（覚醒） | technique:1034:白詰一文字切り | technique:1094:超低速一文字斬り
+御,U+5FA1,Han,1,5,6,species:126:フェンリルガモン：建御雷神(タケミカヅチ) | technique:50:厳之御魂（いづのみたま） | technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ）
+戦,U+6226,Han,0,6,6,technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ） | technique:818:究極戦技天仰拳 | technique:1000:此ノ花戦姫万象（このはなせんきばんしょう）
+打,U+6253,Han,0,6,6,technique:1119:打竹落し（うちたけおとし） | technique:1144:強羅打雷銃（ゴウラダライガン） | technique:1185:乱れ打ちラッシュ
+水,U+6C34,Han,0,6,6,technique:56:悟浄水天葬（ごじょうすいてんそう） | technique:94:泿水弾（ぎんすいだん） | technique:662:響香水月（きょうかすいげつ）
+流,U+6D41,Han,0,6,6,technique:170:浄流海癒（じょうりゅうかいゆ） | technique:390:潮流旋禍（ちょうりゅうせんか） | technique:395:魚流炮（ぎょりゅうほう）
+爪,U+722A,Han,0,6,6,technique:62:光爪神楽（こうそうかぐら） | technique:86:劈龍爪（へきりゅうそう） | technique:123:闘魂爪（とうこんそう）
+白,U+767D,Han,2,4,6,species:1074:ナイトチェスモン（白） | species:1185:ポーンチェスモン（白） | technique:446:白詰一文字切り（覚醒）
+種,U+7A2E,Han,4,2,6,species:268:メタルグレイモン（ワクチン種）（Ｘ抗体） | species:412:メタルグレイモン（ウィルス種）（Ｘ抗体） | species:901:メタルグレイモン（ワクチン種）
+縛,U+7E1B,Han,0,6,6,technique:168:絡縛藻紐（らくばくそうちゅう） | technique:338:獄門縛（ごくもんしばり） | technique:405:八束染縛（やつかせんばく）
+羽,U+7FBD,Han,0,6,6,technique:7:羽々斬（はばきり） | technique:166:刃羽颪(じんばおろし) | technique:1064:羽黒（ハグロ）
+迅,U+8FC5,Han,0,6,6,technique:227:爆迅炎戟破 | technique:440:風牙烈巻迅（ふうがれっかんじん） | technique:659:迅雷廻天戟（じんらいかいてんげき）
+返,U+8FD4,Han,0,6,6,technique:76:ツバメ二枚返し | technique:782:扇子返し | technique:1055:天波返し（てんばがえし）
+魂,U+9B42,Han,0,6,6,technique:50:厳之御魂（いづのみたま） | technique:123:闘魂爪（とうこんそう） | technique:1001:宇迦之御魂（うかのみたま）
+魔,U+9B54,Han,0,6,6,technique:48:魔縁斬蹴撃（まえんざんしゅうげき） | technique:63:魔祓灼光（まふつのしゃっこう） | technique:406:魔塵瓢箪（まじんびょうたん）
+大,U+5927,Han,1,4,5,species:257:スカモン大王 | technique:49:尊天大烈風（そんてんだいれっぷう） | technique:57:超大聖雷天砲（ちょうたいせいらいてんほう）
+小,U+5C0F,Han,0,5,5,technique:84:小判振舞い | technique:2176:小熊正拳突き | technique:2263:小さな火炎弾
+悪,U+60AA,Han,2,3,5,species:439:ケルビモン（悪）（Ｘ抗体） | species:811:ケルビモン（悪） | technique:1160:悪夢の泡
+手,U+624B,Han,1,4,5,species:351:テリアモン助手 | technique:819:鉄ゲタ張り手 | technique:1118:手裏裏剣（しゅりりんけん）
+文,U+6587,Han,0,5,5,technique:446:白詰一文字切り（覚醒） | technique:1034:白詰一文字切り | technique:1094:超低速一文字斬り
+気,U+6C17,Han,1,4,5,species:346:アグモン -勇気の絆- | technique:667:静電気 | technique:2112:怒気怒鬼怒灸（ドキドキドキューン）
+烈,U+70C8,Han,0,5,5,technique:14:凍烈檮牙(とうれつとうが) | technique:49:尊天大烈風（そんてんだいれっぷう） | technique:440:風牙烈巻迅（ふうがれっかんじん）
+空,U+7A7A,Han,0,5,5,technique:165:斬空(ざんくう) | technique:287:渾沌亜空虚（こんとんあくうきょ） | technique:1968:駆駆裂空斬（くるくるれっくうざん）
+聖,U+8056,Han,0,5,5,technique:57:超大聖雷天砲（ちょうたいせいらいてんほう） | technique:236:天眼顕聖 | technique:803:聖拳滅破
+衝,U+885D,Han,0,5,5,technique:93:岩衝弾（がんしょうだん） | technique:201:墜月衝（ついげつしょう） | technique:286:咒煉衝刻（じゅれんしょうこく）
+超,U+8D85,Han,0,5,5,technique:57:超大聖雷天砲（ちょうたいせいらいてんほう） | technique:1094:超低速一文字斬り | technique:1095:超高速一文字斬り
+蹴,U+8E74,Han,0,5,5,technique:48:魔縁斬蹴撃（まえんざんしゅうげき） | technique:586:獄炎破回蹴（ごくえんはかいしゅう） | technique:1790:蝶絶喇叭蹴（ちょうぜつらっぱしゅう）
+門,U+9580,Han,0,5,5,technique:250:毘沙門八極殲陣 | technique:338:獄門縛（ごくもんしばり） | technique:403:羅焼門（らしょうもん）
+６,U+FF16,Other,4,1,5,species:522:ファルコモン（２００６アニメ版） | species:523:クダモン（２００６アニメ版） | species:870:イグドラシル＿７Ｄ６
+Ｄ,U+FF24,Other,1,4,5,species:870:イグドラシル＿７Ｄ６ | technique:1138:マッドネスメリーゴーランドＤＸ | technique:2117:ＤＪシューター
+Ｖ,U+FF36,Other,0,5,5,technique:610:トライデントアームＶＥＲ９.９ | technique:880:シャイニングＶフォース | technique:1586:マッハスティンガーＶ（ビクトリー）
+九,U+4E5D,Han,0,4,4,technique:114:九淵貪角(きゅうえんどんかく) | technique:293:九種九面撃（きゅうしゅきゅうめんげき） | technique:293:九種九面撃（きゅうしゅきゅうめんげき）
+八,U+516B,Han,0,4,4,technique:55:八戒炎天撃（はっかいえんてんげき） | technique:250:毘沙門八極殲陣 | technique:405:八束染縛（やつかせんばく）
+千,U+5343,Han,0,4,4,technique:126:千塵鬼神斬（せんじんきしんざん） | technique:402:千万ノ太刀（ちよろずのたち） | technique:407:千砲土蜘蛛（せんほうつちぐも）
+幻,U+5E7B,Han,0,4,4,technique:722:愚幻 | technique:1012:狐蝶幻（こちょうげん） | technique:1584:幻刃無痕（げんじんむこん）
+影,U+5F71,Han,0,4,4,technique:721:影縛り | technique:1170:電影烈破（でんえいれっぱ） | technique:1892:秘技・夢現影（ひぎ・むげんえい）
+心,U+5FC3,Han,0,4,4,technique:1853:迅速の心得（じんそくのこころえ） | technique:1854:改心の波動 | technique:1889:無限弾幕心経（むげんだんまくしんきょう）
+敵,U+6575,Han,0,4,4,technique:85:招敵来来拳（しょうてきらいらいけん） | technique:1134:索敵 | technique:1177:瞬索敵（しゅんさくてき）
+星,U+661F,Han,0,4,4,technique:278:天星斬 | technique:393:天星壊海（てんせいかいかい） | technique:551:三連星
+来,U+6765,Han,0,4,4,technique:85:招敵来来拳（しょうてきらいらいけん） | technique:85:招敵来来拳（しょうてきらいらいけん） | technique:218:儀来四海招（にらいしかいしょう）
+殺,U+6BBA,Han,0,4,4,technique:447:白殺（覚醒）　（びゃくさい） | technique:1035:白殺（びゃくさい） | technique:1171:光電殺法之陣（こうでんさっぽうのじん）
+氷,U+6C37,Han,0,4,4,technique:12:氷骸礫(ひょうがいれき) | technique:612:氷獣拳 | technique:1346:グレッチャートルペイド（氷河魚雷）
+燐,U+71D0,Han,0,4,4,technique:102:燐火（りんか） | technique:547:菊燐一閃・號雷斬（きくりんいっせん・ごうらいざん） | technique:1668:燐火斬（りんかざん）
+狐,U+72D0,Han,0,4,4,technique:1012:狐蝶幻（こちょうげん） | technique:2115:狐炎龍（こえんりゅう） | technique:2150:狐変虚（こへんきょ）
+獅,U+7345,Han,0,4,4,technique:1455:連獅子 | technique:1542:獅子羅王漸（ししらおうざん） | technique:1805:紅・獅子之舞（くれない・ししのまい）
+砕,U+7815,Han,0,4,4,technique:279:鉄天摧砕 | technique:579:鼓・爆砕 | technique:587:喰雷炎砕破（がらいえんさいは）
+秘,U+79D8,Han,0,4,4,technique:77:秘剣・飛鳥落とし | technique:79:秘剣ピヨピヨ斬り | technique:164:秘剣キャット・ザ・ナインライブス
+究,U+7A76,Han,0,4,4,technique:818:究極戦技天仰拳 | technique:1033:究極戦突剣（きゅうきょくせんとつけん）グランローゼリオ | technique:1044:究極戦刃聖覇剣（きゅうきょくせんじんせいばけん）
+紅,U+7D05,Han,0,4,4,technique:1434:紅葉おろし | technique:1599:紅焔（こうえん） | technique:1804:紅蓮獣王波（ぐれんじゅうおうは）
+絶,U+7D76,Han,0,4,4,technique:281:絶極舞刀建御雷神（ゼツゴクブトウタケミカヅチ） | technique:1121:絶光衝（ぜっこうしょう） | technique:1790:蝶絶喇叭蹴（ちょうぜつらっぱしゅう）
+裏,U+88CF,Han,0,4,4,technique:986:裏飯綱（うらいづな） | technique:1118:手裏裏剣（しゅりりんけん） | technique:1118:手裏裏剣（しゅりりんけん）
+身,U+8EAB,Han,0,4,4,technique:292:献身相（けんしんのそう） | technique:2093:コウガ流影分身 | technique:2103:当身返し
+轟,U+8F5F,Han,0,4,4,technique:13:轟蹄崩(ごうていほう) | technique:289:盾射轟哀（じゅんせきごうあい） | technique:585:鬼瞬轟拳（きしゅんごうけん）
+連,U+9023,Han,0,4,4,technique:336:伍連断霊斬（ごれんだんれいざん） | technique:359:3連装砲 | technique:551:三連星
+青,U+9752,Han,4,0,4,species:174:グレイモン（青）（X抗体） | species:455:グレイモン（青） | species:1022:アトラーカブテリモン（青）
+鳴,U+9CF4,Han,0,4,4,technique:1145:超力鳴動破（チョウリキメイドウハ） | technique:1656:地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！） | technique:2110:金銀雷鳴撃（きんぎんらいめいげき）
+黄,U+9EC4,Han,0,4,4,technique:345:黄泉戻（よみもどし） | technique:1535:黄廻（おうかい） | technique:1641:黄獣偃月刀（きじゅうえんげつとう）
+＋,U+FF0B,Other,4,0,4,species:529:メタルグレイモン＋サイバーランチャー | species:572:シャウトモン＋ドルルキャノン | species:573:シャウトモン＋スターソード
+１,U+FF11,Other,0,4,4,technique:1355:ランブルブレンドナンバー（１～１０） | technique:1355:ランブルブレンドナンバー（１～１０） | technique:1784:マメバイト１０００
+Ⅱ,U+2161,Other,0,3,3,technique:1037:ギガデストロイヤーⅡ | technique:1038:ヌークリアレーザーⅡ | technique:2096:ジ・シュルネン-Ⅱ
+≪,U+226A,Other,0,3,3,technique:1862:第一曲≪ポリフォニー≫ | technique:1863:第二曲≪アリア≫ | technique:1864:第三曲≪カノン≫
+≫,U+226B,Other,0,3,3,technique:1862:第一曲≪ポリフォニー≫ | technique:1863:第二曲≪アリア≫ | technique:1864:第三曲≪カノン≫
+万,U+4E07,Han,0,3,3,technique:235:万象逸貫 | technique:402:千万ノ太刀（ちよろずのたち） | technique:1000:此ノ花戦姫万象（このはなせんきばんしょう）
+丸,U+4E38,Han,0,3,3,technique:1120:弾丸旋風（だんがんせんぷう） | technique:1477:烏王丸（ちょうおうまる） | technique:1850:豚ノ丸焼（ぶたのまるやき）
+二,U+4E8C,Han,0,3,3,technique:76:ツバメ二枚返し | technique:645:二刀勢雷（にとうせいらい） | technique:1863:第二曲≪アリア≫
+切,U+5207,Han,0,3,3,technique:446:白詰一文字切り（覚醒） | technique:1034:白詰一文字切り | technique:1989:切り捨て御免
+剛,U+525B,Han,0,3,3,technique:999:金剛界曼荼羅（こんごうかいまんだら） | technique:1552:金剛（こんごう） | technique:2487:怒ツ鬼金剛棍
+回,U+56DE,Han,0,3,3,technique:96:猿攻回転弾（えんこうかいてんだん） | technique:586:獄炎破回蹴（ごくえんはかいしゅう） | technique:1642:獣狼大回転（じゅうろうだいかいてん)
+士,U+58EB,Han,2,1,3,species:1205:ニセアグモン博士 | species:1252:アグモン博士 | technique:646:士道一徹（しどういってつ）
+夢,U+5922,Han,0,3,3,technique:1160:悪夢の泡 | technique:1888:胡蝶夢経（こちょうむきょう） | technique:1892:秘技・夢現影（ひぎ・むげんえい）
+建,U+5EFA,Han,1,2,3,species:126:フェンリルガモン：建御雷神(タケミカヅチ) | technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ） | technique:281:絶極舞刀建御雷神（ゼツゴクブトウタケミカヅチ）
+徹,U+5FB9,Han,0,3,3,technique:51:六合照徹閃（りくごうしょうてつせん） | technique:646:士道一徹（しどういってつ） | technique:2106:徹甲刃（てっこうじん）
+性,U+6027,Han,0,3,3,technique:154:粘着性の泡 | technique:635:植物性の泡 | technique:2255:伸縮性のある泡
+悟,U+609F,Han,0,3,3,technique:56:悟浄水天葬（ごじょうすいてんそう） | technique:1609:悟遍路掌（さとりへんろしょう） | technique:1918:悟り（さとり）
+成,U+6210,Han,1,2,3,species:515:ホエーモン（成熟期） | technique:1617:轍剣成敗（てっけんせいばい） | technique:1818:成龍刃（せいりゅうじん）
+扇,U+6247,Han,0,3,3,technique:191:浪濤扇（ろうとうせん） | technique:782:扇子返し | technique:2481:臥龍扇
+招,U+62DB,Han,0,3,3,technique:85:招敵来来拳（しょうてきらいらいけん） | technique:218:儀来四海招（にらいしかいしょう） | technique:252:招来・哮天犬
+時,U+6642,Han,0,3,3,technique:134:豪ノ斬・叢時雨（ごうのざん・むらしぐれ） | technique:135:柔ノ斬・月時雨（じゅうのざん・つきしぐれ） | technique:1233:タイガータイフーン（真の姿時）
+曲,U+66F2,Han,0,3,3,technique:1862:第一曲≪ポリフォニー≫ | technique:1863:第二曲≪アリア≫ | technique:1864:第三曲≪カノン≫
+武,U+6B66,Han,0,3,3,technique:176:武獲物語（たけとりものがたり） | technique:658:武電破弾（ぶでんはだん） | technique:1789:武舞独繰
+浄,U+6D44,Han,0,3,3,technique:52:浄玻璃鏡(じょうはりのかがみ) | technique:56:悟浄水天葬（ごじょうすいてんそう） | technique:170:浄流海癒（じょうりゅうかいゆ）
+漢,U+6F22,Han,0,3,3,technique:1056:漢癪ダスト（かんしゃくダスト） | technique:1187:漢魂乱れ太鼓 | technique:1546:特攻漢弾（ぶっこみおとこだま）
+焔,U+7114,Han,0,3,3,technique:87:焔明珠（えんめいしゅ） | technique:1599:紅焔（こうえん） | technique:1981:焔玉（ほむらだま）
+猛,U+731B,Han,0,3,3,technique:64:猛進火達磨（もうしんひだるま） | technique:92:猛冲角（もうちゅうかく） | technique:2169:逃げ足猛ダッシュ
+獄,U+7344,Han,0,3,3,technique:338:獄門縛（ごくもんしばり） | technique:586:獄炎破回蹴（ごくえんはかいしゅう） | technique:1620:打首獄門
+癒,U+7652,Han,0,3,3,technique:170:浄流海癒（じょうりゅうかいゆ） | technique:1172:癒天光(いてんこう） | technique:2435:癒しの湯
+真,U+771F,Han,0,3,3,technique:1233:タイガータイフーン（真の姿時） | technique:1611:怠条真言（たいじょうしんごん） | technique:1970:真空カマイタチ
+眼,U+773C,Han,0,3,3,technique:54:火眼金睛（かがんきんせい） | technique:236:天眼顕聖 | technique:720:邪念眼
+石,U+77F3,Han,0,3,3,technique:89:石土之体（いしづちのてい） | technique:833:石敢当（せっかんとう） | technique:2259:殺生石
+第,U+7B2C,Han,0,3,3,technique:1862:第一曲≪ポリフォニー≫ | technique:1863:第二曲≪アリア≫ | technique:1864:第三曲≪カノン≫
+経,U+7D4C,Han,0,3,3,technique:1887:杜子春経（とししゅんきょう） | technique:1888:胡蝶夢経（こちょうむきょう） | technique:1889:無限弾幕心経（むげんだんまくしんきょう）
+落,U+843D,Han,0,3,3,technique:65:断災達磨落とし（だんさいだるまおとし） | technique:77:秘剣・飛鳥落とし | technique:1119:打竹落し（うちたけおとし）
+葉,U+8449,Han,0,3,3,technique:1246:葉隠 | technique:1434:紅葉おろし | technique:2151:狐葉楔（こようせつ）
+葬,U+846C,Han,0,3,3,technique:56:悟浄水天葬（ごじょうすいてんそう） | technique:303:晦冥葬 | technique:2111:鬼爆葬（きばくそう）
+蝶,U+8776,Han,0,3,3,technique:1012:狐蝶幻（こちょうげん） | technique:1790:蝶絶喇叭蹴（ちょうぜつらっぱしゅう） | technique:1888:胡蝶夢経（こちょうむきょう）
+覇,U+8987,Han,0,3,3,technique:907:覇王拳 | technique:1044:究極戦刃聖覇剣（きゅうきょくせんじんせいばけん） | technique:1660:覇王両断剣
+角,U+89D2,Han,0,3,3,technique:92:猛冲角（もうちゅうかく） | technique:114:九淵貪角(きゅうえんどんかく) | technique:2109:銀角突貫（ぎんかくとっかん）
+豪,U+8C6A,Han,0,3,3,technique:88:豪狛毬（ごうはくきゅう） | technique:134:豪ノ斬・叢時雨（ごうのざん・むらしぐれ） | technique:441:豪怨毀永斬（ごうおんきえいざん）
+赤,U+8D64,Han,2,1,3,species:1021:アトラーカブテリモン（赤） | species:1243:オタマモン（赤） | technique:1327:ロート・クロイツ（赤十字架）
+車,U+8ECA,Han,0,3,3,technique:1132:風車 | technique:1175:暴風車（ぼうふうしゃ） | technique:1819:縦横車（じゅうおうぐるま）
+速,U+901F,Han,0,3,3,technique:1094:超低速一文字斬り | technique:1095:超高速一文字斬り | technique:1853:迅速の心得（じんそくのこころえ）
+銃,U+9283,Han,0,3,3,technique:1144:強羅打雷銃（ゴウラダライガン） | technique:1377:マシンガン・ダンス（機銃の踊り） | technique:2124:海鳴墨銃（かいめいぼくじゅう）
+降,U+964D,Han,0,3,3,technique:53:閻羅王降誕（えんらおうごうたん） | technique:1883:降妖杖・渦紋の陣（かもんのじん） | technique:1884:降妖杖・滝の陣（たきのじん）
+雨,U+96E8,Han,0,3,3,technique:134:豪ノ斬・叢時雨（ごうのざん・むらしぐれ） | technique:135:柔ノ斬・月時雨（じゅうのざん・つきしぐれ） | technique:136:終ノ斬・哭雨（ついのざん・こくう）
+雲,U+96F2,Han,0,3,3,technique:104:黏雲（ねんうん） | technique:105:呼雲（こうん） | technique:1895:觔斗雲（きんとうん）
+頭,U+982D,Han,0,3,3,technique:580:頭つぶし | technique:1184:ドンドコ音頭 | technique:1370:九頭龍陣（くずりゅうじん）
+鼓,U+9F13,Han,0,3,3,technique:579:鼓・爆砕 | technique:1186:極め太鼓 | technique:1187:漢魂乱れ太鼓
+－,U+FF0D,Other,0,3,3,technique:1432:ダウントーネ－ド | technique:1855:ストライバ－キャノン | technique:2116:リトルペッカ－
+２,U+FF12,Other,3,0,3,species:522:ファルコモン（２００６アニメ版） | species:523:クダモン（２００６アニメ版） | species:1254:アグモン（２００６アニメ版）
+３,U+FF13,Other,0,3,3,technique:886:シザーアームズΩ３^３ | technique:886:シザーアームズΩ３^３ | technique:1493:３Dレイザー
+Ｅ,U+FF25,Other,0,3,3,technique:610:トライデントアームＶＥＲ９.９ | technique:993:ガイアフォースＺＥＲＯ | technique:1713:ＬＯＶＥＹＯＵ
+Ｏ,U+FF2F,Other,0,3,3,technique:993:ガイアフォースＺＥＲＯ | technique:1713:ＬＯＶＥＹＯＵ | technique:1713:ＬＯＶＥＹＯＵ
+Ｒ,U+FF32,Other,0,3,3,technique:610:トライデントアームＶＥＲ９.９ | technique:868:ＲＧＢハーブ | technique:993:ガイアフォースＺＥＲＯ
+Ω,U+03A9,Other,0,2,2,technique:886:シザーアームズΩ３^３ | technique:1923:シザーアームズΩ
+∞,U+221E,Other,0,2,2,technique:1499:∞（ムゲン）キャノン | technique:1912:スカイロケット∞（ムゲン）
+三,U+4E09,Han,0,2,2,technique:551:三連星 | technique:1864:第三曲≪カノン≫
+上,U+4E0A,Han,0,2,2,technique:2489:上下上下右右左左XY | technique:2489:上下上下右右左左XY
+下,U+4E0B,Han,0,2,2,technique:2489:上下上下右右左左XY | technique:2489:上下上下右右左左XY
+世,U+4E16,Han,0,2,2,technique:1057:世堀クロードリル（よぼりクロードリル） | technique:1678:永世竜王刃（えいせいりゅうおうじん）
+両,U+4E21,Han,0,2,2,technique:1388:一刀両断（イットウリョウダン） | technique:1660:覇王両断剣
+伍,U+4F0D,Han,0,2,2,technique:336:伍連断霊斬（ごれんだんれいざん） | technique:337:伍重螺旋断（ごじゅうらせんだち）
+修,U+4FEE,Han,0,2,2,technique:1728:自己修復 | technique:1954:阿修羅神拳（あしゅらしんけん）
+六,U+516D,Han,0,2,2,technique:51:六合照徹閃（りくごうしょうてつせん） | technique:190:封神六蓮華
+冥,U+51A5,Han,0,2,2,technique:303:晦冥葬 | technique:1585:呼応冥軍（こおうめいぐん）
+冰,U+51B0,Han,0,2,2,technique:389:冰乱結突（ひょうらんけっとつ） | technique:396:冰凍爪（ひょうとうそう）
+凍,U+51CD,Han,0,2,2,technique:14:凍烈檮牙(とうれつとうが) | technique:396:冰凍爪（ひょうとうそう）
+割,U+5272,Han,0,2,2,technique:78:唐竹割り | technique:1222:星割り
+力,U+529B,Han,0,2,2,technique:1145:超力鳴動破（チョウリキメイドウハ） | technique:1146:魔重力呪縛陣（まじゅうりょくじゅばくじん）
+動,U+52D5,Han,0,2,2,technique:1145:超力鳴動破（チョウリキメイドウハ） | technique:1854:改心の波動
+十,U+5341,Han,0,2,2,technique:1327:ロート・クロイツ（赤十字架） | technique:1621:十文字斬り
+博,U+535A,Han,2,0,2,species:1205:ニセアグモン博士 | species:1252:アグモン博士
+厳,U+53B3,Han,1,1,2,species:237:ガイオウモン：厳刀ノ型 | technique:50:厳之御魂（いづのみたま）
+双,U+53CC,Han,0,2,2,technique:189:斬砍双刃撃 | technique:1472:無双天翔翼之陣（むそうてんしょうよくのじん）
+右,U+53F3,Han,0,2,2,technique:2489:上下上下右右左左XY | technique:2489:上下上下右右左左XY
+合,U+5408,Han,0,2,2,technique:51:六合照徹閃（りくごうしょうてつせん） | technique:2159:居合刃（いあいじん）
+吐,U+5410,Han,0,2,2,technique:115:穢吐餓(えとが) | technique:2290:熱い吐息
+呪,U+546A,Han,0,2,2,technique:1146:魔重力呪縛陣（まじゅうりょくじゅばくじん） | technique:1837:呪禁札（じゅごんさつ）
+呼,U+547C,Han,0,2,2,technique:105:呼雲（こうん） | technique:1585:呼応冥軍（こおうめいぐん）
+哮,U+54EE,Han,0,2,2,technique:252:招来・哮天犬 | technique:1806:清々之咆哮（せいせいのほうこう）
+善,U+5584,Han,2,0,2,species:376:ケルビモン（善）（X抗体） | species:812:ケルビモン（善）
+土,U+571F,Han,0,2,2,technique:89:石土之体（いしづちのてい） | technique:407:千砲土蜘蛛（せんほうつちぐも）
+塵,U+5875,Han,0,2,2,technique:126:千塵鬼神斬（せんじんきしんざん） | technique:406:魔塵瓢箪（まじんびょうたん）
+壊,U+58CA,Han,0,2,2,technique:285:凶旋壊（きょうせんかい） | technique:393:天星壊海（てんせいかいかい）
+変,U+5909,Han,0,2,2,technique:2150:狐変虚（こへんきょ） | technique:2283:変身
+女,U+5973,Han,2,0,2,species:453:クズハモン：巫女モード | species:806:サクヤモン：巫女モード
+妖,U+5996,Han,0,2,2,technique:1883:降妖杖・渦紋の陣（かもんのじん） | technique:1884:降妖杖・滝の陣（たきのじん）
+封,U+5C01,Han,0,2,2,technique:190:封神六蓮華 | technique:1378:ブロッケイドシード（封じ込めの種）
+左,U+5DE6,Han,0,2,2,technique:2489:上下上下右右左左XY | technique:2489:上下上下右右左左XY
+巫,U+5DEB,Han,2,0,2,species:453:クズハモン：巫女モード | species:806:サクヤモン：巫女モード
+帯,U+5E2F,Han,0,2,2,technique:1894:超帯電雷光砲（ちょうたいでんらいこうほう） | technique:2296:熱気を帯びた泡
+廻,U+5EFB,Han,0,2,2,technique:659:迅雷廻天戟（じんらいかいてんげき） | technique:1535:黄廻（おうかい）
+張,U+5F35,Han,0,2,2,technique:819:鉄ゲタ張り手 | technique:2484:ジェット張手
+強,U+5F37,Han,0,2,2,technique:1144:強羅打雷銃（ゴウラダライガン） | technique:1848:強振砲舞乱（きょうしんホームラン）
+当,U+5F53,Han,0,2,2,technique:833:石敢当（せっかんとう） | technique:2103:当身返し
+戟,U+621F,Han,0,2,2,technique:227:爆迅炎戟破 | technique:659:迅雷廻天戟（じんらいかいてんげき）
+技,U+6280,Han,0,2,2,technique:818:究極戦技天仰拳 | technique:1892:秘技・夢現影（ひぎ・むげんえい）
+投,U+6295,Han,0,2,2,technique:583:ウンチ投げ | technique:2137:イガ流手裏剣投げ
+振,U+632F,Han,0,2,2,technique:84:小判振舞い | technique:1848:強振砲舞乱（きょうしんホームラン）
+掌,U+638C,Han,0,2,2,technique:1609:悟遍路掌（さとりへんろしょう） | technique:2548:海帝掌打
+改,U+6539,Han,0,2,2,technique:539:ホーンバスター改 | technique:1854:改心の波動
+攻,U+653B,Han,0,2,2,technique:96:猿攻回転弾（えんこうかいてんだん） | technique:1546:特攻漢弾（ぶっこみおとこだま）
+敗,U+6557,Han,0,2,2,technique:1617:轍剣成敗（てっけんせいばい） | technique:2458:失敗しちゃった
+斗,U+6597,Han,0,2,2,technique:1895:觔斗雲（きんとうん） | technique:2042:巌兎烈斗（ガントレット）
+暗,U+6697,Han,0,2,2,technique:900:暗黒のガイアフォース | technique:1740:暗黒(ダークネスゾーン)
+曼,U+66FC,Han,0,2,2,technique:987:胎蔵界曼荼羅（たいぞうかいまんだら） | technique:999:金剛界曼荼羅（こんごうかいまんだら）
+杖,U+6756,Han,0,2,2,technique:1883:降妖杖・渦紋の陣（かもんのじん） | technique:1884:降妖杖・滝の陣（たきのじん）
+桜,U+685C,Han,0,2,2,technique:781:天晴れ桜 | technique:1454:桜吹雪
+棒,U+68D2,Han,0,2,2,technique:2105:棒陣破（ぼうじんは） | technique:2488:愛の入魂金棒
+橙,U+6A59,Han,2,0,2,species:454:メガログラウモン（橙） | species:487:グラウモン（橙）
+正,U+6B63,Han,0,2,2,technique:8:麁正（あらまさ） | technique:2176:小熊正拳突き
+毒,U+6BD2,Han,0,2,2,technique:1150:腐毒爪 | technique:2268:毒の泡
+永,U+6C38,Han,0,2,2,technique:441:豪怨毀永斬（ごうおんきえいざん） | technique:1678:永世竜王刃（えいせいりゅうおうじん）
+渦,U+6E26,Han,0,2,2,technique:1883:降妖杖・渦紋の陣（かもんのじん） | technique:1890:渦紋の陣（かもんのじん）
+滅,U+6EC5,Han,0,2,2,technique:803:聖拳滅破 | technique:1640:ルーインブラスト(破滅の爆薬)
+滝,U+6EDD,Han,0,2,2,technique:1884:降妖杖・滝の陣（たきのじん） | technique:1891:滝の陣（たきのじん）
+激,U+6FC0,Han,1,1,2,species:416:ラセンモン：激昂モード | technique:1643:激・氷月牙（げき ひょうげつが）
+濤,U+6FE4,Han,0,2,2,technique:169:波濤深槍（はとうしんそう） | technique:191:浪濤扇（ろうとうせん）
+災,U+707D,Han,0,2,2,technique:65:断災達磨落とし（だんさいだるまおとし） | technique:438:禍災爪（かさいそう）
+焼,U+713C,Han,0,2,2,technique:403:羅焼門（らしょうもん） | technique:1850:豚ノ丸焼（ぶたのまるやき）
+熱,U+71B1,Han,0,2,2,technique:2290:熱い吐息 | technique:2296:熱気を帯びた泡
+物,U+7269,Han,0,2,2,technique:176:武獲物語（たけとりものがたり） | technique:635:植物性の泡
+狼,U+72FC,Han,1,1,2,species:486:ケルベロモン：人狼モード | technique:1642:獣狼大回転（じゅうろうだいかいてん)
+玉,U+7389,Han,0,2,2,technique:1981:焔玉（ほむらだま） | technique:2114:鬼火玉（おにびだま）
+球,U+7403,Han,0,2,2,technique:832:胡劉球（こりゅうきゅう） | technique:1991:肉球パンチ
+甲,U+7532,Han,0,2,2,technique:1838:鬼門遁甲（きもんとんこう） | technique:2106:徹甲刃（てっこうじん）
+界,U+754C,Han,0,2,2,technique:987:胎蔵界曼荼羅（たいぞうかいまんだら） | technique:999:金剛界曼荼羅（こんごうかいまんだら）
+疾,U+75BE,Han,0,2,2,technique:1852:疾風天翔剣（しっぷうてんしょうけん） | technique:1893:疾風迅雷撃（しっぷうじんらいげき）
+相,U+76F8,Han,0,2,2,technique:291:鉄壁相（てっぺきのそう） | technique:292:献身相（けんしんのそう）
+瞬,U+77AC,Han,0,2,2,technique:585:鬼瞬轟拳（きしゅんごうけん） | technique:1177:瞬索敵（しゅんさくてき）
+磨,U+78E8,Han,0,2,2,technique:64:猛進火達磨（もうしんひだるま） | technique:65:断災達磨落とし（だんさいだるまおとし）
+祓,U+7953,Han,0,2,2,technique:63:魔祓灼光（まふつのしゃっこう） | technique:219:海神之祓（わだつみのはらえ）
+禍,U+798D,Han,0,2,2,technique:390:潮流旋禍（ちょうりゅうせんか） | technique:438:禍災爪（かさいそう）
+竹,U+7AF9,Han,0,2,2,technique:78:唐竹割り | technique:1119:打竹落し（うちたけおとし）
+粒,U+7C92,Han,0,2,2,technique:1639:ギュプト粒子砲 | technique:2294:小さな鉄粒
+粘,U+7C98,Han,0,2,2,technique:91:粘溶液（ねんようえき） | technique:154:粘着性の泡
+紋,U+7D0B,Han,0,2,2,technique:1883:降妖杖・渦紋の陣（かもんのじん） | technique:1890:渦紋の陣（かもんのじん）
+索,U+7D22,Han,0,2,2,technique:1134:索敵 | technique:1177:瞬索敵（しゅんさくてき）
+終,U+7D42,Han,0,2,2,technique:136:終ノ斬・哭雨（ついのざん・こくう） | technique:280:終極戦刃建御雷神（シュウキョクセンジンタケミカヅチ）
+絆,U+7D46,Han,2,0,2,species:345:ガブモン -友情の絆- | species:346:アグモン -勇気の絆-
+綱,U+7DB1,Han,0,2,2,technique:986:裏飯綱（うらいづな） | technique:1622:飯綱（いづな）
+緑,U+7DD1,Han,2,0,2,species:655:プッチーモン（緑） | species:1128:コアドラモン（緑）
+繰,U+7E70,Han,0,2,2,technique:178:骸繰艶舞・鉢かづき | technique:1789:武舞独繰
+翔,U+7FD4,Han,0,2,2,technique:1472:無双天翔翼之陣（むそうてんしょうよくのじん） | technique:1852:疾風天翔剣（しっぷうてんしょうけん）
+胡,U+80E1,Han,0,2,2,technique:832:胡劉球（こりゅうきゅう） | technique:1888:胡蝶夢経（こちょうむきょう）
+花,U+82B1,Han,0,2,2,technique:613:雪花火 | technique:1000:此ノ花戦姫万象（このはなせんきばんしょう）
+荼,U+837C,Han,0,2,2,technique:987:胎蔵界曼荼羅（たいぞうかいまんだら） | technique:999:金剛界曼荼羅（こんごうかいまんだら）
+華,U+83EF,Han,0,2,2,technique:190:封神六蓮華 | technique:548:刀華静謐（とうかせいひつ）
+蒼,U+84BC,Han,0,2,2,technique:193:蒼纏龍神牙（そうてんりゅうじんが） | technique:1578:蒼雷（そうらい）
+蓮,U+84EE,Han,0,2,2,technique:190:封神六蓮華 | technique:1804:紅蓮獣王波（ぐれんじゅうおうは）
+虚,U+865A,Han,0,2,2,technique:287:渾沌亜空虚（こんとんあくうきょ） | technique:2150:狐変虚（こへんきょ）
+蛛,U+86DB,Han,0,2,2,technique:407:千砲土蜘蛛（せんほうつちぐも） | technique:1610:霊光蜘蛛之糸（れいこうくものいと）
+蜂,U+8702,Han,0,2,2,technique:448:突蜂（覚醒）　（とっほう） | technique:1036:突蜂（とっほう）
+蜘,U+8718,Han,0,2,2,technique:407:千砲土蜘蛛（せんほうつちぐも） | technique:1610:霊光蜘蛛之糸（れいこうくものいと）
+詰,U+8A70,Han,0,2,2,technique:446:白詰一文字切り（覚醒） | technique:1034:白詰一文字切り
+象,U+8C61,Han,0,2,2,technique:235:万象逸貫 | technique:1000:此ノ花戦姫万象（このはなせんきばんしょう）
+貫,U+8CAB,Han,0,2,2,technique:235:万象逸貫 | technique:2109:銀角突貫（ぎんかくとっかん）
+足,U+8DB3,Han,0,2,2,technique:2169:逃げ足猛ダッシュ | technique:2191:逃げ足ダッシュ
+転,U+8EE2,Han,0,2,2,technique:96:猿攻回転弾（えんこうかいてんだん） | technique:1642:獣狼大回転（じゅうろうだいかいてん)
+輪,U+8F2A,Han,0,2,2,technique:74:日輪の舞 | technique:660:轟炎輪（ごうえんりん）
+逃,U+9003,Han,0,2,2,technique:2169:逃げ足猛ダッシュ | technique:2191:逃げ足ダッシュ
+遁,U+9041,Han,0,2,2,technique:599:擬遁アイソレーション（ぎとんあいそれーしょん） | technique:1838:鬼門遁甲（きもんとんこう）
+達,U+9054,Han,0,2,2,technique:64:猛進火達磨（もうしんひだるま） | technique:65:断災達磨落とし（だんさいだるまおとし）
+邪,U+90AA,Han,0,2,2,technique:720:邪念眼 | technique:1982:邪炎龍（じゃえんりゅう)
+重,U+91CD,Han,0,2,2,technique:337:伍重螺旋断（ごじゅうらせんだち） | technique:1146:魔重力呪縛陣（まじゅうりょくじゅばくじん）
+銀,U+9280,Han,0,2,2,technique:2109:銀角突貫（ぎんかくとっかん） | technique:2110:金銀雷鳴撃（きんぎんらいめいげき）
+限,U+9650,Han,0,2,2,technique:1889:無限弾幕心経（むげんだんまくしんきょう） | technique:2175:無限ビンタ
+隠,U+96A0,Han,0,2,2,technique:1245:霞隠 | technique:1246:葉隠
+雪,U+96EA,Han,0,2,2,technique:613:雪花火 | technique:1454:桜吹雪
+霊,U+970A,Han,0,2,2,technique:336:伍連断霊斬（ごれんだんれいざん） | technique:1610:霊光蜘蛛之糸（れいこうくものいと）
+霧,U+9727,Han,0,2,2,technique:124:爆霧（ばくぎり） | technique:1616:霧幻（むげん）
+静,U+9759,Han,0,2,2,technique:548:刀華静謐（とうかせいひつ） | technique:667:静電気
+飯,U+98EF,Han,0,2,2,technique:986:裏飯綱（うらいづな） | technique:1622:飯綱（いづな）
+駆,U+99C6,Han,0,2,2,technique:1968:駆駆裂空斬（くるくるれっくうざん） | technique:1968:駆駆裂空斬（くるくるれっくうざん）
+骨,U+9AA8,Han,0,2,2,technique:1985:骨骨ブーメラン | technique:1985:骨骨ブーメラン
+骸,U+9AB8,Han,0,2,2,technique:12:氷骸礫(ひょうがいれき) | technique:178:骸繰艶舞・鉢かづき
+魚,U+9B5A,Han,0,2,2,technique:395:魚流炮（ぎょりゅうほう） | technique:1346:グレッチャートルペイド（氷河魚雷）
+＆,U+FF06,Other,0,2,2,technique:38:クロスレッド＆ブルー | technique:2371:コピー＆ペースト
+８,U+FF18,Other,0,2,2,technique:2181:８８コール（ハチハチコール） | technique:2181:８８コール（ハチハチコール）
+９,U+FF19,Other,0,2,2,technique:610:トライデントアームＶＥＲ９.９ | technique:610:トライデントアームＶＥＲ９.９
+＝,U+FF1D,Other,0,2,2,technique:2485:コマンド＝ハイパー | technique:2514:アルフ＝アイン
+^,U+005E,Other,0,1,1,technique:886:シザーアームズΩ３^３
+Σ,U+03A3,Other,0,1,1,technique:1006:ダブルエッジΣ（シグマ）
+乗,U+4E57,Han,0,1,1,technique:288:斧乗炎怒（ふじょうえんど）
+乾,U+4E7E,Han,0,1,1,technique:226:乾坤圏
+亜,U+4E9C,Han,0,1,1,technique:287:渾沌亜空虚（こんとんあくうきょ）
+人,U+4EBA,Han,1,0,1,species:486:ケルベロモン：人狼モード
+付,U+4ED8,Han,0,1,1,technique:1014:噛み付き
+仰,U+4EF0,Han,0,1,1,technique:818:究極戦技天仰拳
+伐,U+4F10,Han,0,1,1,technique:439:叩破伐倒（こうはばっとう）
+伝,U+4F1D,Han,0,1,1,technique:1544:護王流伝羅守（ごーるでんらっしゅ）
+伸,U+4F38,Han,0,1,1,technique:2255:伸縮性のある泡
+低,U+4F4E,Han,0,1,1,technique:1094:超低速一文字斬り
+供,U+4F9B,Han,0,1,1,technique:1473:怒涛闇供喪之舞（どとうやみくものまい）
+価,U+4FA1,Han,0,1,1,technique:2312:最悪の評価
+倒,U+5012,Han,0,1,1,technique:439:叩破伐倒（こうはばっとう）
+偃,U+5043,Han,0,1,1,technique:1641:黄獣偃月刀（きじゅうえんげつとう）
+儀,U+5100,Han,0,1,1,technique:218:儀来四海招（にらいしかいしょう）
+免,U+514D,Han,0,1,1,technique:1989:切り捨て御免
+兎,U+514E,Han,0,1,1,technique:2042:巌兎烈斗（ガントレット）
+兜,U+515C,Han,0,1,1,technique:2158:兜返し
+入,U+5165,Han,0,1,1,technique:2488:愛の入魂金棒
+円,U+5186,Han,0,1,1,technique:251:鷹尖円舞
+冲,U+51B2,Han,0,1,1,technique:92:猛冲角（もうちゅうかく）
+凶,U+51F6,Han,0,1,1,technique:285:凶旋壊（きょうせんかい）
+分,U+5206,Han,0,1,1,technique:2093:コウガ流影分身
+初,U+521D,Han,0,1,1,technique:179:初瀬のおもてなし
+判,U+5224,Han,0,1,1,technique:84:小判振舞い
+利,U+5229,Han,0,1,1,technique:344:舎利弗（しゃりほつ）
+制,U+5236,Han,0,1,1,technique:1655:鉄拳制裁
+刻,U+523B,Han,0,1,1,technique:286:咒煉衝刻（じゅれんしょうこく）
+劈,U+5288,Han,0,1,1,technique:86:劈龍爪（へきりゅうそう）
+劉,U+5289,Han,0,1,1,technique:832:胡劉球（こりゅうきゅう）
+助,U+52A9,Han,1,0,1,species:351:テリアモン助手
+勇,U+52C7,Han,1,0,1,species:346:アグモン -勇気の絆-
+勢,U+52E2,Han,0,1,1,technique:645:二刀勢雷（にとうせいらい）
+原,U+539F,Han,0,1,1,technique:2219:原色の舞い
+参,U+53C2,Han,0,1,1,technique:1219:参の太刀
+友,U+53CB,Han,1,0,1,species:345:ガブモン -友情の絆-
+叢,U+53E2,Han,0,1,1,technique:134:豪ノ斬・叢時雨（ごうのざん・むらしぐれ）
+叩,U+53E9,Han,0,1,1,technique:439:叩破伐倒（こうはばっとう）
+召,U+53EC,Han,0,1,1,technique:647:神電召雷光（しんでんしょうらいこう）
+叭,U+53ED,Han,0,1,1,technique:1790:蝶絶喇叭蹴（ちょうぜつらっぱしゅう）
+台,U+53F0,Han,0,1,1,technique:1657:ちゃぶ台返し
+吹,U+5439,Han,0,1,1,technique:1454:桜吹雪
+吼,U+543C,Han,0,1,1,technique:97:金絲吼（きんしこう）
+咆,U+5486,Han,0,1,1,technique:1806:清々之咆哮（せいせいのほうこう）
+咒,U+5492,Han,0,1,1,technique:286:咒煉衝刻（じゅれんしょうこく）
+咬,U+54AC,Han,0,1,1,technique:1590:咬竜斬刃（こうりゅうざんば）
+哀,U+54C0,Han,0,1,1,technique:289:盾射轟哀（じゅんせきごうあい）
+哭,U+54ED,Han,0,1,1,technique:136:終ノ斬・哭雨（ついのざん・こくう）
+唐,U+5510,Han,0,1,1,technique:78:唐竹割り
+喇,U+5587,Han,0,1,1,technique:1790:蝶絶喇叭蹴（ちょうぜつらっぱしゅう）
+喪,U+55AA,Han,0,1,1,technique:1473:怒涛闇供喪之舞（どとうやみくものまい）
+喰,U+55B0,Han,0,1,1,technique:587:喰雷炎砕破（がらいえんさいは）
+噛,U+565B,Han,0,1,1,technique:1014:噛み付き
+四,U+56DB,Han,0,1,1,technique:218:儀来四海招（にらいしかいしょう）
+圏,U+570F,Han,0,1,1,technique:226:乾坤圏
+地,U+5730,Han,0,1,1,technique:1656:地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！）
+坤,U+5764,Han,0,1,1,technique:226:乾坤圏
+型,U+578B,Han,1,0,1,species:237:ガイオウモン：厳刀ノ型
+堀,U+5800,Han,0,1,1,technique:1057:世堀クロードリル（よぼりクロードリル）
+堕,U+5815,Han,0,1,1,technique:1149:獣王堕拳
+墜,U+589C,Han,0,1,1,technique:201:墜月衝（ついげつしょう）
+墨,U+58A8,Han,0,1,1,technique:2124:海鳴墨銃（かいめいぼくじゅう）
+壁,U+58C1,Han,0,1,1,technique:291:鉄壁相（てっぺきのそう）
+壱,U+58F1,Han,0,1,1,technique:1217:壱の太刀
+夜,U+591C,Han,0,1,1,technique:177:月夜之迎（つきよのむかえ）
+失,U+5931,Han,0,1,1,technique:2458:失敗しちゃった
+姫,U+59EB,Han,0,1,1,technique:1000:此ノ花戦姫万象（このはなせんきばんしょう）
+姿,U+59FF,Han,0,1,1,technique:1233:タイガータイフーン（真の姿時）
+孤,U+5B64,Han,0,1,1,technique:388:孤籠泡（ころうほう）
+宇,U+5B87,Han,0,1,1,technique:1001:宇迦之御魂（うかのみたま）
+守,U+5B88,Han,0,1,1,technique:1544:護王流伝羅守（ごーるでんらっしゅ）
+定,U+5B9A,Han,0,1,1,technique:1326:シュバルツ・レールザッツ（黒定理）
+対,U+5BFE,Han,0,1,1,technique:1983:絶対零度パンチ
+射,U+5C04,Han,0,1,1,technique:289:盾射轟哀（じゅんせきごうあい）
+尊,U+5C0A,Han,0,1,1,technique:49:尊天大烈風（そんてんだいれっぷう）
+尖,U+5C16,Han,0,1,1,technique:251:鷹尖円舞
+居,U+5C45,Han,0,1,1,technique:2159:居合刃（いあいじん）
+岩,U+5CA9,Han,0,1,1,technique:93:岩衝弾（がんしょうだん）
+崩,U+5D29,Han,0,1,1,technique:13:轟蹄崩(ごうていほう)
+嵐,U+5D50,Han,0,1,1,technique:167:窮牙嵐断襲(きゅうがらんだんしゅう)
+巌,U+5DCC,Han,0,1,1,technique:2042:巌兎烈斗（ガントレット）
+巨,U+5DE8,Han,0,1,1,technique:1727:巨大なクリスタル
+己,U+5DF1,Han,0,1,1,technique:1728:自己修復
+巻,U+5DFB,Han,0,1,1,technique:440:風牙烈巻迅（ふうがれっかんじん）
+布,U+5E03,Han,0,1,1,technique:1063:甕布都神（ミカフツノカミ）
+帝,U+5E1D,Han,0,1,1,technique:2548:海帝掌打
+幕,U+5E55,Han,0,1,1,technique:1889:無限弾幕心経（むげんだんまくしんきょう）
+年,U+5E74,Han,1,0,1,species:895:ヤタガラモン（2006年アニメ版）
+幽,U+5E7D,Han,0,1,1,technique:404:幽玄（ゆうげん）
+度,U+5EA6,Han,0,1,1,technique:1983:絶対零度パンチ
+弐,U+5F10,Han,0,1,1,technique:1218:弐の太刀
+弗,U+5F17,Han,0,1,1,technique:344:舎利弗（しゃりほつ）
+得,U+5F97,Han,0,1,1,technique:1853:迅速の心得（じんそくのこころえ）
+復,U+5FA9,Han,0,1,1,technique:1728:自己修復
+応,U+5FDC,Han,0,1,1,technique:1585:呼応冥軍（こおうめいぐん）
+念,U+5FF5,Han,0,1,1,technique:720:邪念眼
+怠,U+6020,Han,0,1,1,technique:1611:怠条真言（たいじょうしんごん）
+急,U+6025,Han,0,1,1,technique:582:急ブレーキスパーク
+怨,U+6028,Han,0,1,1,technique:441:豪怨毀永斬（ごうおんきえいざん）
+息,U+606F,Han,0,1,1,technique:2290:熱い吐息
+情,U+60C5,Han,1,0,1,species:345:ガブモン -友情の絆-
+愚,U+611A,Han,0,1,1,technique:722:愚幻
+愛,U+611B,Han,0,1,1,technique:2488:愛の入魂金棒
+戒,U+6212,Han,0,1,1,technique:55:八戒炎天撃（はっかいえんてんげき）
+截,U+622A,Han,0,1,1,technique:202:蛾眉截波（がびせっぱ）
+戸,U+6238,Han,0,1,1,technique:2557:戸締用心(とじまりようじん)
+戻,U+623B,Han,0,1,1,technique:345:黄泉戻（よみもどし）
+捨,U+6368,Han,0,1,1,technique:1989:切り捨て御免
+摧,U+6467,Han,0,1,1,technique:279:鉄天摧砕
+擬,U+64EC,Han,0,1,1,technique:599:擬遁アイソレーション（ぎとんあいそれーしょん）
+敢,U+6562,Han,0,1,1,technique:833:石敢当（せっかんとう）
+斉,U+6589,Han,0,1,1,technique:173:一斉砲撃
+斧,U+65A7,Han,0,1,1,technique:288:斧乗炎怒（ふじょうえんど）
+日,U+65E5,Han,0,1,1,technique:74:日輪の舞
+昂,U+6602,Han,1,0,1,species:416:ラセンモン：激昂モード
+昇,U+6607,Han,0,1,1,technique:1589:昇竜斬波（しょうりゅうざんぱ）
+明,U+660E,Han,0,1,1,technique:87:焔明珠（えんめいしゅ）
+春,U+6625,Han,0,1,1,technique:1887:杜子春経（とししゅんきょう）
+晦,U+6666,Han,0,1,1,technique:303:晦冥葬
+晴,U+6674,Han,0,1,1,technique:781:天晴れ桜
+暁,U+6681,Han,0,1,1,technique:75:暁光一閃
+暴,U+66B4,Han,0,1,1,technique:1175:暴風車（ぼうふうしゃ）
+最,U+6700,Han,0,1,1,technique:2312:最悪の評価
+期,U+671F,Han,1,0,1,species:515:ホエーモン（成熟期）
+本,U+672C,Han,0,1,1,technique:1545:千本爆砕（せんぼんどっかーん）
+札,U+672D,Han,0,1,1,technique:1837:呪禁札（じゅごんさつ）
+杜,U+675C,Han,0,1,1,technique:1887:杜子春経（とししゅんきょう）
+束,U+675F,Han,0,1,1,technique:405:八束染縛（やつかせんばく）
+条,U+6761,Han,0,1,1,technique:1611:怠条真言（たいじょうしんごん）
+枚,U+679A,Han,0,1,1,technique:76:ツバメ二枚返し
+架,U+67B6,Han,0,1,1,technique:1327:ロート・クロイツ（赤十字架）
+染,U+67D3,Han,0,1,1,technique:405:八束染縛（やつかせんばく）
+柔,U+67D4,Han,0,1,1,technique:135:柔ノ斬・月時雨（じゅうのざん・つきしぐれ）
+梵,U+68B5,Han,0,1,1,technique:1858:梵筆閃（ぼんひつせん）
+棍,U+68CD,Han,0,1,1,technique:2487:怒ツ鬼金剛棍
+植,U+690D,Han,0,1,1,technique:635:植物性の泡
+楔,U+6954,Han,0,1,1,technique:2151:狐葉楔（こようせつ）
+業,U+696D,Han,0,1,1,technique:1173:業火弾（ごうかだん）
+楽,U+697D,Han,0,1,1,technique:62:光爪神楽（こうそうかぐら）
+槍,U+69CD,Han,0,1,1,technique:169:波濤深槍（はとうしんそう）
+横,U+6A2A,Han,0,1,1,technique:1819:縦横車（じゅうおうぐるま）
+機,U+6A5F,Han,0,1,1,technique:1377:マシンガン・ダンス（機銃の踊り）
+檮,U+6AAE,Han,0,1,1,technique:14:凍烈檮牙(とうれつとうが)
+此,U+6B64,Han,0,1,1,technique:1000:此ノ花戦姫万象（このはなせんきばんしょう）
+殲,U+6BB2,Han,0,1,1,technique:250:毘沙門八極殲陣
+毀,U+6BC0,Han,0,1,1,technique:441:豪怨毀永斬（ごうおんきえいざん）
+毘,U+6BD8,Han,0,1,1,technique:250:毘沙門八極殲陣
+毬,U+6BEC,Han,0,1,1,technique:88:豪狛毬（ごうはくきゅう）
+沌,U+6C8C,Han,0,1,1,technique:287:渾沌亜空虚（こんとんあくうきょ）
+沙,U+6C99,Han,0,1,1,technique:250:毘沙門八極殲陣
+河,U+6CB3,Han,0,1,1,technique:1346:グレッチャートルペイド（氷河魚雷）
+泉,U+6CC9,Han,0,1,1,technique:345:黄泉戻（よみもどし）
+法,U+6CD5,Han,0,1,1,technique:1171:光電殺法之陣（こうでんさっぽうのじん）
+泿,U+6CFF,Han,0,1,1,technique:94:泿水弾（ぎんすいだん）
+浪,U+6D6A,Han,0,1,1,technique:191:浪濤扇（ろうとうせん）
+涛,U+6D9B,Han,0,1,1,technique:1473:怒涛闇供喪之舞（どとうやみくものまい）
+液,U+6DB2,Han,0,1,1,technique:91:粘溶液（ねんようえき）
+深,U+6DF1,Han,0,1,1,technique:169:波濤深槍（はとうしんそう）
+淵,U+6DF5,Han,0,1,1,technique:114:九淵貪角(きゅうえんどんかく)
+清,U+6E05,Han,0,1,1,technique:1806:清々之咆哮（せいせいのほうこう）
+渾,U+6E3E,Han,0,1,1,technique:287:渾沌亜空虚（こんとんあくうきょ）
+湯,U+6E6F,Han,0,1,1,technique:2435:癒しの湯
+溶,U+6EB6,Han,0,1,1,technique:91:粘溶液（ねんようえき）
+滄,U+6EC4,Han,0,1,1,technique:192:鹹海炸滄陣（かんかいさくそうじん）
+漸,U+6F38,Han,0,1,1,technique:1542:獅子羅王漸（ししらおうざん）
+潮,U+6F6E,Han,0,1,1,technique:390:潮流旋禍（ちょうりゅうせんか）
+瀑,U+7011,Han,0,1,1,technique:394:瀑閃（ばくせん）
+瀬,U+702C,Han,0,1,1,technique:179:初瀬のおもてなし
+灰,U+7070,Han,0,1,1,technique:661:灰迅雷瞳（かいじんらいどう）
+灸,U+7078,Han,0,1,1,technique:2112:怒気怒鬼怒灸（ドキドキドキューン）
+灼,U+707C,Han,0,1,1,technique:63:魔祓灼光（まふつのしゃっこう）
+炮,U+70AE,Han,0,1,1,technique:395:魚流炮（ぎょりゅうほう）
+炸,U+70B8,Han,0,1,1,technique:192:鹹海炸滄陣（かんかいさくそうじん）
+烏,U+70CF,Han,0,1,1,technique:1477:烏王丸（ちょうおうまる）
+煉,U+7149,Han,0,1,1,technique:286:咒煉衝刻（じゅれんしょうこく）
+煌,U+714C,Han,0,1,1,technique:391:雷煌鞭（らいこうべん）
+照,U+7167,Han,0,1,1,technique:51:六合照徹閃（りくごうしょうてつせん）
+熊,U+718A,Han,0,1,1,technique:2176:小熊正拳突き
+熟,U+719F,Han,1,0,1,species:515:ホエーモン（成熟期）
+燕,U+71D5,Han,0,1,1,technique:343:燕（つばくろ）
+父,U+7236,Han,0,1,1,technique:1656:地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！）
+片,U+7247,Han,0,1,1,technique:1726:クリスタルの破片
+特,U+7279,Han,0,1,1,technique:1546:特攻漢弾（ぶっこみおとこだま）
+犬,U+72AC,Han,0,1,1,technique:252:招来・哮天犬
+狛,U+72DB,Han,0,1,1,technique:88:豪狛毬（ごうはくきゅう）
+独,U+72EC,Han,0,1,1,technique:1789:武舞独繰
+献,U+732E,Han,0,1,1,technique:292:献身相（けんしんのそう）
+猿,U+733F,Han,0,1,1,technique:96:猿攻回転弾（えんこうかいてんだん）
+獲,U+7372,Han,0,1,1,technique:176:武獲物語（たけとりものがたり）
+玄,U+7384,Han,0,1,1,technique:404:幽玄（ゆうげん）
+玲,U+73B2,Han,0,1,1,technique:680:虞玲刀（ぐれいとう）
+玻,U+73BB,Han,0,1,1,technique:52:浄玻璃鏡(じょうはりのかがみ)
+珠,U+73E0,Han,0,1,1,technique:87:焔明珠（えんめいしゅ）
+現,U+73FE,Han,0,1,1,technique:1892:秘技・夢現影（ひぎ・むげんえい）
+理,U+7406,Han,0,1,1,technique:1326:シュバルツ・レールザッツ（黒定理）
+琉,U+7409,Han,0,1,1,technique:679:雅琉々砲（がるるほう）
+璃,U+7483,Han,0,1,1,technique:52:浄玻璃鏡(じょうはりのかがみ)
+瓢,U+74E2,Han,0,1,1,technique:406:魔塵瓢箪（まじんびょうたん）
+甕,U+7515,Han,0,1,1,technique:1063:甕布都神（ミカフツノカミ）
+生,U+751F,Han,0,1,1,technique:2259:殺生石
+用,U+7528,Han,0,1,1,technique:2557:戸締用心(とじまりようじん)
+痕,U+75D5,Han,0,1,1,technique:1584:幻刃無痕（げんじんむこん）
+癪,U+766A,Han,0,1,1,technique:1056:漢癪ダスト（かんしゃくダスト）
+皓,U+7693,Han,0,1,1,technique:203:太陰皓光（たいいんこうこう）
+盾,U+76FE,Han,0,1,1,technique:289:盾射轟哀（じゅんせきごうあい）
+眉,U+7709,Han,0,1,1,technique:202:蛾眉截波（がびせっぱ）
+着,U+7740,Han,0,1,1,technique:154:粘着性の泡
+睛,U+775B,Han,0,1,1,technique:54:火眼金睛（かがんきんせい）
+瞳,U+77B3,Han,0,1,1,technique:661:灰迅雷瞳（かいじんらいどう）
+矢,U+77E2,Han,0,1,1,technique:1718:アウルヴァンディルの矢
+砂,U+7802,Han,0,1,1,technique:562:砂かけ
+砍,U+780D,Han,0,1,1,technique:189:斬砍双刃撃
+碎,U+788E,Han,0,1,1,technique:392:神碎牙（しんさいが）
+礫,U+792B,Han,0,1,1,technique:12:氷骸礫(ひょうがいれき)
+禁,U+7981,Han,0,1,1,technique:1837:呪禁札（じゅごんさつ）
+穢,U+7A62,Han,0,1,1,technique:115:穢吐餓(えとが)
+窮,U+7AAE,Han,0,1,1,technique:167:窮牙嵐断襲(きゅうがらんだんしゅう)
+笠,U+7B20,Han,0,1,1,technique:90:編笠スピン斬り
+筆,U+7B46,Han,0,1,1,technique:1858:梵筆閃（ぼんひつせん）
+箪,U+7BAA,Han,0,1,1,technique:406:魔塵瓢箪（まじんびょうたん）
+籠,U+7C60,Han,0,1,1,technique:388:孤籠泡（ころうほう）
+糸,U+7CF8,Han,0,1,1,technique:1610:霊光蜘蛛之糸（れいこうくものいと）
+紐,U+7D10,Han,0,1,1,technique:168:絡縛藻紐（らくばくそうちゅう）
+紫,U+7D2B,Han,1,0,1,species:1245:エレキモン（紫）
+結,U+7D50,Han,0,1,1,technique:389:冰乱結突（ひょうらんけっとつ）
+絡,U+7D61,Han,0,1,1,technique:168:絡縛藻紐（らくばくそうちゅう）
+絲,U+7D72,Han,0,1,1,technique:97:金絲吼（きんしこう）
+締,U+7DE0,Han,0,1,1,technique:2557:戸締用心(とじまりようじん)
+編,U+7DE8,Han,0,1,1,technique:90:編笠スピン斬り
+縁,U+7E01,Han,0,1,1,technique:48:魔縁斬蹴撃（まえんざんしゅうげき）
+縦,U+7E26,Han,0,1,1,technique:1819:縦横車（じゅうおうぐるま）
+縮,U+7E2E,Han,0,1,1,technique:2255:伸縮性のある泡
+纏,U+7E8F,Han,0,1,1,technique:193:蒼纏龍神牙（そうてんりゅうじんが）
+罪,U+7F6A,Han,0,1,1,technique:1042:鉄拳断罪
+翼,U+7FFC,Han,0,1,1,technique:1472:無双天翔翼之陣（むそうてんしょうよくのじん）
+肉,U+8089,Han,0,1,1,technique:1991:肉球パンチ
+胎,U+80CE,Han,0,1,1,technique:987:胎蔵界曼荼羅（たいぞうかいまんだら）
+腐,U+8150,Han,0,1,1,technique:1150:腐毒爪
+臥,U+81E5,Han,0,1,1,technique:2481:臥龍扇
+自,U+81EA,Han,0,1,1,technique:1728:自己修復
+舎,U+820E,Han,0,1,1,technique:344:舎利弗（しゃりほつ）
+色,U+8272,Han,0,1,1,technique:2219:原色の舞い
+艶,U+8276,Han,0,1,1,technique:178:骸繰艶舞・鉢かづき
+芯,U+82AF,Han,0,1,1,technique:1583:魂魄芯撃（こんぱくしんげき）
+苦,U+82E6,Han,0,1,1,technique:1996:苦無羽（くないばね）
+草,U+8349,Han,0,1,1,technique:1435:草薙
+菊,U+83CA,Han,0,1,1,technique:547:菊燐一閃・號雷斬（きくりんいっせん・ごうらいざん）
+蔵,U+8535,Han,0,1,1,technique:987:胎蔵界曼荼羅（たいぞうかいまんだら）
+薙,U+8599,Han,0,1,1,technique:1435:草薙
+薬,U+85AC,Han,0,1,1,technique:1640:ルーインブラスト(破滅の爆薬)
+藻,U+85FB,Han,0,1,1,technique:168:絡縛藻紐（らくばくそうちゅう）
+虞,U+865E,Han,0,1,1,technique:680:虞玲刀（ぐれいとう）
+號,U+865F,Han,0,1,1,technique:547:菊燐一閃・號雷斬（きくりんいっせん・ごうらいざん）
+蛟,U+86DF,Han,0,1,1,technique:95:蛟牙（こうが）
+蛾,U+86FE,Han,0,1,1,technique:202:蛾眉截波（がびせっぱ）
+螺,U+87BA,Han,0,1,1,technique:337:伍重螺旋断（ごじゅうらせんだち）
+血,U+8840,Han,0,1,1,technique:1849:打々々魅飲血（だだだみんち）
+術,U+8853,Han,0,1,1,technique:1389:クグツの術
+裁,U+88C1,Han,0,1,1,technique:1655:鉄拳制裁
+裂,U+88C2,Han,0,1,1,technique:1968:駆駆裂空斬（くるくるれっくうざん）
+装,U+88C5,Han,0,1,1,technique:359:3連装砲
+襲,U+8972,Han,0,1,1,technique:167:窮牙嵐断襲(きゅうがらんだんしゅう)
+親,U+89AA,Han,0,1,1,technique:1656:地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！）
+觔,U+89D4,Han,0,1,1,technique:1895:觔斗雲（きんとうん）
+言,U+8A00,Han,0,1,1,technique:1611:怠条真言（たいじょうしんごん）
+評,U+8A55,Han,0,1,1,technique:2312:最悪の評価
+誕,U+8A95,Han,0,1,1,technique:53:閻羅王降誕（えんらおうごうたん）
+語,U+8A9E,Han,0,1,1,technique:176:武獲物語（たけとりものがたり）
+謐,U+8B10,Han,0,1,1,technique:548:刀華静謐（とうかせいひつ）
+護,U+8B77,Han,0,1,1,technique:1544:護王流伝羅守（ごーるでんらっしゅ）
+豚,U+8C5A,Han,0,1,1,technique:1850:豚ノ丸焼（ぶたのまるやき）
+貪,U+8CAA,Han,0,1,1,technique:114:九淵貪角(きゅうえんどんかく)
+路,U+8DEF,Han,0,1,1,technique:1609:悟遍路掌（さとりへんろしょう）
+踊,U+8E0A,Han,0,1,1,technique:1377:マシンガン・ダンス（機銃の踊り）
+踵,U+8E35,Han,0,1,1,technique:657:雷撃踵（らいげきしょう）
+蹄,U+8E44,Han,0,1,1,technique:13:轟蹄崩(ごうていほう)
+軍,U+8ECD,Han,0,1,1,technique:1585:呼応冥軍（こおうめいぐん）
+轍,U+8F4D,Han,0,1,1,technique:1617:轍剣成敗（てっけんせいばい）
+込,U+8FBC,Han,0,1,1,technique:1378:ブロッケイドシード（封じ込めの種）
+迎,U+8FCE,Han,0,1,1,technique:177:月夜之迎（つきよのむかえ）
+迦,U+8FE6,Han,0,1,1,technique:1001:宇迦之御魂（うかのみたま）
+逆,U+9006,Han,0,1,1,technique:2108:逆撃炎弾（ぎゃくげきえんだん）
+進,U+9032,Han,0,1,1,technique:64:猛進火達磨（もうしんひだるま）
+逸,U+9038,Han,0,1,1,technique:235:万象逸貫
+遍,U+904D,Han,0,1,1,technique:1609:悟遍路掌（さとりへんろしょう）
+道,U+9053,Han,0,1,1,technique:646:士道一徹（しどういってつ）
+都,U+90FD,Han,0,1,1,technique:1063:甕布都神（ミカフツノカミ）
+酒,U+9152,Han,0,1,1,technique:1921:酒ブレス
+酸,U+9178,Han,0,1,1,technique:727:酸の泡
+鉢,U+9262,Han,0,1,1,technique:178:骸繰艶舞・鉢かづき
+鎧,U+93A7,Han,0,1,1,technique:1679:黄鎧（おうがい）
+鏡,U+93E1,Han,0,1,1,technique:52:浄玻璃鏡(じょうはりのかがみ)
+閻,U+95BB,Han,0,1,1,technique:53:閻羅王降誕（えんらおうごうたん）
+闇,U+95C7,Han,0,1,1,technique:1473:怒涛闇供喪之舞（どとうやみくものまい）
+闘,U+95D8,Han,0,1,1,technique:123:闘魂爪（とうこんそう）
+阿,U+963F,Han,0,1,1,technique:1954:阿修羅神拳（あしゅらしんけん）
+陰,U+9670,Han,0,1,1,technique:203:太陰皓光（たいいんこうこう）
+雅,U+96C5,Han,0,1,1,technique:679:雅琉々砲（がるるほう）
+零,U+96F6,Han,0,1,1,technique:1983:絶対零度パンチ
+霞,U+971E,Han,0,1,1,technique:1245:霞隠
+面,U+9762,Han,0,1,1,technique:293:九種九面撃（きゅうしゅきゅうめんげき）
+鞭,U+97AD,Han,0,1,1,technique:391:雷煌鞭（らいこうべん）
+音,U+97F3,Han,0,1,1,technique:1184:ドンドコ音頭
+響,U+97FF,Han,0,1,1,technique:662:響香水月（きょうかすいげつ）
+顕,U+9855,Han,0,1,1,technique:236:天眼顕聖
+颪,U+98AA,Han,0,1,1,technique:166:刃羽颪(じんばおろし)
+飛,U+98DB,Han,0,1,1,technique:77:秘剣・飛鳥落とし
+飢,U+98E2,Han,0,1,1,technique:116:饕飢爆（とうきばく）
+飲,U+98F2,Han,0,1,1,technique:1849:打々々魅飲血（だだだみんち）
+餓,U+9913,Han,0,1,1,technique:115:穢吐餓(えとが)
+饕,U+9955,Han,0,1,1,technique:116:饕飢爆（とうきばく）
+首,U+9996,Han,0,1,1,technique:1620:打首獄門
+香,U+9999,Han,0,1,1,technique:662:響香水月（きょうかすいげつ）
+馬,U+99AC,Han,1,0,1,species:568:スカルナイトモン：騎馬モード
+馳,U+99B3,Han,0,1,1,technique:1656:地神！神鳴！神馳！親父！（じしん！かみなり！かじ！おやじ！）
+騎,U+9A0E,Han,1,0,1,species:568:スカルナイトモン：騎馬モード
+髏,U+9ACF,Han,0,1,1,technique:1624:髑髏乱舞（どくろらんぶ)
+髑,U+9AD1,Han,0,1,1,technique:1624:髑髏乱舞（どくろらんぶ)
+高,U+9AD8,Han,0,1,1,technique:1095:超高速一文字斬り
+髪,U+9AEA,Han,0,1,1,technique:2018:怒髪天（どはつてん）
+鬧,U+9B27,Han,0,1,1,technique:290:雷鬧（らいどう)
+魄,U+9B44,Han,0,1,1,technique:1583:魂魄芯撃（こんぱくしんげき）
+魅,U+9B45,Han,0,1,1,technique:1849:打々々魅飲血（だだだみんち）
+鳥,U+9CE5,Han,0,1,1,technique:77:秘剣・飛鳥落とし
+鷹,U+9DF9,Han,0,1,1,technique:251:鷹尖円舞
+鹹,U+9E79,Han,0,1,1,technique:192:鹹海炸滄陣（かんかいさくそうじん）
+麁,U+9E81,Han,0,1,1,technique:8:麁正（あらまさ）
+黏,U+9ECF,Han,0,1,1,technique:104:黏雲（ねんうん）
+７,U+FF17,Other,1,0,1,species:870:イグドラシル＿７Ｄ６
+Ｂ,U+FF22,Other,0,1,1,technique:868:ＲＧＢハーブ
+Ｃ,U+FF23,Other,0,1,1,technique:2224:ＤＣＤボム
+Ｇ,U+FF27,Other,0,1,1,technique:868:ＲＧＢハーブ
+Ｊ,U+FF2A,Other,0,1,1,technique:2117:ＤＪシューター
+Ｌ,U+FF2C,Other,0,1,1,technique:1713:ＬＯＶＥＹＯＵ
+Ｍ,U+FF2D,Other,0,1,1,technique:2223:Ｍ１６アサシン
+Ｕ,U+FF35,Other,0,1,1,technique:1713:ＬＯＶＥＹＯＵ
+Ｙ,U+FF39,Other,0,1,1,technique:1713:ＬＯＶＥＹＯＵ
+Ｚ,U+FF3A,Other,0,1,1,technique:993:ガイアフォースＺＥＲＯ
+＿,U+FF3F,Other,1,0,1,species:870:イグドラシル＿７Ｄ６
+￥,U+FFE5,Other,0,1,1,technique:1291:￥UE-N
