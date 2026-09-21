@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "project": "Digital_Monster_Series",
+  "runtime_target": "Pokemon Emerald / pokeemerald-expansion",
+  "baseline_policy": {
+    "canonical_region": "Japan",
+    "canonical_language": "ja",
+    "regional_order": [
+      "ja",
+      "ko",
+      "en",
+      "other"
+    ],
+    "source_project": "SakuraiTsubaki/EMERALD",
+    "source_project_ref": "42a4594a79a34015f895359f807cbb27dfca1f5b",
+    "expansion_upstream": "rh-hideout/pokeemerald-expansion",
+    "expansion_ref": "75b806a3ab57a81ff1eb6179288981f0b3cc3050",
+    "rom_binaries_committed": false
+  },
+  "hardware": {
+    "platform": "Game Boy Advance",
+    "rom_origin": "0x08000000",
+    "original_rom_bytes": 16777216,
+    "original_rom_mib": 16,
+    "build_target_bytes": 33554432,
+    "build_target_mib": 32,
+    "direct_linear_end_inclusive": "0x09FFFFFF",
+    "over_32_mib_normal_profile": false,
+    "bank_switched_over_32_mib": "experimental_only"
+  },
+  "save": {
+    "media": "Flash",
+    "bytes": 131072,
+    "sectors": 32,
+    "sector_bytes": 4096,
+    "save_slots": 2,
+    "gameplay_sectors_per_slot": 14,
+    "sector_signature": "0x08012025",
+    "saveblock3_region_start_offset": 3968,
+    "saveblock3_chunk_bytes_per_sector": 116,
+    "saveblock3_bytes_per_slot": 1624,
+    "footer_metadata_offset": 4084,
+    "footer_metadata_bytes": 12,
+    "vanilla_logical_slack_bytes_per_active_slot_observed": 2172,
+    "preserve_special_sectors": {
+      "hall_of_fame": [
+        28,
+        29
+      ],
+      "trainer_hill": 30,
+      "recorded_battle": 31
+    }
+  },
+  "entity_storage": {
+    "species_backing_field": {
+      "bits": 11,
+      "max_value": 2047,
+      "digital_monster_role": "digimon_entity_id",
+      "current_dataset_rows": 1468,
+      "current_dataset_breakdown": {
+        "digimon_reference": 1320,
+        "appmon": 148
+      },
+      "fits_current_dataset_if_zero_is_reserved": true,
+      "remaining_nonzero_ids_after_current_dataset": 579,
+      "widening_policy": "defer_until_real_entity_count_requires_it"
+    },
+    "move_backing_field": {
+      "bits": 11,
+      "max_value": 2047,
+      "digital_monster_role": "technique_id",
+      "known_source_rows": {
+        "digimon_reference_special_move_rows": 2593,
+        "appmon_special_move_rows": 279
+      },
+      "status": "audit_unique_technique_count_before_assignment",
+      "note": "source rows are assignments, not unique technique IDs; widen only if deduplicated catalog exceeds the 11-bit range"
+    },
+    "held_item_backing_field": {
+      "bits_before": 10,
+      "max_before": 1023,
+      "bits_after_emerald_patch": 16,
+      "max_after_emerald_patch": 65535,
+      "digital_monster_role": "item_or_equipment_id"
+    }
+  },
+  "core_gameplay": {
+    "level": {
+      "min": 1,
+      "max": 100
+    },
+    "active_party_size": 6,
+    "moves_per_entity": 4,
+    "persistent_stats": [
+      "hp",
+      "attack",
+      "defense",
+      "speed",
+      "special_attack",
+      "special_defense"
+    ],
+    "battle_only_stats": [
+      "accuracy",
+      "evasion"
+    ],
+    "stat_stage": {
+      "min": 0,
+      "default": 6,
+      "max": 12
+    },
+    "storage_capacities": {
+      "daycare_entities": 2,
+      "pc_item_slots": 50,
+      "bag_item_slots": 30,
+      "bag_key_item_slots": 30,
+      "bag_capture_device_slots": 16,
+      "bag_technique_machine_slots": 64,
+      "bag_berry_slots": 46
+    }
+  },
+  "text_limits_at_pinned_engine": {
+    "entity_name_length": 12,
+    "vanilla_entity_name_length": 10,
+    "move_name_length": 16,
+    "item_name_length": 20,
+    "ability_name_length": 16,
+    "type_name_length": 8,
+    "trainer_name_length": 10,
+    "player_name_length": 7,
+    "digital_monster_policy": "audit_and_expand_before_final_localization; do_not_truncate_official_names"
+  },
+  "digital_monster_model": {
+    "official_name_source": "existing digimon_reference/appmon datasets",
+    "digimon_type_taxonomy": "separate_metadata_dimension",
+    "digimon_attribute_taxonomy": "separate_metadata_dimension",
+    "appmon_grade_and_app_type": "separate_metadata_dimensions",
+    "pokemon_type_field": "do_not_directly_overload_with_142 Digimon type labels",
+    "evolution": "replace_or_adapt_with_digivolution_graph; do_not_assume vanilla linear evolution semantics",
+    "forms": "model as explicit entity/form relationships",
+    "activation_rule": "preserve Emerald engine constraints until a verified Digimon requirement proves a widening or mechanic change is needed"
+  }
+}
