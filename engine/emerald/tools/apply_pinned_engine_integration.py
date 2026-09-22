@@ -279,6 +279,25 @@ def main() -> None:
     t = replace_once(t, marker, marker + override, "species graphics safety gate")
     write(root, rel, t)
 
+    # The pinned engine has one unguarded female-icon member access even when
+    # P_GENDER_DIFFERENCES is disabled. Guard it so the lean Digital Monster
+    # SpeciesInfo layout remains valid.
+    rel = "src/pokemon_icon.c"
+    t = read(root, rel)
+    t = replace_once(
+        t,
+        """    if (iconType == FEMALE_ICON)
+        return gSpeciesInfo[species].iconSpriteFemale;
+    return gSpeciesInfo[species].iconSprite;""",
+        """#if P_GENDER_DIFFERENCES
+    if (iconType == FEMALE_ICON)
+        return gSpeciesInfo[species].iconSpriteFemale;
+#endif
+    return gSpeciesInfo[species].iconSprite;""",
+        "female icon access guard",
+    )
+    write(root, rel, t)
+
     rel = "include/config/overworld.h"
     t = read(root, rel)
     marker = "#define OW_POKEMON_OBJECT_EVENTS       TRUE       // Adds Object Event fields for every species. Can be used for NPCs using the OBJ_EVENT_GFX_SPECIES macro (eg. OBJ_EVENT_GFX_SPECIES(BULBASAUR))\n"
