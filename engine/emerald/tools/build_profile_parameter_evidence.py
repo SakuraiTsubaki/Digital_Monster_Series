@@ -17,7 +17,7 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
 EMERALD = ROOT / "engine" / "emerald"
 GEN = EMERALD / "generated"
 SPECIES_MAP = GEN / "species-id-map.csv"
