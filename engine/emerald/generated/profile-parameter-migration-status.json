@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "parameter_policy": "profile-derived-v1",
+  "entities_total": 1468,
+  "source_profiles": {
+    "digimon": {
+      "entities": 1320,
+      "repository_profile_text": "omitted_from_bundle",
+      "profile_sha256_recorded": true,
+      "next_input": "official Japanese detail profile text, verified against recorded SHA-256"
+    },
+    "appmon": {
+      "entities": 148,
+      "repository_profile_text": "available_in_appmon_master_csv",
+      "language_used_for_master_analysis": "ja"
+    }
+  },
+  "legacy_runtime": {
+    "gameplay_v0_status": "deprecated_for_battle_parameters",
+    "fixed_bst_table_allowed": false,
+    "hash_archetype_assignment_allowed": false,
+    "authoritative": false
+  },
+  "stat_storage": {
+    "each_stat_bits": 8,
+    "each_stat_min": 0,
+    "each_stat_max": 255,
+    "bst_total_limit": null
+  },
+  "migration_gate": "Do not mark a species parameter-ready until its official profile evidence and rationale are recorded."
+}

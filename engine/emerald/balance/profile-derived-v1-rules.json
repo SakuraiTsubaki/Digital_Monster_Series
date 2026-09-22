@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "name": "profile-derived-v1",
+  "canonical": false,
+  "purpose": "Derive Emerald gameplay parameters from official Japanese encyclopedia evidence while keeping official source fields separate from project gameplay interpretations.",
+  "master_sources": {
+    "digimon": "https://digimon.net/reference/",
+    "appmon": "https://digimon.net/appmon/",
+    "language_priority": [
+      "ja",
+      "ko",
+      "en",
+      "other"
+    ]
+  },
+  "evidence_inputs": [
+    "official Japanese profile description",
+    "official level or Appmon grade",
+    "official Digimon type / Appmon app type",
+    "official attribute",
+    "official special-move names and descriptions when available",
+    "official form/mode wording and explicitly stated relationships"
+  ],
+  "stats": {
+    "fields": [
+      "hp",
+      "attack",
+      "defense",
+      "speed",
+      "special_attack",
+      "special_defense"
+    ],
+    "per_stat_storage_bits": 8,
+    "per_stat_min": 0,
+    "per_stat_max": 255,
+    "bst_total_limit": null,
+    "fixed_bst_by_level_or_grade": false,
+    "level_or_grade_role": "context_only_not_a_total_or_cap",
+    "rule": "Score every stat independently from the entity's official evidence. No required total, tier total, normalization target, or cross-species cap.",
+    "missing_evidence": "unresolved_not_randomized"
+  },
+  "battle_type": {
+    "rule": "Infer Emerald battle type(s) from the whole official evidence set. Never map a Digimon type label or Appmon category mechanically to a Pokemon type by itself.",
+    "max_types": 2,
+    "missing_evidence": "unresolved_not_TYPE_NORMAL"
+  },
+  "techniques": {
+    "parameters": [
+      "type",
+      "category",
+      "power",
+      "accuracy",
+      "pp",
+      "effect"
+    ],
+    "rule": "Interpret each technique from official naming/description and the entity's official profile context. No fixed power/accuracy/PP fallback is authoritative.",
+    "missing_evidence": "unresolved_not_fixed_default"
+  },
+  "other_game_parameters": {
+    "growth_rate": "derive_from_official_profile_and_growth_or_maturity_context",
+    "catch_rate": "derive_from_official_profile_rarity_danger_and_encounter_context",
+    "exp_yield": "derive_from_official_profile_power_danger_and_progression_context",
+    "abilities": "derive_only_from_explicit_or_strongly_supported_passive_traits",
+    "digivolution": "create_edges_only_when_an_official_source_supports_the_relationship_or_condition"
+  },
+  "prohibited_methods": [
+    "hash_based_archetype_assignment",
+    "random_stat_assignment",
+    "fixed_bst_table_by_level_or_grade",
+    "fixed_bst_cap",
+    "stage_or_grade_only_battle_type_mapping",
+    "fixed_neutral_type_as_final_data",
+    "fixed_move_power_accuracy_pp_as_final_data",
+    "unrelated_pokemon_parameter_fallback"
+  ],
+  "evidence_record": {
+    "required": true,
+    "fields": [
+      "species_id",
+      "source_kind",
+      "source_id",
+      "official_detail_url",
+      "profile_sha256",
+      "official_level_or_grade",
+      "official_type_or_app_type",
+      "official_attribute",
+      "special_moves",
+      "evidence_signals",
+      "parameter_rationale",
+      "resolution_status"
+    ]
+  }
+}

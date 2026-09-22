@@ -1,4 +1,4 @@
-schema: 1
+schema: 2
 profile: digital_monster_replacement
 runtime: Pokemon Emerald / pokeemerald-expansion
 
@@ -18,10 +18,25 @@ storage:
   technique_max: 4095
   save_flash_bytes: 131072
   rom_build_target_mib: 32
+  base_stat_bits_each: 8
+  base_stat_min: 0
+  base_stat_max: 255
+  bst_total_limit: null
+
+parameter_policy:
+  active: profile-derived-v1
+  legacy_gameplay_v0_authoritative: false
+  fixed_bst_by_level_or_grade: false
+  hash_or_random_assignment_allowed: false
+  require_official_japanese_profile_evidence: true
+  unresolved_when_evidence_missing: true
+  battle_type_requires_profile_context: true
+  technique_parameters_require_official_evidence: true
+  digivolution_requires_official_relationship_evidence: true
 
 activation:
   species_info_enabled: false
-  reason: battle parameters, battle affinity mapping, graphics, cries, and digivolution conditions are not yet source-backed
+  reason: legacy gameplay-v0 battle parameters are deprecated; profile-derived-v1 evidence-backed parameters are not yet complete for all 1468 entities
   never_use_unrelated_pokemon_stats_as_fallback: true
   never_truncate_official_names: true
 
