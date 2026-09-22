@@ -12,6 +12,7 @@ import subprocess
 from pathlib import Path
 
 PINNED = "75b806a3ab57a81ff1eb6179288981f0b3cc3050"
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
 
 
 def read(root: Path, rel: str) -> str:
@@ -34,6 +35,28 @@ def sub_once(text: str, pattern: str, repl: str, label: str) -> str:
     if count != 1:
         raise SystemExit(f"{label}: expected one regex match, found {count}")
     return text2
+
+
+def replace_exact_count(text: str, old: str, new: str, expected: int, label: str) -> str:
+    count = text.count(old)
+    if count != expected:
+        raise SystemExit(f"{label}: expected {expected} matches, found {count}")
+    return text.replace(old, new)
+
+
+def replace_in_region(text: str, start_marker: str, end_marker: str, old: str, new: str, label: str) -> str:
+    start = text.find(start_marker)
+    if start < 0:
+        raise SystemExit(f"{label}: start marker not found")
+    end = text.find(end_marker, start + len(start_marker))
+    if end < 0:
+        raise SystemExit(f"{label}: end marker not found")
+    region = text[start:end]
+    count = region.count(old)
+    if count != 1:
+        raise SystemExit(f"{label}: expected one match in region, found {count}")
+    region = region.replace(old, new, 1)
+    return text[:start] + region + text[end:]
 
 
 def main() -> None:
@@ -256,6 +279,216 @@ override CPPFLAGS += -DDIGITAL_MONSTER_SERIES=1
 endif
 """
     t = replace_once(t, marker, marker + override, "Digital Monster build flag")
+    write(root, rel, t)
+
+
+    # Digital Monster extended Japanese text runtime.
+    rel = "include/constants/characters.h"
+    t = read(root, rel)
+    t = replace_once(
+        t,
+        "#define EXT_CTRL_CODE_TEXT_COLORS            0x1C\n",
+        "#define EXT_CTRL_CODE_TEXT_COLORS            0x1C\n#define EXT_CTRL_CODE_DM_GLYPH               0x1D\n",
+        "Digital Monster glyph control code",
+    )
+    write(root, rel, t)
+
+    # Append only the project-specific Unicode -> FC 1D lo hi mappings.
+    rel = "charmap.txt"
+    t = read(root, rel)
+    extension = (PROJECT_ROOT / "engine/emerald/generated/digital-monster-charmap.inc").read_text(encoding="utf-8")
+    if "Digital_Monster_Series extended Japanese glyphs" in t:
+        raise SystemExit("Digital Monster charmap extension already present")
+    if not t.endswith("\n"):
+        t += "\n"
+    t += "\n" + extension
+    write(root, rel, t)
+
+    rel = "src/text.c"
+    t = read(root, rel)
+    t = replace_once(
+        t,
+        '#include "constants/speaker_names.h"\n',
+        '#include "constants/speaker_names.h"\n#ifdef DIGITAL_MONSTER_SERIES\n#include "digital_monster_extended_fonts.h"\n#include "data/digital_monster/extended_fonts.inc"\n#endif\n',
+        "Digital Monster extended font includes",
+    )
+
+    helper_marker = 'static const u8 sKeypadIconTiles[] = INCGFX_U8("graphics/fonts/keypad_icons.png", ".4bpp");\n'
+    font_helpers = r'''
+#ifdef DIGITAL_MONSTER_SERIES
+static bool32 IsDigitalMonsterExtendedGlyph(u16 glyphId)
+{
+    return glyphId >= DM_EXT_GLYPH_BASE && glyphId <= DM_EXT_GLYPH_LAST;
+}
+#endif
+
+static const u16 *GetDigitalMonsterNormalJapaneseGlyph(u16 glyphId)
+{
+#ifdef DIGITAL_MONSTER_SERIES
+    if (IsDigitalMonsterExtendedGlyph(glyphId))
+    {
+        u16 local = DM_EXT_GLYPH_INDEX(glyphId);
+        return gDigitalMonsterFontNormalJapaneseGlyphs + (0x100 * (local >> 4)) + (0x8 * (local & 0xF));
+    }
+#endif
+    return gFontNormalJapaneseGlyphs + (0x100 * (glyphId >> 4)) + (0x8 * (glyphId & 0xF));
+}
+
+static const u16 *GetDigitalMonsterSmallJapaneseGlyph(u16 glyphId)
+{
+#ifdef DIGITAL_MONSTER_SERIES
+    if (IsDigitalMonsterExtendedGlyph(glyphId))
+    {
+        u16 local = DM_EXT_GLYPH_INDEX(glyphId);
+        return gDigitalMonsterFontSmallJapaneseGlyphs + (0x100 * (local >> 4)) + (0x8 * (local & 0xF));
+    }
+#endif
+    return gFontSmallJapaneseGlyphs + (0x100 * (glyphId >> 4)) + (0x8 * (glyphId & 0xF));
+}
+
+static const u16 *GetDigitalMonsterShortJapaneseGlyph(u16 glyphId)
+{
+#ifdef DIGITAL_MONSTER_SERIES
+    if (IsDigitalMonsterExtendedGlyph(glyphId))
+    {
+        u16 local = DM_EXT_GLYPH_INDEX(glyphId);
+        return gDigitalMonsterFontShortJapaneseGlyphs + (0x100 * (local >> 3)) + (0x10 * (local & 0x7));
+    }
+#endif
+    return gFontShortJapaneseGlyphs + (0x100 * (glyphId >> 3)) + (0x10 * (glyphId & 0x7));
+}
+
+static u32 GetDigitalMonsterShortJapaneseGlyphWidth(u16 glyphId)
+{
+#ifdef DIGITAL_MONSTER_SERIES
+    if (IsDigitalMonsterExtendedGlyph(glyphId))
+        return 12;
+#endif
+    return gFontShortJapaneseGlyphWidths[glyphId];
+}
+'''
+    t = replace_once(t, helper_marker, helper_marker + font_helpers, "Digital Monster glyph lookup helpers")
+
+    t = replace_exact_count(
+        t,
+        'gFontSmallJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId & 0xF))',
+        'GetDigitalMonsterSmallJapaneseGlyph(glyphId)',
+        2,
+        "small Japanese glyph lookup",
+    )
+    t = replace_exact_count(
+        t,
+        'gFontNormalJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId % 0x10))',
+        'GetDigitalMonsterNormalJapaneseGlyph(glyphId)',
+        3,
+        "normal Japanese glyph lookup",
+    )
+    t = replace_exact_count(
+        t,
+        'gFontShortJapaneseGlyphs + (0x100 * (glyphId >> 0x3)) + (0x10 * (glyphId & 0x7))',
+        'GetDigitalMonsterShortJapaneseGlyph(glyphId)',
+        3,
+        "short Japanese glyph lookup",
+    )
+    t = replace_exact_count(
+        t,
+        'return gFontShortJapaneseGlyphWidths[glyphId];',
+        'return GetDigitalMonsterShortJapaneseGlyphWidth(glyphId);',
+        3,
+        "short Japanese glyph width lookup",
+    )
+
+    # Runtime printer: decode FC 1D lo hi as a u16 Japanese glyph ID.
+    t = replace_in_region(
+        t,
+        "static u16 RenderText(struct TextPrinter *textPrinter)\n{",
+        "\n#undef nextX",
+        """            case EXT_CTRL_CODE_ESCAPE:
+                currChar = *textPrinter->printerTemplate.currentChar | 0x100;
+                textPrinter->printerTemplate.currentChar++;
+                break;
+            case EXT_CTRL_CODE_PLAY_SE:""",
+        """            case EXT_CTRL_CODE_ESCAPE:
+                currChar = *textPrinter->printerTemplate.currentChar | 0x100;
+                textPrinter->printerTemplate.currentChar++;
+                break;
+            case EXT_CTRL_CODE_DM_GLYPH:
+                currChar = *textPrinter->printerTemplate.currentChar++;
+                currChar |= *textPrinter->printerTemplate.currentChar++ << 8;
+                textPrinter->japanese = TRUE;
+                break;
+            case EXT_CTRL_CODE_PLAY_SE:""",
+        "RenderText Digital Monster glyph decoder",
+    )
+
+    # Fixed-width counter: one extended control sequence is one visible glyph.
+    t = replace_in_region(
+        t,
+        "static u32 UNUSED GetStringWidthFixedWidthFont",
+        "\nstatic u32 (*GetFontWidthFunc",
+        """            case EXT_CTRL_CODE_ESCAPE:
+            case EXT_CTRL_CODE_SHIFT_RIGHT:""",
+        """            case EXT_CTRL_CODE_DM_GLYPH:
+                strPos += 2;
+                ++width;
+                break;
+            case EXT_CTRL_CODE_ESCAPE:
+            case EXT_CTRL_CODE_SHIFT_RIGHT:""",
+        "fixed-width Digital Monster glyph decoder",
+    )
+
+    # Pixel width calculation.
+    t = replace_in_region(
+        t,
+        "s32 GetStringWidth(u8 fontId",
+        "\ns32 GetStringLineWidth",
+        """            case EXT_CTRL_CODE_ESCAPE:
+            case EXT_CTRL_CODE_SHIFT_RIGHT:""",
+        """            case EXT_CTRL_CODE_DM_GLYPH:
+                {
+                    u16 glyphId = *++str;
+                    glyphId |= *++str << 8;
+                    glyphWidth = func(glyphId, TRUE);
+                    if (minGlyphWidth > 0 && glyphWidth < minGlyphWidth)
+                        glyphWidth = minGlyphWidth;
+                    lineWidth += glyphWidth;
+                    if (minGlyphWidth <= 0 && str[1] != EOS)
+                        lineWidth += localLetterSpacing;
+                    isJapanese = 1;
+                }
+                break;
+            case EXT_CTRL_CODE_ESCAPE:
+            case EXT_CTRL_CODE_SHIFT_RIGHT:""",
+        "GetStringWidth Digital Monster glyph decoder",
+    )
+
+    # Bold renderer falls back to the normal extended font-v0 glyph.
+    t = replace_in_region(
+        t,
+        "u8 RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str)",
+        "\nu8 DrawKeypadIcon",
+        "    int temp2;\n",
+        "    int temp2;\n    u16 glyphId;\n",
+        "bold glyph temporary",
+    )
+    t = replace_in_region(
+        t,
+        "u8 RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str)",
+        "\nu8 DrawKeypadIcon",
+        """            case EXT_CTRL_CODE_ESCAPE:
+            case EXT_CTRL_CODE_SHIFT_RIGHT:""",
+        """            case EXT_CTRL_CODE_DM_GLYPH:
+                glyphId = strLocal[strPos++];
+                glyphId |= strLocal[strPos++] << 8;
+                DecompressGlyph_Normal(glyphId, TRUE);
+                CpuCopy32(gCurGlyph.gfxBufferTop, pixels, 0x20);
+                CpuCopy32(gCurGlyph.gfxBufferBottom, pixels + 0x20, 0x20);
+                pixels += 0x40;
+                continue;
+            case EXT_CTRL_CODE_ESCAPE:
+            case EXT_CTRL_CODE_SHIFT_RIGHT:""",
+        "bold Digital Monster glyph decoder",
+    )
     write(root, rel, t)
 
     print("Applied Digital_Monster_Series integration to pinned engine.")

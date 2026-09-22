@@ -38,6 +38,7 @@ jobs:
         run: |
           python3 project/engine/emerald/validation/verify_id_capacity.py
           python3 project/engine/emerald/validation/verify_generated_runtime.py
+          python3 project/engine/emerald/validation/verify_font_v0.py
 
       - name: Apply Digital Monster engine integration
         run: |
@@ -47,6 +48,7 @@ jobs:
       - name: Verify move-storage integration
         run: |
           python3 project/engine/emerald/validation/verify_move_storage_patch.py engine
+          python3 project/engine/emerald/validation/verify_font_v0.py engine
 
       - name: Install GBA build toolchain
         run: |
