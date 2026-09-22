@@ -7,6 +7,21 @@
   "source_id": "nosferamon",
   "source_reference": "https://digimon.net/reference/detail.php?directory_name=nosferamon",
   "source_image_url": "https://digimon.net/cimages/digimon/nosferamon.jpg",
+  "source_file": {
+    "dimensions": [1536, 1536],
+    "sha256": "15fc78660b407fbff9df4968857511f324527195e7e67d0a70e3a1c7e557b4bc"
+  },
+  "preserved_reduction": {
+    "path": "source_reduced.png",
+    "dimensions": [64, 64],
+    "resampling": "nearest_neighbor",
+    "crop": "none",
+    "background": "preserved",
+    "color_policy": "Every output RGB value is directly sampled from the uploaded source; no interpolation or synthesized colors.",
+    "unique_rgb_colors": 1092,
+    "sha256": "6b2550cbd1bf19418adda3f4d6958d54b55b4845fcb6c101b1e47959a277e4c4",
+    "bytes": 4780
+  },
   "asset_status": "source_only",
   "assets": {
     "front": null,

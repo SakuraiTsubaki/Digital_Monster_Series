@@ -1,6 +1,21 @@
 {
   "schema_version": 1,
   "profile": "gameplay-v0",
+  "preservation_policy": {
+    "source_reduction": {
+      "resampling": "nearest_neighbor_only",
+      "crop": "none_by_default",
+      "aspect_ratio": "preserve",
+      "generated_imagery": "forbidden",
+      "interpolation": "forbidden",
+      "synthesized_rgb_colors": "forbidden",
+      "rule": "A preserved reduction is a mechanically reduced copy of the official source image, not a redrawn or reinterpreted sprite."
+    },
+    "gba_derivative": {
+      "separate_from_preserved_reduction": true,
+      "rule": "Any palette reduction, transparency extraction, framing change, or GBA-specific packing must be stored as a separate derived asset and must never overwrite the preserved reduction."
+    }
+  },
   "source_assets": {
     "front": {
       "format": "indexed_png",
@@ -49,6 +64,7 @@
   "notes": [
     "Gameplay sprites are project assets derived from recorded source provenance; they are not represented as official Emerald sprites.",
     "Do not introduce antialiasing or interpolation colors during conversion.",
+    "Preserved reductions must remain byte-separate from later GBA palette-constrained derivatives.",
     "Shiny initially reuses the normal palette unless a separately identified gameplay alternate palette is authored."
   ]
 }
