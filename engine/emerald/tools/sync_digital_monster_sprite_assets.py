@@ -171,15 +171,29 @@ def pointer_symbol(block: str, field: str) -> str:
     return value
 
 
-def graphics_declaration(graphics_text: str, symbol: str, alias: str) -> str:
-    # Gen I-III Pokémon graphics declarations are one-statement INCGFX
-    # definitions.  Pull the exact upstream path/format and only rename the
-    # symbol, so the donor art remains byte-for-byte sourced from upstream.
-    pattern = rf"[^\n;]*\b{re.escape(symbol)}\[\]\s*=\s*INCGFX_[^;]+;"
-    m = re.search(pattern, graphics_text)
-    if not m:
+def index_graphics_declarations(graphics_text: str) -> dict[str, str]:
+    # The existing sync path already relies on Pokémon INCGFX declarations
+    # being single-line statements. Index them once instead of rescanning the
+    # multi-megabyte graphics table for every donor field.
+    pattern = re.compile(
+        r"\b([A-Za-z_][A-Za-z0-9_]*)\[\]\s*=\s*INCGFX_[^;]+;"
+    )
+    declarations: dict[str, str] = {}
+    for line in graphics_text.splitlines():
+        m = pattern.search(line)
+        if m:
+            declarations[m.group(1)] = line.strip()
+    return declarations
+
+
+def graphics_declaration(
+    graphics_index: dict[str, str],
+    symbol: str,
+    alias: str,
+) -> str:
+    declaration = graphics_index.get(symbol)
+    if declaration is None:
         raise SystemExit(f"graphics declaration not found for {symbol}")
-    declaration = m.group(0).strip()
     return declaration.replace(symbol, alias, 1)
 
 
@@ -201,6 +215,7 @@ def build_donor_graphics_header(
 ) -> None:
     graphics_path = engine / "src/data/graphics/pokemon.h"
     graphics_text = graphics_path.read_text(encoding="utf-8")
+    graphics_index = index_graphics_declarations(graphics_text)
 
     out = [
         "// Generated at build time from the stock Pokémon donor graphics.",
@@ -215,7 +230,7 @@ def build_donor_graphics_header(
         for field in POINTER_FIELDS:
             symbol = pointer_symbol(block, field)
             alias = donor_alias(field, donor_id)
-            out.append(graphics_declaration(graphics_text, symbol, alias))
+            out.append(graphics_declaration(graphics_index, symbol, alias))
         out.append("")
 
     path = engine / "src/data/graphics/digital_monster.h"
