@@ -115,7 +115,7 @@ def parse_species_enum(engine: Path) -> dict[str, int]:
     return values
 
 
-def load_donor_blocks(engine: Path, enum_values: dict[str, int]) -> dict[int, tuple[str, str]]:
+def load_donor_blocks(\n    engine: Path,\n    enum_values: dict[str, int],\n    required_donors: set[int],\n) -> dict[int, tuple[str, str]]:
     donors: dict[int, tuple[str, str]] = {}
     base = engine / "src/data/pokemon/species_info"
 
@@ -139,10 +139,10 @@ def load_donor_blocks(engine: Path, enum_values: dict[str, int]) -> dict[int, tu
 
             donors.setdefault(donor_id, (constant, text[m.start():end]))
 
-    missing = [i for i in range(DONOR_MIN, DONOR_MAX + 1) if i not in donors]
+    missing = sorted(required_donors.difference(donors))
     if missing:
         raise SystemExit(
-            "missing Gen I-III donor SpeciesInfo blocks: "
+            "used donors missing conventional Gen I-III SpeciesInfo blocks: "
             + ", ".join(str(x) for x in missing[:20])
             + (" ..." if len(missing) > 20 else "")
         )
@@ -291,10 +291,10 @@ def main() -> None:
     engine = args.engine.resolve()
 
     mapping = load_mapping()
-    enum_values = parse_species_enum(engine)
-    donor_blocks = load_donor_blocks(engine, enum_values)
-
     used_donors = sorted({int(row["donor_species_id"]) for row in mapping})
+    enum_values = parse_species_enum(engine)
+    donor_blocks = load_donor_blocks(engine, enum_values, set(used_donors))
+
     build_donor_graphics_header(engine, donor_blocks, used_donors)
 
     family_counts: dict[str, int] = {}
