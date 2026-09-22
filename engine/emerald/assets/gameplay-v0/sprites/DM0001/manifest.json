@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "species_id": 1,
+  "internal_name": "DM0001",
+  "official_japanese_name": "ノスフェラモン",
+  "source_kind": "digimon",
+  "source_id": "nosferamon",
+  "source_reference": "https://digimon.net/reference/detail.php?directory_name=nosferamon",
+  "source_image_url": "https://digimon.net/cimages/digimon/nosferamon.jpg",
+  "asset_status": "source_only",
+  "assets": {
+    "front": null,
+    "back": null,
+    "icon": null,
+    "normal_palette": null
+  }
+}
