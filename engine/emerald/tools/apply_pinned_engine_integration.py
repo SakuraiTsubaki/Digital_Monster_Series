@@ -12,7 +12,7 @@ import subprocess
 from pathlib import Path
 
 PINNED = "75b806a3ab57a81ff1eb6179288981f0b3cc3050"
-PROJECT_ROOT = Path(__file__).resolve().parents[4]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 def read(root: Path, rel: str) -> str:
