@@ -48,6 +48,14 @@ def main() -> None:
             "unresolved_no_specialized_type_evidence",
             "unresolved_low_type_evidence",
         }
+        assert row["ability_1"].startswith("ABILITY_")
+        assert row["ability_2"].startswith("ABILITY_")
+        assert row["ability_hidden"].startswith("ABILITY_")
+        assert row["ability_status"] in {
+            "resolved_profile_passive_evidence",
+            "unresolved_no_passive_evidence",
+            "unresolved_low_passive_evidence",
+        }
         assert row["derivation_version"] == "profile-derived-v1"
         assert 3 <= int(row["catch_rate"]) <= 255
         assert 20 <= int(row["exp_yield"]) <= 65535
@@ -68,6 +76,18 @@ def main() -> None:
     rendered = "\n".join(x.read_text(encoding="utf-8") for x in parts)
     assert rendered.count("profile_derived_v1_noncanonical") == 1468
     assert "project_generated_gameplay_v0_noncanonical" not in rendered
+    assert "// Generated gameplay-v0 SpeciesInfo entries" not in rendered
+    resolved_abilities = sum(
+        row["ability_status"] == "resolved_profile_passive_evidence"
+        for row in data
+    )
+    assert resolved_abilities > 0
+    rendered_abilities = re.findall(
+        r"(?m)^\s*\.abilities\s*=\s*\{\s*(ABILITY_[A-Z0-9_]+)",
+        rendered,
+    )
+    assert len(rendered_abilities) == 1468
+    assert sum(x != "ABILITY_NONE" for x in rendered_abilities) == resolved_abilities
 
     species_ids = [int(x) for x in re.findall(r"(?m)^\s*\[(\d+)\]\s*=", rendered)]
     assert species_ids == list(range(1, 1469))
@@ -76,6 +96,8 @@ def main() -> None:
     print(f"  entities: {len(data)}")
     print(f"  unique BST totals: {len({int(x['bst']) for x in data})}")
     print(f"  unique type combinations: {len(type_pairs)}")
+    print(f"  resolved battle types: {sum(x['battle_type_status'] == 'resolved_profile_evidence' for x in data)}")
+    print(f"  resolved profile abilities: {resolved_abilities}")
     print("  each base stat: 1..255")
     print("  fixed BST total table: absent")
 

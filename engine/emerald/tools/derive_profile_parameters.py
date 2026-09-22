@@ -108,10 +108,16 @@ TYPE_TERMS = {
 
 TYPE_FIELD_BONUS = {
     "アンデッド": {"TYPE_GHOST": 5, "TYPE_DARK": 3},
+    "ゴースト": {"TYPE_GHOST": 6},
     "悪魔": {"TYPE_DARK": 5},
     "魔王": {"TYPE_DARK": 6},
+    "魔人": {"TYPE_DARK": 5, "TYPE_PSYCHIC": 2},
+    "鬼人": {"TYPE_DARK": 5, "TYPE_FIGHTING": 3},
     "天使": {"TYPE_FAIRY": 5, "TYPE_FLYING": 2},
     "妖精": {"TYPE_FAIRY": 5},
+    "神人": {"TYPE_FAIRY": 5, "TYPE_FIGHTING": 3},
+    "聖騎士": {"TYPE_FAIRY": 6, "TYPE_FIGHTING": 5},
+    "幻獣": {"TYPE_FAIRY": 5},
     "竜": {"TYPE_DRAGON": 5},
     "龍": {"TYPE_DRAGON": 5},
     "ドラゴン": {"TYPE_DRAGON": 5},
@@ -119,14 +125,19 @@ TYPE_FIELD_BONUS = {
     "マシーン": {"TYPE_STEEL": 5},
     "機械": {"TYPE_STEEL": 5},
     "サイボーグ": {"TYPE_STEEL": 5},
+    "武器": {"TYPE_STEEL": 5, "TYPE_FIGHTING": 3},
+    "防具": {"TYPE_STEEL": 5},
     "昆虫": {"TYPE_BUG": 5},
+    "幼虫": {"TYPE_BUG": 6},
     "植物": {"TYPE_GRASS": 5},
     "水棲": {"TYPE_WATER": 5},
     "水生": {"TYPE_WATER": 5},
     "海獣": {"TYPE_WATER": 4},
+    "両生類": {"TYPE_WATER": 5},
+    "甲殻類": {"TYPE_WATER": 5, "TYPE_BUG": 2},
     "鳥": {"TYPE_FLYING": 5},
-    "獣人": {"TYPE_FIGHTING": 3, "TYPE_NORMAL": 2},
-    "戦士": {"TYPE_FIGHTING": 4},
+    "獣人": {"TYPE_FIGHTING": 5, "TYPE_NORMAL": 2},
+    "戦士": {"TYPE_FIGHTING": 5},
     "聖": {"TYPE_FAIRY": 3},
     "岩": {"TYPE_ROCK": 4},
     "鉱物": {"TYPE_ROCK": 4},
@@ -138,9 +149,57 @@ TYPE_FIELD_BONUS = {
     "火炎": {"TYPE_FIRE": 6},
     "鉱石": {"TYPE_ROCK": 5, "TYPE_STEEL": 2},
     "突然変異": {"TYPE_NORMAL": 3},
-    "神人": {"TYPE_FAIRY": 3, "TYPE_FIGHTING": 2},
     "パペット": {"TYPE_NORMAL": 2, "TYPE_GHOST": 2},
 }
+
+ABILITY_RULES = [
+    ("ABILITY_REGENERATOR", [
+        ("再生能力", 9), ("自己再生", 9), ("驚異的な再生", 8),
+        ("傷を再生", 8), ("治癒能力", 8),
+    ]),
+    ("ABILITY_LEVITATE", [
+        ("浮遊能力", 9), ("空中に浮遊", 8), ("宙に浮", 8), ("浮遊して", 7),
+    ]),
+    ("ABILITY_SPEED_BOOST", [
+        ("加速し続け", 9), ("速度を上げ続け", 9), ("どんどん加速", 8),
+    ]),
+    ("ABILITY_STURDY", [
+        ("破壊不能", 10), ("決して壊れ", 9), ("非常に頑丈", 8), ("強固な装甲", 8),
+    ]),
+    ("ABILITY_BATTLE_ARMOR", [
+        ("全身を装甲", 8), ("全身を鎧", 8), ("重装甲", 8), ("甲殻に覆", 7),
+    ]),
+    ("ABILITY_INTIMIDATE", [
+        ("威圧する", 8), ("威圧感", 7), ("恐怖を与", 8), ("相手を怯ませ", 8),
+    ]),
+    ("ABILITY_POISON_TOUCH", [
+        ("毒の爪", 9), ("毒の牙", 9), ("触れた相手を毒", 10), ("猛毒を帯び", 8),
+    ]),
+    ("ABILITY_FLASH_FIRE", [
+        ("炎を吸収", 10), ("火炎を吸収", 10),
+    ]),
+    ("ABILITY_WATER_ABSORB", [
+        ("水を吸収", 10), ("水分を吸収", 9),
+    ]),
+    ("ABILITY_VOLT_ABSORB", [
+        ("電気を吸収", 10), ("電撃を吸収", 10),
+    ]),
+    ("ABILITY_SWIFT_SWIM", [
+        ("水中を高速", 9), ("高速で泳", 9), ("泳ぐ速度", 8),
+    ]),
+    ("ABILITY_HUGE_POWER", [
+        ("怪力を誇", 9), ("驚異的な腕力", 9), ("桁外れの力", 9),
+    ]),
+    ("ABILITY_IRON_FIST", [
+        ("拳闘の達人", 9), ("パンチを得意", 8), ("拳による攻撃を得意", 8),
+    ]),
+    ("ABILITY_SHARPNESS", [
+        ("剣術の達人", 9), ("刀剣の達人", 9), ("斬撃を得意", 8),
+    ]),
+    ("ABILITY_MAGIC_BOUNCE", [
+        ("攻撃を反射", 9), ("技を反射", 9), ("跳ね返す能力", 9),
+    ]),
+]
 
 GROWTH_FAST_TERMS = ["急成長", "急速に成長", "成長が早", "成長速度", "短期間"]
 GROWTH_SLOW_TERMS = ["長い年月", "長期間", "永い", "古代", "長寿", "成熟"]
@@ -233,6 +292,25 @@ def choose_types(scores: dict[str, int]) -> tuple[str, str, list[str], str]:
     return first, second, signals, "resolved_profile_evidence"
 
 
+def infer_ability(profile: str) -> tuple[str, str, list[str]]:
+    scores = Counter()
+    hits: list[str] = []
+    for ability, terms in ABILITY_RULES:
+        for term, weight in terms:
+            count = min(profile.count(term), 2)
+            if count:
+                scores[ability] += weight * count
+                hits.append(f"ability:{ability}:{term}:+{weight * count}")
+    if not scores:
+        return "ABILITY_NONE", "unresolved_no_passive_evidence", []
+    ranked = sorted(scores.items(), key=lambda kv: (-kv[1], kv[0]))
+    ability, score = ranked[0]
+    if score < 7:
+        return "ABILITY_NONE", "unresolved_low_passive_evidence", hits
+    hits.append(f"ability_choice:{ability}:{score}")
+    return ability, "resolved_profile_passive_evidence", hits
+
+
 def growth_rate(profile: str, base: int, global_score: int) -> tuple[str, str]:
     if any(term in profile for term in GROWTH_ERRATIC_TERMS):
         return "GROWTH_ERRATIC", "growth:profile:erratic"
@@ -322,6 +400,7 @@ def main() -> None:
 
         tscores, thits = type_scores(profile, official_type, moves)
         type1, type2, type_choice_hits, type_status = choose_types(tscores)
+        ability1, ability_status, ability_hits = infer_ability(profile)
 
         stat_list = [stat_values[x[1]] for x in STAT_COLUMNS]
         bst = sum(stat_list)
@@ -331,7 +410,7 @@ def main() -> None:
         exp_yield = clamp(round(20 + avg * 1.55 + peak * 0.45 + max(0, global_score) * 2.5), 20, 65535)
         growth, growth_signal = growth_rate(profile, base, global_score)
 
-        evidence = global_hits + stat_hits_all + thits + type_choice_hits + [growth_signal]
+        evidence = global_hits + stat_hits_all + thits + type_choice_hits + ability_hits + [growth_signal]
         if not evidence:
             evidence = ["profile:read:no_keyword_specialization"]
 
@@ -362,6 +441,10 @@ def main() -> None:
             "battle_type_1": type1,
             "battle_type_2": type2,
             "battle_type_status": type_status,
+            "ability_1": ability1,
+            "ability_2": "ABILITY_NONE",
+            "ability_hidden": "ABILITY_NONE",
+            "ability_status": ability_status,
             "catch_rate": catch_rate,
             "exp_yield": exp_yield,
             "growth_rate": growth,
@@ -387,6 +470,8 @@ def main() -> None:
     print(f"  entities: {len(out)}")
     print(f"  unique BST totals: {unique_bst}")
     print(f"  unique type combinations: {unique_types}")
+    print(f"  resolved battle types: {sum(x['battle_type_status'] == 'resolved_profile_evidence' for x in out)}")
+    print(f"  resolved profile abilities: {sum(x['ability_status'] == 'resolved_profile_passive_evidence' for x in out)}")
     print(f"  BST range: {min(int(x['bst']) for x in out)}..{max(int(x['bst']) for x in out)}")
     print(f"  per-stat range: {min(min(int(x[c]) for c in [y[1] for y in STAT_COLUMNS]) for x in out)}.."
           f"{max(max(int(x[c]) for c in [y[1] for y in STAT_COLUMNS]) for x in out)}")

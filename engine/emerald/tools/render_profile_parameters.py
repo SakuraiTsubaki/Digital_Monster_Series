@@ -81,6 +81,18 @@ def main() -> None:
             if count != 1:
                 raise SystemExit(f"species {sid} types: expected one match, found {count}")
 
+            ability_args = ", ".join(
+                [row["ability_1"], row["ability_2"], row["ability_hidden"]]
+            )
+            block, count = re.subn(
+                r"(?m)^(\s*\.abilities\s*=\s*)\{[^}]*\}(,)$",
+                rf"\g<1>{{ {ability_args} }}\g<2>",
+                block,
+                count=1,
+            )
+            if count != 1:
+                raise SystemExit(f"species {sid} abilities: expected one match, found {count}")
+
             block = block.replace(
                 "project_generated_gameplay_v0_noncanonical",
                 "profile_derived_v1_noncanonical",
@@ -89,6 +101,10 @@ def main() -> None:
             return block
 
         new_text = block_re.sub(repl, text)
+        new_text = new_text.replace(
+            "// Generated gameplay-v0 SpeciesInfo entries",
+            "// Generated profile-derived-v1 SpeciesInfo entries",
+        )
         path.write_text(new_text, encoding="utf-8")
 
     if applied != set(range(1, 1469)):
