@@ -7,24 +7,11 @@
   "source_id": "nosferamon",
   "source_reference": "https://digimon.net/reference/detail.php?directory_name=nosferamon",
   "source_image_url": "https://digimon.net/cimages/digimon/nosferamon.jpg",
-  "source_file_sha256": "15fc78660b407fbff9df4968857511f324527195e7e67d0a70e3a1c7e557b4bc",
-  "derivation": {
-    "profile": "gameplay-v0",
-    "method": "deterministic_non_generative_downsample",
-    "source_canvas": "1536x1536",
-    "crop_box_xyxy": [160, 150, 1300, 1370],
-    "target_canvas": "64x64",
-    "palette_rule": "15 source-derived colors plus transparent index 0",
-    "interpolation": "none",
-    "front_status": "playtest_front_v0",
-    "back_status": "front_reuse_placeholder_pending_authored_back",
-    "icon_status": "engine_question_mark_placeholder"
-  },
-  "asset_status": "partial",
+  "asset_status": "source_only",
   "assets": {
-    "front": "front.png",
-    "back": "back.png",
+    "front": null,
+    "back": null,
     "icon": null,
-    "normal_palette": "normal.pal"
+    "normal_palette": null
   }
 }

@@ -4,8 +4,8 @@
   "species_total": 1468,
   "declared_sprite_manifests": 1,
   "runtime_ready_species": 0,
-  "partial_species": 1,
-  "source_only_species": 0,
+  "partial_species": 0,
+  "source_only_species": 1,
   "placeholder_runtime_species": 1468,
   "entries": [
     {
@@ -16,24 +16,12 @@
       "source_id": "nosferamon",
       "source_reference": "https://digimon.net/reference/detail.php?directory_name=nosferamon",
       "source_image_url": "https://digimon.net/cimages/digimon/nosferamon.jpg",
-      "asset_status": "partial",
+      "asset_status": "source_only",
       "assets": {
-        "front": {
-          "path": "assets/gameplay-v0/sprites/DM0001/front.png",
-          "sha256": "d7822a5de0772090d0a7c1232e960c42fd1b02e85f40631ead8b77404cc028b8",
-          "bytes": 1133
-        },
-        "back": {
-          "path": "assets/gameplay-v0/sprites/DM0001/back.png",
-          "sha256": "d7822a5de0772090d0a7c1232e960c42fd1b02e85f40631ead8b77404cc028b8",
-          "bytes": 1133
-        },
+        "front": null,
+        "back": null,
         "icon": null,
-        "normal_palette": {
-          "path": "assets/gameplay-v0/sprites/DM0001/normal.pal",
-          "sha256": "2648e7e8dc90aca8ae525ae0e87e984292fd278b8f65a8e24bfd8d736c28681e",
-          "bytes": 191
-        }
+        "normal_palette": null
       }
     }
   ]
