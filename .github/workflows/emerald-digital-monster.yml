@@ -41,6 +41,11 @@ jobs:
           python3 project/engine/emerald/validation/verify_font_v0.py
           python3 project/engine/emerald/validation/verify_profile_parameter_policy.py
           python3 project/engine/emerald/tools/build_profile_parameter_evidence.py --output /tmp/profile-parameter-evidence.csv
+          if test -f project/engine/emerald/generated/profile-derived-parameters.csv; then
+            python3 project/engine/emerald/validation/verify_profile_derived_parameters.py \
+              --parameters project/engine/emerald/generated/profile-derived-parameters.csv \
+              --species-dir project/engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info
+          fi
           python3 project/engine/emerald/tools/build_digital_monster_sprite_manifest.py --check
           python3 project/engine/emerald/validation/verify_digital_monster_sprites.py
 

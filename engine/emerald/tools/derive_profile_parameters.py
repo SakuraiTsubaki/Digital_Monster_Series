@@ -86,24 +86,24 @@ STAT_TERMS = {
 }
 
 TYPE_TERMS = {
-    "TYPE_FIRE": ["炎", "火炎", "火", "灼熱", "溶岩", "マグマ", "フレイム"],
-    "TYPE_WATER": ["水", "海", "深海", "水中", "海洋", "アクア", "ウェーブ"],
+    "TYPE_FIRE": ["炎", "火炎", "灼熱", "溶岩", "マグマ", "フレイム"],
+    "TYPE_WATER": ["海", "深海", "水中", "海洋", "水棲", "水生", "アクア", "ウェーブ"],
     "TYPE_ELECTRIC": ["雷", "電撃", "電気", "電磁", "ライトニング", "サンダー"],
     "TYPE_GRASS": ["植物", "樹木", "森", "花", "草", "葉", "蔦", "種子"],
     "TYPE_ICE": ["氷", "冷気", "凍", "雪", "ブリザード", "フリーズ"],
-    "TYPE_FIGHTING": ["格闘", "武闘", "拳", "パンチ", "キック", "闘士", "戦士", "筋肉"],
+    "TYPE_FIGHTING": ["格闘", "武闘", "拳", "パンチ", "キック", "闘士", "戦士", "筋肉", "剣術", "剣士"],
     "TYPE_POISON": ["毒", "猛毒", "毒素", "ポイズン"],
     "TYPE_GROUND": ["大地", "地面", "地中", "土", "砂", "砂漠", "地震"],
-    "TYPE_FLYING": ["飛行", "飛翔", "翼", "空", "天空", "鳥", "羽"],
+    "TYPE_FLYING": ["飛行", "飛翔", "翼", "空中", "大空", "天空", "鳥", "羽"],
     "TYPE_PSYCHIC": ["超能力", "精神", "念", "予知", "テレパシー", "催眠", "幻覚"],
-    "TYPE_BUG": ["昆虫", "虫", "甲虫", "蝶", "蛾", "蜂", "蟲"],
+    "TYPE_BUG": ["昆虫", "甲虫", "幼虫", "蝶", "蛾", "蜂", "蟲"],
     "TYPE_ROCK": ["岩", "石", "鉱石", "鉱物", "クリスタル", "宝石"],
     "TYPE_GHOST": ["幽霊", "霊", "魂", "亡霊", "アンデッド", "死霊"],
     "TYPE_DRAGON": ["竜", "龍", "ドラゴン", "恐竜", "ワイバーン"],
     "TYPE_DARK": ["闇", "暗黒", "悪魔", "魔王", "邪悪", "ダーク", "デーモン"],
-    "TYPE_STEEL": ["機械", "マシーン", "サイボーグ", "金属", "鋼", "鉄", "メカ", "アンドロイド"],
+    "TYPE_STEEL": ["機械", "マシーン", "サイボーグ", "金属", "鋼", "鉄", "メカ", "アンドロイド", "機械化", "装甲"],
     "TYPE_FAIRY": ["妖精", "天使", "神聖", "聖なる", "聖", "フェアリー"],
-    "TYPE_NORMAL": ["獣", "哺乳類", "一般", "日常", "生活"],
+    "TYPE_NORMAL": ["哺乳類", "一般", "日常", "生活"],
 }
 
 TYPE_FIELD_BONUS = {
@@ -130,6 +130,16 @@ TYPE_FIELD_BONUS = {
     "聖": {"TYPE_FAIRY": 3},
     "岩": {"TYPE_ROCK": 4},
     "鉱物": {"TYPE_ROCK": 4},
+    "爬虫類": {"TYPE_DRAGON": 4, "TYPE_NORMAL": 1},
+    "獣型": {"TYPE_NORMAL": 4},
+    "魔獣": {"TYPE_DARK": 4, "TYPE_NORMAL": 2},
+    "聖獣": {"TYPE_FAIRY": 4, "TYPE_NORMAL": 2},
+    "妖獣": {"TYPE_FAIRY": 3, "TYPE_DARK": 2},
+    "火炎": {"TYPE_FIRE": 6},
+    "鉱石": {"TYPE_ROCK": 5, "TYPE_STEEL": 2},
+    "突然変異": {"TYPE_NORMAL": 3},
+    "神人": {"TYPE_FAIRY": 3, "TYPE_FIGHTING": 2},
+    "パペット": {"TYPE_NORMAL": 2, "TYPE_GHOST": 2},
 }
 
 GROWTH_FAST_TERMS = ["急成長", "急速に成長", "成長が早", "成長速度", "短期間"]
@@ -183,8 +193,8 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
             p = min(profile.count(term), 3)
             m = min(moves.count(term), 3)
             if p:
-                scores[type_name] += p * 3
-                hits.append(f"type:{type_name}:{term}:profile:+{p * 3}")
+                scores[type_name] += p * 2
+                hits.append(f"type:{type_name}:{term}:profile:+{p * 2}")
             if m:
                 scores[type_name] += m * 4
                 hits.append(f"type:{type_name}:{term}:move:+{m * 4}")
@@ -196,19 +206,31 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
     return dict(scores), hits
 
 
-def choose_types(scores: dict[str, int]) -> tuple[str, str, list[str]]:
+def choose_types(scores: dict[str, int]) -> tuple[str, str, list[str], str]:
     if not scores:
-        return "TYPE_NORMAL", "", ["type:TYPE_NORMAL:no_specialized_affinity_detected"]
+        return (
+            "TYPE_NORMAL",
+            "",
+            ["type_placeholder:TYPE_NORMAL:no_specialized_affinity_evidence"],
+            "unresolved_no_specialized_type_evidence",
+        )
     ranked = sorted(scores.items(), key=lambda kv: (-kv[1], kv[0]))
     first, first_score = ranked[0]
+    if first_score < 5:
+        return (
+            "TYPE_NORMAL",
+            "",
+            [f"type_candidate:{first}:{first_score}", "type_placeholder:TYPE_NORMAL:low_evidence"],
+            "unresolved_low_type_evidence",
+        )
     second = ""
     signals = [f"type_choice:{first}:{first_score}"]
     if len(ranked) > 1:
         candidate, score = ranked[1]
-        if score >= 4 and score >= math.ceil(first_score * 0.60):
+        if score >= 5 and score >= math.ceil(first_score * 0.65):
             second = candidate
             signals.append(f"type_choice:{candidate}:{score}")
-    return first, second, signals
+    return first, second, signals, "resolved_profile_evidence"
 
 
 def growth_rate(profile: str, base: int, global_score: int) -> tuple[str, str]:
@@ -299,7 +321,7 @@ def main() -> None:
             stat_hits_all.append("stats:balanced:no_specialization_signal_in_official_text")
 
         tscores, thits = type_scores(profile, official_type, moves)
-        type1, type2, type_choice_hits = choose_types(tscores)
+        type1, type2, type_choice_hits, type_status = choose_types(tscores)
 
         stat_list = [stat_values[x[1]] for x in STAT_COLUMNS]
         bst = sum(stat_list)
@@ -315,6 +337,8 @@ def main() -> None:
 
         confidence_points = min(8, len(global_hits) + len(stat_hits_all)) + min(8, len(thits))
         confidence = "high" if confidence_points >= 10 else "medium" if confidence_points >= 4 else "low"
+        if type_status != "resolved_profile_evidence" and confidence == "high":
+            confidence = "medium"
 
         row = {
             "species_id": int(src["emerald_species_id"]),
@@ -337,6 +361,7 @@ def main() -> None:
             "bst": bst,
             "battle_type_1": type1,
             "battle_type_2": type2,
+            "battle_type_status": type_status,
             "catch_rate": catch_rate,
             "exp_yield": exp_yield,
             "growth_rate": growth,

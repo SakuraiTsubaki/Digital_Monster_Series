@@ -43,6 +43,11 @@ def main() -> None:
         assert row["profile_sha256"] and len(row["profile_sha256"]) == 64
         assert row["evidence_signals"]
         assert row["battle_type_1"].startswith("TYPE_")
+        assert row["battle_type_status"] in {
+            "resolved_profile_evidence",
+            "unresolved_no_specialized_type_evidence",
+            "unresolved_low_type_evidence",
+        }
         assert row["derivation_version"] == "profile-derived-v1"
         assert 3 <= int(row["catch_rate"]) <= 255
         assert 20 <= int(row["exp_yield"]) <= 65535
