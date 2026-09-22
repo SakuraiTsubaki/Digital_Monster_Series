@@ -46,6 +46,7 @@ jobs:
         run: |
           python3 project/engine/emerald/tools/apply_pinned_engine_integration.py engine
           python3 project/engine/emerald/tools/sync_generated_engine_files.py engine
+          python3 project/engine/emerald/tools/sync_digital_monster_sprite_assets.py engine
 
       - name: Verify move-storage integration
         run: |

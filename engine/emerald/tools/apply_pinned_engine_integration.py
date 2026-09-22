@@ -136,6 +136,24 @@ def main() -> None:
     )
     write(root, rel, t)
 
+    # Include build-generated Digital Monster battle graphics next to the
+    # stock question-mark fallback assets. The generated header may be empty
+    # when no authored front/back/palette set is ready yet.
+    rel = "src/data/graphics/pokemon.h"
+    t = read(root, rel)
+    marker = 'const u8 gMonIcon_QuestionMark[] = INCGFX_U8("graphics/pokemon/question_mark/icon.png", ".4bpp");\n'
+    graphics_include = """#ifdef DIGITAL_MONSTER_SERIES
+#include "digital_monster.h"
+#endif
+"""
+    t = replace_once(
+        t,
+        marker,
+        marker + graphics_include,
+        "Digital Monster battle graphics include",
+    )
+    write(root, rel, t)
+
     # Replace Pokemon SpeciesInfo includes with the Digital Monster catalog.
     rel = "src/data/pokemon/species_info.h"
     t = read(root, rel)
