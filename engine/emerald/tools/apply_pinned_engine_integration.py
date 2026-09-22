@@ -167,17 +167,29 @@ def main() -> None:
     write(root, rel, t)
 
     # Append Digital Monster techniques after the engine's stock move catalog.
+    # Inline the generated enum fragment instead of #including it inside enum
+    # Move: expansion's asm preprocessor cannot parse CPP line markers created
+    # by an include nested inside an enum.
     rel = "include/constants/moves.h"
     t = read(root, rel)
+    dm_move_enum = (
+        PROJECT_ROOT
+        / "engine/emerald/generated/pokeemerald-expansion/include/constants/digital_monster_move_enum.inc"
+    ).read_text(encoding="utf-8")
+    if not dm_move_enum.endswith("\n"):
+        dm_move_enum += "\n"
+    move_catalog = (
+        "#ifdef DIGITAL_MONSTER_SERIES\n"
+        + dm_move_enum
+        + "    MOVES_COUNT_ALL = DM_MOVES_COUNT,\n"
+        + "#else\n"
+        + "    MOVES_COUNT_ALL = MOVES_COUNT_DYNAMAX,\n"
+        + "#endif"
+    )
     t = replace_once(
         t,
         "    MOVES_COUNT_ALL = MOVES_COUNT_DYNAMAX,",
-        """#ifdef DIGITAL_MONSTER_SERIES
-#include "constants/digital_monster_move_enum.inc"
-    MOVES_COUNT_ALL = DM_MOVES_COUNT,
-#else
-    MOVES_COUNT_ALL = MOVES_COUNT_DYNAMAX,
-#endif""",
+        move_catalog,
         "move catalog append",
     )
     write(root, rel, t)
