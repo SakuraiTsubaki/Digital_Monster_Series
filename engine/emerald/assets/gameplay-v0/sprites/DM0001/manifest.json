@@ -18,9 +18,21 @@
     "crop": "none",
     "background": "preserved",
     "color_policy": "Every output RGB value is directly sampled from the uploaded source; no interpolation or synthesized colors.",
-    "unique_rgb_colors": 1092,
     "sha256": "6b2550cbd1bf19418adda3f4d6958d54b55b4845fcb6c101b1e47959a277e4c4",
     "bytes": 4780
+  },
+  "preserved_focus_reduction": {
+    "path": "source_reduced_focus_64.png",
+    "dimensions": [64, 64],
+    "source_crop_box_xyxy": [233, 209, 1437, 1264],
+    "source_crop_dimensions": [1204, 1055],
+    "fit": "contain_centered",
+    "resampling": "nearest_neighbor",
+    "background": "preserved_white",
+    "purpose": "feature-preserving reduction for identifying Nosferamon's hat, blond hair, magenta wings, rifle, coat silhouette and mechanical limbs before any GBA-specific derivative step.",
+    "color_policy": "No interpolation or synthesized source colors; reduced subject pixels are direct nearest-neighbor samples from the uploaded source. White canvas padding is explicit framing, not sprite redrawing.",
+    "sha256": "11f44ae9ea6f5e96e2c989c11e26b5de5a72aaa4f22b32c8c765e393ffc564fc",
+    "bytes": 6373
   },
   "asset_status": "source_only",
   "assets": {
