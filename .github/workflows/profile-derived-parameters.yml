@@ -1,0 +1,62 @@
+name: Refresh Profile-Derived Parameters
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "engine/emerald/tools/derive_profile_parameters.py"
+      - "engine/emerald/tools/render_profile_parameters.py"
+      - "engine/emerald/validation/verify_profile_derived_parameters.py"
+      - ".github/workflows/profile-derived-parameters.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Install scraper dependency
+        run: python3 -m pip install --disable-pip-version-check lxml
+
+      - name: Re-census official Japanese Digimon profiles
+        run: |
+          python3 data/digimon_reference/scripts/scrape_digimon_reference.py \
+            --output /tmp/digimon_reference \
+            --workers 8
+
+      - name: Derive profile-backed species parameters
+        run: |
+          python3 engine/emerald/tools/derive_profile_parameters.py \
+            --digimon-master-json /tmp/digimon_reference/master/digimon_master.json \
+            --output engine/emerald/generated/profile-derived-parameters.csv
+
+      - name: Render generated SpeciesInfo
+        run: |
+          python3 engine/emerald/tools/render_profile_parameters.py \
+            --parameters engine/emerald/generated/profile-derived-parameters.csv \
+            --species-dir engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info
+
+      - name: Verify profile-derived parameters
+        run: |
+          python3 engine/emerald/validation/verify_profile_derived_parameters.py \
+            --parameters engine/emerald/generated/profile-derived-parameters.csv \
+            --species-dir engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info
+
+      - name: Commit generated parameters to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            engine/emerald/generated/profile-derived-parameters.csv \
+            engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info/digital_monster_part_*.h
+          if git diff --cached --quiet; then
+            echo "No profile-derived parameter changes."
+            exit 0
+          fi
+          git commit -m "Generate profile-derived Digital Monster species parameters"
+          git push origin HEAD:main
