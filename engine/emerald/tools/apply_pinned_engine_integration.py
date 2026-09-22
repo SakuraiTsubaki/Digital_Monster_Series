@@ -364,7 +364,7 @@ static u32 GetDigitalMonsterShortJapaneseGlyphWidth(u16 glyphId)
     if (IsDigitalMonsterExtendedGlyph(glyphId))
         return 12;
 #endif
-    return gFontShortJapaneseGlyphWidths[glyphId];
+    return *(gFontShortJapaneseGlyphWidths + glyphId);
 }
 '''
     t = replace_once(t, helper_marker, helper_marker + font_helpers, "Digital Monster glyph lookup helpers")
