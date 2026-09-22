@@ -53,7 +53,7 @@ def main() -> None:
     ids = [int(x) for x in re.findall(r"\[DM_MOVE_(\d{4})\]", text)]
     assert ids == list(range(1, 2558)), (len(ids), ids[:3], ids[-3:])
     assert text.count("[DM_MOVE_BOOTSTRAP_ATTACK]") == 1
-    assert text.count("profile-derived-v1") == 2557
+    assert text.count("| profile-derived-v1 |") == 2557
 
     effects = Counter(x["effect_status"] for x in data)
     categories = Counter(x["category"] for x in data)
