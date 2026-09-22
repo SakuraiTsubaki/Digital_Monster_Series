@@ -264,7 +264,9 @@ def main() -> None:
     marker = "#define OW_POKEMON_OBJECT_EVENTS       TRUE       // Adds Object Event fields for every species. Can be used for NPCs using the OBJ_EVENT_GFX_SPECIES macro (eg. OBJ_EVENT_GFX_SPECIES(BULBASAUR))\n"
     override = """#ifdef DIGITAL_MONSTER_SERIES
 #undef OW_POKEMON_OBJECT_EVENTS
+#undef OW_BATTLE_ONLY_FORMS
 #define OW_POKEMON_OBJECT_EVENTS FALSE
+#define OW_BATTLE_ONLY_FORMS FALSE
 #endif
 """
     t = replace_once(t, marker, marker + override, "overworld species safety gate")
