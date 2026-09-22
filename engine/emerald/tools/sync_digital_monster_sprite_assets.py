@@ -231,21 +231,19 @@ def replace_field(block: str, field: str, value: str, label: str) -> str:
     return out
 
 
-def patch_species_info(
-    engine: Path,
+def patch_species_info_text(
+    text: str,
     species_id: int,
     donor_id: int,
     donor_block: str,
-) -> None:
-    path = engine / "src/data/pokemon/species_info" / species_part(species_id)
-    text = path.read_text(encoding="utf-8")
+) -> str:
     start_marker = f"    [{species_id}] =\n    {{\n"
     start = text.find(start_marker)
     if start < 0:
-        raise SystemExit(f"{path}: species block {species_id} not found")
+        raise SystemExit(f"DM{species_id:04d}: species block not found")
     end = text.find("\n    }, /*", start)
     if end < 0:
-        raise SystemExit(f"{path}: end of species block {species_id} not found")
+        raise SystemExit(f"DM{species_id:04d}: end of species block not found")
     end += len("\n    },")
 
     block = text[start:end]
@@ -266,7 +264,7 @@ def patch_species_info(
             f"DM{species_id:04d}",
         )
 
-    path.write_text(text[:start] + block + text[end:], encoding="utf-8")
+    return text[:start] + block + text[end:]
 
 
 def verify_no_placeholders(engine: Path) -> None:
@@ -301,14 +299,31 @@ def main() -> None:
 
     build_donor_graphics_header(engine, donor_blocks, used_donors)
 
+    species_dir = engine / "src/data/pokemon/species_info"
+    part_texts = {
+        f"digital_monster_part_{part}.h": (
+            species_dir / f"digital_monster_part_{part}.h"
+        ).read_text(encoding="utf-8")
+        for part in range(1, 5)
+    }
+
     family_counts: dict[str, int] = {}
     for row in mapping:
         species_id = int(row["species_id"])
         donor_id = int(row["donor_species_id"])
         _, donor_block = donor_blocks[donor_id]
-        patch_species_info(engine, species_id, donor_id, donor_block)
+        part = species_part(species_id)
+        part_texts[part] = patch_species_info_text(
+            part_texts[part],
+            species_id,
+            donor_id,
+            donor_block,
+        )
         family = row["sprite_family"]
         family_counts[family] = family_counts.get(family, 0) + 1
+
+    for part, text_value in part_texts.items():
+        (species_dir / part).write_text(text_value, encoding="utf-8")
 
     verify_no_placeholders(engine)
 
