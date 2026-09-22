@@ -20,13 +20,13 @@
       "assets": {
         "front": {
           "path": "assets/gameplay-v0/sprites/DM0001/front.png",
-          "sha256": "b8248fd01d2136d2a0f4d9dfd523ed5ba5f51dca3ed4fed124e6a125cb79ab95",
-          "bytes": 1855
+          "sha256": "d061b4cb2e05077ba9becaf37183b62587c6e121e554778552e13ba3a4c36834",
+          "bytes": 1639
         },
         "back": {
           "path": "assets/gameplay-v0/sprites/DM0001/back.png",
-          "sha256": "b8248fd01d2136d2a0f4d9dfd523ed5ba5f51dca3ed4fed124e6a125cb79ab95",
-          "bytes": 1855
+          "sha256": "d061b4cb2e05077ba9becaf37183b62587c6e121e554778552e13ba3a4c36834",
+          "bytes": 1639
         },
         "icon": null,
         "normal_palette": {
