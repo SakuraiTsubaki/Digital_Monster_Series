@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "profile": "gameplay-v0",
+  "source_assets": {
+    "front": {
+      "format": "indexed_png",
+      "width": 64,
+      "height": 64,
+      "max_palette_colors": 16,
+      "transparent_palette_index": 0
+    },
+    "back": {
+      "format": "indexed_png",
+      "width": 64,
+      "height": 64,
+      "max_palette_colors": 16,
+      "transparent_palette_index": 0
+    },
+    "icon": {
+      "format": "indexed_png",
+      "width": 32,
+      "height": 64,
+      "frames": 2,
+      "max_palette_colors": 16,
+      "transparent_palette_index": 0
+    },
+    "normal_palette": {
+      "format": "JASC-PAL",
+      "colors": 16
+    }
+  },
+  "engine_assets": {
+    "front_sheet": {
+      "width": 64,
+      "height": 128,
+      "frames": 2,
+      "bootstrap_rule": "duplicate the validated 64x64 source front frame until authored frame 2 exists"
+    },
+    "back": {
+      "width": 64,
+      "height": 64
+    },
+    "icon": {
+      "width": 32,
+      "height": 64,
+      "frames": 2
+    }
+  },
+  "notes": [
+    "Gameplay sprites are project assets derived from recorded source provenance; they are not represented as official Emerald sprites.",
+    "Do not introduce antialiasing or interpolation colors during conversion.",
+    "Shiny initially reuses the normal palette unless a separately identified gameplay alternate palette is authored."
+  ]
+}
