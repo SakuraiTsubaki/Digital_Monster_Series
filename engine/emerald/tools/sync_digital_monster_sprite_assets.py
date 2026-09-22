@@ -115,7 +115,11 @@ def parse_species_enum(engine: Path) -> dict[str, int]:
     return values
 
 
-def load_donor_blocks(\n    engine: Path,\n    enum_values: dict[str, int],\n    required_donors: set[int],\n) -> dict[int, tuple[str, str]]:
+def load_donor_blocks(
+    engine: Path,
+    enum_values: dict[str, int],
+    required_donors: set[int],
+) -> dict[int, tuple[str, str]]:
     donors: dict[int, tuple[str, str]] = {}
     base = engine / "src/data/pokemon/species_info"
 
