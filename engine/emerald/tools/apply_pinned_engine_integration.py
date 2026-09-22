@@ -86,6 +86,26 @@ def main() -> None:
     t = sub_once(t, pattern, repl, "PokemonSubstruct1 move repack")
     write(root, rel, t)
 
+    # Field-move metadata also stores enum Move in a bitfield. Keep the
+    # surrounding bit budget unchanged by donating one unused padding bit.
+    rel = "include/field_move.h"
+    t = read(root, rel)
+    t = replace_once(
+        t,
+        """    enum Move moveID:11;
+    u32 partyMsgID:7;
+    u32 arg:8;
+    u32 hideIfLocked:1;
+    u32 padding:3;""",
+        """    enum Move moveID:12;
+    u32 partyMsgID:7;
+    u32 arg:8;
+    u32 hideIfLocked:1;
+    u32 padding:2;""",
+        "FieldMoveInfo move width",
+    )
+    write(root, rel, t)
+
     rel = "src/pokemon.c"
     t = read(root, rel)
     t = replace_once(
