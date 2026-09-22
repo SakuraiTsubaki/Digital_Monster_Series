@@ -46,6 +46,11 @@ jobs:
               --parameters project/engine/emerald/generated/profile-derived-parameters.csv \
               --species-dir project/engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info
           fi
+          if test -f project/engine/emerald/generated/profile-derived-techniques.csv; then
+            python3 project/engine/emerald/validation/verify_profile_derived_techniques.py \
+              --parameters project/engine/emerald/generated/profile-derived-techniques.csv \
+              --move-info project/engine/emerald/generated/pokeemerald-expansion/src/data/digital_monster/moves_info.inc
+          fi
           python3 project/engine/emerald/tools/build_digital_monster_sprite_manifest.py --check
           python3 project/engine/emerald/validation/verify_digital_monster_sprites.py
 
