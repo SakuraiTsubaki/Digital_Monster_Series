@@ -20,7 +20,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean
 
-from derive_profile_parameters import TYPE_TERMS, clamp
+from derive_profile_parameters import TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp
 
 ROOT = Path(__file__).resolve().parents[3]
 EMERALD = ROOT / "engine" / "emerald"
@@ -84,6 +84,15 @@ TYPE_NAME_WEIGHTS = 6
 TYPE_CONTEXT_WEIGHTS = 3
 TYPE_OWNER_WEIGHTS = 2
 
+# Exact technique-description wording that directly establishes the move's
+# elemental/airborne behavior. This is intentionally separate from species
+# typing so a move can be resolved without forcing the owner's battle type.
+TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS = {
+    "TYPE_FIRE": ["熱線として吐き出", "黒き炎を巻き起こす"],
+    "TYPE_FLYING": ["真空の刃を放"],
+}
+TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT = 6
+
 
 def rows(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -133,15 +142,41 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
     scores: Counter[str] = Counter()
     evidence: list[str] = []
     for type_name, terms in TYPE_TERMS.items():
+        type_move_name = move_name
+        type_context = context
+        for excluded in TYPE_TERM_EXCLUSIONS.get(type_name, []):
+            n_excluded = type_move_name.count(excluded)
+            c_excluded = type_context.count(excluded)
+            if n_excluded:
+                evidence.append(
+                    f"type_exclusion:{type_name}:{excluded}:name:{n_excluded}"
+                )
+            if c_excluded:
+                evidence.append(
+                    f"type_exclusion:{type_name}:{excluded}:profile_context:{c_excluded}"
+                )
+            type_move_name = type_move_name.replace(excluded, "")
+            type_context = type_context.replace(excluded, "")
+
         for term in terms:
-            n = min(move_name.count(term), 3)
-            c = min(context.count(term), 3)
+            n = min(type_move_name.count(term), 3)
+            c = min(type_context.count(term), 3)
             if n:
                 scores[type_name] += n * TYPE_NAME_WEIGHTS
                 evidence.append(f"type:{type_name}:{term}:name:+{n * TYPE_NAME_WEIGHTS}")
             if c:
                 scores[type_name] += c * TYPE_CONTEXT_WEIGHTS
                 evidence.append(f"type:{type_name}:{term}:profile_context:+{c * TYPE_CONTEXT_WEIGHTS}")
+
+    for type_name, phrases in TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS.items():
+        for phrase in phrases:
+            count = min(context.count(phrase), 2)
+            if count:
+                weight = count * TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT
+                scores[type_name] += weight
+                evidence.append(
+                    f"type:{type_name}:{phrase}:strong_profile_context:+{weight}"
+                )
 
     if scores:
         best, value = sorted(scores.items(), key=lambda kv: (-kv[1], kv[0]))[0]
