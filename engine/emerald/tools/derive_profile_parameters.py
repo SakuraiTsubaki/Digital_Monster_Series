@@ -107,6 +107,13 @@ TYPE_TERMS = {
     "TYPE_FAIRY": ["妖精", "天使", "神聖", "聖なる", "聖", "フェアリー", "ホーリー", "セイント", "エンジェル"],
 }
 
+# Exact lexical/context exclusions used only by battle-type scoring. The raw
+# official Japanese profile and its SHA remain untouched.
+TYPE_TERM_EXCLUSIONS = {
+    "TYPE_DRAGON": ["竜巻"],
+    "TYPE_ROCK": ["岩をも貫く", "岩などに張り付いて"],
+}
+
 TYPE_STRONG_PROFILE_PHRASES = {
     "TYPE_FIRE": [
         "炎を放", "炎を吐", "炎を纏", "炎をまと", "炎を操",
@@ -161,12 +168,12 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_DARK": [
         "闇の力", "暗黒の力", "邪悪な力", "悪魔の力",
-        "漆黒の闇", "悪と闇のみ", "闇だけに飲み込ませる",
+        "漆黒の闇", "悪と闇のみ",
     ],
     "TYPE_STEEL": [
         "金属の身体", "金属の体", "鋼の身体", "鋼の体",
         "鋼鉄の身体", "鋼鉄の体",
-        "機械の身体", "機械の体", "サイボーグ",
+        "機械の身体", "機械の体", "サイボーグ", "鋼の能力を持つ",
     ],
     "TYPE_FAIRY": [
         "神聖な力", "聖なる力", "天使の力", "妖精の力",
@@ -356,9 +363,25 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
     scores = Counter()
     hits: list[str] = []
     for type_name, terms in TYPE_TERMS.items():
+        type_profile = profile
+        type_moves = moves
+        for excluded in TYPE_TERM_EXCLUSIONS.get(type_name, []):
+            p_excluded = type_profile.count(excluded)
+            m_excluded = type_moves.count(excluded)
+            if p_excluded:
+                hits.append(
+                    f"type_exclusion:{type_name}:{excluded}:profile:{p_excluded}"
+                )
+            if m_excluded:
+                hits.append(
+                    f"type_exclusion:{type_name}:{excluded}:move:{m_excluded}"
+                )
+            type_profile = type_profile.replace(excluded, "")
+            type_moves = type_moves.replace(excluded, "")
+
         for term in terms:
-            p = min(profile.count(term), 3)
-            m = min(moves.count(term), 3)
+            p = min(type_profile.count(term), 3)
+            m = min(type_moves.count(term), 3)
             if p:
                 scores[type_name] += p * 2
                 hits.append(f"type:{type_name}:{term}:profile:+{p * 2}")
