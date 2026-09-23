@@ -43,17 +43,15 @@
     "rule": "Infer Emerald battle type(s) from the whole official evidence set. Never map a Digimon type label or Appmon category mechanically to a Pokemon type by itself.",
     "max_types": 2,
     "missing_evidence": "unresolved_not_TYPE_NORMAL",
-    "material_evidence_policy": "Generic metal, super-metal, Chrome Digizoid, Red Digizoid, weapon, claw, shield, Digimental, or equipment mentions are not strong Steel evidence by themselves. Strong Steel material evidence requires explicit body/body-integrated or whole-body structural wording; it may resolve an otherwise weak case but must not displace an already-strong official type/profile affinity.",
+    "material_evidence_policy": "Generic metal, super-metal, Chrome Digizoid, Red Digizoid, weapon, claw, shield, Digimental, or equipment mentions are not strong Steel evidence by themselves. Explicit body-integrated or whole-body structural metal wording contributes strong Steel evidence and may support a secondary Steel affinity alongside a stronger elemental affinity.",
     "direct_official_type_mappings": {
       "魔神型": "TYPE_DARK",
       "邪神型": "TYPE_DARK",
-      "暗黒騎士型": [
-        "TYPE_DARK",
-        "TYPE_FIGHTING"
-      ],
+      "暗黒騎士型": "TYPE_DARK",
       "海人型": "TYPE_WATER",
       "古代魚型": "TYPE_WATER"
-    }
+    },
+    "official_type_secondary_policy": "An official type label contributes only the affinities explicitly encoded for that label. Secondary affinities such as Fighting must come independently from profile or move evidence; 暗黒騎士型 does not grant Fighting by taxonomy alone."
   },
   "techniques": {
     "parameters": [

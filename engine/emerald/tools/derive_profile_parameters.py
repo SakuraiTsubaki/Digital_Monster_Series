@@ -126,6 +126,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_FIGHTING": [
         "格闘技", "拳法", "武術", "肉弾戦", "近接戦闘",
+        "一級の戦士",
     ],
     "TYPE_POISON": [
         "毒液", "猛毒", "毒ガス", "毒を吐", "毒を放",
@@ -175,6 +176,7 @@ STRUCTURAL_STEEL_PROFILE_PHRASES = [
     "クロンデジゾイド製の鎧に身を包",
     "超金属「クロンデジゾイド」の鎧を身にまと",
     "クロンデジゾイド製のメタルヘッド",
+    "ほぼ全身をメタル化",
 ]
 
 
@@ -191,7 +193,7 @@ TYPE_FIELD_BONUS = {
     "妖精": {"TYPE_FAIRY": 5},
     "神人": {"TYPE_FAIRY": 5, "TYPE_FIGHTING": 3},
     "聖騎士": {"TYPE_FAIRY": 6, "TYPE_FIGHTING": 5},
-    "暗黒騎士": {"TYPE_DARK": 6, "TYPE_FIGHTING": 5},
+    "暗黒騎士": {"TYPE_DARK": 7},
     "幻獣": {"TYPE_FAIRY": 5},
     "竜": {"TYPE_DRAGON": 5},
     "龍": {"TYPE_DRAGON": 5},
@@ -375,21 +377,16 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
                 scores[type_name] += weight
                 hits.append(f"type:{type_name}:{token}:official_type:+{weight}")
 
-    # Treat structural/body-integrated metal as enough to resolve an otherwise
-    # weak type case, but never let a generic material mention displace an
-    # already-strong affinity from the official type/profile evidence.
-    strongest = max(scores.values(), default=0)
-    if strongest < 5:
-        structural_hits = [
-            phrase for phrase in STRUCTURAL_STEEL_PROFILE_PHRASES
-            if phrase in profile
-        ]
-        if structural_hits:
-            scores["TYPE_STEEL"] = max(scores.get("TYPE_STEEL", 0), 5)
-            hits.extend(
-                f"type:TYPE_STEEL:{phrase}:structural_profile:floor=5"
-                for phrase in structural_hits
-            )
+    # Body-integrated or whole-body metal is direct Steel evidence. Keep this
+    # separate from generic material/equipment mentions so it can support a
+    # secondary Steel affinity without making every Digizoid weapon user Steel.
+    structural_hits = [
+        phrase for phrase in STRUCTURAL_STEEL_PROFILE_PHRASES
+        if phrase in profile
+    ]
+    for phrase in structural_hits:
+        scores["TYPE_STEEL"] += 5
+        hits.append(f"type:TYPE_STEEL:{phrase}:structural_profile:+5")
     return dict(scores), hits
 
 
