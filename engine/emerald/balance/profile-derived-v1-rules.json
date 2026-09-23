@@ -42,7 +42,8 @@
   "battle_type": {
     "rule": "Infer Emerald battle type(s) from the whole official evidence set. Never map a Digimon type label or Appmon category mechanically to a Pokemon type by itself.",
     "max_types": 2,
-    "missing_evidence": "unresolved_not_TYPE_NORMAL"
+    "missing_evidence": "unresolved_not_TYPE_NORMAL",
+    "material_evidence_policy": "Generic metal, super-metal, Chrome Digizoid, Red Digizoid, weapon, claw, shield, Digimental, or equipment mentions are not strong Steel evidence by themselves. Strong Steel material evidence requires explicit body/body-integrated or whole-body structural wording; it may resolve an otherwise weak case but must not displace an already-strong official type/profile affinity."
   },
   "techniques": {
     "parameters": [

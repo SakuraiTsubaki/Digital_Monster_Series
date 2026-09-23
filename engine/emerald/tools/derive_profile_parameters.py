@@ -155,13 +155,25 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_STEEL": [
         "金属の身体", "金属の体", "鋼の身体", "鋼の体",
-        "鋼鉄の鎧", "鋼鉄の身体", "鋼鉄の体", "超金属", "デジゾイド",
+        "鋼鉄の身体", "鋼鉄の体",
         "機械の身体", "機械の体", "サイボーグ",
     ],
     "TYPE_FAIRY": [
         "神聖な力", "聖なる力", "天使の力", "妖精の力",
     ],
 }
+
+STRUCTURAL_STEEL_PROFILE_PHRASES = [
+    # Structural/body-integrated metal evidence. Generic "デジゾイド" or
+    # "超金属" mentions are intentionally excluded because they often describe
+    # a held weapon, claw, shield, Digimental, or other equipment rather than
+    # the entity's own battle affinity.
+    "全身がクロンデジゾイドの鎧で覆",
+    "クロンデジゾイド製の鎧に身を包",
+    "超金属「クロンデジゾイド」の鎧を身にまと",
+    "クロンデジゾイド製のメタルヘッド",
+]
+
 
 TYPE_FIELD_BONUS = {
     "アンデッド": {"TYPE_GHOST": 5, "TYPE_DARK": 3},
@@ -331,6 +343,22 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
             for type_name, weight in bonuses.items():
                 scores[type_name] += weight
                 hits.append(f"type:{type_name}:{token}:official_type:+{weight}")
+
+    # Treat structural/body-integrated metal as enough to resolve an otherwise
+    # weak type case, but never let a generic material mention displace an
+    # already-strong affinity from the official type/profile evidence.
+    strongest = max(scores.values(), default=0)
+    if strongest < 5:
+        structural_hits = [
+            phrase for phrase in STRUCTURAL_STEEL_PROFILE_PHRASES
+            if phrase in profile
+        ]
+        if structural_hits:
+            scores["TYPE_STEEL"] = max(scores.get("TYPE_STEEL", 0), 5)
+            hits.extend(
+                f"type:TYPE_STEEL:{phrase}:structural_profile:floor=5"
+                for phrase in structural_hits
+            )
     return dict(scores), hits
 
 
