@@ -33,6 +33,7 @@ PHYSICAL_TERMS = [
     "パンチ", "キック", "クロー", "爪", "牙", "バイト", "ソード", "ブレード",
     "剣", "刀", "斬", "スラッシュ", "ハンマー", "ナックル", "タックル",
     "ラッシュ", "クラッシュ", "テイル", "ホーン", "ドリル", "槍", "突進",
+    "貫", "刺突", "突き刺",
 ]
 SPECIAL_TERMS = [
     "ビーム", "レーザー", "ブラスト", "ブラスター", "キャノン", "バースト",
@@ -52,6 +53,10 @@ STATUS_CONTEXT_TERMS = [
     "強化する", "強化させ", "回復する", "回復させ", "治癒する",
     "守る", "防ぐ", "バリアを張", "封印する", "動きを封じ",
     "眠らせ", "混乱させ", "幻惑する",
+]
+STRONG_STATUS_CONTEXT_TERMS = [
+    "能力を封印", "能力を封じ",
+    "侵入を一時的に防ぐ", "ファイアーウォール",
 ]
 RECOVER_TERMS = ["ヒール", "リカバー", "回復", "レストア", "治癒"]
 PROTECT_TERMS = ["プロテクト", "シールド", "ガード", "防御壁"]
@@ -86,8 +91,35 @@ def rows(path: Path) -> list[dict[str, str]]:
 
 
 def profile_sentences(profile: str, move_name: str) -> tuple[str, bool]:
+    """Return only the clause that describes move_name, not the whole sentence.
+
+    Official profiles often describe multiple techniques in one Japanese
+    sentence. Using the whole sentence leaks one move's status/effect wording
+    into the next move. Quoted move names let us isolate the local clause.
+    """
     sentences = [x.strip() for x in re.split(r"(?<=[。！？])|\n+", profile) if x.strip()]
-    matched = [x for x in sentences if move_name and move_name in x]
+    matched: list[str] = []
+    for sentence in sentences:
+        if not move_name or move_name not in sentence:
+            continue
+        pos = sentence.find(move_name)
+        quote_start = sentence.rfind("『", 0, pos + 1)
+        quote_end = sentence.find("』", pos)
+        if quote_start < 0 or quote_end < 0:
+            matched.append(sentence)
+            continue
+
+        previous_quote_end = sentence.rfind("』", 0, quote_start)
+        start = previous_quote_end + 1 if previous_quote_end >= 0 else 0
+        clause = sentence[start:quote_end + 1].lstrip("、。 と")
+        tail = sentence[quote_end + 1:].lstrip()
+
+        # Some entries put the technique name first and explain it after 『...』.
+        # Keep that explanation only when it is grammatically attached with は.
+        if tail.startswith("は"):
+            clause += tail
+        matched.append(clause.strip())
+
     if matched:
         return " ".join(matched), True
     return "", False
@@ -135,14 +167,15 @@ def category_score(move_name: str, context: str, owner_rows: list[dict[str, str]
     s = count_terms(move_name, SPECIAL_TERMS) * 4 + count_terms(context, SPECIAL_TERMS) * 2
     st_name = count_terms(move_name, STATUS_TERMS) * 5
     st_context = count_terms(context, STATUS_CONTEXT_TERMS) * 4
-    st = st_name + st_context
+    st_strong = count_terms(context, STRONG_STATUS_CONTEXT_TERMS) * 8
+    st = st_name + st_context + st_strong
 
     evidence = [
         f"category_scores:physical={p}:special={s}:status={st}",
-        f"status_evidence:name={st_name}:context={st_context}",
+        f"status_evidence:name={st_name}:context={st_context}:strong={st_strong}",
     ]
-    if st >= 5 and st > max(p, s):
-        return "DAMAGE_CATEGORY_STATUS", evidence + ["category:status:name_evidence"]
+    if (st_name >= 5 or st_strong >= 8) and st > max(p, s):
+        return "DAMAGE_CATEGORY_STATUS", evidence + ["category:status:direct_evidence"]
     if p > s:
         return "DAMAGE_CATEGORY_PHYSICAL", evidence + ["category:physical:text_evidence"]
     if s > p:
@@ -172,7 +205,12 @@ def intensity_score(move_name: str, context: str) -> tuple[int, list[str]]:
     return score, evidence
 
 
-def choose_effect(category: str, move_name: str, context: str) -> tuple[str, str, str, int, str, list[str]]:
+def choose_effect(
+    category: str,
+    move_name: str,
+    context: str,
+    owner_rows: list[dict[str, str]],
+) -> tuple[str, str, str, int, str, list[str]]:
     if category != "DAMAGE_CATEGORY_STATUS":
         priority = 1 if any(x in move_name for x in FAST_TERMS) else 0
         return "EFFECT_HIT", "TARGET_SELECTED", "", priority, "resolved_damage_core_only", ["effect:hit"]
@@ -180,11 +218,71 @@ def choose_effect(category: str, move_name: str, context: str) -> tuple[str, str
     joined = move_name + "\n" + context
     if any(x in joined for x in RECOVER_TERMS):
         return "EFFECT_RESTORE_HP", "TARGET_USER", "", 0, "resolved_recovery_evidence", ["effect:restore_hp"]
+
+    if any(x in context for x in ["能力を封印", "能力を封じ"]):
+        return (
+            "EFFECT_GASTRO_ACID",
+            "TARGET_SELECTED",
+            "",
+            0,
+            "resolved_ability_suppression_evidence",
+            ["effect:suppress_ability:official_profile"],
+        )
+
+    if any(x in context for x in ["侵入を一時的に防ぐ", "ファイアーウォール"]):
+        return (
+            "EFFECT_SAFEGUARD",
+            "TARGET_USER",
+            "",
+            0,
+            "resolved_safeguard_evidence",
+            ["effect:safeguard:official_profile"],
+        )
+
+    if (
+        any(x in joined for x in ["バリア", "円盾", "シールド"])
+        and "防御力" in context
+    ):
+        return (
+            "EFFECT_REFLECT",
+            "TARGET_USER",
+            "",
+            0,
+            "resolved_reflect_evidence",
+            ["effect:reflect:defense_barrier_profile"],
+        )
+
     if any(x in move_name for x in PROTECT_TERMS):
         arg = ".argument = { .protectMethod = PROTECT_NORMAL },"
         return "EFFECT_PROTECT", "TARGET_USER", arg, 4, "resolved_protect_name_evidence", ["effect:protect"]
+
     if any(x in joined for x in CONFUSE_TERMS):
         return "EFFECT_CONFUSE", "TARGET_SELECTED", "", 0, "resolved_confuse_evidence", ["effect:confuse"]
+
+    if "ブースト" in move_name and owner_rows:
+        speeds = [int(x["base_speed"]) for x in owner_rows if x.get("base_speed")]
+        other_fields = ["base_attack", "base_defense", "base_sp_attack", "base_sp_defense"]
+        other_values = [
+            int(x[field])
+            for x in owner_rows
+            for field in other_fields
+            if x.get(field)
+        ]
+        if speeds and (not other_values or mean(speeds) >= mean(other_values)):
+            arg = (
+                ".additionalEffects = ADDITIONAL_EFFECTS({\n"
+                "            .moveEffect = STAT_CHANGE_EFFECT_PLUS,\n"
+                "            .speed = 2,\n"
+                "        }),"
+            )
+            return (
+                "EFFECT_STAT_CHANGE",
+                "TARGET_USER",
+                arg,
+                0,
+                "resolved_speed_boost_owner_profile_evidence",
+                ["effect:speed_boost:owner_profile_speed"],
+            )
 
     target = "TARGET_USER" if any(x in move_name for x in SELF_STATUS_TERMS) else "TARGET_SELECTED"
     return "EFFECT_DO_NOTHING", target, "", 0, "unresolved_status_effect", ["effect:placeholder_do_nothing"]
@@ -252,7 +350,7 @@ def main() -> None:
         intensity, power_evidence = intensity_score(move_name, context)
 
         effect, target, effect_argument, priority, effect_status, effect_evidence = choose_effect(
-            category, move_name, context
+            category, move_name, context, owner_params
         )
 
         if category == "DAMAGE_CATEGORY_STATUS":

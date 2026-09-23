@@ -57,6 +57,17 @@ def main() -> None:
 
     effects = Counter(x["effect_status"] for x in data)
     categories = Counter(x["category"] for x in data)
+    unresolved_status = [
+        x for x in data
+        if x["effect_status"] == "unresolved_status_effect"
+        or (
+            x["category"] == "DAMAGE_CATEGORY_STATUS"
+            and x["effect"] == "EFFECT_DO_NOTHING"
+        )
+    ]
+    assert not unresolved_status, [
+        (x["dm_technique_id"], x["name_ja"]) for x in unresolved_status
+    ]
     print("Profile-derived techniques verified")
     print(f"  techniques: {len(data)}")
     print(f"  unique powers: {len({int(x['power']) for x in data})}")
