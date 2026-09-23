@@ -41,7 +41,8 @@ def verify_donor_map() -> tuple[int, int]:
         assert 1 <= donor_id <= 386
         assert row["donor_species_constant"].startswith("SPECIES_")
         assert row["sprite_family"] in ALLOWED_FAMILIES
-        assert row["palette_preset"] == "base"
+        assert row["palette_preset"] in ALLOWED_FAMILIES
+        assert row["palette_preset"] == row["sprite_family"]
         donors.add(donor_id)
 
     first = rows[0]
@@ -49,6 +50,7 @@ def verify_donor_map() -> tuple[int, int]:
     assert first["donor_species_id"] == "169"
     assert first["donor_species_constant"] == "SPECIES_CROBAT"
     assert first["sprite_family"] == "undead"
+    assert first["palette_preset"] == "undead"
 
     return len(rows), len(donors)
 
@@ -104,7 +106,7 @@ def main():
     print(f"  donor sprite mappings: {donor_rows}")
     print(f"  unique Gen I-III Pokémon donors used: {unique_donors}")
     print("  DM0001 donor: SPECIES_CROBAT")
-    print("  palette preset mode: base")
+    print("  palette preset mode: sprite_family")
 
 
 if __name__ == "__main__":
