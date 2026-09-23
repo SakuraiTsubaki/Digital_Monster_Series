@@ -61,7 +61,16 @@
     "catch_rate": "derive_from_official_profile_rarity_danger_and_encounter_context",
     "exp_yield": "derive_from_official_profile_power_danger_and_progression_context",
     "abilities": "derive_only_from_explicit_or_strongly_supported_passive_traits",
-    "digivolution": "create_edges_only_when_an_official_source_supports_the_relationship_or_condition"
+    "digivolution": "create_edges_only_when_an_official_source_supports_the_relationship_or_condition",
+    "ev_yield": {
+      "rule": "derive_from_explicit_official_profile_stat_specialization_evidence",
+      "per_stat_min": 0,
+      "per_stat_max": 3,
+      "total_max": 3,
+      "level_or_grade_table": false,
+      "bst_threshold_table": false,
+      "missing_evidence": "all_zero_and_unresolved"
+    }
   },
   "prohibited_methods": [
     "hash_based_archetype_assignment",
@@ -71,7 +80,8 @@
     "stage_or_grade_only_battle_type_mapping",
     "fixed_neutral_type_as_final_data",
     "fixed_move_power_accuracy_pp_as_final_data",
-    "unrelated_pokemon_parameter_fallback"
+    "unrelated_pokemon_parameter_fallback",
+    "fixed_ev_yield_by_level_grade_or_bst"
   ],
   "evidence_record": {
     "required": true,

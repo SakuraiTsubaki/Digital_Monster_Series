@@ -81,6 +81,42 @@ def main() -> None:
             if count != 1:
                 raise SystemExit(f"species {sid} types: expected one match, found {count}")
 
+            ev_fields = [
+                ("evYield_HP", "ev_yield_hp"),
+                ("evYield_Attack", "ev_yield_attack"),
+                ("evYield_Defense", "ev_yield_defense"),
+                ("evYield_Speed", "ev_yield_speed"),
+                ("evYield_SpAttack", "ev_yield_sp_attack"),
+                ("evYield_SpDefense", "ev_yield_sp_defense"),
+            ]
+            if re.search(r"(?m)^\s*\.evYield_HP\s*=", block):
+                for c_field, csv_field in ev_fields:
+                    block, count = re.subn(
+                        rf"(?m)^(\s*\.{c_field}\s*=\s*)\d+(,)$",
+                        rf"\g<1>{row[csv_field]}\g<2>",
+                        block,
+                        count=1,
+                    )
+                    if count != 1:
+                        raise SystemExit(
+                            f"species {sid} {c_field}: expected one match, found {count}"
+                        )
+            else:
+                ev_lines = "".join(
+                    f"        .{c_field} = {row[csv_field]},\n"
+                    for c_field, csv_field in ev_fields
+                )
+                block, count = re.subn(
+                    r"(?m)^(\s*\.expYield\s*=\s*\d+,\n)",
+                    lambda m: m.group(1) + ev_lines,
+                    block,
+                    count=1,
+                )
+                if count != 1:
+                    raise SystemExit(
+                        f"species {sid} EV insertion: expected one expYield match, found {count}"
+                    )
+
             ability_args = ", ".join(
                 [row["ability_1"], row["ability_2"], row["ability_hidden"]]
             )

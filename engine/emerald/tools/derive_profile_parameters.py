@@ -399,6 +399,48 @@ def profile_digest(profile: str) -> str:
     return hashlib.sha256(profile.encode("utf-8")).hexdigest()
 
 
+def derive_ev_yields(stat_scores: dict[str, int]) -> tuple[dict[str, int], str, list[str]]:
+    """Map explicit official-profile stat emphasis to Emerald EV rewards.
+
+    No level/grade table, BST threshold, hash or random assignment is used.
+    Species with no stat-specialization evidence intentionally yield 0 EVs.
+    """
+    yields = {name: 0 for name, _ in STAT_COLUMNS}
+    positive = [(name, max(0, stat_scores.get(name, 0))) for name, _ in STAT_COLUMNS]
+    positive = [(name, score) for name, score in positive if score > 0]
+    if not positive:
+        return yields, "unresolved_no_stat_specialization_evidence", [
+            "ev_yield:0:no_official_stat_specialization_evidence"
+        ]
+
+    positive.sort(
+        key=lambda item: (
+            -item[1],
+            [name for name, _ in STAT_COLUMNS].index(item[0]),
+        )
+    )
+    peak = positive[0][1]
+    total = 1 + int(peak >= 8) + int(peak >= 16)
+    cutoff = max(1, math.ceil(peak * 0.75))
+    eligible = [name for name, score in positive if score >= cutoff]
+
+    remaining = total
+    index = 0
+    while remaining:
+        name = eligible[index % len(eligible)]
+        if yields[name] < 3:
+            yields[name] += 1
+            remaining -= 1
+        index += 1
+
+    hits = [
+        f"ev_yield:{name}:{value}:profile_stat_evidence"
+        for name, value in yields.items()
+        if value
+    ]
+    return yields, "resolved_profile_stat_evidence", hits
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--digimon-master-json", type=Path, required=True)
@@ -454,10 +496,12 @@ def main() -> None:
         global_score, global_hits = score_terms(profile, GLOBAL_TERMS, "power")
 
         stat_values: dict[str, int] = {}
+        stat_evidence_scores: dict[str, int] = {}
         stat_hits_all: list[str] = []
         specialization_count = 0
         for stat_name, output_name in STAT_COLUMNS:
             score, hits = score_terms(profile + "\n" + moves, STAT_TERMS[stat_name], stat_name)
+            stat_evidence_scores[stat_name] = score
             if score:
                 specialization_count += 1
             stat_hits_all.extend(hits)
@@ -465,6 +509,8 @@ def main() -> None:
             stat_values[output_name] = value
         if specialization_count == 0:
             stat_hits_all.append("stats:balanced:no_specialization_signal_in_official_text")
+
+        ev_yields, ev_yield_status, ev_yield_hits = derive_ev_yields(stat_evidence_scores)
 
         tscores, thits = type_scores(profile, official_type, moves)
         type1, type2, type_choice_hits, type_status = choose_types(tscores)
@@ -478,7 +524,7 @@ def main() -> None:
         exp_yield = clamp(round(20 + avg * 1.55 + peak * 0.45 + max(0, global_score) * 2.5), 20, 65535)
         growth, growth_signal = growth_rate(profile, base, global_score)
 
-        evidence = global_hits + stat_hits_all + thits + type_choice_hits + ability_hits + [growth_signal]
+        evidence = global_hits + stat_hits_all + ev_yield_hits + thits + type_choice_hits + ability_hits + [growth_signal]
         if not evidence:
             evidence = ["profile:read:no_keyword_specialization"]
 
@@ -506,6 +552,13 @@ def main() -> None:
             "base_sp_attack": stat_values["base_sp_attack"],
             "base_sp_defense": stat_values["base_sp_defense"],
             "bst": bst,
+            "ev_yield_hp": ev_yields["hp"],
+            "ev_yield_attack": ev_yields["attack"],
+            "ev_yield_defense": ev_yields["defense"],
+            "ev_yield_speed": ev_yields["speed"],
+            "ev_yield_sp_attack": ev_yields["special_attack"],
+            "ev_yield_sp_defense": ev_yields["special_defense"],
+            "ev_yield_status": ev_yield_status,
             "battle_type_1": type1,
             "battle_type_2": type2,
             "battle_type_status": type_status,
@@ -540,6 +593,14 @@ def main() -> None:
     print(f"  unique type combinations: {unique_types}")
     print(f"  resolved battle types: {sum(x['battle_type_status'] == 'resolved_profile_evidence' for x in out)}")
     print(f"  resolved profile abilities: {sum(x['ability_status'] == 'resolved_profile_passive_evidence' for x in out)}")
+    ev_totals = Counter(
+        sum(int(x[field]) for field in [
+            "ev_yield_hp", "ev_yield_attack", "ev_yield_defense",
+            "ev_yield_speed", "ev_yield_sp_attack", "ev_yield_sp_defense",
+        ])
+        for x in out
+    )
+    print(f"  EV-yield totals: {dict(sorted(ev_totals.items()))}")
     print(f"  BST range: {min(int(x['bst']) for x in out)}..{max(int(x['bst']) for x in out)}")
     print(f"  per-stat range: {min(min(int(x[c]) for c in [y[1] for y in STAT_COLUMNS]) for x in out)}.."
           f"{max(max(int(x[c]) for c in [y[1] for y in STAT_COLUMNS]) for x in out)}")

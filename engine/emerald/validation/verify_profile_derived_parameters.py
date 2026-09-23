@@ -59,6 +59,21 @@ def main() -> None:
         assert row["derivation_version"] == "profile-derived-v1"
         assert 3 <= int(row["catch_rate"]) <= 255
         assert 20 <= int(row["exp_yield"]) <= 65535
+        ev_fields = [
+            "ev_yield_hp", "ev_yield_attack", "ev_yield_defense",
+            "ev_yield_speed", "ev_yield_sp_attack", "ev_yield_sp_defense",
+        ]
+        ev_values = [int(row[field]) for field in ev_fields]
+        assert all(0 <= value <= 3 for value in ev_values), (row["species_id"], ev_values)
+        assert sum(ev_values) <= 3, (row["species_id"], ev_values)
+        assert row["ev_yield_status"] in {
+            "resolved_profile_stat_evidence",
+            "unresolved_no_stat_specialization_evidence",
+        }
+        if row["ev_yield_status"] == "resolved_profile_stat_evidence":
+            assert sum(ev_values) >= 1
+        else:
+            assert sum(ev_values) == 0
         assert row["growth_rate"].startswith("GROWTH_")
         by_stage[row["official_level_or_grade"]].add(int(row["bst"]))
         type_pairs.add((row["battle_type_1"], row["battle_type_2"]))
@@ -89,6 +104,25 @@ def main() -> None:
     assert len(rendered_abilities) == 1468
     assert sum(x != "ABILITY_NONE" for x in rendered_abilities) == resolved_abilities
 
+    ev_c_fields = [
+        ("evYield_HP", "ev_yield_hp"),
+        ("evYield_Attack", "ev_yield_attack"),
+        ("evYield_Defense", "ev_yield_defense"),
+        ("evYield_Speed", "ev_yield_speed"),
+        ("evYield_SpAttack", "ev_yield_sp_attack"),
+        ("evYield_SpDefense", "ev_yield_sp_defense"),
+    ]
+    for c_field, csv_field in ev_c_fields:
+        rendered_values = [
+            int(x)
+            for x in re.findall(
+                rf"(?m)^\s*\.{c_field}\s*=\s*(\d+),$",
+                rendered,
+            )
+        ]
+        assert len(rendered_values) == 1468, (c_field, len(rendered_values))
+        assert rendered_values == [int(row[csv_field]) for row in data], c_field
+
     species_ids = [int(x) for x in re.findall(r"(?m)^\s*\[(\d+)\]\s*=", rendered)]
     assert species_ids == list(range(1, 1469))
 
@@ -98,6 +132,14 @@ def main() -> None:
     print(f"  unique type combinations: {len(type_pairs)}")
     print(f"  resolved battle types: {sum(x['battle_type_status'] == 'resolved_profile_evidence' for x in data)}")
     print(f"  resolved profile abilities: {resolved_abilities}")
+    ev_total_counts = {}
+    for row in data:
+        total = sum(int(row[field]) for field in [
+            "ev_yield_hp", "ev_yield_attack", "ev_yield_defense",
+            "ev_yield_speed", "ev_yield_sp_attack", "ev_yield_sp_defense",
+        ])
+        ev_total_counts[total] = ev_total_counts.get(total, 0) + 1
+    print(f"  EV-yield totals: {dict(sorted(ev_total_counts.items()))}")
     print("  each base stat: 1..255")
     print("  fixed BST total table: absent")
 
