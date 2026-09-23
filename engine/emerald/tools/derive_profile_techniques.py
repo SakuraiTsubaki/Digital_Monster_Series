@@ -42,13 +42,21 @@ SPECIAL_TERMS = [
 ]
 STATUS_TERMS = [
     "ヒール", "リカバー", "回復", "レストア", "ガード", "シールド", "バリア",
-    "プロテクト", "チャージ", "ブースト", "アップ", "ダウン", "ロック",
-    "封印", "スリープ", "催眠", "コンフューズ", "混乱", "ミスト", "リフレクト",
+    "プロテクト", "ブースト", "封印", "スリープ", "催眠",
+    "コンフューズ", "混乱", "リフレクト",
+]
+STATUS_CONTEXT_TERMS = [
+    "能力を上げ", "攻撃力を上げ", "防御力を上げ", "素早さを上げ",
+    "能力を下げ", "攻撃力を下げ", "防御力を下げ", "素早さを下げ",
+    "力を溜め", "力をため", "チャージする", "エネルギーを蓄え",
+    "強化する", "強化させ", "回復する", "回復させ", "治癒する",
+    "守る", "防ぐ", "バリアを張", "封印する", "動きを封じ",
+    "眠らせ", "混乱させ", "幻惑する",
 ]
 RECOVER_TERMS = ["ヒール", "リカバー", "回復", "レストア", "治癒"]
 PROTECT_TERMS = ["プロテクト", "シールド", "ガード", "防御壁"]
 CONFUSE_TERMS = ["コンフューズ", "混乱", "幻惑"]
-SELF_STATUS_TERMS = RECOVER_TERMS + PROTECT_TERMS + ["ブースト", "チャージ", "強化"]
+SELF_STATUS_TERMS = RECOVER_TERMS + PROTECT_TERMS + ["ブースト", "強化"]
 
 POWER_TERMS = [
     ("プチ", -3), ("ミニ", -2), ("ベビー", -2),
@@ -125,9 +133,14 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
 def category_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -> tuple[str, list[str]]:
     p = count_terms(move_name, PHYSICAL_TERMS) * 4 + count_terms(context, PHYSICAL_TERMS) * 2
     s = count_terms(move_name, SPECIAL_TERMS) * 4 + count_terms(context, SPECIAL_TERMS) * 2
-    st = count_terms(move_name, STATUS_TERMS) * 5
+    st_name = count_terms(move_name, STATUS_TERMS) * 5
+    st_context = count_terms(context, STATUS_CONTEXT_TERMS) * 4
+    st = st_name + st_context
 
-    evidence = [f"category_scores:physical={p}:special={s}:status={st}"]
+    evidence = [
+        f"category_scores:physical={p}:special={s}:status={st}",
+        f"status_evidence:name={st_name}:context={st_context}",
+    ]
     if st >= 5 and st > max(p, s):
         return "DAMAGE_CATEGORY_STATUS", evidence + ["category:status:name_evidence"]
     if p > s:
@@ -328,6 +341,7 @@ def main() -> None:
     print(f"  power range: {min(powers)}..{max(powers)}")
     print(f"  unique power values: {len(set(powers))}")
     print(f"  types used: {len(types)}")
+    print(f"  unresolved type placeholders: {sum(x['type_status'] == 'unresolved_type_placeholder' for x in out)}")
     print(f"  categories: {dict(cats)}")
     print(f"  effect status: {dict(effects)}")
     print(f"  output: {args.output}")
