@@ -2317,7 +2317,7 @@
         .baseSpeed     = 140,
         .baseSpAttack  = 122,
         .baseSpDefense = 122,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 75,
         .expYield = 324,
         .evYield_HP = 0,
