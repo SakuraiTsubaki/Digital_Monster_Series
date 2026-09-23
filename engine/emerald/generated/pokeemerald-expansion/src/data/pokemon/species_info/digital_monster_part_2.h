@@ -16012,7 +16012,7 @@
         .baseSpeed     = 154,
         .baseSpAttack  = 141,
         .baseSpDefense = 91,
-        .types = MON_TYPES(TYPE_FLYING, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_FLYING),
         .catchRate = 109,
         .expYield = 272,
         .evYield_HP = 0,
