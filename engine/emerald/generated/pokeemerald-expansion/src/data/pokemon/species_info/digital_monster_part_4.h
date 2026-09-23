@@ -722,7 +722,7 @@
         .baseSpeed     = 78,
         .baseSpAttack  = 78,
         .baseSpDefense = 78,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_WATER),
         .catchRate = 145,
         .expYield = 217,
         .evYield_HP = 0,
