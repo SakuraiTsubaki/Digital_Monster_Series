@@ -13,6 +13,10 @@ on:
       - ".github/workflows/profile-derived-parameters.yml"
   workflow_dispatch:
 
+concurrency:
+  group: profile-derived-parameters-main
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -124,4 +128,5 @@ jobs:
             exit 0
           fi
           git commit -m "Generate profile-derived Digital Monster gameplay parameters"
+          git pull --rebase origin main
           git push origin HEAD:main
