@@ -85,6 +85,8 @@ STAT_TERMS = {
     ],
 }
 
+# TYPE_NORMAL is intentionally absent from semantic scoring. In profile-derived-v1
+# it is the runtime placeholder for unresolved affinity, not a generic-taxonomy type.
 TYPE_TERMS = {
     "TYPE_FIRE": ["炎", "火炎", "灼熱", "溶岩", "マグマ", "フレイム", "ファイア", "ブレイズ", "バーニング", "フレア", "ヒノタマ"],
     "TYPE_WATER": ["海", "深海", "水中", "海洋", "水棲", "水生", "アクア", "ウェーブ", "ウォーター", "タイダル", "オーシャン"],
@@ -103,14 +105,13 @@ TYPE_TERMS = {
     "TYPE_DARK": ["闇", "暗黒", "悪魔", "魔王", "邪悪", "ダーク", "デーモン", "デビル", "ナイトメア", "ヘル"],
     "TYPE_STEEL": ["機械", "マシーン", "サイボーグ", "金属", "鋼", "鉄", "メカ", "アンドロイド", "機械化", "装甲", "メタル", "スチール", "アイアン"],
     "TYPE_FAIRY": ["妖精", "天使", "神聖", "聖なる", "聖", "フェアリー", "ホーリー", "セイント", "エンジェル"],
-    "TYPE_NORMAL": ["哺乳類", "一般", "日常", "生活"],
 }
 
 TYPE_STRONG_PROFILE_PHRASES = {
     "TYPE_FIRE": [
         "炎を放", "炎を吐", "炎を纏", "炎をまと", "炎を操",
         "火炎を放", "火炎を吐", "灼熱の炎", "爆炎",
-        "全身から吹き出る熱い炎",
+        "全身から吹き出る熱い炎", "火炎瓶を投げ",
     ],
     "TYPE_WATER": [
         "水中を", "海中を", "水流を", "水を操", "水圧", "津波",
@@ -128,7 +129,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_FIGHTING": [
         "格闘技", "拳法", "武術", "肉弾戦", "近接戦闘",
-        "一級の戦士",
+        "一級の戦士", "格闘センス",
     ],
     "TYPE_POISON": [
         "毒液", "猛毒", "毒ガス", "毒を吐", "毒を放",
@@ -217,20 +218,18 @@ TYPE_FIELD_BONUS = {
     "両生類": {"TYPE_WATER": 5},
     "甲殻類": {"TYPE_WATER": 5, "TYPE_BUG": 2},
     "鳥": {"TYPE_FLYING": 5},
-    "獣人": {"TYPE_FIGHTING": 5, "TYPE_NORMAL": 2},
+    "獣人": {"TYPE_FIGHTING": 5},
     "戦士": {"TYPE_FIGHTING": 5},
     "聖": {"TYPE_FAIRY": 3},
     "岩": {"TYPE_ROCK": 4},
     "鉱物": {"TYPE_ROCK": 4},
-    "爬虫類": {"TYPE_DRAGON": 4, "TYPE_NORMAL": 1},
-    "獣型": {"TYPE_NORMAL": 4},
-    "魔獣": {"TYPE_DARK": 4, "TYPE_NORMAL": 2},
-    "聖獣": {"TYPE_FAIRY": 4, "TYPE_NORMAL": 2},
+    "爬虫類": {"TYPE_DRAGON": 4},
+    "魔獣": {"TYPE_DARK": 4},
+    "聖獣": {"TYPE_FAIRY": 4},
     "妖獣": {"TYPE_FAIRY": 3, "TYPE_DARK": 2},
     "火炎": {"TYPE_FIRE": 6},
     "鉱石": {"TYPE_ROCK": 5, "TYPE_STEEL": 2},
-    "突然変異": {"TYPE_NORMAL": 3},
-    "パペット": {"TYPE_NORMAL": 2, "TYPE_GHOST": 2},
+    "パペット": {"TYPE_GHOST": 2},
 }
 
 ABILITY_RULES = [
