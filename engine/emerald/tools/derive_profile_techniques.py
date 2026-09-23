@@ -90,6 +90,7 @@ TYPE_OWNER_WEIGHTS = 2
 TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS = {
     "TYPE_FIRE": ["熱線として吐き出", "黒き炎を巻き起こす"],
     "TYPE_FLYING": ["真空の刃を放"],
+    "TYPE_PSYCHIC": ["幻惑の世界", "幻覚を見せ"],
 }
 TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT = 6
 

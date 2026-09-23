@@ -112,14 +112,29 @@ TYPE_TERMS = {
 TYPE_TERM_EXCLUSIONS = {
     "TYPE_ELECTRIC": ["電気機器メーカー"],
     "TYPE_FLYING": ["紙飛行機"],
-    "TYPE_GRASS": ["植物の種のように見える", "葉のように見える"],
+    "TYPE_GRASS": [
+        "植物の種のように見える", "葉のように見える", "葉隠",
+    ],
     "TYPE_ROCK": [
         "岩をも貫く", "岩などに張り付いて",
         "硬そうな大きな岩", "壊れなかった岩",
+        "岩陰", "岩場",
     ],
+    "TYPE_BUG": ["狐蝶幻", "胡蝶夢経", "突蜂", "蝶絶喇叭蹴"],
     "TYPE_DRAGON": ["竜巻"],
     "TYPE_DARK": ["暗闇の中", "暗闇から"],
-    "TYPE_FAIRY": ["三大天使", "天使型デジモン"],
+    "TYPE_STEEL": ["マシーン型、サイボーグ型のデジモン"],
+    "TYPE_FAIRY": [
+        "三大天使に興味を向け天使型デジモンと対立",
+        "他の天使型デジモンが堕落しないよう",
+        "全ての天使型デジモンを疑いの目で監視",
+        "堕落が始まった天使型デジモンを見つければ",
+        "天使型デジモンのように振る舞う",
+        "天使型や聖獣型といった種族",
+        "天使のような姿",
+        "天使型デジモンとは何の関係もなく",
+        "神聖な力なども一切持っていない",
+    ],
 }
 
 TYPE_STRONG_PROFILE_PHRASES = {
@@ -136,6 +151,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_ELECTRIC": [
         "電撃を放", "雷を放", "電気を纏", "電気をまと", "放電", "電磁",
+        "弾ける電撃帯",
     ],
     "TYPE_GRASS": [
         "植物を操", "樹木を操", "蔦を", "種子を", "花粉",
@@ -161,6 +177,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_PSYCHIC": [
         "超能力", "念力", "精神攻撃", "催眠術",
+        "幻惑の世界", "幻覚を見せ",
     ],
     "TYPE_BUG": [
         "昆虫の", "甲虫の", "幼虫の",
@@ -370,6 +387,8 @@ def mask_profile_self_names(profile: str, names: list[str]) -> tuple[str, int]:
 def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str, int], list[str]]:
     scores = Counter()
     hits: list[str] = []
+    masked_profiles: dict[str, str] = {}
+    masked_moves: dict[str, str] = {}
     for type_name, terms in TYPE_TERMS.items():
         type_profile = profile
         type_moves = moves
@@ -387,6 +406,9 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
             type_profile = type_profile.replace(excluded, "")
             type_moves = type_moves.replace(excluded, "")
 
+        masked_profiles[type_name] = type_profile
+        masked_moves[type_name] = type_moves
+
         for term in terms:
             p = min(type_profile.count(term), 3)
             m = min(type_moves.count(term), 3)
@@ -401,8 +423,9 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
     # unlike generic nouns such as a habitat mention ("forest", "sea", etc.).
     # One explicit phrase is therefore enough to clear the normal threshold.
     for type_name, phrases in TYPE_STRONG_PROFILE_PHRASES.items():
+        type_profile = masked_profiles.get(type_name, profile)
         for phrase in phrases:
-            count = min(profile.count(phrase), 2)
+            count = min(type_profile.count(phrase), 2)
             if count:
                 weight = count * 5
                 scores[type_name] += weight
@@ -417,9 +440,10 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
     # Body-integrated or whole-body metal is direct Steel evidence. Keep this
     # separate from generic material/equipment mentions so it can support a
     # secondary Steel affinity without making every Digizoid weapon user Steel.
+    structural_profile = masked_profiles.get("TYPE_STEEL", profile)
     structural_hits = [
         phrase for phrase in STRUCTURAL_STEEL_PROFILE_PHRASES
-        if phrase in profile
+        if phrase in structural_profile
     ]
     for phrase in structural_hits:
         scores["TYPE_STEEL"] += 5
