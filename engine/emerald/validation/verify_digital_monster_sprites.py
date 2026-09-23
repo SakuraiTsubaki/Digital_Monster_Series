@@ -92,6 +92,14 @@ def main() -> None:
 
     if catalog["species_total"] != 1468:
         raise SystemExit("sprite catalog species_total must be 1468")
+    if catalog.get("placeholder_runtime_species") != 0:
+        raise SystemExit("runtime sprite placeholders must be zero after donor fallback integration")
+    active_overrides = int(catalog.get("active_override_species", -1))
+    donor_fallback = int(catalog.get("donor_fallback_species", -1))
+    if active_overrides < 0 or donor_fallback < 0:
+        raise SystemExit("sprite catalog is missing donor fallback runtime counts")
+    if active_overrides + donor_fallback != catalog["species_total"]:
+        raise SystemExit("sprite catalog runtime counts do not cover all species")
 
     checked = 0
     for entry in catalog["entries"]:
@@ -125,6 +133,8 @@ def main() -> None:
     print(f"  declared manifests: {catalog['declared_sprite_manifests']}")
     print(f"  runtime-ready species: {catalog['runtime_ready_species']}")
     print(f"  authored asset entries checked: {checked}")
+    print(f"  active authored battle overrides: {active_overrides}")
+    print(f"  donor fallback runtime species: {donor_fallback}")
     print(f"  placeholder runtime species: {catalog['placeholder_runtime_species']}")
 
 

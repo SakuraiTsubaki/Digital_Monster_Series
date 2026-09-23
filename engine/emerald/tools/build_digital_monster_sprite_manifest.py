@@ -18,6 +18,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 EMERALD = PROJECT_ROOT / "engine" / "emerald"
 SPRITE_ROOT = EMERALD / "assets" / "gameplay-v0" / "sprites"
 SPECIES_MAP = EMERALD / "generated" / "species-id-map.csv"
+DONOR_MAP = EMERALD / "generated" / "donor-sprite-map.csv"
 OUTPUT = EMERALD / "generated" / "sprite-catalog.json"
 
 ASSET_KEYS = ("front", "back", "icon", "normal_palette")
@@ -117,6 +118,15 @@ def build_catalog() -> dict:
     partial = sum(e["asset_status"] == "partial" for e in entries)
     source_only = sum(e["asset_status"] == "source_only" for e in entries)
 
+    with DONOR_MAP.open(encoding="utf-8", newline="") as f:
+        donor_rows = list(csv.DictReader(f))
+    if len(donor_rows) != len(species):
+        raise SystemExit(
+            f"donor-sprite-map.csv: expected {len(species)} rows, found {len(donor_rows)}"
+        )
+    active_overrides = sum(bool(row["override_asset"].strip()) for row in donor_rows)
+    donor_fallback = len(species) - active_overrides
+
     return {
         "schema_version": 1,
         "profile": "gameplay-v0",
@@ -125,7 +135,9 @@ def build_catalog() -> dict:
         "runtime_ready_species": runtime_ready,
         "partial_species": partial,
         "source_only_species": source_only,
-        "placeholder_runtime_species": len(species) - runtime_ready,
+        "active_override_species": active_overrides,
+        "donor_fallback_species": donor_fallback,
+        "placeholder_runtime_species": 0,
         "entries": entries,
     }
 

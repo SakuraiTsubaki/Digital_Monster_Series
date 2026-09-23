@@ -6,7 +6,9 @@
   "runtime_ready_species": 0,
   "partial_species": 0,
   "source_only_species": 1,
-  "placeholder_runtime_species": 1468,
+  "active_override_species": 0,
+  "donor_fallback_species": 1468,
+  "placeholder_runtime_species": 0,
   "entries": [
     {
       "species_id": 1,
