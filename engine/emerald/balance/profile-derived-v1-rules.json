@@ -43,7 +43,17 @@
     "rule": "Infer Emerald battle type(s) from the whole official evidence set. Never map a Digimon type label or Appmon category mechanically to a Pokemon type by itself.",
     "max_types": 2,
     "missing_evidence": "unresolved_not_TYPE_NORMAL",
-    "material_evidence_policy": "Generic metal, super-metal, Chrome Digizoid, Red Digizoid, weapon, claw, shield, Digimental, or equipment mentions are not strong Steel evidence by themselves. Strong Steel material evidence requires explicit body/body-integrated or whole-body structural wording; it may resolve an otherwise weak case but must not displace an already-strong official type/profile affinity."
+    "material_evidence_policy": "Generic metal, super-metal, Chrome Digizoid, Red Digizoid, weapon, claw, shield, Digimental, or equipment mentions are not strong Steel evidence by themselves. Strong Steel material evidence requires explicit body/body-integrated or whole-body structural wording; it may resolve an otherwise weak case but must not displace an already-strong official type/profile affinity.",
+    "direct_official_type_mappings": {
+      "魔神型": "TYPE_DARK",
+      "邪神型": "TYPE_DARK",
+      "暗黒騎士型": [
+        "TYPE_DARK",
+        "TYPE_FIGHTING"
+      ],
+      "海人型": "TYPE_WATER",
+      "古代魚型": "TYPE_WATER"
+    }
   },
   "techniques": {
     "parameters": [
@@ -109,5 +119,10 @@
       "parameter_rationale",
       "resolution_status"
     ]
+  },
+  "profile_keyword_scoring": {
+    "entity_name_policy": "Exact self-name occurrences are masked from official profile prose before keyword scoring so substrings inside the entity name cannot be double-counted as profile semantics.",
+    "raw_profile_preservation": "The original official Japanese profile remains unchanged for SHA-256 lineage and source metadata; masking affects project gameplay interpretation only.",
+    "threshold_policy": "Do not lower the type-resolution threshold. Add strong phrases or official-type mappings only when the Japanese official text directly supports them."
   }
 }

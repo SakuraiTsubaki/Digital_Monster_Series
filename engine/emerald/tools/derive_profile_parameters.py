@@ -110,6 +110,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     "TYPE_FIRE": [
         "炎を放", "炎を吐", "炎を纏", "炎をまと", "炎を操",
         "火炎を放", "火炎を吐", "灼熱の炎", "爆炎",
+        "全身から吹き出る熱い炎",
     ],
     "TYPE_WATER": [
         "水中を", "海中を", "水流を", "水を操", "水圧", "津波",
@@ -134,6 +135,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_FLYING": [
         "空を飛", "空中を飛", "飛翔する", "翼で飛",
+        "飛行することも可能",
     ],
     "TYPE_PSYCHIC": [
         "超能力", "念力", "精神攻撃", "催眠術",
@@ -152,6 +154,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_DARK": [
         "闇の力", "暗黒の力", "邪悪な力", "悪魔の力",
+        "漆黒の闇",
     ],
     "TYPE_STEEL": [
         "金属の身体", "金属の体", "鋼の身体", "鋼の体",
@@ -180,12 +183,15 @@ TYPE_FIELD_BONUS = {
     "ゴースト": {"TYPE_GHOST": 6},
     "悪魔": {"TYPE_DARK": 5},
     "魔王": {"TYPE_DARK": 6},
+    "魔神": {"TYPE_DARK": 6},
+    "邪神": {"TYPE_DARK": 6},
     "魔人": {"TYPE_DARK": 5, "TYPE_PSYCHIC": 2},
     "鬼人": {"TYPE_DARK": 5, "TYPE_FIGHTING": 3},
     "天使": {"TYPE_FAIRY": 5, "TYPE_FLYING": 2},
     "妖精": {"TYPE_FAIRY": 5},
     "神人": {"TYPE_FAIRY": 5, "TYPE_FIGHTING": 3},
     "聖騎士": {"TYPE_FAIRY": 6, "TYPE_FIGHTING": 5},
+    "暗黒騎士": {"TYPE_DARK": 6, "TYPE_FIGHTING": 5},
     "幻獣": {"TYPE_FAIRY": 5},
     "竜": {"TYPE_DRAGON": 5},
     "龍": {"TYPE_DRAGON": 5},
@@ -202,6 +208,8 @@ TYPE_FIELD_BONUS = {
     "水棲": {"TYPE_WATER": 5},
     "水生": {"TYPE_WATER": 5},
     "海獣": {"TYPE_WATER": 4},
+    "海人": {"TYPE_WATER": 5},
+    "古代魚": {"TYPE_WATER": 5},
     "両生類": {"TYPE_WATER": 5},
     "甲殻類": {"TYPE_WATER": 5, "TYPE_BUG": 2},
     "鳥": {"TYPE_FLYING": 5},
@@ -311,6 +319,29 @@ def score_terms(text: str, terms: list[tuple[str, int]], prefix: str) -> tuple[i
             score += weight * count
             hits.append(f"{prefix}:{term}:{weight * count:+d}")
     return score, hits
+
+
+def mask_profile_self_names(profile: str, names: list[str]) -> tuple[str, int]:
+    """Exclude exact self-name mentions from profile keyword scoring.
+
+    Entity names are not currently a gameplay-evidence input. Official profiles
+    often repeat the subject's own name, and substrings inside that name (for
+    example サンド in サンドリモン) must not be double-counted as profile
+    semantics. The original profile remains untouched for SHA/evidence lineage.
+    """
+    masked = profile
+    removed = 0
+    unique_names = sorted(
+        {name.strip() for name in names if name and name.strip()},
+        key=len,
+        reverse=True,
+    )
+    for name in unique_names:
+        count = masked.count(name)
+        if count:
+            masked = masked.replace(name, "")
+            removed += count
+    return masked, removed
 
 
 def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str, int], list[str]]:
@@ -520,16 +551,21 @@ def main() -> None:
                 f"{source_id}: profile SHA mismatch: collected {actual_sha}, census {expected_sha}"
             )
 
+        profile_for_scoring, self_name_mentions_ignored = mask_profile_self_names(
+            profile,
+            [src.get("name_ja") or "", meta.get("name_ja") or ""],
+        )
+
         level = src.get("level_or_grade") or ""
         base = stage_base(level)
-        global_score, global_hits = score_terms(profile, GLOBAL_TERMS, "power")
+        global_score, global_hits = score_terms(profile_for_scoring, GLOBAL_TERMS, "power")
 
         stat_values: dict[str, int] = {}
         stat_evidence_scores: dict[str, int] = {}
         stat_hits_all: list[str] = []
         specialization_count = 0
         for stat_name, output_name in STAT_COLUMNS:
-            score, hits = score_terms(profile + "\n" + moves, STAT_TERMS[stat_name], stat_name)
+            score, hits = score_terms(profile_for_scoring + "\n" + moves, STAT_TERMS[stat_name], stat_name)
             stat_evidence_scores[stat_name] = score
             if score:
                 specialization_count += 1
@@ -541,9 +577,9 @@ def main() -> None:
 
         ev_yields, ev_yield_status, ev_yield_hits = derive_ev_yields(stat_evidence_scores)
 
-        tscores, thits = type_scores(profile, official_type, moves)
+        tscores, thits = type_scores(profile_for_scoring, official_type, moves)
         type1, type2, type_choice_hits, type_status = choose_types(tscores)
-        ability1, ability_status, ability_hits = infer_ability(profile)
+        ability1, ability_status, ability_hits = infer_ability(profile_for_scoring)
 
         stat_list = [stat_values[x[1]] for x in STAT_COLUMNS]
         bst = sum(stat_list)
@@ -551,9 +587,14 @@ def main() -> None:
         peak = max(stat_list)
         catch_rate = clamp(round(275 - avg * 1.15 - peak * 0.20 - max(0, global_score) * 1.8), 3, 255)
         exp_yield = clamp(round(20 + avg * 1.55 + peak * 0.45 + max(0, global_score) * 2.5), 20, 65535)
-        growth, growth_signal = growth_rate(profile, base, global_score)
+        growth, growth_signal = growth_rate(profile_for_scoring, base, global_score)
 
-        evidence = global_hits + stat_hits_all + ev_yield_hits + thits + type_choice_hits + ability_hits + [growth_signal]
+        self_name_hits = (
+            [f"profile_self_name_mentions_ignored:{self_name_mentions_ignored}"]
+            if self_name_mentions_ignored
+            else []
+        )
+        evidence = self_name_hits + global_hits + stat_hits_all + ev_yield_hits + thits + type_choice_hits + ability_hits + [growth_signal]
         if not evidence:
             evidence = ["profile:read:no_keyword_specialization"]
 
