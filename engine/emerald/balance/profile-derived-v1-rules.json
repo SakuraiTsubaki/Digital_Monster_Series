@@ -54,8 +54,9 @@
     "official_type_secondary_policy": "An official type label contributes only the affinities explicitly encoded for that label. Secondary affinities such as Fighting must come independently from profile or move evidence; 暗黒騎士型 does not grant Fighting by taxonomy alone.",
     "strong_profile_behavior_policy": "Explicit official Japanese profile wording that directly describes an elemental attack, elemental emission, sustained flight, or equivalent battle-relevant behavior can clear the resolution threshold without lowering the threshold itself. Habitat or appearance-only wording remains insufficient by itself.",
     "normal_type_policy": "TYPE_NORMAL is reserved as the unresolved runtime placeholder in profile-derived-v1. Generic taxonomy or prose such as 獣型, 哺乳類, 突然変異, 一般, 日常, or 生活 must not resolve or supply a secondary Normal affinity. A future resolved Normal mapping requires separate explicit semantic evidence and review.",
-    "lexical_false_positive_policy": "Scoring may mask exact Japanese compounds or clauses whose literal substring would imply the wrong battle affinity, while preserving the original official text and SHA unchanged. Examples include 竜 inside 竜巻 and 岩 used only as a habitat or attack target.",
-    "strong_evidence_dedup_policy": "Multiple phrases that restate the same semantic fact must not be stacked merely to inflate a type score; prefer one narrow direct phrase per fact."
+    "lexical_false_positive_policy": "Scoring masks exact Japanese compounds or clauses whose literal substring would imply the wrong battle affinity, while preserving the original official text and SHA unchanged. This includes taxonomy or behavior belonging to another Digimon, resemblance-only wording, habitat/attack-target nouns, and unrelated compound words such as 電気機器メーカー, 紙飛行機, or 暗闇.",
+    "strong_evidence_dedup_policy": "Multiple phrases that restate the same semantic fact must not be stacked merely to inflate a type score; prefer one narrow direct phrase per fact.",
+    "direct_move_name_policy": "An official special-move name may contribute battle-type evidence when the move name itself has a conventional, unambiguous elemental meaning; exact names such as ダイアモンドダスト are preferred over broad substring guesses."
   },
   "techniques": {
     "parameters": [
