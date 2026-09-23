@@ -1474,13 +1474,13 @@
         .name = COMPOUND_STRING("ニュートロンレイザー"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 108,
+        .power = 125,
         .type = TYPE_ROCK,
-        .accuracy = 95,
+        .accuracy = 90,
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* ニュートロンレイザー | profile-derived-v1 | resolved_damage_core_only */
 
@@ -3551,13 +3551,13 @@
         .name = COMPOUND_STRING("万象逸貫"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 155,
+        .power = 148,
         .type = TYPE_FAIRY,
         .accuracy = 90,
         .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* 万象逸貫 | profile-derived-v1 | resolved_damage_core_only */
 
@@ -5300,13 +5300,13 @@
         .name = COMPOUND_STRING("デッドエンドスパイク"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 90,
+        .power = 105,
         .type = TYPE_DRAGON,
         .accuracy = 95,
-        .pp = 20,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* デッドエンドスパイク | profile-derived-v1 | resolved_damage_core_only */
 
@@ -5820,7 +5820,7 @@
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* ジュークラック | profile-derived-v1 | resolved_damage_core_only */
 
@@ -9401,13 +9401,13 @@
         .name = COMPOUND_STRING("シュヴァルツ・シュトラール"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 115,
+        .power = 106,
         .type = TYPE_NORMAL,
         .accuracy = 95,
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* シュヴァルツ・シュトラール | profile-derived-v1 | resolved_damage_core_only */
 
@@ -13666,13 +13666,13 @@
         .name = COMPOUND_STRING("エネルギアブリッツ"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 123,
+        .power = 128,
         .type = TYPE_FLYING,
         .accuracy = 90,
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* エネルギアブリッツ | profile-derived-v1 | resolved_damage_core_only */
 
@@ -30856,13 +30856,13 @@
         .name = COMPOUND_STRING("デスクロウ"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 88,
+        .power = 96,
         .type = TYPE_FAIRY,
         .accuracy = 95,
-        .pp = 20,
+        .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* デスクロウ | profile-derived-v1 | resolved_damage_core_only */
 
@@ -30892,7 +30892,7 @@
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* メタルキャスト | profile-derived-v1 | resolved_damage_core_only */
 
@@ -32199,13 +32199,13 @@
         .name = COMPOUND_STRING("アクエリープレッシャー"),
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
-        .power = 76,
+        .power = 83,
         .type = TYPE_STEEL,
-        .accuracy = 100,
+        .accuracy = 95,
         .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* アクエリープレッシャー | profile-derived-v1 | resolved_damage_core_only */
 
