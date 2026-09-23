@@ -106,6 +106,62 @@ TYPE_TERMS = {
     "TYPE_NORMAL": ["哺乳類", "一般", "日常", "生活"],
 }
 
+TYPE_STRONG_PROFILE_PHRASES = {
+    "TYPE_FIRE": [
+        "炎を放", "炎を吐", "炎を纏", "炎をまと", "炎を操",
+        "火炎を放", "火炎を吐", "灼熱の炎", "爆炎",
+    ],
+    "TYPE_WATER": [
+        "水中を", "海中を", "水流を", "水を操", "水圧", "津波",
+    ],
+    "TYPE_ELECTRIC": [
+        "電撃を放", "雷を放", "電気を纏", "電気をまと", "放電", "電磁",
+    ],
+    "TYPE_GRASS": [
+        "植物を操", "樹木を操", "蔦を", "種子を", "花粉",
+    ],
+    "TYPE_ICE": [
+        "氷を放", "氷を操", "冷気を", "凍らせ", "凍結", "氷結",
+    ],
+    "TYPE_FIGHTING": [
+        "格闘技", "拳法", "武術", "肉弾戦", "近接戦闘",
+    ],
+    "TYPE_POISON": [
+        "毒液", "猛毒", "毒ガス", "毒を吐", "毒を放",
+    ],
+    "TYPE_GROUND": [
+        "地中を", "大地を操", "地震を", "砂を操",
+    ],
+    "TYPE_FLYING": [
+        "空を飛", "空中を飛", "飛翔する", "翼で飛",
+    ],
+    "TYPE_PSYCHIC": [
+        "超能力", "念力", "精神攻撃", "催眠術",
+    ],
+    "TYPE_BUG": [
+        "昆虫の", "甲虫の", "幼虫の",
+    ],
+    "TYPE_ROCK": [
+        "岩石", "鉱石", "石化",
+    ],
+    "TYPE_GHOST": [
+        "幽霊", "霊体", "亡霊", "魂を操",
+    ],
+    "TYPE_DRAGON": [
+        "ドラゴンの", "竜の力", "龍の力",
+    ],
+    "TYPE_DARK": [
+        "闇の力", "暗黒の力", "邪悪な力", "悪魔の力",
+    ],
+    "TYPE_STEEL": [
+        "金属の身体", "金属の体", "鋼の身体", "鋼の体",
+        "機械の身体", "機械の体", "サイボーグ",
+    ],
+    "TYPE_FAIRY": [
+        "神聖な力", "聖なる力", "天使の力", "妖精の力",
+    ],
+}
+
 TYPE_FIELD_BONUS = {
     "アンデッド": {"TYPE_GHOST": 5, "TYPE_DARK": 3},
     "ゴースト": {"TYPE_GHOST": 6},
@@ -257,6 +313,18 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
             if m:
                 scores[type_name] += m * 4
                 hits.append(f"type:{type_name}:{term}:move:+{m * 4}")
+
+    # Strong semantic phrases describe an actual elemental/combat behavior,
+    # unlike generic nouns such as a habitat mention ("forest", "sea", etc.).
+    # One explicit phrase is therefore enough to clear the normal threshold.
+    for type_name, phrases in TYPE_STRONG_PROFILE_PHRASES.items():
+        for phrase in phrases:
+            count = min(profile.count(phrase), 2)
+            if count:
+                weight = count * 5
+                scores[type_name] += weight
+                hits.append(f"type:{type_name}:{phrase}:strong_profile:+{weight}")
+
     for token, bonuses in TYPE_FIELD_BONUS.items():
         if token in (official_type or ""):
             for type_name, weight in bonuses.items():
