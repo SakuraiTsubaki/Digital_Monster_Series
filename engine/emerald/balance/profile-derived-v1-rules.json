@@ -51,7 +51,8 @@
       "海人型": "TYPE_WATER",
       "古代魚型": "TYPE_WATER"
     },
-    "official_type_secondary_policy": "An official type label contributes only the affinities explicitly encoded for that label. Secondary affinities such as Fighting must come independently from profile or move evidence; 暗黒騎士型 does not grant Fighting by taxonomy alone."
+    "official_type_secondary_policy": "An official type label contributes only the affinities explicitly encoded for that label. Secondary affinities such as Fighting must come independently from profile or move evidence; 暗黒騎士型 does not grant Fighting by taxonomy alone.",
+    "strong_profile_behavior_policy": "Explicit official Japanese profile wording that directly describes an elemental attack, elemental emission, sustained flight, or equivalent battle-relevant behavior can clear the resolution threshold without lowering the threshold itself. Habitat or appearance-only wording remains insufficient by itself."
   },
   "techniques": {
     "parameters": [
