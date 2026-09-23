@@ -2,8 +2,9 @@
 """Build the deterministic Digital Monster gameplay sprite catalog.
 
 The source manifests record provenance independently from gameplay assets.
-A source-only manifest is valid and continues to use the engine placeholder;
-runtime-ready entries must point at local PNG/palette files.
+A source-only manifest is valid and leaves the Pokémon donor fallback active.
+An explicit override may use authored battle front/back/palette assets while
+the runtime icon continues to use the mapped donor Pokémon.
 """
 from __future__ import annotations
 

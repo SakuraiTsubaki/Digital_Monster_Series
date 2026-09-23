@@ -15,18 +15,26 @@ For the baseline this tool:
 * applies deterministic family palette presets to battle normal/shiny palettes;
 * copies donor size/y-offset/icon-palette metadata;
 * shares graphics per donor and palettes per (donor, preset) pair;
-* leaves the stock shared icon-palette runtime intact.
+* leaves the stock shared icon-palette runtime intact;
+* optionally activates an authored front/back/palette set only when override_asset explicitly names it.
 """
 from __future__ import annotations
 
 import argparse
+import binascii
 import csv
+import json
 import re
+import shutil
+import struct
+import zlib
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 EMERALD = PROJECT_ROOT / "engine" / "emerald"
 DONOR_MAP = EMERALD / "generated" / "donor-sprite-map.csv"
+CATALOG_PATH = EMERALD / "generated" / "sprite-catalog.json"
+PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 
 DM_COUNT = 1468
 DONOR_MIN = 1
@@ -72,6 +80,118 @@ COPY_FIELDS = (
 )
 
 
+
+def png_chunk(kind: bytes, payload: bytes) -> bytes:
+    crc = binascii.crc32(kind)
+    crc = binascii.crc32(payload, crc) & 0xFFFFFFFF
+    return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", crc)
+
+
+def paeth(a: int, b: int, c: int) -> int:
+    p = a + b - c
+    pa = abs(p - a)
+    pb = abs(p - b)
+    pc = abs(p - c)
+    if pa <= pb and pa <= pc:
+        return a
+    if pb <= pc:
+        return b
+    return c
+
+
+def duplicate_indexed_png_frame(src: Path, dst: Path) -> None:
+    data = src.read_bytes()
+    if not data.startswith(PNG_SIGNATURE):
+        raise SystemExit(f"{src}: not a PNG file")
+
+    pos = len(PNG_SIGNATURE)
+    chunks: list[tuple[bytes, bytes]] = []
+    idat = bytearray()
+    width = height = bit_depth = color_type = None
+    compression = filter_method = interlace = None
+
+    while pos + 12 <= len(data):
+        length = struct.unpack(">I", data[pos:pos + 4])[0]
+        kind = data[pos + 4:pos + 8]
+        payload = data[pos + 8:pos + 8 + length]
+        pos += 12 + length
+        if kind == b"IHDR":
+            width, height, bit_depth, color_type, compression, filter_method, interlace = struct.unpack(
+                ">IIBBBBB", payload
+            )
+        elif kind == b"IDAT":
+            idat.extend(payload)
+        elif kind != b"IEND":
+            chunks.append((kind, payload))
+        if kind == b"IEND":
+            break
+
+    if None in (width, height, bit_depth, color_type, compression, filter_method, interlace):
+        raise SystemExit(f"{src}: missing IHDR")
+    if color_type != 3:
+        raise SystemExit(f"{src}: front override must be indexed-color PNG")
+    if interlace != 0:
+        raise SystemExit(f"{src}: interlaced PNG is not supported")
+    if width != 64 or height != 64:
+        raise SystemExit(f"{src}: expected 64x64 front override, found {width}x{height}")
+
+    row_bytes = (width * bit_depth + 7) // 8
+    bpp = max(1, (bit_depth + 7) // 8)
+    raw = zlib.decompress(bytes(idat))
+    stride = 1 + row_bytes
+    if len(raw) != height * stride:
+        raise SystemExit(f"{src}: unexpected decompressed PNG size")
+
+    rows: list[bytes] = []
+    prev = bytearray(row_bytes)
+    for y in range(height):
+        scan = raw[y * stride:(y + 1) * stride]
+        filter_type = scan[0]
+        source = scan[1:]
+        recon = bytearray(row_bytes)
+        for x, value in enumerate(source):
+            left = recon[x - bpp] if x >= bpp else 0
+            up = prev[x]
+            upper_left = prev[x - bpp] if x >= bpp else 0
+            if filter_type == 0:
+                result = value
+            elif filter_type == 1:
+                result = (value + left) & 0xFF
+            elif filter_type == 2:
+                result = (value + up) & 0xFF
+            elif filter_type == 3:
+                result = (value + ((left + up) // 2)) & 0xFF
+            elif filter_type == 4:
+                result = (value + paeth(left, up, upper_left)) & 0xFF
+            else:
+                raise SystemExit(f"{src}: unsupported PNG filter {filter_type}")
+            recon[x] = result
+        rows.append(bytes(recon))
+        prev = recon
+
+    doubled = b"".join(b"\x00" + row for row in (rows + rows))
+    ihdr = struct.pack(
+        ">IIBBBBB",
+        width,
+        height * 2,
+        bit_depth,
+        color_type,
+        compression,
+        filter_method,
+        interlace,
+    )
+
+    out = bytearray(PNG_SIGNATURE)
+    out.extend(png_chunk(b"IHDR", ihdr))
+    for kind, payload in chunks:
+        if kind != b"IHDR":
+            out.extend(png_chunk(kind, payload))
+    out.extend(png_chunk(b"IDAT", zlib.compress(doubled, level=9)))
+    out.extend(png_chunk(b"IEND", b""))
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_bytes(out)
+
+
 def species_part(species_id: int) -> str:
     if 1 <= species_id <= 367:
         return "digital_monster_part_1.h"
@@ -114,6 +234,60 @@ def load_mapping() -> list[dict[str, str]]:
             )
 
     return rows
+
+
+def load_override_catalog() -> dict[str, dict]:
+    data = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+    entries: dict[str, dict] = {}
+    for entry in data.get("entries", []):
+        internal = entry.get("internal_name")
+        if not isinstance(internal, str) or not internal:
+            raise SystemExit(f"{CATALOG_PATH}: override catalog entry missing internal_name")
+        if internal in entries:
+            raise SystemExit(f"{CATALOG_PATH}: duplicate override catalog entry {internal}")
+        entries[internal] = entry
+    return entries
+
+
+def resolve_overrides(mapping: list[dict[str, str]]) -> dict[int, dict]:
+    catalog = load_override_catalog()
+    active: dict[int, dict] = {}
+
+    for row in mapping:
+        override = row["override_asset"].strip()
+        if not override:
+            continue
+
+        species_id = int(row["species_id"])
+        internal = row["internal_name"]
+        if override != internal:
+            raise SystemExit(
+                f"{DONOR_MAP}: {internal} override_asset must be its own internal name, got {override!r}"
+            )
+
+        entry = catalog.get(override)
+        if entry is None:
+            raise SystemExit(
+                f"{DONOR_MAP}: {internal} override_asset {override!r} has no sprite-catalog entry"
+            )
+        if int(entry.get("species_id", -1)) != species_id:
+            raise SystemExit(f"{CATALOG_PATH}: {override} species_id does not match donor map")
+
+        assets = entry.get("assets")
+        if not isinstance(assets, dict):
+            raise SystemExit(f"{CATALOG_PATH}: {override} has no assets object")
+        missing = [
+            key for key in ("front", "back", "normal_palette")
+            if not isinstance(assets.get(key), dict) or not assets[key].get("path")
+        ]
+        if missing:
+            raise SystemExit(
+                f"{DONOR_MAP}: {internal} override requires front/back/normal_palette; "
+                f"missing {', '.join(missing)}"
+            )
+        active[species_id] = entry
+
+    return active
 
 
 def parse_species_enum(engine: Path) -> dict[str, int]:
@@ -243,6 +417,42 @@ def palette_alias(field: str, donor_id: int, preset: str) -> str:
     return f"gDigitalMonsterDonor{stem}_{donor_id:03d}_{preset_name}"
 
 
+def override_alias(field: str, internal_name: str) -> str:
+    stems = {
+        "frontPic": "FrontPic",
+        "backPic": "BackPic",
+        "palette": "Palette",
+    }
+    return f"gDigitalMonsterOverride{stems[field]}_{internal_name}"
+
+
+def materialize_override_assets(engine: Path, entry: dict) -> list[str]:
+    internal = entry["internal_name"]
+    slug = internal.lower()
+    assets = entry["assets"]
+    out_dir = engine / "graphics" / "digital_monster" / "overrides" / slug
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    front_src = EMERALD / assets["front"]["path"]
+    back_src = EMERALD / assets["back"]["path"]
+    palette_src = EMERALD / assets["normal_palette"]["path"]
+
+    duplicate_indexed_png_frame(front_src, out_dir / "anim_front.png")
+    shutil.copyfile(back_src, out_dir / "back.png")
+    shutil.copyfile(palette_src, out_dir / "normal.pal")
+
+    base = f"graphics/digital_monster/overrides/{slug}"
+    return [
+        f'const u32 {override_alias("frontPic", internal)}[] = '
+        f'INCGFX_U32("{base}/anim_front.png", ".4bpp.smol");',
+        f'const u32 {override_alias("backPic", internal)}[] = '
+        f'INCGFX_U32("{base}/back.png", ".4bpp.smol");',
+        f'const u16 {override_alias("palette", internal)}[] = '
+        f'INCGFX_U16("{base}/normal.pal", ".gbapal");',
+        "",
+    ]
+
+
 def palette_source_path(graphics_index: dict[str, str], symbol: str) -> str:
     declaration = graphics_index.get(symbol)
     if declaration is None:
@@ -342,6 +552,7 @@ def build_donor_graphics_header(
     donor_blocks: dict[int, tuple[str, str]],
     used_donors: list[int],
     mapping: list[dict[str, str]],
+    active_overrides: dict[int, dict],
 ) -> None:
     graphics_path = engine / "src/data/graphics/pokemon.h"
     graphics_text = graphics_path.read_text(encoding="utf-8")
@@ -378,6 +589,12 @@ def build_donor_graphics_header(
             )
         out.append("")
 
+    out.append("// Explicit per-species battle overrides; icons stay on donor Pokémon.")
+    for species_id in sorted(active_overrides):
+        entry = active_overrides[species_id]
+        out.append(f"// species override {species_id}: {entry['internal_name']}")
+        out.extend(materialize_override_assets(engine, entry))
+
     path = engine / "src/data/graphics/digital_monster.h"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
@@ -397,6 +614,7 @@ def patch_species_info_text(
     donor_id: int,
     donor_block: str,
     palette_preset: str,
+    override_entry: dict | None,
 ) -> str:
     start_marker = f"    [{species_id}] =\n    {{\n"
     start = text.find(start_marker)
@@ -409,29 +627,48 @@ def patch_species_info_text(
 
     block = text[start:end]
 
-    for field in GRAPHICS_FIELDS:
-        block = replace_field(
-            block,
-            field,
-            donor_alias(field, donor_id),
-            f"DM{species_id:04d}",
-        )
+    label = f"DM{species_id:04d}"
+    internal = override_entry["internal_name"] if override_entry is not None else None
 
-    for field in PALETTE_FIELDS:
-        block = replace_field(
-            block,
-            field,
-            palette_alias(field, donor_id, palette_preset),
-            f"DM{species_id:04d}",
+    for field in ("frontPic", "backPic"):
+        value = (
+            override_alias(field, internal)
+            if internal is not None
+            else donor_alias(field, donor_id)
         )
+        block = replace_field(block, field, value, label)
 
-    for field in COPY_FIELDS:
-        block = replace_field(
-            block,
-            field,
-            field_value(donor_block, field),
-            f"DM{species_id:04d}",
-        )
+    # Icons deliberately remain donor-backed even when battle art is overridden.
+    block = replace_field(block, "iconSprite", donor_alias("iconSprite", donor_id), label)
+
+    if internal is not None:
+        override_palette = override_alias("palette", internal)
+        block = replace_field(block, "palette", override_palette, label)
+        block = replace_field(block, "shinyPalette", override_palette, label)
+        for field, value in (
+            ("frontPicSize", "MON_COORDS_SIZE(64, 64)"),
+            ("frontPicYOffset", "0"),
+            ("backPicSize", "MON_COORDS_SIZE(64, 64)"),
+            ("backPicYOffset", "0"),
+        ):
+            block = replace_field(block, field, value, label)
+    else:
+        for field in ("frontPicSize", "frontPicYOffset", "backPicSize", "backPicYOffset"):
+            block = replace_field(block, field, field_value(donor_block, field), label)
+        for field in PALETTE_FIELDS:
+            block = replace_field(
+                block,
+                field,
+                palette_alias(field, donor_id, palette_preset),
+                label,
+            )
+
+    block = replace_field(
+        block,
+        "iconPalIndex",
+        field_value(donor_block, "iconPalIndex"),
+        label,
+    )
 
     return text[:start] + block + text[end:]
 
@@ -462,11 +699,18 @@ def main() -> None:
     engine = args.engine.resolve()
 
     mapping = load_mapping()
+    active_overrides = resolve_overrides(mapping)
     used_donors = sorted({int(row["donor_species_id"]) for row in mapping})
     enum_values = parse_species_enum(engine)
     donor_blocks = load_donor_blocks(engine, enum_values, set(used_donors))
 
-    build_donor_graphics_header(engine, donor_blocks, used_donors, mapping)
+    build_donor_graphics_header(
+        engine,
+        donor_blocks,
+        used_donors,
+        mapping,
+        active_overrides,
+    )
 
     species_dir = engine / "src/data/pokemon/species_info"
     part_texts = {
@@ -488,6 +732,7 @@ def main() -> None:
             donor_id,
             donor_block,
             row["palette_preset"],
+            active_overrides.get(species_id),
         )
         family = row["sprite_family"]
         family_counts[family] = family_counts.get(family, 0) + 1
@@ -510,7 +755,8 @@ def main() -> None:
         f"{name}={count}" for name, count in sorted(preset_counts.items())
     ))
     print("  icon palette mode: stock donor iconPalIndex")
-    print("  authored Digital Monster sprite experiments: provenance only")
+    print(f"  explicit battle sprite overrides active: {len(active_overrides)}")
+    print("  authored Digital Monster sprite experiments: provenance unless explicitly mapped")
     print("  family classifications: " + ", ".join(
         f"{name}={count}" for name, count in sorted(family_counts.items())
     ))

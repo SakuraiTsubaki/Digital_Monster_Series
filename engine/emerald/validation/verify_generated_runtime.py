@@ -2,12 +2,14 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 G = ROOT / "generated" / "pokeemerald-expansion"
 DONOR_MAP = ROOT / "generated" / "donor-sprite-map.csv"
+SPRITE_CATALOG = ROOT / "generated" / "sprite-catalog.json"
 
 EXPECTED_SPECIES = 1468
 ALLOWED_FAMILIES = {
@@ -25,15 +27,20 @@ ALLOWED_FAMILIES = {
 }
 
 
-def verify_donor_map() -> tuple[int, int]:
+def verify_donor_map() -> tuple[int, int, int]:
     with DONOR_MAP.open(encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f))
+    catalog = json.loads(SPRITE_CATALOG.read_text(encoding="utf-8"))
+    catalog_by_internal = {
+        entry["internal_name"]: entry for entry in catalog.get("entries", [])
+    }
 
     assert len(rows) == EXPECTED_SPECIES, len(rows)
     ids = [int(row["species_id"]) for row in rows]
     assert ids == list(range(1, EXPECTED_SPECIES + 1))
 
     donors = set()
+    override_count = 0
     for row in rows:
         sid = int(row["species_id"])
         assert row["internal_name"] == f"DM{sid:04d}"
@@ -43,6 +50,18 @@ def verify_donor_map() -> tuple[int, int]:
         assert row["sprite_family"] in ALLOWED_FAMILIES
         assert row["palette_preset"] in ALLOWED_FAMILIES
         assert row["palette_preset"] == row["sprite_family"]
+
+        override = row["override_asset"].strip()
+        if override:
+            assert override == row["internal_name"]
+            entry = catalog_by_internal[override]
+            assert int(entry["species_id"]) == sid
+            assets = entry["assets"]
+            assert assets["front"] is not None
+            assert assets["back"] is not None
+            assert assets["normal_palette"] is not None
+            override_count += 1
+
         donors.add(donor_id)
 
     first = rows[0]
@@ -52,7 +71,7 @@ def verify_donor_map() -> tuple[int, int]:
     assert first["sprite_family"] == "undead"
     assert first["palette_preset"] == "undead"
 
-    return len(rows), len(donors)
+    return len(rows), len(donors), override_count
 
 
 def main():
@@ -95,7 +114,7 @@ def main():
     fallback_count = learns.count("DM_MOVE_BOOTSTRAP_ATTACK")
     assert fallback_count == 9, fallback_count
 
-    donor_rows, unique_donors = verify_donor_map()
+    donor_rows, unique_donors, active_overrides = verify_donor_map()
 
     print("Digital Monster generated runtime verified")
     print(f"  SpeciesInfo entries: {EXPECTED_SPECIES}")
@@ -107,6 +126,7 @@ def main():
     print(f"  unique Gen I-III Pokémon donors used: {unique_donors}")
     print("  DM0001 donor: SPECIES_CROBAT")
     print("  palette preset mode: sprite_family")
+    print(f"  explicit sprite overrides active: {active_overrides}")
 
 
 if __name__ == "__main__":
