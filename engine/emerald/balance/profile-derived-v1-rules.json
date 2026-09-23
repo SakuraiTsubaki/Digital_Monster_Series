@@ -70,6 +70,15 @@
       "level_or_grade_table": false,
       "bst_threshold_table": false,
       "missing_evidence": "all_zero_and_unresolved"
+    },
+    "gender_ratio": {
+      "official_reference": false,
+      "rule": "fixed_project_gameplay_override",
+      "female_percent": 50,
+      "male_percent": 50,
+      "engine_value": "PERCENT_FEMALE(50)",
+      "scope": "all_1468_runtime_entities",
+      "note": "Explicit project gameplay rule; do not present as official Digimon/Appmon encyclopedia data."
     }
   },
   "prohibited_methods": [

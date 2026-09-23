@@ -104,6 +104,13 @@ def main() -> None:
     assert len(rendered_abilities) == 1468
     assert sum(x != "ABILITY_NONE" for x in rendered_abilities) == resolved_abilities
 
+    gender_ratios = re.findall(
+        r"(?m)^\s*\.genderRatio\s*=\s*([^,]+),$",
+        rendered,
+    )
+    assert len(gender_ratios) == 1468, len(gender_ratios)
+    assert set(gender_ratios) == {"PERCENT_FEMALE(50)"}, set(gender_ratios)
+
     ev_c_fields = [
         ("evYield_HP", "ev_yield_hp"),
         ("evYield_Attack", "ev_yield_attack"),
@@ -132,6 +139,7 @@ def main() -> None:
     print(f"  unique type combinations: {len(type_pairs)}")
     print(f"  resolved battle types: {sum(x['battle_type_status'] == 'resolved_profile_evidence' for x in data)}")
     print(f"  resolved profile abilities: {resolved_abilities}")
+    print("  runtime gender ratio: 50% female / 50% male (project gameplay override)")
     ev_total_counts = {}
     for row in data:
         total = sum(int(row[field]) for field in [

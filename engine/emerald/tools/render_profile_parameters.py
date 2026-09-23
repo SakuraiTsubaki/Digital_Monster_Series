@@ -117,6 +117,20 @@ def main() -> None:
                         f"species {sid} EV insertion: expected one expYield match, found {count}"
                     )
 
+            # Project gameplay override requested for Digital Monster Series:
+            # all runtime entities use a fixed 50:50 gender ratio. This is not
+            # represented as an official encyclopedia fact.
+            block, count = re.subn(
+                r"(?m)^(\s*\.genderRatio\s*=\s*)[^,]+(,)$",
+                r"\g<1>PERCENT_FEMALE(50)\g<2>",
+                block,
+                count=1,
+            )
+            if count != 1:
+                raise SystemExit(
+                    f"species {sid} genderRatio: expected one match, found {count}"
+                )
+
             ability_args = ", ".join(
                 [row["ability_1"], row["ability_2"], row["ability_hidden"]]
             )
