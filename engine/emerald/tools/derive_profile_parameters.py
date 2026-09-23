@@ -112,6 +112,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
         "炎を放", "炎を吐", "炎を纏", "炎をまと", "炎を操",
         "火炎を放", "火炎を吐", "灼熱の炎", "爆炎",
         "全身から吹き出る熱い炎", "火炎瓶を投げ",
+        "熱気を帯びた泡で攻撃",
     ],
     "TYPE_WATER": [
         "水中を", "海中を", "水流を", "水を操", "水圧", "津波",
@@ -180,6 +181,7 @@ STRUCTURAL_STEEL_PROFILE_PHRASES = [
     "超金属「クロンデジゾイド」の鎧を身にまと",
     "クロンデジゾイド製のメタルヘッド",
     "ほぼ全身をメタル化",
+    "ボディはブルーメタリックのクロンデジゾイドで作られて",
 ]
 
 
@@ -645,6 +647,15 @@ def main() -> None:
     ids = [int(x["species_id"]) for x in out]
     if ids != list(range(1, 1469)):
         raise SystemExit("species IDs are not exactly 1..1468")
+
+    resolved_normal = [
+        x for x in out
+        if x["battle_type_status"] == "resolved_profile_evidence"
+        and (x["battle_type_1"] == "TYPE_NORMAL" or x["battle_type_2"] == "TYPE_NORMAL")
+    ]
+    if resolved_normal:
+        sample = ", ".join(f"{x['species_id']}:{x['name_ja']}" for x in resolved_normal[:8])
+        raise SystemExit(f"resolved TYPE_NORMAL is forbidden in profile-derived-v1: {sample}")
 
     fields = list(out[0].keys())
     args.output.parent.mkdir(parents=True, exist_ok=True)
