@@ -20,7 +20,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean
 
-from derive_profile_parameters import TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp, non_overlapping_term_counts
+from derive_profile_parameters import TYPE_STRONG_PROFILE_PHRASES, TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp, non_overlapping_term_counts
 
 ROOT = Path(__file__).resolve().parents[3]
 EMERALD = ROOT / "engine" / "emerald"
@@ -83,17 +83,16 @@ FAST_TERMS = ["クイック", "先制", "瞬速", "神速", "高速"]
 TYPE_NAME_WEIGHTS = 6
 TYPE_CONTEXT_WEIGHTS = 3
 TYPE_OWNER_WEIGHTS = 2
+TYPE_DIRECT_RESOLUTION_THRESHOLD = 5
 
 # Exact technique-description wording that directly establishes the move's
 # elemental/airborne behavior. This is intentionally separate from species
 # typing so a move can be resolved without forcing the owner's battle type.
 TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS = {
-    "TYPE_FIRE": ["熱線として吐き出", "黒き炎を巻き起こす"],
-    "TYPE_WATER": ["エラから吸い込んだ水を口から打ち出す"],
-    "TYPE_POISON": ["酸性の泡を吐いて攻撃"],
+    # Technique-specific direct phrases not already covered by the species
+    # strong semantic phrase table.
     "TYPE_BUG": ["肉食ドクグモンで敵を襲う"],
-    "TYPE_FLYING": ["真空の刃を放", "低空を滑空し"],
-    "TYPE_PSYCHIC": ["幻惑の世界", "幻覚を見せ"],
+    "TYPE_FLYING": ["真空の刃を放"],
 }
 TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT = 6
 
@@ -171,6 +170,16 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
             scores[type_name] += c * TYPE_CONTEXT_WEIGHTS
             evidence.append(f"type:{type_name}:{term}:profile_context:+{c * TYPE_CONTEXT_WEIGHTS}")
 
+    for type_name, phrases in TYPE_STRONG_PROFILE_PHRASES.items():
+        for phrase in phrases:
+            count = min(context.count(phrase), 2)
+            if count:
+                weight = count * TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT
+                scores[type_name] += weight
+                evidence.append(
+                    f"type:{type_name}:{phrase}:strong_profile_context:+{weight}"
+                )
+
     for type_name, phrases in TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS.items():
         for phrase in phrases:
             count = min(context.count(phrase), 2)
@@ -183,7 +192,11 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
 
     if scores:
         best, value = sorted(scores.items(), key=lambda kv: (-kv[1], kv[0]))[0]
-        return best, "resolved_name_or_profile_context", evidence + [f"type_choice:{best}:{value}"]
+        if value >= TYPE_DIRECT_RESOLUTION_THRESHOLD:
+            return best, "resolved_name_or_profile_context", evidence + [f"type_choice:{best}:{value}"]
+        evidence.append(
+            f"type_direct_candidate:{best}:{value}:below_threshold_{TYPE_DIRECT_RESOLUTION_THRESHOLD}"
+        )
 
     owner_scores: Counter[str] = Counter()
     for row in owner_rows:
@@ -195,9 +208,9 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
                 owner_scores[value] += TYPE_OWNER_WEIGHTS
     if owner_scores:
         best, value = sorted(owner_scores.items(), key=lambda kv: (-kv[1], kv[0]))[0]
-        return best, "inherited_profile_derived_owner_type", [f"type_owner_context:{best}:{value}"]
+        return best, "inherited_profile_derived_owner_type", evidence + [f"type_owner_context:{best}:{value}"]
 
-    return "TYPE_NORMAL", "unresolved_type_placeholder", ["type_placeholder:TYPE_NORMAL:no_direct_or_owner_evidence"]
+    return "TYPE_NORMAL", "unresolved_type_placeholder", evidence + ["type_placeholder:TYPE_NORMAL:no_direct_or_owner_evidence"]
 
 
 def category_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -> tuple[str, list[str]]:
