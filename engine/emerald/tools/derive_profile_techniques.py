@@ -96,6 +96,16 @@ TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS = {
 }
 TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT = 6
 
+# Exact official technique names that carry unambiguous type semantics for the
+# technique itself. Keep this separate from species strong move-name evidence:
+# a move can be typed directly without automatically forcing every owner to
+# share that battle affinity.
+TECHNIQUE_STRONG_MOVE_NAMES = {
+    "TYPE_ELECTRIC": ["パニックサンダー"],
+    "TYPE_POISON": ["酸の泡"],
+}
+TECHNIQUE_STRONG_MOVE_NAME_WEIGHT = 6
+
 
 def rows(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -169,6 +179,14 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
         for term, c in context_counts.items():
             scores[type_name] += c * TYPE_CONTEXT_WEIGHTS
             evidence.append(f"type:{type_name}:{term}:profile_context:+{c * TYPE_CONTEXT_WEIGHTS}")
+
+    for type_name, names in TECHNIQUE_STRONG_MOVE_NAMES.items():
+        for name in names:
+            if move_name == name:
+                scores[type_name] += TECHNIQUE_STRONG_MOVE_NAME_WEIGHT
+                evidence.append(
+                    f"type:{type_name}:{name}:exact_move_name:+{TECHNIQUE_STRONG_MOVE_NAME_WEIGHT}"
+                )
 
     for type_name, phrases in TYPE_STRONG_PROFILE_PHRASES.items():
         for phrase in phrases:
