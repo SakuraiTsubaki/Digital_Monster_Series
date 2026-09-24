@@ -10982,7 +10982,7 @@
         .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
         .effect = EFFECT_HIT,
         .power = 53,
-        .type = TYPE_GRASS,
+        .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 30,
         .target = TARGET_SELECTED,
