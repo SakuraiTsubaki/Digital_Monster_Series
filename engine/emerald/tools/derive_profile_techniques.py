@@ -20,7 +20,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean
 
-from derive_profile_parameters import TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp
+from derive_profile_parameters import TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp, non_overlapping_term_counts
 
 ROOT = Path(__file__).resolve().parents[3]
 EMERALD = ROOT / "engine" / "emerald"
@@ -159,15 +159,14 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
             type_move_name = type_move_name.replace(excluded, "")
             type_context = type_context.replace(excluded, "")
 
-        for term in terms:
-            n = min(type_move_name.count(term), 3)
-            c = min(type_context.count(term), 3)
-            if n:
-                scores[type_name] += n * TYPE_NAME_WEIGHTS
-                evidence.append(f"type:{type_name}:{term}:name:+{n * TYPE_NAME_WEIGHTS}")
-            if c:
-                scores[type_name] += c * TYPE_CONTEXT_WEIGHTS
-                evidence.append(f"type:{type_name}:{term}:profile_context:+{c * TYPE_CONTEXT_WEIGHTS}")
+        name_counts = non_overlapping_term_counts(type_move_name, terms)
+        context_counts = non_overlapping_term_counts(type_context, terms)
+        for term, n in name_counts.items():
+            scores[type_name] += n * TYPE_NAME_WEIGHTS
+            evidence.append(f"type:{type_name}:{term}:name:+{n * TYPE_NAME_WEIGHTS}")
+        for term, c in context_counts.items():
+            scores[type_name] += c * TYPE_CONTEXT_WEIGHTS
+            evidence.append(f"type:{type_name}:{term}:profile_context:+{c * TYPE_CONTEXT_WEIGHTS}")
 
     for type_name, phrases in TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS.items():
         for phrase in phrases:
