@@ -110,7 +110,7 @@ TYPE_TERMS = {
 # Exact lexical/context exclusions used only by battle-type scoring. The raw
 # official Japanese profile and its SHA remain untouched.
 TYPE_TERM_EXCLUSIONS = {
-    "TYPE_WATER": ["ネットの海", "海賊デジモン", "海の男"],
+    "TYPE_WATER": ["ネットの海", "海賊デジモン", "海の男", "ウェーブアタック"],
     "TYPE_ELECTRIC": ["電気機器メーカー"],
     "TYPE_FLYING": ["紙飛行機"],
     "TYPE_GRASS": [
@@ -127,7 +127,8 @@ TYPE_TERM_EXCLUSIONS = {
         "自然豊かな大地を守護する", "そんな大地を脅かす",
         "大地を酷く荒らす者",
     ],
-    "TYPE_DRAGON": ["竜巻"],
+    "TYPE_DRAGON": ["竜巻", "ペイントドラゴン"],
+    "TYPE_GHOST": ["ハッピーファントム"],
     "TYPE_DARK": ["暗闇の中", "暗闇から"],
     "TYPE_STEEL": ["マシーン型、サイボーグ型のデジモン"],
     "TYPE_FAIRY": [
@@ -211,6 +212,13 @@ TYPE_STRONG_PROFILE_PHRASES = {
         "神聖な力", "聖なる力", "天使の力", "妖精の力",
     ],
 }
+
+TYPE_STRONG_MOVE_NAMES = {
+    # Exact official move names whose conventional elemental meaning is direct
+    # enough to clear the species threshold without lowering it.
+    "TYPE_ELECTRIC": ["パニックサンダー"],
+}
+
 
 STRUCTURAL_STEEL_PROFILE_PHRASES = [
     # Structural/body-integrated metal evidence. Generic "デジゾイド" or
@@ -451,6 +459,14 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
                 weight = count * 5
                 scores[type_name] += weight
                 hits.append(f"type:{type_name}:{phrase}:strong_profile:+{weight}")
+
+    for type_name, names in TYPE_STRONG_MOVE_NAMES.items():
+        for name in names:
+            count = min(moves.count(name), 1)
+            if count:
+                weight = count * 5
+                scores[type_name] += weight
+                hits.append(f"type:{type_name}:{name}:strong_move_name:+{weight}")
 
     for token, bonuses in TYPE_FIELD_BONUS.items():
         if token in (official_type or ""):
