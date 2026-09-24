@@ -110,6 +110,7 @@ TYPE_TERMS = {
 # Exact lexical/context exclusions used only by battle-type scoring. The raw
 # official Japanese profile and its SHA remain untouched.
 TYPE_TERM_EXCLUSIONS = {
+    "TYPE_WATER": ["ネットの海"],
     "TYPE_ELECTRIC": ["電気機器メーカー"],
     "TYPE_FLYING": ["紙飛行機"],
     "TYPE_GRASS": [
@@ -121,6 +122,7 @@ TYPE_TERM_EXCLUSIONS = {
         "岩陰", "岩場",
     ],
     "TYPE_BUG": ["狐蝶幻", "胡蝶夢経", "突蜂", "蝶絶喇叭蹴"],
+    "TYPE_GROUND": ["接地した床や地面の震動", "砂地や泥道を歩くのが苦手"],
     "TYPE_DRAGON": ["竜巻"],
     "TYPE_DARK": ["暗闇の中", "暗闇から"],
     "TYPE_STEEL": ["マシーン型、サイボーグ型のデジモン"],
@@ -143,7 +145,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
         "火炎を放", "火炎を吐", "灼熱の炎", "爆炎",
         "全身から吹き出る熱い炎", "火炎瓶を投げ",
         "熱気を帯びた泡で攻撃", "エネルギーを熱線として吐き出",
-        "黒き炎を巻き起こす",
+        "黒き炎を巻き起こす", "砂漠に吹き荒れる熱風",
     ],
     "TYPE_WATER": [
         "水中を", "海中を", "水流を", "水を操", "水圧", "津波",
@@ -384,6 +386,21 @@ def mask_profile_self_names(profile: str, names: list[str]) -> tuple[str, int]:
     return masked, removed
 
 
+def non_overlapping_term_counts(text: str, terms: list[str], cap: int = 3) -> dict[str, int]:
+    """Count terms longest-first so nested substrings cannot double-score one span."""
+    masked = text
+    counts: dict[str, int] = {}
+    for term in sorted(set(terms), key=lambda value: (-len(value), value)):
+        count = min(masked.count(term), cap)
+        if not count:
+            continue
+        counts[term] = count
+        # Remove every occurrence, not only the capped ones, so a shorter
+        # nested token cannot score leftover copies of the same semantic term.
+        masked = masked.replace(term, "")
+    return counts
+
+
 def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str, int], list[str]]:
     scores = Counter()
     hits: list[str] = []
@@ -409,15 +426,14 @@ def type_scores(profile: str, official_type: str, moves: str) -> tuple[dict[str,
         masked_profiles[type_name] = type_profile
         masked_moves[type_name] = type_moves
 
-        for term in terms:
-            p = min(type_profile.count(term), 3)
-            m = min(type_moves.count(term), 3)
-            if p:
-                scores[type_name] += p * 2
-                hits.append(f"type:{type_name}:{term}:profile:+{p * 2}")
-            if m:
-                scores[type_name] += m * 4
-                hits.append(f"type:{type_name}:{term}:move:+{m * 4}")
+        profile_counts = non_overlapping_term_counts(type_profile, terms)
+        move_counts = non_overlapping_term_counts(type_moves, terms)
+        for term, p in profile_counts.items():
+            scores[type_name] += p * 2
+            hits.append(f"type:{type_name}:{term}:profile:+{p * 2}")
+        for term, m in move_counts.items():
+            scores[type_name] += m * 4
+            hits.append(f"type:{type_name}:{term}:move:+{m * 4}")
 
     # Strong semantic phrases describe an actual elemental/combat behavior,
     # unlike generic nouns such as a habitat mention ("forest", "sea", etc.).
