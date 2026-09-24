@@ -111,7 +111,7 @@ TYPE_TERMS = {
 # official Japanese profile and its SHA remain untouched.
 TYPE_TERM_EXCLUSIONS = {
     "TYPE_WATER": ["ネットの海", "海賊デジモン", "海の男", "ウェーブアタック"],
-    "TYPE_ELECTRIC": ["電気機器メーカー"],
+    "TYPE_ELECTRIC": ["電気機器メーカー", "パニックサンダー"],
     "TYPE_FLYING": ["紙飛行機"],
     "TYPE_GRASS": [
         "植物の種のように見える", "葉のように見える", "葉隠",
