@@ -89,6 +89,8 @@ TYPE_OWNER_WEIGHTS = 2
 # typing so a move can be resolved without forcing the owner's battle type.
 TECHNIQUE_STRONG_TYPE_CONTEXT_TERMS = {
     "TYPE_FIRE": ["熱線として吐き出", "黒き炎を巻き起こす"],
+    "TYPE_WATER": ["エラから吸い込んだ水を口から打ち出す"],
+    "TYPE_POISON": ["酸性の泡を吐いて攻撃"],
     "TYPE_FLYING": ["真空の刃を放"],
     "TYPE_PSYCHIC": ["幻惑の世界", "幻覚を見せ"],
 }
