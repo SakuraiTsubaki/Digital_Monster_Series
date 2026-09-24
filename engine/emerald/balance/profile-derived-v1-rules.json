@@ -80,6 +80,8 @@
       "effect"
     ],
     "rule": "Interpret each technique from official naming/description and the entity's official profile context. No fixed power/accuracy/PP fallback is authoritative.",
+    "direct_type_resolution_threshold": 5,
+    "direct_type_context_policy": "A lone ordinary context-token hit below threshold does not directly resolve a technique type. Exact move-name evidence and explicit elemental/combat behavior may clear the threshold; otherwise use a resolved owner type only as fallback or leave the type placeholder unresolved.",
     "missing_evidence": "unresolved_not_fixed_default"
   },
   "other_game_parameters": {
