@@ -110,7 +110,7 @@ TYPE_TERMS = {
 # Exact lexical/context exclusions used only by battle-type scoring. The raw
 # official Japanese profile and its SHA remain untouched.
 TYPE_TERM_EXCLUSIONS = {
-    "TYPE_WATER": ["ネットの海"],
+    "TYPE_WATER": ["ネットの海", "海賊デジモン", "海の男"],
     "TYPE_ELECTRIC": ["電気機器メーカー"],
     "TYPE_FLYING": ["紙飛行機"],
     "TYPE_GRASS": [
@@ -122,7 +122,11 @@ TYPE_TERM_EXCLUSIONS = {
         "岩陰", "岩場",
     ],
     "TYPE_BUG": ["狐蝶幻", "胡蝶夢経", "突蜂", "蝶絶喇叭蹴"],
-    "TYPE_GROUND": ["接地した床や地面の震動", "砂地や泥道を歩くのが苦手"],
+    "TYPE_GROUND": [
+        "接地した床や地面の震動", "砂地や泥道を歩くのが苦手",
+        "自然豊かな大地を守護する", "そんな大地を脅かす",
+        "大地を酷く荒らす者",
+    ],
     "TYPE_DRAGON": ["竜巻"],
     "TYPE_DARK": ["暗闇の中", "暗闇から"],
     "TYPE_STEEL": ["マシーン型、サイボーグ型のデジモン"],
@@ -149,7 +153,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     ],
     "TYPE_WATER": [
         "水中を", "海中を", "水流を", "水を操", "水圧", "津波",
-        "液体を高圧で発射",
+        "液体を高圧で発射", "エラから吸い込んだ水を口から打ち出す",
     ],
     "TYPE_ELECTRIC": [
         "電撃を放", "雷を放", "電気を纏", "電気をまと", "放電", "電磁",
@@ -167,7 +171,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
         "一級の戦士", "格闘センス",
     ],
     "TYPE_POISON": [
-        "毒液", "猛毒", "毒ガス", "毒を吐", "毒を放",
+        "毒液", "猛毒", "毒ガス", "毒を吐", "毒を放", "酸性の泡を吐いて攻撃",
     ],
     "TYPE_GROUND": [
         "地中を", "大地を操", "地震を", "砂を操", "砂に潜り",
@@ -175,7 +179,7 @@ TYPE_STRONG_PROFILE_PHRASES = {
     "TYPE_FLYING": [
         "空を飛", "空中を飛", "飛翔する", "翼で飛",
         "飛行することも可能", "飛翔能力", "海上を飛び回る", "高速で飛",
-        "乗せて飛ぶことができる",
+        "乗せて飛ぶことができる", "海面を飛ぶことができ",
     ],
     "TYPE_PSYCHIC": [
         "超能力", "念力", "精神攻撃", "催眠術",
