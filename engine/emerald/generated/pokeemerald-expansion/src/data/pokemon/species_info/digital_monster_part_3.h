@@ -19147,7 +19147,7 @@
         .baseSpeed     = 83,
         .baseSpAttack  = 83,
         .baseSpDefense = 83,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_GROUND),
         .catchRate = 158,
         .expYield = 194,
         .evYield_HP = 0,
