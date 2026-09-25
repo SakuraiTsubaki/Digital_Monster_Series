@@ -110,8 +110,19 @@ TYPE_TERMS = {
 # Exact lexical/context exclusions used only by battle-type scoring. The raw
 # official Japanese profile and its SHA remain untouched.
 TYPE_TERM_EXCLUSIONS = {
-    "TYPE_WATER": ["ネットの海", "海賊デジモン", "海の男", "ウェーブアタック"],
-    "TYPE_ELECTRIC": ["電気機器メーカー", "パニックサンダー"],
+    "TYPE_FIRE": [
+        "ブレスファイア", "バーニングスタークラッシャー", "フレイムウォール",
+        "炎舞の陣", "ナーデルブレイズ", "ホライゾンタルフレア",
+    ],
+    "TYPE_WATER": [
+        "ネットの海", "海賊デジモン", "海の男", "ウェーブアタック",
+        "プロテクトウェーブ",
+    ],
+    "TYPE_ELECTRIC": [
+        "電気機器メーカー", "パニックサンダー", "ファイナルスパーク",
+        "スイッチスパーク",
+    ],
+    "TYPE_FIGHTING": ["スカナックル", "ナックルソル"],
     "TYPE_FLYING": ["紙飛行機"],
     "TYPE_GRASS": [
         "植物の種のように見える", "葉のように見える", "葉隠",
@@ -125,12 +136,14 @@ TYPE_TERM_EXCLUSIONS = {
     "TYPE_GROUND": [
         "接地した床や地面の震動", "砂地や泥道を歩くのが苦手",
         "自然豊かな大地を守護する", "そんな大地を脅かす",
-        "大地を酷く荒らす者",
+        "大地を酷く荒らす者", "ライアースロート",
     ],
-    "TYPE_DRAGON": ["竜巻", "ペイントドラゴン"],
-    "TYPE_GHOST": ["ハッピーファントム"],
+    "TYPE_DRAGON": ["竜巻", "ペイントドラゴン", "臥龍扇"],
+    "TYPE_GHOST": ["ハッピーファントム", "愛の入魂金棒", "ソウルフルコース"],
     "TYPE_DARK": ["暗闇の中", "暗闇から"],
-    "TYPE_STEEL": ["マシーン型、サイボーグ型のデジモン"],
+    "TYPE_STEEL": [
+        "マシーン型、サイボーグ型のデジモン", "断鉄剣", "米鉄砲",
+    ],
     "TYPE_FAIRY": [
         "三大天使に興味を向け天使型デジモンと対立",
         "他の天使型デジモンが堕落しないよう",
@@ -143,6 +156,7 @@ TYPE_TERM_EXCLUSIONS = {
         "神聖な力なども一切持っていない",
     ],
 }
+
 
 TYPE_STRONG_PROFILE_PHRASES = {
     "TYPE_FIRE": [
@@ -216,7 +230,14 @@ TYPE_STRONG_PROFILE_PHRASES = {
 TYPE_STRONG_MOVE_NAMES = {
     # Exact official move names whose conventional elemental meaning is direct
     # enough to clear the species threshold without lowering it.
-    "TYPE_ELECTRIC": ["パニックサンダー"],
+    "TYPE_FIRE": [
+        "ブレスファイア", "バーニングスタークラッシャー", "フレイムウォール",
+        "炎舞の陣", "ナーデルブレイズ", "ホライゾンタルフレア",
+    ],
+    "TYPE_ELECTRIC": [
+        "パニックサンダー", "ファイナルスパーク", "スイッチスパーク",
+    ],
+    "TYPE_FIGHTING": ["スカナックル", "ナックルソル"],
 }
 
 
