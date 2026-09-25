@@ -10402,7 +10402,7 @@
         .baseSpeed     = 100,
         .baseSpAttack  = 78,
         .baseSpDefense = 78,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 158,
         .expYield = 196,
         .evYield_HP = 0,
