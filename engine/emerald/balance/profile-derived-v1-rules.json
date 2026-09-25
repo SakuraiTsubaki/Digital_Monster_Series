@@ -59,7 +59,7 @@
     "overlapping_token_policy": "Within one battle type and one evidence field, longer matched terms consume their text before shorter nested terms are scored. A single occurrence such as 恐竜, 火炎, 猛毒, 深海, or 神聖 must not earn duplicate points through its shorter substring.",
     "direct_move_name_policy": "An official special-move name may contribute battle-type evidence when the move name itself has a conventional, unambiguous elemental meaning; exact names such as ダイアモンドダスト are preferred over broad substring guesses.",
     "negation_and_reference_policy": "Negated properties and references to other Digimon must not contribute positive type evidence. For example, '神聖な力なども一切持っていない' cannot trigger Fairy, and mentions of angel-type Digimon being observed, opposed, imitated, monitored, or consumed are not evidence that the subject itself is Fairy.",
-    "move_name_false_positive_policy": "Technique names that merely contain an elemental-looking kanji inside a fixed proper name are excluded when the official description establishes a different semantic meaning; examples audited here include 狐蝶幻, 胡蝶夢経, 突蜂, 蝶絶喇叭蹴, and 葉隠.",
+    "move_name_false_positive_policy": "Technique names that merely contain an elemental-looking token inside a fixed proper name or non-elemental compound are excluded when the official wording establishes a different semantic meaning; audited examples include 狐蝶幻, 胡蝶夢経, 突蜂, 蝶絶喇叭蹴, 葉隠, プロテクトウェーブ, ライアースロート, 臥龍扇, 愛の入魂金棒, ソウルフルコース, 断鉄剣, and 米鉄砲.",
     "audited_strong_profile_phrases": {
       "TYPE_ELECTRIC": [
         "弾ける電撃帯"
