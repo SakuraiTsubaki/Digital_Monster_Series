@@ -20,7 +20,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean
 
-from derive_profile_parameters import TYPE_STRONG_PROFILE_PHRASES, TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp, non_overlapping_term_counts
+from derive_profile_parameters import TYPE_STRONG_MOVE_NAMES, TYPE_STRONG_PROFILE_PHRASES, TYPE_TERM_EXCLUSIONS, TYPE_TERMS, clamp, non_overlapping_term_counts
 
 ROOT = Path(__file__).resolve().parents[3]
 EMERALD = ROOT / "engine" / "emerald"
@@ -101,7 +101,9 @@ TECHNIQUE_STRONG_TYPE_CONTEXT_WEIGHT = 6
 # a move can be typed directly without automatically forcing every owner to
 # share that battle affinity.
 TECHNIQUE_STRONG_MOVE_NAMES = {
-    "TYPE_ELECTRIC": ["パニックサンダー"],
+    # Technique-only exact names that should not force every owner species to
+    # share the same type. Species-level exact names come from
+    # TYPE_STRONG_MOVE_NAMES and are also honored here.
     "TYPE_POISON": ["酸の泡"],
 }
 TECHNIQUE_STRONG_MOVE_NAME_WEIGHT = 6
@@ -180,13 +182,14 @@ def type_score(move_name: str, context: str, owner_rows: list[dict[str, str]]) -
             scores[type_name] += c * TYPE_CONTEXT_WEIGHTS
             evidence.append(f"type:{type_name}:{term}:profile_context:+{c * TYPE_CONTEXT_WEIGHTS}")
 
-    for type_name, names in TECHNIQUE_STRONG_MOVE_NAMES.items():
-        for name in names:
-            if move_name == name:
-                scores[type_name] += TECHNIQUE_STRONG_MOVE_NAME_WEIGHT
-                evidence.append(
-                    f"type:{type_name}:{name}:exact_move_name:+{TECHNIQUE_STRONG_MOVE_NAME_WEIGHT}"
-                )
+    for exact_table in (TYPE_STRONG_MOVE_NAMES, TECHNIQUE_STRONG_MOVE_NAMES):
+        for type_name, names in exact_table.items():
+            for name in names:
+                if move_name == name or move_name.startswith(name + "（") or move_name.startswith(name + "("):
+                    scores[type_name] += TECHNIQUE_STRONG_MOVE_NAME_WEIGHT
+                    evidence.append(
+                        f"type:{type_name}:{name}:exact_move_name:+{TECHNIQUE_STRONG_MOVE_NAME_WEIGHT}"
+                    )
 
     for type_name, phrases in TYPE_STRONG_PROFILE_PHRASES.items():
         for phrase in phrases:
