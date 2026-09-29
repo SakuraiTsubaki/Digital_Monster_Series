@@ -15,6 +15,7 @@ import argparse
 import csv
 import hashlib
 import json
+import sys
 import math
 from collections import Counter
 from pathlib import Path
@@ -637,6 +638,18 @@ def main() -> None:
     digimon_rows = json.loads(args.digimon_master_json.read_text(encoding="utf-8"))
     digimon = {x["directory_name"]: x for x in digimon_rows}
     if len(digimon) != 1320:
+        mapped_digimon = {
+            row["source_id"] for row in species if row["source_kind"] == "digimon"
+        }
+        unexpected = [
+            row for row in digimon_rows
+            if row.get("directory_name", "") not in mapped_digimon
+        ]
+        print(
+            "live Digimon census drift; unmapped official rows: "
+            + json.dumps(unexpected, ensure_ascii=False, sort_keys=True),
+            file=sys.stderr,
+        )
         raise SystemExit(f"expected 1320 Digimon profile rows, got {len(digimon)}")
 
     appmon_rows = rows(APPMON_MASTER)
