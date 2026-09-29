@@ -370,12 +370,12 @@ def main() -> None:
     techniques = rows(TECHNIQUES)
     assignments = rows(ASSIGNMENTS)
     species_params = rows(args.species_parameters)
-    if len(techniques) != 2557:
-        raise SystemExit(f"expected 2557 techniques, got {len(techniques)}")
-    if len(assignments) != 2872:
-        raise SystemExit(f"expected 2872 technique assignments, got {len(assignments)}")
-    if len(species_params) != 1468:
-        raise SystemExit(f"expected 1468 species parameter rows, got {len(species_params)}")
+    if len(techniques) != 2558:
+        raise SystemExit(f"expected 2558 techniques, got {len(techniques)}")
+    if len(assignments) != 2873:
+        raise SystemExit(f"expected 2873 technique assignments, got {len(assignments)}")
+    if len(species_params) != 1469:
+        raise SystemExit(f"expected 1469 species parameter rows, got {len(species_params)}")
 
     digimon_list = json.loads(args.digimon_master_json.read_text(encoding="utf-8"))
     digimon = {x["directory_name"]: x for x in digimon_list}
@@ -492,8 +492,8 @@ def main() -> None:
             "derivation_version": "profile-derived-v1",
         })
 
-    if [int(x["dm_technique_id"]) for x in out] != list(range(1, 2558)):
-        raise SystemExit("technique IDs are not exactly 1..2557")
+    if [int(x["dm_technique_id"]) for x in out] != list(range(1, 2559)):
+        raise SystemExit("technique IDs are not exactly 1..2558")
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as f:

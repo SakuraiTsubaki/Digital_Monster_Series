@@ -35,8 +35,8 @@ def load_digimon_metadata() -> dict[str, dict]:
     for path in sorted(DIGIMON_MASTER_DIR.glob("digimon_master.part-*.json")):
         for row in json.loads(path.read_text(encoding="utf-8")):
             out[row["directory_name"]] = row
-    if len(out) != 1320:
-        raise SystemExit(f"expected 1320 Digimon metadata rows, found {len(out)}")
+    if len(out) != 1321:
+        raise SystemExit(f"expected 1321 Digimon metadata rows, found {len(out)}")
     return out
 
 
@@ -79,8 +79,8 @@ def main() -> None:
     args = parser.parse_args()
 
     species = csv_rows(SPECIES_MAP)
-    if len(species) != 1468:
-        raise SystemExit(f"expected 1468 mapped entities, found {len(species)}")
+    if len(species) != 1469:
+        raise SystemExit(f"expected 1469 mapped entities, found {len(species)}")
 
     digimon = load_digimon_metadata()
     appmon = load_appmon()

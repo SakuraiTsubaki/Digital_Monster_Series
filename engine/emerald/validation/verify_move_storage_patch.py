@@ -55,7 +55,7 @@ def main() -> None:
 
     print("Digital Monster 12-bit move storage verified")
     print("  move capacity: 4095")
-    print("  required techniques: 2557")
+    print("  required techniques: 2558")
     print("  persistent move/tracker region: 64 bits (unchanged)")
 
 

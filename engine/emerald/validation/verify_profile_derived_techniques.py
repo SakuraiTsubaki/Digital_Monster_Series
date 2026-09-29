@@ -21,8 +21,8 @@ def main() -> None:
     args = ap.parse_args()
 
     data = rows(args.parameters)
-    assert len(data) == 2557, len(data)
-    assert [int(x["dm_technique_id"]) for x in data] == list(range(1, 2558))
+    assert len(data) == 2558, len(data)
+    assert [int(x["dm_technique_id"]) for x in data] == list(range(1, 2559))
 
     for row in data:
         power = int(row["power"])
@@ -51,9 +51,9 @@ def main() -> None:
 
     text = args.move_info.read_text(encoding="utf-8")
     ids = [int(x) for x in re.findall(r"\[DM_MOVE_(\d{4})\]", text)]
-    assert ids == list(range(1, 2558)), (len(ids), ids[:3], ids[-3:])
+    assert ids == list(range(1, 2559)), (len(ids), ids[:3], ids[-3:])
     assert text.count("[DM_MOVE_BOOTSTRAP_ATTACK]") == 1
-    assert text.count("| profile-derived-v1 |") == 2557
+    assert text.count("| profile-derived-v1 |") == 2558
 
     effects = Counter(x["effect_status"] for x in data)
     categories = Counter(x["category"] for x in data)

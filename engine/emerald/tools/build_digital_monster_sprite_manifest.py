@@ -36,8 +36,8 @@ def sha256(path: Path) -> str:
 def read_species_map() -> dict[int, dict[str, str]]:
     with SPECIES_MAP.open(encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
-    if len(rows) != 1468:
-        raise SystemExit(f"species-id-map.csv: expected 1468 rows, found {len(rows)}")
+    if len(rows) != 1469:
+        raise SystemExit(f"species-id-map.csv: expected 1469 rows, found {len(rows)}")
     return {int(row["emerald_species_id"]): row for row in rows}
 
 

@@ -90,8 +90,8 @@ def main() -> None:
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     source_spec = spec["source_assets"]
 
-    if catalog["species_total"] != 1468:
-        raise SystemExit("sprite catalog species_total must be 1468")
+    if catalog["species_total"] != 1469:
+        raise SystemExit("sprite catalog species_total must be 1469")
     if catalog.get("placeholder_runtime_species") != 0:
         raise SystemExit("runtime sprite placeholders must be zero after donor fallback integration")
     active_overrides = int(catalog.get("active_override_species", -1))

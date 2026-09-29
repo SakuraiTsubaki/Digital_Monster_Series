@@ -11,7 +11,7 @@ G = ROOT / "generated" / "pokeemerald-expansion"
 DONOR_MAP = ROOT / "generated" / "donor-sprite-map.csv"
 SPRITE_CATALOG = ROOT / "generated" / "sprite-catalog.json"
 
-EXPECTED_SPECIES = 1468
+EXPECTED_SPECIES = 1469
 ALLOWED_FAMILIES = {
     "base",
     "undead",
@@ -107,7 +107,7 @@ def main():
         learn_ids[:3],
         learn_ids[-3:],
     )
-    assert "DM_MOVE_2557" in enum
+    assert "DM_MOVE_2558" in enum
     assert "DM_MOVE_BOOTSTRAP_ATTACK" in enum
     assert "DM_MOVES_COUNT" in enum
 
@@ -119,7 +119,7 @@ def main():
     print("Digital Monster generated runtime verified")
     print(f"  SpeciesInfo entries: {EXPECTED_SPECIES}")
     print(f"  learnsets: {EXPECTED_SPECIES}")
-    print("  official techniques: 2557")
+    print("  official techniques: 2558")
     print("  bootstrap-only species: 9")
     print("  runtime move IDs: 935..3492")
     print(f"  donor sprite mappings: {donor_rows}")

@@ -10,7 +10,7 @@ is intentionally *not* activated here.  Those files are provenance/reference
 only unless a future per-species override is explicitly enabled.
 
 For the baseline this tool:
-* patches all DM0001..DM1468 SpeciesInfo graphics fields;
+* patches all DM0001..DM1469 SpeciesInfo graphics fields;
 * reuses donor front/back/icon art without changing pixel indices;
 * applies deterministic family palette presets to battle normal/shiny palettes;
 * copies donor size/y-offset/icon-palette metadata;
@@ -36,7 +36,7 @@ DONOR_MAP = EMERALD / "generated" / "donor-sprite-map.csv"
 CATALOG_PATH = EMERALD / "generated" / "sprite-catalog.json"
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 
-DM_COUNT = 1468
+DM_COUNT = 1469
 DONOR_MIN = 1
 DONOR_MAX = 386
 
@@ -199,7 +199,7 @@ def species_part(species_id: int) -> str:
         return "digital_monster_part_2.h"
     if species_id <= 1101:
         return "digital_monster_part_3.h"
-    if species_id <= 1468:
+    if species_id <= 1469:
         return "digital_monster_part_4.h"
     raise SystemExit(f"invalid Digital Monster species id {species_id}")
 

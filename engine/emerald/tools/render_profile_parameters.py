@@ -39,11 +39,11 @@ def main() -> None:
     args = ap.parse_args()
 
     params = rows(args.parameters)
-    if len(params) != 1468:
-        raise SystemExit(f"expected 1468 parameter rows, got {len(params)}")
+    if len(params) != 1469:
+        raise SystemExit(f"expected 1469 parameter rows, got {len(params)}")
     by_id = {int(x["species_id"]): x for x in params}
-    if sorted(by_id) != list(range(1, 1469)):
-        raise SystemExit("parameter IDs are not 1..1468")
+    if sorted(by_id) != list(range(1, 1470)):
+        raise SystemExit("parameter IDs are not 1..1469")
 
     paths = sorted(args.species_dir.glob("digital_monster_part_*.h"))
     if not paths:
@@ -157,8 +157,8 @@ def main() -> None:
         )
         path.write_text(new_text, encoding="utf-8")
 
-    if applied != set(range(1, 1469)):
-        missing = sorted(set(range(1, 1469)) - applied)
+    if applied != set(range(1, 1470)):
+        missing = sorted(set(range(1, 1470)) - applied)
         raise SystemExit(f"SpeciesInfo parameters not applied for: {missing[:20]}")
 
     print("Profile-derived parameters applied to SpeciesInfo")

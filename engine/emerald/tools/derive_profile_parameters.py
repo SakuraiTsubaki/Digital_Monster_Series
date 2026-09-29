@@ -632,12 +632,12 @@ def main() -> None:
     args = ap.parse_args()
 
     species = rows(SPECIES_MAP)
-    if len(species) != 1468:
-        raise SystemExit(f"expected 1468 species-map rows, got {len(species)}")
+    if len(species) != 1469:
+        raise SystemExit(f"expected 1469 species-map rows, got {len(species)}")
 
     digimon_rows = json.loads(args.digimon_master_json.read_text(encoding="utf-8"))
     digimon = {x["directory_name"]: x for x in digimon_rows}
-    if len(digimon) != 1320:
+    if len(digimon) != 1321:
         mapped_digimon = {
             row["source_id"] for row in species if row["source_kind"] == "digimon"
         }
@@ -650,7 +650,7 @@ def main() -> None:
             + json.dumps(unexpected, ensure_ascii=False, sort_keys=True),
             file=sys.stderr,
         )
-        raise SystemExit(f"expected 1320 Digimon profile rows, got {len(digimon)}")
+        raise SystemExit(f"expected 1321 Digimon profile rows, got {len(digimon)}")
 
     appmon_rows = rows(APPMON_MASTER)
     appmon = {f"appmon_{int(x['id']):03d}": x for x in appmon_rows}
@@ -781,8 +781,8 @@ def main() -> None:
         out.append(row)
 
     ids = [int(x["species_id"]) for x in out]
-    if ids != list(range(1, 1469)):
-        raise SystemExit("species IDs are not exactly 1..1468")
+    if ids != list(range(1, 1470)):
+        raise SystemExit("species IDs are not exactly 1..1469")
 
     resolved_normal = [
         x for x in out
