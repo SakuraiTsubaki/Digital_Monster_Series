@@ -61,6 +61,9 @@
     "negation_and_reference_policy": "Negated properties and references to other Digimon must not contribute positive type evidence. For example, '神聖な力なども一切持っていない' cannot trigger Fairy, and mentions of angel-type Digimon being observed, opposed, imitated, monitored, or consumed are not evidence that the subject itself is Fairy.",
     "move_name_false_positive_policy": "Technique names that merely contain an elemental-looking token inside a fixed proper name or non-elemental compound are excluded when the official wording establishes a different semantic meaning; audited examples include 狐蝶幻, 胡蝶夢経, 突蜂, 蝶絶喇叭蹴, 葉隠, プロテクトウェーブ, ライアースロート, 臥龍扇, 愛の入魂金棒, ソウルフルコース, 断鉄剣, and 米鉄砲.",
     "audited_strong_profile_phrases": {
+      "TYPE_FIRE": [
+        "超高温のブレス"
+      ],
       "TYPE_ELECTRIC": [
         "弾ける電撃帯"
       ],
