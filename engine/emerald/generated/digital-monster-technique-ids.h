@@ -2563,8 +2563,10 @@
 #define DM_TECHNIQUE_2556 2556 /* 断鉄剣（だんてつけん） */
 #define DM_TECHNIQUE_2557 2557 /* 戸締用心(とじまりようじん) */
 
-#define DM_TECHNIQUE_COUNT 2558
-#define DM_TECHNIQUE_LAST 2557
+#define DM_TECHNIQUE_2558 2558 /* レヴォルティオレールム */
+
+#define DM_TECHNIQUE_COUNT 2559
+#define DM_TECHNIQUE_LAST 2558
 #define DM_TECHNIQUE_RUNTIME_ID(logicalId) (DM_RUNTIME_MOVE_BASE + (logicalId) - 1)
 
 #endif // DIGITAL_MONSTER_TECHNIQUE_IDS_H

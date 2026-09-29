@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "engine/emerald/tools/derive_profile_parameters.py"
+      - "engine/emerald/generated/species-id-map.csv"
+      - "engine/emerald/generated/technique-id-map.csv"
+      - "engine/emerald/generated/entity-techniques.csv"
       - "engine/emerald/tools/render_profile_parameters.py"
       - "engine/emerald/validation/verify_profile_derived_parameters.py"
       - "engine/emerald/tools/derive_profile_techniques.py"

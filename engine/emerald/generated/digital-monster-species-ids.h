@@ -1474,7 +1474,9 @@
 #define DM_SPECIES_APPMON_147 1467 /* スワイプモン(ライフ) */
 #define DM_SPECIES_APPMON_148 1468 /* ダンテモン */
 
-#define DM_SPECIES_COUNT 1469
-#define DM_SPECIES_LAST 1468
+#define DM_SPECIES_VOLVEMON 1469 /* ヴォルブモン */
+
+#define DM_SPECIES_COUNT 1470
+#define DM_SPECIES_LAST 1469
 
 #endif // DIGITAL_MONSTER_SPECIES_IDS_H

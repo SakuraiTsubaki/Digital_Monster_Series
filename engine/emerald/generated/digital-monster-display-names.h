@@ -4,7 +4,7 @@
 // Full official Japanese display strings. These are pointer-backed on purpose;
 // do not copy them into POKEMON_NAME_LENGTH / MOVE_NAME_LENGTH fixed buffers.
 
-static const u8 *const gDigitalMonsterSpeciesDisplayNames[1469] =
+static const u8 *const gDigitalMonsterSpeciesDisplayNames[1470] =
 {
     [0] = COMPOUND_STRING("-"),
     [1] = COMPOUND_STRING("ノスフェラモン"),
@@ -1475,9 +1475,10 @@ static const u8 *const gDigitalMonsterSpeciesDisplayNames[1469] =
     [1466] = COMPOUND_STRING("スワイプモン(エンタメ)"),
     [1467] = COMPOUND_STRING("スワイプモン(ライフ)"),
     [1468] = COMPOUND_STRING("ダンテモン"),
+    [1469] = COMPOUND_STRING("ヴォルブモン"),
 };
 
-static const u8 *const gDigitalMonsterTechniqueDisplayNames[2558] =
+static const u8 *const gDigitalMonsterTechniqueDisplayNames[2559] =
 {
     [0] = COMPOUND_STRING("-"),
     [1] = COMPOUND_STRING("ランページバレット"),
@@ -4037,6 +4038,7 @@ static const u8 *const gDigitalMonsterTechniqueDisplayNames[2558] =
     [2555] = COMPOUND_STRING("ボディスピアー"),
     [2556] = COMPOUND_STRING("断鉄剣（だんてつけん）"),
     [2557] = COMPOUND_STRING("戸締用心(とじまりようじん)"),
+    [2558] = COMPOUND_STRING("レヴォルティオレールム"),
 };
 
 #endif // DIGITAL_MONSTER_DISPLAY_NAMES_H

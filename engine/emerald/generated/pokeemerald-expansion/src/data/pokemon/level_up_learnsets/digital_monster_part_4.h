@@ -1,4 +1,4 @@
-// Generated gameplay-v0 level-up learnsets 1102..1468
+// Generated gameplay-v0 level-up learnsets 1102..1469
 static const struct LevelUpMove sDigitalMonster1102LevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, DM_MOVE_2064), /* Road T(w)o Decade */
     LEVEL_UP_MOVE(10, DM_MOVE_2065), /* ヴァンシオン */
@@ -2061,3 +2061,8 @@ static const struct LevelUpMove sDigitalMonster1468LevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+
+static const struct LevelUpMove sDigitalMonster1469LevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, DM_MOVE_2558), /* レヴォルティオレールム */
+    LEVEL_UP_END
+};
