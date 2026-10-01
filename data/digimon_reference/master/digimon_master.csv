@@ -1,4 +1,5 @@
 ﻿directory_name,detail_url,name_ja,name_roman,level_raw,level_normalized,type_raw,type_normalized,attribute_raw,attribute_normalized,special_moves_raw,main_image_url,has_additional_illustrations,additional_illustration_count,listing_level,listing_level_2,listing_level_order,is_x_antibody,icon_new,icon_20th,profile_ja_available_on_official_page,profile_ja_char_count,profile_ja_sha256,profile_ja_omitted_from_bundle
+volvemon,https://digimon.net/reference/detail.php?directory_name=volvemon,ヴォルブモン,VOLVEMON,究極体,究極体,不明,不明,不明,不明,・レヴォルティオレールム,https://digimon.net/cimages/digimon/volvemon.jpg,False,0,究極体,,6,False,True,False,True,693,06f93c4db6b35842aef1dc9342e1f5233af076a7857e6ecbdf1816a99be3857d,True
 nosferamon,https://digimon.net/reference/detail.php?directory_name=nosferamon,ノスフェラモン,NOSFERAMON,究極体,究極体,アンデッド型,アンデッド型,ウィルス,ウィルス,"・ランページバレット
 ・アネスシージアゲイズ",https://digimon.net/cimages/digimon/nosferamon.jpg,False,0,究極体,,6,False,True,False,True,603,8d6a37e089a0cbb9da532ada4e42eabf5dec01b0b173f04a6aab9dd0f4f94d01,True
 artiomon,https://digimon.net/reference/detail.php?directory_name=artiomon,アルティオモン,ARTIOMON,究極体,究極体,獣人型,獣人型,ワクチン,ワクチン,"・ドゥームバスター

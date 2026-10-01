@@ -1,9 +1,9 @@
 {
-  "collected_at_utc": "2026-09-21T12:59:43.572602+00:00",
-  "official_displayed_count": 1320,
-  "listing_rows_received": 1320,
-  "unique_directory_names": 1320,
-  "successfully_parsed_detail_pages": 1320,
+  "collected_at_utc": "2026-10-01T13:24:49.918895+00:00",
+  "official_displayed_count": 1321,
+  "listing_rows_received": 1321,
+  "unique_directory_names": 1321,
+  "successfully_parsed_detail_pages": 1321,
   "missing_count_vs_official_display": 0,
   "failed_pages": [],
   "duplicate_directory_names_in_listing": [],
@@ -88,10 +88,10 @@
     },
     {
       "offset": 1248,
-      "row_count": 72,
+      "row_count": 73,
       "next": -1,
       "url": "https://digimon.net/reference/request.php?digimon_name=&name=&digimon_level=&attribute=&type=&next=1248"
     }
   ],
-  "index_sha256": "f3c879bcfd1faa810967c92748f55dee21daaf00cb7e78e6d15a52a45b276f08"
+  "index_sha256": "a24277e37e07ce824dbe76ddefd7f64e4d08ee73c23ba4c7af11235e26b98b37"
 }
