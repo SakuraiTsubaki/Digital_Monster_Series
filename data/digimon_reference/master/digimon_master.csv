@@ -4,8 +4,10 @@ nosferamon,https://digimon.net/reference/detail.php?directory_name=nosferamon,�
 ・アネスシージアゲイズ",https://digimon.net/cimages/digimon/nosferamon.jpg,False,0,究極体,,6,False,True,False,True,603,8d6a37e089a0cbb9da532ada4e42eabf5dec01b0b173f04a6aab9dd0f4f94d01,True
 artiomon,https://digimon.net/reference/detail.php?directory_name=artiomon,アルティオモン,ARTIOMON,究極体,究極体,獣人型,獣人型,ワクチン,ワクチン,"・ドゥームバスター
 ・ディキャピテイトクロウ",https://digimon.net/cimages/digimon/artiomon.jpg,False,0,究極体,,6,False,True,False,True,520,e64df501cb6a8ee172628c82abf90a4a02a8a36690b5ea0c692b7026d4ea3aa7,True
-atratusmon,https://digimon.net/reference/detail.php?directory_name=atratusmon,アトラタスモン,ATRATUSMON,究極体,究極体,突然変異型,突然変異型,データ,データ,・,https://digimon.net/cimages/digimon/atratusmon.jpg,False,0,究極体,,6,False,True,False,True,58,de1f45fef6cecb6b4cd877e2697b56ceb669fdc93c623aa41e52d9982b756500,True
-albatusmon,https://digimon.net/reference/detail.php?directory_name=albatusmon,アルバタスモン,ALBATUSMON,究極体,究極体,突然変異型,突然変異型,データ,データ,・,https://digimon.net/cimages/digimon/albatusmon.jpg,False,0,究極体,,6,False,True,False,True,58,8dae5ff281c51b3362e6273d29f3738661bf139aee3566f87b2e0c7812537ca2,True
+atratusmon,https://digimon.net/reference/detail.php?directory_name=atratusmon,アトラタスモン,ATRATUSMON,究極体,究極体,突然変異型,突然変異型,データ,データ,"・エクリプスインパクト
+・ヴォイドカノン",https://digimon.net/cimages/digimon/atratusmon.jpg,True,1,究極体,,6,False,True,False,True,630,15afbadcbbb345575c940a1ee114badb33439995b40f792bf62b2758ce2a802f,True
+albatusmon,https://digimon.net/reference/detail.php?directory_name=albatusmon,アルバタスモン,ALBATUSMON,究極体,究極体,突然変異型,突然変異型,データ,データ,"・デマイズスフィア
+・アブソープションサークル",https://digimon.net/cimages/digimon/albatusmon.jpg,True,1,究極体,,6,False,True,False,True,671,880a5aba4f96cb0ba5c46bcf9138baf33d01f58da75ea2379f65e6c3423f5785,True
 heliosboamon,https://digimon.net/reference/detail.php?directory_name=heliosboamon,ヘリオスボアモン,HELIOSBOAMON,完全体,完全体,爬虫類型,爬虫類型,データ,データ,"・ソウルパラヴライザー
 ・レストリクトアイ",https://digimon.net/cimages/digimon/heliosboamon.jpg,False,0,完全体,,5,False,False,False,True,653,d020d763b3ba7893fcdb8e182bce7847819d6f2feaef7fc13538cffe3b8ebc2f,True
 habakirimon,https://digimon.net/reference/detail.php?directory_name=habakirimon,ハバキリモン,HABAKIRIMON,究極体,究極体,神人型,神人型,ウィルス,ウィルス,"・羽々斬（はばきり）
@@ -15,7 +17,7 @@ bearcatmon,https://digimon.net/reference/detail.php?directory_name=bearcatmon,�
 ・ベアダウンスピニングキック",https://digimon.net/cimages/digimon/bearcatmon.jpg,False,0,完全体,,5,False,False,False,True,564,d3c7e1d33dd9a8871ae456a8117fe9773400c1eb90bad3fe3f8a39855b5a0ef9,True
 taowumon,https://digimon.net/reference/detail.php?directory_name=taowumon,タオウーモン,TAOWUMON,究極体,究極体,魔獣型,魔獣型,ウィルス,ウィルス,"・氷骸礫(ひょうがいれき)
 ・轟蹄崩(ごうていほう)
-・凍烈檮牙(とうれつとうが)",https://digimon.net/cimages/digimon/taowumon.jpg,False,0,究極体,,6,False,False,False,True,438,825dd3f24273eac9c273b2f48bc6d6247f9c751aa5eaacaf0d2c88de6619eee7,True
+・凍烈檮牙(とうれつとうが)",https://digimon.net/cimages/digimon/taowumon.jpg,False,0,究極体,,6,False,False,False,True,435,1a72af917073895bf1fd3623da3ed94ea4ffcd2bbe2277992b8196dc0fa7a5e1,True
 scourgechiropmon,https://digimon.net/reference/detail.php?directory_name=scourgechiropmon,スカージキロプモン,SCOURGECHIROPMON,完全体,完全体,マシーン型,マシーン型,ウィルス,ウィルス,"・トライアンギュレーションスキャン
 ・デスペアブラスト
 ・エリミネイトレイン
@@ -26,18 +28,18 @@ monarchlizamon,https://digimon.net/reference/detail.php?directory_name=monarchli
 apollomon_whispered,https://digimon.net/reference/detail.php?directory_name=apollomon_whispered,アポロモン：ウィスパード,APOLLOMON：WHISPERED,"究極体
 (クロスウォーズ)","究極体
 (クロスウォーズ)",神人型,神人型,ウィルス,ウィルス,"・アロー・オブ・ウィスパード
-・サン・オブ・ソローズ",https://digimon.net/cimages/digimon/apollomon_whispered.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,231,d7f2b0c35bf8b7f546a0c90ed4c1ccc3af5906361112fef422d82b1fef5ce67e,True
+・サン・オブ・ソローズ",https://digimon.net/cimages/digimon/apollomon_whispered.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,229,7b584eff10929e8f311be2ad88eb2e04a2ee4a90c98cee6df780414683b7258c,True
 kingwhamon,https://digimon.net/reference/detail.php?directory_name=kingwhamon,キングホエーモン,KINGWHAMON,究極体,究極体,水棲哺乳類型,水棲哺乳類型,ワクチン,ワクチン,"・ウォジェット
 ・ライドライト",https://digimon.net/cimages/digimon/kingwhamon.jpg,False,0,究極体,,6,False,False,False,True,178,9f3c28470fd89cda8387284e65481441ebd0856c9d4f20246e3c1a4049f1594b,True
 armamon_burstmode,https://digimon.net/reference/detail.php?directory_name=armamon_burstmode,アルマモン：バーストモード,ARMAMON:BURSTMODE,"究極体
 (クロスウォーズ)","究極体
 (クロスウォーズ)",武器型,武器型,フリー,フリー,"・ソード・オブ・メテオ
-・インフィニティソードレイン",https://digimon.net/cimages/digimon/armamon_burstmode.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,245,54861c86e15d1c74dc542bda13231d3f830bb076aa738e4d5ec288204a519a3f,True
+・インフィニティソードレイン",https://digimon.net/cimages/digimon/armamon_burstmode.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,243,e4d74c85a3faac4b6b9e4ba84802320f5048f772cdefdb9d531e137581ac8e67,True
 armamon,https://digimon.net/reference/detail.php?directory_name=armamon,アルマモン,ARMAMON,"究極体
 (クロスウォーズ)","究極体
 (クロスウォーズ)",武器型,武器型,フリー,フリー,"・マルクトクリスタル
 ・レインボーハンド
-・ソードマスカレード",https://digimon.net/cimages/digimon/armamon.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,313,de9f6b4b6c8d57598ecbb5e1c2025ed110d4ec168140ee29859eeec8fa711cbd,True
+・ソードマスカレード",https://digimon.net/cimages/digimon/armamon.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,312,fe11e477adb3db7bdc3bb8519268e93155628c7fc8cfb26a24d780749706a978,True
 shoutmonx5s,https://digimon.net/reference/detail.php?directory_name=shoutmonx5s,シャウトモンX5S,SHOUTMONX5S,"究極体
 (クロスウォーズ)","究極体
 (クロスウォーズ)",合成型,合成型,データ,データ,"・スペースチャクラム
@@ -45,12 +47,12 @@ shoutmonx5s,https://digimon.net/reference/detail.php?directory_name=shoutmonx5s,
 ・コズモビクトリー",https://digimon.net/cimages/digimon/shoutmonx5s.jpg,False,0,究極体,クロスウォーズ,6,False,False,False,True,189,a5681b9f4e4159d27c6a148e43536bbaacd9c1d28850341500dbdf476c9e6b74,True
 vortexdramon,https://digimon.net/reference/detail.php?directory_name=vortexdramon,ヴォルテクスドラモン,VORTEXDRAMON,究極体,究極体,鳥竜型,鳥竜型,データ,データ,"・フローズンガスト
 ・ブレイジングガスト
-・レーヴァテイン",https://digimon.net/cimages/digimon/vortexdramon.jpg,False,0,究極体,,6,False,False,False,True,301,4b10862be312919c9805cabe6ec5b2cd26b665b12456a95b061313a043a43a4c,True
+・レーヴァテイン",https://digimon.net/cimages/digimon/vortexdramon.jpg,False,0,究極体,,6,False,False,False,True,299,830081f1e0a5d281fd23aee3f4a3c412af2daadeb53c37374d107774a0aa188f,True
 shoutmonx4s,https://digimon.net/reference/detail.php?directory_name=shoutmonx4s,シャウトモンX4S,SHOUTMONX4S,"完全体
 (クロスウォーズ)","完全体
 (クロスウォーズ)",合成型,合成型,データ,データ,"・ブレイズファイアー
 ・クロスレッド＆ブルー
-・ビクトリーブレイブ",https://digimon.net/cimages/digimon/shoutmonx4s.jpg,False,0,完全体,クロスウォーズ,5,False,False,False,True,189,55dc138473ebdc7522b9e5b58cbb19c0055bfa06a9031656a0279ebf5cabd34e,True
+・ビクトリーブレイブ",https://digimon.net/cimages/digimon/shoutmonx4s.jpg,False,0,完全体,クロスウォーズ,5,False,False,False,True,188,7d66d3ec91a6c5c7599f9901e26b19e4bd4c3a399b16504bcff0b7f7fddbabf6,True
 shoutmonx3sd,https://digimon.net/reference/detail.php?directory_name=shoutmonx3sd,シャウトモンX3SD,SHOUTMONX3SD,"完全体
 (クロスウォーズ)","完全体
 (クロスウォーズ)",戦士型,戦士型,データ,データ,"・アシッドタイフーン
@@ -73,7 +75,7 @@ seitengokuwmon,https://digimon.net/reference/detail.php?directory_name=seitengok
 ・八戒炎天撃（はっかいえんてんげき）
 ・悟浄水天葬（ごじょうすいてんそう）
 ・超大聖雷天砲（ちょうたいせいらいてんほう）",https://digimon.net/cimages/digimon/seitengokuwmon.jpg,True,1,究極体,,6,False,False,False,True,616,3f7b08920c8b3ae82acfc8a2a283492132aa3454443ef19764946ba2a4fc818f,True
-exmaquinamon,https://digimon.net/reference/detail.php?directory_name=exmaquinamon,エクスマキナモン,EXMAQUINAMON,究極体,究極体,特異型,特異型,データ,データ,・エスカトン,https://digimon.net/cimages/digimon/exmaquinamon.jpg,False,0,究極体,,6,False,False,False,True,220,adafb5b783e4bb05f9b6728225fe207d4c75e154917bc910b5b6c09b938837c8,True
+exmaquinamon,https://digimon.net/reference/detail.php?directory_name=exmaquinamon,エクスマキナモン,EXMAQUINAMON,究極体,究極体,特異型,特異型,データ,データ,・エスカトン,https://digimon.net/cimages/digimon/exmaquinamon.jpg,False,0,究極体,,6,False,False,False,True,218,9a60ec6f66e6bbd73a622acba793ffebe5a4581d6e3ecf4311f39b9c64f67451,True
 dalphomon,https://digimon.net/reference/detail.php?directory_name=dalphomon,ダルフォモン,DALPHOMON,究極体,究極体,獣型,獣型,ウィルス,ウィルス,"・プロフェットオブエリヤ
 ・ジェイルマオン
 ・ブルータルヘイロウ",https://digimon.net/cimages/digimon/dalphomon.jpg,False,0,究極体,,6,False,False,False,True,423,5b83e80fa34a1eb0df0aa01eec971266654fa4c55a9ec42c1f959d8667796969,True
@@ -132,7 +134,7 @@ styracomon,https://digimon.net/reference/detail.php?directory_name=styracomon,�
 ・ドレッドノートスタンピード",https://digimon.net/cimages/digimon/styracomon.jpg,False,0,究極体,,6,False,False,False,True,343,d8005e2b8c9b34c0cf6353774acdfa18b2934821b3a87b3b500b959d72bc6696,True
 taotiemon,https://digimon.net/reference/detail.php?directory_name=taotiemon,タオティエモン,TAOTIEMON,究極体,究極体,鬼人型,鬼人型,ウィルス,ウィルス,"・九淵貪角(きゅうえんどんかく)
 ・穢吐餓(えとが)
-・饕飢爆（とうきばく）",https://digimon.net/cimages/digimon/taotiemon.jpg,False,0,究極体,,6,False,False,False,True,470,a7ec100f3e631a54c49f5d88dce9015567bea5a3189c3d8ed8d766c2bc9ac2f7,True
+・饕飢爆（とうきばく）",https://digimon.net/cimages/digimon/taotiemon.jpg,False,0,究極体,,6,False,False,False,True,467,96db31544225d25f2f7fa395092f5105558c9d9cbe9008ff0de7898d1fa73f0e,True
 craniummon_enbarrmon,https://digimon.net/reference/detail.php?directory_name=craniummon_enbarrmon,クレニアムモン+アンヴァルモン,CRANIUMMON + ENBARRMON,究極体,究極体,聖騎士型,聖騎士型,ワクチン,ワクチン,・ルースレスチャージ,https://digimon.net/cimages/digimon/craniummon_enbarrmon.jpg,False,0,究極体,,6,False,False,False,True,529,d32196106ce767321067cb8cbd8108174e121fc00d24c4212cc01ddc6f351fc0,True
 enbarrmon,https://digimon.net/reference/detail.php?directory_name=enbarrmon,アンヴァルモン,ENBARRMON,完全体,完全体,アンデッド型,アンデッド型,データ,データ,"・ディスレンジホーン
 ・ヴェインアンサー",https://digimon.net/cimages/digimon/enbarrmon.jpg,False,0,完全体,,5,False,False,False,True,275,40eedf8f49e79f4b55d037ef57856d99f2dbb64944e718fecde911d1daca2623,True

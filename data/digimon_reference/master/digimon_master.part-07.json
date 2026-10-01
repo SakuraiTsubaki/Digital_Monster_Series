@@ -1,62 +1,62 @@
 [
   {
-    "directory_name": "volvemon",
-    "detail_url": "https://digimon.net/reference/detail.php?directory_name=volvemon",
+    "directory_name": "kuramon",
+    "detail_url": "https://digimon.net/reference/detail.php?directory_name=kuramon",
     "http_status": 200,
-    "name_ja": "ヴォルブモン",
-    "name_roman": "VOLVEMON",
-    "level_raw": "究極体",
-    "level_normalized": "究極体",
-    "type_raw": "不明",
-    "type_normalized": "不明",
-    "attribute_raw": "不明",
-    "attribute_normalized": "不明",
-    "special_moves_raw": "・レヴォルティオレールム",
+    "name_ja": "クラモン",
+    "name_roman": "KURAMON",
+    "level_raw": "幼年期Ⅰ",
+    "level_normalized": "幼年期Ⅰ",
+    "type_raw": "種族不明",
+    "type_normalized": "種族不明",
+    "attribute_raw": null,
+    "attribute_normalized": null,
+    "special_moves_raw": "・グレアーアイ",
     "special_moves": [
-      "レヴォルティオレールム"
+      "グレアーアイ"
     ],
-    "main_image_url": "https://digimon.net/cimages/digimon/volvemon.jpg",
+    "profile_ja": null,
+    "main_image_url": "https://digimon.net/cimages/digimon/kuramon.jpg",
     "has_additional_illustrations": false,
     "additional_illustration_urls": [],
     "all_official_image_urls": [
-      "https://digimon.net/cimages/digimon/volvemon.jpg"
+      "https://digimon.net/cimages/digimon/kuramon.jpg"
     ],
     "related_digimon": [
       {
-        "directory_name": "atratusmon",
-        "name_ja": "アトラタスモン",
-        "type_attribute_display": "突然変異型 / データ",
-        "url": "https://digimon.net/reference/detail.php?directory_name=atratusmon"
+        "directory_name": "tsumemon",
+        "name_ja": "ツメモン",
+        "type_attribute_display": "種族不明 / -",
+        "url": "https://digimon.net/reference/detail.php?directory_name=tsumemon"
       },
       {
-        "directory_name": "albatusmon",
-        "name_ja": "アルバタスモン",
-        "type_attribute_display": "突然変異型 / データ",
-        "url": "https://digimon.net/reference/detail.php?directory_name=albatusmon"
+        "directory_name": "keramon",
+        "name_ja": "ケラモン",
+        "type_attribute_display": "種族不明 / 不明",
+        "url": "https://digimon.net/reference/detail.php?directory_name=keramon"
       },
       {
-        "directory_name": "murasamemon",
-        "name_ja": "ムラサメモン",
-        "type_attribute_display": "獣人型 / ウィルス",
-        "url": "https://digimon.net/reference/detail.php?directory_name=murasamemon"
+        "directory_name": "armagemon",
+        "name_ja": "アーマゲモン",
+        "type_attribute_display": "種族不明 / 不明",
+        "url": "https://digimon.net/reference/detail.php?directory_name=armagemon"
       }
     ],
-    "page_sha256": "fbf4540b90b0c1d65da6d0cb45bac4caf3a0c44b6ec0419a15a9a49d874f7c8c",
+    "page_sha256": "90cce0b0981eaf2f3d24df9aa4d116e6401954ae594f20ef164910a07531bba3",
     "listing_metadata": {
-      "directory_name": "volvemon",
-      "name": "ヴォルブモン",
-      "level": "究極体",
+      "directory_name": "kuramon",
+      "name": "クラモン",
+      "level": "幼年期Ⅰ",
       "level_2": null,
       "icon_20th": 0,
-      "icon_new": 1,
-      "level_order": 6,
+      "icon_new": 0,
+      "level_order": 1,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-01T13:24:49.918895+00:00",
-    "profile_ja": null,
+    "collected_at_utc": "2026-10-01T13:57:36.887645+00:00",
     "profile_ja_available_on_official_page": true,
-    "profile_ja_char_count": 693,
-    "profile_ja_sha256": "06f93c4db6b35842aef1dc9342e1f5233af076a7857e6ecbdf1816a99be3857d",
+    "profile_ja_char_count": 226,
+    "profile_ja_sha256": "d36e8bcd08b5dee7fb10da845c07bd1983f267a5e9b62ccad3cb3e25fd93ea80",
     "profile_ja_omitted_from_bundle": true
   }
 ]

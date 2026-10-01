@@ -4,12 +4,40 @@
   "part_count": 7,
   "ordering": "official listing API order at collection time",
   "parts": [
-    {"path": "digimon_master.part-01.json", "records": 220, "sha256": "38699edd4a56c3bd12e3575c95d61242f9a438bfac1db124659df4efe941b1d1"},
-    {"path": "digimon_master.part-02.json", "records": 220, "sha256": "f2e3997c71e9ade4aa45208a29aeaffd51e6ae5e03d67bd4eabf0b089bbc09ba"},
-    {"path": "digimon_master.part-03.json", "records": 220, "sha256": "e8ead2af700b4db5f38badaa2fb86373e81c888983b5dee0f3eb6a77d0528991"},
-    {"path": "digimon_master.part-04.json", "records": 220, "sha256": "8570208ad2eb682d4a6af7cc35534faf93c89eaf6fc0e15911ebbfeeac6eddfb"},
-    {"path": "digimon_master.part-05.json", "records": 220, "sha256": "8240830ec8b5ec9390998b9f4bf232825d22f463e2bc3ef459a6722bec657b28"},
-    {"path": "digimon_master.part-06.json", "records": 220, "sha256": "a7d318342afbc8bf4e9860193f46d792c4bb1d029fc40c7716157eae289ad23e"},
-    {"path": "digimon_master.part-07.json", "records": 1, "sha256": "2a5671d899576c5b86940f85f5c163059148c25492df36fd4e447932fe067d67"}
+    {
+      "path": "digimon_master.part-01.json",
+      "records": 220,
+      "sha256": "8a1e53ceb143e21d2a05ccd6c2b63df60f1bcd58d491087b03203efe8844f189"
+    },
+    {
+      "path": "digimon_master.part-02.json",
+      "records": 220,
+      "sha256": "b109c456e261240bf10ed5a832da67190c289378bfa712a97b76b258456c0786"
+    },
+    {
+      "path": "digimon_master.part-03.json",
+      "records": 220,
+      "sha256": "494b600a41dae8094086f5e34512aa62ba11a2de2cc04e6f02339fa674a31749"
+    },
+    {
+      "path": "digimon_master.part-04.json",
+      "records": 220,
+      "sha256": "44f3a4fcd9e355403600ce46ad1ae57704df979b93de2b8463a8f67646fef713"
+    },
+    {
+      "path": "digimon_master.part-05.json",
+      "records": 220,
+      "sha256": "287526561ea361c3ceef99fede56ffa69fcd2b5dab59d4c706d386f1a6557538"
+    },
+    {
+      "path": "digimon_master.part-06.json",
+      "records": 220,
+      "sha256": "18b8db159a2a479569f55aa082991bc7936fb36e2b0f39fe5071bd672fe6837c"
+    },
+    {
+      "path": "digimon_master.part-07.json",
+      "records": 1,
+      "sha256": "1b22133f28867c155cb036649bef5408f37e8f6626729a9a9c63fc15385594d9"
+    }
   ]
 }
