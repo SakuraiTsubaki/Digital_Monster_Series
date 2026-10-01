@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "data/digimon_reference/**"
       - "engine/emerald/tools/derive_profile_parameters.py"
       - "engine/emerald/generated/species-id-map.csv"
       - "engine/emerald/generated/technique-id-map.csv"
@@ -45,6 +46,11 @@ jobs:
           python3 data/digimon_reference/scripts/scrape_digimon_reference.py \
             --output /tmp/digimon_reference \
             --workers 8
+
+      - name: Verify committed official dataset
+        run: |
+          python3 data/digimon_reference/scripts/verify_committed_dataset.py \
+            --live-master /tmp/digimon_reference/master/digimon_master.json
 
       - name: Derive profile-backed species parameters
         run: |
