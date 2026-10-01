@@ -57,7 +57,7 @@ def main() -> None:
     )
     json_only_fields = (
         "detail_url", "http_status", "special_moves", "additional_illustration_urls",
-        "all_official_image_urls", "related_digimon",
+        "all_official_image_urls",
     )
     for directory_name in live_ids:
         live = live_by_id[directory_name]
