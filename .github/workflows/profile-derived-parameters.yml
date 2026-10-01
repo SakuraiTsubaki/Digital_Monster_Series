@@ -47,6 +47,12 @@ jobs:
             --output /tmp/digimon_reference \
             --workers 8
 
+      - name: Refresh committed official dataset
+        run: |
+          python3 data/digimon_reference/scripts/build_committed_dataset.py \
+            --source /tmp/digimon_reference \
+            --output data/digimon_reference
+
       - name: Verify committed official dataset
         run: |
           python3 data/digimon_reference/scripts/verify_committed_dataset.py \
@@ -123,11 +129,12 @@ jobs:
           sha256sum pokeemerald.gba
           rm -f pokeemerald.gba
 
-      - name: Commit generated parameters to main
+      - name: Commit refreshed dataset and generated parameters to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
+            data/digimon_reference \
             engine/emerald/generated/profile-derived-parameters.csv \
             engine/emerald/generated/profile-derived-techniques.csv \
             engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info/digital_monster_part_*.h \
