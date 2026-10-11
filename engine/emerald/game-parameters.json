@@ -56,13 +56,13 @@
       "bits": 11,
       "max_value": 2047,
       "digital_monster_role": "digimon_entity_id",
-      "current_dataset_rows": 1468,
+      "current_dataset_rows": 1473,
       "current_dataset_breakdown": {
-        "digimon_reference": 1320,
+        "digimon_reference": 1325,
         "appmon": 148
       },
       "fits_current_dataset_if_zero_is_reserved": true,
-      "remaining_nonzero_ids_after_current_dataset": 579,
+      "remaining_nonzero_ids_after_current_dataset": 574,
       "widening_policy": "defer_until_real_entity_count_requires_it"
     },
     "move_backing_field": {
@@ -70,11 +70,11 @@
       "max_value_current": 2047,
       "digital_monster_role": "technique_id",
       "source_assignment_rows": {
-        "digimon_reference": 2593,
+        "digimon_reference": 2603,
         "appmon": 279,
-        "combined": 2872
+        "combined": 2882
       },
-      "exact_unique_japanese_techniques": 2557,
+      "exact_unique_japanese_techniques": 2567,
       "minimum_required_bits": 12,
       "target_bits": 12,
       "target_max_value": 4095,
@@ -92,17 +92,17 @@
       "compatibility_rule": "keep BoxPokemon substruct size stable; implement explicit migration/repack instead of silently truncating IDs",
       "logical_catalog": {
         "id_start": 1,
-        "id_end": 2557,
-        "count": 2557
+        "id_end": 2567,
+        "count": 2567
       },
       "runtime_catalog": {
         "pinned_engine_moves_count_all": 935,
         "engine_move_id_range": "0..934",
-        "digital_monster_move_id_range": "935..3491",
-        "runtime_moves_count_all": 3493,
-        "remaining_12bit_ids": 603,
+        "digital_monster_move_id_range": "935..3501",
+        "runtime_moves_count_all": 3503,
+        "remaining_12bit_ids": 593,
         "strategy": "append after engine move catalog",
-        "bootstrap_move_id": 3492
+        "bootstrap_move_id": 3502
       }
     },
     "held_item_backing_field": {

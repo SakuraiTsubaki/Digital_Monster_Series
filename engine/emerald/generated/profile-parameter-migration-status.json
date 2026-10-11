@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "parameter_policy": "profile-derived-v1",
-  "entities_total": 1468,
+  "entities_total": 1473,
   "source_profiles": {
     "digimon": {
-      "entities": 1320,
+      "entities": 1325,
       "repository_profile_text": "omitted_from_bundle",
       "profile_sha256_recorded": true,
       "next_input": "official Japanese detail profile text, verified against recorded SHA-256"

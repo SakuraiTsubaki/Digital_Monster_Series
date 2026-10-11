@@ -31,8 +31,8 @@ def main() -> None:
     args = ap.parse_args()
 
     data = rows(args.parameters)
-    assert len(data) == 1469, len(data)
-    assert [int(x["species_id"]) for x in data] == list(range(1, 1470))
+    assert len(data) == 1473, len(data)
+    assert [int(x["species_id"]) for x in data] == list(range(1, 1474))
 
     by_stage: dict[str, set[int]] = defaultdict(set)
     type_pairs = set()
@@ -89,7 +89,7 @@ def main() -> None:
 
     parts = sorted(args.species_dir.glob("digital_monster_part_*.h"))
     rendered = "\n".join(x.read_text(encoding="utf-8") for x in parts)
-    assert rendered.count("profile_derived_v1_noncanonical") == 1469
+    assert rendered.count("profile_derived_v1_noncanonical") == 1473
     assert "project_generated_gameplay_v0_noncanonical" not in rendered
     assert "// Generated gameplay-v0 SpeciesInfo entries" not in rendered
     resolved_abilities = sum(
@@ -101,14 +101,14 @@ def main() -> None:
         r"(?m)^\s*\.abilities\s*=\s*\{\s*(ABILITY_[A-Z0-9_]+)",
         rendered,
     )
-    assert len(rendered_abilities) == 1469
+    assert len(rendered_abilities) == 1473
     assert sum(x != "ABILITY_NONE" for x in rendered_abilities) == resolved_abilities
 
     gender_ratios = re.findall(
         r"(?m)^\s*\.genderRatio\s*=\s*([^,]+),$",
         rendered,
     )
-    assert len(gender_ratios) == 1469, len(gender_ratios)
+    assert len(gender_ratios) == 1473, len(gender_ratios)
     assert set(gender_ratios) == {"PERCENT_FEMALE(50)"}, set(gender_ratios)
 
     ev_c_fields = [
@@ -127,11 +127,11 @@ def main() -> None:
                 rendered,
             )
         ]
-        assert len(rendered_values) == 1469, (c_field, len(rendered_values))
+        assert len(rendered_values) == 1473, (c_field, len(rendered_values))
         assert rendered_values == [int(row[csv_field]) for row in data], c_field
 
     species_ids = [int(x) for x in re.findall(r"(?m)^\s*\[(\d+)\]\s*=", rendered)]
-    assert species_ids == list(range(1, 1470))
+    assert species_ids == list(range(1, 1474))
 
     print("Profile-derived SpeciesInfo verified")
     print(f"  entities: {len(data)}")

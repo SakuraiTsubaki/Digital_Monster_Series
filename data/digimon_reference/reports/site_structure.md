@@ -1,8 +1,8 @@
 # デジモン図鑑 사이트 구조 조사
 
 - 기준 URL: https://digimon.net/reference/
-- 수집 시각(UTC): 2026-10-01T13:57:36.887645+00:00
-- 공식 표시 등록 수: 1321
+- 수집 시각(UTC): 2026-10-11T15:10:09.109095+00:00
+- 공식 표시 등록 수: 1325
 - 목록 방식: 초기 HTML 이후 `./request.php`에 XHR GET 요청. `next` 오프셋으로 추가 로딩.
 - 한 요청의 기본 반환량: 첫 응답 96개
 - 상세 URL: `detail.php?directory_name={directory_name}`

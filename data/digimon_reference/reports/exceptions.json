@@ -1,6 +1,20 @@
 {
   "missing_values": [
     {
+      "directory_name": "rootmon",
+      "name_ja": "ルートモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
+      "directory_name": "suzumon",
+      "name_ja": "スズモン",
+      "null_fields": [
+        "attribute_raw"
+      ]
+    },
+    {
       "directory_name": "chicchimon",
       "name_ja": "チッチモン",
       "null_fields": [

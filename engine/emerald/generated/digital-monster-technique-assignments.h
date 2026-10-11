@@ -2886,6 +2886,16 @@ static const struct DigitalMonsterTechniqueAssignment gDigitalMonsterOfficialTec
     { 1467, DM_TECHNIQUE_2555, 3489, 1 }, /* スワイプモン(ライフ): ボディスピアー */
     { 1468, DM_TECHNIQUE_2556, 3490, 1 }, /* ダンテモン: 断鉄剣（だんてつけん） */
     { 1468, DM_TECHNIQUE_2557, 3491, 2 }, /* ダンテモン: 戸締用心(とじまりようじん) */
+    { 1469, DM_TECHNIQUE_2558, 3492, 1 }, /* ヴォルブモン: レヴォルティオレールム */
+    { 1470, DM_TECHNIQUE_2559, 3493, 1 }, /* フィカスモン: アームドテンドリル */
+    { 1471, DM_TECHNIQUE_2560, 3494, 1 }, /* ルートモン: エントワイン */
+    { 1472, DM_TECHNIQUE_2561, 3495, 1 }, /* セキリュウモン: 天薙剣（あまなぎのつるぎ） */
+    { 1472, DM_TECHNIQUE_2562, 3496, 2 }, /* セキリュウモン: 玉雲(ぎょくうん) */
+    { 1473, DM_TECHNIQUE_2563, 3497, 1 }, /* スズモン: 鳴尾（ナリビ） */
+    { 4, DM_TECHNIQUE_2564, 3498, 1 }, /* アルバタスモン: デマイズスフィア */
+    { 4, DM_TECHNIQUE_2565, 3499, 2 }, /* アルバタスモン: アブソープションサークル */
+    { 3, DM_TECHNIQUE_2566, 3500, 1 }, /* アトラタスモン: エクリプスインパクト */
+    { 3, DM_TECHNIQUE_2567, 3501, 2 }, /* アトラタスモン: ヴォイドカノン */
 };
 
 #define DM_OFFICIAL_TECHNIQUE_ASSIGNMENT_COUNT (sizeof(gDigitalMonsterOfficialTechniqueAssignments) / sizeof(gDigitalMonsterOfficialTechniqueAssignments[0]))

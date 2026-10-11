@@ -1,4 +1,8 @@
 ﻿directory_name,name_ja,image_order,is_main,image_url
+ficusmon,フィカスモン,1,True,https://digimon.net/cimages/digimon/ficusmon.jpg
+rootmon,ルートモン,1,True,https://digimon.net/cimages/digimon/rootmon.jpg
+sekiryumon,セキリュウモン,1,True,https://digimon.net/cimages/digimon/sekiryumon.jpg
+suzumon,スズモン,1,True,https://digimon.net/cimages/digimon/suzumon.jpg
 volvemon,ヴォルブモン,1,True,https://digimon.net/cimages/digimon/volvemon.jpg
 nosferamon,ノスフェラモン,1,True,https://digimon.net/cimages/digimon/nosferamon.jpg
 artiomon,アルティオモン,1,True,https://digimon.net/cimages/digimon/artiomon.jpg

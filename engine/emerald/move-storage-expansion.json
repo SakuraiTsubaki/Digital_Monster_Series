@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "Digital_Monster_Series",
   "reason": {
-    "exact_unique_official_japanese_techniques": 2557,
+    "exact_unique_official_japanese_techniques": 2567,
     "current_11bit_capacity": 2047,
-    "overflow": 510,
+    "overflow": 520,
     "minimum_required_bits": 12,
     "target_capacity": 4095
   },
@@ -39,6 +39,6 @@
     "Do not increase the BoxPokemon persistent structure size as the first solution.",
     "Repack the existing 64-bit move/tracker region and update all getters/setters atomically.",
     "Preserve or deliberately replace evolution-tracker semantics when the Digivolution model is implemented.",
-    "Add compile-time assertions and save migration tests before enabling the full 2557-technique catalog."
+    "Add compile-time assertions and save migration tests before enabling the full 2567-technique catalog."
   ]
 }

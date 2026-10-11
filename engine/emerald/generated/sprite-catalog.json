@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "profile": "gameplay-v0",
-  "species_total": 1469,
+  "species_total": 1473,
   "declared_sprite_manifests": 1,
   "runtime_ready_species": 0,
   "partial_species": 0,
   "source_only_species": 1,
   "active_override_species": 0,
-  "donor_fallback_species": 1468,
+  "donor_fallback_species": 1473,
   "placeholder_runtime_species": 0,
   "entries": [
     {

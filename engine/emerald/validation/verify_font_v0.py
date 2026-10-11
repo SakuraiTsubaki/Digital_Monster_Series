@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GENERATED = ROOT / "generated"
 ENGINE_GEN = GENERATED / "pokeemerald-expansion"
 
-EXPECTED_GLYPHS = 642
+EXPECTED_GLYPHS = 643
 EXPECTED_PADDED = 656
 EXPECTED_NORMAL_U16 = EXPECTED_PADDED * 16
 EXPECTED_SMALL_U16 = EXPECTED_PADDED * 16
@@ -35,7 +35,7 @@ def main() -> None:
     assert len(rows) == EXPECTED_GLYPHS
     assert [int(x["local_index"]) for x in rows] == list(range(EXPECTED_GLYPHS))
     assert int(rows[0]["glyph_id_decimal"]) == 0x200
-    assert int(rows[-1]["glyph_id_decimal"]) == 0x481
+    assert int(rows[-1]["glyph_id_decimal"]) == 0x482
     assert all(x["source"] for x in rows)
 
     report = json.loads((GENERATED / "font-v0-report.json").read_text(encoding="utf-8"))
@@ -67,7 +67,7 @@ def main() -> None:
     print(f"  extended glyphs: {EXPECTED_GLYPHS}")
     print(f"  padded slots: {EXPECTED_PADDED}")
     print(f"  raw font data: {(len(normal)+len(small)+len(short))*2} bytes")
-    print("  coverage: 642 / 642")
+    print("  coverage: 643 / 643")
 
 if __name__ == "__main__":
     main()

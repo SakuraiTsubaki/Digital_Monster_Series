@@ -641,3 +641,4 @@ char,codepoint,script,species_occurrences,technique_occurrences,total_occurrence
 Ｚ,U+FF3A,Other,0,1,1,technique:993:ガイアフォースＺＥＲＯ
 ＿,U+FF3F,Other,1,0,1,species:870:イグドラシル＿７Ｄ６
 ￥,U+FFE5,Other,0,1,1,technique:1291:￥UE-N
+尾,U+5C3E,Han,0,1,1,technique:2563:鳴尾（ナリビ）

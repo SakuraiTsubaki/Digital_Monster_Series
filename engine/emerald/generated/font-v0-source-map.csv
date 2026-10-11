@@ -641,3 +641,4 @@ local_index,glyph_id_hex,glyph_id_decimal,char,codepoint,source,source_encoding,
 639,0x047F,1151,＿,U+FF3F,M+ Bitmap Font mplus_j12r,JISX0208 0x2132,"12x13+0,-2",yes,no (font-v0 fallback)
 640,0x0480,1152,～,U+FF5E,M+ Bitmap Font mplus_j12r,JISX0208 0x2141,"12x13+0,-2",yes,no (font-v0 fallback)
 641,0x0481,1153,￥,U+FFE5,M+ Bitmap Font mplus_j12r,JISX0208 0x216F,"12x13+0,-2",yes,no (font-v0 fallback)
+642,0x0482,1154,尾,U+5C3E,M+ Bitmap Font mplus_j12r,JISX0208 0x4878,"12x13+0,-2",yes,no (font-v0 fallback)

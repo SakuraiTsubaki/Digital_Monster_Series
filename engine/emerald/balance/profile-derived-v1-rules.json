@@ -108,7 +108,7 @@
       "female_percent": 50,
       "male_percent": 50,
       "engine_value": "PERCENT_FEMALE(50)",
-      "scope": "all_1468_runtime_entities",
+      "scope": "all_1473_runtime_entities",
       "note": "Explicit project gameplay rule; do not present as official Digimon/Appmon encyclopedia data."
     }
   },

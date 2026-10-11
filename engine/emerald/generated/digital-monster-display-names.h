@@ -4,7 +4,7 @@
 // Full official Japanese display strings. These are pointer-backed on purpose;
 // do not copy them into POKEMON_NAME_LENGTH / MOVE_NAME_LENGTH fixed buffers.
 
-static const u8 *const gDigitalMonsterSpeciesDisplayNames[1470] =
+static const u8 *const gDigitalMonsterSpeciesDisplayNames[1474] =
 {
     [0] = COMPOUND_STRING("-"),
     [1] = COMPOUND_STRING("ノスフェラモン"),
@@ -1476,9 +1476,13 @@ static const u8 *const gDigitalMonsterSpeciesDisplayNames[1470] =
     [1467] = COMPOUND_STRING("スワイプモン(ライフ)"),
     [1468] = COMPOUND_STRING("ダンテモン"),
     [1469] = COMPOUND_STRING("ヴォルブモン"),
+    [1470] = COMPOUND_STRING("フィカスモン"),
+    [1471] = COMPOUND_STRING("ルートモン"),
+    [1472] = COMPOUND_STRING("セキリュウモン"),
+    [1473] = COMPOUND_STRING("スズモン"),
 };
 
-static const u8 *const gDigitalMonsterTechniqueDisplayNames[2559] =
+static const u8 *const gDigitalMonsterTechniqueDisplayNames[2568] =
 {
     [0] = COMPOUND_STRING("-"),
     [1] = COMPOUND_STRING("ランページバレット"),
@@ -4039,6 +4043,15 @@ static const u8 *const gDigitalMonsterTechniqueDisplayNames[2559] =
     [2556] = COMPOUND_STRING("断鉄剣（だんてつけん）"),
     [2557] = COMPOUND_STRING("戸締用心(とじまりようじん)"),
     [2558] = COMPOUND_STRING("レヴォルティオレールム"),
+    [2559] = COMPOUND_STRING("アームドテンドリル"),
+    [2560] = COMPOUND_STRING("エントワイン"),
+    [2561] = COMPOUND_STRING("天薙剣（あまなぎのつるぎ）"),
+    [2562] = COMPOUND_STRING("玉雲(ぎょくうん)"),
+    [2563] = COMPOUND_STRING("鳴尾（ナリビ）"),
+    [2564] = COMPOUND_STRING("デマイズスフィア"),
+    [2565] = COMPOUND_STRING("アブソープションサークル"),
+    [2566] = COMPOUND_STRING("エクリプスインパクト"),
+    [2567] = COMPOUND_STRING("ヴォイドカノン"),
 };
 
 #endif // DIGITAL_MONSTER_DISPLAY_NAMES_H

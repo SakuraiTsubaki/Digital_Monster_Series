@@ -63,14 +63,14 @@
   ],
   "immediate_capacity_checks": {
     "entity_catalog": {
-      "digimon_reference_rows": 1320,
+      "digimon_reference_rows": 1325,
       "appmon_rows": 148,
-      "combined_rows": 1468,
+      "combined_rows": 1473,
       "species_id_limit": 2047,
       "result": "fits"
     },
     "technique_catalog": {
-      "digimon_reference_move_rows": 2593,
+      "digimon_reference_move_rows": 2603,
       "appmon_move_rows": 279,
       "move_id_limit": 2047,
       "result": "unique_count_required_before_decision"

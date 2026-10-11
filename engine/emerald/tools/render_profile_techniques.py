@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render all 2,557 profile-derived Digital Monster MoveInfo entries."""
+"""Render all profile-derived Digital Monster MoveInfo entries."""
 from __future__ import annotations
 
 import argparse
@@ -23,8 +23,8 @@ def main() -> None:
     args = ap.parse_args()
 
     data = rows(args.parameters)
-    if len(data) != 2558:
-        raise SystemExit(f"expected 2558 technique rows, got {len(data)}")
+    if len(data) != 2567:
+        raise SystemExit(f"expected 2567 technique rows, got {len(data)}")
 
     out: list[str] = []
     out.append("// Generated profile-derived-v1 Digital Monster MoveInfo entries.")

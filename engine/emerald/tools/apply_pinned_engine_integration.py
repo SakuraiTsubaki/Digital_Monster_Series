@@ -221,7 +221,7 @@ def main() -> None:
     t = t[:pos] + '\n#ifdef DIGITAL_MONSTER_SERIES\n#include "digital_monster/moves_info.inc"\n#endif\n' + t[pos:]
     write(root, rel, t)
 
-    # Disable Pokemon family/form systems whose numeric IDs overlap 1..1468.
+    # Disable Pokemon family/form systems whose numeric IDs overlap 1..1473.
     rel = "include/config/species_enabled.h"
     t = read(root, rel)
     marker = "// To disable specific families, replace P_GEN_x_POKEMON with FALSE.\n"

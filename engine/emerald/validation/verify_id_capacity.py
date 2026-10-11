@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 GEN = ROOT / "generated"
 
 ENTITY_MAX = (1 << 11) - 1
-TECHNIQUE_LOGICAL_MAX = 2558
+TECHNIQUE_LOGICAL_MAX = 2567
 TECHNIQUE_RUNTIME_MAX = (1 << 12) - 1
-EXPECTED_ENTITIES = 1469
-EXPECTED_TECHNIQUES = 2558
+EXPECTED_ENTITIES = 1473
+EXPECTED_TECHNIQUES = 2567
 
 
 def ids(path: Path, column: str) -> list[int]:

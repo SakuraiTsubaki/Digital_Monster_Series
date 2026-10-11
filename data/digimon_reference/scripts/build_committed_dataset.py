@@ -36,6 +36,10 @@ def main() -> None:
     release = []
     for row in rows:
         item = dict(row)
+        # The related-card carousel is a rotating recommendation surface, not
+        # stable encyclopedia metadata. Keep it out of the committed bundle so
+        # identical official profiles produce deterministic artifacts.
+        item.pop("related_digimon", None)
         profile = item.get("profile_ja")
         item["profile_ja"] = None
         item["profile_ja_available_on_official_page"] = profile is not None

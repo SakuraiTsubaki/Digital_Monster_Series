@@ -7,9 +7,9 @@ catalog:
   replace_pokemon_species_catalog: true
   append_to_existing_pokemon_catalog: false
   species_id_start: 1
-  species_id_end: 1468
+  species_id_end: 1473
   technique_id_start: 1
-  technique_id_end: 2557
+  technique_id_end: 2567
 
 storage:
   species_bits: 11
@@ -36,7 +36,7 @@ parameter_policy:
 
 activation:
   species_info_enabled: false
-  reason: legacy gameplay-v0 battle parameters are deprecated; profile-derived-v1 evidence-backed parameters are not yet complete for all 1468 entities
+  reason: legacy gameplay-v0 battle parameters are deprecated; profile-derived-v1 evidence-backed parameters are not yet complete for all 1473 entities
   never_use_unrelated_pokemon_stats_as_fallback: true
   never_truncate_official_names: true
 

@@ -2562,11 +2562,19 @@
 #define DM_TECHNIQUE_2555 2555 /* ボディスピアー */
 #define DM_TECHNIQUE_2556 2556 /* 断鉄剣（だんてつけん） */
 #define DM_TECHNIQUE_2557 2557 /* 戸締用心(とじまりようじん) */
-
 #define DM_TECHNIQUE_2558 2558 /* レヴォルティオレールム */
+#define DM_TECHNIQUE_2559 2559 /* アームドテンドリル */
+#define DM_TECHNIQUE_2560 2560 /* エントワイン */
+#define DM_TECHNIQUE_2561 2561 /* 天薙剣（あまなぎのつるぎ） */
+#define DM_TECHNIQUE_2562 2562 /* 玉雲(ぎょくうん) */
+#define DM_TECHNIQUE_2563 2563 /* 鳴尾（ナリビ） */
+#define DM_TECHNIQUE_2564 2564 /* デマイズスフィア */
+#define DM_TECHNIQUE_2565 2565 /* アブソープションサークル */
+#define DM_TECHNIQUE_2566 2566 /* エクリプスインパクト */
+#define DM_TECHNIQUE_2567 2567 /* ヴォイドカノン */
 
-#define DM_TECHNIQUE_COUNT 2559
-#define DM_TECHNIQUE_LAST 2558
+#define DM_TECHNIQUE_COUNT 2568
+#define DM_TECHNIQUE_LAST 2567
 #define DM_TECHNIQUE_RUNTIME_ID(logicalId) (DM_RUNTIME_MOVE_BASE + (logicalId) - 1)
 
 #endif // DIGITAL_MONSTER_TECHNIQUE_IDS_H

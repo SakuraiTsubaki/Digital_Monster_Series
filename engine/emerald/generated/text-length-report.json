@@ -6,12 +6,12 @@
     "move_name_length": 16
   },
   "species": {
-    "count": 1468,
+    "count": 1473,
     "max_codepoints": 22,
     "over_current_limit": 104
   },
   "techniques": {
-    "count": 2557,
+    "count": 2567,
     "max_codepoints": 30,
     "over_current_limit": 68
   },

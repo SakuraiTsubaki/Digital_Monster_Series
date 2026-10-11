@@ -12,7 +12,7 @@ from __future__ import annotations
 import argparse, csv, struct, zlib
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
 GLYPH_MAP = ROOT / "engine/emerald/generated/digital-monster-glyph-map.csv"
 OUT = ROOT / "engine/emerald/generated/font-atlas"
 
@@ -22,7 +22,7 @@ PALETTE = [
     (0xD8,0xD8,0xD8),
     (0xFF,0xFF,0xFF),
 ]
-COUNT = 642
+COUNT = 643
 COLS = 16
 ROWS = 41
 
@@ -72,9 +72,9 @@ def validate():
             raise SystemExit(f"{name}: {got} != {exp}")
     rows=read_map()
     assert int(rows[0]["glyph_id_decimal"])==0x200
-    assert int(rows[-1]["glyph_id_decimal"])==0x481
+    assert int(rows[-1]["glyph_id_decimal"])==0x482
     print("Digital Monster extended Japanese atlas layout verified")
-    print("  mapped glyphs: 642")
+    print("  mapped glyphs: 643")
     print("  padded capacity: 656")
     print("  halfwidth: 128x656 / 8x16")
     print("  fullwidth: 256x656 / 16x16")

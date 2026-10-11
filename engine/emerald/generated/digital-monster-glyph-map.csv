@@ -641,3 +641,4 @@ char,codepoint,glyph_id_hex,glyph_id_decimal
 ＿,U+FF3F,0x047F,1151
 ～,U+FF5E,0x0480,1152
 ￥,U+FFE5,0x0481,1153
+尾,U+5C3E,0x0482,1154

@@ -12,12 +12,14 @@ static const struct LevelUpMove sDigitalMonster0002LevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sDigitalMonster0003LevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, DM_MOVE_BOOTSTRAP_ATTACK), // no official technique listed; gameplay-v0 fallback
+    LEVEL_UP_MOVE( 1, DM_MOVE_2566), /* エクリプスインパクト */
+    LEVEL_UP_MOVE(10, DM_MOVE_2567), /* ヴォイドカノン */
     LEVEL_UP_END
 };
 
 static const struct LevelUpMove sDigitalMonster0004LevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, DM_MOVE_BOOTSTRAP_ATTACK), // no official technique listed; gameplay-v0 fallback
+    LEVEL_UP_MOVE( 1, DM_MOVE_2564), /* デマイズスフィア */
+    LEVEL_UP_MOVE(10, DM_MOVE_2565), /* アブソープションサークル */
     LEVEL_UP_END
 };
 

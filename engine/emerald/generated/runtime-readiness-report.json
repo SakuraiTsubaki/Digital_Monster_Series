@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "profile": "digital_monster_replacement",
-  "total_entities": 1468,
+  "total_entities": 1473,
   "source_backed_now": [
     "stable species ID",
     "Japanese official name",
@@ -42,8 +42,8 @@
   "engine_replacement": {
     "replace_pokemon_species_catalog": true,
     "append_to_existing_pokemon_catalog": false,
-    "target_species_range": "1..1468",
-    "target_move_range": "1..2557",
+    "target_species_range": "1..1473",
+    "target_move_range": "1..2567",
     "species_bits": 11,
     "move_bits": 12
   }

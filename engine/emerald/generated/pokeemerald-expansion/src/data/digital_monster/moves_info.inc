@@ -38607,6 +38607,143 @@
         .battleAnimScript = gBattleAnimMove_Pound,
     }, /* レヴォルティオレールム | profile-derived-v1 | resolved_damage_core_only */
 
+    [DM_MOVE_2559] =
+    {
+        .name = COMPOUND_STRING("アームドテンドリル"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 68,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* アームドテンドリル | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2560] =
+    {
+        .name = COMPOUND_STRING("エントワイン"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 45,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 30,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* エントワイン | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2561] =
+    {
+        .name = COMPOUND_STRING("天薙剣（あまなぎのつるぎ）"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 95,
+        .type = TYPE_DRAGON,
+        .accuracy = 95,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* 天薙剣（あまなぎのつるぎ） | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2562] =
+    {
+        .name = COMPOUND_STRING("玉雲(ぎょくうん)"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 76,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* 玉雲(ぎょくうん) | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2563] =
+    {
+        .name = COMPOUND_STRING("鳴尾（ナリビ）"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 51,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 30,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* 鳴尾（ナリビ） | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2564] =
+    {
+        .name = COMPOUND_STRING("デマイズスフィア"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 177,
+        .type = TYPE_NORMAL,
+        .accuracy = 85,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* デマイズスフィア | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2565] =
+    {
+        .name = COMPOUND_STRING("アブソープションサークル"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 157,
+        .type = TYPE_NORMAL,
+        .accuracy = 90,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* アブソープションサークル | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2566] =
+    {
+        .name = COMPOUND_STRING("エクリプスインパクト"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 176,
+        .type = TYPE_NORMAL,
+        .accuracy = 85,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* エクリプスインパクト | profile-derived-v1 | resolved_damage_core_only */
+
+    [DM_MOVE_2567] =
+    {
+        .name = COMPOUND_STRING("ヴォイドカノン"),
+        .description = COMPOUND_STRING("Profile-derived Digital Monster technique."),
+        .effect = EFFECT_HIT,
+        .power = 126,
+        .type = TYPE_NORMAL,
+        .accuracy = 90,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Pound,
+    }, /* ヴォイドカノン | profile-derived-v1 | resolved_damage_core_only */
+
     [DM_MOVE_BOOTSTRAP_ATTACK] =
     {
         .name = COMPOUND_STRING("DM-Bootstrap"),

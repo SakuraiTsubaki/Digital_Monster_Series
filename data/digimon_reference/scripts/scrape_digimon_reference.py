@@ -353,6 +353,7 @@ def main():
 - 언어 경로: 일본어 `/reference/`, 영어 `/reference_en/`, 간체 `/reference_zh-CHS/`, 번체 `/reference_zh-CHT/`, 한국어 `/reference_ko/`; 상세 페이지는 같은 `directory_name` 쿼리를 사용.
 - 검색: `digimon_name`, 오십음 `name`, `digimon_level`, `attribute`, `type`; 목록 응답은 JSON.
 - 마스터 기준: 일본어 페이지 원문. 정규화 필드는 현재 원문과 동일하게 두어 변환/추측을 하지 않음.
+- 관련 디지몬 카드: 요청마다 바뀌는 추천 영역이므로 원본 수집에는 남기되 커밋 데이터의 핵심 대조에서는 제외.
 - 재현: 저장된 `scrape_digimon_reference.py` 실행 결과이며 `raw/index.html`, `raw/details/*.html`, SHA-256을 검증 근거로 포함.
 """
     (root / "reports/site_structure.md").write_text(site_md, encoding="utf-8")

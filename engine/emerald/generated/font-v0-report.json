@@ -2,12 +2,12 @@
   "schema": 1,
   "profile": "font-v0",
   "canonical": false,
-  "mapped_glyphs": 642,
+  "mapped_glyphs": 643,
   "padded_capacity": 656,
-  "unused_tail_slots": 14,
+  "unused_tail_slots": 13,
   "source_counts": {
     "M+ Bitmap Font mplus_f12r": 1,
-    "M+ Bitmap Font mplus_j12r": 638,
+    "M+ Bitmap Font mplus_j12r": 639,
     "Ark Pixel Font 12px Mono zh_cn": 3
   },
   "coverage_complete": true,

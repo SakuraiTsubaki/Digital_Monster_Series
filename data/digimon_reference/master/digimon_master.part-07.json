@@ -1,5 +1,165 @@
 [
   {
+    "directory_name": "zurumon",
+    "detail_url": "https://digimon.net/reference/detail.php?directory_name=zurumon",
+    "http_status": 200,
+    "name_ja": "ズルモン",
+    "name_roman": "ZURUMON",
+    "level_raw": "幼年期Ⅰ",
+    "level_normalized": "幼年期Ⅰ",
+    "type_raw": "スライム型",
+    "type_normalized": "スライム型",
+    "attribute_raw": null,
+    "attribute_normalized": null,
+    "special_moves_raw": "・毒の泡",
+    "special_moves": [
+      "毒の泡"
+    ],
+    "profile_ja": null,
+    "main_image_url": "https://digimon.net/cimages/digimon/zurumon.jpg",
+    "has_additional_illustrations": false,
+    "additional_illustration_urls": [],
+    "all_official_image_urls": [
+      "https://digimon.net/cimages/digimon/zurumon.jpg"
+    ],
+    "page_sha256": "b81187d47b1e2ea1718aba3fcf0057f42011dd95202869d4b134d37ddeddc56a",
+    "listing_metadata": {
+      "directory_name": "zurumon",
+      "name": "ズルモン",
+      "level": "幼年期Ⅰ",
+      "level_2": null,
+      "icon_20th": 0,
+      "icon_new": 0,
+      "level_order": 1,
+      "relate_word6": null
+    },
+    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "profile_ja_available_on_official_page": true,
+    "profile_ja_char_count": 151,
+    "profile_ja_sha256": "2e1b3c8f1b983b90accddb8be3b4c611cc639286b0ab7ddd3733675bbb2ac859",
+    "profile_ja_omitted_from_bundle": true
+  },
+  {
+    "directory_name": "jyarimon",
+    "detail_url": "https://digimon.net/reference/detail.php?directory_name=jyarimon",
+    "http_status": 200,
+    "name_ja": "ジャリモン",
+    "name_roman": "JYARIMON",
+    "level_raw": "幼年期Ⅰ",
+    "level_normalized": "幼年期Ⅰ",
+    "type_raw": "スライム型",
+    "type_normalized": "スライム型",
+    "attribute_raw": null,
+    "attribute_normalized": null,
+    "special_moves_raw": "・熱気を帯びた泡",
+    "special_moves": [
+      "熱気を帯びた泡"
+    ],
+    "profile_ja": null,
+    "main_image_url": "https://digimon.net/cimages/digimon/jyarimon.jpg",
+    "has_additional_illustrations": false,
+    "additional_illustration_urls": [],
+    "all_official_image_urls": [
+      "https://digimon.net/cimages/digimon/jyarimon.jpg"
+    ],
+    "page_sha256": "08c45744cc548f2d4e8ca2268eb064ee8f8c79fd47f4ed7a52651e0e3e0f1f29",
+    "listing_metadata": {
+      "directory_name": "jyarimon",
+      "name": "ジャリモン",
+      "level": "幼年期Ⅰ",
+      "level_2": null,
+      "icon_20th": 0,
+      "icon_new": 0,
+      "level_order": 1,
+      "relate_word6": null
+    },
+    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "profile_ja_available_on_official_page": true,
+    "profile_ja_char_count": 207,
+    "profile_ja_sha256": "459dee8249f15cf06d53471e1b8266b502bf40b0aeb2da8640bde486e5fd5036",
+    "profile_ja_omitted_from_bundle": true
+  },
+  {
+    "directory_name": "sakumon",
+    "detail_url": "https://digimon.net/reference/detail.php?directory_name=sakumon",
+    "http_status": 200,
+    "name_ja": "サクモン",
+    "name_roman": "SAKUMON",
+    "level_raw": "幼年期Ⅰ",
+    "level_normalized": "幼年期Ⅰ",
+    "type_raw": "武器型",
+    "type_normalized": "武器型",
+    "attribute_raw": null,
+    "attribute_normalized": null,
+    "special_moves_raw": "・サックリ",
+    "special_moves": [
+      "サックリ"
+    ],
+    "profile_ja": null,
+    "main_image_url": "https://digimon.net/cimages/digimon/sakumon.jpg",
+    "has_additional_illustrations": false,
+    "additional_illustration_urls": [],
+    "all_official_image_urls": [
+      "https://digimon.net/cimages/digimon/sakumon.jpg"
+    ],
+    "page_sha256": "4c47c83d72c70999d3fa90b7045cbe92f776e8a1cf74bd552063b062b504d34a",
+    "listing_metadata": {
+      "directory_name": "sakumon",
+      "name": "サクモン",
+      "level": "幼年期Ⅰ",
+      "level_2": null,
+      "icon_20th": 0,
+      "icon_new": 0,
+      "level_order": 1,
+      "relate_word6": null
+    },
+    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "profile_ja_available_on_official_page": true,
+    "profile_ja_char_count": 117,
+    "profile_ja_sha256": "2327c1fda51da4e8bd6b813f7926b59c073081cccf819f87d338de08c9d1433c",
+    "profile_ja_omitted_from_bundle": true
+  },
+  {
+    "directory_name": "cocomon",
+    "detail_url": "https://digimon.net/reference/detail.php?directory_name=cocomon",
+    "http_status": 200,
+    "name_ja": "ココモン",
+    "name_roman": "COCOMON",
+    "level_raw": "幼年期Ⅰ",
+    "level_normalized": "幼年期Ⅰ",
+    "type_raw": "スライム型",
+    "type_normalized": "スライム型",
+    "attribute_raw": null,
+    "attribute_normalized": null,
+    "special_moves_raw": "・酸の泡",
+    "special_moves": [
+      "酸の泡"
+    ],
+    "profile_ja": null,
+    "main_image_url": "https://digimon.net/cimages/digimon/cocomon.jpg",
+    "has_additional_illustrations": false,
+    "additional_illustration_urls": [],
+    "all_official_image_urls": [
+      "https://digimon.net/cimages/digimon/cocomon.jpg"
+    ],
+    "page_sha256": "f46b78e6e3085547f961f6b53ed5a8810bde0fdb3bf594225c48c34e121d8e38",
+    "listing_metadata": {
+      "directory_name": "cocomon",
+      "name": "ココモン",
+      "level": "幼年期Ⅰ",
+      "level_2": null,
+      "icon_20th": 0,
+      "icon_new": 0,
+      "level_order": 1,
+      "relate_word6": null
+    },
+    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "profile_ja_available_on_official_page": true,
+    "profile_ja_char_count": 197,
+    "profile_ja_sha256": "fa76eb3546d9f3eb32c35988e054b286a39586134b894b2c9fae2a6c942033f9",
+    "profile_ja_omitted_from_bundle": true
+  },
+  {
     "directory_name": "kuramon",
     "detail_url": "https://digimon.net/reference/detail.php?directory_name=kuramon",
     "http_status": 200,
@@ -22,27 +182,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/kuramon.jpg"
     ],
-    "related_digimon": [
-      {
-        "directory_name": "tsumemon",
-        "name_ja": "ツメモン",
-        "type_attribute_display": "種族不明 / -",
-        "url": "https://digimon.net/reference/detail.php?directory_name=tsumemon"
-      },
-      {
-        "directory_name": "keramon",
-        "name_ja": "ケラモン",
-        "type_attribute_display": "種族不明 / 不明",
-        "url": "https://digimon.net/reference/detail.php?directory_name=keramon"
-      },
-      {
-        "directory_name": "armagemon",
-        "name_ja": "アーマゲモン",
-        "type_attribute_display": "種族不明 / 不明",
-        "url": "https://digimon.net/reference/detail.php?directory_name=armagemon"
-      }
-    ],
-    "page_sha256": "90cce0b0981eaf2f3d24df9aa4d116e6401954ae594f20ef164910a07531bba3",
+    "page_sha256": "d9c83097198ec32133c42b3c4c9182e7c7cb501d40453f2d8d84a26becc1f3a3",
     "listing_metadata": {
       "directory_name": "kuramon",
       "name": "クラモン",
@@ -53,7 +193,7 @@
       "level_order": 1,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-01T13:57:36.887645+00:00",
+    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 226,
     "profile_ja_sha256": "d36e8bcd08b5dee7fb10da845c07bd1983f267a5e9b62ccad3cb3e25fd93ea80",
