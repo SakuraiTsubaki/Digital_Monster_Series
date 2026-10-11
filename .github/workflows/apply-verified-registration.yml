@@ -33,7 +33,7 @@ jobs:
           cat .codex/registration-parts/part-* > /tmp/registration.patch.gz
           gzip -dc /tmp/registration.patch.gz > /tmp/registration.patch
           git apply --index --whitespace=nowarn /tmp/registration.patch
-          git rm -r .codex/registration-parts .github/workflows/apply-verified-registration.yml
+          git rm -r .codex/registration-parts
 
       - name: Validate official dataset and runtime catalogs
         run: |
@@ -80,6 +80,7 @@ jobs:
 
       - name: Commit verified registration to main
         run: |
+          git restore --staged --worktree --source=HEAD .github/workflows/profile-derived-parameters.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Register four new official Digimon"
