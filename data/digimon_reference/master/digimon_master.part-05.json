@@ -24,7 +24,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/apollomon.jpg"
     ],
-    "page_sha256": "5695dda11d1c82deadaf97ef8573919dc58fe32f9f86a78fc345c6a0898a368f",
+    "page_sha256": "77e3c87c24e915ec7ae7b31ceb939f25728bcaf495ccc74a6dc71f3d90acc5e2",
     "listing_metadata": {
       "directory_name": "apollomon",
       "name": "アポロモン",
@@ -35,7 +35,7 @@
       "level_order": 6,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 194,
     "profile_ja_sha256": "6d20d1edf563ad2f3528e0647315c08a4bff99f37b51ff5e535ca2006957b247",
@@ -64,7 +64,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/apoclymon.jpg"
     ],
-    "page_sha256": "bd7910e8d43bede6a93853ecb4072a8980d0bbe0a1b26991601e544215c83aa9",
+    "page_sha256": "6e9766ca230d8ac4e590f6c8f1e83552fc75943049f92225cf5114ada0ba7a31",
     "listing_metadata": {
       "directory_name": "apoclymon",
       "name": "アポカリモン",
@@ -75,7 +75,7 @@
       "level_order": 6,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 252,
     "profile_ja_sha256": "bda60b8ed57713b7dd4cf9d9e099f2b9abe6dda54487239e74f36767742e49c8",
@@ -105,7 +105,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/anubimon.jpg"
     ],
-    "page_sha256": "e5d55f2b79f7c746fc16918a34e0657163e805168687812248a4a191b2fee43f",
+    "page_sha256": "40c8b165ca7409f309413c9706134bf0d8e7b23d4a7d278ac91319585abe1101",
     "listing_metadata": {
       "directory_name": "anubimon",
       "name": "アヌビモン",
@@ -116,7 +116,7 @@
       "level_order": 6,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 311,
     "profile_ja_sha256": "b8aad519798e0276e5a8549f2a33e44434c72ff1f2f0d784e0a5bc922181cfc4",
@@ -146,7 +146,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/armagemon.jpg"
     ],
-    "page_sha256": "cdfe2683ad3a8816570fbc7586a630547eda1c087b9d475a78d5e9063fa21a56",
+    "page_sha256": "f81cfffce07316284d66b138cc42e9d8194eec1f472d5e2e3c0fa5c71e8be007",
     "listing_metadata": {
       "directory_name": "armagemon",
       "name": "アーマゲモン",
@@ -157,7 +157,7 @@
       "level_order": 6,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 290,
     "profile_ja_sha256": "0ef440d43be5f992314711113760b39eab7907647ac6c588d0566bc14996f7af",
@@ -187,7 +187,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/avengekidmon.jpg"
     ],
-    "page_sha256": "99edd7452583ab8bc022bed2dc5538d5900b22aac7460cde0d010eb3ca4d52ff",
+    "page_sha256": "cd942e82edb12b98c16aeba499da70c6a35e2cbd66091ef73bc55678b834d4d3",
     "listing_metadata": {
       "directory_name": "avengekidmon",
       "name": "アヴェンジキッドモン",
@@ -198,7 +198,7 @@
       "level_order": 6,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 291,
     "profile_ja_sha256": "5fd6c256cb3c0d41a9ca71d08298cb5e97100dd7d425d2f7763e48ea7f5053fc",
@@ -227,7 +227,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/warumonzaemon.jpg"
     ],
-    "page_sha256": "211fa509667c3da88da26aea056896ec20dfa96afb52c86b8b41c2e03ee56e33",
+    "page_sha256": "e1c24478f0258adba7f697e0a6a6e6767c94bd71fd3093e7ae772ef4f8831074",
     "listing_metadata": {
       "directory_name": "warumonzaemon",
       "name": "ワルもんざえモン",
@@ -238,7 +238,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 265,
     "profile_ja_sha256": "f6cb279c13edc4cdf6c241b2221bfd5c712ba905aa3d5247a161bd5b0200166a",
@@ -269,7 +269,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/waruseadramon.jpg"
     ],
-    "page_sha256": "0cf269e2f85c301a1d4bfe6d06c965638a9bfdcb7c8b691ab1d30909b6fb051a",
+    "page_sha256": "af3f8b12f07175a609bee271c55f258e7e89724a468f4a6e33f0cb66e1762391",
     "listing_metadata": {
       "directory_name": "waruseadramon",
       "name": "ワルシードラモン",
@@ -280,7 +280,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 130,
     "profile_ja_sha256": "391060c966702ec2195b7c5ae1643a995d135e33219c45a1d2e2fe677117abcb",
@@ -310,7 +310,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/wisemon.jpg"
     ],
-    "page_sha256": "7e222ccd61b5d0104f4aeaa8d986e07fa9fc43344fa46c6e732b6cff0563fb71",
+    "page_sha256": "b92d4e4210b41818845ee0f55b1c620bd9e31c0d105448c0cacc418caf1e5037",
     "listing_metadata": {
       "directory_name": "wisemon",
       "name": "ワイズモン",
@@ -321,7 +321,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 271,
     "profile_ja_sha256": "cdfad431115740984f4143a3eb37dc2c84defaa3769eaae61f5b6776815aa7ad",
@@ -350,7 +350,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/weregarrumon.jpg"
     ],
-    "page_sha256": "ca128d32a4d3271d3e1272e80dee1890ab9567779fe6affe167c10a3122cc9aa",
+    "page_sha256": "6edaf9aabc09f39074e1faef201f0e8b2a6f37d03eb9a3d00bbc9d54f9d6a3e2",
     "listing_metadata": {
       "directory_name": "weregarrumon",
       "name": "ワーガルルモン",
@@ -361,7 +361,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 212,
     "profile_ja_sha256": "7d8a5f991d428ac338bc67dabee983c0d7455423325ff5c750b3c3f970e5dfdb",
@@ -391,7 +391,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/locomon.jpg"
     ],
-    "page_sha256": "bc3d6b6af053b4749421ccebbcbbe4121f655525ec6cf33649e86dbc3e8529cb",
+    "page_sha256": "4cfaf98ce19baa3fa5299dd0dab349066328cfa086aba6717c9c893f36d657e3",
     "listing_metadata": {
       "directory_name": "locomon",
       "name": "ロコモン",
@@ -402,7 +402,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 282,
     "profile_ja_sha256": "8f03f829ccf752535a75d604749a5ffb5a0bcb972775d51c78de5e4422c9f3b5",
@@ -432,7 +432,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/loaderleomon.jpg"
     ],
-    "page_sha256": "440f5fd4e2a0b360c826d393cd41802cd9f2eda0d552c2a997754c57c25a6439",
+    "page_sha256": "3583d58700b2c108f29c603dfd8da1b9eb0d92f186c6b6b222a5d63575a507a8",
     "listing_metadata": {
       "directory_name": "loaderleomon",
       "name": "ローダーレオモン",
@@ -443,7 +443,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 315,
     "profile_ja_sha256": "06990c63b570940f31cfd3b087bc1d82e7a0052797297f31091f7ee30742955b",
@@ -473,7 +473,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/ladydevimon.jpg"
     ],
-    "page_sha256": "52105812800da2ecea41f7e1c089ea58b385aab65c4d3023e192535574ce68ce",
+    "page_sha256": "45e08a6fdd3a01a22cc87fa6cf43fba8515de9dfaabd833cf2161167569b2548",
     "listing_metadata": {
       "directory_name": "ladydevimon",
       "name": "レディーデビモン",
@@ -484,7 +484,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 193,
     "profile_ja_sha256": "6b1946698e8522183a6a0697592d82a35a83806683565e416c6195d14262a047",
@@ -514,7 +514,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/luminamon.jpg"
     ],
-    "page_sha256": "a46ecfeb4ce7bea57828b4c80b8e6d75639dde26d6baa4f1d7517bf1e7cb85af",
+    "page_sha256": "67f270d85d0168a12c8c11f9bad290d219881b63f14c2d163f37cd74e5f0ab9f",
     "listing_metadata": {
       "directory_name": "luminamon",
       "name": "ルミナモン",
@@ -525,7 +525,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 223,
     "profile_ja_sha256": "1d6a8e91617492d38ab7149b7f5933e75f806c9d632addfd2ecb1ea379bf92bc",
@@ -566,7 +566,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 340,
     "profile_ja_sha256": "efb36ed245d59f10cca450d40ad15cb53f103a24f8485f40fa38962f2821057d",
@@ -597,7 +597,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/rookchessmon.jpg"
     ],
-    "page_sha256": "b855296df761ec1638a5614ac9a4b41e3f5f41457e095743df48b333b4b6b91a",
+    "page_sha256": "503f4b3cc0ab544cf91d857f8fcfaef94bc52250cc0979ca7d5e68427f458146",
     "listing_metadata": {
       "directory_name": "rookchessmon",
       "name": "ルークチェスモン",
@@ -608,7 +608,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 157,
     "profile_ja_sha256": "79c24f9d69768f5eedc169da72909798a51ce5c0d10528849baad15386bf3713",
@@ -637,7 +637,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/lilimon.jpg"
     ],
-    "page_sha256": "4c90e5263099401282c8f635506c3647b80913295ad7f859e92fa71c075387d0",
+    "page_sha256": "8c72ec1b159a0f46f515bb13208eb2bfe60158f524df7d03d28e41a0e3f62e2b",
     "listing_metadata": {
       "directory_name": "lilimon",
       "name": "リリモン",
@@ -648,7 +648,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 285,
     "profile_ja_sha256": "023cf6765bdb379199302169391782378f8a6989419507154801f704b31454d4",
@@ -678,7 +678,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/rapidmon.jpg"
     ],
-    "page_sha256": "a629ea63215dc921eb98575975d91710698961ab1cb40acda49a600d07a02649",
+    "page_sha256": "cf7792d9b77630654e8b193b6c0d851556f0ec753bbc5121d5ffbc71c9860cd6",
     "listing_metadata": {
       "directory_name": "rapidmon",
       "name": "ラピッドモン",
@@ -689,7 +689,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 228,
     "profile_ja_sha256": "d59a66286ec082cea877d5953418d1f09ab9b6ed08494d3b287b1ee4eefb1abc",
@@ -720,7 +720,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/lilamon.jpg"
     ],
-    "page_sha256": "e4b139d025c03eacbdaac13a5404aea257aae547f8d1dd2c37263fdc641d9500",
+    "page_sha256": "874493ce8f53acac7bde946eadb54a723fd824a8bdce0bedd7adac4c9341cfed",
     "listing_metadata": {
       "directory_name": "lilamon",
       "name": "ライラモン",
@@ -731,7 +731,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 237,
     "profile_ja_sha256": "29ae4472778f8b2840618c11fd79ca586b2e52296ceb68e6499b726518b325b2",
@@ -762,7 +762,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/rizegreymon.jpg"
     ],
-    "page_sha256": "ae19a84b5420d150218a517748f5318ea17f3ad1cef78a2c8dba6b45f337e952",
+    "page_sha256": "58a7c9bb84e87928308a62ca29076093580c5f9348e2f75d72e0bb1b7e123fe9",
     "listing_metadata": {
       "directory_name": "rizegreymon",
       "name": "ライズグレイモン",
@@ -773,7 +773,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 274,
     "profile_ja_sha256": "adb418e1d6a7943dacd048e7d769977ee6a69230ea177d7bffd651d7fde64ddd",
@@ -803,7 +803,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/yatagaramon.jpg"
     ],
-    "page_sha256": "6922e41665463dd8f97399e0df6ad02c20b959a77bfe465f7aefcdf0266a2671",
+    "page_sha256": "f294e71c0bd08b7e1529804d858ffd92b03cfa51f51dfba2474e029c926c568a",
     "listing_metadata": {
       "directory_name": "yatagaramon",
       "name": "ヤタガラモン（2006年アニメ版）",
@@ -814,7 +814,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 414,
     "profile_ja_sha256": "889a2085c88de2982071f70578a39d92f182f465288108bfe93ed991b486bf17",
@@ -843,7 +843,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/monzaemon.jpg"
     ],
-    "page_sha256": "9dc0a06f319d02292ed6a4e1b94140a8ae697d7671bd9cca5e7330b1dfe3521a",
+    "page_sha256": "12569babfc682de47158e1739c847d88bf9e4e1bfacb7d24b768bbc468fa6453",
     "listing_metadata": {
       "directory_name": "monzaemon",
       "name": "もんざえモン",
@@ -854,7 +854,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 137,
     "profile_ja_sha256": "9b74024b160184b8b5d8cc2fc114bf10088b15bd7c428e3b576ba1156924fa31",
@@ -895,7 +895,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 215,
     "profile_ja_sha256": "24f289a5d772853aaf9c46a5bae2b097cf0ebd48f703714fd4a2f667738f33b2",
@@ -935,7 +935,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 143,
     "profile_ja_sha256": "7f3a353ae9e8dd6176814e0e89ac6b41862f6efc016d58ff08929975ebda18d7",
@@ -965,7 +965,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/metalfantomon.jpg"
     ],
-    "page_sha256": "b6256cfac8324d64a39b73a2c325bfba26ecd6b2b025a4640eb8b136dbaa4b83",
+    "page_sha256": "76175190625f3936b79b84080155b5d3d7865a88fa588c384be776a4297ad088",
     "listing_metadata": {
       "directory_name": "metalfantomon",
       "name": "メタルファントモン",
@@ -976,7 +976,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 200,
     "profile_ja_sha256": "1376bba0a6c314e2b5fa3220bc4fe75109e1e097ec3deca97072bf9c97b2e5f8",
@@ -1006,7 +1006,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/metaltyranomon.jpg"
     ],
-    "page_sha256": "9d0f7fcfe1e4841fedd763e360d7341e0164ee29e9aa527c6c296eb86347d7d0",
+    "page_sha256": "d93f1581dc08ea74af230df1de1b9e8a2e754b864abcd16c7e9c2b3809321d76",
     "listing_metadata": {
       "directory_name": "metaltyranomon",
       "name": "メタルティラノモン",
@@ -1017,7 +1017,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 190,
     "profile_ja_sha256": "9602063df80c062b39c4f1c12f65c2da47976f5f72418e63d24867fc18bedca8",
@@ -1048,7 +1048,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/metalgreymon-v.jpg"
     ],
-    "page_sha256": "e9387a127de31744a5bfbef6079aadcf895f0d261619e268bc95de129551b21f",
+    "page_sha256": "c9ac6e2296037d05d54e7259aa957527a2d00965debf985cf3f1c83716fb838c",
     "listing_metadata": {
       "directory_name": "metalgreymon-v",
       "name": "メタルグレイモン（ワクチン種）",
@@ -1059,7 +1059,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 369,
     "profile_ja_sha256": "20e6ab67bd5421625592e0358d8a127c8f0a2cabb8220497c493a83b14ec2c98",
@@ -1088,7 +1088,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/metalgreymon-web.jpg"
     ],
-    "page_sha256": "f4432a173d44faa99899958242e454ed5dd1baddc206454f814310f70821033b",
+    "page_sha256": "8671661682d26c2ca9822cac63510c3b096c93765a02f27c56ce2af77eedf45d",
     "listing_metadata": {
       "directory_name": "metalgreymon-web",
       "name": "メタルグレイモン（ウィルス種）",
@@ -1099,7 +1099,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 164,
     "profile_ja_sha256": "1af3d4d04937007abe1741ec3bdebd1e99f76056c0d9a5913faf0e909c5c8ea2",
@@ -1129,7 +1129,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/metallifekuwagamon.jpg"
     ],
-    "page_sha256": "656293202420e0dbfafc6f6aab28265c6913fe255822032f5520423847f33a3d",
+    "page_sha256": "1299fbd67573da98802b1fd29dd2cdeb8b6500a7b92a8c8bd2db1acd4191aead",
     "listing_metadata": {
       "directory_name": "metallifekuwagamon",
       "name": "メタリフェクワガーモン",
@@ -1140,7 +1140,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 230,
     "profile_ja_sha256": "260932e4968e40986602cf4b52b2a2f03a29503511de389480f0e294690db981",
@@ -1170,7 +1170,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/megalogrowmon.jpg"
     ],
-    "page_sha256": "51c4722fd4ea159f8848e5ea4c9089bc6531f5ceca0b42c38211448cdf2fe616",
+    "page_sha256": "a674769cb9d490719f5fdd350751dcf0cefcc36fd4ac3569eeffaa938fd0d900",
     "listing_metadata": {
       "directory_name": "megalogrowmon",
       "name": "メガログラウモン",
@@ -1181,7 +1181,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 284,
     "profile_ja_sha256": "d99a492779ed0e7c444de9f07010c80dc22374bcd8b16f3fa34ba8097a256ca5",
@@ -1211,7 +1211,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/megadramon.jpg"
     ],
-    "page_sha256": "4541bc420cb411cd60bd88b04d0c299665e159d5b339419fee0d507a168dd3cb",
+    "page_sha256": "fc1e5af41e8adc5a51e1ff4e893c1845958462ea86f4c5ac56fb34bef9b83a17",
     "listing_metadata": {
       "directory_name": "megadramon",
       "name": "メガドラモン",
@@ -1222,7 +1222,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 257,
     "profile_ja_sha256": "3bd2ec63f69531d75022f5db7c9812c9df03bf88473cce2886d3881e22027919",
@@ -1251,7 +1251,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/megaseadramon.jpg"
     ],
-    "page_sha256": "6baa2cc92348aaf407c0379166e2e5e599e67db294705f5eb1039432c97caec6",
+    "page_sha256": "1570c2384c7b9ba132f393f30081182b3237ebb46fbd98e190deeb9ddde97706",
     "listing_metadata": {
       "directory_name": "megaseadramon",
       "name": "メガシードラモン",
@@ -1262,7 +1262,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 218,
     "profile_ja_sha256": "196c1d6f22ee420c0b5fb8024f2d2cccb6d3a833f9477b806eef496f0d8ffeb9",
@@ -1292,7 +1292,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/meicrackmon.jpg"
     ],
-    "page_sha256": "915e7954776072e83a454780282953b9221e71006f9389149ef714e327cef2af",
+    "page_sha256": "c8cceac3c2564d57352a088a04e1b42e575ecf0ea693573ce180b370debce00f",
     "listing_metadata": {
       "directory_name": "meicrackmon",
       "name": "メイクラックモン",
@@ -1303,7 +1303,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 285,
     "profile_ja_sha256": "cff8b9fc6eda60111f642f8a54001b123af780de86aa23f50bc0f043ef2ebd34",
@@ -1332,7 +1332,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mihiramon.jpg"
     ],
-    "page_sha256": "470a934869fc8266a3362763fe6a75fbcfc622f9cfd3e72796842de12df8beae",
+    "page_sha256": "0de50b705eb8694722c43473a39ba0a42bb856837f48770d78766e3180ebc915",
     "listing_metadata": {
       "directory_name": "mihiramon",
       "name": "ミヒラモン",
@@ -1343,7 +1343,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 219,
     "profile_ja_sha256": "a8fcc12841ea8992af81ad9a902ddf85044235a54b61485009f7785696a9476f",
@@ -1373,7 +1373,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mistymon.jpg"
     ],
-    "page_sha256": "507067a02a6e4248d0f845181647c7bc846e410c593eaa0cdd23fd09c2d91b73",
+    "page_sha256": "9c5e48c8d447455ee28ebaa92fbb5362287d86f013552307458532acbf267f2c",
     "listing_metadata": {
       "directory_name": "mistymon",
       "name": "ミスティモン",
@@ -1384,7 +1384,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 202,
     "profile_ja_sha256": "1fa68e29071775b8e3a7e706209f2eaa6d1d225a4f0753e251e2dce0484fc30a",
@@ -1414,7 +1414,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mammon.jpg"
     ],
-    "page_sha256": "ab32412396dc7f55895604c73d48ad83ce58e63178f3f9b24f64b5f45480dbcc",
+    "page_sha256": "981f8438ef52274813494b0359f8bc507f91a7820222696bbcddd23917c03a54",
     "listing_metadata": {
       "directory_name": "mammon",
       "name": "マンモン",
@@ -1425,7 +1425,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 289,
     "profile_ja_sha256": "c2fe8ab000d08ad1d33c1947466f114cf07258f2f033228487488f45589d867d",
@@ -1454,7 +1454,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/marindevimon.jpg"
     ],
-    "page_sha256": "eadf87ffec8ab7898dc414ded41ab868e91d2f742785b853ce57868d66fade3a",
+    "page_sha256": "95cfc7367a524e216ef4fd697bff005f16a61a01d0133966009067bdc5bcf7a7",
     "listing_metadata": {
       "directory_name": "marindevimon",
       "name": "マリンデビモン",
@@ -1465,7 +1465,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 172,
     "profile_ja_sha256": "f3636ed1088d37d40794e5f3b3012fcc5ab0cbc953ae4afbaedcc83f01a44510",
@@ -1495,7 +1495,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mametyramon.jpg"
     ],
-    "page_sha256": "46f6b7f77bcf005451352137f9166134d4a9d5fdb4e2f9aae7c3b97cc21c42fb",
+    "page_sha256": "2056a97d00b4c93278fc879228cf57918ac9867c93eef98d9569d7dbbad98e11",
     "listing_metadata": {
       "directory_name": "mametyramon",
       "name": "マメティラモン",
@@ -1506,7 +1506,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 304,
     "profile_ja_sha256": "c0a3ecfb5f984a97e91889957c68d4eaf1926f4fc550877c61b14c06434ec145",
@@ -1535,7 +1535,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mamemon.jpg"
     ],
-    "page_sha256": "124b4567b5fcb12423ba58299d211ea0b8d28e5d54ae94e10eae014684db78c7",
+    "page_sha256": "cccbf9ffaaa6d91a8a0b761f505b3c371f2d18681ce9b970201db93ad3826d6e",
     "listing_metadata": {
       "directory_name": "mamemon",
       "name": "マメモン",
@@ -1546,7 +1546,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 132,
     "profile_ja_sha256": "12ba4ebad503e33cc626450d123ab5e0ed5e9b19f4cc3279aae0a74770376dd0",
@@ -1576,7 +1576,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mummymon.jpg"
     ],
-    "page_sha256": "94e6be5f6453e1434a1a05649b966d72c9687b32a5b32478ea3aa9b24b5c9aa7",
+    "page_sha256": "94cf323e4be6eab8daa4f70fa759ffed0fd99fad957872f597a5aee3e622e59f",
     "listing_metadata": {
       "directory_name": "mummymon",
       "name": "マミーモン",
@@ -1587,7 +1587,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 240,
     "profile_ja_sha256": "d04a75a3fc5afe2144df065ff73717df13e6a1687a3fab1b63b138b4b8518e9f",
@@ -1618,7 +1618,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/machgaogamon.jpg"
     ],
-    "page_sha256": "e89e51756b54464892198c0060f793358bd006badbcb465c7444c26297ca917f",
+    "page_sha256": "252abf91dec23358a94154282de91630d65fcee44c76a9e609d78be683ec681a",
     "listing_metadata": {
       "directory_name": "machgaogamon",
       "name": "マッハガオガモン",
@@ -1629,7 +1629,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 162,
     "profile_ja_sha256": "34a43e84b40f0fc450cd85a23fe4ab07ceef5bcd7858dce9f82fbda64580841b",
@@ -1660,7 +1660,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/matadrmon.jpg"
     ],
-    "page_sha256": "65c4467420c2535a5e235613f240f64b8886249579a4c0ec660af65b940d7079",
+    "page_sha256": "efa1c65c7dca9880b785ad80519052984ab3d9b32feecfde55fd46737ec38d46",
     "listing_metadata": {
       "directory_name": "matadrmon",
       "name": "マタドゥルモン",
@@ -1671,7 +1671,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 296,
     "profile_ja_sha256": "ff71d5190c9b18b4d65ea0cb00a0e76dcb0b7d8fbcc7417e0acf241d26d51d2c",
@@ -1700,7 +1700,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mastertyranomon.jpg"
     ],
-    "page_sha256": "1a01b84ff4aa7cda76b0d0bfc1b7b02ee7f728d1425cbedfd74cf098a27a17e8",
+    "page_sha256": "2cc1e9441e64a519f6eda47006360d8de1d0b3f71b1b2ec778f84150565df5eb",
     "listing_metadata": {
       "directory_name": "mastertyranomon",
       "name": "マスターティラノモン",
@@ -1711,7 +1711,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 128,
     "profile_ja_sha256": "8af456d84fb88976622643b3a23b83b63b091c12af6dd08b87d9e092dca80b13",
@@ -1740,7 +1740,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/majiramon.jpg"
     ],
-    "page_sha256": "43ac2a0e0e0241a30df363dc347a52579c07a63efbe6d701cd9033694f29b664",
+    "page_sha256": "3c3837a11540161b775b3faab67b50c0a8a36e99d5b35c05c96ce4e7b4eb33ed",
     "listing_metadata": {
       "directory_name": "majiramon",
       "name": "マジラモン",
@@ -1751,7 +1751,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 268,
     "profile_ja_sha256": "33879bbcb19c6a33af5dc726fe0d0375be4125bb2ccffd4cdc3ea2d08f3d5452",
@@ -1780,7 +1780,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/makuramon.jpg"
     ],
-    "page_sha256": "9ac504b55ac00f5cd5e3a6726956f1127fa67ad70a99f86569acd851d7a8b725",
+    "page_sha256": "11fe00935e66d6e402d88d853430e6a1a85c2d6ff10e8842c4a5bde0b0e904f0",
     "listing_metadata": {
       "directory_name": "makuramon",
       "name": "マクラモン",
@@ -1791,7 +1791,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 266,
     "profile_ja_sha256": "ba3727c59b8fa8c506f0d08ed73aa00b135ee7fff3baf1e05c6305999e77728e",
@@ -1821,7 +1821,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mermaimon.jpg"
     ],
-    "page_sha256": "b797e22104bd63868d78837a10030f9be43083ffcb2c781746150d835ab18467",
+    "page_sha256": "cb7eb8ca1ac17731722c30d40815af643827d296d685e4b901c6f1c7cd2ec8ec",
     "listing_metadata": {
       "directory_name": "mermaimon",
       "name": "マーメイモン",
@@ -1832,7 +1832,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 299,
     "profile_ja_sha256": "075f9b7fae1edab5960bb982e143c53e651b576c1dc738633dc35d79afeafe9f",
@@ -1862,7 +1862,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/volcamon.jpg"
     ],
-    "page_sha256": "fb68f305f46cf730e5ce3cd8c3217a83b0298c86cb6cdffa5c28f03ae361be6f",
+    "page_sha256": "657b3033834af8de47ebcb1e40cf0cc9c9ee0ddca6581924ba01a87f54481fe3",
     "listing_metadata": {
       "directory_name": "volcamon",
       "name": "ボルケーモン",
@@ -1873,7 +1873,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 198,
     "profile_ja_sha256": "55d640cfd36edf335f92c571a25efce5ad6e76b6e9300218a8b3c712836bf6ef",
@@ -1905,7 +1905,7 @@
       "https://digimon.net/cimages/digimon/holyangemon.jpg",
       "https://digimon.net/cimages/digimon/holyangemon_2.jpg"
     ],
-    "page_sha256": "13e33673480e7f29bb352a300d8f8f7c361559efec47e5b5c3949af98073ac39",
+    "page_sha256": "8e3ce2de0a23d5c8541d134bec389ed8c995029f3f53af84e43e2e72b89403c2",
     "listing_metadata": {
       "directory_name": "holyangemon",
       "name": "ホーリーエンジェモン",
@@ -1916,7 +1916,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 312,
     "profile_ja_sha256": "a5a34e2740929ffe90cdf0be12f359bd46cc69ea3e47867093ab37bdb7037de3",
@@ -1945,7 +1945,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/whamon.jpg"
     ],
-    "page_sha256": "d680ade132db0bc9ec967e9290586dcca2a4363033594f92ca2ffd33e39cebdf",
+    "page_sha256": "4b38e779cc155f0f15c955de87923bc1bfd5fe35ba6e2758126dbbacb873818a",
     "listing_metadata": {
       "directory_name": "whamon",
       "name": "ホエーモン",
@@ -1956,7 +1956,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 199,
     "profile_ja_sha256": "f28b48a23b11b38d94feac7a218d2ebfa1ac6613eaaf232e3d3a1f102aa17265",
@@ -1986,7 +1986,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/betsumon.jpg"
     ],
-    "page_sha256": "5e26e4b8ce672eb465c90b33906445cbdfcbe08e79645379e1ff7a1de1a21d45",
+    "page_sha256": "21643dc4e03be82288ea31f420720c940cd128e2989dcc3eab765213934852bd",
     "listing_metadata": {
       "directory_name": "betsumon",
       "name": "ベツモン",
@@ -1997,7 +1997,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 189,
     "profile_ja_sha256": "fecfedd5d034221fc4f8eeee3cb4ea36c7c657913d0558e847d6fb7bb26cdb72",
@@ -2026,7 +2026,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/vademon2.jpg"
     ],
-    "page_sha256": "c4df0458b83a4dd260809ef5e486a106edfe9b5284c2ba009dac2c7156422679",
+    "page_sha256": "140d963f723c6738c69d5fb8ef19e5e798b6e0a345ac193cb176df089a9830a4",
     "listing_metadata": {
       "directory_name": "vademon2",
       "name": "ベーダモン（X抗体）",
@@ -2037,7 +2037,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 371,
     "profile_ja_sha256": "61de2395674a2554eb0492bdacc8d04b31f96c246c6925f4b5c828019165b318",
@@ -2066,7 +2066,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/vademon.jpg"
     ],
-    "page_sha256": "56042074e42885abe7327b51477e12c5357f0f8d651a3fc532b9ed41005afbb6",
+    "page_sha256": "b670e351ba4a43c5422547dca4c72440bc0fca3596470a975598919dc26261d0",
     "listing_metadata": {
       "directory_name": "vademon",
       "name": "ベーダモン",
@@ -2077,7 +2077,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 161,
     "profile_ja_sha256": "8d463c5d5231028ce4aed241d95c3e928bd10a7a2bc6897472c4fc614b5303cd",
@@ -2106,7 +2106,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/blossomon.jpg"
     ],
-    "page_sha256": "a5882c8eac39f5b9154789e935daa2c14103a0863931cc15b2338265272ba78b",
+    "page_sha256": "ca878c2506dd129770751868d36b3202ccf02215a4dfe1b9d7d0032174afe08c",
     "listing_metadata": {
       "directory_name": "blossomon",
       "name": "ブロッサモン",
@@ -2117,7 +2117,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 240,
     "profile_ja_sha256": "8d2f7c80d0813add416f2b292da9ef8c66b49538f4399da5d2d3d51ef23b2e6a",
@@ -2148,7 +2148,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/flaremon.jpg"
     ],
-    "page_sha256": "7b20eaccb83ca4489bc15ff09a463d495a8268624537388a66b424ff559f3dcf",
+    "page_sha256": "1483d4eb8c038b6635dc59d39c50460583ed2e1f6e01a92c9e631f8ad21f8243",
     "listing_metadata": {
       "directory_name": "flaremon",
       "name": "フレアモン",
@@ -2159,7 +2159,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 236,
     "profile_ja_sha256": "e54f56e78d51a6a1d0113e3532810211490e0a36a992bdbafe040b28cb2be0cd",
@@ -2189,7 +2189,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/bluemeramon.jpg"
     ],
-    "page_sha256": "646a9f86375dc493464f5d4356529020505b168439ab2c60e494ec94c635ca17",
+    "page_sha256": "61044abec40ca84bcc7d3a8dc3a405f3cb4aa8cb18b24e6ccbe209920e21cf93",
     "listing_metadata": {
       "directory_name": "bluemeramon",
       "name": "ブルーメラモン",
@@ -2200,7 +2200,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 65,
     "profile_ja_sha256": "194cea1586f4a4936f77d37e394cf70432a7a29c1e1e081cd3c0fc35a9f0a5c4",
@@ -2230,7 +2230,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/blackmegalogrowmon.jpg"
     ],
-    "page_sha256": "114681b8f33277c206eab785d14dd16c19f97f6e4262300af8e4bd4ea08e878a",
+    "page_sha256": "76123f595343c55992b6027c47b36c31695494037acb3b0a1743183305e076a7",
     "listing_metadata": {
       "directory_name": "blackmegalogrowmon",
       "name": "ブラックメガログラウモン",
@@ -2241,7 +2241,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 238,
     "profile_ja_sha256": "a4ba701a0aadd086d465db912755be10eda9bbd9af733e371f605bc5de207d53",
@@ -2271,7 +2271,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/phelesmon.jpg"
     ],
-    "page_sha256": "5f7b126c226d8a149ba3f8cb21e99ec6dc774f6c1cb69c3dca9d3964e6d8505e",
+    "page_sha256": "45de718df594e1128524a7f9421f66b113546efcefc291afa36db96c3bf85a87",
     "listing_metadata": {
       "directory_name": "phelesmon",
       "name": "フェレスモン",
@@ -2282,7 +2282,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 148,
     "profile_ja_sha256": "8b74d1fda715803197e1f26c8c571916d2edf46d3d522d615e503c19c378fa47",
@@ -2311,7 +2311,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/fantomon.jpg"
     ],
-    "page_sha256": "100171a5cf6c80b7557cb11d1d3fa58b13d17b20edc495080e54f7a194e6d9b7",
+    "page_sha256": "80c3f1f2154fdeb1e6cbe083997e550decb9b63dd4a7312b5672ca7e4e9b45a4",
     "listing_metadata": {
       "directory_name": "fantomon",
       "name": "ファントモン",
@@ -2322,7 +2322,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 221,
     "profile_ja_sha256": "8680a9c6363de18e31dcd11ff04cceb3406736fd2f0fd739f3b5f451621fccdf",
@@ -2351,7 +2351,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/hippogriffomon.jpg"
     ],
-    "page_sha256": "4e3470bb45a774c1d79ecfcd2239c1b25b5ad0d1bafbd2af6840db5a0e746c75",
+    "page_sha256": "6384fa44e86b9592ec64c2e21105287a5351a2e3c3a4058543eb4c24739d30ae",
     "listing_metadata": {
       "directory_name": "hippogriffomon",
       "name": "ヒポグリフォモン",
@@ -2362,7 +2362,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 111,
     "profile_ja_sha256": "6f190ac397208551fb1d9308bbaeb798bba4dc5a693e11a61faf2663be8fe378",
@@ -2391,7 +2391,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/picklemon.jpg"
     ],
-    "page_sha256": "4f5e1279692c6135c9a0097a99d41b9af5bb26d28e317278c5058d45cbb9dc89",
+    "page_sha256": "e9cfb5769e9ba3201d28ca63e580b42ed6273f6b3827f92b5bfcbc5a57b650de",
     "listing_metadata": {
       "directory_name": "picklemon",
       "name": "ピッコロモン",
@@ -2402,7 +2402,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 239,
     "profile_ja_sha256": "f06cd2e18e9c5460f163a76c9194b47abf135075fe0290a32a6343b01afec49c",
@@ -2431,7 +2431,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/bigmamemon.jpg"
     ],
-    "page_sha256": "d6ed50ea80a3b0b6a48230040b137c1c4ee913affc7af3f92ccac2c1a962d87e",
+    "page_sha256": "d893e729b02151da19a859d7ee2204ba07ef36cde5a92bce0c453a1b16d889ff",
     "listing_metadata": {
       "directory_name": "bigmamemon",
       "name": "ビッグマメモン",
@@ -2442,7 +2442,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 282,
     "profile_ja_sha256": "0abf95d3b3fa45863123e54a97bbd073b7d7f23e41199d41e59d4ff1bba46fe4",
@@ -2473,7 +2473,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/bishopchessmon.jpg"
     ],
-    "page_sha256": "f1fbe5869f268fc6deba803b755055c1f24655ce6bc2d00870745950ef347192",
+    "page_sha256": "e7db5b3951163896d7d209e3cc41192f4cbd61060c6bcd4b8232b93103431054",
     "listing_metadata": {
       "directory_name": "bishopchessmon",
       "name": "ビショップチェスモン",
@@ -2484,7 +2484,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 147,
     "profile_ja_sha256": "0107aff0f2ee0d6211080e46ce9bf921a637904d82112b1ad147cfc3ffa2b5ca",
@@ -2514,7 +2514,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/hisyaryumon.jpg"
     ],
-    "page_sha256": "a5dabae83055d15b3d5fb37926a73a9c1fc543fc418c2c380a442a468a9f8697",
+    "page_sha256": "ee5f9709c26d199a3d30d85a9e906009f2251487453435ea4af9f4fd6690ab02",
     "listing_metadata": {
       "directory_name": "hisyaryumon",
       "name": "ヒシャリュウモン",
@@ -2525,7 +2525,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 382,
     "profile_ja_sha256": "75253d7baa3a29c4d2a52825c79d1fe5916e86fc16eed0557c1172d1e0a8a942",
@@ -2554,7 +2554,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/pumpmon.jpg"
     ],
-    "page_sha256": "4bcbfadd95da5f24cf35ed8e88584ec5de4444c26d552e50a7751e263ab4f8b6",
+    "page_sha256": "138a3dfc58134e92b5c08e279f6e65c174d0a28c1f05c1fc583e96511acc3e87",
     "listing_metadata": {
       "directory_name": "pumpmon",
       "name": "パンプモン",
@@ -2565,7 +2565,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 234,
     "profile_ja_sha256": "00fac2c184b0d6ee71c68e73a7933be6fdbb0d94ebab1ddf7ceb400fe5a9f0bd",
@@ -2594,7 +2594,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/pandamon.jpg"
     ],
-    "page_sha256": "be8f46cfb71a67aa465bd822acbd720ea6c2a75c94a88a17e7a5158b5903661f",
+    "page_sha256": "a485d47fd62129b47fbf836e66c80f7250d2b7d551df51d5fef7c2ac291429e6",
     "listing_metadata": {
       "directory_name": "pandamon",
       "name": "パンダモン",
@@ -2605,7 +2605,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 240,
     "profile_ja_sha256": "fdac80753bcba1c692dc804227cac9cf7a54a9ce5631101d49c075be66d24874",
@@ -2634,7 +2634,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/panjyamon.jpg"
     ],
-    "page_sha256": "e672c9ee0c0da839e09b6c45ffa2e4167533f4a53755c217ee822a552c31666a",
+    "page_sha256": "866c820c0fa5365152ef7b9e8d102d41c265f2d48251c711f202f22f64256f26",
     "listing_metadata": {
       "directory_name": "panjyamon",
       "name": "パンジャモン",
@@ -2645,7 +2645,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 141,
     "profile_ja_sha256": "3be942149d92b8175e70918fddfa412f71a51ffb8639533a4259bcb89f7ff96f",
@@ -2674,7 +2674,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/hangyomon.jpg"
     ],
-    "page_sha256": "24f4fd13d9814d72a9996f8689211fabd4d42586e2b0b161a99ae905eb8eb565",
+    "page_sha256": "1f75d4b52ddef7de123b72813f558abd0a6ad6a48c91e5da1a48c876587b0569",
     "listing_metadata": {
       "directory_name": "hangyomon",
       "name": "ハンギョモン",
@@ -2685,7 +2685,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 130,
     "profile_ja_sha256": "04d48250d34fc8ced49ec57a1765d25245d65a8b5185e91e3816450485ec847a",
@@ -2715,7 +2715,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/parrotmon.jpg"
     ],
-    "page_sha256": "165304665c3ffa171eeabc9c2edb787d493192e72883e5ee7b013df85ff337a1",
+    "page_sha256": "73071723bbb2a6bac84249b4463047926403c4a6c44d54e7329d083edea4d423",
     "listing_metadata": {
       "directory_name": "parrotmon",
       "name": "パロットモン",
@@ -2726,7 +2726,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 184,
     "profile_ja_sha256": "0f11f0e1578edf916fcc263b4e2e051b31ef3a06563b4c54fd07cd1942d7f90e",
@@ -2756,7 +2756,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/valvemon.jpg"
     ],
-    "page_sha256": "2ec5fc6caea974028bcf64a384768bd9555ebab71826bc469d35e63e0c0ebc5e",
+    "page_sha256": "2b81ce963164628d2819fa46a8c6b94cd0e6f11ce44d7b6b4de2f7e970efd843",
     "listing_metadata": {
       "directory_name": "valvemon",
       "name": "バルブモン",
@@ -2767,7 +2767,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 122,
     "profile_ja_sha256": "3e3549ef78ebebb723edc692c7d2e28806ea7f97474a34c0ca4f67b32dc493b9",
@@ -2797,7 +2797,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/bastemon.jpg"
     ],
-    "page_sha256": "a79da42ac4540cd296c588e27d4a1a8d0af70bd866a718b5676c6795d8c1ac0d",
+    "page_sha256": "ef3c94cb0714d29a048ac7acd79bbf43860fc39eb16d5796b97b9013b4ef4cff",
     "listing_metadata": {
       "directory_name": "bastemon",
       "name": "バステモン",
@@ -2808,7 +2808,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 252,
     "profile_ja_sha256": "effc752f45c20a4b2071fa6251b2e9e8724a8c08e260615818f35c69817a1422",
@@ -2837,7 +2837,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/pajiramon.jpg"
     ],
-    "page_sha256": "4b9b3dd0bff97d59ba1f7364da48477d0a612d8e06404721299a48c9ebf92ff2",
+    "page_sha256": "e0a2f61e95aec806d264831696e49bdc03ac0ba7fdf585dfb1bdc97e736a0f41",
     "listing_metadata": {
       "directory_name": "pajiramon",
       "name": "パジラモン",
@@ -2848,7 +2848,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 280,
     "profile_ja_sha256": "6563f9a41960e06aea92a6790f311b69ea6551643795e04fe383638643a50bf7",
@@ -2878,7 +2878,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/paildramon.jpg"
     ],
-    "page_sha256": "52b4900f2881861a96571fbfbb41f20287ca4aeced9f5631b1169e3d195c5f53",
+    "page_sha256": "f44fba9282ef3a19abbce3a90cc16bc9f20b97ea5f8d22ea5ae323fce48854da",
     "listing_metadata": {
       "directory_name": "paildramon",
       "name": "パイルドラモン",
@@ -2889,7 +2889,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 223,
     "profile_ja_sha256": "051ffc40c2160019f125a8bbda92673fb10b60949963c60ad6f606faa81fb306",
@@ -2918,7 +2918,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/neodevimon.jpg"
     ],
-    "page_sha256": "f6a3db4b75076409f656aa761ec4f8de22367ff4e256a72aadf3bac579409357",
+    "page_sha256": "d0779c1dd558afb0546fd8bd2faaf6dec1427660e4f93d98cc1e380cdcc53d6a",
     "listing_metadata": {
       "directory_name": "neodevimon",
       "name": "ネオデビモン",
@@ -2929,7 +2929,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 139,
     "profile_ja_sha256": "24cd15d17896eb874c84ce3388c88438fa98d54b9f5dcdb3861475829188e4db",
@@ -2958,7 +2958,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/nanomon.jpg"
     ],
-    "page_sha256": "840c0db1bfca1e1b9b1db90f4470188e8290998ae3e8c323b3adc07c65886b57",
+    "page_sha256": "df86811179d24eff61658753a349e7c6abf5c33c0502279a7cd13ac5e80afc48",
     "listing_metadata": {
       "directory_name": "nanomon",
       "name": "ナノモン",
@@ -2969,7 +2969,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 232,
     "profile_ja_sha256": "5087dce65bdae0afe31361fd4c109044c01553aa4476f73165efaaadb2059bae",
@@ -2998,7 +2998,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/knightmon.jpg"
     ],
-    "page_sha256": "7260dab2e03e4412e603509b0cc9642318bd03080ff16cc4e01fbf906bc272d1",
+    "page_sha256": "a0fbc0b9f3d48d838b2a69f4282d080a31d4e964d8c47f80cf898eaed63f91c5",
     "listing_metadata": {
       "directory_name": "knightmon",
       "name": "ナイトモン",
@@ -3009,7 +3009,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 247,
     "profile_ja_sha256": "df0894adcfabe1d45d8d78b565ac7a37c4ab5c82a986f87b6f8eb4a57952b44d",
@@ -3039,7 +3039,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/doruguremon.jpg"
     ],
-    "page_sha256": "cf162f0acf4e76396c2517f8626ea3461e3d1ac4d1f95979038da2efef45b53e",
+    "page_sha256": "902b3b2006d5997786cfff2056194d39033c10fcd5d90e2bf23657c1ed7c1c31",
     "listing_metadata": {
       "directory_name": "doruguremon",
       "name": "ドルグレモン",
@@ -3050,7 +3050,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 263,
     "profile_ja_sha256": "ce7eb78cea2ac30d9be991ed2ca202f243a85cf713921f2db9cd49b54abb48bf",
@@ -3079,7 +3079,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/triceramon.jpg"
     ],
-    "page_sha256": "164483896afc797ea1ed03412cb07f96be78e1d1ffda38c8dd5f25da50ca36de",
+    "page_sha256": "5c307cb2d402879e6c0d06ab22fd18d3223cc9780450e9fdaa6c83a0336472e1",
     "listing_metadata": {
       "directory_name": "triceramon",
       "name": "トリケラモン",
@@ -3090,7 +3090,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 214,
     "profile_ja_sha256": "bf7567996208ae93519b7177f0f25ac0909ec6cf1fbdd84e645f7223e1e14658",
@@ -3119,7 +3119,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tonosamagekomon.jpg"
     ],
-    "page_sha256": "80194e4cfabd06e48164d20378102a67714ce20f89195f7e93b89c44ef16be18",
+    "page_sha256": "b4921a80434065724fb9cf85d0f4476b2131b2a8737707cdc636079436571692",
     "listing_metadata": {
       "directory_name": "tonosamagekomon",
       "name": "トノサマゲコモン",
@@ -3130,7 +3130,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 183,
     "profile_ja_sha256": "286cce80383f5c6bfc08d27f5106a8a462c48f98d2b16ee7da1de0aa5878317c",
@@ -3160,7 +3160,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/doumon.jpg"
     ],
-    "page_sha256": "35f6817aead857d087e9c7d14693e0adc6d484af728e0ec2514ee2ffbc715b6a",
+    "page_sha256": "8eb3872ecfa111b5a4d299ee9fe7bd07dc7ba27c62691a7b265915c825b3285b",
     "listing_metadata": {
       "directory_name": "doumon",
       "name": "ドウモン",
@@ -3171,7 +3171,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 236,
     "profile_ja_sha256": "ddc87d707eceb1d982e427d84e16684168dd83b212665a7371273a711a1fb2e3",
@@ -3200,7 +3200,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/delumon.jpg"
     ],
-    "page_sha256": "e7043c4584729c17ef6cd6eab83a868ef90ff418296edeac75a24d1aa2f49ad1",
+    "page_sha256": "5175645850f781e152c9b2afd61f4cbd4f92fe35e153f376ce6121cede673c7d",
     "listing_metadata": {
       "directory_name": "delumon",
       "name": "デラモン",
@@ -3211,7 +3211,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 228,
     "profile_ja_sha256": "c880680f943f4060a9582999a8405eee003224e970099fe7f8a66a24bb3c228e",
@@ -3252,7 +3252,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 209,
     "profile_ja_sha256": "0b7727ecbaddcb0fad86d27394c927493254d4a573623fe5271d9e819a8bafb4",
@@ -3282,7 +3282,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/deathmeramon.jpg"
     ],
-    "page_sha256": "f12364575e986fc8869db56840a0737e543493d19a75d9052feb842230d89be6",
+    "page_sha256": "25888500693d3b3cdd8dc656a4b8c6b2ea0d6fafe1b97c1156b701119a685c13",
     "listing_metadata": {
       "directory_name": "deathmeramon",
       "name": "デスメラモン",
@@ -3293,7 +3293,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 186,
     "profile_ja_sha256": "8f7e8af0c6dd554b3e1e83a1d9d0b54fe024661a5ef5bd57734d397113450682",
@@ -3323,7 +3323,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/digitamamon.jpg"
     ],
-    "page_sha256": "b700d5a317a1d0c5b7c20e0278f9f9c909a9f2b659b3413a09abd6f72001505c",
+    "page_sha256": "c075d1390f291d0652c0410dc4b99b935fb0db005ebf44d170a4e85fc8e2d06a",
     "listing_metadata": {
       "directory_name": "digitamamon",
       "name": "デジタマモン",
@@ -3334,7 +3334,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 232,
     "profile_ja_sha256": "6caa40e0dc5f468124f02336bcd2a7311cfbc39723cc0b83a06eded5b98488ca",
@@ -3364,7 +3364,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/death-x-doruguremon.jpg"
     ],
-    "page_sha256": "6989d9fe5c674fe1eee8183f3898a5a94e9bf160cc9e122740a15a0a110d6f28",
+    "page_sha256": "b49e2f3a13d09d06d9e51f6c4cda6e720914727ad84d8ada01eb1c651ae1db52",
     "listing_metadata": {
       "directory_name": "death-x-doruguremon",
       "name": "デクスドルグレモン",
@@ -3375,7 +3375,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 269,
     "profile_ja_sha256": "69ee2183447ea8d1c7729d509b2a3ca01ec6425eeb3f60f9bf640c7e86f9e4f1",
@@ -3404,7 +3404,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/dinobeemon.jpg"
     ],
-    "page_sha256": "e9d4e6f62836acbfb21b83d6036515c5714c5d86fa4a27781144d6b83d566320",
+    "page_sha256": "b3d4604297263880c56f09da0747c395235e4995bd7b0e6a099d59869f7b186f",
     "listing_metadata": {
       "directory_name": "dinobeemon",
       "name": "ディノビーモン",
@@ -3415,7 +3415,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 213,
     "profile_ja_sha256": "758257f9b3d9b9071749e081eb3c873311caf09e47091771f974aa90f67b973d",
@@ -3446,7 +3446,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/chohakkaimon.jpg"
     ],
-    "page_sha256": "71ccb5af691d8aa52622bc4b4bc160d74d39ba627fe2814291ea00be5387642f",
+    "page_sha256": "5d96145c2054421b6715762b1549e6d3cc91d96c5b87b432865525965aba2a86",
     "listing_metadata": {
       "directory_name": "chohakkaimon",
       "name": "チョ・ハッカイモン",
@@ -3457,7 +3457,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 401,
     "profile_ja_sha256": "40a4c795ff85fdf213d622758dc3afee90330e34ce8500483c2475cd6444806f",
@@ -3486,7 +3486,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/caturamon.jpg"
     ],
-    "page_sha256": "9f4e22bd0dba54b2b052d2a3a0f00737d1b99a15e539e32c1beb5acd14bc9901",
+    "page_sha256": "dfe6819f1052310bc35e3b40f88b77608575dfe393b020bc7f5953fe92bd740f",
     "listing_metadata": {
       "directory_name": "caturamon",
       "name": "チャツラモン",
@@ -3497,7 +3497,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 245,
     "profile_ja_sha256": "abea8b3c3edb573e3a68e8382a8a234eae79d5e5b4670741acceeb54177b16a1",
@@ -3528,7 +3528,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tyilinmon.jpg"
     ],
-    "page_sha256": "69cd4f0a7197468530a6553d37cbae1bf20b3cb98715003b6ace5d0f85024d16",
+    "page_sha256": "97133261420dd6af702769e0c93c49a0b8fc4b17e0bbdf4aa544c070122e0af1",
     "listing_metadata": {
       "directory_name": "tyilinmon",
       "name": "チィリンモン",
@@ -3539,7 +3539,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 326,
     "profile_ja_sha256": "f472155aab673804595945da13b61cadec191aaa4cbf97fd1c9f64dce7af19af",
@@ -3569,7 +3569,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tankdramon.jpg"
     ],
-    "page_sha256": "18960a12d0eebbca31a6cd82a405b6cec9fcc096eec34f26e8ae892d4799e13e",
+    "page_sha256": "df71c0329b1ee60df1c10982aec9cbab024d9a68ac57957f3b4133094e780164",
     "listing_metadata": {
       "directory_name": "tankdramon",
       "name": "タンクドラモン",
@@ -3580,7 +3580,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 316,
     "profile_ja_sha256": "d35eaadbf4e1aebd5f8a76e03a73b59d83a65cebcf3d2c39ddc7ca0281b02152",
@@ -3609,7 +3609,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/dagomon.jpg"
     ],
-    "page_sha256": "f8cbf62bb4b59b36a70b86ff2597a2e6fd3de0117ffdec1e8bfbc4eee554ebbb",
+    "page_sha256": "ebae65e505768655e560c830c922a54c12b6802ccdc33c6925deda6241f5f6c9",
     "listing_metadata": {
       "directory_name": "dagomon",
       "name": "ダゴモン",
@@ -3620,7 +3620,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 187,
     "profile_ja_sha256": "f7a229ea39596673b9d2e8a380c64652618ce29d084662a2e67322b813f7b33b",
@@ -3649,7 +3649,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/taomon.jpg"
     ],
-    "page_sha256": "e06d5cbffbcf5f583aa6d725752cdba77d002c1ec1533554bcfa74efd9258990",
+    "page_sha256": "6b1793a43226843072743c2171f845df106dce8c41e9b73da2eb5c100c35c914",
     "listing_metadata": {
       "directory_name": "taomon",
       "name": "タオモン",
@@ -3660,7 +3660,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 269,
     "profile_ja_sha256": "c403604497e869c90075f2934bee20971a3199c7598068bbc90a220e8c968f1c",
@@ -3691,7 +3691,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/darksuperstarmon.jpg"
     ],
-    "page_sha256": "260fbd30573548e36187f03ede4d1edca0fe88bc0260b1750d7fdcfb767d785a",
+    "page_sha256": "307e857fc24177d9bee25ef19c5348edae6fbbaafe5a2162e4af05ed512e2f2a",
     "listing_metadata": {
       "directory_name": "darksuperstarmon",
       "name": "ダークスーパースターモン",
@@ -3702,7 +3702,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 155,
     "profile_ja_sha256": "75af122d406892fe08a9b40f2b418bc5fabe0987c714372b10a30e7c1dcfcb7c",
@@ -3733,7 +3733,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/sirenmon.jpg"
     ],
-    "page_sha256": "4d3d96cdfb30f1c1d4d29a7dbdd8165d14a66d8f23d79768f3b77aebe4f8e837",
+    "page_sha256": "36304c15e56821d3a4148eaf2b411234c048b0d97b2f4768ae48024581df1f07",
     "listing_metadata": {
       "directory_name": "sirenmon",
       "name": "セイレーンモン",
@@ -3744,7 +3744,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 410,
     "profile_ja_sha256": "bdae0a7099a8f3efefcf137e76be207e5be0615d6c399aa888781d29f23bb24a",
@@ -3775,7 +3775,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/saviorhuckmon.jpg"
     ],
-    "page_sha256": "4f35987e72e920398404566268405b37aa9085550a6a4be74daf8b1310314c8e",
+    "page_sha256": "bc0d6f2c3ca5198bfd901b0f59d52195581f4e30cb88551c6a66850c5c3a1a6f",
     "listing_metadata": {
       "directory_name": "saviorhuckmon",
       "name": "セイバーハックモン",
@@ -3786,7 +3786,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 383,
     "profile_ja_sha256": "80bdf154cf109f5abba58f72c8dd9a363cb863dcbb1070485546c3e873cc6ee1",
@@ -3815,7 +3815,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/zudomon.jpg"
     ],
-    "page_sha256": "c69e3fcd1f9a869723d61d820a6aa07db6d8622dda2095b831067fc16ae803ec",
+    "page_sha256": "7c60af00422e76eafc0adfa1c2e9290cbf26256827f83159579e03f82088f1e7",
     "listing_metadata": {
       "directory_name": "zudomon",
       "name": "ズドモン",
@@ -3826,7 +3826,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 212,
     "profile_ja_sha256": "9c65bf0f1fb0483923f0f4b4f96bcb0f82250793e689a1928b114b3253a58e11",
@@ -3856,7 +3856,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/scorpiomon.jpg"
     ],
-    "page_sha256": "3821bf1a9825a43fc59f50a0b64df75330205696fb2424fbc94973c53cae5e25",
+    "page_sha256": "3254e8b55f9e6b32ed39ec98e66a7a5d5db05dc05b0e34c143d5d47d44623d47",
     "listing_metadata": {
       "directory_name": "scorpiomon",
       "name": "スコピオモン",
@@ -3867,7 +3867,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 287,
     "profile_ja_sha256": "4e2fd5aa69b409b2b0fa962761a9ff6d6d31abf4bee6367319c9e2dadff3969d",
@@ -3897,7 +3897,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/skullbaluchimon.jpg"
     ],
-    "page_sha256": "d2df48d159cc9aedbabe4d9a6c95f40d1b407cd2332feeecfbc11040926c3ca5",
+    "page_sha256": "0e73ce6cb6665791dff27f6678a9ca15b0f49e257bab4745093c8442ed33ee25",
     "listing_metadata": {
       "directory_name": "skullbaluchimon",
       "name": "スカルバルキモン",
@@ -3908,7 +3908,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 273,
     "profile_ja_sha256": "8d32f595b4a92422b71d28209ccd8cff0ab6fe65e81370219eee3d6c3ea74034",
@@ -3937,7 +3937,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/skullsatamon.jpg"
     ],
-    "page_sha256": "81c8b4a2a54e73e566ad9cf4cc8a64dc11647a85179f5d2b29dcf7b3258e160a",
+    "page_sha256": "762e553fc35eaae63bbf58c23f1a9d443552a415e27b35311a41de826efe58eb",
     "listing_metadata": {
       "directory_name": "skullsatamon",
       "name": "スカルサタモン",
@@ -3948,7 +3948,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 183,
     "profile_ja_sha256": "6472b74e73a8853ea4ee2a610dec28c244370be893346617ba09e47170603f43",
@@ -3977,7 +3977,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/skullgreymon.jpg"
     ],
-    "page_sha256": "1cea4bfc50fca8dfeccc90e9d617149287be2d3c0a0cceece6b4f7c59bbc405b",
+    "page_sha256": "a8528c4eac45b94702ead26390daeabe7ea3ce881d363a233b2b4cd93a43ca3f",
     "listing_metadata": {
       "directory_name": "skullgreymon",
       "name": "スカルグレイモン",
@@ -3988,7 +3988,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 180,
     "profile_ja_sha256": "0093afcfbe5615d530c7f0cc27217d63565780aa2f048caaf92cb4295c08d1d6",
@@ -4017,7 +4017,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/superstarmon.jpg"
     ],
-    "page_sha256": "2d63e06ca911b4cf3a9cfc1bfdce10435e7f1bb20c338294ca0f8ab3340e8fd7",
+    "page_sha256": "00f30b8560d84a82d5e77ef929c8ff39e05acd03e41d6ca593597fcc471437b2",
     "listing_metadata": {
       "directory_name": "superstarmon",
       "name": "スーパースターモン",
@@ -4028,7 +4028,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 151,
     "profile_ja_sha256": "a1f42c39c45194d57f04cce0992f9d4234cf0119a3bf8fa2f55e8bc050d12591",
@@ -4057,7 +4057,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/sinduramon.jpg"
     ],
-    "page_sha256": "4184b4eec1a3b685d92809be4a48b8033ae64f9eae39706a2256dee02a8c1681",
+    "page_sha256": "16d98dfed123aa02f79430ad8d0fdc76446e0718dd4f12f5d1d09069a67c10b2",
     "listing_metadata": {
       "directory_name": "sinduramon",
       "name": "シンドゥーラモン",
@@ -4068,7 +4068,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 246,
     "profile_ja_sha256": "ae549f1161821d4ac274a7bb85df2e7798b947816063092f63cfd851035ff19d",
@@ -4109,7 +4109,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 259,
     "profile_ja_sha256": "0980722e74d04a7111e47335e982e783ca7316e7c78669d1ed17bcf233db08b1",
@@ -4138,7 +4138,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/jyureimon.jpg"
     ],
-    "page_sha256": "75a6f36a718154395f8aa670fe5fe6c994c053a12ccf0fbd99b76b4388654fb3",
+    "page_sha256": "51fa8289a16f063648f2a9bc815103a2ab7f87a1db3f158cb7c615e4d0534532",
     "listing_metadata": {
       "directory_name": "jyureimon",
       "name": "ジュレイモン",
@@ -4149,7 +4149,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 273,
     "profile_ja_sha256": "705d25426f7c78ec1e2b41129bbd63a490ba43645185aa8d98768417aedf2851",
@@ -4179,7 +4179,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/shakkoumon.jpg"
     ],
-    "page_sha256": "6ac42e7b7571c0e7d48b3d52675f081819ae62817befc0c5ea797180fe57391a",
+    "page_sha256": "eb33cb8b64535461f2824ad0e30c0332d502124705e954010081d719e89f9706",
     "listing_metadata": {
       "directory_name": "shakkoumon",
       "name": "シャッコウモン",
@@ -4190,7 +4190,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 253,
     "profile_ja_sha256": "7807c1186527020fc240ee92e534a033bf01e32e2abcff8913e3b93417ca5491",
@@ -4219,7 +4219,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/jyagamon.jpg"
     ],
-    "page_sha256": "48a6610483dee3d8984fa7ed1523fe898a02fd5739c2dad97572360933d87fe0",
+    "page_sha256": "be22beeaf4a95cc96f4b35443d705b4ecd3ae16180b2388afdca01546d4c7310",
     "listing_metadata": {
       "directory_name": "jyagamon",
       "name": "ジャガモン",
@@ -4230,7 +4230,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 215,
     "profile_ja_sha256": "301faa6bcf1b3ed2860b2660ea24bf6b583f60ff895e81ee4811c91c72bb3e94",
@@ -4261,7 +4261,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/shawujinmon.jpg"
     ],
-    "page_sha256": "c297407db628a70e6b1fc8e4d5aebd5aca2a9d852378e74226d1c531796d5e71",
+    "page_sha256": "9cf9b65d1cabd4778cf47119e9b81109b9affb0441557c9c4df86263aa9af525",
     "listing_metadata": {
       "directory_name": "shawujinmon",
       "name": "シャウジンモン",
@@ -4272,7 +4272,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 229,
     "profile_ja_sha256": "fdea3b30d66c891361e208affbf1a80f1e8319ad63e0930c59a9259f61150e66",
@@ -4301,7 +4301,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/sandiramon.jpg"
     ],
-    "page_sha256": "b48a24077482630e50c2fc10c1378754eb8f5d7491d5799b78da8c14afb19a94",
+    "page_sha256": "b166b98449659431650398ab29b9d187024a6f51df7ea34ce843857021037895",
     "listing_metadata": {
       "directory_name": "sandiramon",
       "name": "サンティラモン",
@@ -4312,7 +4312,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 274,
     "profile_ja_sha256": "eb78132965b223c5b2b1be9901ebef5d168b01119b01fd20a099a5727b7c609e",
@@ -4343,7 +4343,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/sanzomon.jpg"
     ],
-    "page_sha256": "293ca6f63957a434c0343808875d28e5b68d1638d7e3e212edabffcf6e99645b",
+    "page_sha256": "51cfdb263678171a7fd05169156e3bcf3485c9957f335fa313b2c499e017df8c",
     "listing_metadata": {
       "directory_name": "sanzomon",
       "name": "サンゾモン",
@@ -4354,7 +4354,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 448,
     "profile_ja_sha256": "4bb05d2effb65ce328a1ce83da571a8d89d42a2587e5a80f4156097baf258f76",
@@ -4385,7 +4385,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/sagomon.jpg"
     ],
-    "page_sha256": "ae1b1abe1ffa6913540e52635d723bca92ec4c3a8016b0bddb9c605b0f1dd168",
+    "page_sha256": "939493ca76bce26292dcb5a1206f1719ab314bef6241c19c77a3e2fcfe799418",
     "listing_metadata": {
       "directory_name": "sagomon",
       "name": "サゴモン",
@@ -4396,7 +4396,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 310,
     "profile_ja_sha256": "701fad23085334488ad64d5b2d7efd3cf77de79fb7cec929d6d121e574c76008",
@@ -4425,7 +4425,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/cyberdramon.jpg"
     ],
-    "page_sha256": "b1669897794efb57d8e2ec09d82f2bd3c572fb88ce8b39dc71ec8260f2a0c8da",
+    "page_sha256": "eed6aedc90b6638b4721607c6c96b0d9c5197330951ff16fd9210f028b8dfd08",
     "listing_metadata": {
       "directory_name": "cyberdramon",
       "name": "サイバードラモン",
@@ -4436,7 +4436,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 273,
     "profile_ja_sha256": "f2fdf0b622d307211d7526e097fd3b419a6aab46ba73c137666a4c2d8e22778d",
@@ -4468,7 +4468,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/gokuwmon.jpg"
     ],
-    "page_sha256": "0f915fe25be35dfa96449326c85238d6ecbe3ffb751a279d45e1182c5c29e2f9",
+    "page_sha256": "7315d2ea9158b2cddff1f900450ab4efb453419c19b28307efda3ae4a602788a",
     "listing_metadata": {
       "directory_name": "gokuwmon",
       "name": "ゴクウモン",
@@ -4479,7 +4479,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 606,
     "profile_ja_sha256": "6e4456d9e8b69d627bc02828daf9f6262860676faee3fab757b5010cda1ce05d",
@@ -4509,7 +4509,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/cerberumon.jpg"
     ],
-    "page_sha256": "de9ac1815f15500abe986caeb18af488cce85ba2add45994f36553694bd68dad",
+    "page_sha256": "8c27e87efc6bdbacba5e75767528da212767dac58f82c8f6f8d84a384ce6ac9d",
     "listing_metadata": {
       "directory_name": "cerberumon",
       "name": "ケルベロモン",
@@ -4520,7 +4520,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 239,
     "profile_ja_sha256": "8e18a5d105ff6ce2fd4f2bc21008a262dba34ab7ace6506ce7089de27a81dfa7",
@@ -4549,7 +4549,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/kumbhiramon.jpg"
     ],
-    "page_sha256": "c23f320b4ccc53272064ea0f74a4988c5214f208f08d86473bbd5542983b82f1",
+    "page_sha256": "27a1db29faa10708464ebe9896b2ad703354e384c76c8b377743e957c511cdbf",
     "listing_metadata": {
       "directory_name": "kumbhiramon",
       "name": "クンビラモン",
@@ -4560,7 +4560,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 311,
     "profile_ja_sha256": "49fd81ea4f2bdee917f6bc5bd3c7634c725302222b112eda3268106c11d216ff",
@@ -4591,7 +4591,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/crescemon.jpg"
     ],
-    "page_sha256": "0eaf755ebd2b986f19e63fbfe8b0b5b10a8669ea30c7c28a183cabdc89b8621a",
+    "page_sha256": "a6789a6336c156e22580f796e5ebfd46d0c2dba4563348a8da7c48df01dcfa01",
     "listing_metadata": {
       "directory_name": "crescemon",
       "name": "クレシェモン",
@@ -4602,7 +4602,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 233,
     "profile_ja_sha256": "319bb6c8bf51fe54476da92ceabeb6a09573262c57b8042d7cca1206e5b25f30",
@@ -4632,7 +4632,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/grademon.jpg"
     ],
-    "page_sha256": "d8960b865ea6b5dfdf5ba0adcc514881b9fc5bb8b753ea2a4cd94c41b9c33881",
+    "page_sha256": "f9deaf725283b7a8385e8cf89b1c62ce1d177cd5f3c54cadd4be3c8223064ab1",
     "listing_metadata": {
       "directory_name": "grademon",
       "name": "グレイドモン",
@@ -4643,7 +4643,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 261,
     "profile_ja_sha256": "95bb7673c950f11c83e0b1b95f7470319a520fcd046bf21b10d79c00a63da00e",
@@ -4673,7 +4673,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/grappuleomon.jpg"
     ],
-    "page_sha256": "4bf3df21db0e90cbd250efe2dee36c78ddaf12e135703ee9f8100e642180bfea",
+    "page_sha256": "d0aba09aa46534081b3a1ded3cf74659b6ccebdc6d99b233ab5af076609cf708",
     "listing_metadata": {
       "directory_name": "grappuleomon",
       "name": "グラップレオモン",
@@ -4684,7 +4684,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 278,
     "profile_ja_sha256": "9e71809467701b2d285ff95f3d36210f2bc750a90078e068ce2904af4e05564d",
@@ -4715,7 +4715,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/groundramon.jpg"
     ],
-    "page_sha256": "75f6b03a7eb2f4efe410cb182db4cc9a020f26c2f594f1c12fcef84bc5a8d899",
+    "page_sha256": "beebbd665d2ffcb5f66e5b7f11db12a7acb8499507c5c63509a3676cedf72087",
     "listing_metadata": {
       "directory_name": "groundramon",
       "name": "グラウンドラモン",
@@ -4726,7 +4726,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 345,
     "profile_ja_sha256": "8885af8be6689538b46eb39fed892eb227f4d84131375a0ac0216a5ff67ad9ec",
@@ -4755,7 +4755,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/giromon.jpg"
     ],
-    "page_sha256": "0053a17b9873d52e318951ab062b345562bf66922749d9b3afb79f002884226f",
+    "page_sha256": "97ca32e77e44391158a746d0fa7ca791850e7d0a6958f9f93ed486dd2a9c7ec8",
     "listing_metadata": {
       "directory_name": "giromon",
       "name": "ギロモン",
@@ -4766,7 +4766,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 180,
     "profile_ja_sha256": "7624b794c21a0415e7af8c4f08b2f19c87eb4cce8d0b23ddcb00bb9607f1b4f9",
@@ -4797,7 +4797,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/captainhookmon.jpg"
     ],
-    "page_sha256": "29f0613c2dc193326e3d3bb67e0c9378638865d8ea8bb28d81313556c00b9127",
+    "page_sha256": "88a0c4479d24238bd4b89937cbfaf841b87a5bf45a2a91e527a4337902f7d5c8",
     "listing_metadata": {
       "directory_name": "captainhookmon",
       "name": "キャプテンフックモン",
@@ -4808,7 +4808,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 338,
     "profile_ja_sha256": "15db1e91c961d10bdfed106a3d83444aae4a52f024acb6b467a07899d534d5e9",
@@ -4838,7 +4838,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/cannonbeemon.jpg"
     ],
-    "page_sha256": "4f1e8de15f8a4c6840a5ddc10b9f18863eb8dc1f31b7bbb532209f262df354a8",
+    "page_sha256": "cae158d24930f6102ec388e2ac555a0df79090a14dfe500ae19eda708b268171",
     "listing_metadata": {
       "directory_name": "cannonbeemon",
       "name": "キャノンビーモン",
@@ -4849,7 +4849,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 200,
     "profile_ja_sha256": "c9f57865f1d94488d46f059c7f517fb67571f85ad0d03b2d8893f5a3241faf24",
@@ -4879,7 +4879,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/catchmamemon.jpg"
     ],
-    "page_sha256": "3ca5dd159bfb219c68e65448f942240eb4d1a824b4f84e004486b0d6bc425277",
+    "page_sha256": "758228b41e1f0c4e351f0c83c4be568412460d56374504c52aa68a1a53c4f005",
     "listing_metadata": {
       "directory_name": "catchmamemon",
       "name": "キャッチマメモン",
@@ -4890,7 +4890,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 259,
     "profile_ja_sha256": "c6122b10bd29e4966cbfaa24964867c18ad6e2ea0d2453028baaec12b340498e",
@@ -4919,7 +4919,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/chimairamon.jpg"
     ],
-    "page_sha256": "55671b0322ad62762abfc698d47b5036c9f95bf6da81b493232bbb664f25729d",
+    "page_sha256": "2dff7638bf1be40a39443be1f27136f036a24100ec23451f7428be5a8d5aa8f2",
     "listing_metadata": {
       "directory_name": "chimairamon",
       "name": "キメラモン",
@@ -4930,7 +4930,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 306,
     "profile_ja_sha256": "7ee27d01c8d5956678c77b59399b7d478ebe64a239248d9579fb842f5219e14d",
@@ -4960,7 +4960,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/gigadramon.jpg"
     ],
-    "page_sha256": "c97364737cccf313394331faad296c3157d6531f2c40eb11e18a2255d6ed6d0e",
+    "page_sha256": "a68e6ac9f21ade34946419c52668fb75a203df8415ebca092dc09fb2228705ef",
     "listing_metadata": {
       "directory_name": "gigadramon",
       "name": "ギガドラモン",
@@ -4971,7 +4971,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 128,
     "profile_ja_sha256": "b1d13d248c6f0104286f9ed53612ca7bbe082dbca366e6e22a1149de753fbc6b",
@@ -5000,7 +5000,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/garudamon.jpg"
     ],
-    "page_sha256": "98a205b9f729506fbc3b0d8e0796e555fe60568ab5010bca769e0d2117831ed5",
+    "page_sha256": "44c50bce314c79c5786ad35b3aa4976a42ab1cbf302ea79f82ac1567b883c822",
     "listing_metadata": {
       "directory_name": "garudamon",
       "name": "ガルダモン",
@@ -5011,7 +5011,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 282,
     "profile_ja_sha256": "b7ca394349b5d7a62baba57a5b6e38474b93e7f59230f7149e27a16cb774652f",
@@ -5041,7 +5041,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/karatenmon.jpg"
     ],
-    "page_sha256": "d3a794e47a0d43ac6e00eb4985878046c5b6cdf931d63d4858e2a22091cc5a56",
+    "page_sha256": "0d783a841c65bf8298b1c6fcc2d28ab0e16c07a40d5d43983b4546c57ded446c",
     "listing_metadata": {
       "directory_name": "karatenmon",
       "name": "カラテンモン",
@@ -5052,7 +5052,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 262,
     "profile_ja_sha256": "f9be70fac08a46806c7daf804e3f1f7e4e94fc17aa158d24931096df8384d917",
@@ -5081,7 +5081,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/gerbemon.jpg"
     ],
-    "page_sha256": "90544590a08489b050d4612fc99154c0722ec9e23905101b478aab6226e8e40a",
+    "page_sha256": "4cbb665164a828df53193dbc0013a798cc2835802abf7806d5788c1b7c6a0b8d",
     "listing_metadata": {
       "directory_name": "gerbemon",
       "name": "ガーベモン",
@@ -5092,7 +5092,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 236,
     "profile_ja_sha256": "d8e40d65e4d18832cbbdc4ca1b994a3053ef0714594887eb198d756c98daf785",
@@ -5122,7 +5122,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/orochimon.jpg"
     ],
-    "page_sha256": "02a587b13fff4d6247fd845a223c26bb21a51dfbba827e2ae34607abc5546ba9",
+    "page_sha256": "ad70de245a91f261572b2bd34e2ab96c65984bba8be180b0d554928989addd53",
     "listing_metadata": {
       "directory_name": "orochimon",
       "name": "オロチモン",
@@ -5133,7 +5133,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 300,
     "profile_ja_sha256": "bc28250103eb2b50ff0fd1ec8860746dbe1680bd8ef1c6ae3c54a4b7bbc0bd50",
@@ -5162,7 +5162,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/okuwamon.jpg"
     ],
-    "page_sha256": "0f96e3c69ac31fee4208cffb8fc7141cbb1d5a4b94d088b83c61a61fa62b8021",
+    "page_sha256": "f5dad15615580dc31de1569ea18fbb8510211da82cbeb9bc2034b2682dd64a3d",
     "listing_metadata": {
       "directory_name": "okuwamon",
       "name": "オオクワモン",
@@ -5173,7 +5173,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 197,
     "profile_ja_sha256": "7ede4c2a944f7a5ef683ea4bb6c7cb28e80182d0e59bd4cbb23bf2317c639c78",
@@ -5203,7 +5203,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/angewomon.jpg"
     ],
-    "page_sha256": "c984638a3635fdf35ab204cdec6b495b258aa182bae0f259e5a067bf4b1e2613",
+    "page_sha256": "b952712cc509a3f71af707ab5c5732c9a016ab055457daf0c18572ee33d040b6",
     "listing_metadata": {
       "directory_name": "angewomon",
       "name": "エンジェウーモン",
@@ -5214,7 +5214,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 262,
     "profile_ja_sha256": "bb87562a5ed2cee1a434a6fa3d8a31f449051c097e8bf2b29343814fd9d1ddbd",
@@ -5244,7 +5244,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/etemon.jpg"
     ],
-    "page_sha256": "9b4ec09cc86618465eda4f4d082dcb841cc7dec4ef18958926b3cb6469f4d1ac",
+    "page_sha256": "812bbed7095128fc3667de2e9f17ec08314dd8cf157a3e903013a10a1bedb8c7",
     "listing_metadata": {
       "directory_name": "etemon",
       "name": "エテモン",
@@ -5255,7 +5255,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 206,
     "profile_ja_sha256": "e7e9b32d1715fd649d2b1209a564a96aa47e3be2e5468958aece34c69901ba35",
@@ -5285,7 +5285,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/ex-tyranomon.jpg"
     ],
-    "page_sha256": "f15fd25083745de2be225fc8d51012fa356569937280109df1b0f5c617d9e3e8",
+    "page_sha256": "63c953bd95bc7b97acc97c2c66e5386041c3ffe4af6562da12ffca97d220c245",
     "listing_metadata": {
       "directory_name": "ex-tyranomon",
       "name": "エクスティラノモン",
@@ -5296,7 +5296,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 265,
     "profile_ja_sha256": "04e694cec37676b9682d0e1956da2bd9f14adb1f7d5e7366f65ccd5d7ec64cfd",
@@ -5326,7 +5326,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/earov-dramon.jpg"
     ],
-    "page_sha256": "a297ca40d98fbb2e387e525a0a4baeb3f250067be1bed6deb116a9d085ade84c",
+    "page_sha256": "6a4bb6b6b8fe4b298252d67288b2f14f5e4bba0c5dd37ed47530a6f8da918ac7",
     "listing_metadata": {
       "directory_name": "earov-dramon",
       "name": "エアロブイドラモン",
@@ -5337,7 +5337,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 332,
     "profile_ja_sha256": "058ef717e0ac572d5dbe238594b6723446cedf3d440f75c588082bee680163cd",
@@ -5367,7 +5367,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/volcdoramon.jpg"
     ],
-    "page_sha256": "dd227d44ee62534f4430fbbaf6bd5b1b81175f43aff1921ede2933cbf933ae1e",
+    "page_sha256": "7fce64048f6e3ece732c88b7b613bf6a4c598f51379189293c8db3f33b4dae1e",
     "listing_metadata": {
       "directory_name": "volcdoramon",
       "name": "ヴォルクドラモン",
@@ -5378,7 +5378,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 260,
     "profile_ja_sha256": "5cf810c4d676fd5e6116b7fed2a4cbb889dc2d62ece80244149e3d8ac66cb942",
@@ -5409,7 +5409,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/wingdramon.jpg"
     ],
-    "page_sha256": "80d3235a2652dd2e52bb705bc79a9432e43ed8f37e715993cab35f16ffdeaa47",
+    "page_sha256": "bc1a371dcedbda0da9e533c729780ae99d736f3e1da1fd56c388e2dbc075f661",
     "listing_metadata": {
       "directory_name": "wingdramon",
       "name": "ウイングドラモン",
@@ -5420,7 +5420,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 347,
     "profile_ja_sha256": "5e219502a259be2b54ffc3d8cbbcf32e575d4fbe9f0e7832a72fca2ae98ad29b",
@@ -5449,7 +5449,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/vikaralamon.jpg"
     ],
-    "page_sha256": "a2ebbe255f155a3a4662087b18421a7d21c23f9eabff41249e6c4652a93e2fa5",
+    "page_sha256": "1e4b06c8696977795bf3ddd5d66c8adff6729c3779ca5ec252ecf2274b2c588b",
     "listing_metadata": {
       "directory_name": "vikaralamon",
       "name": "ヴィカラーラモン",
@@ -5460,7 +5460,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 264,
     "profile_ja_sha256": "456042ddc1eb2064c3a8cd71aa4cf0fa18efc2ad94ecbca4c938cfe1aa3ccb9d",
@@ -5489,7 +5489,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/vamdemon.jpg"
     ],
-    "page_sha256": "d8b6e3a54af40e349eae31fd4dc6f7809e884d83bd4c9bac540ffe461ed5e26a",
+    "page_sha256": "3ca7f86b9fbba0dabc3eb3ca6e48552e61abba9d6bd01179588d13d7250dd20f",
     "listing_metadata": {
       "directory_name": "vamdemon",
       "name": "ヴァンデモン",
@@ -5500,7 +5500,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 221,
     "profile_ja_sha256": "656e42997d92022b67dfc3a42fc2e14e0f0e329644d394d4c443bafb77c94e66",
@@ -5529,7 +5529,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/vajramon.jpg"
     ],
-    "page_sha256": "a107520e8040f475451d7eab41e9e211cc3b33276ea97794bc2b65f0b0008213",
+    "page_sha256": "440de53be69295abd30113f2b106e465fd46622ce04d02b19af7c7437356c977",
     "listing_metadata": {
       "directory_name": "vajramon",
       "name": "ヴァジラモン",
@@ -5540,7 +5540,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 245,
     "profile_ja_sha256": "c5cf7a067671f83da33c380e90f9e7d4a63b39653c80c1a10e37298fc51c783d",
@@ -5570,7 +5570,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/infermon.jpg"
     ],
-    "page_sha256": "d31fb997b017de5070ac29815b244b0f03c6aae9d9210668e00d24f308507332",
+    "page_sha256": "5e49593c195771f36c38ea7cbc6f256bd8237c10e20ee9b01a628c4d02dc54a4",
     "listing_metadata": {
       "directory_name": "infermon",
       "name": "インフェルモン",
@@ -5581,7 +5581,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 261,
     "profile_ja_sha256": "0512ae20188900c28f579967991b12adf9a117dd14f6c5f3621b30a7837d9231",
@@ -5610,7 +5610,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/indaramon.jpg"
     ],
-    "page_sha256": "83f4d9d953eb4929627201a41dc3fd2f135ea1724f4337d8042e6a101d4d1d9f",
+    "page_sha256": "72e04b3d64578c2b8394d8c640e13e1383b86c400e476397e3d9a5e0151e2aa4",
     "listing_metadata": {
       "directory_name": "indaramon",
       "name": "インダラモン",
@@ -5621,7 +5621,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 242,
     "profile_ja_sha256": "b760381c451487e928824a6e0c7963ae603defe01f0e9e0519a5f797c8136876",
@@ -5650,7 +5650,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/insekimon.jpg"
     ],
-    "page_sha256": "de65fa6f3b6a88d55e1d4346038c24deb3e0b55f0686cd2645a5bb4c01ce2146",
+    "page_sha256": "486e2fc5fcc31e0759cfb844196a85262b13e9f51a455b3264cf06f1c95dcbec",
     "listing_metadata": {
       "directory_name": "insekimon",
       "name": "インセキモン",
@@ -5661,7 +5661,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 109,
     "profile_ja_sha256": "cadb90e9c2a849654471479cadb58eaa4c71b696ba25fa575256113e72317cda",
@@ -5691,7 +5691,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/andromon.jpg"
     ],
-    "page_sha256": "1c5d68bc12930549e5dad3b5f4be16444f5d252471e88ecfbaf27001e872b943",
+    "page_sha256": "bd7a41d35d5f2b7c61724ee9e0a5a0be158da93c3c7215247303778c15ffc26f",
     "listing_metadata": {
       "directory_name": "andromon",
       "name": "アンドロモン",
@@ -5702,7 +5702,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 281,
     "profile_ja_sha256": "3c788f1106f2610628a7a3986c7787452dc38c1416df288916f4b0e23eb0f433",
@@ -5731,7 +5731,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/andiramon.jpg"
     ],
-    "page_sha256": "11fcebf4dbf2f2b43cc886be099bf0dfb27963f318e0e4522225331809e2ef1b",
+    "page_sha256": "6a784bf7655b3895394b38b0f42ef812ea567088741261a04fe5e8a2a462d580",
     "listing_metadata": {
       "directory_name": "andiramon",
       "name": "アンティラモン（デーヴァ）",
@@ -5742,7 +5742,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 214,
     "profile_ja_sha256": "09fe57949e9fa633896b11184d9f78f42b4097d2cd3a923f0a45db7bec2250a0",
@@ -5773,7 +5773,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/algomon-ultimate.jpg"
     ],
-    "page_sha256": "f25b078f8018c4af3a7c9d6d22730905ad74c73dc2b003af7cc07ede45f223db",
+    "page_sha256": "3b3e96b3a1ea54da2c449354dce8e67bbda537db47ac20ff85bae4ef9b5d46d5",
     "listing_metadata": {
       "directory_name": "algomon-ultimate",
       "name": "アルゴモン",
@@ -5784,7 +5784,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 178,
     "profile_ja_sha256": "6705a47fd993d2e8a1111d42d72f7a520a7f68279f4b14963ed8f4363bfe4013",
@@ -5814,7 +5814,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/archnemon.jpg"
     ],
-    "page_sha256": "3bec384585dc6c3c1f81680ec330643895f9f3f473856351386a831383622500",
+    "page_sha256": "717cab71949ffc84812872d50379bd7ab570827927cceb608172d71e6709c9b5",
     "listing_metadata": {
       "directory_name": "archnemon",
       "name": "アルケニモン",
@@ -5825,7 +5825,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 215,
     "profile_ja_sha256": "e436bd7af219e4a241cfcaead9a36d94229927968aa0f24ab36052078b5387ca",
@@ -5854,7 +5854,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/anomalocarimon-x.jpg"
     ],
-    "page_sha256": "f8cebbd5e52bb73a8ecf11a1127d1dfc6e9667ff4c6033ea2c01c986e475eed0",
+    "page_sha256": "cd8d86c639dc2258d59e93ccd701f9c05151afeda2e107bc103b8a4d92917320",
     "listing_metadata": {
       "directory_name": "anomalocarimon-x",
       "name": "アノマロカリモン（X抗体）",
@@ -5865,7 +5865,7 @@
       "level_order": 5,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 441,
     "profile_ja_sha256": "fd86b2ace2170f26f57da9d2535706f2dd115796e72011f16b4025f081c5bfed",
@@ -5894,7 +5894,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/anomalocarimon.jpg"
     ],
-    "page_sha256": "3c2a7b0766a1173f673e2bcca97e7ddc14b157a94033d401b9cde40889be246f",
+    "page_sha256": "3fb47f2b3f6695e80d30c4bf06e14e2f72420dc09fd1c24f145e0d2d21d814ea",
     "listing_metadata": {
       "directory_name": "anomalocarimon",
       "name": "アノマロカリモン",
@@ -5905,7 +5905,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 241,
     "profile_ja_sha256": "f4ad9cca23b42ff553d76d04c03a201f0ece0cbd4dd80da740030bd5237f215c",
@@ -5934,7 +5934,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/atlurkabuterimon.jpg"
     ],
-    "page_sha256": "e678cd1bbf9578ee50f4f63dec5fc35b39b95f9ec5d75860e16f27f0c4a8403f",
+    "page_sha256": "edb0352237761481af2b8bbf4a244ef56a87e3fce7c57f935fb4608925ad990b",
     "listing_metadata": {
       "directory_name": "atlurkabuterimon",
       "name": "アトラーカブテリモン（赤）",
@@ -5945,7 +5945,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 239,
     "profile_ja_sha256": "19878e103faa367bdfa09596b4f6e226c1c475ce35c7877b8eb4fee0c7f797af",
@@ -5974,7 +5974,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/atlurkabuterimon-blue.jpg"
     ],
-    "page_sha256": "b86af4b2ff1b181a58d2d8538e9278d2f390d16f854235c07fcb50fe36a267b8",
+    "page_sha256": "1ee3b105344ea7ad42060e98f78286fb85cb91d4ae1cb56aec3378f9db957ff3",
     "listing_metadata": {
       "directory_name": "atlurkabuterimon-blue",
       "name": "アトラーカブテリモン（青）",
@@ -5985,7 +5985,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 199,
     "profile_ja_sha256": "4e1886cb6d2eabe88972fdd53c08614a386e59eeb45c1e3e7caa4345d59de2d2",
@@ -6015,7 +6015,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/astamon.jpg"
     ],
-    "page_sha256": "a8f27e579687e00b68a5599a6fd888ce67d0aa17c6cf3f99ce5b900b41065cb1",
+    "page_sha256": "55bd12f62037526b89f837dbcdf781f4c3bf80bd025a3c4a098eed2d231911ad",
     "listing_metadata": {
       "directory_name": "astamon",
       "name": "アスタモン",
@@ -6026,7 +6026,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 224,
     "profile_ja_sha256": "04c43d2d3042c5bcc9441acfbcf4c0abf956d9b5f9830600f7c67f67ef62eb95",
@@ -6055,7 +6055,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/asuramon.jpg"
     ],
-    "page_sha256": "179e92dee4a7a63f9cc50f784b5e102adc859e7c8c00cedfec66afbcd281950c",
+    "page_sha256": "57f959ea6938713baf1bb9d3700363e2d7e329fcd3de8c97e68035ae427675d5",
     "listing_metadata": {
       "directory_name": "asuramon",
       "name": "アシュラモン",
@@ -6066,7 +6066,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 281,
     "profile_ja_sha256": "e9d462eb31d1f4abb2130b27f0e8d3c55f6f11698219ee9daadf600b03898070",
@@ -6108,7 +6108,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 390,
     "profile_ja_sha256": "0f8ea95fe7330cb552f327e52a4ffb7c2bab389c262837d38079e189257563a4",
@@ -6139,7 +6139,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/aegiochusmon:dark.jpg"
     ],
-    "page_sha256": "95743e7449fbb724c715500d3ee72728bff02428f5d84827b804c4b9d737b34b",
+    "page_sha256": "48d6d46339173b4eed4f0517d9cccebb2d92e8dfb3136f5d2632eb56f1b821b0",
     "listing_metadata": {
       "directory_name": "aegiochusmon:dark",
       "name": "アイギオテュースモン：ダーク",
@@ -6150,7 +6150,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 360,
     "profile_ja_sha256": "1f5662cab3abdf2ffda49e52998aaa978267b27f8df1fcedeb547436bb10eda2",
@@ -6181,7 +6181,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/aegiochusmon:green.jpg"
     ],
-    "page_sha256": "d4dcccb04279edeee3bec86b1728862463a5b6a9b5a71952fe04baabc12404e6",
+    "page_sha256": "6e82001c208415eb32f02f2decdcf209677b47b1dcb81339644f3c7d4d98295f",
     "listing_metadata": {
       "directory_name": "aegiochusmon:green",
       "name": "アイギオテュースモン：グリーン",
@@ -6192,7 +6192,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 441,
     "profile_ja_sha256": "e9f00f83cf954bdea6f0c141a0f7488bef6a988a463e2d2c65f66ccf7f138af4",
@@ -6223,7 +6223,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/aegiochusmon.jpg"
     ],
-    "page_sha256": "2263245e7d91431c9ab82fe896f5146ac5b946d07b32e8ad338cc8bbbc6505bf",
+    "page_sha256": "d6aa920495c9dbb0c70ad9934821153e5909b2b98cacac10b3766e32fc109ee6",
     "listing_metadata": {
       "directory_name": "aegiochusmon",
       "name": "アイギオテュースモン",
@@ -6234,7 +6234,7 @@
       "level_order": 5,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 383,
     "profile_ja_sha256": "e4b73ad3fee0a37e731a2d57bb317dce2aa0e3bbcba7fb93f518c693b67cb3a2",
@@ -6264,7 +6264,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/waspmon.jpg"
     ],
-    "page_sha256": "9e3ae1b1ccffababce17ae04a976aec4c7bc01f9027b9784d0ca89d68e4f4525",
+    "page_sha256": "9c987e45146cd55d4452fc61ae317dcb5fd9478b461d303a8ac62b0c8dd307a7",
     "listing_metadata": {
       "directory_name": "waspmon",
       "name": "ワスプモン",
@@ -6275,7 +6275,7 @@
       "level_order": 4,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 286,
     "profile_ja_sha256": "89c1630e780df61ba000e829ab6851b0ea22d5b66d0e8863af6e1a99689c6998",
@@ -6306,7 +6306,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/reppamon.jpg"
     ],
-    "page_sha256": "d1f6ee38737f1883cfeb892c305066fef2d14edb68fac14a213c7d4c7c2aeee6",
+    "page_sha256": "cf1688821afcb1832862a11c217a22037f5c857ec36f2896c8a46bfc14aa92af",
     "listing_metadata": {
       "directory_name": "reppamon",
       "name": "レッパモン",
@@ -6317,7 +6317,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 284,
     "profile_ja_sha256": "cf7729fa3d7274a080efbc509674d72a53c2fc7f99c0f6bc231c78ab5ea503c5",
@@ -6346,7 +6346,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/redvegimon.jpg"
     ],
-    "page_sha256": "89bc86c93614acb0dec1ddac5d4ba2c7c6f6e7757b6f58130fc43210a7b84e6a",
+    "page_sha256": "2e9887553941833b39742a03c52fe12e827011b04ff84cbf5245821671e47ddd",
     "listing_metadata": {
       "directory_name": "redvegimon",
       "name": "レッドベジーモン",
@@ -6357,7 +6357,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 207,
     "profile_ja_sha256": "cc0dc7dbb7adda9b5acb416f7b1e6aebdc4ea1314eb97246a8e1f2bf8e4c8f99",
@@ -6388,7 +6388,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/lekismon.jpg"
     ],
-    "page_sha256": "14b2021c13dd9a576ad9af44c34773f2792519821db95ccaaa5f20efbdea1e19",
+    "page_sha256": "c5eeee86a4da4df16c32e44a14b45311b18d44f6cf489c2d4049bd0f0f25a348",
     "listing_metadata": {
       "directory_name": "lekismon",
       "name": "レキスモン",
@@ -6399,7 +6399,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 208,
     "profile_ja_sha256": "53a5de205a505501412350ed2137125dfa51dc34b619bd1c3dde748fc2f97dfa",
@@ -6428,7 +6428,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/leomon.jpg"
     ],
-    "page_sha256": "8991f39a043a69a80c0f47025a0a7929b925f1586450185387f4a3d95438a280",
+    "page_sha256": "a5682621a49198a033965f569a8704ef5f265c77130a2a1489cda6a782a92593",
     "listing_metadata": {
       "directory_name": "leomon",
       "name": "レオモン",
@@ -6439,7 +6439,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 191,
     "profile_ja_sha256": "38cb49b58f59a2260b9fbbed69d36536a47618a86396958b0ead818c13d97c47",
@@ -6468,7 +6468,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/raremon.jpg"
     ],
-    "page_sha256": "8431ade147bcecbc6703ee9c5e7d52bbd85907fb501aaf9df33967978ef4cf55",
+    "page_sha256": "8c7a3f1ad629b1c2555bbaa6ffefbc9c5ed6816298c203f2dab9600c6bebd05d",
     "listing_metadata": {
       "directory_name": "raremon",
       "name": "レアモン",
@@ -6479,7 +6479,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 195,
     "profile_ja_sha256": "2e1aa188913962851b65bdf5327a1a457f636efbd127df926a6abfcfda56d191",
@@ -6508,7 +6508,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/rukamon.jpg"
     ],
-    "page_sha256": "196c4e109f41489caf854e9a23b9319b5c7a8920dcce55118a8259597b00430d",
+    "page_sha256": "3afe84fcaf1d01640c7b5526aa5d532f7d8a1fc088604f711bd14c11d2dc512e",
     "listing_metadata": {
       "directory_name": "rukamon",
       "name": "ルカモン",
@@ -6519,7 +6519,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 210,
     "profile_ja_sha256": "c3eaaf68e83f7e47d5625af01ec27de314e1e587bd8da68ae85b92e4f1817650",
@@ -6548,7 +6548,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/revolmon.jpg"
     ],
-    "page_sha256": "55a3433fa72064e93f793cb1b12cf7b1d9ec1cb48bad98d1a1d150ac4654cdde",
+    "page_sha256": "6f3cf6792c30a1ae5c01a53db21e661cbaa7396b78c95f82d0e8a40ed701892b",
     "listing_metadata": {
       "directory_name": "revolmon",
       "name": "リボルモン",
@@ -6559,7 +6559,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 265,
     "profile_ja_sha256": "8479af5094566b6a624910aaf90deb08d38165f88e48405fb8307fb90e295aef",
@@ -6589,7 +6589,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/raptordramon.jpg"
     ],
-    "page_sha256": "e41d2b0fee2ff4be6e35ceada9f44a60aae511b6217a7591f0adfdebcc50dfd6",
+    "page_sha256": "c05bee61f50caf99a0576638f1b1ded62dc3a6a9a0c6d594bc9f4761b902c861",
     "listing_metadata": {
       "directory_name": "raptordramon",
       "name": "ラプタードラモン",
@@ -6600,7 +6600,7 @@
       "level_order": 4,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 287,
     "profile_ja_sha256": "11d17423c650af0a5c60dd72ee0c49cf755791a4004d9d4578fc9a2713f45e41",
@@ -6630,7 +6630,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/liamon.jpg"
     ],
-    "page_sha256": "c25514f1be23c5175bb8b1c6930ba2858d2f3caf9119f9fb4b7f86d3b7bff480",
+    "page_sha256": "ff74c5cb2a32b58dd016645c490236f35d3f691f9c10c7c4892f2ce8662bc55f",
     "listing_metadata": {
       "directory_name": "liamon",
       "name": "ライアモン",
@@ -6641,7 +6641,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 206,
     "profile_ja_sha256": "e7a66c7ae9a68b38f7289360ecb8a4c27e4afc93a64739089b14065046bae275",
@@ -6674,7 +6674,7 @@
       "https://digimon.net/cimages/digimon/youkomon.jpg",
       "https://digimon.net/cimages/digimon/youkomon_2.jpg"
     ],
-    "page_sha256": "793baae43a6b20a4e07cdf02511799f7c70ddfc2094c0f4c3629b2d4dfb1f960",
+    "page_sha256": "b929fbc4ee3af7bc735c53190b9a713b023591b604472c17648660d50df75d9e",
     "listing_metadata": {
       "directory_name": "youkomon",
       "name": "ヨウコモン",
@@ -6685,7 +6685,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 199,
     "profile_ja_sha256": "0618fb5e9fd3e3d0e21367437c2224db69d0c50255a5004e650a4f57a5fe25fe",
@@ -6714,7 +6714,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/yunimon.jpg"
     ],
-    "page_sha256": "8b6963cd9d8e0eec2e73e509728dc088b341860b8e81baad3bf79df1730c9642",
+    "page_sha256": "59e3dd0e27c2045a4a1ceca98a9f1504821f501a9cb793e0d5d9b34d7dc68cfd",
     "listing_metadata": {
       "directory_name": "yunimon",
       "name": "ユニモン",
@@ -6725,7 +6725,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 166,
     "profile_ja_sha256": "fbcad617dbd812215e8aacfa17033668fee8396f23d6e42a07e73a0cfe0e2df8",
@@ -6754,7 +6754,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/yukidarumon.jpg"
     ],
-    "page_sha256": "6717a6e3fd467e0cc50c160eef79a903bb3514d5e65759abeea96148c1c3154a",
+    "page_sha256": "1bc62c90a64434cabab5f05a1a83c808a6a7dec9678f7bdf9d76d3ff2996e243",
     "listing_metadata": {
       "directory_name": "yukidarumon",
       "name": "ユキダルモン",
@@ -6765,7 +6765,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 165,
     "profile_ja_sha256": "3c20d5dbe7fc3fcbd2b2e768272b2253d65075392deaeb2eec5c97a62834e54d",
@@ -6794,7 +6794,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/monochromon.jpg"
     ],
-    "page_sha256": "ecddedb7a8434fe09fb6e179afb0028459cc75c14d23656e7917d0ffdd871c2a",
+    "page_sha256": "d38d4691fd39609e2296a616d08165b7a78d4e9ac224500b5d3ca78ec51b7b93",
     "listing_metadata": {
       "directory_name": "monochromon",
       "name": "モノクロモン",
@@ -6805,7 +6805,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 217,
     "profile_ja_sha256": "1abc3c98f11751e3d538049775306d3894d452f2cfab249b02e4000310e3227c",
@@ -6835,7 +6835,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mojyamon.jpg"
     ],
-    "page_sha256": "17c56001e7033e31d385088a71dff52c10bdda637dceacfbfcd08cdde7894fed",
+    "page_sha256": "941515c565f31b8abebf1a405bc56957670958f7ab71e6db06ad3ef431ede8d2",
     "listing_metadata": {
       "directory_name": "mojyamon",
       "name": "モジャモン",
@@ -6846,7 +6846,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 244,
     "profile_ja_sha256": "7fce63e0de0352038015062df60195cf5746843064508b77b12ab5fff6291096",
@@ -6875,7 +6875,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/meramon.jpg"
     ],
-    "page_sha256": "7110b8a89f413424871b0836b35c95c51d78b9daadb49d58e17e2332056c6ce0",
+    "page_sha256": "9560a452eb1b87b797e4da0784207bc38caa43d437cd0189263041dad98df549",
     "listing_metadata": {
       "directory_name": "meramon",
       "name": "メラモン",
@@ -6886,7 +6886,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 203,
     "profile_ja_sha256": "a0f44c9c09e6b9b712e365e775ddec9451c729acdf96b2424cda1e39550dd16e",
@@ -6916,7 +6916,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mechanorimon.jpg"
     ],
-    "page_sha256": "23cc3d50f5dbdaa56e7930cf98cd96bfbe4e3c4058a38ffe0eddffb7cb6a61f4",
+    "page_sha256": "4a7afc2f3bacde6dfc44d92cccc82a0fe5d5a502158b8481268a2f7ddc21617f",
     "listing_metadata": {
       "directory_name": "mechanorimon",
       "name": "メカノリモン",
@@ -6927,7 +6927,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 280,
     "profile_ja_sha256": "29d75f936a354acf7ca44e1f6d44e3b79a6589110e9989cc19df1a24ca0a6b00",
@@ -6956,7 +6956,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/musyamon.jpg"
     ],
-    "page_sha256": "3b7e270e5fc3f5814aecd3faf4d0142fae6d470af2904d35e68769bf14583ea4",
+    "page_sha256": "4d383c2bd8b444f329cef48b9c3a7033d002c3e76d275d6fa6a69408dd043412",
     "listing_metadata": {
       "directory_name": "musyamon",
       "name": "ムシャモン",
@@ -6967,7 +6967,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 318,
     "profile_ja_sha256": "ab9563e67ad9d639f9b08a77adba0394ad906a181d20beff223487a7c187f5f5",
@@ -6996,7 +6996,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/minotaurmon.jpg"
     ],
-    "page_sha256": "a58cc70d8eb3b67ab972d6be51a44fdfbc090d454045143b3c3bef363313f418",
+    "page_sha256": "5be7afac8dfdf19c36c89c8fac7c3e2632d695cdf987d3b029f6f2d0a0cf9688",
     "listing_metadata": {
       "directory_name": "minotaurmon",
       "name": "ミノタルモン",
@@ -7007,7 +7007,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 144,
     "profile_ja_sha256": "498825c792c3e8f5645c49b4685220cbe76095a95d270fcb458fb566b7b21eb6",
@@ -7037,7 +7037,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/mikemon.jpg"
     ],
-    "page_sha256": "5f3158ee081fe2f8331da69f3b4249a25733212506e3f0daa6d4b4af4cb27b95",
+    "page_sha256": "ce882d338267bb80c3792265a8ac20b675cba823b655b967fdf0a49522a02b09",
     "listing_metadata": {
       "directory_name": "mikemon",
       "name": "ミケモン",
@@ -7048,7 +7048,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 187,
     "profile_ja_sha256": "c13806a8924ab95198594208457e45bb5e2b4726704ccf181aaf44af356d0406",
@@ -7078,7 +7078,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/porcupamon.jpg"
     ],
-    "page_sha256": "edb5cb394134f874cd1afdf824a4aa15abcc2abf70ca269c21653cb9fa044a39",
+    "page_sha256": "02ad6474f80aafbf3f93df4da4b3262c820bb9041155385cc079ed3972ea038a",
     "listing_metadata": {
       "directory_name": "porcupamon",
       "name": "ポキュパモン",
@@ -7089,7 +7089,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 215,
     "profile_ja_sha256": "9830a2cf89355a5440b5f1e626c86e5ceb84b5117bfa5965ca0d0011b11d58f2",
@@ -7120,7 +7120,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/peckmon.jpg"
     ],
-    "page_sha256": "b9d1208534e68fab8e9e1015a71792e896691249a41123f7c0263287878f52db",
+    "page_sha256": "e3e45fdb3979d1e44610900b6110b6a0fc499bb4225ecab219e1ae9aa6fcb97c",
     "listing_metadata": {
       "directory_name": "peckmon",
       "name": "ペックモン",
@@ -7131,7 +7131,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 152,
     "profile_ja_sha256": "c2132152874ed57d3ba35f35bae9d5a92fad2b56115a41cc78045e531364673f",
@@ -7160,7 +7160,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/vegimon.jpg"
     ],
-    "page_sha256": "384b1748f5e22eaa8ea5f151595387e7f9c3f228fb65ba1feeaf5220bf186168",
+    "page_sha256": "0cead71f290c9bdaab02aaa3f0c88063fcafadb48ddf63d663f3740b9008b9a9",
     "listing_metadata": {
       "directory_name": "vegimon",
       "name": "ベジーモン",
@@ -7171,7 +7171,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 156,
     "profile_ja_sha256": "825de7ad159de65e6188be28580e31b5367aca5f0f1b66e7743fd7994a0ae561",
@@ -7201,7 +7201,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/bladekuwagamon.jpg"
     ],
-    "page_sha256": "ac6faa8179717c2328fd792886dc61079a0a6217de0c39794892ddcdfe38c9e3",
+    "page_sha256": "4bc7d7e90fa0bcd0c7f1c034cdf95891c4bc0a642f210b45ef2f402d3b8c8704",
     "listing_metadata": {
       "directory_name": "bladekuwagamon",
       "name": "ブレイドクワガーモン",
@@ -7212,7 +7212,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 166,
     "profile_ja_sha256": "a8693853b19ae140f4ecf8374ab27f925b29608a49965418332a19f8050f575c",
@@ -7242,7 +7242,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/flarelizamon.jpg"
     ],
-    "page_sha256": "9adf184cc49f50b15aa3386846ba452f80a046098bacaa7ab113749370dcbee3",
+    "page_sha256": "1eec4fc55def56ac59a14a288a8f6db83beec4b1b96d99756e337f67deeb0b84",
     "listing_metadata": {
       "directory_name": "flarelizamon",
       "name": "フレアリザモン",
@@ -7253,7 +7253,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 240,
     "profile_ja_sha256": "f121c9beb4370c2d411445262fb6559e20ddee78b71f686b6be74d7da26aeffc",
@@ -7283,7 +7283,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/blimpmon.jpg"
     ],
-    "page_sha256": "6c8fdd8a9b3fc0c067e17797cdd839b6fff62983a297b0e11474072ceca861d2",
+    "page_sha256": "1df35a0d469b7450de7d4a257782792e82e0a2a9de131ce385398f711cc36c93",
     "listing_metadata": {
       "directory_name": "blimpmon",
       "name": "ブリンプモン",
@@ -7294,7 +7294,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 166,
     "profile_ja_sha256": "83697bb834486f2383b2f14f8c73ca25164c7e174474a14c8e05e88874503bc2",
@@ -7323,7 +7323,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/blacktailmon.jpg"
     ],
-    "page_sha256": "0cf51df348632e992d87799881dc47f3534fd192693e66a51a0daa2c0e9e7196",
+    "page_sha256": "f457e30e2cbb16476cdf3b7379bfa63235a6552814e356f4a1143911b16241a7",
     "listing_metadata": {
       "directory_name": "blacktailmon",
       "name": "ブラックテイルモン",
@@ -7334,7 +7334,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 193,
     "profile_ja_sha256": "c88e63c8adaa5d3e488d3071ca99aefd1c81cfd4b877e9ed12f5927ed838308d",
@@ -7364,7 +7364,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/blackgrowmon.jpg"
     ],
-    "page_sha256": "443b2885eafa49b501c92815eff3db1a51d57c80bc9589f849a3fc96fa6a40a2",
+    "page_sha256": "3fa5f1d3f713a79b082f390815905adf3ce35b2679fb9d9ba97fce91e3bbb0de",
     "listing_metadata": {
       "directory_name": "blackgrowmon",
       "name": "ブラックグラウモン",
@@ -7375,7 +7375,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 244,
     "profile_ja_sha256": "396acba090ccf20ec915f472257adf2510ec6ba8163b843e6e61f7f115f8839e",
@@ -7404,7 +7404,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/platinasukamon.jpg"
     ],
-    "page_sha256": "4d80f6f41500ca35330994b43e7be4c04255d55b8c3c5c02af3e822289dda6c7",
+    "page_sha256": "c5b4281abb2a5005abbe6d21bb4bc530aba2df740a0b3b61cb630a98dd306310",
     "listing_metadata": {
       "directory_name": "platinasukamon",
       "name": "プラチナスカモン",
@@ -7415,7 +7415,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 128,
     "profile_ja_sha256": "b8102d1e559d4a6e04af78d8679270e09ebee2171bc7103551681e1c5235b2ec",
@@ -7444,7 +7444,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/flymon.jpg"
     ],
-    "page_sha256": "130e2bad6b3d3a0364264563a79af3fe863ca4da6f69e3c7047acf954d9ce9bf",
+    "page_sha256": "6f53e478b26ac42d6b59b10338632afe2ce03079c48a359655a81a52fdf4120d",
     "listing_metadata": {
       "directory_name": "flymon",
       "name": "フライモン",
@@ -7455,7 +7455,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 271,
     "profile_ja_sha256": "925fb378b77c51004faf12caf24ca522e41b109786746069a837264fd5e9324d",
@@ -7484,7 +7484,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/hookmon.jpg"
     ],
-    "page_sha256": "b53b4b249e1870b3a7e09bf2b88358b33b12e1a9fd6be20e893212b7c2a38420",
+    "page_sha256": "73affc116b6a84b85f9a2ae58830fb7b3c8a0e6cc8ddeddb674f4bb660ad7e0b",
     "listing_metadata": {
       "directory_name": "hookmon",
       "name": "フックモン",
@@ -7495,7 +7495,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 128,
     "profile_ja_sha256": "56a40032aed66c144cf6f3aabea9da4072d58edee93e49b65d83447f9b80637e",
@@ -7524,7 +7524,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/boogiemon.jpg"
     ],
-    "page_sha256": "1a9b5e48116a029d548cd2e418519c0c06d82f930e84ad652b2c750fb0e13dcf",
+    "page_sha256": "62fd8ef36ca4bd5f125089657cd640c70a39361f7ce1cae3eca210b5c30e1a2c",
     "listing_metadata": {
       "directory_name": "boogiemon",
       "name": "ブギーモン",
@@ -7535,7 +7535,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 123,
     "profile_ja_sha256": "ae81a734364ae92a7ea843a191b5c997c48eee312b2870b06a4ec887de7959f7",
@@ -7564,7 +7564,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/fugamon.jpg"
     ],
-    "page_sha256": "8ce78a9a2c77e3bdbb306c31a5af4f0257f14ce4aafa2a12da018b9e9ba9c7e9",
+    "page_sha256": "432f1436747a77b9e96a39af4fed388d2990aa4707f248c72a68b6b9aec247f0",
     "listing_metadata": {
       "directory_name": "fugamon",
       "name": "フーガモン",
@@ -7575,7 +7575,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 122,
     "profile_ja_sha256": "aa6dbfde2ce7a13c2aa07a7c94787d875294b7e0741b9af30595568c7a3b7509",
@@ -7604,7 +7604,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/v-dramon.jpg"
     ],
-    "page_sha256": "011bb8b891e115cd862f2c86e781e20ff94068cb23d0d92c17fba1e27e3e2124",
+    "page_sha256": "b8f37879191713c08ca0da1f9b6fd1141062b113b7fcfad88a54aa8fca4e60f5",
     "listing_metadata": {
       "directory_name": "v-dramon",
       "name": "ブイドラモン",
@@ -7615,7 +7615,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 258,
     "profile_ja_sha256": "5cf9f8b10c5a1352c904247b002dcc80ad2a6f6388341fe7afd80c37b520a7c0",
@@ -7645,7 +7645,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/fangmon.jpg"
     ],
-    "page_sha256": "b3a436c91d61d23257f63817d69df4781e5fbfa2f2ed6b198feeb994efe999b8",
+    "page_sha256": "e72228413548d97c2b96ced0d1d20a4f1f6ffb488360a99d9bca5cbf0a4dd165",
     "listing_metadata": {
       "directory_name": "fangmon",
       "name": "ファングモン",
@@ -7656,7 +7656,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 214,
     "profile_ja_sha256": "8cf8657de7ee6a02d0ac0a609c517562219fff898faa51dcc34ecf6403e423ea",
@@ -7698,7 +7698,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 158,
     "profile_ja_sha256": "cbf19e184cbcb24439eb9b60f5f0f279d70d186c156530bf36e6dca6e3aa782b",
@@ -7727,7 +7727,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/hyougamon.jpg"
     ],
-    "page_sha256": "bfb4c6f1237ae85c6c1948ba5ad571230173f9c68f80fba953c842e4dc2e43ef",
+    "page_sha256": "e9908f9efc8922998c885c6238a06e236b1ea8d02d771473bfb6b68729fea0dd",
     "listing_metadata": {
       "directory_name": "hyougamon",
       "name": "ヒョーガモン",
@@ -7738,7 +7738,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 103,
     "profile_ja_sha256": "4ca422a292ec4631dacf4eb83eb45487dc85553147f31e7ed6f2110bcde85d1b",
@@ -7769,7 +7769,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/petermon.jpg"
     ],
-    "page_sha256": "dbc0e5fe6fefb01ec0e05e68db606099905c3bbbc0e6acb7352f5d58ae2e56eb",
+    "page_sha256": "4fb7959aab9d50d7c51c30b5198e3654c0051582190e698a0abf5c617b57dfa2",
     "listing_metadata": {
       "directory_name": "petermon",
       "name": "ピーターモン",
@@ -7780,7 +7780,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 335,
     "profile_ja_sha256": "374b7b354870eb7fbb406454e060f961e6bc3a01ec3ca45b1bdc90872782afab",
@@ -7809,7 +7809,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/hanumon.jpg"
     ],
-    "page_sha256": "caa538ec6b3975ea4ae766aef902a84f6fc9ed95af32445ae98cc4b03d71ce92",
+    "page_sha256": "2cf218e38d71e011c59152e5ed3ba34ae2beb1191e3a73568835a6dcd88a081c",
     "listing_metadata": {
       "directory_name": "hanumon",
       "name": "ハヌモン",
@@ -7820,7 +7820,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 212,
     "profile_ja_sha256": "8d8ecdf14334d32e87a1e73ad1bf77c4a482dd1cdbd15e6dd5dc321da295ac98",
@@ -7850,7 +7850,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/bakemon.jpg"
     ],
-    "page_sha256": "e73c15373cc68bb7201de6952e3f9f3a73f7b93f438cdd68b18b8f03e852af6f",
+    "page_sha256": "4be73bfdae3439c19e4e8be5cba72c14a49aeefa29d4da64cb4168232bee7ef9",
     "listing_metadata": {
       "directory_name": "bakemon",
       "name": "バケモン",
@@ -7861,7 +7861,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 220,
     "profile_ja_sha256": "bf86ed3e748a49cf9b16700f9aa5ba150ff14bf76791505eed99fa5223500b04",
@@ -7893,7 +7893,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/baohuckmon.jpg"
     ],
-    "page_sha256": "dd844f5bebe8656b30af13fc89a72fce1de9813b61f11040cdb3edcdfc144366",
+    "page_sha256": "323aad7340e55d5167dc6882b47b72e375a4d8db30f1763146b84a4add4c2bad",
     "listing_metadata": {
       "directory_name": "baohuckmon",
       "name": "バオハックモン",
@@ -7904,7 +7904,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 284,
     "profile_ja_sha256": "a7f71f4cb6032d41941d171c50fb963f16e11ac1492e19a6b18503f60421beea",
@@ -7944,7 +7944,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 161,
     "profile_ja_sha256": "ffc238ad9ce69cd86dd1cb222e2d492162d8d073b96666c86d729be95a7d94fc",
@@ -7973,7 +7973,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/numemon.jpg"
     ],
-    "page_sha256": "d41ca620218c165bd39fc416efd0621969a1a05c8ec42dbc2fcdb4cac5517113",
+    "page_sha256": "577b4c8fe683916879de931dd1682866ac904e2fb8829a92e18c38ef5ae1a919",
     "listing_metadata": {
       "directory_name": "numemon",
       "name": "ヌメモン",
@@ -7984,7 +7984,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 126,
     "profile_ja_sha256": "9ac5570b3ac13f0cfa651aaced6bb7e9f7d2dda257e5d02b41412a45a3ac5895",
@@ -8013,7 +8013,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/nisedrimogemon.jpg"
     ],
-    "page_sha256": "8c34d432be7fa71f449d0637c1034923db06311fe9216ed901e18b8a7372769d",
+    "page_sha256": "1ec5162c5f9630252d499fb140bb86d63da82a86fcbc1ecee67d428aebd09b81",
     "listing_metadata": {
       "directory_name": "nisedrimogemon",
       "name": "ニセドリモゲモン",
@@ -8024,7 +8024,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 114,
     "profile_ja_sha256": "6da508faf4a1542683d882ebab5b36e84c60ee751d909842e532e8bb1ef3e4cb",
@@ -8054,7 +8054,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/nanimon.jpg"
     ],
-    "page_sha256": "f7d4e350bc4f3a846233b05b0d857e1d9fd7d0a5d3f29708a2afdefbd875e0fa",
+    "page_sha256": "c1e07a79e990ca03c61afb26f7e54e1959e816e9b637a4fc37327699d4e3559a",
     "listing_metadata": {
       "directory_name": "nanimon",
       "name": "ナニモン",
@@ -8065,7 +8065,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 227,
     "profile_ja_sha256": "1ee58a95f308dfe32120bbf6bbc2d4ac4e82c0848bee23d3d1ced4a31db4c9d2",
@@ -8096,7 +8096,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/knightchessmon.jpg"
     ],
-    "page_sha256": "662c5fb343a8008736823f355673016d2e1e4b476eba6722bf29ef22c40c9296",
+    "page_sha256": "8452c957007fb1c21c4b43f8f093b2a9c75b7783a40a8f07389f23f408cda102",
     "listing_metadata": {
       "directory_name": "knightchessmon",
       "name": "ナイトチェスモン（白）",
@@ -8107,7 +8107,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 141,
     "profile_ja_sha256": "abac52f0e8ea98a5ce8422d6b64a97336ee676a9e5e45dbc839b432f86f43868",
@@ -8149,7 +8149,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 141,
     "profile_ja_sha256": "abac52f0e8ea98a5ce8422d6b64a97336ee676a9e5e45dbc839b432f86f43868",
@@ -8179,7 +8179,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/dorugamon.jpg"
     ],
-    "page_sha256": "d280d93474617d6f84901ee3ffdd88ec6b85eb570bda27473cbabb0c61b575cc",
+    "page_sha256": "acbb0bec0280ab1007a3f5babeff8004eedadaa192616cab2b19bd1d8c604cbf",
     "listing_metadata": {
       "directory_name": "dorugamon",
       "name": "ドルガモン",
@@ -8190,7 +8190,7 @@
       "level_order": 4,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 238,
     "profile_ja_sha256": "4439000ad8e5c82288a0ca21f087f70fc0629529140af803b84e2d4fbe4a9373",
@@ -8220,7 +8220,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/drimogemon.jpg"
     ],
-    "page_sha256": "0ec12ad9f9d0f3e2a729ff5be97acb07be081dc291fa41c984435d0734d20d74",
+    "page_sha256": "837e5396ea16943eb41793ce779753a670e41b13da27ca9a9a2e3a7a3281bb0c",
     "listing_metadata": {
       "directory_name": "drimogemon",
       "name": "ドリモゲモン",
@@ -8231,7 +8231,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 178,
     "profile_ja_sha256": "d70bbbfac2d26ec2113e41d020df52b0ba3abd917aab216c0b6a586cb0d119d5",
@@ -8261,7 +8261,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tobucatmon.jpg"
     ],
-    "page_sha256": "176f442b4871c1e482ba0c5076111869cf76e586acae84d46390364b59ccf20b",
+    "page_sha256": "96ab1a6dc83f373bdd0660e1bf037d7a44dcb7b68019ede6418c9d81e94008a6",
     "listing_metadata": {
       "directory_name": "tobucatmon",
       "name": "トブキャットモン",
@@ -8272,7 +8272,7 @@
       "level_order": 4,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 281,
     "profile_ja_sha256": "706e6426be2af4155b89fb570ea2a14464b0305a7f678cbd1733c7c4ca994cb0",
@@ -8302,7 +8302,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/dogmon.jpg"
     ],
-    "page_sha256": "b5aac128471e2597008f46f3eac39675d3599af9b00b6e154abeba2fd02aede1",
+    "page_sha256": "ca7da50f12a8a6930be37ce5df087acba3910bc16f3dc7982c854ebecc57a939",
     "listing_metadata": {
       "directory_name": "dogmon",
       "name": "ドッグモン",
@@ -8313,7 +8313,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 251,
     "profile_ja_sha256": "000bcba75be1ef79f9239fcbbb8b47a3fecedc36a03f27fe5867f286eccea4b5",
@@ -8342,7 +8342,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/togemon.jpg"
     ],
-    "page_sha256": "8691c8c20e7207ca69a1480fc2d67db3e3133c28ea6fe25e9e56444e568343ee",
+    "page_sha256": "8d376fcfe6b38df2b37bf5d2bf69595d46a0c1a48e3efb30341503469ebd4b6c",
     "listing_metadata": {
       "directory_name": "togemon",
       "name": "トゲモン",
@@ -8353,7 +8353,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 198,
     "profile_ja_sha256": "b07263fadea65d531d79f4920ea6c38f91b6c0682f9a22b11ddb5a38bce159b9",
@@ -8382,7 +8382,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/dokugumon.jpg"
     ],
-    "page_sha256": "f5475b26eaf222600e5e83dd8dd53132309aec907f62a2a4f774b58d9701add9",
+    "page_sha256": "1bc66cd6ee998df25856162959f4b738d408c7d1e3cabd69dcf5c3c67d4caecf",
     "listing_metadata": {
       "directory_name": "dokugumon",
       "name": "ドクグモン",
@@ -8393,7 +8393,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 320,
     "profile_ja_sha256": "259fe774f40a15178d0df17f6a6a94154b822ead9cbb5ee4dff08452ce841bc5",
@@ -8423,7 +8423,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/dobermon.jpg"
     ],
-    "page_sha256": "cc63224cde42ca59bde5738205ed922e6dab20a935b3d9140b2901a9b37544ae",
+    "page_sha256": "d02c5c503fa5661344151d747764464719888c41e83bdfcd8fe74209c9a13325",
     "listing_metadata": {
       "directory_name": "dobermon",
       "name": "ドーベルモン",
@@ -8434,7 +8434,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 173,
     "profile_ja_sha256": "c7e8af0dc3a99cb19344217a14006941b0e63aa038dfc736fb4c6e8ee1e94e7a",
@@ -8463,7 +8463,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tortamon.jpg"
     ],
-    "page_sha256": "4a380c1c114983f5d0c0ff5e03420c3d7b0bdd675d7dad6ebc087e513755394c",
+    "page_sha256": "8064c5242fe9b3e5d44bb9e27156e749b3ef61ec643cc30dfc511a23aa112b94",
     "listing_metadata": {
       "directory_name": "tortamon",
       "name": "トータモン",
@@ -8474,7 +8474,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 196,
     "profile_ja_sha256": "b4b978a20ea8d0a953b4d35d3c4f1870e66d22bb3882fa887c05e32c77bcaab9",
@@ -8503,7 +8503,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/turuiemon.jpg"
     ],
-    "page_sha256": "0ec1c6b808cc00b4f3106bb5f2db49a1d82a147afa52c7d150a3139e000ea9a9",
+    "page_sha256": "eb3c8f66a5ee6d53a48ee018a382e6a6ea10265b4596f0230d1525b6320d8d27",
     "listing_metadata": {
       "directory_name": "turuiemon",
       "name": "トゥルイエモン",
@@ -8514,7 +8514,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 209,
     "profile_ja_sha256": "1d3b39eb14ca59baa44e6c062abcf064c6d63b6973d36981c022545c4a861ea0",
@@ -8544,7 +8544,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/deltamon.jpg"
     ],
-    "page_sha256": "1879714ef6ee882856a099c807c5ce51f3605d77f83497ef9863cf9b1370a22d",
+    "page_sha256": "f22d6fdbeda56e8fb59adb7049e4f813a399f737f9dcb9ba36b10f7edfc191be",
     "listing_metadata": {
       "directory_name": "deltamon",
       "name": "デルタモン",
@@ -8555,7 +8555,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 260,
     "profile_ja_sha256": "cc61310708da5b6b065102bd973f41844c5493ec07813d7b752045a03ce52ae2",
@@ -8584,7 +8584,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/devimon.jpg"
     ],
-    "page_sha256": "69f8260fe2eee33478a8d3ee6285f825dffb622782dceb4e4026302a5473104c",
+    "page_sha256": "ce582d2ba061853c4997d70c104e43201702d6ddbc04c893ca29f360de9c3bd6",
     "listing_metadata": {
       "directory_name": "devimon",
       "name": "デビモン",
@@ -8595,7 +8595,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 220,
     "profile_ja_sha256": "100c8ee52b80c839660c926feed7041abbc9869868d4d317cba75e3befaca725",
@@ -8624,7 +8624,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/devidramon.jpg"
     ],
-    "page_sha256": "1c68d45d77019f6840ee935e654652ca243a1a9955000bf19e83e6813d9a6166",
+    "page_sha256": "00442d054f4f6ba9f3a099dc0a3db97bede965350ea5e749d56607676a080ff9",
     "listing_metadata": {
       "directory_name": "devidramon",
       "name": "デビドラモン",
@@ -8635,7 +8635,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 320,
     "profile_ja_sha256": "0f1282afb98868dc3d64f3d5cbc1723bdac6b20162ddfb331e0925a14d7bed5b",
@@ -8665,7 +8665,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/death-x-dorugamon.jpg"
     ],
-    "page_sha256": "a81966fc150824db5e93f8e9dc2c048ddd47c3494e5593e786d66b4ae1616169",
+    "page_sha256": "4dd5e615da8bb3c92468fbc1cacb8c9349f1d2ad461cebdc24c94af64cba8983",
     "listing_metadata": {
       "directory_name": "death-x-dorugamon",
       "name": "デクスドルガモン",
@@ -8676,7 +8676,7 @@
       "level_order": 4,
       "relate_word6": "〇"
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 175,
     "profile_ja_sha256": "ba7c54a3b8e56c66f2ceeb2b0518e0863a38f7348593b6eadc1f9ec3887c1452",
@@ -8706,7 +8706,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tailmon.jpg"
     ],
-    "page_sha256": "dfccdbcc9e7fc481ba258294c6e4f5a2b8ae61e2af8f104c941dcbbd51317389",
+    "page_sha256": "e5160d3005fe350f1275751b9d686217cdaf9afdf534f4768826da1d2b795b4c",
     "listing_metadata": {
       "directory_name": "tailmon",
       "name": "テイルモン",
@@ -8717,7 +8717,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 232,
     "profile_ja_sha256": "d0703c6b60a07367722c1ac266c44f538326976fd77fd62c3400e47e6377cad0",
@@ -8746,7 +8746,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tyranomon.jpg"
     ],
-    "page_sha256": "7f9371f0cbcb72d4f3b206901fb900724461ac55bd7973cb2d9e1accf1761755",
+    "page_sha256": "7fb8c8b17286282fbf3ad6ba0f59d02c53bccb4fcbe8b3bda6a78d18a1ac7746",
     "listing_metadata": {
       "directory_name": "tyranomon",
       "name": "ティラノモン",
@@ -8757,7 +8757,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 171,
     "profile_ja_sha256": "47a40567a53b7b03c29e83f6f745d5e3203835ea2d59f328f0378c2af6993bb2",
@@ -8787,7 +8787,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/diatrymon.jpg"
     ],
-    "page_sha256": "c363b6d265ebf0638d74af5168af87d00613debc100cc4f0f871407b57faa5c8",
+    "page_sha256": "dc3695a381f93417227384ad05bcbb12f2ed515325263f0652f308e78d1c8c80",
     "listing_metadata": {
       "directory_name": "diatrymon",
       "name": "ディアトリモン",
@@ -8798,7 +8798,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 253,
     "profile_ja_sha256": "52074641adee4ecdc8252940fb46dc801cacf2a74407cbd18ce3803f76efc31d",
@@ -8827,7 +8827,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tuchidarumon.jpg"
     ],
-    "page_sha256": "271243be7c029ff2ebdd8cd8aab8d6f35aa1cfc538d7798bcf74c9a78a84797b",
+    "page_sha256": "fe3057617c284b61960492d66f376f09a7b6aed3f11c08cc16aab1aa972d9d55",
     "listing_metadata": {
       "directory_name": "tuchidarumon",
       "name": "ツチダルモン",
@@ -8838,7 +8838,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 131,
     "profile_ja_sha256": "72238356af4c1b6fe2d2a99d52bfb190d4e66be696d9d99116121d0338e86c49",
@@ -8867,7 +8867,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tankmon.jpg"
     ],
-    "page_sha256": "3b86ae19f66e97e6caedfbd21af2db82ab4819354d8afe2af8920aa0745e5327",
+    "page_sha256": "3add1fdc1818422761e3a97fca7412f8d4778c2e2e706c45d40fca76d4c0b666",
     "listing_metadata": {
       "directory_name": "tankmon",
       "name": "タンクモン",
@@ -8878,7 +8878,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 201,
     "profile_ja_sha256": "bd986d80f11874a4bbcb3c77ac4659aca0c06de1e0245bb38e172837db50d537",
@@ -8908,7 +8908,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/darcmon.jpg"
     ],
-    "page_sha256": "c63cd6554b30f3bfec9c1a68531932f7c3ccf27847fa3b883e66f51b632439bd",
+    "page_sha256": "b52d67a4e133a007eed4fb78f6c2294100fe065f8390e740597768c37e882877",
     "listing_metadata": {
       "directory_name": "darcmon",
       "name": "ダルクモン",
@@ -8919,7 +8919,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 101,
     "profile_ja_sha256": "6ffcb51bb3c539d54334eba9f78e8d374acec363add30026fec0ec0a9e577b5f",
@@ -8948,7 +8948,7 @@
     "all_official_image_urls": [
       "https://digimon.net/cimages/digimon/tuskmon.jpg"
     ],
-    "page_sha256": "3fb62eb439fcd7eb708fe282807e77bdf7c8c3b266c0a1b8396bb53df973eb11",
+    "page_sha256": "068b8f3b180411fc9d797c13039a2d8f9f45dd4c5cf68b092968eb71f8e57818",
     "listing_metadata": {
       "directory_name": "tuskmon",
       "name": "タスクモン",
@@ -8959,7 +8959,7 @@
       "level_order": 4,
       "relate_word6": null
     },
-    "collected_at_utc": "2026-10-11T15:10:09.109095+00:00",
+    "collected_at_utc": "2026-10-11T15:42:18.133207+00:00",
     "profile_ja_available_on_official_page": true,
     "profile_ja_char_count": 265,
     "profile_ja_sha256": "b78d389b9b72afc4fbd2c2e241fd067f121284e68125f4e47cb75b65af3d984a",

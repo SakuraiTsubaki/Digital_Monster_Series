@@ -1,6 +1,6 @@
 # digimon.net 공식 디지몬 도감 전수조사
 
-일본어판 `https://digimon.net/reference/`를 Master Reference로 삼아 2026-10-11T15:10:09.109095+00:00에 전체 목록과 상세 페이지를 순회한 데이터셋이다.
+일본어판 `https://digimon.net/reference/`를 Master Reference로 삼아 2026-10-11T15:42:18.133207+00:00에 전체 목록과 상세 페이지를 순회한 데이터셋이다.
 
 ## 검증 결과
 
