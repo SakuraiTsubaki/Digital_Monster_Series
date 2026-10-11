@@ -58,11 +58,22 @@ jobs:
           python3 data/digimon_reference/scripts/verify_committed_dataset.py \
             --live-master /tmp/digimon_reference/master/digimon_master.json
 
+      - name: Regenerate stable runtime catalog
+        run: python3 engine/emerald/tools/generate_engine_catalog.py
+
       - name: Derive profile-backed species parameters
         run: |
           python3 engine/emerald/tools/derive_profile_parameters.py \
             --digimon-master-json /tmp/digimon_reference/master/digimon_master.json \
             --output engine/emerald/generated/profile-derived-parameters.csv
+
+      - name: Append runtime scaffolding for new species
+        run: |
+          python3 engine/emerald/tools/append_missing_species_runtime.py \
+            --parameters engine/emerald/generated/profile-derived-parameters.csv \
+            --species-dir engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/species_info \
+            --learnset-dir engine/emerald/generated/pokeemerald-expansion/src/data/pokemon/level_up_learnsets \
+            --assignments engine/emerald/generated/entity-techniques.csv
 
       - name: Render generated SpeciesInfo
         run: |
