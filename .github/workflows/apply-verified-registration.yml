@@ -37,7 +37,7 @@ jobs:
 
       - name: Validate official dataset and runtime catalogs
         run: |
-          python3 data/digimon_reference/scripts/verify_committed_dataset.py
+          python3 data/digimon_reference/scripts/verify_committed_dataset.py --live-master data/digimon_reference/master/digimon_master.json
           python3 engine/emerald/validation/verify_id_capacity.py
           python3 engine/emerald/validation/verify_generated_runtime.py
           python3 engine/emerald/validation/verify_font_v0.py
