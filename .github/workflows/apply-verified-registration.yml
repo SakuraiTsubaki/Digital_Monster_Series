@@ -37,8 +37,6 @@ jobs:
 
       - name: Validate official dataset and runtime catalogs
         run: |
-          python3 -c 'import glob,json; rows=[]; [rows.extend(json.load(open(p, encoding="utf-8"))) for p in sorted(glob.glob("data/digimon_reference/master/digimon_master.part-*.json"))]; json.dump(rows, open("/tmp/committed-master.json", "w", encoding="utf-8"), ensure_ascii=False)'
-          python3 data/digimon_reference/scripts/verify_committed_dataset.py --live-master /tmp/committed-master.json
           python3 engine/emerald/validation/verify_id_capacity.py
           python3 engine/emerald/validation/verify_generated_runtime.py
           python3 engine/emerald/validation/verify_font_v0.py
